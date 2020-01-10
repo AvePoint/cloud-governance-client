@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeSiteContactSubRequest
+# Cloud.Governance.Client.Model.ChangeSiteContactSubRequest
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **Id** | **Guid** |  | [optional] 
 **AssignTo** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **Reason** | **string** |  | [optional] 
-**Status** | **int** |  | [optional] 
-**StatusDescription** | **string** |  | [optional] 
+**Status** | **int** |  | [optional] [readonly] 
+**StatusDescription** | **string** |  | [optional] [readonly] 
 **AdminContactSettings** | [**ChangeContactByUrlSetting**](ChangeContactByUrlSetting.md) |  | [optional] 
 **ProgressStatus** | **ApiRequestProgressStatus** |  | [optional] 
 

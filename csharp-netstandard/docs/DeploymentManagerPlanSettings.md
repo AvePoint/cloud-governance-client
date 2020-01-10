@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.DeploymentManagerPlanSettings
+# Cloud.Governance.Client.Model.DeploymentManagerPlanSettings
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,6 +1,6 @@
-# Cloud.Governance.NewSdk.Api.TasksApi
+# Cloud.Governance.Client.Api.TasksApi
 
-All URIs are relative to *https://cg-api.avepointlabs.com*
+All URIs are relative to *https://API_BASE_URL*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -121,7 +121,7 @@ Method | HTTP request | Description
 
 <a name="addmembersforgroupmembershiprecertification"></a>
 # **AddMembersForGroupMembershipRecertification**
-> void AddMembersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser = null)
+> void AddMembersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser)
 
 add members for group membership recertification
 
@@ -129,9 +129,9 @@ add members for group membership recertification
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -139,15 +139,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var apiUser = new List<ApiUser>(); // List<ApiUser> |  (optional) 
+            var apiUser = new List<ApiUser>(); // List<ApiUser> | 
 
             try
             {
@@ -170,7 +175,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | [optional] 
+ **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | 
 
 ### Return type
 
@@ -178,7 +183,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -189,12 +194,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="addownersforgroupmembershiprecertification"></a>
 # **AddOwnersForGroupMembershipRecertification**
-> void AddOwnersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser = null)
+> void AddOwnersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser)
 
 add owners for group membership recertification
 
@@ -202,9 +210,9 @@ add owners for group membership recertification
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -212,15 +220,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var apiUser = new List<ApiUser>(); // List<ApiUser> |  (optional) 
+            var apiUser = new List<ApiUser>(); // List<ApiUser> | 
 
             try
             {
@@ -243,7 +256,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | [optional] 
+ **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | 
 
 ### Return type
 
@@ -251,7 +264,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -262,6 +275,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -275,9 +291,9 @@ approve task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -285,11 +301,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -324,7 +345,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -335,12 +356,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="claimelectiontask"></a>
 # **ClaimElectionTask**
-> void ClaimElectionTask (Guid id, string secondarycontact = null)
+> void ClaimElectionTask (Guid id, string secondarycontact)
 
 claim election task
 
@@ -348,9 +372,9 @@ claim election task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -358,15 +382,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var secondarycontact = secondarycontact_example;  // string |  (optional) 
+            var secondarycontact = secondarycontact_example;  // string | 
 
             try
             {
@@ -389,7 +418,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **secondarycontact** | **string**|  | [optional] 
+ **secondarycontact** | **string**|  | 
 
 ### Return type
 
@@ -397,7 +426,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -408,6 +437,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -421,9 +453,9 @@ claim site ownership recertification task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -431,11 +463,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -470,7 +507,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -481,6 +518,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -494,9 +534,9 @@ decline election task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -504,11 +544,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -541,7 +586,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -552,6 +597,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -565,9 +613,9 @@ decline site ownership recertification task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -575,11 +623,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -612,7 +665,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -623,12 +676,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="demoteasmembersforgroupmembershiprecertification"></a>
 # **DemoteAsMembersForGroupMembershipRecertification**
-> void DemoteAsMembersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser = null)
+> void DemoteAsMembersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser)
 
 demote as members for group membership recertification
 
@@ -636,9 +692,9 @@ demote as members for group membership recertification
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -646,15 +702,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var apiUser = new List<ApiUser>(); // List<ApiUser> |  (optional) 
+            var apiUser = new List<ApiUser>(); // List<ApiUser> | 
 
             try
             {
@@ -677,7 +738,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | [optional] 
+ **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | 
 
 ### Return type
 
@@ -685,7 +746,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -696,6 +757,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -709,9 +773,9 @@ edit archive group request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -719,11 +783,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -758,7 +827,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -769,6 +838,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -782,9 +854,9 @@ edit archive site request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -792,11 +864,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -831,7 +908,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -842,6 +919,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -855,9 +935,9 @@ edit archive web request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -865,11 +945,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -904,7 +989,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -915,6 +1000,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -928,9 +1016,9 @@ edit change group policy request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -938,11 +1026,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -977,7 +1070,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -988,6 +1081,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1001,9 +1097,9 @@ edit change group quota request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1011,11 +1107,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1050,7 +1151,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1061,6 +1162,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1074,9 +1178,9 @@ edit create change group request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1084,11 +1188,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1123,7 +1232,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1134,6 +1243,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1147,9 +1259,9 @@ edit change list setting request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1157,11 +1269,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1196,7 +1313,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1207,6 +1324,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1220,9 +1340,9 @@ edit change permission request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1230,11 +1350,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1269,7 +1394,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1280,6 +1405,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1293,9 +1421,9 @@ edit change site administrator/contact request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1303,11 +1431,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1342,7 +1475,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1353,6 +1486,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1366,9 +1502,9 @@ edit change site policy request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1376,11 +1512,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1415,7 +1556,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1426,6 +1567,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1439,9 +1583,9 @@ edit change site quota request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1449,11 +1593,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1488,7 +1637,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1499,6 +1648,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1512,9 +1664,9 @@ edit change site setting request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1522,11 +1674,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1561,7 +1718,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1572,6 +1729,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1585,9 +1745,9 @@ edit change web contact request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1595,11 +1755,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1634,7 +1799,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1645,6 +1810,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1658,9 +1826,9 @@ edit change web setting request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1668,11 +1836,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1707,7 +1880,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1718,6 +1891,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1731,9 +1907,9 @@ edit clone permission request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1741,11 +1917,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1780,7 +1961,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1791,6 +1972,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1804,9 +1988,9 @@ edit content move request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1814,11 +1998,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1853,7 +2042,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1864,6 +2053,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1877,9 +2069,9 @@ edit create site group request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1887,11 +2079,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1926,7 +2123,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1937,6 +2134,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1950,9 +2150,9 @@ edit create list request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1960,11 +2160,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -1999,7 +2204,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2010,6 +2215,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2023,9 +2231,9 @@ edit create site request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2033,11 +2241,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2072,7 +2285,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2083,6 +2296,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2096,9 +2312,9 @@ edit create web request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2106,11 +2322,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2145,7 +2366,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2156,6 +2377,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2169,9 +2393,9 @@ edit custom request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2179,11 +2403,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2218,7 +2447,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2229,6 +2458,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2242,9 +2474,9 @@ edit delete change group request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2252,11 +2484,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2291,7 +2528,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2302,6 +2539,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2315,9 +2555,9 @@ edit delete site request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2325,11 +2565,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2364,7 +2609,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2375,6 +2620,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2388,9 +2636,9 @@ edit delete web request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2398,11 +2646,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2437,7 +2690,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2448,6 +2701,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2461,9 +2717,9 @@ edit extend group request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2471,11 +2727,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2510,7 +2771,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2521,6 +2782,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2534,9 +2798,9 @@ edit extend site request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2544,11 +2808,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2583,7 +2852,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2594,6 +2863,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2607,9 +2879,9 @@ edit grant permission request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2617,11 +2889,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2656,7 +2933,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2667,6 +2944,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2680,9 +2960,9 @@ edit lock site request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2690,11 +2970,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2729,7 +3014,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2740,6 +3025,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2753,9 +3041,9 @@ edit manage permission request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2763,11 +3051,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2802,7 +3095,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2813,6 +3106,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2826,9 +3122,9 @@ edit restore group request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2836,11 +3132,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2875,7 +3176,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2886,6 +3187,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2899,9 +3203,9 @@ edit unlock site request in task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2909,11 +3213,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -2948,7 +3257,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -2959,12 +3268,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getchangepermissionreport"></a>
 # **GetChangePermissionReport**
-> PermissionActionItemPageResult GetChangePermissionReport (Guid id, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetChangePermissionReport (Guid id, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get change permission report
 
@@ -2972,9 +3284,9 @@ get change permission report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -2982,22 +3294,29 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get change permission report
-                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReport(id, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReport(id, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3018,7 +3337,9 @@ Name | Type | Description  | Notes
  **id** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -3026,23 +3347,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getchangepermissionreportbyversion"></a>
 # **GetChangePermissionReportByVersion**
-> PermissionActionItemPageResult GetChangePermissionReportByVersion (Guid id, long version, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetChangePermissionReportByVersion (Guid id, long version, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get change permission report with specific version
 
@@ -3050,9 +3374,9 @@ get change permission report with specific version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3060,23 +3384,30 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var version = 789;  // long | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get change permission report with specific version
-                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReportByVersion(id, version, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReportByVersion(id, version, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3098,7 +3429,9 @@ Name | Type | Description  | Notes
  **version** | **long**|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -3106,17 +3439,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3130,9 +3466,9 @@ get change permission report filters
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3140,11 +3476,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3186,7 +3527,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -3197,6 +3538,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3210,9 +3554,9 @@ get change permission report filters with specific version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3220,11 +3564,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3268,7 +3617,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -3279,6 +3628,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3292,9 +3644,9 @@ get change permission report filters for a sharepoint group
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3302,11 +3654,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3350,7 +3707,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -3361,6 +3718,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3374,9 +3734,9 @@ get change permission report filters for a sharepoint group with specific versio
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3384,11 +3744,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3434,7 +3799,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -3445,12 +3810,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getchangepermissionreportforspgroup"></a>
 # **GetChangePermissionReportForSPGroup**
-> PermissionActionItemPageResult GetChangePermissionReportForSPGroup (Guid id, Guid groupid, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetChangePermissionReportForSPGroup (Guid id, Guid groupid, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get change permission report for a sharepoint group
 
@@ -3458,9 +3826,9 @@ get change permission report for a sharepoint group
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3468,23 +3836,30 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var groupid = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get change permission report for a sharepoint group
-                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReportForSPGroup(id, groupid, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReportForSPGroup(id, groupid, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3506,7 +3881,9 @@ Name | Type | Description  | Notes
  **groupid** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -3514,23 +3891,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getchangepermissionreportforspgroupbyversion"></a>
 # **GetChangePermissionReportForSPGroupByVersion**
-> PermissionActionItemPageResult GetChangePermissionReportForSPGroupByVersion (Guid id, long version, Guid groupid, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetChangePermissionReportForSPGroupByVersion (Guid id, long version, Guid groupid, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get change permission report for a sharepoint group with specific version
 
@@ -3538,9 +3918,9 @@ get change permission report for a sharepoint group with specific version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3548,11 +3928,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3560,12 +3945,14 @@ namespace Example
             var groupid = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get change permission report for a sharepoint group with specific version
-                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReportForSPGroupByVersion(id, version, groupid, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetChangePermissionReportForSPGroupByVersion(id, version, groupid, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3588,7 +3975,9 @@ Name | Type | Description  | Notes
  **groupid** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -3596,17 +3985,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3620,9 +4012,9 @@ get change permission report permission levels
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3630,11 +4022,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3668,7 +4065,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -3679,6 +4076,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3692,9 +4092,9 @@ get change permission report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3702,11 +4102,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3740,7 +4145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -3751,12 +4156,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getclonepermissionreport"></a>
 # **GetClonePermissionReport**
-> ClonePermissionSecuritySearchResultPageResult GetClonePermissionReport (Guid id, string filter = null, string orderby = null, Object body = null)
+> ClonePermissionSecuritySearchResultPageResult GetClonePermissionReport (Guid id, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get clone permission report
 
@@ -3764,9 +4172,9 @@ get clone permission report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3774,22 +4182,29 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for  (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get clone permission report
-                ClonePermissionSecuritySearchResultPageResult result = apiInstance.GetClonePermissionReport(id, filter, orderby, body);
+                ClonePermissionSecuritySearchResultPageResult result = apiInstance.GetClonePermissionReport(id, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3810,7 +4225,9 @@ Name | Type | Description  | Notes
  **id** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for  | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -3818,17 +4235,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3842,9 +4262,9 @@ get clone permission report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3852,11 +4272,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -3890,7 +4315,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -3901,12 +4326,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getgetmanualarchivereport"></a>
 # **GetGetManualArchiveReport**
-> ManuallyArchiveRecordModelPageResult GetGetManualArchiveReport (Guid id, string filter = null, string orderby = null, Object body = null)
+> ManuallyArchiveRecordModelPageResult GetGetManualArchiveReport (Guid id, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get manual archive report
 
@@ -3914,9 +4342,9 @@ get manual archive report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -3924,22 +4352,29 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> rowKey, partitionKey, siteId, url, nodeType (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> rowKey, partitionKey, siteId, url, nodeType (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for url (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get manual archive report
-                ManuallyArchiveRecordModelPageResult result = apiInstance.GetGetManualArchiveReport(id, filter, orderby, body);
+                ManuallyArchiveRecordModelPageResult result = apiInstance.GetGetManualArchiveReport(id, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3960,7 +4395,9 @@ Name | Type | Description  | Notes
  **id** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; rowKey, partitionKey, siteId, url, nodeType | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; rowKey, partitionKey, siteId, url, nodeType | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for url | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -3968,17 +4405,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3992,9 +4432,9 @@ get manual archive report filters
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4002,11 +4442,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -4048,7 +4493,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -4059,12 +4504,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getgroupmembershiprecertificationreport"></a>
 # **GetGroupMembershipRecertificationReport**
-> MembershipRecertificationItemPageResult GetGroupMembershipRecertificationReport (Guid id, string filter = null, string orderby = null, Object body = null)
+> MembershipRecertificationItemPageResult GetGroupMembershipRecertificationReport (Guid id, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get group membership recertification report
 
@@ -4072,9 +4520,9 @@ get group membership recertification report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4082,22 +4530,29 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for user (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get group membership recertification report
-                MembershipRecertificationItemPageResult result = apiInstance.GetGroupMembershipRecertificationReport(id, filter, orderby, body);
+                MembershipRecertificationItemPageResult result = apiInstance.GetGroupMembershipRecertificationReport(id, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4118,7 +4573,9 @@ Name | Type | Description  | Notes
  **id** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for user | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -4126,23 +4583,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getgroupmembershiprecertificationreportbyversion"></a>
 # **GetGroupMembershipRecertificationReportByVersion**
-> MembershipRecertificationItemPageResult GetGroupMembershipRecertificationReportByVersion (Guid id, int version, string filter = null, string orderby = null, Object body = null)
+> MembershipRecertificationItemPageResult GetGroupMembershipRecertificationReportByVersion (Guid id, int version, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get group membership recertification report by version
 
@@ -4150,9 +4610,9 @@ get group membership recertification report by version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4160,23 +4620,30 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var version = 56;  // int | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for user (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get group membership recertification report by version
-                MembershipRecertificationItemPageResult result = apiInstance.GetGroupMembershipRecertificationReportByVersion(id, version, filter, orderby, body);
+                MembershipRecertificationItemPageResult result = apiInstance.GetGroupMembershipRecertificationReportByVersion(id, version, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4198,7 +4665,9 @@ Name | Type | Description  | Notes
  **version** | **int**|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, instanceId, type, taskId, action, user, userDisplayName, membershipType, accessType | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for user | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -4206,17 +4675,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4230,9 +4702,9 @@ get group membership recertification report filters
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4240,11 +4712,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -4286,7 +4763,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -4297,6 +4774,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4310,9 +4790,9 @@ get group membership recertification report filters by version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4320,11 +4800,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -4368,7 +4853,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -4379,6 +4864,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4392,9 +4880,9 @@ get group membership recertification report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4402,11 +4890,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -4440,7 +4933,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -4451,12 +4944,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getgrouppermissionrecertificationreport"></a>
 # **GetGroupPermissionRecertificationReport**
-> GroupPermissionActionItemPageResult GetGroupPermissionRecertificationReport (Guid id, string filter = null, string orderby = null, Object body = null)
+> GroupPermissionActionItemPageResult GetGroupPermissionRecertificationReport (Guid id, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get group permission recertification report
 
@@ -4464,9 +4960,9 @@ get group permission recertification report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4474,22 +4970,29 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get group permission recertification report
-                GroupPermissionActionItemPageResult result = apiInstance.GetGroupPermissionRecertificationReport(id, filter, orderby, body);
+                GroupPermissionActionItemPageResult result = apiInstance.GetGroupPermissionRecertificationReport(id, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4510,7 +5013,9 @@ Name | Type | Description  | Notes
  **id** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -4518,23 +5023,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getgrouppermissionrecertificationreportbyversion"></a>
 # **GetGroupPermissionRecertificationReportByVersion**
-> GroupPermissionActionItemPageResult GetGroupPermissionRecertificationReportByVersion (Guid id, int version, string filter = null, string orderby = null, Object body = null)
+> GroupPermissionActionItemPageResult GetGroupPermissionRecertificationReportByVersion (Guid id, int version, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get group permission recertification report by version
 
@@ -4542,9 +5050,9 @@ get group permission recertification report by version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4552,23 +5060,30 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var version = 56;  // int | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get group permission recertification report by version
-                GroupPermissionActionItemPageResult result = apiInstance.GetGroupPermissionRecertificationReportByVersion(id, version, filter, orderby, body);
+                GroupPermissionActionItemPageResult result = apiInstance.GetGroupPermissionRecertificationReportByVersion(id, version, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4590,7 +5105,9 @@ Name | Type | Description  | Notes
  **version** | **int**|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -4598,17 +5115,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4622,9 +5142,9 @@ get group permission recertification report filters
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4632,11 +5152,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -4678,7 +5203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -4689,6 +5214,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4702,9 +5230,9 @@ get group permission recertification report filters for sharepoint group
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4712,11 +5240,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -4760,7 +5293,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -4771,12 +5304,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getgrouppermissionrecertificationreportforspgroup"></a>
 # **GetGroupPermissionRecertificationReportForSPGroup**
-> GroupPermissionActionItemPageResult GetGroupPermissionRecertificationReportForSPGroup (Guid id, Guid groupid, string filter = null, string orderby = null, Object body = null)
+> GroupPermissionActionItemPageResult GetGroupPermissionRecertificationReportForSPGroup (Guid id, Guid groupid, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get group permission recertification report for sharepoint group
 
@@ -4784,9 +5320,9 @@ get group permission recertification report for sharepoint group
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4794,23 +5330,30 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var groupid = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get group permission recertification report for sharepoint group
-                GroupPermissionActionItemPageResult result = apiInstance.GetGroupPermissionRecertificationReportForSPGroup(id, groupid, filter, orderby, body);
+                GroupPermissionActionItemPageResult result = apiInstance.GetGroupPermissionRecertificationReportForSPGroup(id, groupid, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -4832,7 +5375,9 @@ Name | Type | Description  | Notes
  **groupid** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, instanceId, type, taskId, displayName, identityName, permissionLevel, titleName, path, sharePointGroup, parentId, idInSharepoint, level, accountType, accessType | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -4840,17 +5385,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4864,9 +5412,9 @@ get group permission recertification report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4874,11 +5422,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -4912,7 +5465,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -4923,6 +5476,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4936,9 +5492,9 @@ get my task filters
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -4946,11 +5502,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var isconfirmtask = true;  // bool? |  (optional)  (default to false)
@@ -4992,7 +5553,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5003,6 +5564,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5016,9 +5580,9 @@ get my tasks
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5026,11 +5590,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var isconfirmtask = true;  // bool? |  (optional)  (default to false)
@@ -5074,7 +5643,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5085,12 +5654,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getremovepermissionreport"></a>
 # **GetRemovePermissionReport**
-> SecuritySearchResultPageResult GetRemovePermissionReport (Guid id, string filter = null, string orderby = null, Object body = null)
+> SecuritySearchResultPageResult GetRemovePermissionReport (Guid id, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get remove permission report
 
@@ -5098,9 +5670,9 @@ get remove permission report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5108,22 +5680,29 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for  (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get remove permission report
-                SecuritySearchResultPageResult result = apiInstance.GetRemovePermissionReport(id, filter, orderby, body);
+                SecuritySearchResultPageResult result = apiInstance.GetRemovePermissionReport(id, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5144,7 +5723,9 @@ Name | Type | Description  | Notes
  **id** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, displayName, identityName, objectUrl, objectTitle, objectType, accountType, sharePointGroup, permissionLevels, action | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for  | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -5152,17 +5733,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5176,9 +5760,9 @@ get remove permission report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5186,11 +5770,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5224,7 +5813,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5235,6 +5824,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5248,9 +5840,9 @@ get site metadata recertification metadata
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5258,11 +5850,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5296,7 +5893,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5307,6 +5904,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5320,9 +5920,9 @@ get site metadata recertification report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5330,11 +5930,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5368,7 +5973,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5379,6 +5984,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5392,9 +6000,9 @@ get site ownership recertification report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5402,11 +6010,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5440,7 +6053,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5451,6 +6064,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5464,9 +6080,9 @@ get site permission recertification permission filters
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5474,11 +6090,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5520,7 +6141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5531,6 +6152,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5544,9 +6168,9 @@ get site permission recertification permission filters with specific version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5554,11 +6178,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5602,7 +6231,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5613,6 +6242,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5626,9 +6258,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5636,11 +6268,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5683,7 +6320,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5694,6 +6331,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5707,9 +6347,9 @@ Name | Type | Description  | Notes
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5717,11 +6357,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5766,7 +6411,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5777,6 +6422,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5790,9 +6438,9 @@ get site permission recertification permission levels
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5800,11 +6448,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -5838,7 +6491,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -5849,12 +6502,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getsitepermissionrecertificationreport"></a>
 # **GetSitePermissionRecertificationReport**
-> PermissionActionItemPageResult GetSitePermissionRecertificationReport (Guid id, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetSitePermissionRecertificationReport (Guid id, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get site permission recertification report
 
@@ -5862,9 +6518,9 @@ get site permission recertification report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5872,22 +6528,29 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get site permission recertification report
-                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReport(id, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReport(id, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5908,7 +6571,9 @@ Name | Type | Description  | Notes
  **id** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -5916,23 +6581,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getsitepermissionrecertificationreportbyversion"></a>
 # **GetSitePermissionRecertificationReportByVersion**
-> PermissionActionItemPageResult GetSitePermissionRecertificationReportByVersion (Guid id, long version, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetSitePermissionRecertificationReportByVersion (Guid id, long version, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get site permission recertification report by specific version
 
@@ -5940,9 +6608,9 @@ get site permission recertification report by specific version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -5950,23 +6618,30 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var version = 789;  // long | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get site permission recertification report by specific version
-                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReportByVersion(id, version, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReportByVersion(id, version, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -5988,7 +6663,9 @@ Name | Type | Description  | Notes
  **version** | **long**|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -5996,23 +6673,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getsitepermissionrecertificationreportforspgroup"></a>
 # **GetSitePermissionRecertificationReportForSPGroup**
-> PermissionActionItemPageResult GetSitePermissionRecertificationReportForSPGroup (Guid id, Guid groupid, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetSitePermissionRecertificationReportForSPGroup (Guid id, Guid groupid, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get site permission recertification group permission items
 
@@ -6020,9 +6700,9 @@ get site permission recertification group permission items
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6030,23 +6710,30 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
             var groupid = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get site permission recertification group permission items
-                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReportForSPGroup(id, groupid, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReportForSPGroup(id, groupid, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6068,7 +6755,9 @@ Name | Type | Description  | Notes
  **groupid** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -6076,23 +6765,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getsitepermissionrecertificationreportforspgroupbyversion"></a>
 # **GetSitePermissionRecertificationReportForSPGroupByVersion**
-> PermissionActionItemPageResult GetSitePermissionRecertificationReportForSPGroupByVersion (Guid id, long version, Guid groupid, string filter = null, string orderby = null, Object body = null)
+> PermissionActionItemPageResult GetSitePermissionRecertificationReportForSPGroupByVersion (Guid id, long version, Guid groupid, string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get site permission recertification group permission items with specific version with specific version
 
@@ -6100,9 +6792,9 @@ get site permission recertification group permission items with specific version
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6110,11 +6802,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6122,12 +6819,14 @@ namespace Example
             var groupid = new Guid(); // Guid | 
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator (optional) 
-            var body = ;  // Object |  (optional) 
+            var search = search_example;  // string | Search for displayName (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var skip = 56;  // int? |  Define the number of records you want to skip, default value is 0 (optional) 
 
             try
             {
                 // get site permission recertification group permission items with specific version with specific version
-                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReportForSPGroupByVersion(id, version, groupid, filter, orderby, body);
+                PermissionActionItemPageResult result = apiInstance.GetSitePermissionRecertificationReportForSPGroupByVersion(id, version, groupid, filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -6150,7 +6849,9 @@ Name | Type | Description  | Notes
  **groupid** | [**Guid**](Guid.md)|  | 
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, idInSharepoint, accountType, displayName, level, memberOf, path, permissionLevel, sharePointGroup, titleName, userOrGroup, memberId, parentId, parentAccountType, actionType, accessType, isSiteAdministrator | [optional] 
- **body** | **Object**|  | [optional] 
+ **search** | **string**| Search for displayName | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **skip** | **int?**|  Define the number of records you want to skip, default value is 0 | [optional] 
 
 ### Return type
 
@@ -6158,17 +6859,20 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Content-Type**: Not defined
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6182,9 +6886,9 @@ get site permission recertification report properties
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6192,11 +6896,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6230,7 +6939,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6241,6 +6950,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6254,9 +6966,9 @@ get task by batch id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6264,11 +6976,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var batchid = new Guid(); // Guid | 
@@ -6302,7 +7019,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6313,6 +7030,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6326,9 +7046,9 @@ get my task by id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6336,11 +7056,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6374,7 +7099,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6385,12 +7110,15 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="promoteasownersforgroupmembershiprecertification"></a>
 # **PromoteAsOwnersForGroupMembershipRecertification**
-> void PromoteAsOwnersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser = null)
+> void PromoteAsOwnersForGroupMembershipRecertification (Guid id, List<ApiUser> apiUser)
 
 promote as owners for group membership recertification
 
@@ -6398,9 +7126,9 @@ promote as owners for group membership recertification
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6408,15 +7136,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var apiUser = new List<ApiUser>(); // List<ApiUser> |  (optional) 
+            var apiUser = new List<ApiUser>(); // List<ApiUser> | 
 
             try
             {
@@ -6439,7 +7172,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | [optional] 
+ **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | 
 
 ### Return type
 
@@ -6447,7 +7180,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6458,6 +7191,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6471,9 +7207,9 @@ reassign task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6481,11 +7217,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6520,7 +7261,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6531,6 +7272,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6544,9 +7288,9 @@ reject task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6554,11 +7298,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6593,7 +7342,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6604,6 +7353,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6617,9 +7369,9 @@ remove users for group membership recertification
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6627,11 +7379,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6666,7 +7423,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6677,6 +7434,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6690,9 +7450,9 @@ save all changes for change permission task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6700,11 +7460,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6737,7 +7502,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6748,6 +7513,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6761,9 +7529,9 @@ reset all changes for site/group recertification task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6771,11 +7539,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6808,7 +7581,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6819,6 +7592,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6832,9 +7608,9 @@ save my changes for change permission task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6842,11 +7618,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6879,7 +7660,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6890,6 +7671,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6903,9 +7687,9 @@ reset my changes for site/group recertification task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6913,11 +7697,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -6950,7 +7739,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -6961,6 +7750,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -6974,9 +7766,9 @@ retry error task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -6984,11 +7776,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -7023,7 +7820,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7034,12 +7831,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="savechangepermissionactions"></a>
 # **SaveChangePermissionActions**
-> void SaveChangePermissionActions (Guid id, List<PermissionActionItem> permissionActionItem = null)
+> void SaveChangePermissionActions (Guid id, List<PermissionActionItem> permissionActionItem)
 
 save change permission actions
 
@@ -7047,9 +7847,9 @@ save change permission actions
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7057,15 +7857,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var permissionActionItem = new List<PermissionActionItem>(); // List<PermissionActionItem> |  (optional) 
+            var permissionActionItem = new List<PermissionActionItem>(); // List<PermissionActionItem> | 
 
             try
             {
@@ -7088,7 +7893,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **permissionActionItem** | [**List&lt;PermissionActionItem&gt;**](PermissionActionItem.md)|  | [optional] 
+ **permissionActionItem** | [**List&lt;PermissionActionItem&gt;**](PermissionActionItem.md)|  | 
 
 ### Return type
 
@@ -7096,7 +7901,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7107,12 +7912,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="saveclonepermissionreport"></a>
 # **SaveClonePermissionReport**
-> void SaveClonePermissionReport (Guid id, List<SecuritySearchResult> securitySearchResult = null)
+> void SaveClonePermissionReport (Guid id, List<SecuritySearchResult> securitySearchResult)
 
 Save clone permission report
 
@@ -7120,9 +7928,9 @@ Save clone permission report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7130,15 +7938,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var securitySearchResult = new List<SecuritySearchResult>(); // List<SecuritySearchResult> |  (optional) 
+            var securitySearchResult = new List<SecuritySearchResult>(); // List<SecuritySearchResult> | 
 
             try
             {
@@ -7161,7 +7974,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **securitySearchResult** | [**List&lt;SecuritySearchResult&gt;**](SecuritySearchResult.md)|  | [optional] 
+ **securitySearchResult** | [**List&lt;SecuritySearchResult&gt;**](SecuritySearchResult.md)|  | 
 
 ### Return type
 
@@ -7169,7 +7982,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7180,12 +7993,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="savegetmanualarchivereport"></a>
 # **SaveGetManualArchiveReport**
-> void SaveGetManualArchiveReport (Guid id, List<ManuallyArchiveRecordModel> manuallyArchiveRecordModel = null)
+> void SaveGetManualArchiveReport (Guid id, List<ManuallyArchiveRecordModel> manuallyArchiveRecordModel)
 
 save manual archive report
 
@@ -7193,9 +8009,9 @@ save manual archive report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7203,15 +8019,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var manuallyArchiveRecordModel = new List<ManuallyArchiveRecordModel>(); // List<ManuallyArchiveRecordModel> |  (optional) 
+            var manuallyArchiveRecordModel = new List<ManuallyArchiveRecordModel>(); // List<ManuallyArchiveRecordModel> | 
 
             try
             {
@@ -7234,7 +8055,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **manuallyArchiveRecordModel** | [**List&lt;ManuallyArchiveRecordModel&gt;**](ManuallyArchiveRecordModel.md)|  | [optional] 
+ **manuallyArchiveRecordModel** | [**List&lt;ManuallyArchiveRecordModel&gt;**](ManuallyArchiveRecordModel.md)|  | 
 
 ### Return type
 
@@ -7242,7 +8063,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7253,12 +8074,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="savegrouppermissionrecertificationresults"></a>
 # **SaveGroupPermissionRecertificationResults**
-> void SaveGroupPermissionRecertificationResults (Guid id, List<GroupPermissionActionItem> groupPermissionActionItem = null)
+> void SaveGroupPermissionRecertificationResults (Guid id, List<GroupPermissionActionItem> groupPermissionActionItem)
 
 save group permission recertification results
 
@@ -7266,9 +8090,9 @@ save group permission recertification results
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7276,15 +8100,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var groupPermissionActionItem = new List<GroupPermissionActionItem>(); // List<GroupPermissionActionItem> |  (optional) 
+            var groupPermissionActionItem = new List<GroupPermissionActionItem>(); // List<GroupPermissionActionItem> | 
 
             try
             {
@@ -7307,7 +8136,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **groupPermissionActionItem** | [**List&lt;GroupPermissionActionItem&gt;**](GroupPermissionActionItem.md)|  | [optional] 
+ **groupPermissionActionItem** | [**List&lt;GroupPermissionActionItem&gt;**](GroupPermissionActionItem.md)|  | 
 
 ### Return type
 
@@ -7315,7 +8144,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7326,12 +8155,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="saveremovepermissionreport"></a>
 # **SaveRemovePermissionReport**
-> void SaveRemovePermissionReport (Guid id, List<SecuritySearchResult> securitySearchResult = null)
+> void SaveRemovePermissionReport (Guid id, List<SecuritySearchResult> securitySearchResult)
 
 save remove permission report
 
@@ -7339,9 +8171,9 @@ save remove permission report
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7349,15 +8181,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var securitySearchResult = new List<SecuritySearchResult>(); // List<SecuritySearchResult> |  (optional) 
+            var securitySearchResult = new List<SecuritySearchResult>(); // List<SecuritySearchResult> | 
 
             try
             {
@@ -7380,7 +8217,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **securitySearchResult** | [**List&lt;SecuritySearchResult&gt;**](SecuritySearchResult.md)|  | [optional] 
+ **securitySearchResult** | [**List&lt;SecuritySearchResult&gt;**](SecuritySearchResult.md)|  | 
 
 ### Return type
 
@@ -7388,7 +8225,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7399,12 +8236,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="savesitemetadatarecertificationresult"></a>
 # **SaveSiteMetadataRecertificationResult**
-> void SaveSiteMetadataRecertificationResult (Guid id, List<RequestMetadata> requestMetadata = null)
+> void SaveSiteMetadataRecertificationResult (Guid id, List<RequestMetadata> requestMetadata)
 
 save site metadata recertification metadata
 
@@ -7412,9 +8252,9 @@ save site metadata recertification metadata
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7422,15 +8262,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var requestMetadata = new List<RequestMetadata>(); // List<RequestMetadata> |  (optional) 
+            var requestMetadata = new List<RequestMetadata>(); // List<RequestMetadata> | 
 
             try
             {
@@ -7453,7 +8298,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **requestMetadata** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md)|  | [optional] 
+ **requestMetadata** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md)|  | 
 
 ### Return type
 
@@ -7461,7 +8306,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7472,12 +8317,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="savesitepermissionrecertificationresult"></a>
 # **SaveSitePermissionRecertificationResult**
-> void SaveSitePermissionRecertificationResult (Guid id, List<PermissionActionItem> permissionActionItem = null)
+> void SaveSitePermissionRecertificationResult (Guid id, List<PermissionActionItem> permissionActionItem)
 
 save site permission recertification permissions
 
@@ -7485,9 +8333,9 @@ save site permission recertification permissions
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7495,15 +8343,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var permissionActionItem = new List<PermissionActionItem>(); // List<PermissionActionItem> |  (optional) 
+            var permissionActionItem = new List<PermissionActionItem>(); // List<PermissionActionItem> | 
 
             try
             {
@@ -7526,7 +8379,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **permissionActionItem** | [**List&lt;PermissionActionItem&gt;**](PermissionActionItem.md)|  | [optional] 
+ **permissionActionItem** | [**List&lt;PermissionActionItem&gt;**](PermissionActionItem.md)|  | 
 
 ### Return type
 
@@ -7534,7 +8387,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7545,6 +8398,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -7558,9 +8414,9 @@ skip error task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7568,11 +8424,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -7607,7 +8468,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7618,12 +8479,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="specifyprimaryandsecondarycontactwhenprimarycontactisdeactived"></a>
 # **SpecifyPrimaryAndSecondaryContactWhenPrimaryContactIsDeactived**
-> void SpecifyPrimaryAndSecondaryContactWhenPrimaryContactIsDeactived (Guid id, string primarycontact = null, string secondarycontact = null, Guid? primarycontactemail = null, Guid? secodnarycontactemail = null)
+> void SpecifyPrimaryAndSecondaryContactWhenPrimaryContactIsDeactived (Guid id, string primarycontact, string secondarycontact, Guid? primarycontactemail = null, Guid? secodnarycontactemail = null)
 
 specify primary and secondary contact when primary contact is deactived
 
@@ -7631,9 +8495,9 @@ specify primary and secondary contact when primary contact is deactived
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7641,16 +8505,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var primarycontact = primarycontact_example;  // string |  (optional) 
-            var secondarycontact = secondarycontact_example;  // string |  (optional) 
+            var primarycontact = primarycontact_example;  // string | 
+            var secondarycontact = secondarycontact_example;  // string | 
             var primarycontactemail = new Guid?(); // Guid? |  (optional) 
             var secodnarycontactemail = new Guid?(); // Guid? |  (optional) 
 
@@ -7675,8 +8544,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **primarycontact** | **string**|  | [optional] 
- **secondarycontact** | **string**|  | [optional] 
+ **primarycontact** | **string**|  | 
+ **secondarycontact** | **string**|  | 
  **primarycontactemail** | [**Guid?**](Guid?.md)|  | [optional] 
  **secodnarycontactemail** | [**Guid?**](Guid?.md)|  | [optional] 
 
@@ -7686,7 +8555,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7697,12 +8566,15 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="specifysecondarycontactwhensecondarycontactisdeactived"></a>
 # **SpecifySecondaryContactWhenSecondaryContactIsDeactived**
-> void SpecifySecondaryContactWhenSecondaryContactIsDeactived (Guid id, string secondarycontact = null)
+> void SpecifySecondaryContactWhenSecondaryContactIsDeactived (Guid id, string secondarycontact)
 
 specify secondary contact when secondary contact is deactived
 
@@ -7710,9 +8582,9 @@ specify secondary contact when secondary contact is deactived
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7720,15 +8592,20 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
-            var secondarycontact = secondarycontact_example;  // string |  (optional) 
+            var secondarycontact = secondarycontact_example;  // string | 
 
             try
             {
@@ -7751,7 +8628,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **secondarycontact** | **string**|  | [optional] 
+ **secondarycontact** | **string**|  | 
 
 ### Return type
 
@@ -7759,7 +8636,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7770,6 +8647,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -7783,9 +8663,9 @@ submit archive group auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7793,11 +8673,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var autoTaskArchiveRequest = new AutoTaskArchiveRequest(); // AutoTaskArchiveRequest |  (optional) 
@@ -7830,7 +8715,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7841,6 +8726,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -7854,9 +8742,9 @@ submit site archive auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7864,11 +8752,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var autoTaskArchiveRequest = new AutoTaskArchiveRequest(); // AutoTaskArchiveRequest |  (optional) 
@@ -7901,7 +8794,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7912,6 +8805,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -7925,9 +8821,9 @@ submit site policy change auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -7935,11 +8831,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var autoTaskChangePolicyRequest = new AutoTaskChangePolicyRequest(); // AutoTaskChangePolicyRequest |  (optional) 
@@ -7972,7 +8873,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -7983,6 +8884,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -7996,9 +8900,9 @@ submit group continue access auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8006,11 +8910,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid?(); // Guid? |  (optional) 
@@ -8045,7 +8954,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8056,6 +8965,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -8069,9 +8981,9 @@ submit site continue access auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8079,11 +8991,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid?(); // Guid? |  (optional) 
@@ -8118,7 +9035,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8129,6 +9046,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -8142,9 +9062,9 @@ submit delete group auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8152,11 +9072,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var autoTaskDeleteRequest = new AutoTaskDeleteRequest(); // AutoTaskDeleteRequest |  (optional) 
@@ -8189,7 +9114,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8200,6 +9125,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -8213,9 +9141,9 @@ submit site delete auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8223,11 +9151,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var autoTaskDeleteRequest = new AutoTaskDeleteRequest(); // AutoTaskDeleteRequest |  (optional) 
@@ -8260,7 +9193,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8271,6 +9204,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -8284,9 +9220,9 @@ submit extend group auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8294,11 +9230,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var autoTaskExtendRequest = new AutoTaskExtendRequest(); // AutoTaskExtendRequest |  (optional) 
@@ -8331,7 +9272,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8342,6 +9283,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -8355,9 +9299,9 @@ submit site extend auto task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8365,11 +9309,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var autoTaskExtendRequest = new AutoTaskExtendRequest(); // AutoTaskExtendRequest |  (optional) 
@@ -8402,7 +9351,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8413,6 +9362,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -8426,9 +9378,9 @@ submit site/group recertification task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8436,11 +9388,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -8475,7 +9432,7 @@ void (empty response body)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8486,6 +9443,9 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -8499,9 +9459,9 @@ view site ownership recertification task
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -8509,11 +9469,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new TasksApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -8547,7 +9512,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -8558,6 +9523,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

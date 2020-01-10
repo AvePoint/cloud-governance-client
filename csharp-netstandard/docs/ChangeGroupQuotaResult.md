@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeGroupQuotaResult
+# Cloud.Governance.Client.Model.ChangeGroupQuotaResult
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ClonePermissionReportProperty
+# Cloud.Governance.Client.Model.ClonePermissionReportProperty
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.BackupEnvironmentSetting
+# Cloud.Governance.Client.Model.BackupEnvironmentSetting
 ## Properties
 
 Name | Type | Description | Notes

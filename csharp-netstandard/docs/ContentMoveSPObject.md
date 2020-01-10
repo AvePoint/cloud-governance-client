@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ContentMoveSPObject
+# Cloud.Governance.Client.Model.ContentMoveSPObject
 ## Properties
 
 Name | Type | Description | Notes

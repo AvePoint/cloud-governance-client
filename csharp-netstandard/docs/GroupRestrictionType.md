@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.GroupRestrictionType
+# Cloud.Governance.Client.Model.GroupRestrictionType
+AnyGroup=0, PartOf=1
 ## Properties
 
 Name | Type | Description | Notes

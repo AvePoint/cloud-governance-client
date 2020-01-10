@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.RecertificationStatus
+# Cloud.Governance.Client.Model.RecertificationStatus
+None=0, InProgress=1, Overdue=2, </br>Completed=3, Exception=4, Rejected=5, </br>
 ## Properties
 
 Name | Type | Description | Notes

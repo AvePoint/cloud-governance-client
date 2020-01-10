@@ -1,13 +1,15 @@
-# Cloud.Governance.NewSdk.Model.CreateSiteService
+# Cloud.Governance.Client.Model.CreateSiteService
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **AdminCenterUrl** | **string** |  | [optional] 
 **SiteLanguages** | [**List&lt;IntModel&gt;**](IntModel.md) |  | [optional] 
 **RootSiteAndManagedPaths** | [**List&lt;RootSiteWithManagedPaths&gt;**](RootSiteWithManagedPaths.md) |  | [optional] 
 **SiteUrlSetting** | [**SiteUrlSetting**](SiteUrlSetting.md) |  | [optional] 
 **MultiGeoSetting** | [**MultiGeoSerivceSetting**](MultiGeoSerivceSetting.md) |  | [optional] 
+**SiteTitleSetting** | [**SiteTitleSetting**](SiteTitleSetting.md) |  | [optional] 
 **Policies** | [**List&lt;PolicyRef&gt;**](PolicyRef.md) |  | [optional] 
 **DeploymentManagerPlanSettings** | [**DeploymentManagerPlanSettings**](DeploymentManagerPlanSettings.md) |  | [optional] 
 **PolicyIdsAndTemplates** | [**List&lt;PolicyWithTemplates&gt;**](PolicyWithTemplates.md) |  | [optional] 
@@ -60,7 +62,7 @@ Name | Type | Description | Notes
 **ApproversContainManagerRole** | **bool** |  | [optional] 
 **Status** | **CommonStatus** |  | [optional] 
 **ShowServiceInCatalog** | **bool** |  | [optional] 
-**CustomActivity** | [**CustomActivityInfo**](CustomActivityInfo.md) |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.WorkspaceList
+# Cloud.Governance.Client.Model.WorkspaceList
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **Type** | **WorkspaceType** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
 **GroupEmail** | **string** |  | [optional] 
-**TypeDescription** | **string** |  | [optional] 
+**TypeDescription** | **string** |  | [optional] [readonly] 
 **PrimaryContact** | **string** |  | [optional] 
 **PrimaryContactEmail** | **string** |  | [optional] 
 **Phase** | **AutoImportPhase** |  | [optional] 
-**PhaseDescription** | **string** |  | [optional] 
+**PhaseDescription** | **string** |  | [optional] [readonly] 
 **IsCurrentRenewer** | **bool** |  | [optional] 
 **CreatedTime** | **DateTime** |  | [optional] 
 **Status** | **SiteStatus** |  | [optional] 

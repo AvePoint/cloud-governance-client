@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApiTermInfoPageResult
+# Cloud.Governance.Client.Model.ApiTermInfoPageResult
 ## Properties
 
 Name | Type | Description | Notes

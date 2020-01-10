@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApiTaskDynamicProperties
+# Cloud.Governance.Client.Model.ApiTaskDynamicProperties
 ## Properties
 
 Name | Type | Description | Notes

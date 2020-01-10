@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CreateListSPObject
+# Cloud.Governance.Client.Model.CreateListSPObject
 ## Properties
 
 Name | Type | Description | Notes

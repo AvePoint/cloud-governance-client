@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.ExtendType
+# Cloud.Governance.Client.Model.ExtendType
+WithConstantValue=0, WithinSpecifyLimit=1
 ## Properties
 
 Name | Type | Description | Notes

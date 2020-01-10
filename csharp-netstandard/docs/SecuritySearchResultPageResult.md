@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SecuritySearchResultPageResult
+# Cloud.Governance.Client.Model.SecuritySearchResultPageResult
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SPUserManagementModel
+# Cloud.Governance.Client.Model.SPUserManagementModel
 ## Properties
 
 Name | Type | Description | Notes

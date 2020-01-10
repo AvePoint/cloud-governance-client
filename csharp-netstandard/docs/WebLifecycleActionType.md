@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.WebLifecycleActionType
+# Cloud.Governance.Client.Model.WebLifecycleActionType
+None=0, Delete=1, Archive=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

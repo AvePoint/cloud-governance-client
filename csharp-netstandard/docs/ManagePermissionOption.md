@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ManagePermissionOption
+# Cloud.Governance.Client.Model.ManagePermissionOption
 ## Properties
 
 Name | Type | Description | Notes
@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **IsEnableDeleteUniquePermission** | **bool** |  | [optional] 
 **IsEnableExcludePermissionLevel** | **bool** |  | [optional] 
 **IsHideExcludePermissionItem** | **bool** |  | [optional] 
+**ExcludedPermissionLevles** | [**List&lt;PermissionLevel&gt;**](PermissionLevel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

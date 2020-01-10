@@ -1,10 +1,9 @@
-# Cloud.Governance.NewSdk.Model.GroupValidationParameter
+# Cloud.Governance.Client.Model.GroupValidationParameter
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GroupId** | **Guid** |  | [optional] 
-**GroupEmail** | **string** |  | [optional] 
 **IsEditTask** | **bool** |  | [optional] 
 **IsFromQuestionnaire** | **bool** |  | [optional] 
 

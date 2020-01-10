@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PersonalSettings
+# Cloud.Governance.Client.Model.PersonalSettings
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **UserID** | **int** |  | [optional] 
 **LanguageID** | **int** |  | [optional] 
 **TimeZoneID** | **int** |  | [optional] 
+**Properties** | [**PersonalSettingsPropertyInfo**](PersonalSettingsPropertyInfo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

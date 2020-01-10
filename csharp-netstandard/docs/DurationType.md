@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.DurationType
+# Cloud.Governance.Client.Model.DurationType
+Day=0, Week=1, Month=2, </br>Year=3, Minute=4, Hour=5, </br>
 ## Properties
 
 Name | Type | Description | Notes

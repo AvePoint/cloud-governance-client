@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.RenewalItemAction
+# Cloud.Governance.Client.Model.RenewalItemAction
+None=0, Remove=1, Add=2, </br>Edit=3, DeleteUser=4, PromoteAsOwner=5, </br>DemoteAsMember=6
 ## Properties
 
 Name | Type | Description | Notes

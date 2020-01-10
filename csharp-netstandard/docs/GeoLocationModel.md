@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GeoLocationModel
+# Cloud.Governance.Client.Model.GeoLocationModel
 ## Properties
 
 Name | Type | Description | Notes

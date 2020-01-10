@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CustomMetadata
+# Cloud.Governance.Client.Model.CustomMetadata
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.MembershipRecertificationItem
+# Cloud.Governance.Client.Model.MembershipRecertificationItem
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,13 +8,13 @@ Name | Type | Description | Notes
 **Type** | **RecertificationActionType** |  | [optional] 
 **TaskId** | **Guid?** |  | [optional] 
 **Action** | **RenewalItemAction** |  | [optional] 
-**ActionDescription** | **string** |  | [optional] 
+**ActionDescription** | **string** |  | [optional] [readonly] 
 **User** | **string** |  | [optional] 
 **UserDisplayName** | **string** |  | [optional] 
 **MembershipType** | **MembershipType** |  | [optional] 
-**MembershipTypeDescription** | **string** |  | [optional] 
+**MembershipTypeDescription** | **string** |  | [optional] [readonly] 
 **AccessType** | **UserAccessType** |  | [optional] 
-**AccessTypeDescription** | **string** |  | [optional] 
+**AccessTypeDescription** | **string** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

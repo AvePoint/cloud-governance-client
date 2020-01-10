@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApiUserChangedProperty
+# Cloud.Governance.Client.Model.ApiUserChangedProperty
 ## Properties
 
 Name | Type | Description | Notes

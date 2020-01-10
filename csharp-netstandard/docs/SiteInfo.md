@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SiteInfo
+# Cloud.Governance.Client.Model.SiteInfo
 ## Properties
 
 Name | Type | Description | Notes
@@ -59,10 +59,11 @@ Name | Type | Description | Notes
 **PermissionRecertificationStatus** | **int** |  | [optional] 
 **OwnershipRecertificationStatus** | **int** |  | [optional] 
 **MetadataRecertificationStatus** | **int** |  | [optional] 
-**SharingCapabilitiesDesc** | **string** |  | [optional] 
+**SharingCapabilitiesDesc** | **string** |  | [optional] [readonly] 
 **ExtensionProperties** | **Dictionary&lt;string, string&gt;** |  | [optional] 
 **PhaseTimeDisplay** | **string** |  | [optional] 
 **CurrentRenewers** | **string** |  | [optional] 
+**RenewDueDate** | **DateTime?** |  | [optional] 
 **AutoImportProfileName** | **string** |  | [optional] 
 **PhaseDisplay** | **AutoImportPhase** |  | [optional] 
 **Title** | **string** |  | [optional] 

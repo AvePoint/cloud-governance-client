@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GuidModel
+# Cloud.Governance.Client.Model.GuidModel
 ## Properties
 
 Name | Type | Description | Notes

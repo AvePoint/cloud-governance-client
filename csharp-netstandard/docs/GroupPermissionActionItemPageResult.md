@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupPermissionActionItemPageResult
+# Cloud.Governance.Client.Model.GroupPermissionActionItemPageResult
 ## Properties
 
 Name | Type | Description | Notes

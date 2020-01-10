@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.WebServiceAuthenticationType
+# Cloud.Governance.Client.Model.WebServiceAuthenticationType
+Anonymous=0, AzureAD=1
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeContactByUrlSetting
+# Cloud.Governance.Client.Model.ChangeContactByUrlSetting
 ## Properties
 
 Name | Type | Description | Notes

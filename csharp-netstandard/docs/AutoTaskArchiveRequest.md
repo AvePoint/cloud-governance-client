@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AutoTaskArchiveRequest
+# Cloud.Governance.Client.Model.AutoTaskArchiveRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.MetadataFieldType
+# Cloud.Governance.Client.Model.MetadataFieldType
+None=0, SingleLineText=1, MultiLineText=2, </br>YesOrNo=3, Choices=4, PeoplePickerValue=5, </br>Terms=6, Hyperlink=7, UserProfileService=8, </br>AzureADProperty=9
 ## Properties
 
 Name | Type | Description | Notes

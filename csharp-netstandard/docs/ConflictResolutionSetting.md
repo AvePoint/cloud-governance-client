@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ConflictResolutionSetting
+# Cloud.Governance.Client.Model.ConflictResolutionSetting
 ## Properties
 
 Name | Type | Description | Notes

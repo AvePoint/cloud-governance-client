@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.RootSiteWithManagedPaths
+# Cloud.Governance.Client.Model.RootSiteWithManagedPaths
 ## Properties
 
 Name | Type | Description | Notes

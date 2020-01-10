@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.DpmServiceSetting
+# Cloud.Governance.Client.Model.DpmServiceSetting
 ## Properties
 
 Name | Type | Description | Notes

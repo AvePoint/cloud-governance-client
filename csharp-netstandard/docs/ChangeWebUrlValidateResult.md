@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeWebUrlValidateResult
+# Cloud.Governance.Client.Model.ChangeWebUrlValidateResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **WebTitle** | **string** |  | [optional] 
 **WebDescription** | **string** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [readonly] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyDaoSetting
+# Cloud.Governance.Client.Model.PolicyDaoSetting
 ## Properties
 
 Name | Type | Description | Notes

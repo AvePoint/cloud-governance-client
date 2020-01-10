@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.MembershipRecertificationReportProperties
+# Cloud.Governance.Client.Model.MembershipRecertificationReportProperties
 ## Properties
 
 Name | Type | Description | Notes

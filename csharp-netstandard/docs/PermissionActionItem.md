@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PermissionActionItem
+# Cloud.Governance.Client.Model.PermissionActionItem
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **string** |  | [optional] 
 **IdInSharepoint** | **string** |  | [optional] 
 **AccountType** | **PrincipalType** |  | [optional] 
-**AccountTypeDescription** | **string** |  | [optional] 
+**AccountTypeDescription** | **string** |  | [optional] [readonly] 
 **DisplayName** | **string** |  | [optional] 
 **Level** | **string** |  | [optional] 
 **LevelDescription** | **string** |  | [optional] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **ParentAccountType** | **int** |  | [optional] 
 **ActionType** | **PermissionActionType** |  | [optional] 
 **AccessType** | **UserAccessType** |  | [optional] 
-**AccessTypeDescription** | **string** |  | [optional] 
+**AccessTypeDescription** | **string** |  | [optional] [readonly] 
 **IsSiteAdministrator** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

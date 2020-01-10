@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyQuotaThresholdSetting
+# Cloud.Governance.Client.Model.PolicyQuotaThresholdSetting
 ## Properties
 
 Name | Type | Description | Notes

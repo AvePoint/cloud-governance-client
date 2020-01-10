@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyElectionSetting
+# Cloud.Governance.Client.Model.PolicyElectionSetting
 ## Properties
 
 Name | Type | Description | Notes

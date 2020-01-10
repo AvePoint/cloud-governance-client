@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupMembershipItem
+# Cloud.Governance.Client.Model.GroupMembershipItem
 ## Properties
 
 Name | Type | Description | Notes

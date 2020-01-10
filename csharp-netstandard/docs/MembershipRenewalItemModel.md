@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.MembershipRenewalItemModel
+# Cloud.Governance.Client.Model.MembershipRenewalItemModel
 ## Properties
 
 Name | Type | Description | Notes
@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **GroupUserType** | **MembershipUserType** |  | [optional] 
 **GroupUserTypeDescription** | **string** |  | [optional] 
 **AccessType** | **UserAccessType** |  | [optional] 
-**AccessTypeDescription** | **string** |  | [optional] 
+**AccessTypeDescription** | **string** |  | [optional] [readonly] 
 **Id** | **Guid** |  | [optional] 
 **ObjectId** | **Guid** |  | [optional] 
 **Action** | **RenewalItemAction** |  | [optional] 

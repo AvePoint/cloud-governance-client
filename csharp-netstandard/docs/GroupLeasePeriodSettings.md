@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupLeasePeriodSettings
+# Cloud.Governance.Client.Model.GroupLeasePeriodSettings
 ## Properties
 
 Name | Type | Description | Notes

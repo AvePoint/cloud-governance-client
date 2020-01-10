@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChoiceMetadataSettings
+# Cloud.Governance.Client.Model.ChoiceMetadataSettings
 ## Properties
 
 Name | Type | Description | Notes

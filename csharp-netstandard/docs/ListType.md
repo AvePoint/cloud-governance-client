@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.ListType
+# Cloud.Governance.Client.Model.ListType
+Library=0, List=1
 ## Properties
 
 Name | Type | Description | Notes

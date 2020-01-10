@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.StringModel
+# Cloud.Governance.Client.Model.StringModel
 ## Properties
 
 Name | Type | Description | Notes

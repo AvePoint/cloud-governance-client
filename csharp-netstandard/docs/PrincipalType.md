@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.PrincipalType
+# Cloud.Governance.Client.Model.PrincipalType
+None=0, User=1, DistributionList=2, </br>SecurityGroup=4, SharePointGroup=8, All=15, </br>Guest=16
 ## Properties
 
 Name | Type | Description | Notes

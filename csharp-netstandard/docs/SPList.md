@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SPList
+# Cloud.Governance.Client.Model.SPList
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Title** | **string** |  | [optional] 
 **Url** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
-**IsLibrary** | **bool** |  | [optional] 
+**IsLibrary** | **bool** |  | [optional] [readonly] 
 **IsOnQuickLaunch** | **bool** |  | [optional] 
 **IsEnableModeration** | **bool** |  | [optional] 
 **IsEnableVersioning** | **bool** |  | [optional] 

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyQuotaLifecycleItem
+# Cloud.Governance.Client.Model.PolicyQuotaLifecycleItem
 ## Properties
 
 Name | Type | Description | Notes

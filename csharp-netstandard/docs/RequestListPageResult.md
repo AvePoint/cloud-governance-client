@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.RequestListPageResult
+# Cloud.Governance.Client.Model.RequestListPageResult
 ## Properties
 
 Name | Type | Description | Notes

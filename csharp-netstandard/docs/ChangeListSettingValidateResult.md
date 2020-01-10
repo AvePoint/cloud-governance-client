@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeListSettingValidateResult
+# Cloud.Governance.Client.Model.ChangeListSettingValidateResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **WebUrl** | **string** |  | [optional] 
 **WebId** | **Guid** |  | [optional] 
 **Lists** | [**List&lt;SPList&gt;**](SPList.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [readonly] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

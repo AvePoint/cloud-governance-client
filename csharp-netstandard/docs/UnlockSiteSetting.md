@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.UnlockSiteSetting
+# Cloud.Governance.Client.Model.UnlockSiteSetting
 ## Properties
 
 Name | Type | Description | Notes

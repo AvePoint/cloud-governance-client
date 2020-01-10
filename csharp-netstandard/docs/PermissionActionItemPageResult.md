@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PermissionActionItemPageResult
+# Cloud.Governance.Client.Model.PermissionActionItemPageResult
 ## Properties
 
 Name | Type | Description | Notes

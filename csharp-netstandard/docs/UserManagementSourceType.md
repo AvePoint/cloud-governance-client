@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.UserManagementSourceType
+# Cloud.Governance.Client.Model.UserManagementSourceType
+User=0, Group=1, All=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

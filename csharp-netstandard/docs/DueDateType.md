@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.DueDateType
+# Cloud.Governance.Client.Model.DueDateType
+None=0, Expired=1, DueToday=2, </br>DueThisWeek=3, DueThisMonth=4
 ## Properties
 
 Name | Type | Description | Notes

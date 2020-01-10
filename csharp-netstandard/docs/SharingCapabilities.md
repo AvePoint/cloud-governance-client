@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.SharingCapabilities
+# Cloud.Governance.Client.Model.SharingCapabilities
+Disabled=0, ExternalUserSharingOnly=1, ExternalUserAndGuestSharing=2, </br>ExistingExternalUserSharingOnly=3
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.OwnershipRecertification
+# Cloud.Governance.Client.Model.OwnershipRecertification
 ## Properties
 
 Name | Type | Description | Notes

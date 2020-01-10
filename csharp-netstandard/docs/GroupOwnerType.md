@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.GroupOwnerType
+# Cloud.Governance.Client.Model.GroupOwnerType
+SpoGroup=0, User=1
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GuidBooleanModel
+# Cloud.Governance.Client.Model.GuidBooleanModel
 ## Properties
 
 Name | Type | Description | Notes

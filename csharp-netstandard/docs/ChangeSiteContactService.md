@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeSiteContactService
+# Cloud.Governance.Client.Model.ChangeSiteContactService
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **EnableChangeAdmin** | **bool** |  | [optional] 
 **ChangedMethod** | **ChangeContactMethod** |  | [optional] 
 **ChangeModeAssignBy** | **AssignBy** |  | [optional] 
+**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 
@@ -22,7 +23,7 @@ Name | Type | Description | Notes
 **ApproversContainManagerRole** | **bool** |  | [optional] 
 **Status** | **CommonStatus** |  | [optional] 
 **ShowServiceInCatalog** | **bool** |  | [optional] 
-**CustomActivity** | [**CustomActivityInfo**](CustomActivityInfo.md) |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 

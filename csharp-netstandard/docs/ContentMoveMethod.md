@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.ContentMoveMethod
+# Cloud.Governance.Client.Model.ContentMoveMethod
+Copy=0, Move=1
 ## Properties
 
 Name | Type | Description | Notes

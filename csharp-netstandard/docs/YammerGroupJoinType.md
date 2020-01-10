@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.YammerGroupJoinType
+# Cloud.Governance.Client.Model.YammerGroupJoinType
+Anyone=0, AdminApproved=1
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,1 +1,2 @@
-# cloud-governance-new-sdk
+csharp-netstandard: openapi-generator generate -g csharp-netcore -i OpenApi3_0.All.json -o csharp-netstandard --package-name Cloud.Governance.NewSdk
+javascript_promise: openapi-generator generate -g javascript -i OpenApi3_0.All.json -o javascript -c jsconfig.json

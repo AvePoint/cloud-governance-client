@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ManagePermissionUserSetting
+# Cloud.Governance.Client.Model.ManagePermissionUserSetting
 ## Properties
 
 Name | Type | Description | Notes

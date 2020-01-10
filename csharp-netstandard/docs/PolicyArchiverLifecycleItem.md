@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyArchiverLifecycleItem
+# Cloud.Governance.Client.Model.PolicyArchiverLifecycleItem
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeListSettingObjectInfo
+# Cloud.Governance.Client.Model.ChangeListSettingObjectInfo
 ## Properties
 
 Name | Type | Description | Notes

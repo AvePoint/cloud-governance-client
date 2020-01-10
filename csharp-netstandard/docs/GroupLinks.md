@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupLinks
+# Cloud.Governance.Client.Model.GroupLinks
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyIconSetting
+# Cloud.Governance.Client.Model.PolicyIconSetting
 ## Properties
 
 Name | Type | Description | Notes

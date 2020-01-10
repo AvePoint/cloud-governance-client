@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupUser
+# Cloud.Governance.Client.Model.GroupUser
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,10 +8,11 @@ Name | Type | Description | Notes
 **Id** | **string** |  | [optional] 
 **LoginName** | **string** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
-**Email** | **string** |  | [optional] 
 **IsGroup** | **bool** |  | [optional] 
-**JobTitle** | **string** |  | [optional] 
-**PhysicalDeliveryOfficeName** | **string** |  | [optional] 
+**Email** | **string** |  | [optional] [readonly] 
+**JobTitle** | **string** |  | [optional] [readonly] 
+**PhysicalDeliveryOfficeName** | **string** |  | [optional] [readonly] 
+**IsOtherTenantUser** | **bool** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

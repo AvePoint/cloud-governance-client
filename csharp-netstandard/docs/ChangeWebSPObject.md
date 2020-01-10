@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeWebSPObject
+# Cloud.Governance.Client.Model.ChangeWebSPObject
 ## Properties
 
 Name | Type | Description | Notes

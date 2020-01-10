@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangePermissionValidateResult
+# Cloud.Governance.Client.Model.ChangePermissionValidateResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **InheritNodeType** | **NodeType** |  | [optional] 
 **TopInheritUrl** | **string** |  | [optional] 
 **CheckType** | **NodeType** |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [readonly] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

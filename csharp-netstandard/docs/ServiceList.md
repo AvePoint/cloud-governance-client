@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ServiceList
+# Cloud.Governance.Client.Model.ServiceList
 ## Properties
 
 Name | Type | Description | Notes
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Contact** | **string** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **Type** | **ServiceType** |  | [optional] 
-**TypeDescription** | **string** |  | [optional] 
+**TypeDescription** | **string** |  | [optional] [readonly] 
 **IsQuestionnaire** | **bool** |  | [optional] 
 **QuestionnaireId** | **Guid?** |  | [optional] 
 

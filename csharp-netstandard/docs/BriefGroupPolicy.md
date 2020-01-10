@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.BriefGroupPolicy
+# Cloud.Governance.Client.Model.BriefGroupPolicy
 ## Properties
 
 Name | Type | Description | Notes

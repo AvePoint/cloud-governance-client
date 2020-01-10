@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.GroupIdRuleType
+# Cloud.Governance.Client.Model.GroupIdRuleType
+ConstructGroupId=0, PopulateGroupIdWithGroupName=1
 ## Properties
 
 Name | Type | Description | Notes

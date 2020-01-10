@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.PolicyType
+# Cloud.Governance.Client.Model.PolicyType
+None=0, SiteCollectionProvision=1, Storage=2, </br>User=3, Group=4
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.AnnoymouslinkPermissions
+# Cloud.Governance.Client.Model.AnnoymouslinkPermissions
+View=0, Edit=1
 ## Properties
 
 Name | Type | Description | Notes

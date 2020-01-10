@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.MembershipType
+# Cloud.Governance.Client.Model.MembershipType
+Owner=0, Member=1
 ## Properties
 
 Name | Type | Description | Notes

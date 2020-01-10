@@ -1,6 +1,6 @@
-# Cloud.Governance.NewSdk.Api.MetadataApi
+# Cloud.Governance.Client.Api.MetadataApi
 
-All URIs are relative to *https://cg-api.avepointlabs.com*
+All URIs are relative to *https://API_BASE_URL*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getmetadata"></a>
 # **GetMetadata**
-> List&lt;CustomMetadata&gt; GetMetadata (string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
+> CustomMetadataPageResult GetMetadata (string filter = null, string orderby = null, string search = null, int? top = null, int? skip = null)
 
 get metadata
 
@@ -18,9 +18,9 @@ get metadata
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -28,11 +28,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new MetadataApi(Configuration.Default);
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional) 
@@ -44,7 +49,7 @@ namespace Example
             try
             {
                 // get metadata
-                List<CustomMetadata> result = apiInstance.GetMetadata(filter, orderby, search, top, skip);
+                CustomMetadataPageResult result = apiInstance.GetMetadata(filter, orderby, search, top, skip);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -70,11 +75,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;CustomMetadata&gt;**](CustomMetadata.md)
+[**CustomMetadataPageResult**](CustomMetadataPageResult.md)
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -85,6 +90,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -98,9 +106,9 @@ get metadata by id
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -108,11 +116,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new MetadataApi(Configuration.Default);
             var id = new Guid(); // Guid | 
@@ -146,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -157,6 +170,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.HelpLinkType
+# Cloud.Governance.Client.Model.HelpLinkType
+None=0, Guide=1, CustomLink=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

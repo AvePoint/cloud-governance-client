@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TermsMetadataSettings
+# Cloud.Governance.Client.Model.TermsMetadataSettings
 ## Properties
 
 Name | Type | Description | Notes

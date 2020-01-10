@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SiteLifecycleValidateResult
+# Cloud.Governance.Client.Model.SiteLifecycleValidateResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **UnlockSetting** | [**UnlockSiteSetting**](UnlockSiteSetting.md) |  | [optional] 
 **ChangePolicySetting** | [**ChangeSitePolicySetting**](ChangeSitePolicySetting.md) |  | [optional] 
 **LockSetting** | [**LockSiteSetting**](LockSiteSetting.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [readonly] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

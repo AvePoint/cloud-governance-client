@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.WelcomeEmailSettings
+# Cloud.Governance.Client.Model.WelcomeEmailSettings
 ## Properties
 
 Name | Type | Description | Notes

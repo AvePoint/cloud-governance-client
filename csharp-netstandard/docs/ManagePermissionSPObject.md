@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ManagePermissionSPObject
+# Cloud.Governance.Client.Model.ManagePermissionSPObject
 ## Properties
 
 Name | Type | Description | Notes

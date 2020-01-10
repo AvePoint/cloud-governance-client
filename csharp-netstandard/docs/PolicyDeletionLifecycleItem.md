@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyDeletionLifecycleItem
+# Cloud.Governance.Client.Model.PolicyDeletionLifecycleItem
 ## Properties
 
 Name | Type | Description | Notes

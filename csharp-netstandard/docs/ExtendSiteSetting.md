@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ExtendSiteSetting
+# Cloud.Governance.Client.Model.ExtendSiteSetting
 ## Properties
 
 Name | Type | Description | Notes

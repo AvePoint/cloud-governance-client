@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.UrlSequentialNumberingSettings
+# Cloud.Governance.Client.Model.UrlSequentialNumberingSettings
 ## Properties
 
 Name | Type | Description | Notes

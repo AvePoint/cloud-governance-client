@@ -1,9 +1,10 @@
-# Cloud.Governance.NewSdk.Model.RequestTeamsSettings
+# Cloud.Governance.Client.Model.RequestTeamsSettings
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AllowMembersCreateUpdateChannels** | **bool** |  | [optional] 
+**AllowMembersCreatePrivateChannels** | **bool** |  | [optional] 
 **AllowMemberDeleteRestoreChannels** | **bool** |  | [optional] 
 **AllowMembersAddRemoveApps** | **bool** |  | [optional] 
 **AllowMembersCreateUpdateRemoveTabs** | **bool** |  | [optional] 

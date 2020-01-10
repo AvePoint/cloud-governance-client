@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.LifecycleAction
+# Cloud.Governance.Client.Model.LifecycleAction
+None=0, Extend=1, Delete=2, </br>Archive=3, Policy=4, Unlock=5, </br>Continue=6, Lock=7, Quota=8, </br>
 ## Properties
 
 Name | Type | Description | Notes

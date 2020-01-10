@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeMetadataActionSetting
+# Cloud.Governance.Client.Model.ChangeMetadataActionSetting
 ## Properties
 
 Name | Type | Description | Notes

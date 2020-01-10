@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SPPrincipal
+# Cloud.Governance.Client.Model.SPPrincipal
 ## Properties
 
 Name | Type | Description | Notes

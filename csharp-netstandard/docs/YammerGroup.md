@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.YammerGroup
+# Cloud.Governance.Client.Model.YammerGroup
 ## Properties
 
 Name | Type | Description | Notes

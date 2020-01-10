@@ -1,6 +1,6 @@
-# Cloud.Governance.NewSdk.Api.Office365Api
+# Cloud.Governance.Client.Api.Office365Api
 
-All URIs are relative to *https://cg-api.avepointlabs.com*
+All URIs are relative to *https://API_BASE_URL*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -38,9 +38,9 @@ get group information
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -48,11 +48,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var tenantid = tenantid_example;  // string | 
@@ -88,7 +93,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -99,6 +104,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -112,9 +120,9 @@ get group members by group email
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -122,11 +130,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var email = email_example;  // string | 
@@ -166,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -177,6 +190,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -190,9 +206,9 @@ get group members by group name
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -200,11 +216,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var url = url_example;  // string | 
@@ -246,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -257,6 +278,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -270,9 +294,9 @@ get group owners by group email
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -280,11 +304,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var email = email_example;  // string | 
@@ -324,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -335,6 +364,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -348,9 +380,9 @@ get all hubsites from a specific tenant
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -358,11 +390,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var tenantid = new Guid(); // Guid | 
@@ -396,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -407,6 +444,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -420,9 +460,9 @@ get all hubsites from site's tenant
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -430,11 +470,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var siteUrl = siteUrl_example;  // string | any site url in your tenant (optional) 
@@ -468,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -479,6 +524,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -492,9 +540,9 @@ get all teams that owner is curernt user
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -502,11 +550,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
 
@@ -536,7 +589,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -547,6 +600,9 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -560,9 +616,9 @@ get web permissions for creating list request by web url
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -570,11 +626,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var webUrl = webUrl_example;  // string | 
@@ -608,7 +669,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -619,6 +680,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -632,9 +696,9 @@ get site permimssion role assignment
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -642,11 +706,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var url = url_example;  // string | 
@@ -682,7 +751,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -693,6 +762,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -706,9 +778,9 @@ get site designs by site url
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -716,11 +788,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var siteUrl = siteUrl_example;  // string |  (optional) 
@@ -754,7 +831,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -765,6 +842,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -778,9 +858,9 @@ get site collection information with url
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -788,11 +868,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var fullUrl = fullUrl_example;  // string | 
@@ -826,7 +911,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -837,6 +922,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -850,9 +938,9 @@ get site permission levels
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -860,11 +948,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var uri = uri_example;  // string | 
@@ -898,7 +991,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -909,6 +1002,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -922,9 +1018,9 @@ get site sharePoint groups
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -932,11 +1028,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var uri = uri_example;  // string | 
@@ -970,7 +1071,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -981,6 +1082,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -994,9 +1098,9 @@ get site templates with language code identifier
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1004,11 +1108,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var languageid = 56;  // int | 
@@ -1044,7 +1153,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1055,6 +1164,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1068,9 +1180,9 @@ get yammer group
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1078,11 +1190,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var networkid = networkid_example;  // string | 
@@ -1118,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1129,6 +1246,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1142,9 +1262,9 @@ load the containers from cloud management
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1152,11 +1272,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var serviceid = serviceid_example;  // string | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree
@@ -1196,7 +1321,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1207,6 +1332,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1220,9 +1348,9 @@ load sharepoint folders
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1230,11 +1358,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var listid = new Guid(); // Guid | 
@@ -1276,7 +1409,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1287,6 +1420,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1300,9 +1436,9 @@ load sharepoint items
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1310,11 +1446,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var listid = new Guid(); // Guid | 
@@ -1356,7 +1497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1367,6 +1508,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1380,9 +1524,9 @@ load sharepoint lists
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1390,11 +1534,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var siteorweburl = siteorweburl_example;  // string | 
@@ -1434,7 +1583,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1445,6 +1594,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1458,9 +1610,9 @@ load managed metadata terms
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1468,11 +1620,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var termStoreid = new Guid(); // Guid | 
@@ -1520,7 +1677,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1531,6 +1688,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1544,9 +1704,9 @@ load sharepoint sites
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1554,11 +1714,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var serviceid = serviceid_example;  // string | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree
@@ -1602,7 +1767,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1613,6 +1778,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1626,9 +1794,9 @@ load sharepoint webs
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Cloud.Governance.NewSdk.Api;
-using Cloud.Governance.NewSdk.Client;
-using Cloud.Governance.NewSdk.Model;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Example
 {
@@ -1636,11 +1804,16 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://cg-api.avepointlabs.com";
-            // Configure API key authorization: BearerAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+            Configuration.Default.BasePath = "https://API_BASE_URL";
+            // Configure API key authorization: ClientId
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
+            // Configure API key authorization: ClientSecret
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
+            // Configure API key authorization: UserPrincipalName
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
+            
 
             var apiInstance = new Office365Api(Configuration.Default);
             var serviceid = serviceid_example;  // string | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree
@@ -1688,7 +1861,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
 
 ### HTTP request headers
 
@@ -1699,6 +1872,9 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,9 +1,9 @@
-# Cloud.Governance.NewSdk.Model.MetadataActionLockItem
+# Cloud.Governance.Client.Model.MetadataActionLockItem
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InstanceId** | **Guid** |  | [optional] 
+**InstanceId** | **Guid** |  | [optional] [readonly] 
 **MetadataActionInstanceId** | **Guid** |  | [optional] 
 **IsEnabled** | **bool** |  | [optional] 
 **IsEnabledText** | **string** |  | [optional] 

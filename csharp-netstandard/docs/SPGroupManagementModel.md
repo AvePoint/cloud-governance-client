@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SPGroupManagementModel
+# Cloud.Governance.Client.Model.SPGroupManagementModel
 ## Properties
 
 Name | Type | Description | Notes

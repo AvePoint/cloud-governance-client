@@ -1,9 +1,9 @@
-# Cloud.Governance.NewSdk.Model.HubSiteChangedSettings
+# Cloud.Governance.Client.Model.HubSiteChangedSettings
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool** |  | [optional] [readonly] 
 **IsModernSite** | **bool** |  | [optional] 
 **Action** | **ChangeHubsiteActionType** |  | [optional] 
 **AssociatedHubSiteId** | **Guid** |  | [optional] 

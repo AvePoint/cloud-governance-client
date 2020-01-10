@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GrantPermissionSPObject
+# Cloud.Governance.Client.Model.GrantPermissionSPObject
 ## Properties
 
 Name | Type | Description | Notes

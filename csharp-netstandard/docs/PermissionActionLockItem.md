@@ -1,9 +1,9 @@
-# Cloud.Governance.NewSdk.Model.PermissionActionLockItem
+# Cloud.Governance.Client.Model.PermissionActionLockItem
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InstanceId** | **Guid** |  | [optional] 
+**InstanceId** | **Guid** |  | [optional] [readonly] 
 **PermissionActionInstanceId** | **Guid** |  | [optional] 
 **IsEnabled** | **bool** |  | [optional] 
 **IsEnabledText** | **string** |  | [optional] 

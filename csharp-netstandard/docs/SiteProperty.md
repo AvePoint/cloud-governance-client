@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SiteProperty
+# Cloud.Governance.Client.Model.SiteProperty
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,10 +1,12 @@
-# Cloud.Governance.NewSdk.Model.AutoTaskChangePolicyRequest
+# Cloud.Governance.Client.Model.AutoTaskChangePolicyRequest
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Action** | **LifecycleAction** |  | [optional] 
 **Policy** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**StartDateType** | **StartDateType** |  | [optional] 
+**SpecifyStartDate** | **DateTime?** |  | [optional] 
 **TaskId** | **Guid** |  | [optional] 
 **Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
 **Comments** | [**CommentsParam**](CommentsParam.md) |  | [optional] 

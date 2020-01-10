@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.UserGroupPermissions
+# Cloud.Governance.Client.Model.UserGroupPermissions
 ## Properties
 
 Name | Type | Description | Notes

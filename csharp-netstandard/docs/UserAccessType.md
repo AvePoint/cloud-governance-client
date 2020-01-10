@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.UserAccessType
+# Cloud.Governance.Client.Model.UserAccessType
+None=0, Internal=1, External=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

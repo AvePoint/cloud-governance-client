@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.MetadataRecertificationReportProperties
+# Cloud.Governance.Client.Model.MetadataRecertificationReportProperties
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ServiceForRequest
+# Cloud.Governance.Client.Model.ServiceForRequest
 ## Properties
 
 Name | Type | Description | Notes
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **ApproversContainManagerRole** | **bool** |  | [optional] 
 **Status** | **CommonStatus** |  | [optional] 
 **ShowServiceInCatalog** | **bool** |  | [optional] 
-**CustomActivity** | [**CustomActivityInfo**](CustomActivityInfo.md) |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 

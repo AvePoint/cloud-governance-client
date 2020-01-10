@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.RequestMetadataInfo
+# Cloud.Governance.Client.Model.RequestMetadataInfo
 ## Properties
 
 Name | Type | Description | Notes

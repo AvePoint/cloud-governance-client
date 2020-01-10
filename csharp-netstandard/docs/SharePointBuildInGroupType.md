@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.SharePointBuildInGroupType
+# Cloud.Governance.Client.Model.SharePointBuildInGroupType
+None=0, Owners=1, Members=2, </br>Visitors=3
 ## Properties
 
 Name | Type | Description | Notes

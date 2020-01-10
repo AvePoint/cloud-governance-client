@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeGroupSettingCheckResult
+# Cloud.Governance.Client.Model.ChangeGroupSettingCheckResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **AssociatedHubSiteId** | **Guid?** |  | [optional] 
 **DynamicMembershipRules** | [**List&lt;DynamicGroupRuleInfo&gt;**](DynamicGroupRuleInfo.md) |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [readonly] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

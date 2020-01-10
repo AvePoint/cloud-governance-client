@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.SiteStatus
+# Cloud.Governance.Client.Model.SiteStatus
+Active=0, Deleted=1, Archived=2, </br>Locked=3, TemporaryLocked=4
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.PolicyExtensionType
+# Cloud.Governance.Client.Model.PolicyExtensionType
+Each=0, NoMore=1
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.QuotaOption
+# Cloud.Governance.Client.Model.QuotaOption
+Scope=0, Specifid=1
 ## Properties
 
 Name | Type | Description | Notes

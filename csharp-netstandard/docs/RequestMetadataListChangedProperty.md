@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.RequestMetadataListChangedProperty
+# Cloud.Governance.Client.Model.RequestMetadataListChangedProperty
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AutoTaskExtendRequest
+# Cloud.Governance.Client.Model.AutoTaskExtendRequest
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AutoTaskDeleteRequest
+# Cloud.Governance.Client.Model.AutoTaskDeleteRequest
 ## Properties
 
 Name | Type | Description | Notes

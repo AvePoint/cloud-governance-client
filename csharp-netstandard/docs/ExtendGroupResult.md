@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ExtendGroupResult
+# Cloud.Governance.Client.Model.ExtendGroupResult
 ## Properties
 
 Name | Type | Description | Notes

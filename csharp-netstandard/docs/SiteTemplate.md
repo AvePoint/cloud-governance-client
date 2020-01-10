@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SiteTemplate
+# Cloud.Governance.Client.Model.SiteTemplate
 ## Properties
 
 Name | Type | Description | Notes

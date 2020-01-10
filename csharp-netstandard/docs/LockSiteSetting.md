@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.LockSiteSetting
+# Cloud.Governance.Client.Model.LockSiteSetting
 ## Properties
 
 Name | Type | Description | Notes

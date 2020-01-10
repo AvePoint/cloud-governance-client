@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.AccessRequestType
+# Cloud.Governance.Client.Model.AccessRequestType
+SpecifyEmail=0, OwnerGroup=1
 ## Properties
 
 Name | Type | Description | Notes

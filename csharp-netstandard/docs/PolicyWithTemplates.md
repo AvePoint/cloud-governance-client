@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyWithTemplates
+# Cloud.Governance.Client.Model.PolicyWithTemplates
 ## Properties
 
 Name | Type | Description | Notes

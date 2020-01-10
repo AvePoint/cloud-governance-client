@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GrantPermissionRequestDurationSettings
+# Cloud.Governance.Client.Model.GrantPermissionRequestDurationSettings
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **IsGrantTemporaryPermission** | **bool** |  | [optional] 
 **ExpirationType** | **ExpirationType** |  | [optional] 
 **DurationInterval** | **int?** |  | [optional] 
-**DurationDateType** | **DurationDateType** |  | [optional] 
+**DurationDateType** | **DurationDateTypeNullable** |  | [optional] 
 **StartTime** | **DateTime?** |  | [optional] 
 **EndTime** | **DateTime?** |  | [optional] 
 

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupInfo
+# Cloud.Governance.Client.Model.GroupInfo
 ## Properties
 
 Name | Type | Description | Notes

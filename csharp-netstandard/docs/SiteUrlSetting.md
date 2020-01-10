@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SiteUrlSetting
+# Cloud.Governance.Client.Model.SiteUrlSetting
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.CommonStatus
+# Cloud.Governance.Client.Model.CommonStatus
+Inactive=0, Active=1
 ## Properties
 
 Name | Type | Description | Notes

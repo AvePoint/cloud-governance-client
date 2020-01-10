@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.QuestionaireType
+# Cloud.Governance.Client.Model.QuestionaireType
+DrowDownList=0, RadioButton=1, ManageredMetadata=3, </br>YesNoMetadata=4
 ## Properties
 
 Name | Type | Description | Notes

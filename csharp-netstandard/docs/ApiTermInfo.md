@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApiTermInfo
+# Cloud.Governance.Client.Model.ApiTermInfo
 ## Properties
 
 Name | Type | Description | Notes

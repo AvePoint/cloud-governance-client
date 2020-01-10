@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.RenewModel
+# Cloud.Governance.Client.Model.RenewModel
 ## Properties
 
 Name | Type | Description | Notes

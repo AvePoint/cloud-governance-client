@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyRef
+# Cloud.Governance.Client.Model.PolicyRef
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Description** | **string** |  | [optional] 
 **Category** | **string** |  | [optional] 
 **TenantId** | **Guid** |  | [optional] 
+**Status** | **CommonStatus** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApiUserPageResult
+# Cloud.Governance.Client.Model.ApiUserPageResult
 ## Properties
 
 Name | Type | Description | Notes

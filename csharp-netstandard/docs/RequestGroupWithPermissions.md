@@ -1,10 +1,10 @@
-# Cloud.Governance.NewSdk.Model.RequestGroupWithPermissions
+# Cloud.Governance.Client.Model.RequestGroupWithPermissions
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | [optional] 
-**Description** | **string** |  | [optional] 
+**Description** | **string** |  | [optional] [readonly] 
 **Users** | [**List&lt;GroupUser&gt;**](GroupUser.md) |  | [optional] 
 **PermissionLevels** | [**List&lt;PermissionLevel&gt;**](PermissionLevel.md) |  | [optional] 
 **GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] 

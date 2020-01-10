@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ExtendGroupRequest
+# Cloud.Governance.Client.Model.ExtendGroupRequest
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **ExtendDuration** | **int** |  | [optional] 
 **ExtendDurationType** | **ApiDurationType** |  | [optional] 
 **GroupId** | **Guid** |  | [optional] 
-**GroupName** | **string** |  | [optional] 
-**GroupEmail** | **string** |  | [optional] 
+**GroupName** | **string** |  | [optional] [readonly] 
+**GroupEmail** | **string** |  | [optional] [readonly] 
 **Id** | **Guid?** |  | [optional] 
 **ServiceId** | **Guid** |  | [optional] 
 **Department** | **string** |  | [optional] 
@@ -15,18 +15,18 @@ Name | Type | Description | Notes
 **NotesToApprovers** | **string** |  | [optional] 
 **QuestionnaireId** | **Guid?** |  | [optional] 
 **Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
-**TicketNumber** | **int?** |  | [optional] 
-**Type** | **ServiceType** |  | [optional] 
-**TypeDescription** | **string** |  | [optional] 
-**Requester** | **string** |  | [optional] 
-**Status** | **RequestStatus** |  | [optional] 
-**ProgressStatus** | **int** |  | [optional] 
-**ProgressStatusDescription** | **string** |  | [optional] 
-**SubmittedTime** | **DateTime?** |  | [optional] 
-**LastUpdated** | **DateTime?** |  | [optional] 
-**CreatedTime** | **DateTime?** |  | [optional] 
-**AssignTo** | **string** |  | [optional] 
-**FullPath** | **string** |  | [optional] 
+**TicketNumber** | **int?** |  | [optional] [readonly] 
+**Type** | **ServiceTypeNullable** |  | [optional] [readonly] 
+**TypeDescription** | **string** |  | [optional] [readonly] 
+**Requester** | **string** |  | [optional] [readonly] 
+**Status** | **RequestStatusNullable** |  | [optional] [readonly] 
+**ProgressStatus** | **int** |  | [optional] [readonly] 
+**ProgressStatusDescription** | **string** |  | [optional] [readonly] 
+**SubmittedTime** | **DateTime?** |  | [optional] [readonly] 
+**LastUpdated** | **DateTime?** |  | [optional] [readonly] 
+**CreatedTime** | **DateTime?** |  | [optional] [readonly] 
+**AssignTo** | **string** |  | [optional] [readonly] 
+**FullPath** | **string** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

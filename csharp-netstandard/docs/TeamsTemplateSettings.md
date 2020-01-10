@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TeamsTemplateSettings
+# Cloud.Governance.Client.Model.TeamsTemplateSettings
 ## Properties
 
 Name | Type | Description | Notes

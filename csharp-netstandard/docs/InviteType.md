@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.InviteType
+# Cloud.Governance.Client.Model.InviteType
+User=0, Group=1, UserInGroup=2, </br>PortalSupport=3, ProductSupport=4
 ## Properties
 
 Name | Type | Description | Notes

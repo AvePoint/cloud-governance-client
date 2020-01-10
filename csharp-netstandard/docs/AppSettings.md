@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AppSettings
+# Cloud.Governance.Client.Model.AppSettings
 ## Properties
 
 Name | Type | Description | Notes

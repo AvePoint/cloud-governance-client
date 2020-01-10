@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GrantPermissionServiceDurationSettings
+# Cloud.Governance.Client.Model.GrantPermissionServiceDurationSettings
 ## Properties
 
 Name | Type | Description | Notes

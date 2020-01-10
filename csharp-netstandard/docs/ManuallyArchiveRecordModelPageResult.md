@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ManuallyArchiveRecordModelPageResult
+# Cloud.Governance.Client.Model.ManuallyArchiveRecordModelPageResult
 ## Properties
 
 Name | Type | Description | Notes

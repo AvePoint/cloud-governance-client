@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.UserLevelControlSettings
+# Cloud.Governance.Client.Model.UserLevelControlSettings
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.LinkMetadataSettings
+# Cloud.Governance.Client.Model.LinkMetadataSettings
 ## Properties
 
 Name | Type | Description | Notes

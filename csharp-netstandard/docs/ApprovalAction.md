@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.ApprovalAction
+# Cloud.Governance.Client.Model.ApprovalAction
+Reject=0, Approval=1
 ## Properties
 
 Name | Type | Description | Notes

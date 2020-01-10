@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AutoImportProfileRef
+# Cloud.Governance.Client.Model.AutoImportProfileRef
 ## Properties
 
 Name | Type | Description | Notes

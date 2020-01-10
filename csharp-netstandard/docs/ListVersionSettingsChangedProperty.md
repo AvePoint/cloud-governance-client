@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ListVersionSettingsChangedProperty
+# Cloud.Governance.Client.Model.ListVersionSettingsChangedProperty
 ## Properties
 
 Name | Type | Description | Notes

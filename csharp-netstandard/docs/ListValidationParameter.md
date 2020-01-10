@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ListValidationParameter
+# Cloud.Governance.Client.Model.ListValidationParameter
 ## Properties
 
 Name | Type | Description | Notes

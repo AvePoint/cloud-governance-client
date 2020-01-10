@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ContentMoveCommonSetting
+# Cloud.Governance.Client.Model.ContentMoveCommonSetting
 ## Properties
 
 Name | Type | Description | Notes

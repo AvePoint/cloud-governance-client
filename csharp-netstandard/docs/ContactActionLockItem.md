@@ -1,9 +1,9 @@
-# Cloud.Governance.NewSdk.Model.ContactActionLockItem
+# Cloud.Governance.Client.Model.ContactActionLockItem
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InstanceId** | **Guid** |  | [optional] 
+**InstanceId** | **Guid** |  | [optional] [readonly] 
 **ContactActionInstanceId** | **Guid** |  | [optional] 
 **IsEnabled** | **bool** |  | [optional] 
 **IsEnabledText** | **string** |  | [optional] 

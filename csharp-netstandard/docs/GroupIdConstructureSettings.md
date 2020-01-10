@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupIdConstructureSettings
+# Cloud.Governance.Client.Model.GroupIdConstructureSettings
 ## Properties
 
 Name | Type | Description | Notes

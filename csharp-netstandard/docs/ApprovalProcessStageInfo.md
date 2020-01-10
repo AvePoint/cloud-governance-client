@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApprovalProcessStageInfo
+# Cloud.Governance.Client.Model.ApprovalProcessStageInfo
 ## Properties
 
 Name | Type | Description | Notes

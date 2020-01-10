@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.ExtendBasedOnPoint
+# Cloud.Governance.Client.Model.ExtendBasedOnPoint
+None=0, ExpiredTime=1, ApprovaledTime=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

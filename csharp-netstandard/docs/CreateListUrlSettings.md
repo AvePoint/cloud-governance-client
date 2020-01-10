@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CreateListUrlSettings
+# Cloud.Governance.Client.Model.CreateListUrlSettings
 ## Properties
 
 Name | Type | Description | Notes

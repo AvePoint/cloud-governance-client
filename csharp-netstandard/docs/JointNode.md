@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.JointNode
+# Cloud.Governance.Client.Model.JointNode
 ## Properties
 
 Name | Type | Description | Notes

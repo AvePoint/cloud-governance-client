@@ -1,10 +1,10 @@
-# Cloud.Governance.NewSdk.Model.LookupValue
+# Cloud.Governance.Client.Model.LookupValue
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Tenant** | **string** |  | [optional] 
-**Property** | **string** |  | [optional] 
+**Tenant** | **string** |  | [optional] [readonly] 
+**Property** | **string** |  | [optional] [readonly] 
 **TargetUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **UserPropertyValue** | **string** |  | [optional] 
 **UserPropertyDisplayValue** | **string** |  | [optional] 

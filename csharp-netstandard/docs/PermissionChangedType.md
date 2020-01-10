@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.PermissionChangedType
+# Cloud.Governance.Client.Model.PermissionChangedType
+RemovePermission=0, ChangePermission=1
 ## Properties
 
 Name | Type | Description | Notes

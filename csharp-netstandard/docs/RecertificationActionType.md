@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.RecertificationActionType
+# Cloud.Governance.Client.Model.RecertificationActionType
+None=0, GroupMembership=1, GroupPermission=2, </br>UserPermission=4
 ## Properties
 
 Name | Type | Description | Notes

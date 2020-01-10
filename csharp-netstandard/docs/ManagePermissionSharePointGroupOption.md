@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ManagePermissionSharePointGroupOption
+# Cloud.Governance.Client.Model.ManagePermissionSharePointGroupOption
 ## Properties
 
 Name | Type | Description | Notes

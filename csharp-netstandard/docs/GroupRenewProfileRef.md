@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupRenewProfileRef
+# Cloud.Governance.Client.Model.GroupRenewProfileRef
 ## Properties
 
 Name | Type | Description | Notes

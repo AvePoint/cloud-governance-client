@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.CategoryType
+# Cloud.Governance.Client.Model.CategoryType
+Contact=0, License=1, Organization=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

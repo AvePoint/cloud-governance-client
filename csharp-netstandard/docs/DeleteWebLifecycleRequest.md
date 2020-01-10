@@ -1,15 +1,15 @@
-# Cloud.Governance.NewSdk.Model.DeleteWebLifecycleRequest
+# Cloud.Governance.Client.Model.DeleteWebLifecycleRequest
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | **WebLifecycleActionType** |  | [optional] 
+**Action** | **WebLifecycleActionType** |  | [optional] [readonly] 
 **WebId** | **Guid** |  | [optional] 
 **WebUrl** | **string** |  | [optional] 
 **WebRelativeUrl** | **string** |  | [optional] 
 **SiteId** | **Guid** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
-**ActionDescription** | **string** |  | [optional] 
+**ActionDescription** | **string** |  | [optional] [readonly] 
 **Id** | **Guid?** |  | [optional] 
 **ServiceId** | **Guid** |  | [optional] 
 **Department** | **string** |  | [optional] 
@@ -17,18 +17,18 @@ Name | Type | Description | Notes
 **NotesToApprovers** | **string** |  | [optional] 
 **QuestionnaireId** | **Guid?** |  | [optional] 
 **Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
-**TicketNumber** | **int?** |  | [optional] 
-**Type** | **ServiceType** |  | [optional] 
-**TypeDescription** | **string** |  | [optional] 
-**Requester** | **string** |  | [optional] 
-**Status** | **RequestStatus** |  | [optional] 
-**ProgressStatus** | **int** |  | [optional] 
-**ProgressStatusDescription** | **string** |  | [optional] 
-**SubmittedTime** | **DateTime?** |  | [optional] 
-**LastUpdated** | **DateTime?** |  | [optional] 
-**CreatedTime** | **DateTime?** |  | [optional] 
-**AssignTo** | **string** |  | [optional] 
-**FullPath** | **string** |  | [optional] 
+**TicketNumber** | **int?** |  | [optional] [readonly] 
+**Type** | **ServiceTypeNullable** |  | [optional] [readonly] 
+**TypeDescription** | **string** |  | [optional] [readonly] 
+**Requester** | **string** |  | [optional] [readonly] 
+**Status** | **RequestStatusNullable** |  | [optional] [readonly] 
+**ProgressStatus** | **int** |  | [optional] [readonly] 
+**ProgressStatusDescription** | **string** |  | [optional] [readonly] 
+**SubmittedTime** | **DateTime?** |  | [optional] [readonly] 
+**LastUpdated** | **DateTime?** |  | [optional] [readonly] 
+**CreatedTime** | **DateTime?** |  | [optional] [readonly] 
+**AssignTo** | **string** |  | [optional] [readonly] 
+**FullPath** | **string** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

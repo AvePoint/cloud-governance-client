@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.ApplyPolicyStatus
+# Cloud.Governance.Client.Model.ApplyPolicyStatus
+None=0, Applying=1, Waiting=2, </br>Succeed=3, Failed=4
 ## Properties
 
 Name | Type | Description | Notes

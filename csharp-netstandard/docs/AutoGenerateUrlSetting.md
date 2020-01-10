@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AutoGenerateUrlSetting
+# Cloud.Governance.Client.Model.AutoGenerateUrlSetting
 ## Properties
 
 Name | Type | Description | Notes

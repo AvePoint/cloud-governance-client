@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.LanguageWithTemplates
+# Cloud.Governance.Client.Model.LanguageWithTemplates
 ## Properties
 
 Name | Type | Description | Notes

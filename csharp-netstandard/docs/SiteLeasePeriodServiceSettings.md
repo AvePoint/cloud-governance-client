@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SiteLeasePeriodServiceSettings
+# Cloud.Governance.Client.Model.SiteLeasePeriodServiceSettings
 ## Properties
 
 Name | Type | Description | Notes

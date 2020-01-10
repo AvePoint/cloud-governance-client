@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CommentsParam
+# Cloud.Governance.Client.Model.CommentsParam
 ## Properties
 
 Name | Type | Description | Notes

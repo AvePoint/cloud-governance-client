@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AnonymousLinkSettings
+# Cloud.Governance.Client.Model.AnonymousLinkSettings
 ## Properties
 
 Name | Type | Description | Notes

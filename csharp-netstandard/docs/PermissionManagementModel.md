@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PermissionManagementModel
+# Cloud.Governance.Client.Model.PermissionManagementModel
 ## Properties
 
 Name | Type | Description | Notes

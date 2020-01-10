@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeSiteSettingValidateResult
+# Cloud.Governance.Client.Model.ChangeSiteSettingValidateResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **SiteId** | **Guid** |  | [optional] 
 **SiteTitle** | **string** |  | [optional] 
 **SiteDescription** | **string** |  | [optional] 
+**IsEnableChangeHubSite** | **bool** |  | [optional] 
 **IsModernSite** | **bool** |  | [optional] 
 **IsHubSite** | **bool** |  | [optional] 
 **AssociatedHubSiteId** | **Guid?** |  | [optional] 
@@ -14,7 +15,7 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [readonly] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

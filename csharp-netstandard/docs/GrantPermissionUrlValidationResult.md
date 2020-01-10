@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GrantPermissionUrlValidationResult
+# Cloud.Governance.Client.Model.GrantPermissionUrlValidationResult
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,7 +8,8 @@ Name | Type | Description | Notes
 **Object** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] 
 **SpPermissionLevels** | [**List&lt;IntModel&gt;**](IntModel.md) |  | [optional] 
 **SpGroups** | [**List&lt;GrantPermissionGroup&gt;**](GrantPermissionGroup.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**AllowBreakPermissionInheritance** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [readonly] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.QuestionnaireRequest
+# Cloud.Governance.Client.Model.QuestionnaireRequest
 ## Properties
 
 Name | Type | Description | Notes

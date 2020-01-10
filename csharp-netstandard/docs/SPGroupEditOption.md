@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.SPGroupEditOption
+# Cloud.Governance.Client.Model.SPGroupEditOption
+GroupOwner=0, GroupMembers=1
 ## Properties
 
 Name | Type | Description | Notes

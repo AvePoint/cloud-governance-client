@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupPermissionActionItem
+# Cloud.Governance.Client.Model.GroupPermissionActionItem
 ## Properties
 
 Name | Type | Description | Notes
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **AccountType** | **PrincipalType** |  | [optional] 
 **AccountTypeDescription** | **string** |  | [optional] 
 **AccessType** | **UserAccessType** |  | [optional] 
-**AccessTypeDescription** | **string** |  | [optional] 
+**AccessTypeDescription** | **string** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

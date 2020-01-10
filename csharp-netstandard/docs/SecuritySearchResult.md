@@ -1,21 +1,21 @@
-# Cloud.Governance.NewSdk.Model.SecuritySearchResult
+# Cloud.Governance.Client.Model.SecuritySearchResult
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Guid** |  | [optional] 
-**DisplayName** | **string** |  | [optional] 
-**IdentityName** | **string** |  | [optional] 
-**ObjectUrl** | **string** |  | [optional] 
-**ObjectTitle** | **string** |  | [optional] 
+**Id** | **Guid** |  | 
+**DisplayName** | **string** |  | [optional] [readonly] 
+**IdentityName** | **string** |  | [optional] [readonly] 
+**ObjectUrl** | **string** |  | [optional] [readonly] 
+**ObjectTitle** | **string** |  | [optional] [readonly] 
 **ObjectType** | **string** |  | [optional] 
-**ObjectTypeDescription** | **string** |  | [optional] 
-**AccountType** | **string** |  | [optional] 
-**AccountTypeDescription** | **string** |  | [optional] 
-**SharePointGroup** | **string** |  | [optional] 
-**PermissionLevels** | **string** |  | [optional] 
+**ObjectTypeDescription** | **string** |  | [optional] [readonly] 
+**AccountType** | **string** |  | [optional] [readonly] 
+**AccountTypeDescription** | **string** |  | [optional] [readonly] 
+**SharePointGroup** | **string** |  | [optional] [readonly] 
+**PermissionLevels** | **string** |  | [optional] [readonly] 
 **Action** | **ApprovalAction** |  | [optional] 
-**AccessType** | **string** |  | [optional] 
+**AccessType** | **string** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

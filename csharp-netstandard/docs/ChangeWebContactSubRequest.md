@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeWebContactSubRequest
+# Cloud.Governance.Client.Model.ChangeWebContactSubRequest
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **Id** | **Guid** |  | [optional] 
 **AssignTo** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **Reason** | **string** |  | [optional] 
-**Status** | **int** |  | [optional] 
-**StatusDescription** | **string** |  | [optional] 
+**Status** | **int** |  | [optional] [readonly] 
+**StatusDescription** | **string** |  | [optional] [readonly] 
 **ProgressStatus** | **ApiRequestProgressStatus** |  | [optional] 
 **ContactChangeSettings** | [**ChangeWebContactByUrlSetting**](ChangeWebContactByUrlSetting.md) |  | [optional] 
 

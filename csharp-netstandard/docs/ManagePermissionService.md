@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ManagePermissionService
+# Cloud.Governance.Client.Model.ManagePermissionService
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **UserScopeSetting** | [**ManagePermissionUserSetting**](ManagePermissionUserSetting.md) |  | [optional] 
 **SharePointGroupOptions** | [**ManagePermissionSharePointGroupOption**](ManagePermissionSharePointGroupOption.md) |  | [optional] 
 **PermissionOptions** | [**ManagePermissionOption**](ManagePermissionOption.md) |  | [optional] 
+**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 
@@ -21,7 +22,7 @@ Name | Type | Description | Notes
 **ApproversContainManagerRole** | **bool** |  | [optional] 
 **Status** | **CommonStatus** |  | [optional] 
 **ShowServiceInCatalog** | **bool** |  | [optional] 
-**CustomActivity** | [**CustomActivityInfo**](CustomActivityInfo.md) |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.UserInfo
+# Cloud.Governance.Client.Model.UserInfo
 ## Properties
 
 Name | Type | Description | Notes
@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **JobTitle** | **string** |  | [optional] 
 **UsageLocation** | **string** |  | [optional] 
 **PhysicalDeliveryOfficeName** | **string** |  | [optional] 
+**IsOtherTenantUser** | **bool** |  | [optional] 
 **Id** | **int** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 

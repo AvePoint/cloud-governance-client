@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.DisplayInReportType
+# Cloud.Governance.Client.Model.DisplayInReportType
+Hide=1, DisplayInAllPlaces=2, OnlyDisplayInAdminReport=3, </br>
 ## Properties
 
 Name | Type | Description | Notes

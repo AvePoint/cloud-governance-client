@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicySharingSetting
+# Cloud.Governance.Client.Model.PolicySharingSetting
 ## Properties
 
 Name | Type | Description | Notes

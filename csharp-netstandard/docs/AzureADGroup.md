@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.AzureADGroup
+# Cloud.Governance.Client.Model.AzureADGroup
 ## Properties
 
 Name | Type | Description | Notes

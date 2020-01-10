@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.InlineResponse200
+# Cloud.Governance.Client.Model.InlineResponse200
 ## Properties
 
 Name | Type | Description | Notes

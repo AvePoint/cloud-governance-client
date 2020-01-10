@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TreeNodeExtension
+# Cloud.Governance.Client.Model.TreeNodeExtension
 ## Properties
 
 Name | Type | Description | Notes

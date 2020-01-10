@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.DistinctPageResult
+# Cloud.Governance.Client.Model.DistinctPageResult
 ## Properties
 
 Name | Type | Description | Notes

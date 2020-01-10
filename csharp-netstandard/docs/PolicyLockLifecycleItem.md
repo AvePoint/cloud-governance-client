@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyLockLifecycleItem
+# Cloud.Governance.Client.Model.PolicyLockLifecycleItem
 ## Properties
 
 Name | Type | Description | Notes

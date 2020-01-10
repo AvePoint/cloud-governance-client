@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.MultiGeoSerivceSetting
+# Cloud.Governance.Client.Model.MultiGeoSerivceSetting
 ## Properties
 
 Name | Type | Description | Notes

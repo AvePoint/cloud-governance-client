@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.LinkValue
+# Cloud.Governance.Client.Model.LinkValue
 ## Properties
 
 Name | Type | Description | Notes

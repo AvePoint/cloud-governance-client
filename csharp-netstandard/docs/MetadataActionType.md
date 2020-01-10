@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.MetadataActionType
+# Cloud.Governance.Client.Model.MetadataActionType
+NoChange=0, Add=1, Edit=2, </br>Delete=-1
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TemplateWithPermissions
+# Cloud.Governance.Client.Model.TemplateWithPermissions
 ## Properties
 
 Name | Type | Description | Notes

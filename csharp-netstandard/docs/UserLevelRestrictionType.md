@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.UserLevelRestrictionType
+# Cloud.Governance.Client.Model.UserLevelRestrictionType
+AnyUser=0, PeersAndDirectOrIndirectReport=1, DirectOrIndirectReports=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

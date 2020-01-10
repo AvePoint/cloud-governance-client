@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupConstructureRule
+# Cloud.Governance.Client.Model.GroupConstructureRule
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.MultiGeoControlMode
+# Cloud.Governance.Client.Model.MultiGeoControlMode
+None=0, SpecifiedDirectly=1, SpecifiedByRole=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ServiceUserWithPermissions
+# Cloud.Governance.Client.Model.ServiceUserWithPermissions
 ## Properties
 
 Name | Type | Description | Notes

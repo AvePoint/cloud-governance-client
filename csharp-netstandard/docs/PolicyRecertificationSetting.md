@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyRecertificationSetting
+# Cloud.Governance.Client.Model.PolicyRecertificationSetting
 ## Properties
 
 Name | Type | Description | Notes

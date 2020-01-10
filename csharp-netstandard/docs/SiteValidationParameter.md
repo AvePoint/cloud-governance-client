@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SiteValidationParameter
+# Cloud.Governance.Client.Model.SiteValidationParameter
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ContentMoveProfileMappings
+# Cloud.Governance.Client.Model.ContentMoveProfileMappings
 ## Properties
 
 Name | Type | Description | Notes

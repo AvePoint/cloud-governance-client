@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.AddGroupMemberType
+# Cloud.Governance.Client.Model.AddGroupMemberType
+Manually=0, Dynamically=1
 ## Properties
 
 Name | Type | Description | Notes

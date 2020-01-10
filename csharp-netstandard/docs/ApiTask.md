@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApiTask
+# Cloud.Governance.Client.Model.ApiTask
 ## Properties
 
 Name | Type | Description | Notes
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **Description** | **string** |  | [optional] 
 **RequestGuid** | **Guid** |  | [optional] 
 **Status** | **TaskResult** |  | [optional] 
-**StatusDescription** | **string** |  | [optional] 
+**StatusDescription** | **string** |  | [optional] [readonly] 
 **ServiceType** | **ServiceType** |  | [optional] 
-**ServiceTypeDescription** | **string** |  | [optional] 
+**ServiceTypeDescription** | **string** |  | [optional] [readonly] 
 **Comments** | **string** |  | [optional] 
 **AllComments** | [**List&lt;TaskComment&gt;**](TaskComment.md) |  | [optional] 
 **ErrorMessage** | **string** |  | [optional] 

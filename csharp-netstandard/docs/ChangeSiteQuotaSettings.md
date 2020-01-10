@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ChangeSiteQuotaSettings
+# Cloud.Governance.Client.Model.ChangeSiteQuotaSettings
 ## Properties
 
 Name | Type | Description | Notes

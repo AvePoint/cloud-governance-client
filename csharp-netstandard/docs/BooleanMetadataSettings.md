@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.BooleanMetadataSettings
+# Cloud.Governance.Client.Model.BooleanMetadataSettings
 ## Properties
 
 Name | Type | Description | Notes

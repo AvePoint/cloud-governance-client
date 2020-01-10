@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ListTemplateSettings
+# Cloud.Governance.Client.Model.ListTemplateSettings
 ## Properties
 
 Name | Type | Description | Notes

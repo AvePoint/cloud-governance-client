@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.GroupNameConstructureSettings
+# Cloud.Governance.Client.Model.GroupNameConstructureSettings
 ## Properties
 
 Name | Type | Description | Notes

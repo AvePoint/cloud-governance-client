@@ -1,9 +1,10 @@
-# Cloud.Governance.NewSdk.Model.GrantPermissionService
+# Cloud.Governance.Client.Model.GrantPermissionService
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AllowBreakPermissionInheritance** | **bool** |  | [optional] 
+**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **UserLevelControlSettings** | [**UserLevelControlSettings**](UserLevelControlSettings.md) |  | [optional] 
 **PermissionDurationSettings** | [**GrantPermissionServiceDurationSettings**](GrantPermissionServiceDurationSettings.md) |  | [optional] 
 **PermissionSettings** | [**GrantPermissionServicePermissionSettings**](GrantPermissionServicePermissionSettings.md) |  | [optional] 
@@ -24,7 +25,7 @@ Name | Type | Description | Notes
 **ApproversContainManagerRole** | **bool** |  | [optional] 
 **Status** | **CommonStatus** |  | [optional] 
 **ShowServiceInCatalog** | **bool** |  | [optional] 
-**CustomActivity** | [**CustomActivityInfo**](CustomActivityInfo.md) |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 

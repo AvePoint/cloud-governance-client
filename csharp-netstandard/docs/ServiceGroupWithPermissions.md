@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ServiceGroupWithPermissions
+# Cloud.Governance.Client.Model.ServiceGroupWithPermissions
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **AllowChangePermissionLevel** | **bool** |  | [optional] 
 **Removable** | **bool** |  | [optional] 
 **Name** | **string** |  | [optional] 
-**Description** | **string** |  | [optional] 
+**Description** | **string** |  | [optional] [readonly] 
 **Users** | [**List&lt;GroupUser&gt;**](GroupUser.md) |  | [optional] 
 **PermissionLevels** | [**List&lt;PermissionLevel&gt;**](PermissionLevel.md) |  | [optional] 
 **GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] 

@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.ContentMoveAction
+# Cloud.Governance.Client.Model.ContentMoveAction
+Merge=0, Attach=1
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CreateWebValidationParameter
+# Cloud.Governance.Client.Model.CreateWebValidationParameter
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TaskComment
+# Cloud.Governance.Client.Model.TaskComment
 ## Properties
 
 Name | Type | Description | Notes

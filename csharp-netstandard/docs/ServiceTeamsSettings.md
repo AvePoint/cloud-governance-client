@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ServiceTeamsSettings
+# Cloud.Governance.Client.Model.ServiceTeamsSettings
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **MentionsAssignBy** | **AssignBy** |  | [optional] 
 **FunStuffAssignBy** | **AssignBy** |  | [optional] 
 **AllowMembersCreateUpdateChannels** | **bool** |  | [optional] 
+**AllowMembersCreatePrivateChannels** | **bool** |  | [optional] 
 **AllowMemberDeleteRestoreChannels** | **bool** |  | [optional] 
 **AllowMembersAddRemoveApps** | **bool** |  | [optional] 
 **AllowMembersCreateUpdateRemoveTabs** | **bool** |  | [optional] 

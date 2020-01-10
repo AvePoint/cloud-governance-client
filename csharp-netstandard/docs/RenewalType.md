@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.RenewalType
+# Cloud.Governance.Client.Model.RenewalType
+None=0, RenewSiteContact=1, RenewSiteMetadata=2, </br>RenewSitePermission=4, RenewGroupContact=11, RenewGroupMetadata=12, </br>RenewGroupMembership=13, RenewGroupPermission=14
 ## Properties
 
 Name | Type | Description | Notes

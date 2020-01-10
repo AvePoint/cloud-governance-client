@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ServiceListPageResult
+# Cloud.Governance.Client.Model.ServiceListPageResult
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ResourceValue
+# Cloud.Governance.Client.Model.ResourceValue
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.BooleanChangedProperty
+# Cloud.Governance.Client.Model.BooleanChangedProperty
 ## Properties
 
 Name | Type | Description | Notes

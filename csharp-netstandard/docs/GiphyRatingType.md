@@ -1,4 +1,5 @@
-# Cloud.Governance.NewSdk.Model.GiphyRatingType
+# Cloud.Governance.Client.Model.GiphyRatingType
+Moderate=0, Strict=1
 ## Properties
 
 Name | Type | Description | Notes

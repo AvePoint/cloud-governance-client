@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.UrlRandomStringSettings
+# Cloud.Governance.Client.Model.UrlRandomStringSettings
 ## Properties
 
 Name | Type | Description | Notes

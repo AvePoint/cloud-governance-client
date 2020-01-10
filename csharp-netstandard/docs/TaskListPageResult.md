@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TaskListPageResult
+# Cloud.Governance.Client.Model.TaskListPageResult
 ## Properties
 
 Name | Type | Description | Notes

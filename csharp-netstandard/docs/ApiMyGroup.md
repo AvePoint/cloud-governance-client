@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ApiMyGroup
+# Cloud.Governance.Client.Model.ApiMyGroup
 ## Properties
 
 Name | Type | Description | Notes
@@ -11,21 +11,22 @@ Name | Type | Description | Notes
 **Language** | **string** |  | [optional] 
 **ApplyPolicyStatus** | **int** |  | [optional] 
 **EnableTeamCollaboration** | **bool** |  | [optional] 
-**GroupType** | **string** |  | [optional] 
+**GroupType** | **string** |  | [optional] [readonly] 
 **CreatedTime** | **DateTime?** |  | [optional] 
 **Owners** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **PreferredDataLocation** | **string** |  | [optional] 
-**PreferredDataLocationName** | **string** |  | [optional] 
+**PreferredDataLocationName** | **string** |  | [optional] [readonly] 
 **Id** | **Guid** |  | [optional] 
 **Phase** | **AutoImportPhase** |  | [optional] 
 **PhaseStartTime** | **DateTime?** |  | [optional] 
-**PhaseDescription** | **string** |  | [optional] 
+**PhaseDescription** | **string** |  | [optional] [readonly] 
 **AutoImportProfileId** | **Guid?** |  | [optional] 
 **AutoImportProfileName** | **string** |  | [optional] 
 **PolicyName** | **string** |  | [optional] 
 **PolicyDescription** | **string** |  | [optional] 
 **IsCurrentRenewer** | **bool** |  | [optional] 
 **PhaseAssignees** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**PhaseDueDate** | **DateTime?** |  | [optional] 
 **Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
 **PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 

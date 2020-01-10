@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PermissionChangedActionItem
+# Cloud.Governance.Client.Model.PermissionChangedActionItem
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **GroupChanges** | **string** |  | [optional] 
 **PermissionChanges** | **string** |  | [optional] 
 **AccountType** | **PrincipalType** |  | [optional] 
-**AccountTypeDescription** | **string** |  | [optional] 
+**AccountTypeDescription** | **string** |  | [optional] [readonly] 
 **ActionType** | **PermissionActionType** |  | [optional] 
-**ActionTypeDescription** | **string** |  | [optional] 
+**ActionTypeDescription** | **string** |  | [optional] [readonly] 
 **ChangedBy** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **ObjectTitle** | **string** |  | [optional] 
 **ObjectUrl** | **string** |  | [optional] 

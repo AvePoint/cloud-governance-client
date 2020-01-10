@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.UserParam
+# Cloud.Governance.Client.Model.UserParam
 ## Properties
 
 Name | Type | Description | Notes

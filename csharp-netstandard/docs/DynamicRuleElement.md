@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.DynamicRuleElement
+# Cloud.Governance.Client.Model.DynamicRuleElement
 ## Properties
 
 Name | Type | Description | Notes

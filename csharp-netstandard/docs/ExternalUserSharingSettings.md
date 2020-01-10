@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ExternalUserSharingSettings
+# Cloud.Governance.Client.Model.ExternalUserSharingSettings
 ## Properties
 
 Name | Type | Description | Notes

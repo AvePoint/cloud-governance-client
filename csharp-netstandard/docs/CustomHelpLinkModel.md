@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CustomHelpLinkModel
+# Cloud.Governance.Client.Model.CustomHelpLinkModel
 ## Properties
 
 Name | Type | Description | Notes

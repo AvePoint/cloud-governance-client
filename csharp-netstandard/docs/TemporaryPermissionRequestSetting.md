@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TemporaryPermissionRequestSetting
+# Cloud.Governance.Client.Model.TemporaryPermissionRequestSetting
 ## Properties
 
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **IsGrantTemporaryPermission** | **bool** |  | [optional] 
 **ExpirationType** | **ExpirationType** |  | [optional] 
 **DurationInterval** | **int?** |  | [optional] 
-**DurationDateType** | **ApiDurationType** |  | [optional] 
+**DurationDateType** | **ApiDurationTypeNullable** |  | [optional] 
 **StartTime** | **DateTime?** |  | [optional] 
 **EndTime** | **DateTime?** |  | [optional] 
 

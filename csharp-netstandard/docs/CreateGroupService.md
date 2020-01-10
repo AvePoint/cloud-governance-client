@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CreateGroupService
+# Cloud.Governance.Client.Model.CreateGroupService
 ## Properties
 
 Name | Type | Description | Notes
@@ -25,18 +25,9 @@ Name | Type | Description | Notes
 **TeamsSettings** | [**ServiceTeamsSettings**](ServiceTeamsSettings.md) |  | [optional] 
 **GroupNameConstructureSettings** | [**GroupNameConstructureSettings**](GroupNameConstructureSettings.md) |  | [optional] 
 **GroupIdConstructureSettings** | [**GroupIdConstructureSettings**](GroupIdConstructureSettings.md) |  | [optional] 
-**EnableHubSite** | **bool** |  | [optional] 
-**HubSiteActionType** | **HubSiteActionType** |  | [optional] 
-**AssociateHubSiteId** | **Guid?** |  | [optional] 
-**AssociateHubSiteTitle** | **string** |  | [optional] 
-**IsShowHubSiteSection** | **bool** |  | [optional] 
 **EnableInstallApp** | **bool** |  | [optional] 
 **EnableInstallPanel** | **bool** |  | [optional] 
-**EnableCreateTeamFromScratch** | **bool** |  | [optional] 
-**EnableCreateTeamFromExistTeam** | **bool** |  | [optional] 
-**EnableCreateTeamFromIT** | **bool** |  | [optional] 
-**EnableCreateTeamFromOwned** | **bool** |  | [optional] 
-**TemplateTeams** | [**List&lt;GuidModel&gt;**](GuidModel.md) |  | [optional] 
+**TemplateSettings** | [**TeamsTemplateServiceSettings**](TeamsTemplateServiceSettings.md) |  | [optional] 
 **DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultOwners** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
@@ -45,6 +36,8 @@ Name | Type | Description | Notes
 **DefaultClassification** | **string** |  | [optional] 
 **DefaultLanguage** | **string** |  | [optional] 
 **DefaultSiteDesign** | **Guid?** |  | [optional] 
+**DefaultOwnersReal** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**DefaultMembersReal** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **MemberAssignBy** | **AssignBy** |  | [optional] 
 **OwnerAssignBy** | **AssignBy** |  | [optional] 
 **PrivacyAssignBy** | **AssignBy** |  | [optional] 
@@ -60,6 +53,9 @@ Name | Type | Description | Notes
 **SiteDesignAssignBy** | **AssignBy** |  | [optional] 
 **HubSiteAssignBy** | **AssignBy** |  | [optional] 
 **MultiGeoSetting** | [**MultiGeoSetting**](MultiGeoSetting.md) |  | [optional] 
+**IsShowHubSiteSection** | **bool** |  | [optional] [readonly] 
+**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] 
+**HasImpernastionUsers** | **bool** |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 
@@ -75,7 +71,7 @@ Name | Type | Description | Notes
 **ApproversContainManagerRole** | **bool** |  | [optional] 
 **Status** | **CommonStatus** |  | [optional] 
 **ShowServiceInCatalog** | **bool** |  | [optional] 
-**CustomActivity** | [**CustomActivityInfo**](CustomActivityInfo.md) |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 

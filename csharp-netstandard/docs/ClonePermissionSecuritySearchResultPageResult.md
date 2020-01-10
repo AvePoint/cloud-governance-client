@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ClonePermissionSecuritySearchResultPageResult
+# Cloud.Governance.Client.Model.ClonePermissionSecuritySearchResultPageResult
 ## Properties
 
 Name | Type | Description | Notes

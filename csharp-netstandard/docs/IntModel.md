@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.IntModel
+# Cloud.Governance.Client.Model.IntModel
 ## Properties
 
 Name | Type | Description | Notes

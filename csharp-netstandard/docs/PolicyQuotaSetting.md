@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyQuotaSetting
+# Cloud.Governance.Client.Model.PolicyQuotaSetting
 ## Properties
 
 Name | Type | Description | Notes

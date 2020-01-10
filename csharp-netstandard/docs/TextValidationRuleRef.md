@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.TextValidationRuleRef
+# Cloud.Governance.Client.Model.TextValidationRuleRef
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.PolicyExpirationSetting
+# Cloud.Governance.Client.Model.PolicyExpirationSetting
 ## Properties
 
 Name | Type | Description | Notes

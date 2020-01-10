@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ConfirmInformation
+# Cloud.Governance.Client.Model.ConfirmInformation
 ## Properties
 
 Name | Type | Description | Notes

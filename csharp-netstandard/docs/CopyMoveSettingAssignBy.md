@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.CopyMoveSettingAssignBy
+# Cloud.Governance.Client.Model.CopyMoveSettingAssignBy
 ## Properties
 
 Name | Type | Description | Notes

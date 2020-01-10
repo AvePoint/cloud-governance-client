@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.ManagePermissionGrantSetting
+# Cloud.Governance.Client.Model.ManagePermissionGrantSetting
 ## Properties
 
 Name | Type | Description | Notes

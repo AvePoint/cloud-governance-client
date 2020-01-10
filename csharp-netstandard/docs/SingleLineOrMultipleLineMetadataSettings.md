@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SingleLineOrMultipleLineMetadataSettings
+# Cloud.Governance.Client.Model.SingleLineOrMultipleLineMetadataSettings
 ## Properties
 
 Name | Type | Description | Notes

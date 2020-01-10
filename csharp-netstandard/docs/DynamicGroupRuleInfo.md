@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.DynamicGroupRuleInfo
+# Cloud.Governance.Client.Model.DynamicGroupRuleInfo
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.StringChangedProperty
+# Cloud.Governance.Client.Model.StringChangedProperty
 ## Properties
 
 Name | Type | Description | Notes

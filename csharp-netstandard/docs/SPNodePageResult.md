@@ -1,4 +1,4 @@
-# Cloud.Governance.NewSdk.Model.SPNodePageResult
+# Cloud.Governance.Client.Model.SPNodePageResult
 ## Properties
 
 Name | Type | Description | Notes
