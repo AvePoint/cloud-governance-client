@@ -1,6 +1,4 @@
-C# and JavaScript API Client For AvePoint Cloud Governance
 
-<br/>
 
 ## Documentation
 
