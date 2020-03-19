@@ -1,6 +1,6 @@
 # Cloud.Governance.Client.Api.ApprovalprocessesAdminApi
 
-All URIs are relative to *https://API_BASE_URL*
+All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -33,20 +33,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ApprovalprocessesAdminApi(config);
             var approvalProcessModel = new ApprovalProcessModel(); // ApprovalProcessModel |  (optional) 
@@ -116,20 +111,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ApprovalprocessesAdminApi(config);
             var requestBody = new List<Guid>(); // List<Guid> |  (optional) 
@@ -199,20 +189,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ApprovalprocessesAdminApi(config);
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, status, lastModifiedTime, createdByDisplayName (optional) 
@@ -289,20 +274,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ApprovalprocessesAdminApi(config);
             var id = new Guid(); // Guid | 
@@ -373,20 +353,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ApprovalprocessesAdminApi(config);
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, status, lastModifiedTime, createdByDisplayName (optional) 
@@ -465,20 +440,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ApprovalprocessesAdminApi(config);
             var approvalProcessModel = new ApprovalProcessModel(); // ApprovalProcessModel |  (optional) 
@@ -548,20 +518,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ApprovalprocessesAdminApi(config);
             var status = new CommonStatus(); // CommonStatus | 

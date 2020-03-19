@@ -29,7 +29,7 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
             Configuration.Default.AddApiKey("clientId", "Your Client Id");
             
@@ -63,7 +63,7 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://API_BASE_URL*, refer to Cloud Governance User Guide -> AvePoint Cloud Governance Modern API to get the API endpoint.
+All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*, refer to Cloud Governance User Guide -> AvePoint Cloud Governance Modern API to get the API endpoint.
 
 - [**EmailsApi**](docs/EmailsApi.md)
 - [**MetadataApi**](docs/MetadataApi.md)

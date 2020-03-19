@@ -1,6 +1,6 @@
 # Cloud.Governance.Client.Api.Office365AdminApi
 
-All URIs are relative to *https://API_BASE_URL*
+All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,20 +29,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new Office365AdminApi(config);
 
@@ -109,20 +104,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new Office365AdminApi(config);
             var tenantId = new Guid(); // Guid | 
@@ -193,20 +183,15 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration config = new Configuration();
-            config.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
-            config.AddApiKey("clientId", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientId", "Bearer");
+            Configuration.Default.AddApiKey("clientId", "Your Client Id");
+            
             // Configure API key authorization: ClientSecret
-            config.AddApiKey("clientSecret", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("clientSecret", "Bearer");
+            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
+            
             // Configure API key authorization: UserPrincipalName
-            config.AddApiKey("userPrincipalName", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // config.AddApiKeyPrefix("userPrincipalName", "Bearer");
+            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new Office365AdminApi(config);
             var adminCenterUrl = adminCenterUrl_example;  // string | 

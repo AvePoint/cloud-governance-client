@@ -1,6 +1,6 @@
 # Cloud.Governance.Client.Api.MetadataApi
 
-All URIs are relative to *https://API_BASE_URL*
+All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,7 +28,7 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
             Configuration.Default.AddApiKey("clientId", "Your Client Id");
             
@@ -116,7 +116,7 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "https://API_BASE_URL";
+            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
             // Configure API key authorization: ClientId
             Configuration.Default.AddApiKey("clientId", "Your Client Id");
             
