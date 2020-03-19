@@ -10,7 +10,7 @@
 
     public class LockSiteRequestExample : ExampleBase
     {
-        public Guid Submit()
+        public override void Run()
         {
 
             try
@@ -31,15 +31,13 @@
 
                 // submit lock site request
                 Guid result = apiInstance.SubmitLockSiteRequest(lockSiteRequest);
-                Debug.WriteLine(result);
-                return result;
+                Console.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling RequestsApi.SubmitLockSiteRequest: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-                return Guid.Empty;
+                Console.WriteLine("Exception when calling RequestsApi.SubmitLockSiteRequest: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
             }
         }
 

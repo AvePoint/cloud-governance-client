@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            var requestId = new LockSiteRequestExample().Submit();
+           new GetAllSitesExample().Run();
         }
     }
 }

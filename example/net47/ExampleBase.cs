@@ -5,8 +5,10 @@
     using System;
     using System.Collections.Generic;
 
-    public class ExampleBase
+    public abstract class ExampleBase
     {
+        public abstract void Run();
+
         static ExampleBase()
         {
             Configuration.Default.BasePath = "https://api_base_url";

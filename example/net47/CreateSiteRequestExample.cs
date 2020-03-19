@@ -9,7 +9,7 @@
 
     public class CreateSiteRequestExample:ExampleBase
     {
-        public Guid Submit()
+        public override void Run()
         {
 
             try
@@ -56,15 +56,13 @@
                 request.Metadatas = this.GetSampleMetadatas();
 
                 var result = apiInstance.SubmitCreateSiteRequest(request);
-                Debug.WriteLine(result);
-                return result;
+                Console.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling RequestsApi.SubmitCreateSiteRequest: " + e.Message);
-                Debug.Print("Status Code: " + e.ErrorCode);
-                Debug.Print(e.StackTrace);
-                return Guid.Empty;
+                Console.WriteLine("Exception when calling RequestsApi.SubmitCreateSiteRequest: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
             }
         }
     }

@@ -23,7 +23,7 @@ The version of the OpenAPI document: 1.0
     <FileAlignment>512</FileAlignment>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Cloud.Governance.Client.xml</DocumentationFile>
     <title>Cloud.Governance.Client</title>
-    <Version>0.6.1</Version>
+    <Version>0.6.2</Version>
     <Authors>AvePoint,Inc.</Authors>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/AvePoint/cloud-governance-client</PackageProjectUrl>
