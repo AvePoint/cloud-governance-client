@@ -64,17 +64,6 @@ namespace Cloud.Governance.Client.Model
             this.NavigationSetting = navigationSetting;
             this.VersionSetting = versionSetting;
             this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
-            this.ObjectInfo = objectInfo;
-            this.ListTitle = listTitle;
-            this.ListDescription = listDescription;
-            this.NavigationSetting = navigationSetting;
-            this.VersionSetting = versionSetting;
-            this.Id = id;
             this.ServiceId = serviceId;
             this.Department = department;
             this.Summary = summary;

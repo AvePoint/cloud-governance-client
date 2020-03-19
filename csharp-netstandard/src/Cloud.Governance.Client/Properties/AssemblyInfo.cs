@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("OpenAPI Library")]
 [assembly: AssemblyDescription("C# client for the Cloud Governance API")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("AvePoint")]
+[assembly: AssemblyCompany("AvePoint,Inc.")]
 [assembly: AssemblyProduct("Cloud Governance")]
-[assembly: AssemblyCopyright("Copyright © 2019 AvePoint® Inc. All Rights Reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2020 AvePoint® Inc. All Rights Reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

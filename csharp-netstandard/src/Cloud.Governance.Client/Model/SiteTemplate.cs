@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.Id = id;
             this.Title = title;
             this.Category = category;
-            this.Id = id;
-            this.Title = title;
-            this.Category = category;
         }
         
         /// <summary>

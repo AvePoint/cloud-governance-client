@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         public TermsValue(List<GuidModel> value = default(List<GuidModel>))
         {
             this.Value = value;
-            this.Value = value;
         }
         
         /// <summary>

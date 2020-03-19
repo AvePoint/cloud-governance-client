@@ -529,10 +529,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of CustomMetadata</returns>
         public Cloud.Governance.Client.Client.ApiResponse< CustomMetadata > GetMetadataByIdWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling MetadataApi->GetMetadataById");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -551,8 +547,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -603,10 +598,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (CustomMetadata)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CustomMetadata>> GetMetadataByIdAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling MetadataApi->GetMetadataById");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -626,8 +617,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))

@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadatas">metadatas.</param>
         public ChangeMetadataActionSetting(bool isEnabled = default(bool), bool enableAddOrDelete = default(bool), List<CustomMetadata> metadatas = default(List<CustomMetadata>))
         {
-            this.Metadatas = metadatas;
             this.IsEnabled = isEnabled;
             this.EnableAddOrDelete = enableAddOrDelete;
             this.Metadatas = metadatas;

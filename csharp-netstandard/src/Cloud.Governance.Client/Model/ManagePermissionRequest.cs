@@ -66,18 +66,6 @@ namespace Cloud.Governance.Client.Model
         public ManagePermissionRequest(string objectUrl = default(string), NodeType objectType = default(NodeType), string objectTitle = default(string), string siteUrl = default(string), string webUrl = default(string), List<SPGroupManagementModel> spGroupManagement = default(List<SPGroupManagementModel>), PermissionManagementModel permissionManagement = default(PermissionManagementModel), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.ObjectUrl = objectUrl;
-            this.ObjectTitle = objectTitle;
-            this.SiteUrl = siteUrl;
-            this.WebUrl = webUrl;
-            this.SpGroupManagement = spGroupManagement;
-            this.PermissionManagement = permissionManagement;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
-            this.ObjectUrl = objectUrl;
             this.ObjectType = objectType;
             this.ObjectTitle = objectTitle;
             this.SiteUrl = siteUrl;

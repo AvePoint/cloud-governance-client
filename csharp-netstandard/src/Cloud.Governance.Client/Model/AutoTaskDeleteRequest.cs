@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="comments">comments.</param>
         public AutoTaskDeleteRequest(LifecycleAction action = default(LifecycleAction), Guid taskId = default(Guid), List<RequestMetadata> metadatas = default(List<RequestMetadata>), CommentsParam comments = default(CommentsParam))
         {
-            this.Metadatas = metadatas;
-            this.Comments = comments;
             this.Action = action;
             this.TaskId = taskId;
             this.Metadatas = metadatas;

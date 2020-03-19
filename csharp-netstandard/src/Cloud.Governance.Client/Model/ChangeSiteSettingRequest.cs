@@ -60,18 +60,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadatas">metadatas.</param>
         public ChangeSiteSettingRequest(Guid siteId = default(Guid), string siteUrl = default(string), StringChangedProperty siteTitleSetting = default(StringChangedProperty), StringChangedProperty siteDescriptionSetting = default(StringChangedProperty), List<RequestMetadata> changedMetadatas = default(List<RequestMetadata>), string deploymentPlanName = default(string), HubSiteChangedSettings hubSiteSettings = default(HubSiteChangedSettings), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
-            this.SiteUrl = siteUrl;
-            this.SiteTitleSetting = siteTitleSetting;
-            this.SiteDescriptionSetting = siteDescriptionSetting;
-            this.ChangedMetadatas = changedMetadatas;
-            this.DeploymentPlanName = deploymentPlanName;
-            this.HubSiteSettings = hubSiteSettings;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.SiteTitleSetting = siteTitleSetting;

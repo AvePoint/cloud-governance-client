@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.ChangeValue = changeValue;
             this.OriginalValue = originalValue;
-            this.ChangeValue = changeValue;
-            this.OriginalValue = originalValue;
         }
         
         /// <summary>

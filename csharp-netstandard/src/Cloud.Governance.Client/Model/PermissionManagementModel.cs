@@ -41,8 +41,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="permissionItems">permissionItems.</param>
         public PermissionManagementModel(bool isUniquePermission = default(bool), bool isPermissionInheritanceChanged = default(bool), bool isCopyPermissionsFromParent = default(bool), string inheritedSiteUrl = default(string), List<ObjectPermissionManagementModel> permissionItems = default(List<ObjectPermissionManagementModel>))
         {
-            this.InheritedSiteUrl = inheritedSiteUrl;
-            this.PermissionItems = permissionItems;
             this.IsUniquePermission = isUniquePermission;
             this.IsPermissionInheritanceChanged = isPermissionInheritanceChanged;
             this.IsCopyPermissionsFromParent = isCopyPermissionsFromParent;

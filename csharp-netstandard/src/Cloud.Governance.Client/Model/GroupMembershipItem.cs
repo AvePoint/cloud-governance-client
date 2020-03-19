@@ -46,8 +46,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.LoginName = loginName;
             this.DisplayName = displayName;
-            this.LoginName = loginName;
-            this.DisplayName = displayName;
             this.Action = action;
         }
         

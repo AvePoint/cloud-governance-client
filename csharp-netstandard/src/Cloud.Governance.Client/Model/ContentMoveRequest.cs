@@ -63,16 +63,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadatas">metadatas.</param>
         public ContentMoveRequest(ContentMoveMethod method = default(ContentMoveMethod), CopyMoveSetting copySettings = default(CopyMoveSetting), CopyMoveSetting moveSettings = default(CopyMoveSetting), ContentMoveCommonSetting commonSettings = default(ContentMoveCommonSetting), List<ContentMoveSPObjectMapping> objectMappings = default(List<ContentMoveSPObjectMapping>), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
-            this.CopySettings = copySettings;
-            this.MoveSettings = moveSettings;
-            this.CommonSettings = commonSettings;
-            this.ObjectMappings = objectMappings;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
             this.Method = method;
             this.CopySettings = copySettings;
             this.MoveSettings = moveSettings;

@@ -61,14 +61,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadatas">metadatas.</param>
         public ChangeWebContactRequest(ChangeContactMethod changedMethod = default(ChangeContactMethod), ChangeContactByUserSetting changedByUserSetting = default(ChangeContactByUserSetting), List<ChangeWebContactByUrlSetting> changedByUrlItems = default(List<ChangeWebContactByUrlSetting>), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
-            this.ChangedByUserSetting = changedByUserSetting;
-            this.ChangedByUrlItems = changedByUrlItems;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
             this.ChangedMethod = changedMethod;
             this.ChangedByUserSetting = changedByUserSetting;
             this.ChangedByUrlItems = changedByUrlItems;

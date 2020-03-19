@@ -48,9 +48,6 @@ namespace Cloud.Governance.Client.Model
             this.Rules = rules;
             this.Suffix = suffix;
             this.Connection = connection;
-            this.Rules = rules;
-            this.Suffix = suffix;
-            this.Connection = connection;
             this.ContructUrlAssignBy = contructUrlAssignBy;
         }
         

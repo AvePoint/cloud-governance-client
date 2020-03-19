@@ -74,15 +74,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="categoryId">categoryId.</param>
         public ChangeListSettingService(bool isEnableChangeTitle = default(bool), bool isEnableChangeDescription = default(bool), bool isEnableChangeQuickLaunch = default(bool), bool isEnableChangeVersion = default(bool), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
         {
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
             this.IsEnableChangeTitle = isEnableChangeTitle;
             this.IsEnableChangeDescription = isEnableChangeDescription;
             this.IsEnableChangeQuickLaunch = isEnableChangeQuickLaunch;

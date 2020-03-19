@@ -53,14 +53,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="status">status.</param>
         public OwnershipRecertification(Guid taskId = default(Guid), Guid siteId = default(Guid), string siteUrl = default(string), string siteTitle = default(string), string siteDescription = default(string), GuidModel policy = default(GuidModel), DateTime generatedTime = default(DateTime), ApiUser primaryAdministrator = default(ApiUser), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string template = default(string), TaskResult status = default(TaskResult))
         {
-            this.SiteUrl = siteUrl;
-            this.SiteTitle = siteTitle;
-            this.SiteDescription = siteDescription;
-            this.Policy = policy;
-            this.PrimaryAdministrator = primaryAdministrator;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.Template = template;
             this.TaskId = taskId;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;

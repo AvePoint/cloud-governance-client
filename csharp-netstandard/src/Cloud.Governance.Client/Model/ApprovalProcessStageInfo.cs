@@ -46,8 +46,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.ApproveUser = approveUser;
             this.EscalationUser = escalationUser;
-            this.ApproveUser = approveUser;
-            this.EscalationUser = escalationUser;
             this.EditPermissionReport = editPermissionReport;
             this.NotifyApproverWhenExpired = notifyApproverWhenExpired;
             this.NotifyApproverWhenExpiredEmailTemplateID = notifyApproverWhenExpiredEmailTemplateID;

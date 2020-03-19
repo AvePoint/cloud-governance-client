@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isEnabledText">isEnabledText.</param>
         public MetadataActionLockItem(Guid metadataActionInstanceId = default(Guid), bool isEnabled = default(bool), string isEnabledText = default(string))
         {
-            this.IsEnabledText = isEnabledText;
             this.MetadataActionInstanceId = metadataActionInstanceId;
             this.IsEnabled = isEnabled;
             this.IsEnabledText = isEnabledText;

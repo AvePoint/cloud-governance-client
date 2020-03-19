@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="_default">_default.</param>
         public DeploymentManagerPlanSettings(bool enabled = default(bool), List<string> plans = default(List<string>), AssignBy assignBy = default(AssignBy), string _default = default(string))
         {
-            this.Plans = plans;
-            this.Default = _default;
             this.Enabled = enabled;
             this.Plans = plans;
             this.AssignBy = assignBy;

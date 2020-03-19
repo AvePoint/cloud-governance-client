@@ -26,9 +26,9 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// Confirmed&#x3D;0, Processing&#x3D;1, PendingInition&#x3D;2, &lt;/br&gt;ApplyInformationException&#x3D;3, Overdue&#x3D;4, PendingRenewal&#x3D;5, &lt;/br&gt;RenewalExpired&#x3D;6, RenewalProcessing&#x3D;7, RenewalException&#x3D;8, &lt;/br&gt;Locked&#x3D;9
+    /// Confirmed&#x3D;0, Processing&#x3D;1, PendingInition&#x3D;2, &lt;/br&gt;ApplyInformationException&#x3D;3, Overdue&#x3D;4, PendingRenewal&#x3D;5, &lt;/br&gt;RenewalExpired&#x3D;6, RenewalProcessing&#x3D;7, RenewalException&#x3D;8, &lt;/br&gt;Locked&#x3D;9, RenewalCanceled&#x3D;10
     /// </summary>
-    /// <value>Confirmed&#x3D;0, Processing&#x3D;1, PendingInition&#x3D;2, &lt;/br&gt;ApplyInformationException&#x3D;3, Overdue&#x3D;4, PendingRenewal&#x3D;5, &lt;/br&gt;RenewalExpired&#x3D;6, RenewalProcessing&#x3D;7, RenewalException&#x3D;8, &lt;/br&gt;Locked&#x3D;9</value>
+    /// <value>Confirmed&#x3D;0, Processing&#x3D;1, PendingInition&#x3D;2, &lt;/br&gt;ApplyInformationException&#x3D;3, Overdue&#x3D;4, PendingRenewal&#x3D;5, &lt;/br&gt;RenewalExpired&#x3D;6, RenewalProcessing&#x3D;7, RenewalException&#x3D;8, &lt;/br&gt;Locked&#x3D;9, RenewalCanceled&#x3D;10</value>
     
     [JsonConverter(typeof(StringEnumConverter))]
     
@@ -92,7 +92,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Locked for value: Locked
         /// </summary>
         [EnumMember(Value = "Locked")]
-        Locked = 10
+        Locked = 10,
+
+        /// <summary>
+        /// Enum RenewalCanceled for value: RenewalCanceled
+        /// </summary>
+        [EnumMember(Value = "RenewalCanceled")]
+        RenewalCanceled = 11
 
     }
 

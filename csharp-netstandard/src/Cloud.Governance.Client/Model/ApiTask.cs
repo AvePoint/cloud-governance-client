@@ -67,13 +67,6 @@ namespace Cloud.Governance.Client.Model
         public ApiTask(ApiTaskDynamicProperties dynamicProperties = default(ApiTaskDynamicProperties), Guid id = default(Guid), string title = default(string), string description = default(string), Guid requestGuid = default(Guid), TaskResult status = default(TaskResult), ServiceType serviceType = default(ServiceType), string comments = default(string), List<TaskComment> allComments = default(List<TaskComment>), string errorMessage = default(string), DateTime lastModifiedTime = default(DateTime), TaskType taskType = default(TaskType), bool allowReassign = default(bool), bool allowEdit = default(bool), List<TaskDynamicActions> dynamicActions = default(List<TaskDynamicActions>))
         {
             this.DynamicProperties = dynamicProperties;
-            this.Title = title;
-            this.Description = description;
-            this.Comments = comments;
-            this.AllComments = allComments;
-            this.ErrorMessage = errorMessage;
-            this.DynamicActions = dynamicActions;
-            this.DynamicProperties = dynamicProperties;
             this.Id = id;
             this.Title = title;
             this.Description = description;

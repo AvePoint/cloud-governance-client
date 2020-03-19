@@ -49,17 +49,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="action">action.</param>
         public SecuritySearchResult(Guid id = default(Guid), string objectType = default(string), ApprovalAction action = default(ApprovalAction))
         {
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for SecuritySearchResult and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-
-            this.ObjectType = objectType;
+            this.Id = id;
             this.ObjectType = objectType;
             this.Action = action;
         }

@@ -52,8 +52,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableArchival">enableArchival.</param>
         public GroupRenewProfileRef(bool enableOwnerRenewal = default(bool), bool enableMemberRenewal = default(bool), bool enableAddOrDeleteUser = default(bool), bool isDynamicMembership = default(bool), bool enableManageGroupSharing = default(bool), bool enableInviteAuthorizedGuestUser = default(bool), bool enableInviteGuestUser = default(bool), bool isLastStage = default(bool), string confirmMessage = default(string), string objectTitle = default(string), bool enableContactRenewal = default(bool), bool enablePermissionRenewal = default(bool), bool enableMetadataRenewal = default(bool), bool enableReassign = default(bool), bool enableDeletion = default(bool), bool enableArchival = default(bool))
         {
-            this.ConfirmMessage = confirmMessage;
-            this.ObjectTitle = objectTitle;
             this.EnableOwnerRenewal = enableOwnerRenewal;
             this.EnableMemberRenewal = enableMemberRenewal;
             this.EnableAddOrDeleteUser = enableAddOrDeleteUser;

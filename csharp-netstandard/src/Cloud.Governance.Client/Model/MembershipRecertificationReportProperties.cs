@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="requestSummary">requestSummary.</param>
         public MembershipRecertificationReportProperties(Guid o365TenantId = default(Guid), bool isDynamicMembership = default(bool), bool enableRecertifyOwners = default(bool), bool enableRecertifyMembers = default(bool), Guid objectId = default(Guid), string objectName = default(string), bool isAllowedReassign = default(bool), DateTime reportGeneratedTime = default(DateTime), string requestSummary = default(string))
         {
-            this.ObjectName = objectName;
-            this.RequestSummary = requestSummary;
             this.O365TenantId = o365TenantId;
             this.IsDynamicMembership = isDynamicMembership;
             this.EnableRecertifyOwners = enableRecertifyOwners;

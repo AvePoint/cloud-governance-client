@@ -67,17 +67,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="singleLineOrMultipleLineMetadataSettings">singleLineOrMultipleLineMetadataSettings.</param>
         public CustomMetadata(Guid id = default(Guid), string name = default(string), string description = default(string), MetadataFieldType type = default(MetadataFieldType), DisplayInReportType displayType = default(DisplayInReportType), AssignBy assignBy = default(AssignBy), bool enableTextValidation = default(bool), TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), BooleanMetadataSettings booleanMetadataSettings = default(BooleanMetadataSettings), TermsMetadataSettings termsMetadataSettings = default(TermsMetadataSettings), UserMetadataSettings userMetadataSettings = default(UserMetadataSettings), UserProfileMetadataSettings userProfileMetadataSettings = default(UserProfileMetadataSettings), AzureAdMetadataSettings azureAdMetadataSettings = default(AzureAdMetadataSettings), ChoiceMetadataSettings choiceMetadataSettings = default(ChoiceMetadataSettings), LinkMetadataSettings linkMetadataSettings = default(LinkMetadataSettings), SingleLineOrMultipleLineMetadataSettings singleLineOrMultipleLineMetadataSettings = default(SingleLineOrMultipleLineMetadataSettings))
         {
-            this.Name = name;
-            this.Description = description;
-            this.TextValidationRule = textValidationRule;
-            this.BooleanMetadataSettings = booleanMetadataSettings;
-            this.TermsMetadataSettings = termsMetadataSettings;
-            this.UserMetadataSettings = userMetadataSettings;
-            this.UserProfileMetadataSettings = userProfileMetadataSettings;
-            this.AzureAdMetadataSettings = azureAdMetadataSettings;
-            this.ChoiceMetadataSettings = choiceMetadataSettings;
-            this.LinkMetadataSettings = linkMetadataSettings;
-            this.SingleLineOrMultipleLineMetadataSettings = singleLineOrMultipleLineMetadataSettings;
             this.Id = id;
             this.Name = name;
             this.Description = description;

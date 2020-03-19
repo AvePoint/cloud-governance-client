@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="terminologies">terminologies.</param>
         public ApplicationSettings(int localeId = default(int), string locale = default(string), int timezoneId = default(int), List<Terminology> terminologies = default(List<Terminology>))
         {
-            this.Locale = locale;
-            this.Terminologies = terminologies;
             this.LocaleId = localeId;
             this.Locale = locale;
             this.TimezoneId = timezoneId;

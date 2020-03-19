@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         public CommentsParam(string comments = default(string))
         {
             this.Comments = comments;
-            this.Comments = comments;
         }
         
         /// <summary>

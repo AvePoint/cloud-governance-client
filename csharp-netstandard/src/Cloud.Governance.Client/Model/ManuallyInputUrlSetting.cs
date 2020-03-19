@@ -54,10 +54,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="contructUrlAssignBy">contructUrlAssignBy.</param>
         public ManuallyInputUrlSetting(bool enableConstructUrl = default(bool), bool enableUrlValidation = default(bool), AssignBy constructUrlAssignBy = default(AssignBy), TextValidationRuleRef validationRule = default(TextValidationRuleRef), List<string> rules = default(List<string>), string suffix = default(string), string connection = default(string), AssignBy contructUrlAssignBy = default(AssignBy))
         {
-            this.ValidationRule = validationRule;
-            this.Rules = rules;
-            this.Suffix = suffix;
-            this.Connection = connection;
             this.EnableConstructUrl = enableConstructUrl;
             this.EnableUrlValidation = enableUrlValidation;
             this.ConstructUrlAssignBy = constructUrlAssignBy;

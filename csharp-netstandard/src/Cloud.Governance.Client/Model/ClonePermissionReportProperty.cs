@@ -41,8 +41,6 @@ namespace Cloud.Governance.Client.Model
         public ClonePermissionReportProperty(string taskTitle = default(string), bool isAllowedReassign = default(bool), DateTime reportGeneratedTime = default(DateTime), ApiUser targetUser = default(ApiUser))
         {
             this.TaskTitle = taskTitle;
-            this.TargetUser = targetUser;
-            this.TaskTitle = taskTitle;
             this.IsAllowedReassign = isAllowedReassign;
             this.ReportGeneratedTime = reportGeneratedTime;
             this.TargetUser = targetUser;

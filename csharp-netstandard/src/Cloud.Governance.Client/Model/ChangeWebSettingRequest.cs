@@ -64,17 +64,6 @@ namespace Cloud.Governance.Client.Model
             this.ChangedMetadata = changedMetadata;
             this.DeploymentPlanName = deploymentPlanName;
             this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
-            this.Url = url;
-            this.ChangedTitle = changedTitle;
-            this.ChangedDescription = changedDescription;
-            this.ChangedMetadata = changedMetadata;
-            this.DeploymentPlanName = deploymentPlanName;
-            this.Id = id;
             this.ServiceId = serviceId;
             this.Department = department;
             this.Summary = summary;

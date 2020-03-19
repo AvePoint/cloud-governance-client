@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.ParentObject = parentObject;
             this.ErrorMessage = errorMessage;
-            this.ParentObject = parentObject;
-            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>

@@ -64,10 +64,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enabledCopy">enabledCopy.</param>
         public RequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType serviceType = default(ServiceType), int ticketNumber = default(int), string summary = default(string), RequestProgressStatus status = default(RequestProgressStatus), ApiRequestProgressStatus processStatus = default(ApiRequestProgressStatus), DateTime modified = default(DateTime), int submitStatus = default(int), string assigned = default(string), string serviceAdmin = default(string), bool enabledCopy = default(bool))
         {
-            this.ServiceName = serviceName;
-            this.Summary = summary;
-            this.Assigned = assigned;
-            this.ServiceAdmin = serviceAdmin;
             this.Id = id;
             this.ServiceId = serviceId;
             this.ServiceName = serviceName;

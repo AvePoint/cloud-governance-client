@@ -60,9 +60,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="condition">condition.</param>
         public DynamicGroupRuleInfo(Guid id = default(Guid), int order = default(int), LogicalOperator relation = default(LogicalOperator), CategoryType category = default(CategoryType), Guid metadataId = default(Guid), string metadataName = default(string), string metadataValue = default(string), string metadataDisplayValue = default(string), DynamicRuleCondition condition = default(DynamicRuleCondition))
         {
-            this.MetadataName = metadataName;
-            this.MetadataValue = metadataValue;
-            this.MetadataDisplayValue = metadataDisplayValue;
             this.Id = id;
             this.Order = order;
             this.Relation = relation;

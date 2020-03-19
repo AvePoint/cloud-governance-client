@@ -75,23 +75,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.QuotaSetting = quotaSetting;
             this.SharingSetting = sharingSetting;
-            this.IconSetting = iconSetting;
-            this.DaoSetting = daoSetting;
-            this.LeasePeriodSetting = leasePeriodSetting;
-            this.InactivitySetting = inactivitySetting;
-            this.LifecycleSetting = lifecycleSetting;
-            this.RecertificationSetting = recertificationSetting;
-            this.RenewalSetting = renewalSetting;
-            this.ElectionSetting = electionSetting;
-            this.QuotaThresholdSetting = quotaThresholdSetting;
-            this.Name = name;
-            this.Description = description;
-            this.Category = category;
-            this.Detail = detail;
-            this.CreatedBy = createdBy;
-            this.ModifiedBy = modifiedBy;
-            this.QuotaSetting = quotaSetting;
-            this.SharingSetting = sharingSetting;
             this.IsDesignerEnabled = isDesignerEnabled;
             this.SiteMaxDepth = siteMaxDepth;
             this.IconSetting = iconSetting;

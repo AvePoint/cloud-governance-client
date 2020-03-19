@@ -45,9 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="archiverProcessId">archiverProcessId.</param>
         public PolicyDaoSetting(bool isPolicyEnforcerEnabled = default(bool), string policyEnforcerProfile = default(string), bool isDpmEnabled = default(bool), string dpmPlan = default(string), bool isBackupEnabled = default(bool), bool isAuditingEnabled = default(bool), bool isArchiverEnabled = default(bool), string archiverProfile = default(string), Guid archiverProcessId = default(Guid))
         {
-            this.PolicyEnforcerProfile = policyEnforcerProfile;
-            this.DpmPlan = dpmPlan;
-            this.ArchiverProfile = archiverProfile;
             this.IsPolicyEnforcerEnabled = isPolicyEnforcerEnabled;
             this.PolicyEnforcerProfile = policyEnforcerProfile;
             this.IsDpmEnabled = isDpmEnabled;

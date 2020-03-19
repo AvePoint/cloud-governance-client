@@ -44,7 +44,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="anonymousLinkSettings">anonymousLinkSettings.</param>
         public ExternalUserSharingSettings(bool enabled = default(bool), ExternalUserSharingType sharingType = default(ExternalUserSharingType), AnonymousLinkSettings anonymousLinkSettings = default(AnonymousLinkSettings))
         {
-            this.AnonymousLinkSettings = anonymousLinkSettings;
             this.Enabled = enabled;
             this.SharingType = sharingType;
             this.AnonymousLinkSettings = anonymousLinkSettings;

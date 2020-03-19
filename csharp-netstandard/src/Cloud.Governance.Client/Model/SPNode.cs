@@ -47,9 +47,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isSelected">isSelected.</param>
         public SPNode(Guid id = default(Guid), string fullUrl = default(string), NodeType type = default(NodeType), string name = default(string), string title = default(string), bool isSelected = default(bool))
         {
-            this.FullUrl = fullUrl;
-            this.Name = name;
-            this.Title = title;
             this.Id = id;
             this.FullUrl = fullUrl;
             this.Type = type;

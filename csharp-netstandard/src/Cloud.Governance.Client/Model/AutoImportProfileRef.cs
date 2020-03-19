@@ -48,14 +48,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadatas">metadatas.</param>
         public AutoImportProfileRef(Guid id = default(Guid), string objectName = default(string), string notesToPrimaryContact = default(string), string name = default(string), string description = default(string), ApiUser defaultSecondaryContact = default(ApiUser), Guid defaultPolicyId = default(Guid), List<string> departments = default(List<string>), List<PolicyRef> policies = default(List<PolicyRef>), bool loadDepartmentFromUps = default(bool), bool isLastStep = default(bool), List<CustomMetadata> metadatas = default(List<CustomMetadata>))
         {
-            this.ObjectName = objectName;
-            this.NotesToPrimaryContact = notesToPrimaryContact;
-            this.Name = name;
-            this.Description = description;
-            this.DefaultSecondaryContact = defaultSecondaryContact;
-            this.Departments = departments;
-            this.Policies = policies;
-            this.Metadatas = metadatas;
             this.Id = id;
             this.ObjectName = objectName;
             this.NotesToPrimaryContact = notesToPrimaryContact;

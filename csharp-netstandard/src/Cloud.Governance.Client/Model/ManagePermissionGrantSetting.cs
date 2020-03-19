@@ -78,9 +78,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="allowSpecifyTemporayPermissionDuration">allowSpecifyTemporayPermissionDuration.</param>
         public ManagePermissionGrantSetting(bool isEnableGrantPermission = default(bool), bool isGrantTemporaryPermission = default(bool), AssignBy grantPermissionAssignBy = default(AssignBy), int temporaryPermissionDuration = default(int), ApiDurationType temporaryDurationType = default(ApiDurationType), bool isMaxTemporaryDurationSetted = default(bool), int temporaryPermissionMaxDuration = default(int), ApiDurationType temporaryPermissionMaxDurationType = default(ApiDurationType), bool isEnableExpireNotify = default(bool), int expireNotifyDuration = default(int), ApiDurationType expireNotifyDurationType = default(ApiDurationType), Guid? expireNotifyEmailTemplate = default(Guid?), bool isEnableWelcomeNotify = default(bool), string welcomeEmailSubject = default(string), string welcomeEmailBody = default(string), AssignBy welcomeEmailAssignBy = default(AssignBy), bool allowSpecifyTemporayPermissionDuration = default(bool))
         {
-            this.ExpireNotifyEmailTemplate = expireNotifyEmailTemplate;
-            this.WelcomeEmailSubject = welcomeEmailSubject;
-            this.WelcomeEmailBody = welcomeEmailBody;
             this.IsEnableGrantPermission = isEnableGrantPermission;
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
             this.GrantPermissionAssignBy = grantPermissionAssignBy;

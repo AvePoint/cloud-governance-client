@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.AvailabeTemplates = availabeTemplates;
             this.DefaultTemplate = defaultTemplate;
             this.TemplateStoreUrl = templateStoreUrl;
-            this.AvailabeTemplates = availabeTemplates;
-            this.DefaultTemplate = defaultTemplate;
-            this.TemplateStoreUrl = templateStoreUrl;
         }
         
         /// <summary>

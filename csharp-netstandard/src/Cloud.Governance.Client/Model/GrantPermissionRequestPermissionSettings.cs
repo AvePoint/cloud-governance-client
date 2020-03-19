@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="selectedPermissionLevels">selectedPermissionLevels.</param>
         public GrantPermissionRequestPermissionSettings(bool isBreakInheritance = default(bool), bool isGrantPermissionDirectly = default(bool), GrantPermissionGroup selectedSPGroup = default(GrantPermissionGroup), List<IntModel> selectedPermissionLevels = default(List<IntModel>))
         {
-            this.SelectedSPGroup = selectedSPGroup;
-            this.SelectedPermissionLevels = selectedPermissionLevels;
             this.IsBreakInheritance = isBreakInheritance;
             this.IsGrantPermissionDirectly = isGrantPermissionDirectly;
             this.SelectedSPGroup = selectedSPGroup;

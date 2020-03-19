@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.Object = _object;
             this.ListBaseType = listBaseType;
             this.ErrorMessage = errorMessage;
-            this.Object = _object;
-            this.ListBaseType = listBaseType;
-            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>

@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.CurrentUser = currentUser;
             this.NewUser = newUser;
             this.AlternativeUser = alternativeUser;
-            this.CurrentUser = currentUser;
-            this.NewUser = newUser;
-            this.AlternativeUser = alternativeUser;
         }
         
         /// <summary>

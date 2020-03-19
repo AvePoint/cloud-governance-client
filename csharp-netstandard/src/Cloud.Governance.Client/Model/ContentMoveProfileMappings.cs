@@ -44,10 +44,6 @@ namespace Cloud.Governance.Client.Model
             this.ContentTypeMapping = contentTypeMapping;
             this.UserMapping = userMapping;
             this.LanguageMapping = languageMapping;
-            this.ColumnMapping = columnMapping;
-            this.ContentTypeMapping = contentTypeMapping;
-            this.UserMapping = userMapping;
-            this.LanguageMapping = languageMapping;
         }
         
         /// <summary>

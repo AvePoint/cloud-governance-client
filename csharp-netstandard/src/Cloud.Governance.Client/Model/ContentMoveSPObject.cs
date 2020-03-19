@@ -47,9 +47,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="type">type.</param>
         public ContentMoveSPObject(Guid siteId = default(Guid), string siteUrl = default(string), Guid id = default(Guid), string title = default(string), string fullUrl = default(string), NodeType type = default(NodeType))
         {
-            this.SiteUrl = siteUrl;
-            this.Title = title;
-            this.FullUrl = fullUrl;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.Id = id;

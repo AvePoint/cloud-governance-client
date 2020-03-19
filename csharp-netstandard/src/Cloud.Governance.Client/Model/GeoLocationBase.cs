@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.Name = name;
             this.DisplayName = displayName;
-            this.Name = name;
-            this.DisplayName = displayName;
         }
         
         /// <summary>

@@ -60,15 +60,6 @@ namespace Cloud.Governance.Client.Model
             this.CustomMetadatas = customMetadatas;
             this.Title = title;
             this.Description = description;
-            this.ExpirationPeriodWorkflowStage = expirationPeriodWorkflowStage;
-            this.CaOrAdminCenterUrl = caOrAdminCenterUrl;
-            this.ApplyPolicy = applyPolicy;
-            this.AppliedDeploymentPlans = appliedDeploymentPlans;
-            this.Department = department;
-            this.Policy = policy;
-            this.CustomMetadatas = customMetadatas;
-            this.Title = title;
-            this.Description = description;
             this.SiteMaxDepth = siteMaxDepth;
             this.WarningExpiredTimeDate = warningExpiredTimeDate;
             this.WarningExpiredTimeDateType = warningExpiredTimeDateType;

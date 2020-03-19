@@ -41,7 +41,6 @@ namespace Cloud.Governance.Client.Model
         public SiteValidationParameter(string uri = default(string), bool ignoreLock = default(bool), bool isEditTask = default(bool), bool isFromQuestionnaire = default(bool))
         {
             this.Uri = uri;
-            this.Uri = uri;
             this.IgnoreLock = ignoreLock;
             this.IsEditTask = isEditTask;
             this.IsFromQuestionnaire = isFromQuestionnaire;

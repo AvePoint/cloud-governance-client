@@ -61,12 +61,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadatas">metadatas.</param>
         public ExtendGroupRequest(int extendDuration = default(int), ApiDurationType extendDurationType = default(ApiDurationType), Guid groupId = default(Guid), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
             this.ExtendDuration = extendDuration;
             this.ExtendDurationType = extendDurationType;
             this.GroupId = groupId;

@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="suffixs">suffixs.</param>
         public GroupNameConstructureSettings(bool enabled = default(bool), AssignBy assignBy = default(AssignBy), List<GroupConstructureRule> prefixs = default(List<GroupConstructureRule>), List<GroupConstructureRule> suffixs = default(List<GroupConstructureRule>))
         {
-            this.Prefixs = prefixs;
-            this.Suffixs = suffixs;
             this.Enabled = enabled;
             this.AssignBy = assignBy;
             this.Prefixs = prefixs;

@@ -826,10 +826,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of InlineResponse200</returns>
         public Cloud.Governance.Client.Client.ApiResponse< InlineResponse200 > GetDynamicMembershipRuleItemsWithHttpInfo (Guid tenantid)
         {
-            // verify the required parameter 'tenantid' is set
-            if (tenantid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantid' when calling SettingsApi->GetDynamicMembershipRuleItems");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -848,8 +844,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (tenantid != null)
-                localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -900,10 +895,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<InlineResponse200>> GetDynamicMembershipRuleItemsAsyncWithHttpInfo (Guid tenantid)
         {
-            // verify the required parameter 'tenantid' is set
-            if (tenantid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantid' when calling SettingsApi->GetDynamicMembershipRuleItems");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -923,8 +914,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (tenantid != null)
-                localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))

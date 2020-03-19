@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isEnabledText">isEnabledText.</param>
         public PermissionActionLockItem(Guid permissionActionInstanceId = default(Guid), bool isEnabled = default(bool), string isEnabledText = default(string))
         {
-            this.IsEnabledText = isEnabledText;
             this.PermissionActionInstanceId = permissionActionInstanceId;
             this.IsEnabled = isEnabled;
             this.IsEnabledText = isEnabledText;

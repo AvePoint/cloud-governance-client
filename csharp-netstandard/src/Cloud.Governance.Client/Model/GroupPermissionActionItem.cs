@@ -76,18 +76,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="accessType">accessType.</param>
         public GroupPermissionActionItem(Guid id = default(Guid), Guid instanceId = default(Guid), RecertificationActionType type = default(RecertificationActionType), Guid? taskId = default(Guid?), PermissionActionType actionType = default(PermissionActionType), string displayName = default(string), string identityName = default(string), string permissionLevel = default(string), List<int> permissionIds = default(List<int>), int memberId = default(int), string titleName = default(string), string path = default(string), string sharePointGroup = default(string), string parentId = default(string), string idInSharepoint = default(string), int level = default(int), string levelDescription = default(string), PrincipalType accountType = default(PrincipalType), string accountTypeDescription = default(string), UserAccessType accessType = default(UserAccessType))
         {
-            this.TaskId = taskId;
-            this.DisplayName = displayName;
-            this.IdentityName = identityName;
-            this.PermissionLevel = permissionLevel;
-            this.PermissionIds = permissionIds;
-            this.TitleName = titleName;
-            this.Path = path;
-            this.SharePointGroup = sharePointGroup;
-            this.ParentId = parentId;
-            this.IdInSharepoint = idInSharepoint;
-            this.LevelDescription = levelDescription;
-            this.AccountTypeDescription = accountTypeDescription;
             this.Id = id;
             this.InstanceId = instanceId;
             this.Type = type;

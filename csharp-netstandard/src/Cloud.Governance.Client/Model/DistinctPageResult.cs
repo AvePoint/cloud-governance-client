@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.Value = value;
             this.NextLink = nextLink;
-            this.Value = value;
-            this.NextLink = nextLink;
         }
         
         /// <summary>

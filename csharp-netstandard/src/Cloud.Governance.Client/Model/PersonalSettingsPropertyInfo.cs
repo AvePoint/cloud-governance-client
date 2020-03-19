@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         public PersonalSettingsPropertyInfo(List<int> selectedLanguages = default(List<int>))
         {
             this.SelectedLanguages = selectedLanguages;
-            this.SelectedLanguages = selectedLanguages;
         }
         
         /// <summary>

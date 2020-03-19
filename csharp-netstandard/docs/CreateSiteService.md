@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **CustomSiteTemplateListURL** | **string** |  | [optional] 
 **DefaultPrimaryAdmin** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultAdditionalAdmins** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryAdminReal** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultAdditionalAdminsReal** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultSiteLanguage** | **int** |  | [optional] 

@@ -50,15 +50,6 @@ namespace Cloud.Governance.Client.Model
         public ChangeSiteSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string siteTitle = default(string), string siteDescription = default(string), bool isEnableChangeHubSite = default(bool), bool isModernSite = default(bool), bool isHubSite = default(bool), Guid? associatedHubSiteId = default(Guid?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), string errorMessage = default(string))
         {
             this.SiteUrl = siteUrl;
-            this.SiteTitle = siteTitle;
-            this.SiteDescription = siteDescription;
-            this.AssociatedHubSiteId = associatedHubSiteId;
-            this.Metadatas = metadatas;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.PrimaryAdministrator = primaryAdministrator;
-            this.ErrorMessage = errorMessage;
-            this.SiteUrl = siteUrl;
             this.SiteId = siteId;
             this.SiteTitle = siteTitle;
             this.SiteDescription = siteDescription;

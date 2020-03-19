@@ -56,10 +56,6 @@ namespace Cloud.Governance.Client.Model
             this.Users = users;
             this.PermissionLevels = permissionLevels;
             this.GroupOwner = groupOwner;
-            this.Name = name;
-            this.Users = users;
-            this.PermissionLevels = permissionLevels;
-            this.GroupOwner = groupOwner;
             this.GroupOwnerType = groupOwnerType;
             this.BuildInGroupType = buildInGroupType;
         }

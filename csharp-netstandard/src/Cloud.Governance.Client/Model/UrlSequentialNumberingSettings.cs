@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.Prefix = prefix;
             this.Delimiter = delimiter;
             this.SequenceNumber = sequenceNumber;
-            this.Prefix = prefix;
-            this.Delimiter = delimiter;
-            this.SequenceNumber = sequenceNumber;
         }
         
         /// <summary>

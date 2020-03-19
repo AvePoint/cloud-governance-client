@@ -63,14 +63,6 @@ namespace Cloud.Governance.Client.Model
         public ChangePermissionRequest(PermissionObjectProperty objectProperty = default(PermissionObjectProperty), PermissionChangedType permissionChangedType = default(PermissionChangedType), bool isManagedAllUsers = default(bool), List<ApiUser> selectedUsers = default(List<ApiUser>), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.ObjectProperty = objectProperty;
-            this.SelectedUsers = selectedUsers;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
-            this.ObjectProperty = objectProperty;
             this.PermissionChangedType = permissionChangedType;
             this.IsManagedAllUsers = isManagedAllUsers;
             this.SelectedUsers = selectedUsers;

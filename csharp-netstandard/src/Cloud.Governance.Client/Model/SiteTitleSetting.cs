@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="titleSuffixes">titleSuffixes.</param>
         public SiteTitleSetting(int titleAssignBy = default(int), bool enableTitleConstructure = default(bool), List<SiteTitleConstructureRule> titlePrefixes = default(List<SiteTitleConstructureRule>), List<SiteTitleConstructureRule> titleSuffixes = default(List<SiteTitleConstructureRule>))
         {
-            this.TitlePrefixes = titlePrefixes;
-            this.TitleSuffixes = titleSuffixes;
             this.TitleAssignBy = titleAssignBy;
             this.EnableTitleConstructure = enableTitleConstructure;
             this.TitlePrefixes = titlePrefixes;

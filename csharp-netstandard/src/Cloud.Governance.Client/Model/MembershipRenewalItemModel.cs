@@ -65,9 +65,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="action">action.</param>
         public MembershipRenewalItemModel(RenewalType type = default(RenewalType), string user = default(string), string userDisplayName = default(string), MembershipUserType groupUserType = default(MembershipUserType), string groupUserTypeDescription = default(string), UserAccessType accessType = default(UserAccessType), Guid id = default(Guid), Guid objectId = default(Guid), RenewalItemAction action = default(RenewalItemAction))
         {
-            this.User = user;
-            this.UserDisplayName = userDisplayName;
-            this.GroupUserTypeDescription = groupUserTypeDescription;
             this.Type = type;
             this.User = user;
             this.UserDisplayName = userDisplayName;

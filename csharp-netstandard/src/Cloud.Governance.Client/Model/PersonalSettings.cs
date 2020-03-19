@@ -41,7 +41,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="properties">properties.</param>
         public PersonalSettings(Guid id = default(Guid), int userID = default(int), int languageID = default(int), int timeZoneID = default(int), PersonalSettingsPropertyInfo properties = default(PersonalSettingsPropertyInfo))
         {
-            this.Properties = properties;
             this.Id = id;
             this.UserID = userID;
             this.LanguageID = languageID;

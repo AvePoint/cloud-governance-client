@@ -44,10 +44,6 @@ namespace Cloud.Governance.Client.Model
             this.TenantAdminUrl = tenantAdminUrl;
             this.Name = name;
             this.DisplayName = displayName;
-            this.RootSiteUrl = rootSiteUrl;
-            this.TenantAdminUrl = tenantAdminUrl;
-            this.Name = name;
-            this.DisplayName = displayName;
         }
         
         /// <summary>

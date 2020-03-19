@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
         }
         
         /// <summary>

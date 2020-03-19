@@ -40,7 +40,6 @@ namespace Cloud.Governance.Client.Model
         public UrlRandomStringSettings(string prefix = default(string), int maxLength = default(int), int minLength = default(int))
         {
             this.Prefix = prefix;
-            this.Prefix = prefix;
             this.MaxLength = maxLength;
             this.MinLength = minLength;
         }

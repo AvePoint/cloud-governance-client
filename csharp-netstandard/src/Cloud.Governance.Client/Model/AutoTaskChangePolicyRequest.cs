@@ -53,10 +53,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="comments">comments.</param>
         public AutoTaskChangePolicyRequest(LifecycleAction action = default(LifecycleAction), GuidModel policy = default(GuidModel), StartDateType startDateType = default(StartDateType), DateTime? specifyStartDate = default(DateTime?), Guid taskId = default(Guid), List<RequestMetadata> metadatas = default(List<RequestMetadata>), CommentsParam comments = default(CommentsParam))
         {
-            this.Policy = policy;
-            this.SpecifyStartDate = specifyStartDate;
-            this.Metadatas = metadatas;
-            this.Comments = comments;
             this.Action = action;
             this.Policy = policy;
             this.StartDateType = startDateType;

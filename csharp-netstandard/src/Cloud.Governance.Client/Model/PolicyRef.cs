@@ -47,9 +47,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="status">status.</param>
         public PolicyRef(Guid id = default(Guid), string name = default(string), string description = default(string), string category = default(string), Guid tenantId = default(Guid), CommonStatus status = default(CommonStatus))
         {
-            this.Name = name;
-            this.Description = description;
-            this.Category = category;
             this.Id = id;
             this.Name = name;
             this.Description = description;

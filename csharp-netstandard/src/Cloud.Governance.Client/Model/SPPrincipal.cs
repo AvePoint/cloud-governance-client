@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="principalType">principalType.</param>
         public SPPrincipal(int id = default(int), string loginName = default(string), string name = default(string), SPPrincipalType principalType = default(SPPrincipalType))
         {
-            this.LoginName = loginName;
-            this.Name = name;
             this.Id = id;
             this.LoginName = loginName;
             this.Name = name;

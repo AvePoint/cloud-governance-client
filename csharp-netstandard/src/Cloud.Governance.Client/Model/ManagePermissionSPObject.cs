@@ -71,18 +71,6 @@ namespace Cloud.Governance.Client.Model
         public ManagePermissionSPObject(string parentUrl = default(string), NodeType parentNodeType = default(NodeType), string siteUrl = default(string), string webUrl = default(string), ApiUser primaryAdministrator = default(ApiUser), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string temporaryGroupTitle = default(string), Guid webId = default(Guid), Guid siteId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string topInheritUrl = default(string), NodeType inheritNodeType = default(NodeType), bool isInheritedPermission = default(bool), Guid id = default(Guid), string title = default(string), string fullUrl = default(string), NodeType type = default(NodeType))
         {
             this.ParentUrl = parentUrl;
-            this.SiteUrl = siteUrl;
-            this.WebUrl = webUrl;
-            this.PrimaryAdministrator = primaryAdministrator;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.TemporaryGroupTitle = temporaryGroupTitle;
-            this.WebServerRelativeUrl = webServerRelativeUrl;
-            this.ListTitle = listTitle;
-            this.TopInheritUrl = topInheritUrl;
-            this.Title = title;
-            this.FullUrl = fullUrl;
-            this.ParentUrl = parentUrl;
             this.ParentNodeType = parentNodeType;
             this.SiteUrl = siteUrl;
             this.WebUrl = webUrl;

@@ -46,11 +46,6 @@ namespace Cloud.Governance.Client.Model
             this.WebDescription = webDescription;
             this.Metadatas = metadatas;
             this.ErrorMessage = errorMessage;
-            this.Url = url;
-            this.WebTitle = webTitle;
-            this.WebDescription = webDescription;
-            this.Metadatas = metadatas;
-            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>

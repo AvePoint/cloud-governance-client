@@ -50,15 +50,7 @@ namespace Cloud.Governance.Client.Model
         public ManuallyArchiveRecordModel(string rowKey = default(string), bool isSelected = default(bool), ManualArchiveNodeLevel nodeType = default(ManualArchiveNodeLevel))
         {
             // to ensure "rowKey" is required (not null)
-            if (rowKey == null)
-            {
-                throw new InvalidDataException("rowKey is a required property for ManuallyArchiveRecordModel and cannot be null");
-            }
-            else
-            {
-                this.RowKey = rowKey;
-            }
-
+            this.RowKey = rowKey ?? throw new ArgumentNullException("rowKey is a required property for ManuallyArchiveRecordModel and cannot be null");;
             this.IsSelected = isSelected;
             this.NodeType = nodeType;
         }

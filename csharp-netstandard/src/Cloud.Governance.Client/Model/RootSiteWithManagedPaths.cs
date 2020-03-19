@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.RootSite = rootSite;
             this.ManagedPaths = managedPaths;
-            this.RootSite = rootSite;
-            this.ManagedPaths = managedPaths;
         }
         
         /// <summary>

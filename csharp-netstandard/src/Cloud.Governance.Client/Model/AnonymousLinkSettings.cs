@@ -43,7 +43,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="expirationDate">expirationDate.</param>
         public AnonymousLinkSettings(AnnoymouslinkPermissions permisssion = default(AnnoymouslinkPermissions), DateTime? expirationDate = default(DateTime?))
         {
-            this.ExpirationDate = expirationDate;
             this.Permisssion = permisssion;
             this.ExpirationDate = expirationDate;
         }

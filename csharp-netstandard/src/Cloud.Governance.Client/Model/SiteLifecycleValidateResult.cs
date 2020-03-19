@@ -44,13 +44,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         public SiteLifecycleValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), ChangeSiteQuotaSettings changeQuotaSetting = default(ChangeSiteQuotaSettings), ExtendSiteSetting extendSetting = default(ExtendSiteSetting), UnlockSiteSetting unlockSetting = default(UnlockSiteSetting), ChangeSitePolicySetting changePolicySetting = default(ChangeSitePolicySetting), LockSiteSetting lockSetting = default(LockSiteSetting), string errorMessage = default(string))
         {
-            this.SiteUrl = siteUrl;
-            this.ChangeQuotaSetting = changeQuotaSetting;
-            this.ExtendSetting = extendSetting;
-            this.UnlockSetting = unlockSetting;
-            this.ChangePolicySetting = changePolicySetting;
-            this.LockSetting = lockSetting;
-            this.ErrorMessage = errorMessage;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.ChangeQuotaSetting = changeQuotaSetting;

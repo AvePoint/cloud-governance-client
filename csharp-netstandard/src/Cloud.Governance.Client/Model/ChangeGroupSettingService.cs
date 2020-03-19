@@ -107,17 +107,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="categoryId">categoryId.</param>
         public ChangeGroupSettingService(Guid tenantId = default(Guid), GroupRestrictionType groupRestriction = default(GroupRestrictionType), bool enableChangeName = default(bool), bool enableChangeDescription = default(bool), bool enableChangeMemberSubscription = default(bool), bool enableChangeOutsideSenders = default(bool), bool enableChangePrimaryContact = default(bool), bool enableChangeSecondaryContact = default(bool), bool enableAddOwners = default(bool), UserLevelRestrictionType addOwnerRestriction = default(UserLevelRestrictionType), bool enableRemoveOwners = default(bool), bool enableAddMembers = default(bool), UserLevelRestrictionType addMemberRestriction = default(UserLevelRestrictionType), bool enableRemoveMembers = default(bool), bool enableChangeDynamicMembershipRules = default(bool), bool enableChangeTeamCollaboration = default(bool), bool enableChangeHubSite = default(bool), bool enableChangeClassification = default(bool), List<string> classificationList = default(List<string>), bool enableChangeMetadata = default(bool), bool enableAddOrDeleteMetadata = default(bool), List<CustomMetadata> metadataList = default(List<CustomMetadata>), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
         {
-            this.ClassificationList = classificationList;
-            this.MetadataList = metadataList;
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
             this.TenantId = tenantId;
             this.GroupRestriction = groupRestriction;
             this.EnableChangeName = enableChangeName;

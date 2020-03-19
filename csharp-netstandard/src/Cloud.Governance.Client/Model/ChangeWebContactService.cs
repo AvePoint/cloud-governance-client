@@ -89,19 +89,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.SelectedNodes = selectedNodes;
             this.UnCheckedNodesInfo = unCheckedNodesInfo;
-            this.NewContactNotifiedEmail = newContactNotifiedEmail;
-            this.ScopeSettings = scopeSettings;
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
-            this.SelectedNodes = selectedNodes;
-            this.UnCheckedNodesInfo = unCheckedNodesInfo;
             this.ChangeMethod = changeMethod;
             this.ChangeMethodAssignBy = changeMethodAssignBy;
             this.EnableNotifyNewContact = enableNotifyNewContact;

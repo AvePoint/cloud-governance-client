@@ -84,23 +84,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.IdentityName = identityName;
             this.UserDisplayName = userDisplayName;
-            this.Department = department;
-            this.MobilePhone = mobilePhone;
-            this.Manager = manager;
-            this.Permission = permission;
-            this.SecurityToken = securityToken;
-            this.AdminCenterUrl = adminCenterUrl;
-            this.Type = type;
-            this.TenantId = tenantId;
-            this.ObjectId = objectId;
-            this.JobTitle = jobTitle;
-            this.UsageLocation = usageLocation;
-            this.PhysicalDeliveryOfficeName = physicalDeliveryOfficeName;
-            this.DisplayName = displayName;
-            this.Title = title;
-            this.Email = email;
-            this.IdentityName = identityName;
-            this.UserDisplayName = userDisplayName;
             this.DomainGroup = domainGroup;
             this.Department = department;
             this.MobilePhone = mobilePhone;

@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         public ManagePermissionOption(ManagePermissionGrantSetting grantPermissionSetting = default(ManagePermissionGrantSetting), bool isEnableEditPermission = default(bool), bool isEnableRemovePermission = default(bool), bool isEnableStopInheritPermission = default(bool), bool isEnableDeleteUniquePermission = default(bool), bool isEnableExcludePermissionLevel = default(bool), bool isHideExcludePermissionItem = default(bool), List<PermissionLevel> excludedPermissionLevles = default(List<PermissionLevel>))
         {
             this.GrantPermissionSetting = grantPermissionSetting;
-            this.ExcludedPermissionLevles = excludedPermissionLevles;
-            this.GrantPermissionSetting = grantPermissionSetting;
             this.IsEnableEditPermission = isEnableEditPermission;
             this.IsEnableRemovePermission = isEnableRemovePermission;
             this.IsEnableStopInheritPermission = isEnableStopInheritPermission;

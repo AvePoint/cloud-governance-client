@@ -46,15 +46,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="newAdditionalAdministrators">newAdditionalAdministrators.</param>
         public ChangeContactByUrlSetting(Guid siteId = default(Guid), string siteUrl = default(string), ApiUser originalPrimaryContact = default(ApiUser), ApiUser newPrimaryContact = default(ApiUser), ApiUser originalSecondaryContact = default(ApiUser), ApiUser newSecondaryContact = default(ApiUser), ApiUser originalPrimaryAdministrator = default(ApiUser), ApiUser newPrimaryAdministrator = default(ApiUser), List<ApiUser> originalAdditionalAdministrators = default(List<ApiUser>), List<ApiUser> newAdditionalAdministrators = default(List<ApiUser>))
         {
-            this.SiteUrl = siteUrl;
-            this.OriginalPrimaryContact = originalPrimaryContact;
-            this.NewPrimaryContact = newPrimaryContact;
-            this.OriginalSecondaryContact = originalSecondaryContact;
-            this.NewSecondaryContact = newSecondaryContact;
-            this.OriginalPrimaryAdministrator = originalPrimaryAdministrator;
-            this.NewPrimaryAdministrator = newPrimaryAdministrator;
-            this.OriginalAdditionalAdministrators = originalAdditionalAdministrators;
-            this.NewAdditionalAdministrators = newAdditionalAdministrators;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.OriginalPrimaryContact = originalPrimaryContact;

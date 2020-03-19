@@ -67,7 +67,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isOnlyUseDefaultDuration">isOnlyUseDefaultDuration.</param>
         public GrantPermissionServiceDurationSettings(AssignBy assignBy = default(AssignBy), bool isGrantTemporaryPermission = default(bool), int? defaultDurationInterval = default(int?), DurationDateType defaultDurationType = default(DurationDateType), bool isEnableMaxDuration = default(bool), int maxDuration = default(int), DurationDateType maxDurationType = default(DurationDateType), bool isEnableExpirationNotify = default(bool), int expirationNotifyDurationInterval = default(int), DurationDateType expirationNotifyDurationType = default(DurationDateType), bool isOnlyUseDefaultDuration = default(bool))
         {
-            this.DefaultDurationInterval = defaultDurationInterval;
             this.AssignBy = assignBy;
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
             this.DefaultDurationInterval = defaultDurationInterval;

@@ -74,8 +74,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupRequestAssignBy">groupRequestAssignBy.</param>
         public ManagePermissionSharePointGroupOption(bool isEnableCreateSPGroup = default(bool), bool isEnableDeleteSPGroup = default(bool), bool isEnableManageGroupSettings = default(bool), bool isEnableManageGroupMembers = default(bool), ApiUser groupOwner = default(ApiUser), AssignBy groupOwnerAssignBy = default(AssignBy), SPGroupViewOption spGroupViewType = default(SPGroupViewOption), SPGroupEditOption spGroupEditType = default(SPGroupEditOption), AssignBy spGroupOptionAssignBy = default(AssignBy), bool isAllowJoinOrLeaveRequest = default(bool), bool isAutoAcceptRequest = default(bool), string sendMembershipRequestEmailAddress = default(string), AssignBy groupRequestAssignBy = default(AssignBy))
         {
-            this.GroupOwner = groupOwner;
-            this.SendMembershipRequestEmailAddress = sendMembershipRequestEmailAddress;
             this.IsEnableCreateSPGroup = isEnableCreateSPGroup;
             this.IsEnableDeleteSPGroup = isEnableDeleteSPGroup;
             this.IsEnableManageGroupSettings = isEnableManageGroupSettings;

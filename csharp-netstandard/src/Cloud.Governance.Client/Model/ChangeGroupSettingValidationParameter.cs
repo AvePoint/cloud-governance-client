@@ -41,7 +41,6 @@ namespace Cloud.Governance.Client.Model
         public ChangeGroupSettingValidationParameter(string groupEmail = default(string), Guid groupId = default(Guid), bool isEditTask = default(bool), bool isFromQuestionnaire = default(bool))
         {
             this.GroupEmail = groupEmail;
-            this.GroupEmail = groupEmail;
             this.GroupId = groupId;
             this.IsEditTask = isEditTask;
             this.IsFromQuestionnaire = isFromQuestionnaire;

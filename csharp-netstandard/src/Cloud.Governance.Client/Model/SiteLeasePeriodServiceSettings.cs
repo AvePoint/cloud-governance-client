@@ -65,7 +65,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="leaseWarningDurationType">leaseWarningDurationType.</param>
         public SiteLeasePeriodServiceSettings(AssignBy leasePeriodAssignBy = default(AssignBy), AssignBy leaseWarningAssignBy = default(AssignBy), bool leaseEnabled = default(bool), bool leaseWarningEnabled = default(bool), Guid? approvalProcessId = default(Guid?), int leaseInterval = default(int), ApiDurationType leaseDurationType = default(ApiDurationType), int leaseWarningInterval = default(int), ApiDurationType leaseWarningDurationType = default(ApiDurationType))
         {
-            this.ApprovalProcessId = approvalProcessId;
             this.LeasePeriodAssignBy = leasePeriodAssignBy;
             this.LeaseWarningAssignBy = leaseWarningAssignBy;
             this.LeaseEnabled = leaseEnabled;

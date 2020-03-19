@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         public UserMetadataSettings(List<ApiUser> value = default(List<ApiUser>), bool allowReferenceAsRoleInApprovalProcess = default(bool))
         {
             this.Value = value;
-            this.Value = value;
             this.AllowReferenceAsRoleInApprovalProcess = allowReferenceAsRoleInApprovalProcess;
         }
         

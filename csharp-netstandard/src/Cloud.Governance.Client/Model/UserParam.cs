@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         public UserParam(string user = default(string))
         {
             this.User = user;
-            this.User = user;
         }
         
         /// <summary>

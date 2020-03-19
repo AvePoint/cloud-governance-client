@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="allItems">allItems.</param>
         public GuidBooleanModel(bool enabled = default(bool), Guid seletedItem = default(Guid), List<Guid> allItems = default(List<Guid>))
         {
-            this.AllItems = allItems;
             this.Enabled = enabled;
             this.SeletedItem = seletedItem;
             this.AllItems = allItems;

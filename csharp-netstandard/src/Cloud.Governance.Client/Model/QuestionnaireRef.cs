@@ -41,10 +41,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="node">node.</param>
         public QuestionnaireRef(Guid id = default(Guid), string name = default(string), string description = default(string), List<Question> questions = default(List<Question>), QuestionnaireNode node = default(QuestionnaireNode))
         {
-            this.Name = name;
-            this.Description = description;
-            this.Questions = questions;
-            this.Node = node;
             this.Id = id;
             this.Name = name;
             this.Description = description;

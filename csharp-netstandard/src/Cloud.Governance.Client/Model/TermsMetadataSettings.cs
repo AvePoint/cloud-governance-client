@@ -43,12 +43,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="scope">scope.</param>
         public TermsMetadataSettings(bool allowMultiple = default(bool), string adminCenter = default(string), List<GuidModel> value = default(List<GuidModel>), GuidModel termStore = default(GuidModel), GuidModel termGroup = default(GuidModel), GuidModel termSet = default(GuidModel), GuidModel scope = default(GuidModel))
         {
-            this.AdminCenter = adminCenter;
-            this.Value = value;
-            this.TermStore = termStore;
-            this.TermGroup = termGroup;
-            this.TermSet = termSet;
-            this.Scope = scope;
             this.AllowMultiple = allowMultiple;
             this.AdminCenter = adminCenter;
             this.Value = value;

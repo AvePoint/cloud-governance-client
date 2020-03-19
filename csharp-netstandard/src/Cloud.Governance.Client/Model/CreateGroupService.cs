@@ -192,34 +192,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="categoryId">categoryId.</param>
         public CreateGroupService(Guid tenantId = default(Guid), bool enableTeams = default(bool), bool isPrivate = default(bool), bool enableSubscribe = default(bool), bool enableApplySiteDesign = default(bool), bool enableOutsideSender = default(bool), bool enableHideGroupMembership = default(bool), bool enableClassification = default(bool), bool allowConfigureLeasePeriod = default(bool), bool showNotebookLink = default(bool), bool showConversationsLink = default(bool), bool showFilesLink = default(bool), bool showTeamSiteLink = default(bool), bool showPlannerLink = default(bool), List<string> classifications = default(List<string>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType addGroupMemberType = default(AddGroupMemberType), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = default(bool), bool enableInstallPanel = default(bool), TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), AssignBy memberAssignBy = default(AssignBy), AssignBy ownerAssignBy = default(AssignBy), AssignBy privacyAssignBy = default(AssignBy), AssignBy subscribeAssignBy = default(AssignBy), AssignBy outsideSenderAssignBy = default(AssignBy), AssignBy classificationAssignBy = default(AssignBy), AssignBy languageAssignBy = default(AssignBy), AssignBy secondaryContactAssignBy = default(AssignBy), AssignBy primaryContactAssignBy = default(AssignBy), bool enableDynamicMembership = default(bool), AssignBy hideGroupMembershipAssignBy = default(AssignBy), AssignBy policyAssignBy = default(AssignBy), AssignBy siteDesignAssignBy = default(AssignBy), AssignBy hubSiteAssignBy = default(AssignBy), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = default(bool), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
         {
-            this.Classifications = classifications;
-            this.SiteDesigns = siteDesigns;
-            this.SelectedPolicies = selectedPolicies;
-            this.SelectedLanguages = selectedLanguages;
-            this.TeamsSettings = teamsSettings;
-            this.GroupNameConstructureSettings = groupNameConstructureSettings;
-            this.GroupIdConstructureSettings = groupIdConstructureSettings;
-            this.TemplateSettings = templateSettings;
-            this.DefaultPrimaryContact = defaultPrimaryContact;
-            this.DefaultSecondaryContact = defaultSecondaryContact;
-            this.DefaultOwners = defaultOwners;
-            this.DefaultMembers = defaultMembers;
-            this.DefaultClassification = defaultClassification;
-            this.DefaultLanguage = defaultLanguage;
-            this.DefaultSiteDesign = defaultSiteDesign;
-            this.DefaultOwnersReal = defaultOwnersReal;
-            this.DefaultMembersReal = defaultMembersReal;
-            this.MultiGeoSetting = multiGeoSetting;
-            this.HubSiteSettings = hubSiteSettings;
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
             this.TenantId = tenantId;
             this.EnableTeams = enableTeams;
             this.IsPrivate = isPrivate;

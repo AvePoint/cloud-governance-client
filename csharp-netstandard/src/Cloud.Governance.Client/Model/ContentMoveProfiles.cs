@@ -48,12 +48,6 @@ namespace Cloud.Governance.Client.Model
             this.UserMappings = userMappings;
             this.LanguageMappings = languageMappings;
             this.FilterPolices = filterPolices;
-            this.BackupEnvironmentStoragePolices = backupEnvironmentStoragePolices;
-            this.ColumnMappings = columnMappings;
-            this.ContentTypeMappings = contentTypeMappings;
-            this.UserMappings = userMappings;
-            this.LanguageMappings = languageMappings;
-            this.FilterPolices = filterPolices;
         }
         
         /// <summary>

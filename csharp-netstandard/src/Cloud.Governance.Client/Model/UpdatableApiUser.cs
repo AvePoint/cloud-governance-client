@@ -47,11 +47,6 @@ namespace Cloud.Governance.Client.Model
             this.Id = id;
             this.LoginName = loginName;
             this.DisplayName = displayName;
-            this.Email = email;
-            this.JobTitle = jobTitle;
-            this.Id = id;
-            this.LoginName = loginName;
-            this.DisplayName = displayName;
             this.IsGroup = isGroup;
         }
         

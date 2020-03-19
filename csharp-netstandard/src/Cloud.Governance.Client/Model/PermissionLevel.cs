@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="name">name.</param>
         public PermissionLevel(Guid id = default(Guid), int idInSharePoint = default(int), string name = default(string))
         {
-            this.Name = name;
             this.Id = id;
             this.IdInSharePoint = idInSharePoint;
             this.Name = name;

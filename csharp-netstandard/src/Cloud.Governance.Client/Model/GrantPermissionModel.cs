@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.PermissionDurationSettings = permissionDurationSettings;
             this.WelcomeEmailSettings = welcomeEmailSettings;
-            this.PermissionDurationSettings = permissionDurationSettings;
-            this.WelcomeEmailSettings = welcomeEmailSettings;
         }
         
         /// <summary>

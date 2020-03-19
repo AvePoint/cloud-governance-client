@@ -26,9 +26,9 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// None&#x3D;0, ProvisionSiteCollection&#x3D;1, CreateSubSite&#x3D;2, &lt;/br&gt;SiteCollectionLifecycleMgmt&#x3D;3, ArchiveSiteCollection&#x3D;4, DeleteSiteCollection&#x3D;5, &lt;/br&gt;ExtendSiteCollection&#x3D;6, ChangeSiteCollectionPolicy&#x3D;7, ChangeSiteCollectionMetadata&#x3D;8, &lt;/br&gt;ChangeSiteCollectionContact&#x3D;9, TransferUserPermission&#x3D;10, ManualArchiveSiteCollectionContent&#x3D;11, &lt;/br&gt;CloneUserPermissions&#x3D;12, SiteLifecycleManagement&#x3D;13, GrantUserPermissions&#x3D;14, &lt;/br&gt;RemoveUserPermissions&#x3D;15, ChangeSubSitePolicy&#x3D;16, ChangeSubSiteMetadata&#x3D;17, &lt;/br&gt;ChangeSubSiteContact&#x3D;18, CleanDeadAccounts&#x3D;19, BackupAndRestore&#x3D;20, &lt;/br&gt;ArchiveUserContent&#x3D;21, MoveListItem&#x3D;22, MoveList&#x3D;23, &lt;/br&gt;MoveSite&#x3D;24, SiteTemplateDeployment&#x3D;25, SiteThemeDeployment&#x3D;26, &lt;/br&gt;SandboxSolutionDeployment&#x3D;27, FarmSolutionDeployment&#x3D;28, SiteOwnerReporting&#x3D;29, &lt;/br&gt;SiteCollectionOwnerReporting&#x3D;30, SiteRequestReporting&#x3D;31, ContentManager&#x3D;32, &lt;/br&gt;ProvisionSiteCollectionExternal&#x3D;33, MySite&#x3D;40, CreateList&#x3D;41, &lt;/br&gt;ChangeList&#x3D;42, AutoSiteCollectionLifecycleMgmt&#x3D;43, QuestionaireMgmt&#x3D;44, &lt;/br&gt;PermRecertify&#x3D;46, MetadataRecertify&#x3D;47, OwnershipRecertification&#x3D;48, &lt;/br&gt;Election&#x3D;49, Unlock&#x3D;50, AutoLocking&#x3D;51, &lt;/br&gt;SCInactivityThreshold&#x3D;52, SCLeasePeriod&#x3D;53, Blank&#x3D;54, &lt;/br&gt;LockSC&#x3D;55, ChangeSCQuota&#x3D;56, ApplySiteInformation&#x3D;57, &lt;/br&gt;ImportSite&#x3D;58, ApplySitePolicy&#x3D;59, ImportWeb&#x3D;60, &lt;/br&gt;RenewSite&#x3D;61, RenewGroup&#x3D;62, ExportReport&#x3D;63, &lt;/br&gt;RequestValidation&#x3D;64, SyncSiteMetadata&#x3D;65, PermissionManagement&#x3D;66, &lt;/br&gt;CreateUser&#x3D;110, ChangeUser&#x3D;111, UserLifecycle&#x3D;112, &lt;/br&gt;OffBoardingUser&#x3D;113, ExtendUser&#x3D;114, ChangeUserPolicy&#x3D;115, &lt;/br&gt;UnblockUser&#x3D;116, ChangeUserLoginName&#x3D;117, CreateGroup&#x3D;120, &lt;/br&gt;ChangeGroup&#x3D;121, GroupLifecycle&#x3D;122, DeleteGroup&#x3D;123, &lt;/br&gt;ExtendGroup&#x3D;124, ChangeGroupPolicy&#x3D;125, ChangeGroupQuota&#x3D;128, &lt;/br&gt;ContinueAccess&#x3D;130, ApplyGroupInformation&#x3D;131, ApplyGroupPolicy&#x3D;132, &lt;/br&gt;ImportAzureGroup&#x3D;133, ImportAzureUser&#x3D;134, ArchiveTeam&#x3D;140, &lt;/br&gt;UnArchiveTeam&#x3D;141, GroupMembershipRecertification&#x3D;200, GroupPermissionRecertification&#x3D;201, &lt;/br&gt;SyncSite&#x3D;501, UpgradeSiteLifecycleSetting&#x3D;502, AutoElection&#x3D;503, &lt;/br&gt;ManualArchiveTimer&#x3D;504, SyncWeb&#x3D;505, QuotaThresholdTimerJob&#x3D;506, &lt;/br&gt;SyncUserForDynamicRule&#x3D;507, SyncGroup&#x3D;508, AutoImportSiteCustomService&#x3D;509, &lt;/br&gt;AutoImportSite&#x3D;510, AutoImportGroup&#x3D;511, TemporaryPermissionStart&#x3D;512, &lt;/br&gt;TemporaryPermissionEnd&#x3D;513, TemporaryPermissionExpiringNotificationJob&#x3D;514, RenewTeams&#x3D;515, &lt;/br&gt;AutoExportReport&#x3D;516, SyncUserInformation&#x3D;517, SyncUpsMetadata&#x3D;518, &lt;/br&gt;
+    /// None&#x3D;0, ProvisionSiteCollection&#x3D;1, CreateSubSite&#x3D;2, &lt;/br&gt;SiteCollectionLifecycleMgmt&#x3D;3, ArchiveSiteCollection&#x3D;4, DeleteSiteCollection&#x3D;5, &lt;/br&gt;ExtendSiteCollection&#x3D;6, ChangeSiteCollectionPolicy&#x3D;7, ChangeSiteCollectionMetadata&#x3D;8, &lt;/br&gt;ChangeSiteCollectionContact&#x3D;9, TransferUserPermission&#x3D;10, ManualArchiveSiteCollectionContent&#x3D;11, &lt;/br&gt;CloneUserPermissions&#x3D;12, SiteLifecycleManagement&#x3D;13, GrantUserPermissions&#x3D;14, &lt;/br&gt;RemoveUserPermissions&#x3D;15, ChangeSubSitePolicy&#x3D;16, ChangeSubSiteMetadata&#x3D;17, &lt;/br&gt;ChangeSubSiteContact&#x3D;18, CleanDeadAccounts&#x3D;19, BackupAndRestore&#x3D;20, &lt;/br&gt;ArchiveUserContent&#x3D;21, MoveListItem&#x3D;22, MoveList&#x3D;23, &lt;/br&gt;MoveSite&#x3D;24, SiteTemplateDeployment&#x3D;25, SiteThemeDeployment&#x3D;26, &lt;/br&gt;SandboxSolutionDeployment&#x3D;27, FarmSolutionDeployment&#x3D;28, SiteOwnerReporting&#x3D;29, &lt;/br&gt;SiteCollectionOwnerReporting&#x3D;30, SiteRequestReporting&#x3D;31, ContentManager&#x3D;32, &lt;/br&gt;ProvisionSiteCollectionExternal&#x3D;33, MySite&#x3D;40, CreateList&#x3D;41, &lt;/br&gt;ChangeList&#x3D;42, AutoSiteCollectionLifecycleMgmt&#x3D;43, QuestionaireMgmt&#x3D;44, &lt;/br&gt;PermRecertify&#x3D;46, MetadataRecertify&#x3D;47, OwnershipRecertification&#x3D;48, &lt;/br&gt;Election&#x3D;49, Unlock&#x3D;50, AutoLocking&#x3D;51, &lt;/br&gt;SCInactivityThreshold&#x3D;52, SCLeasePeriod&#x3D;53, Blank&#x3D;54, &lt;/br&gt;LockSC&#x3D;55, ChangeSCQuota&#x3D;56, ApplySiteInformation&#x3D;57, &lt;/br&gt;ImportSite&#x3D;58, ApplySitePolicy&#x3D;59, ImportWeb&#x3D;60, &lt;/br&gt;RenewSite&#x3D;61, RenewGroup&#x3D;62, ExportReport&#x3D;63, &lt;/br&gt;RequestValidation&#x3D;64, SyncSiteMetadata&#x3D;65, PermissionManagement&#x3D;66, &lt;/br&gt;BulkUpdate&#x3D;67, CreateUser&#x3D;110, ChangeUser&#x3D;111, &lt;/br&gt;UserLifecycle&#x3D;112, OffBoardingUser&#x3D;113, ExtendUser&#x3D;114, &lt;/br&gt;ChangeUserPolicy&#x3D;115, UnblockUser&#x3D;116, ChangeUserLoginName&#x3D;117, &lt;/br&gt;CreateGroup&#x3D;120, ChangeGroup&#x3D;121, GroupLifecycle&#x3D;122, &lt;/br&gt;DeleteGroup&#x3D;123, ExtendGroup&#x3D;124, ChangeGroupPolicy&#x3D;125, &lt;/br&gt;ChangeGroupQuota&#x3D;128, ContinueAccess&#x3D;130, ApplyGroupInformation&#x3D;131, &lt;/br&gt;ApplyGroupPolicy&#x3D;132, ImportAzureGroup&#x3D;133, ImportAzureUser&#x3D;134, &lt;/br&gt;PostCreateGroup&#x3D;135, ArchiveTeam&#x3D;140, UnArchiveTeam&#x3D;141, &lt;/br&gt;GroupMembershipRecertification&#x3D;200, GroupPermissionRecertification&#x3D;201, SyncSite&#x3D;501, &lt;/br&gt;UpgradeSiteLifecycleSetting&#x3D;502, AutoElection&#x3D;503, ManualArchiveTimer&#x3D;504, &lt;/br&gt;SyncWeb&#x3D;505, QuotaThresholdTimerJob&#x3D;506, SyncUserForDynamicRule&#x3D;507, &lt;/br&gt;SyncGroup&#x3D;508, AutoImportSiteCustomService&#x3D;509, AutoImportSite&#x3D;510, &lt;/br&gt;AutoImportGroup&#x3D;511, TemporaryPermissionStart&#x3D;512, TemporaryPermissionEnd&#x3D;513, &lt;/br&gt;TemporaryPermissionExpiringNotificationJob&#x3D;514, RenewTeams&#x3D;515, AutoExportReport&#x3D;516, &lt;/br&gt;SyncUserInformation&#x3D;517, SyncUpsMetadata&#x3D;518
     /// </summary>
-    /// <value>None&#x3D;0, ProvisionSiteCollection&#x3D;1, CreateSubSite&#x3D;2, &lt;/br&gt;SiteCollectionLifecycleMgmt&#x3D;3, ArchiveSiteCollection&#x3D;4, DeleteSiteCollection&#x3D;5, &lt;/br&gt;ExtendSiteCollection&#x3D;6, ChangeSiteCollectionPolicy&#x3D;7, ChangeSiteCollectionMetadata&#x3D;8, &lt;/br&gt;ChangeSiteCollectionContact&#x3D;9, TransferUserPermission&#x3D;10, ManualArchiveSiteCollectionContent&#x3D;11, &lt;/br&gt;CloneUserPermissions&#x3D;12, SiteLifecycleManagement&#x3D;13, GrantUserPermissions&#x3D;14, &lt;/br&gt;RemoveUserPermissions&#x3D;15, ChangeSubSitePolicy&#x3D;16, ChangeSubSiteMetadata&#x3D;17, &lt;/br&gt;ChangeSubSiteContact&#x3D;18, CleanDeadAccounts&#x3D;19, BackupAndRestore&#x3D;20, &lt;/br&gt;ArchiveUserContent&#x3D;21, MoveListItem&#x3D;22, MoveList&#x3D;23, &lt;/br&gt;MoveSite&#x3D;24, SiteTemplateDeployment&#x3D;25, SiteThemeDeployment&#x3D;26, &lt;/br&gt;SandboxSolutionDeployment&#x3D;27, FarmSolutionDeployment&#x3D;28, SiteOwnerReporting&#x3D;29, &lt;/br&gt;SiteCollectionOwnerReporting&#x3D;30, SiteRequestReporting&#x3D;31, ContentManager&#x3D;32, &lt;/br&gt;ProvisionSiteCollectionExternal&#x3D;33, MySite&#x3D;40, CreateList&#x3D;41, &lt;/br&gt;ChangeList&#x3D;42, AutoSiteCollectionLifecycleMgmt&#x3D;43, QuestionaireMgmt&#x3D;44, &lt;/br&gt;PermRecertify&#x3D;46, MetadataRecertify&#x3D;47, OwnershipRecertification&#x3D;48, &lt;/br&gt;Election&#x3D;49, Unlock&#x3D;50, AutoLocking&#x3D;51, &lt;/br&gt;SCInactivityThreshold&#x3D;52, SCLeasePeriod&#x3D;53, Blank&#x3D;54, &lt;/br&gt;LockSC&#x3D;55, ChangeSCQuota&#x3D;56, ApplySiteInformation&#x3D;57, &lt;/br&gt;ImportSite&#x3D;58, ApplySitePolicy&#x3D;59, ImportWeb&#x3D;60, &lt;/br&gt;RenewSite&#x3D;61, RenewGroup&#x3D;62, ExportReport&#x3D;63, &lt;/br&gt;RequestValidation&#x3D;64, SyncSiteMetadata&#x3D;65, PermissionManagement&#x3D;66, &lt;/br&gt;CreateUser&#x3D;110, ChangeUser&#x3D;111, UserLifecycle&#x3D;112, &lt;/br&gt;OffBoardingUser&#x3D;113, ExtendUser&#x3D;114, ChangeUserPolicy&#x3D;115, &lt;/br&gt;UnblockUser&#x3D;116, ChangeUserLoginName&#x3D;117, CreateGroup&#x3D;120, &lt;/br&gt;ChangeGroup&#x3D;121, GroupLifecycle&#x3D;122, DeleteGroup&#x3D;123, &lt;/br&gt;ExtendGroup&#x3D;124, ChangeGroupPolicy&#x3D;125, ChangeGroupQuota&#x3D;128, &lt;/br&gt;ContinueAccess&#x3D;130, ApplyGroupInformation&#x3D;131, ApplyGroupPolicy&#x3D;132, &lt;/br&gt;ImportAzureGroup&#x3D;133, ImportAzureUser&#x3D;134, ArchiveTeam&#x3D;140, &lt;/br&gt;UnArchiveTeam&#x3D;141, GroupMembershipRecertification&#x3D;200, GroupPermissionRecertification&#x3D;201, &lt;/br&gt;SyncSite&#x3D;501, UpgradeSiteLifecycleSetting&#x3D;502, AutoElection&#x3D;503, &lt;/br&gt;ManualArchiveTimer&#x3D;504, SyncWeb&#x3D;505, QuotaThresholdTimerJob&#x3D;506, &lt;/br&gt;SyncUserForDynamicRule&#x3D;507, SyncGroup&#x3D;508, AutoImportSiteCustomService&#x3D;509, &lt;/br&gt;AutoImportSite&#x3D;510, AutoImportGroup&#x3D;511, TemporaryPermissionStart&#x3D;512, &lt;/br&gt;TemporaryPermissionEnd&#x3D;513, TemporaryPermissionExpiringNotificationJob&#x3D;514, RenewTeams&#x3D;515, &lt;/br&gt;AutoExportReport&#x3D;516, SyncUserInformation&#x3D;517, SyncUpsMetadata&#x3D;518, &lt;/br&gt;</value>
+    /// <value>None&#x3D;0, ProvisionSiteCollection&#x3D;1, CreateSubSite&#x3D;2, &lt;/br&gt;SiteCollectionLifecycleMgmt&#x3D;3, ArchiveSiteCollection&#x3D;4, DeleteSiteCollection&#x3D;5, &lt;/br&gt;ExtendSiteCollection&#x3D;6, ChangeSiteCollectionPolicy&#x3D;7, ChangeSiteCollectionMetadata&#x3D;8, &lt;/br&gt;ChangeSiteCollectionContact&#x3D;9, TransferUserPermission&#x3D;10, ManualArchiveSiteCollectionContent&#x3D;11, &lt;/br&gt;CloneUserPermissions&#x3D;12, SiteLifecycleManagement&#x3D;13, GrantUserPermissions&#x3D;14, &lt;/br&gt;RemoveUserPermissions&#x3D;15, ChangeSubSitePolicy&#x3D;16, ChangeSubSiteMetadata&#x3D;17, &lt;/br&gt;ChangeSubSiteContact&#x3D;18, CleanDeadAccounts&#x3D;19, BackupAndRestore&#x3D;20, &lt;/br&gt;ArchiveUserContent&#x3D;21, MoveListItem&#x3D;22, MoveList&#x3D;23, &lt;/br&gt;MoveSite&#x3D;24, SiteTemplateDeployment&#x3D;25, SiteThemeDeployment&#x3D;26, &lt;/br&gt;SandboxSolutionDeployment&#x3D;27, FarmSolutionDeployment&#x3D;28, SiteOwnerReporting&#x3D;29, &lt;/br&gt;SiteCollectionOwnerReporting&#x3D;30, SiteRequestReporting&#x3D;31, ContentManager&#x3D;32, &lt;/br&gt;ProvisionSiteCollectionExternal&#x3D;33, MySite&#x3D;40, CreateList&#x3D;41, &lt;/br&gt;ChangeList&#x3D;42, AutoSiteCollectionLifecycleMgmt&#x3D;43, QuestionaireMgmt&#x3D;44, &lt;/br&gt;PermRecertify&#x3D;46, MetadataRecertify&#x3D;47, OwnershipRecertification&#x3D;48, &lt;/br&gt;Election&#x3D;49, Unlock&#x3D;50, AutoLocking&#x3D;51, &lt;/br&gt;SCInactivityThreshold&#x3D;52, SCLeasePeriod&#x3D;53, Blank&#x3D;54, &lt;/br&gt;LockSC&#x3D;55, ChangeSCQuota&#x3D;56, ApplySiteInformation&#x3D;57, &lt;/br&gt;ImportSite&#x3D;58, ApplySitePolicy&#x3D;59, ImportWeb&#x3D;60, &lt;/br&gt;RenewSite&#x3D;61, RenewGroup&#x3D;62, ExportReport&#x3D;63, &lt;/br&gt;RequestValidation&#x3D;64, SyncSiteMetadata&#x3D;65, PermissionManagement&#x3D;66, &lt;/br&gt;BulkUpdate&#x3D;67, CreateUser&#x3D;110, ChangeUser&#x3D;111, &lt;/br&gt;UserLifecycle&#x3D;112, OffBoardingUser&#x3D;113, ExtendUser&#x3D;114, &lt;/br&gt;ChangeUserPolicy&#x3D;115, UnblockUser&#x3D;116, ChangeUserLoginName&#x3D;117, &lt;/br&gt;CreateGroup&#x3D;120, ChangeGroup&#x3D;121, GroupLifecycle&#x3D;122, &lt;/br&gt;DeleteGroup&#x3D;123, ExtendGroup&#x3D;124, ChangeGroupPolicy&#x3D;125, &lt;/br&gt;ChangeGroupQuota&#x3D;128, ContinueAccess&#x3D;130, ApplyGroupInformation&#x3D;131, &lt;/br&gt;ApplyGroupPolicy&#x3D;132, ImportAzureGroup&#x3D;133, ImportAzureUser&#x3D;134, &lt;/br&gt;PostCreateGroup&#x3D;135, ArchiveTeam&#x3D;140, UnArchiveTeam&#x3D;141, &lt;/br&gt;GroupMembershipRecertification&#x3D;200, GroupPermissionRecertification&#x3D;201, SyncSite&#x3D;501, &lt;/br&gt;UpgradeSiteLifecycleSetting&#x3D;502, AutoElection&#x3D;503, ManualArchiveTimer&#x3D;504, &lt;/br&gt;SyncWeb&#x3D;505, QuotaThresholdTimerJob&#x3D;506, SyncUserForDynamicRule&#x3D;507, &lt;/br&gt;SyncGroup&#x3D;508, AutoImportSiteCustomService&#x3D;509, AutoImportSite&#x3D;510, &lt;/br&gt;AutoImportGroup&#x3D;511, TemporaryPermissionStart&#x3D;512, TemporaryPermissionEnd&#x3D;513, &lt;/br&gt;TemporaryPermissionExpiringNotificationJob&#x3D;514, RenewTeams&#x3D;515, AutoExportReport&#x3D;516, &lt;/br&gt;SyncUserInformation&#x3D;517, SyncUpsMetadata&#x3D;518</value>
     
     [JsonConverter(typeof(StringEnumConverter))]
     
@@ -395,256 +395,268 @@ namespace Cloud.Governance.Client.Model
         PermissionManagement = 60,
 
         /// <summary>
+        /// Enum BulkUpdate for value: BulkUpdate
+        /// </summary>
+        [EnumMember(Value = "BulkUpdate")]
+        BulkUpdate = 61,
+
+        /// <summary>
         /// Enum CreateUser for value: CreateUser
         /// </summary>
         [EnumMember(Value = "CreateUser")]
-        CreateUser = 61,
+        CreateUser = 62,
 
         /// <summary>
         /// Enum ChangeUser for value: ChangeUser
         /// </summary>
         [EnumMember(Value = "ChangeUser")]
-        ChangeUser = 62,
+        ChangeUser = 63,
 
         /// <summary>
         /// Enum UserLifecycle for value: UserLifecycle
         /// </summary>
         [EnumMember(Value = "UserLifecycle")]
-        UserLifecycle = 63,
+        UserLifecycle = 64,
 
         /// <summary>
         /// Enum OffBoardingUser for value: OffBoardingUser
         /// </summary>
         [EnumMember(Value = "OffBoardingUser")]
-        OffBoardingUser = 64,
+        OffBoardingUser = 65,
 
         /// <summary>
         /// Enum ExtendUser for value: ExtendUser
         /// </summary>
         [EnumMember(Value = "ExtendUser")]
-        ExtendUser = 65,
+        ExtendUser = 66,
 
         /// <summary>
         /// Enum ChangeUserPolicy for value: ChangeUserPolicy
         /// </summary>
         [EnumMember(Value = "ChangeUserPolicy")]
-        ChangeUserPolicy = 66,
+        ChangeUserPolicy = 67,
 
         /// <summary>
         /// Enum UnblockUser for value: UnblockUser
         /// </summary>
         [EnumMember(Value = "UnblockUser")]
-        UnblockUser = 67,
+        UnblockUser = 68,
 
         /// <summary>
         /// Enum ChangeUserLoginName for value: ChangeUserLoginName
         /// </summary>
         [EnumMember(Value = "ChangeUserLoginName")]
-        ChangeUserLoginName = 68,
+        ChangeUserLoginName = 69,
 
         /// <summary>
         /// Enum CreateGroup for value: CreateGroup
         /// </summary>
         [EnumMember(Value = "CreateGroup")]
-        CreateGroup = 69,
+        CreateGroup = 70,
 
         /// <summary>
         /// Enum ChangeGroup for value: ChangeGroup
         /// </summary>
         [EnumMember(Value = "ChangeGroup")]
-        ChangeGroup = 70,
+        ChangeGroup = 71,
 
         /// <summary>
         /// Enum GroupLifecycle for value: GroupLifecycle
         /// </summary>
         [EnumMember(Value = "GroupLifecycle")]
-        GroupLifecycle = 71,
+        GroupLifecycle = 72,
 
         /// <summary>
         /// Enum DeleteGroup for value: DeleteGroup
         /// </summary>
         [EnumMember(Value = "DeleteGroup")]
-        DeleteGroup = 72,
+        DeleteGroup = 73,
 
         /// <summary>
         /// Enum ExtendGroup for value: ExtendGroup
         /// </summary>
         [EnumMember(Value = "ExtendGroup")]
-        ExtendGroup = 73,
+        ExtendGroup = 74,
 
         /// <summary>
         /// Enum ChangeGroupPolicy for value: ChangeGroupPolicy
         /// </summary>
         [EnumMember(Value = "ChangeGroupPolicy")]
-        ChangeGroupPolicy = 74,
+        ChangeGroupPolicy = 75,
 
         /// <summary>
         /// Enum ArchiveTeam for value: ArchiveTeam
         /// </summary>
         [EnumMember(Value = "ArchiveTeam")]
-        ArchiveTeam = 75,
+        ArchiveTeam = 76,
 
         /// <summary>
         /// Enum UnArchiveTeam for value: UnArchiveTeam
         /// </summary>
         [EnumMember(Value = "UnArchiveTeam")]
-        UnArchiveTeam = 76,
+        UnArchiveTeam = 77,
 
         /// <summary>
         /// Enum GroupMembershipRecertification for value: GroupMembershipRecertification
         /// </summary>
         [EnumMember(Value = "GroupMembershipRecertification")]
-        GroupMembershipRecertification = 77,
+        GroupMembershipRecertification = 78,
 
         /// <summary>
         /// Enum GroupPermissionRecertification for value: GroupPermissionRecertification
         /// </summary>
         [EnumMember(Value = "GroupPermissionRecertification")]
-        GroupPermissionRecertification = 78,
+        GroupPermissionRecertification = 79,
 
         /// <summary>
         /// Enum ChangeGroupQuota for value: ChangeGroupQuota
         /// </summary>
         [EnumMember(Value = "ChangeGroupQuota")]
-        ChangeGroupQuota = 79,
+        ChangeGroupQuota = 80,
 
         /// <summary>
         /// Enum ContinueAccess for value: ContinueAccess
         /// </summary>
         [EnumMember(Value = "ContinueAccess")]
-        ContinueAccess = 80,
+        ContinueAccess = 81,
 
         /// <summary>
         /// Enum ApplyGroupInformation for value: ApplyGroupInformation
         /// </summary>
         [EnumMember(Value = "ApplyGroupInformation")]
-        ApplyGroupInformation = 81,
+        ApplyGroupInformation = 82,
 
         /// <summary>
         /// Enum ApplyGroupPolicy for value: ApplyGroupPolicy
         /// </summary>
         [EnumMember(Value = "ApplyGroupPolicy")]
-        ApplyGroupPolicy = 82,
+        ApplyGroupPolicy = 83,
 
         /// <summary>
         /// Enum ImportAzureGroup for value: ImportAzureGroup
         /// </summary>
         [EnumMember(Value = "ImportAzureGroup")]
-        ImportAzureGroup = 83,
+        ImportAzureGroup = 84,
 
         /// <summary>
         /// Enum ImportAzureUser for value: ImportAzureUser
         /// </summary>
         [EnumMember(Value = "ImportAzureUser")]
-        ImportAzureUser = 84,
+        ImportAzureUser = 85,
+
+        /// <summary>
+        /// Enum PostCreateGroup for value: PostCreateGroup
+        /// </summary>
+        [EnumMember(Value = "PostCreateGroup")]
+        PostCreateGroup = 86,
 
         /// <summary>
         /// Enum SyncSite for value: SyncSite
         /// </summary>
         [EnumMember(Value = "SyncSite")]
-        SyncSite = 85,
+        SyncSite = 87,
 
         /// <summary>
         /// Enum UpgradeSiteLifecycleSetting for value: UpgradeSiteLifecycleSetting
         /// </summary>
         [EnumMember(Value = "UpgradeSiteLifecycleSetting")]
-        UpgradeSiteLifecycleSetting = 86,
+        UpgradeSiteLifecycleSetting = 88,
 
         /// <summary>
         /// Enum AutoElection for value: AutoElection
         /// </summary>
         [EnumMember(Value = "AutoElection")]
-        AutoElection = 87,
+        AutoElection = 89,
 
         /// <summary>
         /// Enum ManualArchiveTimer for value: ManualArchiveTimer
         /// </summary>
         [EnumMember(Value = "ManualArchiveTimer")]
-        ManualArchiveTimer = 88,
+        ManualArchiveTimer = 90,
 
         /// <summary>
         /// Enum SyncWeb for value: SyncWeb
         /// </summary>
         [EnumMember(Value = "SyncWeb")]
-        SyncWeb = 89,
+        SyncWeb = 91,
 
         /// <summary>
         /// Enum QuotaThresholdTimerJob for value: QuotaThresholdTimerJob
         /// </summary>
         [EnumMember(Value = "QuotaThresholdTimerJob")]
-        QuotaThresholdTimerJob = 90,
+        QuotaThresholdTimerJob = 92,
 
         /// <summary>
         /// Enum SyncUserForDynamicRule for value: SyncUserForDynamicRule
         /// </summary>
         [EnumMember(Value = "SyncUserForDynamicRule")]
-        SyncUserForDynamicRule = 91,
+        SyncUserForDynamicRule = 93,
 
         /// <summary>
         /// Enum SyncGroup for value: SyncGroup
         /// </summary>
         [EnumMember(Value = "SyncGroup")]
-        SyncGroup = 92,
+        SyncGroup = 94,
 
         /// <summary>
         /// Enum AutoImportSiteCustomService for value: AutoImportSiteCustomService
         /// </summary>
         [EnumMember(Value = "AutoImportSiteCustomService")]
-        AutoImportSiteCustomService = 93,
+        AutoImportSiteCustomService = 95,
 
         /// <summary>
         /// Enum AutoImportSite for value: AutoImportSite
         /// </summary>
         [EnumMember(Value = "AutoImportSite")]
-        AutoImportSite = 94,
+        AutoImportSite = 96,
 
         /// <summary>
         /// Enum AutoImportGroup for value: AutoImportGroup
         /// </summary>
         [EnumMember(Value = "AutoImportGroup")]
-        AutoImportGroup = 95,
+        AutoImportGroup = 97,
 
         /// <summary>
         /// Enum TemporaryPermissionStart for value: TemporaryPermissionStart
         /// </summary>
         [EnumMember(Value = "TemporaryPermissionStart")]
-        TemporaryPermissionStart = 96,
+        TemporaryPermissionStart = 98,
 
         /// <summary>
         /// Enum TemporaryPermissionEnd for value: TemporaryPermissionEnd
         /// </summary>
         [EnumMember(Value = "TemporaryPermissionEnd")]
-        TemporaryPermissionEnd = 97,
+        TemporaryPermissionEnd = 99,
 
         /// <summary>
         /// Enum TemporaryPermissionExpiringNotificationJob for value: TemporaryPermissionExpiringNotificationJob
         /// </summary>
         [EnumMember(Value = "TemporaryPermissionExpiringNotificationJob")]
-        TemporaryPermissionExpiringNotificationJob = 98,
+        TemporaryPermissionExpiringNotificationJob = 100,
 
         /// <summary>
         /// Enum RenewTeams for value: RenewTeams
         /// </summary>
         [EnumMember(Value = "RenewTeams")]
-        RenewTeams = 99,
+        RenewTeams = 101,
 
         /// <summary>
         /// Enum AutoExportReport for value: AutoExportReport
         /// </summary>
         [EnumMember(Value = "AutoExportReport")]
-        AutoExportReport = 100,
+        AutoExportReport = 102,
 
         /// <summary>
         /// Enum SyncUserInformation for value: SyncUserInformation
         /// </summary>
         [EnumMember(Value = "SyncUserInformation")]
-        SyncUserInformation = 101,
+        SyncUserInformation = 103,
 
         /// <summary>
         /// Enum SyncUpsMetadata for value: SyncUpsMetadata
         /// </summary>
         [EnumMember(Value = "SyncUpsMetadata")]
-        SyncUpsMetadata = 102
+        SyncUpsMetadata = 104
 
     }
 

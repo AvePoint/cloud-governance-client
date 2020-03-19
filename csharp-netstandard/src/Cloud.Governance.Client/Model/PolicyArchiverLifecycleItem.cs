@@ -44,8 +44,6 @@ namespace Cloud.Governance.Client.Model
         public PolicyArchiverLifecycleItem(string profile = default(string), bool isNotifyEnabled = default(bool), string notifyUser = default(string), Guid notifyTemplate = default(Guid), bool isEnabled = default(bool), bool isDefaultProcess = default(bool), Guid processId = default(Guid))
         {
             this.Profile = profile;
-            this.NotifyUser = notifyUser;
-            this.Profile = profile;
             this.IsNotifyEnabled = isNotifyEnabled;
             this.NotifyUser = notifyUser;
             this.NotifyTemplate = notifyTemplate;

@@ -53,9 +53,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="suffixs">suffixs.</param>
         public GroupIdConstructureSettings(GroupIdRuleType ruleType = default(GroupIdRuleType), bool enableAutoSequenceNumber = default(bool), string autoSequenceNumber = default(string), bool enabled = default(bool), AssignBy assignBy = default(AssignBy), List<GroupConstructureRule> prefixs = default(List<GroupConstructureRule>), List<GroupConstructureRule> suffixs = default(List<GroupConstructureRule>))
         {
-            this.AutoSequenceNumber = autoSequenceNumber;
-            this.Prefixs = prefixs;
-            this.Suffixs = suffixs;
             this.RuleType = ruleType;
             this.EnableAutoSequenceNumber = enableAutoSequenceNumber;
             this.AutoSequenceNumber = autoSequenceNumber;

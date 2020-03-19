@@ -42,10 +42,6 @@ namespace Cloud.Governance.Client.Model
         public ApprovalProcessStageCollection(string uniqueId = default(string), int stageCount = default(int), ApprovalProcessStageInfo stageOne = default(ApprovalProcessStageInfo), ApprovalProcessStageInfo stageTwo = default(ApprovalProcessStageInfo), ApprovalProcessStageInfo stageThree = default(ApprovalProcessStageInfo))
         {
             this.UniqueId = uniqueId;
-            this.StageOne = stageOne;
-            this.StageTwo = stageTwo;
-            this.StageThree = stageThree;
-            this.UniqueId = uniqueId;
             this.StageCount = stageCount;
             this.StageOne = stageOne;
             this.StageTwo = stageTwo;

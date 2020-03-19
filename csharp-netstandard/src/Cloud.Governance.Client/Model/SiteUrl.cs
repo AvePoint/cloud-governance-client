@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.Root = root;
             this.ManagedPath = managedPath;
             this.Name = name;
-            this.Root = root;
-            this.ManagedPath = managedPath;
-            this.Name = name;
         }
         
         /// <summary>

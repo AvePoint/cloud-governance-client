@@ -44,8 +44,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="autoGenerateUrlSetting">autoGenerateUrlSetting.</param>
         public SiteUrlSetting(SiteConstructUrlType type = default(SiteConstructUrlType), ManuallyInputUrlSetting manuallyInputSetting = default(ManuallyInputUrlSetting), AutoGenerateUrlSetting autoGenerateUrlSetting = default(AutoGenerateUrlSetting))
         {
-            this.ManuallyInputSetting = manuallyInputSetting;
-            this.AutoGenerateUrlSetting = autoGenerateUrlSetting;
             this.Type = type;
             this.ManuallyInputSetting = manuallyInputSetting;
             this.AutoGenerateUrlSetting = autoGenerateUrlSetting;

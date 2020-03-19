@@ -41,9 +41,6 @@ namespace Cloud.Governance.Client.Model
         public TemplateWithPermissions(string templateId = default(string), bool isUseCommon = default(bool), List<ServiceUserWithPermissions> userPermissions = default(List<ServiceUserWithPermissions>), List<ServiceGroupWithPermissions> groupPermissions = default(List<ServiceGroupWithPermissions>))
         {
             this.TemplateId = templateId;
-            this.UserPermissions = userPermissions;
-            this.GroupPermissions = groupPermissions;
-            this.TemplateId = templateId;
             this.IsUseCommon = isUseCommon;
             this.UserPermissions = userPermissions;
             this.GroupPermissions = groupPermissions;

@@ -66,10 +66,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="buildInGroupType">buildInGroupType.</param>
         public ServiceGroupWithPermissions(AssignBy usersAssignBy = default(AssignBy), AssignBy groupOwnerAssignBy = default(AssignBy), bool allowChangePermissionLevel = default(bool), bool removable = default(bool), string name = default(string), List<GroupUser> users = default(List<GroupUser>), List<PermissionLevel> permissionLevels = default(List<PermissionLevel>), ApiUser groupOwner = default(ApiUser), GroupOwnerType groupOwnerType = default(GroupOwnerType), SharePointBuildInGroupType buildInGroupType = default(SharePointBuildInGroupType))
         {
-            this.Name = name;
-            this.Users = users;
-            this.PermissionLevels = permissionLevels;
-            this.GroupOwner = groupOwner;
             this.UsersAssignBy = usersAssignBy;
             this.GroupOwnerAssignBy = groupOwnerAssignBy;
             this.AllowChangePermissionLevel = allowChangePermissionLevel;

@@ -51,7 +51,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="leaseExpirationDate">leaseExpirationDate.</param>
         public GroupLeasePeriodSettings(bool isEnabled = default(bool), GroupLeasePeriodType leaseType = default(GroupLeasePeriodType), ApiDurationType durationType = default(ApiDurationType), int durationInterval = default(int), DateTime? leaseExpirationDate = default(DateTime?))
         {
-            this.LeaseExpirationDate = leaseExpirationDate;
             this.IsEnabled = isEnabled;
             this.LeaseType = leaseType;
             this.DurationType = durationType;

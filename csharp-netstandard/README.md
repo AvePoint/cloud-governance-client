@@ -54,12 +54,16 @@ namespace Example
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
+
         }
     }
 }
 ```
 
+<a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
+
+All URIs are relative to *https://API_BASE_URL*, refer to Cloud Governance User Guide -> AvePoint Cloud Governance Modern API to get the API endpoint.
 
 - [**EmailsApi**](docs/EmailsApi.md)
 - [**MetadataApi**](docs/MetadataApi.md)
@@ -71,6 +75,23 @@ namespace Example
 - [**TasksApi**](docs/TasksApi.md)
 - [**UsersApi**](docs/UsersApi.md)
 - [**WorkspaceApi**](docs/WorkspaceApi.md)
+
+- [**AosAdminApi**](docs/AosAdminApi.md)
+- [**ApprovalprocessesAdminApi**](docs/ApprovalprocessesAdminApi.md)
+- [**AuditDirectoryAdminApi**](docs/AuditDirectoryAdminApi.md)
+- [**DashboardAdminApi**](docs/DashboardAdminApi.md)
+- [**DirectoryAdminApi**](docs/DirectoryAdminApi.md)
+- [**LifecycleSettingsAdminApi**](docs/LifecycleSettingsAdminApi.md)
+- [**MetadataAdminApi**](docs/MetadataAdminApi.md)
+- [**NotificationSettingsAdminApi**](docs/NotificationSettingsAdminApi.md)
+- [**Office365AdminApi**](docs/Office365AdminApi.md)
+- [**PoliciesAdminApi**](docs/PoliciesAdminApi.md)
+- [**Office365SettingsAdminApi**](docs/Office365SettingsAdminApi.md)
+- [**QuestionnairesAdminApi**](docs/QuestionnairesAdminApi.md)
+- [**RequestsDirectoryAdminApi**](docs/RequestsDirectoryAdminApi.md)
+- [**SystemSettingsAdminApi**](docs/SystemSettingsAdminApi.md)
+- [**TasksDirectoryAdminApi**](docs/TasksDirectoryAdminApi.md)
+
 
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization

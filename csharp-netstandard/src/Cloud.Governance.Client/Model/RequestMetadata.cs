@@ -55,13 +55,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="action">action.</param>
         public RequestMetadata(Guid id = default(Guid), bool? booleanValue = default(bool?), string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), MetadataActionType action = default(MetadataActionType))
         {
-            this.BooleanValue = booleanValue;
-            this.SingleLineOrMultipleLineValue = singleLineOrMultipleLineValue;
-            this.UpsOrAzureAdValue = upsOrAzureAdValue;
-            this.TermsValue = termsValue;
-            this.UserValue = userValue;
-            this.LinkValue = linkValue;
-            this.ChoiceValue = choiceValue;
             this.Id = id;
             this.BooleanValue = booleanValue;
             this.SingleLineOrMultipleLineValue = singleLineOrMultipleLineValue;

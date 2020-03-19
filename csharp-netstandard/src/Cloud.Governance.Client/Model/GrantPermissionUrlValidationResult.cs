@@ -48,10 +48,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         public GrantPermissionUrlValidationResult(ExternalSharingOptions externalSharingOptions = default(ExternalSharingOptions), bool enableShareAnnoymousLink = default(bool), GrantPermissionSPObject _object = default(GrantPermissionSPObject), List<IntModel> spPermissionLevels = default(List<IntModel>), List<GrantPermissionGroup> spGroups = default(List<GrantPermissionGroup>), bool allowBreakPermissionInheritance = default(bool), string errorMessage = default(string))
         {
-            this.Object = _object;
-            this.SpPermissionLevels = spPermissionLevels;
-            this.SpGroups = spGroups;
-            this.ErrorMessage = errorMessage;
             this.ExternalSharingOptions = externalSharingOptions;
             this.EnableShareAnnoymousLink = enableShareAnnoymousLink;
             this.Object = _object;

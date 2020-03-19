@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="group">group.</param>
         public YammerGroup(bool exists = default(bool), GroupInfo group = default(GroupInfo))
         {
-            this.Group = group;
             this.Exists = exists;
             this.Group = group;
         }

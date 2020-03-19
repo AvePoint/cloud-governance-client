@@ -48,7 +48,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="processId">processId.</param>
         public PolicyLockLifecycleItem(SiteLockType lockType = default(SiteLockType), bool isNotifyEnabled = default(bool), string notifyUser = default(string), Guid notifyTemplate = default(Guid), bool isEnabled = default(bool), bool isDefaultProcess = default(bool), Guid processId = default(Guid))
         {
-            this.NotifyUser = notifyUser;
             this.LockType = lockType;
             this.IsNotifyEnabled = isNotifyEnabled;
             this.NotifyUser = notifyUser;

@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.LockPermissionAction = lockPermissionAction;
             this.LockContactAction = lockContactAction;
             this.LockMetadataAction = lockMetadataAction;
-            this.LockPermissionAction = lockPermissionAction;
-            this.LockContactAction = lockContactAction;
-            this.LockMetadataAction = lockMetadataAction;
         }
         
         /// <summary>

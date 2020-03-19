@@ -46,7 +46,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableCloneTeamClassification">enableCloneTeamClassification.</param>
         public TeamsTemplateSettings(bool enableCreateTeamFromScratch = default(bool), bool enableCreateTeamFromExistTeam = default(bool), GuidModel selectedTemplate = default(GuidModel), bool enableCloneChannels = default(bool), bool enableCloneApps = default(bool), bool enableCloneTabs = default(bool), bool enableCloneMembers = default(bool), bool enableCloneTeamSetting = default(bool), bool enableCloneTeamPrivacy = default(bool), bool enableCloneTeamClassification = default(bool))
         {
-            this.SelectedTemplate = selectedTemplate;
             this.EnableCreateTeamFromScratch = enableCreateTeamFromScratch;
             this.EnableCreateTeamFromExistTeam = enableCreateTeamFromExistTeam;
             this.SelectedTemplate = selectedTemplate;

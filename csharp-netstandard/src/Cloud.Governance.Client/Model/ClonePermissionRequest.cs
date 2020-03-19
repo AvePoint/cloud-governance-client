@@ -74,15 +74,6 @@ namespace Cloud.Governance.Client.Model
             this.Urls = urls;
             this.SourceUser = sourceUser;
             this.TargetUser = targetUser;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
-            this.Urls = urls;
-            this.SourceUser = sourceUser;
-            this.TargetUser = targetUser;
             this.CloneOption = cloneOption;
             this.AdditionalCloneOption = additionalCloneOption;
             this.EnabledRemoveExplicitPermission = enabledRemoveExplicitPermission;

@@ -41,9 +41,6 @@ namespace Cloud.Governance.Client.Model
         public ConfirmInformation(string secondaryContact = default(string), Guid policyId = default(Guid), string department = default(string), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SecondaryContact = secondaryContact;
-            this.Department = department;
-            this.Metadatas = metadatas;
-            this.SecondaryContact = secondaryContact;
             this.PolicyId = policyId;
             this.Department = department;
             this.Metadatas = metadatas;

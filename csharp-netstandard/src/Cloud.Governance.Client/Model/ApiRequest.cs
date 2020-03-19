@@ -54,12 +54,6 @@ namespace Cloud.Governance.Client.Model
         public ApiRequest(Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
-            this.Id = id;
             this.ServiceId = serviceId;
             this.Department = department;
             this.Summary = summary;

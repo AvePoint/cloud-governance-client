@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.TargetUser = targetUser;
             this.UserPropertyValue = userPropertyValue;
             this.UserPropertyDisplayValue = userPropertyDisplayValue;
-            this.TargetUser = targetUser;
-            this.UserPropertyValue = userPropertyValue;
-            this.UserPropertyDisplayValue = userPropertyDisplayValue;
         }
         
         /// <summary>

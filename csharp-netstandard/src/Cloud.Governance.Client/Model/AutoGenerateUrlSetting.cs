@@ -44,8 +44,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="randomStringSettings">randomStringSettings.</param>
         public AutoGenerateUrlSetting(AutoGenerateUrlType generateUrlType = default(AutoGenerateUrlType), UrlSequentialNumberingSettings sequentialNumberingSettings = default(UrlSequentialNumberingSettings), UrlRandomStringSettings randomStringSettings = default(UrlRandomStringSettings))
         {
-            this.SequentialNumberingSettings = sequentialNumberingSettings;
-            this.RandomStringSettings = randomStringSettings;
             this.GenerateUrlType = generateUrlType;
             this.SequentialNumberingSettings = sequentialNumberingSettings;
             this.RandomStringSettings = randomStringSettings;

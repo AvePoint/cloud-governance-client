@@ -46,9 +46,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="majorWithMinorVersionsLimit">majorWithMinorVersionsLimit.</param>
         public SPList(Guid id = default(Guid), string title = default(string), string url = default(string), string description = default(string), bool isOnQuickLaunch = default(bool), bool isEnableModeration = default(bool), bool isEnableVersioning = default(bool), bool isEnableMinorVersion = default(bool), int majorVersionLimit = default(int), int majorWithMinorVersionsLimit = default(int))
         {
-            this.Title = title;
-            this.Url = url;
-            this.Description = description;
             this.Id = id;
             this.Title = title;
             this.Url = url;

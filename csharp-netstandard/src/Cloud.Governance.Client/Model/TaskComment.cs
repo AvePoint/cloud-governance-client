@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         public TaskComment(string assigneeDisplayName = default(string), DateTime commentTime = default(DateTime), string content = default(string))
         {
             this.AssigneeDisplayName = assigneeDisplayName;
-            this.Content = content;
-            this.AssigneeDisplayName = assigneeDisplayName;
             this.CommentTime = commentTime;
             this.Content = content;
         }

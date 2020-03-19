@@ -65,9 +65,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="accessType">accessType.</param>
         public MembershipRecertificationItem(Guid id = default(Guid), Guid instanceId = default(Guid), RecertificationActionType type = default(RecertificationActionType), Guid? taskId = default(Guid?), RenewalItemAction action = default(RenewalItemAction), string user = default(string), string userDisplayName = default(string), MembershipType membershipType = default(MembershipType), UserAccessType accessType = default(UserAccessType))
         {
-            this.TaskId = taskId;
-            this.User = user;
-            this.UserDisplayName = userDisplayName;
             this.Id = id;
             this.InstanceId = instanceId;
             this.Type = type;

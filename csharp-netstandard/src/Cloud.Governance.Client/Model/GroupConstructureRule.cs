@@ -43,7 +43,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="value">value.</param>
         public GroupConstructureRule(ConstructureType type = default(ConstructureType), string value = default(string))
         {
-            this.Value = value;
             this.Type = type;
             this.Value = value;
         }

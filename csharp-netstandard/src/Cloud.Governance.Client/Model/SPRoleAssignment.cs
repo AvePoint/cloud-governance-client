@@ -46,9 +46,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="permissionLevels">permissionLevels.</param>
         public SPRoleAssignment(int id = default(int), string name = default(string), string loginName = default(string), SPPrincipalType principalType = default(SPPrincipalType), List<string> permissionLevels = default(List<string>))
         {
-            this.Name = name;
-            this.LoginName = loginName;
-            this.PermissionLevels = permissionLevels;
             this.Id = id;
             this.Name = name;
             this.LoginName = loginName;

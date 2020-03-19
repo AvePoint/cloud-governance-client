@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="value">value.</param>
         public QuestionRequest(Guid id = default(Guid), StringModel value = default(StringModel))
         {
-            this.Value = value;
             this.Id = id;
             this.Value = value;
         }

@@ -41,8 +41,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="requestSummary">requestSummary.</param>
         public RecertificationReportProperties(Guid objectId = default(Guid), string objectName = default(string), bool isAllowedReassign = default(bool), DateTime reportGeneratedTime = default(DateTime), string requestSummary = default(string))
         {
-            this.ObjectName = objectName;
-            this.RequestSummary = requestSummary;
             this.ObjectId = objectId;
             this.ObjectName = objectName;
             this.IsAllowedReassign = isAllowedReassign;

@@ -41,7 +41,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="templateTeams">templateTeams.</param>
         public TeamsTemplateServiceSettings(bool enableCreateTeamFromScratch = default(bool), bool enableCreateTeamFromExistTeam = default(bool), bool enableCreateTeamFromIT = default(bool), bool enableCreateTeamFromOwned = default(bool), List<GuidModel> templateTeams = default(List<GuidModel>))
         {
-            this.TemplateTeams = templateTeams;
             this.EnableCreateTeamFromScratch = enableCreateTeamFromScratch;
             this.EnableCreateTeamFromExistTeam = enableCreateTeamFromExistTeam;
             this.EnableCreateTeamFromIT = enableCreateTeamFromIT;

@@ -53,15 +53,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="tenantId">tenantId.</param>
         public RequestMetadataInfo(Guid id = default(Guid), string tagName = default(string), string description = default(string), int fieldType = default(int), string defaultValue = default(string), string metadataValues = default(string), string displayValues = default(string), int valueConfig = default(int), int displayInReportType = default(int), int action = default(int), bool enableTextValidation = default(bool), Guid textValidationRuleId = default(Guid), string orginalValue = default(string), string orginalDisplayValue = default(string), bool isNewMetadata = default(bool), string originalTargetUserDisplayName = default(string), string tenantId = default(string))
         {
-            this.TagName = tagName;
-            this.Description = description;
-            this.DefaultValue = defaultValue;
-            this.MetadataValues = metadataValues;
-            this.DisplayValues = displayValues;
-            this.OrginalValue = orginalValue;
-            this.OrginalDisplayValue = orginalDisplayValue;
-            this.OriginalTargetUserDisplayName = originalTargetUserDisplayName;
-            this.TenantId = tenantId;
             this.Id = id;
             this.TagName = tagName;
             this.Description = description;

@@ -41,7 +41,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="processId">processId.</param>
         public PolicyChangeLifecycleItem(bool isDefineChangeToPolicies = default(bool), string selectedPoliciesForChangePolicy = default(string), bool isEnabled = default(bool), bool isDefaultProcess = default(bool), Guid processId = default(Guid))
         {
-            this.SelectedPoliciesForChangePolicy = selectedPoliciesForChangePolicy;
             this.IsDefineChangeToPolicies = isDefineChangeToPolicies;
             this.SelectedPoliciesForChangePolicy = selectedPoliciesForChangePolicy;
             this.IsEnabled = isEnabled;

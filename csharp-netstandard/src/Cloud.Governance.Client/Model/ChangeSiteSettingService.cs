@@ -76,18 +76,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="categoryId">categoryId.</param>
         public ChangeSiteSettingService(bool enableChangeTitle = default(bool), bool enableChangeDescription = default(bool), ChangeMetadataActionSetting changeMetadataSettings = default(ChangeMetadataActionSetting), DpmServiceSetting deploymentManagerPlanSettings = default(DpmServiceSetting), bool enableChangeHubSite = default(bool), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
         {
-            this.ChangeMetadataSettings = changeMetadataSettings;
-            this.DeploymentManagerPlanSettings = deploymentManagerPlanSettings;
-            this.ScopeSettings = scopeSettings;
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
             this.EnableChangeTitle = enableChangeTitle;
             this.EnableChangeDescription = enableChangeDescription;
             this.ChangeMetadataSettings = changeMetadataSettings;

@@ -56,11 +56,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="checkType">checkType.</param>
         public PermissionObjectProperty(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string objectUrl = default(string), bool isInherit = default(bool), TreeNodeType inheritNodeType = default(TreeNodeType), string topInheritUrl = default(string), TreeNodeType checkType = default(TreeNodeType))
         {
-            this.SiteUrl = siteUrl;
-            this.WebServerRelativeUrl = webServerRelativeUrl;
-            this.ListTitle = listTitle;
-            this.ObjectUrl = objectUrl;
-            this.TopInheritUrl = topInheritUrl;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.WebId = webId;

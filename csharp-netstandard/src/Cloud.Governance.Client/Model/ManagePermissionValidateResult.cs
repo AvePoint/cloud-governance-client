@@ -47,9 +47,6 @@ namespace Cloud.Governance.Client.Model
         public ManagePermissionValidateResult(List<PermissionLevel> permissionLevels = default(List<PermissionLevel>), ExternalSharingOptions externalSharingOptions = default(ExternalSharingOptions), bool enableShareAnonymousLink = default(bool), ManagePermissionSPObject _object = default(ManagePermissionSPObject), string errorMessage = default(string))
         {
             this.PermissionLevels = permissionLevels;
-            this.Object = _object;
-            this.ErrorMessage = errorMessage;
-            this.PermissionLevels = permissionLevels;
             this.ExternalSharingOptions = externalSharingOptions;
             this.EnableShareAnonymousLink = enableShareAnonymousLink;
             this.Object = _object;

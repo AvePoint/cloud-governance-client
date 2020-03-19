@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="lable">lable.</param>
         public ApiTermInfo(Guid id = default(Guid), string name = default(string), string lable = default(string))
         {
-            this.Name = name;
-            this.Lable = lable;
             this.Id = id;
             this.Name = name;
             this.Lable = lable;

@@ -135,6 +135,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="customSiteTemplateListURL">customSiteTemplateListURL.</param>
         /// <param name="defaultPrimaryAdmin">defaultPrimaryAdmin.</param>
         /// <param name="defaultAdditionalAdmins">defaultAdditionalAdmins.</param>
+        /// <param name="defaultPrimaryAdminReal">defaultPrimaryAdminReal.</param>
+        /// <param name="defaultAdditionalAdminsReal">defaultAdditionalAdminsReal.</param>
         /// <param name="defaultPrimaryContact">defaultPrimaryContact.</param>
         /// <param name="defaultSecondaryContact">defaultSecondaryContact.</param>
         /// <param name="defaultSiteLanguage">defaultSiteLanguage.</param>
@@ -177,44 +179,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateSiteService(ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), string adminCenterUrl = default(string), List<IntModel> siteLanguages = default(List<IntModel>), List<RootSiteWithManagedPaths> rootSiteAndManagedPaths = default(List<RootSiteWithManagedPaths>), SiteUrlSetting siteUrlSetting = default(SiteUrlSetting), MultiGeoSerivceSetting multiGeoSetting = default(MultiGeoSerivceSetting), SiteTitleSetting siteTitleSetting = default(SiteTitleSetting), List<PolicyRef> policies = default(List<PolicyRef>), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), List<PolicyWithTemplates> policyIdsAndTemplates = default(List<PolicyWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), SiteLeasePeriodServiceSettings leasePeriodSettings = default(SiteLeasePeriodServiceSettings), List<IntModel> timeZones = default(List<IntModel>), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), List<string> classifications = default(List<string>), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool enabledCustomTemplate = default(bool), string customSiteTemplateListURL = default(string), ApiUser defaultPrimaryAdmin = default(ApiUser), List<ApiUser> defaultAdditionalAdmins = default(List<ApiUser>), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), int defaultSiteLanguage = default(int), string defaultRootSite = default(string), string defaultManagedPath = default(string), Guid defaultPolicy = default(Guid), string defaultTemplate = default(string), int defaultTimeZone = default(int), string defaultClassification = default(string), string defaultDesignType = default(string), AssignBy siteLanguageAssignBy = default(AssignBy), AssignBy templateAssignBy = default(AssignBy), AssignBy policyAssignBy = default(AssignBy), AssignBy permissionAssignBy = default(AssignBy), AssignBy rootSiteAndManagedPathAssignBy = default(AssignBy), AssignBy timeZoneAssignBy = default(AssignBy), AssignBy primaryAdminAssignBy = default(AssignBy), AssignBy additionalAdminAssignBy = default(AssignBy), AssignBy primaryContactAssignBy = default(AssignBy), AssignBy secondaryContactAssignBy = default(AssignBy), AssignBy designTypeAssignBy = default(AssignBy), AssignBy classificationAssignBy = default(AssignBy), AssignBy hubSiteAssignBy = default(AssignBy), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        public CreateSiteService(ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), string adminCenterUrl = default(string), List<IntModel> siteLanguages = default(List<IntModel>), List<RootSiteWithManagedPaths> rootSiteAndManagedPaths = default(List<RootSiteWithManagedPaths>), SiteUrlSetting siteUrlSetting = default(SiteUrlSetting), MultiGeoSerivceSetting multiGeoSetting = default(MultiGeoSerivceSetting), SiteTitleSetting siteTitleSetting = default(SiteTitleSetting), List<PolicyRef> policies = default(List<PolicyRef>), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), List<PolicyWithTemplates> policyIdsAndTemplates = default(List<PolicyWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), SiteLeasePeriodServiceSettings leasePeriodSettings = default(SiteLeasePeriodServiceSettings), List<IntModel> timeZones = default(List<IntModel>), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), List<string> classifications = default(List<string>), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool enabledCustomTemplate = default(bool), string customSiteTemplateListURL = default(string), ApiUser defaultPrimaryAdmin = default(ApiUser), List<ApiUser> defaultAdditionalAdmins = default(List<ApiUser>), ApiUser defaultPrimaryAdminReal = default(ApiUser), List<ApiUser> defaultAdditionalAdminsReal = default(List<ApiUser>), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), int defaultSiteLanguage = default(int), string defaultRootSite = default(string), string defaultManagedPath = default(string), Guid defaultPolicy = default(Guid), string defaultTemplate = default(string), int defaultTimeZone = default(int), string defaultClassification = default(string), string defaultDesignType = default(string), AssignBy siteLanguageAssignBy = default(AssignBy), AssignBy templateAssignBy = default(AssignBy), AssignBy policyAssignBy = default(AssignBy), AssignBy permissionAssignBy = default(AssignBy), AssignBy rootSiteAndManagedPathAssignBy = default(AssignBy), AssignBy timeZoneAssignBy = default(AssignBy), AssignBy primaryAdminAssignBy = default(AssignBy), AssignBy additionalAdminAssignBy = default(AssignBy), AssignBy primaryContactAssignBy = default(AssignBy), AssignBy secondaryContactAssignBy = default(AssignBy), AssignBy designTypeAssignBy = default(AssignBy), AssignBy classificationAssignBy = default(AssignBy), AssignBy hubSiteAssignBy = default(AssignBy), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
         {
-            this.ScopeSettings = scopeSettings;
-            this.AdminCenterUrl = adminCenterUrl;
-            this.SiteLanguages = siteLanguages;
-            this.RootSiteAndManagedPaths = rootSiteAndManagedPaths;
-            this.SiteUrlSetting = siteUrlSetting;
-            this.MultiGeoSetting = multiGeoSetting;
-            this.SiteTitleSetting = siteTitleSetting;
-            this.Policies = policies;
-            this.DeploymentManagerPlanSettings = deploymentManagerPlanSettings;
-            this.PolicyIdsAndTemplates = policyIdsAndTemplates;
-            this.TemplateIdsAndPermissions = templateIdsAndPermissions;
-            this.PermissionSettings = permissionSettings;
-            this.LeasePeriodSettings = leasePeriodSettings;
-            this.TimeZones = timeZones;
-            this.YammerGroupSettings = yammerGroupSettings;
-            this.Classifications = classifications;
-            this.HubSiteSettings = hubSiteSettings;
-            this.CustomSiteTemplateListURL = customSiteTemplateListURL;
-            this.DefaultPrimaryAdmin = defaultPrimaryAdmin;
-            this.DefaultAdditionalAdmins = defaultAdditionalAdmins;
-            this.DefaultPrimaryContact = defaultPrimaryContact;
-            this.DefaultSecondaryContact = defaultSecondaryContact;
-            this.DefaultRootSite = defaultRootSite;
-            this.DefaultManagedPath = defaultManagedPath;
-            this.DefaultTemplate = defaultTemplate;
-            this.DefaultClassification = defaultClassification;
-            this.DefaultDesignType = defaultDesignType;
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
             this.ScopeSettings = scopeSettings;
             this.AdminCenterUrl = adminCenterUrl;
             this.SiteLanguages = siteLanguages;
@@ -236,6 +202,8 @@ namespace Cloud.Governance.Client.Model
             this.CustomSiteTemplateListURL = customSiteTemplateListURL;
             this.DefaultPrimaryAdmin = defaultPrimaryAdmin;
             this.DefaultAdditionalAdmins = defaultAdditionalAdmins;
+            this.DefaultPrimaryAdminReal = defaultPrimaryAdminReal;
+            this.DefaultAdditionalAdminsReal = defaultAdditionalAdminsReal;
             this.DefaultPrimaryContact = defaultPrimaryContact;
             this.DefaultSecondaryContact = defaultSecondaryContact;
             this.DefaultSiteLanguage = defaultSiteLanguage;
@@ -405,6 +373,18 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name="defaultAdditionalAdmins", EmitDefaultValue=true)]
         public List<ApiUser> DefaultAdditionalAdmins { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DefaultPrimaryAdminReal
+        /// </summary>
+        [DataMember(Name="defaultPrimaryAdminReal", EmitDefaultValue=true)]
+        public ApiUser DefaultPrimaryAdminReal { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DefaultAdditionalAdminsReal
+        /// </summary>
+        [DataMember(Name="defaultAdditionalAdminsReal", EmitDefaultValue=true)]
+        public List<ApiUser> DefaultAdditionalAdminsReal { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultPrimaryContact
@@ -591,6 +571,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  CustomSiteTemplateListURL: ").Append(CustomSiteTemplateListURL).Append("\n");
             sb.Append("  DefaultPrimaryAdmin: ").Append(DefaultPrimaryAdmin).Append("\n");
             sb.Append("  DefaultAdditionalAdmins: ").Append(DefaultAdditionalAdmins).Append("\n");
+            sb.Append("  DefaultPrimaryAdminReal: ").Append(DefaultPrimaryAdminReal).Append("\n");
+            sb.Append("  DefaultAdditionalAdminsReal: ").Append(DefaultAdditionalAdminsReal).Append("\n");
             sb.Append("  DefaultPrimaryContact: ").Append(DefaultPrimaryContact).Append("\n");
             sb.Append("  DefaultSecondaryContact: ").Append(DefaultSecondaryContact).Append("\n");
             sb.Append("  DefaultSiteLanguage: ").Append(DefaultSiteLanguage).Append("\n");
@@ -778,6 +760,17 @@ namespace Cloud.Governance.Client.Model
                     this.DefaultAdditionalAdmins != null &&
                     input.DefaultAdditionalAdmins != null &&
                     this.DefaultAdditionalAdmins.SequenceEqual(input.DefaultAdditionalAdmins)
+                ) && 
+                (
+                    this.DefaultPrimaryAdminReal == input.DefaultPrimaryAdminReal ||
+                    (this.DefaultPrimaryAdminReal != null &&
+                    this.DefaultPrimaryAdminReal.Equals(input.DefaultPrimaryAdminReal))
+                ) && 
+                (
+                    this.DefaultAdditionalAdminsReal == input.DefaultAdditionalAdminsReal ||
+                    this.DefaultAdditionalAdminsReal != null &&
+                    input.DefaultAdditionalAdminsReal != null &&
+                    this.DefaultAdditionalAdminsReal.SequenceEqual(input.DefaultAdditionalAdminsReal)
                 ) && 
                 (
                     this.DefaultPrimaryContact == input.DefaultPrimaryContact ||
@@ -1020,6 +1013,10 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.DefaultPrimaryAdmin.GetHashCode();
                 if (this.DefaultAdditionalAdmins != null)
                     hashCode = hashCode * 59 + this.DefaultAdditionalAdmins.GetHashCode();
+                if (this.DefaultPrimaryAdminReal != null)
+                    hashCode = hashCode * 59 + this.DefaultPrimaryAdminReal.GetHashCode();
+                if (this.DefaultAdditionalAdminsReal != null)
+                    hashCode = hashCode * 59 + this.DefaultAdditionalAdminsReal.GetHashCode();
                 if (this.DefaultPrimaryContact != null)
                     hashCode = hashCode * 59 + this.DefaultPrimaryContact.GetHashCode();
                 if (this.DefaultSecondaryContact != null)

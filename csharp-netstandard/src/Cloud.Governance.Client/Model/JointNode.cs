@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.Next = next;
             this.Answer = answer;
-            this.Next = next;
-            this.Answer = answer;
         }
         
         /// <summary>

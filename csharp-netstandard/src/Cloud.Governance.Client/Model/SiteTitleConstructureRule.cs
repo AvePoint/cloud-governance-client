@@ -43,7 +43,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="value">value.</param>
         public SiteTitleConstructureRule(SiteConstructTitleType type = default(SiteConstructTitleType), string value = default(string))
         {
-            this.Value = value;
             this.Type = type;
             this.Value = value;
         }

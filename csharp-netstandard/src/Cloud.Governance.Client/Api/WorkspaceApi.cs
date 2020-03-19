@@ -2337,10 +2337,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ConfirmGorupWithHttpInfo (Guid id, ConfirmInformation confirmInformation = default(ConfirmInformation))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmGorup");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2360,8 +2356,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = confirmInformation;
 
             // authentication (ClientId) required
@@ -2414,10 +2409,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ConfirmGorupAsyncWithHttpInfo (Guid id, ConfirmInformation confirmInformation = default(ConfirmInformation))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmGorup");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2438,8 +2429,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = confirmInformation;
 
             // authentication (ClientId) required
@@ -2490,10 +2480,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ConfirmGorupWithUnknowPrimaryContactWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmGorupWithUnknowPrimaryContact");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2509,8 +2495,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -2560,10 +2545,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ConfirmGorupWithUnknowPrimaryContactAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmGorupWithUnknowPrimaryContact");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2580,8 +2561,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -2633,10 +2613,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ConfirmGroupWithKnowningPrimaryContactWithHttpInfo (Guid id, UserParam userParam = default(UserParam))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmGroupWithKnowningPrimaryContact");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2656,8 +2632,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = userParam;
 
             // authentication (ClientId) required
@@ -2710,10 +2685,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ConfirmGroupWithKnowningPrimaryContactAsyncWithHttpInfo (Guid id, UserParam userParam = default(UserParam))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmGroupWithKnowningPrimaryContact");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2734,8 +2705,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = userParam;
 
             // authentication (ClientId) required
@@ -2788,10 +2758,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ConfirmSiteWithHttpInfo (Guid id, ConfirmInformation confirmInformation = default(ConfirmInformation))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmSite");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2811,8 +2777,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = confirmInformation;
 
             // authentication (ClientId) required
@@ -2865,10 +2830,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ConfirmSiteAsyncWithHttpInfo (Guid id, ConfirmInformation confirmInformation = default(ConfirmInformation))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmSite");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2889,8 +2850,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = confirmInformation;
 
             // authentication (ClientId) required
@@ -2943,10 +2903,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ConfirmSiteWitKnowingPrimaryContactWithHttpInfo (Guid id, UserParam userParam = default(UserParam))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmSiteWitKnowingPrimaryContact");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2966,8 +2922,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = userParam;
 
             // authentication (ClientId) required
@@ -3020,10 +2975,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ConfirmSiteWitKnowingPrimaryContactAsyncWithHttpInfo (Guid id, UserParam userParam = default(UserParam))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmSiteWitKnowingPrimaryContact");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3044,8 +2995,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = userParam;
 
             // authentication (ClientId) required
@@ -3096,10 +3046,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ConfirmSiteWithUnknowPrimaryContactWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmSiteWithUnknowPrimaryContact");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3115,8 +3061,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3166,10 +3111,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ConfirmSiteWithUnknowPrimaryContactAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ConfirmSiteWithUnknowPrimaryContact");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3186,8 +3127,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3238,10 +3178,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of AutoImportProfileRef</returns>
         public Cloud.Governance.Client.Client.ApiResponse< AutoImportProfileRef > GetGroupAutoImportProfileWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupAutoImportProfile");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3260,8 +3196,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3312,10 +3247,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (AutoImportProfileRef)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<AutoImportProfileRef>> GetGroupAutoImportProfileAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupAutoImportProfile");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3335,8 +3266,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3387,10 +3317,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ObjectContactModel</returns>
         public Cloud.Governance.Client.Client.ApiResponse< ObjectContactModel > GetGroupContactsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupContacts");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3409,8 +3335,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3461,10 +3386,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ObjectContactModel)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ObjectContactModel>> GetGroupContactsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupContacts");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3484,8 +3405,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3536,10 +3456,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;MembershipRenewalItemModel&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<MembershipRenewalItemModel> > GetGroupMembershipRenewalItemsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupMembershipRenewalItems");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3558,8 +3474,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3610,10 +3525,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;MembershipRenewalItemModel&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<MembershipRenewalItemModel>>> GetGroupMembershipRenewalItemsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupMembershipRenewalItems");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3633,8 +3544,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3685,10 +3595,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;CustomMetadata&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<CustomMetadata> > GetGroupMetadataRenewalItemsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupMetadataRenewalItems");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3707,8 +3613,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3759,10 +3664,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;CustomMetadata&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<CustomMetadata>>> GetGroupMetadataRenewalItemsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupMetadataRenewalItems");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3782,8 +3683,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -3842,10 +3742,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of DistinctPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< DistinctPageResult > GetGroupPermissionRenewalFiltersWithHttpInfo (Guid id, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalFilters");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3864,8 +3760,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -3964,10 +3859,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (DistinctPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<DistinctPageResult>> GetGroupPermissionRenewalFiltersAsyncWithHttpInfo (Guid id, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalFilters");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3987,8 +3878,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -4089,14 +3979,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of DistinctPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< DistinctPageResult > GetGroupPermissionRenewalFiltersForSPGroupWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalFiltersForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetGroupPermissionRenewalFiltersForSPGroup");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -4115,10 +3997,8 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -4219,14 +4099,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (DistinctPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<DistinctPageResult>> GetGroupPermissionRenewalFiltersForSPGroupAsyncWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalFiltersForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetGroupPermissionRenewalFiltersForSPGroup");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4246,10 +4118,8 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -4350,10 +4220,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of PermissionActionItemPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< PermissionActionItemPageResult > GetGroupPermissionRenewalItemsWithHttpInfo (Guid id, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalItems");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -4372,8 +4238,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -4484,10 +4349,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (PermissionActionItemPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<PermissionActionItemPageResult>> GetGroupPermissionRenewalItemsAsyncWithHttpInfo (Guid id, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalItems");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4507,8 +4368,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -4621,14 +4481,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of PermissionActionItemPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< PermissionActionItemPageResult > GetGroupPermissionRenewalItemsForSPGroupWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalItemsForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetGroupPermissionRenewalItemsForSPGroup");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -4647,10 +4499,8 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -4763,14 +4613,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (PermissionActionItemPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<PermissionActionItemPageResult>> GetGroupPermissionRenewalItemsForSPGroupAsyncWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalItemsForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetGroupPermissionRenewalItemsForSPGroup");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4790,10 +4632,8 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -4894,10 +4734,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;PermissionLevel&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<PermissionLevel> > GetGroupPermissionRenewalPermissionLevelsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalPermissionLevels");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -4916,8 +4752,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -4968,10 +4803,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;PermissionLevel&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<PermissionLevel>>> GetGroupPermissionRenewalPermissionLevelsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupPermissionRenewalPermissionLevels");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4991,8 +4822,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5043,10 +4873,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of GroupRenewProfileRef</returns>
         public Cloud.Governance.Client.Client.ApiResponse< GroupRenewProfileRef > GetGroupRenewalProfileSettingsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupRenewalProfileSettings");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -5065,8 +4891,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5117,10 +4942,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (GroupRenewProfileRef)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<GroupRenewProfileRef>> GetGroupRenewalProfileSettingsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetGroupRenewalProfileSettings");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5140,8 +4961,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5349,10 +5169,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ApiMyGroup</returns>
         public Cloud.Governance.Client.Client.ApiResponse< ApiMyGroup > GetMyGroupInformationWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetMyGroupInformation");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -5371,8 +5187,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5423,10 +5238,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ApiMyGroup)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ApiMyGroup>> GetMyGroupInformationAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetMyGroupInformation");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5446,8 +5257,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5498,10 +5308,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of MySite</returns>
         public Cloud.Governance.Client.Client.ApiResponse< MySite > GetMySiteInformationWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetMySiteInformation");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -5520,8 +5326,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5572,10 +5377,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (MySite)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<MySite>> GetMySiteInformationAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetMySiteInformation");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5595,8 +5396,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5647,10 +5447,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of AutoImportProfileRef</returns>
         public Cloud.Governance.Client.Client.ApiResponse< AutoImportProfileRef > GetSiteAutoImportProfileWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteAutoImportProfile");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -5669,8 +5465,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5721,10 +5516,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (AutoImportProfileRef)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<AutoImportProfileRef>> GetSiteAutoImportProfileAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteAutoImportProfile");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5744,8 +5535,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5796,10 +5586,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ObjectContactModel</returns>
         public Cloud.Governance.Client.Client.ApiResponse< ObjectContactModel > GetSiteContactsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteContacts");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -5818,8 +5604,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5870,10 +5655,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ObjectContactModel)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ObjectContactModel>> GetSiteContactsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteContacts");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5893,8 +5674,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -5945,6 +5725,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;CustomMetadata&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<CustomMetadata> > GetSiteMetadataWithHttpInfo (string url)
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling WorkspaceApi->GetSiteMetadata");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -6023,6 +5807,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;CustomMetadata&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<CustomMetadata>>> GetSiteMetadataAsyncWithHttpInfo (string url)
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling WorkspaceApi->GetSiteMetadata");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -6102,10 +5890,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;CustomMetadata&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<CustomMetadata> > GetSiteMetadataRenewalItemsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteMetadataRenewalItems");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -6124,8 +5908,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -6176,10 +5959,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;CustomMetadata&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<CustomMetadata>>> GetSiteMetadataRenewalItemsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteMetadataRenewalItems");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -6199,8 +5978,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -6259,10 +6037,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of DistinctPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< DistinctPageResult > GetSitePermissionRenewalFiltersWithHttpInfo (Guid id, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalFilters");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -6281,8 +6055,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -6381,10 +6154,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (DistinctPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<DistinctPageResult>> GetSitePermissionRenewalFiltersAsyncWithHttpInfo (Guid id, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalFilters");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -6404,8 +6173,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -6506,14 +6274,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of DistinctPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< DistinctPageResult > GetSitePermissionRenewalFiltersForSPGroupWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalFiltersForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetSitePermissionRenewalFiltersForSPGroup");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -6532,10 +6292,8 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -6636,14 +6394,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (DistinctPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<DistinctPageResult>> GetSitePermissionRenewalFiltersForSPGroupAsyncWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string distinct = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalFiltersForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetSitePermissionRenewalFiltersForSPGroup");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -6663,10 +6413,8 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -6767,10 +6515,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of PermissionActionItemPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< PermissionActionItemPageResult > GetSitePermissionRenewalItemsWithHttpInfo (Guid id, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalItems");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -6789,8 +6533,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -6901,10 +6644,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (PermissionActionItemPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<PermissionActionItemPageResult>> GetSitePermissionRenewalItemsAsyncWithHttpInfo (Guid id, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalItems");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -6924,8 +6663,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -7038,14 +6776,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of PermissionActionItemPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< PermissionActionItemPageResult > GetSitePermissionRenewalItemsForSPGroupWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalItemsForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetSitePermissionRenewalItemsForSPGroup");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -7064,10 +6794,8 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -7180,14 +6908,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (PermissionActionItemPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<PermissionActionItemPageResult>> GetSitePermissionRenewalItemsForSPGroupAsyncWithHttpInfo (Guid id, Guid groupid, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), int? skip = default(int?))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalItemsForSPGroup");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling WorkspaceApi->GetSitePermissionRenewalItemsForSPGroup");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -7207,10 +6927,8 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
             if (filter != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter))
@@ -7311,10 +7029,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;PermissionLevel&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<PermissionLevel> > GetSitePermissionRenewalPermissionLevelsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalPermissionLevels");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -7333,8 +7047,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -7385,10 +7098,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;PermissionLevel&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<PermissionLevel>>> GetSitePermissionRenewalPermissionLevelsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSitePermissionRenewalPermissionLevels");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -7408,8 +7117,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -7460,10 +7168,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of RenewProfileRef</returns>
         public Cloud.Governance.Client.Client.ApiResponse< RenewProfileRef > GetSiteRenewalProfileSettingsWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteRenewalProfileSettings");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -7482,8 +7186,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -7534,10 +7237,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (RenewProfileRef)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<RenewProfileRef>> GetSiteRenewalProfileSettingsAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->GetSiteRenewalProfileSettings");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -7557,8 +7256,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -8249,10 +7947,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ReassignGroupRenewalTaskWithHttpInfo (Guid id, string userid = default(string))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ReassignGroupRenewalTask");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -8268,8 +7962,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (userid != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "userid", userid))
@@ -8331,10 +8024,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ReassignGroupRenewalTaskAsyncWithHttpInfo (Guid id, string userid = default(string))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ReassignGroupRenewalTask");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -8351,8 +8040,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (userid != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "userid", userid))
@@ -8414,10 +8102,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ReassignSiteRenewalTaskWithHttpInfo (Guid id, string userid = default(string))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ReassignSiteRenewalTask");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -8433,8 +8117,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (userid != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "userid", userid))
@@ -8496,10 +8179,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ReassignSiteRenewalTaskAsyncWithHttpInfo (Guid id, string userid = default(string))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ReassignSiteRenewalTask");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -8516,8 +8195,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (userid != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "userid", userid))
@@ -8577,10 +8255,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> RejectGroupRenewalTaskWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->RejectGroupRenewalTask");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -8596,8 +8270,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -8647,10 +8320,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> RejectGroupRenewalTaskAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->RejectGroupRenewalTask");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -8667,8 +8336,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -8718,10 +8386,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> RejectSiteRenewalTaskWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->RejectSiteRenewalTask");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -8737,8 +8401,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -8788,10 +8451,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> RejectSiteRenewalTaskAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->RejectSiteRenewalTask");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -8808,8 +8467,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -8859,10 +8517,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ResetChangeForSiteRenewalWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ResetChangeForSiteRenewal");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -8878,8 +8532,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -8929,10 +8582,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ResetChangeForSiteRenewalAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ResetChangeForSiteRenewal");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -8949,8 +8598,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -9000,10 +8648,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ResetChangesForGroupRenewalWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ResetChangesForGroupRenewal");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -9019,8 +8663,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -9070,10 +8713,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ResetChangesForGroupRenewalAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->ResetChangesForGroupRenewal");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -9090,8 +8729,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -9143,9 +8781,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> SaveGroupPermissionRenewalItemsWithHttpInfo (Guid id, List<PermissionActionItem> permissionActionItem)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SaveGroupPermissionRenewalItems");
+            // verify the required parameter 'permissionActionItem' is set
+            if (permissionActionItem == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'permissionActionItem' when calling WorkspaceApi->SaveGroupPermissionRenewalItems");
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -9166,8 +8804,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = permissionActionItem;
 
             // authentication (ClientId) required
@@ -9220,9 +8857,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SaveGroupPermissionRenewalItemsAsyncWithHttpInfo (Guid id, List<PermissionActionItem> permissionActionItem)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SaveGroupPermissionRenewalItems");
+            // verify the required parameter 'permissionActionItem' is set
+            if (permissionActionItem == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'permissionActionItem' when calling WorkspaceApi->SaveGroupPermissionRenewalItems");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -9244,8 +8881,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = permissionActionItem;
 
             // authentication (ClientId) required
@@ -9298,9 +8934,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> SaveSitePermissionRenewalItemsWithHttpInfo (Guid id, List<PermissionActionItem> permissionActionItem)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SaveSitePermissionRenewalItems");
+            // verify the required parameter 'permissionActionItem' is set
+            if (permissionActionItem == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'permissionActionItem' when calling WorkspaceApi->SaveSitePermissionRenewalItems");
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -9321,8 +8957,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = permissionActionItem;
 
             // authentication (ClientId) required
@@ -9375,9 +9010,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SaveSitePermissionRenewalItemsAsyncWithHttpInfo (Guid id, List<PermissionActionItem> permissionActionItem)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SaveSitePermissionRenewalItems");
+            // verify the required parameter 'permissionActionItem' is set
+            if (permissionActionItem == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'permissionActionItem' when calling WorkspaceApi->SaveSitePermissionRenewalItems");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -9399,8 +9034,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = permissionActionItem;
 
             // authentication (ClientId) required
@@ -9454,10 +9088,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of bool</returns>
         public Cloud.Governance.Client.Client.ApiResponse< bool > SubmitGroupRenewalTaskWithHttpInfo (Guid id, RenewModel renewModel = default(RenewModel))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitGroupRenewalTask");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -9480,8 +9110,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = renewModel;
 
             // authentication (ClientId) required
@@ -9535,10 +9164,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (bool)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<bool>> SubmitGroupRenewalTaskAsyncWithHttpInfo (Guid id, RenewModel renewModel = default(RenewModel))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitGroupRenewalTask");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -9562,8 +9187,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = renewModel;
 
             // authentication (ClientId) required
@@ -9614,10 +9238,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitGroupRenewalTaskForArchivingWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitGroupRenewalTaskForArchiving");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -9633,8 +9253,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -9684,10 +9303,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitGroupRenewalTaskForArchivingAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitGroupRenewalTaskForArchiving");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -9704,8 +9319,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -9755,10 +9369,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitGroupRenewalTaskForDeletingWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitGroupRenewalTaskForDeleting");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -9774,8 +9384,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -9825,10 +9434,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitGroupRenewalTaskForDeletingAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitGroupRenewalTaskForDeleting");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -9845,8 +9450,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -9899,10 +9503,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of bool</returns>
         public Cloud.Governance.Client.Client.ApiResponse< bool > SubmitSiteRenewalTaskWithHttpInfo (Guid id, RenewModel renewModel = default(RenewModel))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitSiteRenewalTask");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -9925,8 +9525,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = renewModel;
 
             // authentication (ClientId) required
@@ -9980,10 +9579,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (bool)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<bool>> SubmitSiteRenewalTaskAsyncWithHttpInfo (Guid id, RenewModel renewModel = default(RenewModel))
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitSiteRenewalTask");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -10007,8 +9602,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.Data = renewModel;
 
             // authentication (ClientId) required
@@ -10059,10 +9653,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitSiteRenewalTaskForDeletingWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitSiteRenewalTaskForDeleting");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -10078,8 +9668,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -10129,10 +9718,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitSiteRenewalTaskForDeletingAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitSiteRenewalTaskForDeleting");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -10149,8 +9734,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -10200,10 +9784,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitSiteRenewalTaskWithArchivingWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitSiteRenewalTaskWithArchiving");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -10219,8 +9799,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -10270,10 +9849,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitSiteRenewalTaskWithArchivingAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling WorkspaceApi->SubmitSiteRenewalTaskWithArchiving");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -10290,8 +9865,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))

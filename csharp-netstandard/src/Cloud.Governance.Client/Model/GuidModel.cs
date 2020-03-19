@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="description">description.</param>
         public GuidModel(Guid id = default(Guid), string name = default(string), string description = default(string))
         {
-            this.Name = name;
-            this.Description = description;
             this.Id = id;
             this.Name = name;
             this.Description = description;

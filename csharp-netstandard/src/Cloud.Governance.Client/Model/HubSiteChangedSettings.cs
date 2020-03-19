@@ -45,7 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="associatedHubSiteTitle">associatedHubSiteTitle.</param>
         public HubSiteChangedSettings(bool isModernSite = default(bool), ChangeHubsiteActionType action = default(ChangeHubsiteActionType), Guid associatedHubSiteId = default(Guid), string associatedHubSiteTitle = default(string))
         {
-            this.AssociatedHubSiteTitle = associatedHubSiteTitle;
             this.IsModernSite = isModernSite;
             this.Action = action;
             this.AssociatedHubSiteId = associatedHubSiteId;

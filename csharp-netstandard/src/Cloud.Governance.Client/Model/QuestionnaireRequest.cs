@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="services">services.</param>
         public QuestionnaireRequest(Guid id = default(Guid), List<QuestionRequest> questions = default(List<QuestionRequest>), List<Guid> services = default(List<Guid>))
         {
-            this.Questions = questions;
-            this.Services = services;
             this.Id = id;
             this.Questions = questions;
             this.Services = services;

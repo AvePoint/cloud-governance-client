@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.Name = name;
             this.Type = type;
             this.Value = value;
-            this.Name = name;
-            this.Type = type;
-            this.Value = value;
         }
         
         /// <summary>

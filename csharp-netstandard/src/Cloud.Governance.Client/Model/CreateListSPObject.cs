@@ -41,8 +41,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.ParentUrl = parentUrl;
             this.SiteUrl = siteUrl;
-            this.ParentUrl = parentUrl;
-            this.SiteUrl = siteUrl;
             this.SiteId = siteId;
         }
         

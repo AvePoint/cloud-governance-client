@@ -58,12 +58,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isTemporaryGroup">isTemporaryGroup.</param>
         public SPGroup(int id = default(int), string name = default(string), string description = default(string), SPPrincipal owner = default(SPPrincipal), List<ApiUser> members = default(List<ApiUser>), List<string> permissionLevels = default(List<string>), SPGroupViewOption spGroupViewType = default(SPGroupViewOption), SPGroupEditOption spGroupEditType = default(SPGroupEditOption), bool isAllowJoinOrLeaveRequest = default(bool), bool autoAcceptRequestToJoinLeave = default(bool), string requestToJoinLeaveEmailSetting = default(string), bool isTemporaryGroup = default(bool))
         {
-            this.Name = name;
-            this.Description = description;
-            this.Owner = owner;
-            this.Members = members;
-            this.PermissionLevels = permissionLevels;
-            this.RequestToJoinLeaveEmailSetting = requestToJoinLeaveEmailSetting;
             this.Id = id;
             this.Name = name;
             this.Description = description;

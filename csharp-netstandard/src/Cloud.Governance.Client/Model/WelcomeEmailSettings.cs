@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="personalMessage">personalMessage.</param>
         public WelcomeEmailSettings(bool enabled = default(bool), string subject = default(string), string personalMessage = default(string))
         {
-            this.Subject = subject;
-            this.PersonalMessage = personalMessage;
             this.Enabled = enabled;
             this.Subject = subject;
             this.PersonalMessage = personalMessage;

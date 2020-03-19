@@ -63,9 +63,6 @@ namespace Cloud.Governance.Client.Model
         public YammerGroupServiceSettings(string networkId = default(string), bool allowCreate = default(bool), bool allowReuseExisting = default(bool), bool enabled = default(bool), AssignBy createNewGroupAssignBy = default(AssignBy), string nameOrId = default(string), string description = default(string), YammerGroupType type = default(YammerGroupType), YammerGroupJoinType joinType = default(YammerGroupJoinType), bool isListInDirectory = default(bool), bool isGroupAlreadyExisted = default(bool))
         {
             this.NetworkId = networkId;
-            this.NameOrId = nameOrId;
-            this.Description = description;
-            this.NetworkId = networkId;
             this.AllowCreate = allowCreate;
             this.AllowReuseExisting = allowReuseExisting;
             this.Enabled = enabled;

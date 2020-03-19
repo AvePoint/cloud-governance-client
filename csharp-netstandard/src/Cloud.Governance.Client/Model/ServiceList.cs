@@ -50,11 +50,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="questionnaireId">questionnaireId.</param>
         public ServiceList(Guid id = default(Guid), string name = default(string), string description = default(string), string category = default(string), string contact = default(string), int languageId = default(int), ServiceType type = default(ServiceType), bool isQuestionnaire = default(bool), Guid? questionnaireId = default(Guid?))
         {
-            this.Name = name;
-            this.Description = description;
-            this.Category = category;
-            this.Contact = contact;
-            this.QuestionnaireId = questionnaireId;
             this.Id = id;
             this.Name = name;
             this.Description = description;

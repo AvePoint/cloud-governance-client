@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableArchival">enableArchival.</param>
         public RenewProfileRef(bool isLastStage = default(bool), string confirmMessage = default(string), string objectTitle = default(string), bool enableContactRenewal = default(bool), bool enablePermissionRenewal = default(bool), bool enableMetadataRenewal = default(bool), bool enableReassign = default(bool), bool enableDeletion = default(bool), bool enableArchival = default(bool))
         {
-            this.ConfirmMessage = confirmMessage;
-            this.ObjectTitle = objectTitle;
             this.IsLastStage = isLastStage;
             this.ConfirmMessage = confirmMessage;
             this.ObjectTitle = objectTitle;

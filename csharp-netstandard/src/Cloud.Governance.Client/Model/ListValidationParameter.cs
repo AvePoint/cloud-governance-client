@@ -45,9 +45,6 @@ namespace Cloud.Governance.Client.Model
             this.ListUrl = listUrl;
             this.ParentUrl = parentUrl;
             this.ListTitle = listTitle;
-            this.ListUrl = listUrl;
-            this.ParentUrl = parentUrl;
-            this.ListTitle = listTitle;
             this.IsDocumentLibrary = isDocumentLibrary;
             this.IsEditTask = isEditTask;
             this.IsFromQuestionnaire = isFromQuestionnaire;

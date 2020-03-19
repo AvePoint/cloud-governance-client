@@ -44,10 +44,6 @@ namespace Cloud.Governance.Client.Model
             this.ChangePolicySetting = changePolicySetting;
             this.ChangeQuotaSetting = changeQuotaSetting;
             this.ErrorMessage = errorMessage;
-            this.ExtendSetting = extendSetting;
-            this.ChangePolicySetting = changePolicySetting;
-            this.ChangeQuotaSetting = changeQuotaSetting;
-            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>

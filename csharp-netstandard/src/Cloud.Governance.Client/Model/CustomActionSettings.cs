@@ -46,11 +46,6 @@ namespace Cloud.Governance.Client.Model
             this.PostExecution = postExecution;
             this.BeforeSubmission = beforeSubmission;
             this.WhenErrorTaskGenerated = whenErrorTaskGenerated;
-            this.BeforeApprovalProcessExecution = beforeApprovalProcessExecution;
-            this.AfterApprovalProcessExecution = afterApprovalProcessExecution;
-            this.PostExecution = postExecution;
-            this.BeforeSubmission = beforeSubmission;
-            this.WhenErrorTaskGenerated = whenErrorTaskGenerated;
         }
         
         /// <summary>

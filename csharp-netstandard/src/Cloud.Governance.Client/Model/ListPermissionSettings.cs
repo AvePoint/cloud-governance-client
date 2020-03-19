@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupPermissions">groupPermissions.</param>
         public ListPermissionSettings(bool stopInheritingPermissions = default(bool), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>))
         {
-            this.UserPermissions = userPermissions;
-            this.GroupPermissions = groupPermissions;
             this.StopInheritingPermissions = stopInheritingPermissions;
             this.UserPermissions = userPermissions;
             this.GroupPermissions = groupPermissions;

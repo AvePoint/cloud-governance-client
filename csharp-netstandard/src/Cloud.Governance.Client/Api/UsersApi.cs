@@ -798,6 +798,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of bool</returns>
         public Cloud.Governance.Client.Client.ApiResponse< bool > CheckUserExistsInAOSWithHttpInfo (string name)
         {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling UsersApi->CheckUserExistsInAOS");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -876,6 +880,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (bool)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<bool>> CheckUserExistsInAOSAsyncWithHttpInfo (string name)
         {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling UsersApi->CheckUserExistsInAOS");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -957,6 +965,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of StringModel</returns>
         public Cloud.Governance.Client.Client.ApiResponse< StringModel > GetAzureAdUserPropertyValueWithHttpInfo (string username, string propertyName)
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetAzureAdUserPropertyValue");
+
+            // verify the required parameter 'propertyName' is set
+            if (propertyName == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'propertyName' when calling UsersApi->GetAzureAdUserPropertyValue");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1039,6 +1055,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (StringModel)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<StringModel>> GetAzureAdUserPropertyValueAsyncWithHttpInfo (string username, string propertyName)
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetAzureAdUserPropertyValue");
+
+            // verify the required parameter 'propertyName' is set
+            if (propertyName == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'propertyName' when calling UsersApi->GetAzureAdUserPropertyValue");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1122,6 +1146,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of StringModel</returns>
         public Cloud.Governance.Client.Client.ApiResponse< StringModel > GetUpsUserPropertyValueWithHttpInfo (string username, string propertyName)
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetUpsUserPropertyValue");
+
+            // verify the required parameter 'propertyName' is set
+            if (propertyName == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'propertyName' when calling UsersApi->GetUpsUserPropertyValue");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1204,6 +1236,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (StringModel)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<StringModel>> GetUpsUserPropertyValueAsyncWithHttpInfo (string username, string propertyName)
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetUpsUserPropertyValue");
+
+            // verify the required parameter 'propertyName' is set
+            if (propertyName == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'propertyName' when calling UsersApi->GetUpsUserPropertyValue");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1409,6 +1449,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> GetUserBasicPropertyValueWithHttpInfo (string name)
         {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling UsersApi->GetUserBasicPropertyValue");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1475,6 +1519,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> GetUserBasicPropertyValueAsyncWithHttpInfo (string name)
         {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling UsersApi->GetUserBasicPropertyValue");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1544,6 +1592,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> GetUserPhotoWithHttpInfo (string username, string size = default(string))
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetUserPhoto");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1622,6 +1674,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> GetUserPhotoAsyncWithHttpInfo (string username, string size = default(string))
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetUserPhoto");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1700,6 +1756,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of UserRelationShip</returns>
         public Cloud.Governance.Client.Client.ApiResponse< UserRelationShip > GetUserRelationshipWithHttpInfo (string username)
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetUserRelationship");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1770,6 +1830,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (UserRelationShip)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<UserRelationShip>> GetUserRelationshipAsyncWithHttpInfo (string username)
         {
+            // verify the required parameter 'username' is set
+            if (username == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'username' when calling UsersApi->GetUserRelationship");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2020,6 +2084,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<ApiUser> > ResolveUsersWithHttpInfo (string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->ResolveUsers");
+
             // verify the required parameter 'userType' is set
             if (userType == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'userType' when calling UsersApi->ResolveUsers");
@@ -2158,6 +2226,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> ResolveUsersAsyncWithHttpInfo (string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->ResolveUsers");
+
             // verify the required parameter 'userType' is set
             if (userType == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'userType' when calling UsersApi->ResolveUsers");
@@ -2297,6 +2369,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;SharingEnabledUser&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<SharingEnabledUser> > ResolveUsersWithExternalSharingOptionWithHttpInfo (string keyword, string siteUrlOrTenantId, ExternalSharingOptions externalSharingOption, UserType userType, UserSource userSource)
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->ResolveUsersWithExternalSharingOption");
+
+            // verify the required parameter 'siteUrlOrTenantId' is set
+            if (siteUrlOrTenantId == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrlOrTenantId' when calling UsersApi->ResolveUsersWithExternalSharingOption");
+
             // verify the required parameter 'externalSharingOption' is set
             if (externalSharingOption == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'externalSharingOption' when calling UsersApi->ResolveUsersWithExternalSharingOption");
@@ -2427,6 +2507,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;SharingEnabledUser&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<SharingEnabledUser>>> ResolveUsersWithExternalSharingOptionAsyncWithHttpInfo (string keyword, string siteUrlOrTenantId, ExternalSharingOptions externalSharingOption, UserType userType, UserSource userSource)
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->ResolveUsersWithExternalSharingOption");
+
+            // verify the required parameter 'siteUrlOrTenantId' is set
+            if (siteUrlOrTenantId == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrlOrTenantId' when calling UsersApi->ResolveUsersWithExternalSharingOption");
+
             // verify the required parameter 'externalSharingOption' is set
             if (externalSharingOption == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'externalSharingOption' when calling UsersApi->ResolveUsersWithExternalSharingOption");
@@ -2558,6 +2646,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<ApiUser> > SearchUsersWithHttpInfo (string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->SearchUsers");
+
             // verify the required parameter 'userType' is set
             if (userType == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'userType' when calling UsersApi->SearchUsers");
@@ -2696,6 +2788,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> SearchUsersAsyncWithHttpInfo (string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->SearchUsers");
+
             // verify the required parameter 'userType' is set
             if (userType == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'userType' when calling UsersApi->SearchUsers");
@@ -2835,6 +2931,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;SharingEnabledUser&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<SharingEnabledUser> > SearchUsersWithExternalSharingOptionWithHttpInfo (string keyword, string siteUrlOrTenantId, ExternalSharingOptions externalSharingOption, UserType userType, UserSource userSource)
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->SearchUsersWithExternalSharingOption");
+
+            // verify the required parameter 'siteUrlOrTenantId' is set
+            if (siteUrlOrTenantId == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrlOrTenantId' when calling UsersApi->SearchUsersWithExternalSharingOption");
+
             // verify the required parameter 'externalSharingOption' is set
             if (externalSharingOption == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'externalSharingOption' when calling UsersApi->SearchUsersWithExternalSharingOption");
@@ -2965,6 +3069,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;SharingEnabledUser&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<SharingEnabledUser>>> SearchUsersWithExternalSharingOptionAsyncWithHttpInfo (string keyword, string siteUrlOrTenantId, ExternalSharingOptions externalSharingOption, UserType userType, UserSource userSource)
         {
+            // verify the required parameter 'keyword' is set
+            if (keyword == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'keyword' when calling UsersApi->SearchUsersWithExternalSharingOption");
+
+            // verify the required parameter 'siteUrlOrTenantId' is set
+            if (siteUrlOrTenantId == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrlOrTenantId' when calling UsersApi->SearchUsersWithExternalSharingOption");
+
             // verify the required parameter 'externalSharingOption' is set
             if (externalSharingOption == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'externalSharingOption' when calling UsersApi->SearchUsersWithExternalSharingOption");

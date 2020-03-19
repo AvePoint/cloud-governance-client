@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="templates">templates.</param>
         public LanguageWithTemplates(int languageId = default(int), string defaultTemplate = default(string), List<SiteTemplate> templates = default(List<SiteTemplate>))
         {
-            this.DefaultTemplate = defaultTemplate;
-            this.Templates = templates;
             this.LanguageId = languageId;
             this.DefaultTemplate = defaultTemplate;
             this.Templates = templates;

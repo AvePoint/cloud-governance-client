@@ -52,10 +52,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="endTime">endTime.</param>
         public TemporaryPermissionRequestSetting(bool isGrantTemporaryPermission = default(bool), ExpirationType expirationType = default(ExpirationType), int? durationInterval = default(int?), ApiDurationTypeNullable durationDateType = default(ApiDurationTypeNullable), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
         {
-            this.DurationInterval = durationInterval;
-            this.DurationDateType = durationDateType;
-            this.StartTime = startTime;
-            this.EndTime = endTime;
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
             this.ExpirationType = expirationType;
             this.DurationInterval = durationInterval;

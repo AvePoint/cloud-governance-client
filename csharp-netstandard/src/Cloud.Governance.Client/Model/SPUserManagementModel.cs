@@ -53,8 +53,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.IdentityName = identityName;
             this.DisplayName = displayName;
-            this.IdentityName = identityName;
-            this.DisplayName = displayName;
             this.IsGroup = isGroup;
             this.Action = action;
             this.ExternalUserType = externalUserType;

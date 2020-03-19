@@ -49,11 +49,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableOnlyOtherContactElection">enableOnlyOtherContactElection.</param>
         public PolicyElectionSetting(bool isEnabled = default(bool), string excludeUsers = default(string), bool isNotifyTaskEnabled = default(bool), Guid? taskEmailTemplate = default(Guid?), bool isNotifyPrimaryContactEnabled = default(bool), Guid? notifyPrimaryContactTemplate = default(Guid?), bool isNotifySecondaryContactEnabled = default(bool), Guid? notifySecondaryContactTemplate = default(Guid?), int duration = default(int), int durationType = default(int), bool isReminderEnabled = default(bool), Guid? reminderProfileId = default(Guid?), bool enableOnlyOtherContactElection = default(bool))
         {
-            this.ExcludeUsers = excludeUsers;
-            this.TaskEmailTemplate = taskEmailTemplate;
-            this.NotifyPrimaryContactTemplate = notifyPrimaryContactTemplate;
-            this.NotifySecondaryContactTemplate = notifySecondaryContactTemplate;
-            this.ReminderProfileId = reminderProfileId;
             this.IsEnabled = isEnabled;
             this.ExcludeUsers = excludeUsers;
             this.IsNotifyTaskEnabled = isNotifyTaskEnabled;

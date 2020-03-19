@@ -51,13 +51,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="referenceMetadataName">referenceMetadataName.</param>
         public Question(Guid id = default(Guid), QuestionaireType type = default(QuestionaireType), string content = default(string), string contentHtml = default(string), List<string> values = default(List<string>), string defaultValue = default(string), TermsMetadataSettings termSettings = default(TermsMetadataSettings), bool isMapToMetadata = default(bool), string referenceMetadata = default(string), string referenceMetadataName = default(string))
         {
-            this.Content = content;
-            this.ContentHtml = contentHtml;
-            this.Values = values;
-            this.DefaultValue = defaultValue;
-            this.TermSettings = termSettings;
-            this.ReferenceMetadata = referenceMetadata;
-            this.ReferenceMetadataName = referenceMetadataName;
             this.Id = id;
             this.Type = type;
             this.Content = content;

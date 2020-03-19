@@ -47,10 +47,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="arguments">arguments.</param>
         public ExecutionModel(bool enabled = default(bool), string webServiceAddress = default(string), WebServiceAuthenticationType webServiceAuthenticationType = default(WebServiceAuthenticationType), string webServiceAppClientId = default(string), string methodName = default(string), List<ExecutionParameter> arguments = default(List<ExecutionParameter>))
         {
-            this.WebServiceAddress = webServiceAddress;
-            this.WebServiceAppClientId = webServiceAppClientId;
-            this.MethodName = methodName;
-            this.Arguments = arguments;
             this.Enabled = enabled;
             this.WebServiceAddress = webServiceAddress;
             this.WebServiceAuthenticationType = webServiceAuthenticationType;

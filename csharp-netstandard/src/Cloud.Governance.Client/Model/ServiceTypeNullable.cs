@@ -394,256 +394,268 @@ namespace Cloud.Governance.Client.Model
         PermissionManagement = 60,
 
         /// <summary>
+        /// Enum BulkUpdate for value: BulkUpdate
+        /// </summary>
+        [EnumMember(Value = "BulkUpdate")]
+        BulkUpdate = 61,
+
+        /// <summary>
         /// Enum CreateUser for value: CreateUser
         /// </summary>
         [EnumMember(Value = "CreateUser")]
-        CreateUser = 61,
+        CreateUser = 62,
 
         /// <summary>
         /// Enum ChangeUser for value: ChangeUser
         /// </summary>
         [EnumMember(Value = "ChangeUser")]
-        ChangeUser = 62,
+        ChangeUser = 63,
 
         /// <summary>
         /// Enum UserLifecycle for value: UserLifecycle
         /// </summary>
         [EnumMember(Value = "UserLifecycle")]
-        UserLifecycle = 63,
+        UserLifecycle = 64,
 
         /// <summary>
         /// Enum OffBoardingUser for value: OffBoardingUser
         /// </summary>
         [EnumMember(Value = "OffBoardingUser")]
-        OffBoardingUser = 64,
+        OffBoardingUser = 65,
 
         /// <summary>
         /// Enum ExtendUser for value: ExtendUser
         /// </summary>
         [EnumMember(Value = "ExtendUser")]
-        ExtendUser = 65,
+        ExtendUser = 66,
 
         /// <summary>
         /// Enum ChangeUserPolicy for value: ChangeUserPolicy
         /// </summary>
         [EnumMember(Value = "ChangeUserPolicy")]
-        ChangeUserPolicy = 66,
+        ChangeUserPolicy = 67,
 
         /// <summary>
         /// Enum UnblockUser for value: UnblockUser
         /// </summary>
         [EnumMember(Value = "UnblockUser")]
-        UnblockUser = 67,
+        UnblockUser = 68,
 
         /// <summary>
         /// Enum ChangeUserLoginName for value: ChangeUserLoginName
         /// </summary>
         [EnumMember(Value = "ChangeUserLoginName")]
-        ChangeUserLoginName = 68,
+        ChangeUserLoginName = 69,
 
         /// <summary>
         /// Enum CreateGroup for value: CreateGroup
         /// </summary>
         [EnumMember(Value = "CreateGroup")]
-        CreateGroup = 69,
+        CreateGroup = 70,
 
         /// <summary>
         /// Enum ChangeGroup for value: ChangeGroup
         /// </summary>
         [EnumMember(Value = "ChangeGroup")]
-        ChangeGroup = 70,
+        ChangeGroup = 71,
 
         /// <summary>
         /// Enum GroupLifecycle for value: GroupLifecycle
         /// </summary>
         [EnumMember(Value = "GroupLifecycle")]
-        GroupLifecycle = 71,
+        GroupLifecycle = 72,
 
         /// <summary>
         /// Enum DeleteGroup for value: DeleteGroup
         /// </summary>
         [EnumMember(Value = "DeleteGroup")]
-        DeleteGroup = 72,
+        DeleteGroup = 73,
 
         /// <summary>
         /// Enum ExtendGroup for value: ExtendGroup
         /// </summary>
         [EnumMember(Value = "ExtendGroup")]
-        ExtendGroup = 73,
+        ExtendGroup = 74,
 
         /// <summary>
         /// Enum ChangeGroupPolicy for value: ChangeGroupPolicy
         /// </summary>
         [EnumMember(Value = "ChangeGroupPolicy")]
-        ChangeGroupPolicy = 74,
+        ChangeGroupPolicy = 75,
 
         /// <summary>
         /// Enum ArchiveTeam for value: ArchiveTeam
         /// </summary>
         [EnumMember(Value = "ArchiveTeam")]
-        ArchiveTeam = 75,
+        ArchiveTeam = 76,
 
         /// <summary>
         /// Enum UnArchiveTeam for value: UnArchiveTeam
         /// </summary>
         [EnumMember(Value = "UnArchiveTeam")]
-        UnArchiveTeam = 76,
+        UnArchiveTeam = 77,
 
         /// <summary>
         /// Enum GroupMembershipRecertification for value: GroupMembershipRecertification
         /// </summary>
         [EnumMember(Value = "GroupMembershipRecertification")]
-        GroupMembershipRecertification = 77,
+        GroupMembershipRecertification = 78,
 
         /// <summary>
         /// Enum GroupPermissionRecertification for value: GroupPermissionRecertification
         /// </summary>
         [EnumMember(Value = "GroupPermissionRecertification")]
-        GroupPermissionRecertification = 78,
+        GroupPermissionRecertification = 79,
 
         /// <summary>
         /// Enum ChangeGroupQuota for value: ChangeGroupQuota
         /// </summary>
         [EnumMember(Value = "ChangeGroupQuota")]
-        ChangeGroupQuota = 79,
+        ChangeGroupQuota = 80,
 
         /// <summary>
         /// Enum ContinueAccess for value: ContinueAccess
         /// </summary>
         [EnumMember(Value = "ContinueAccess")]
-        ContinueAccess = 80,
+        ContinueAccess = 81,
 
         /// <summary>
         /// Enum ApplyGroupInformation for value: ApplyGroupInformation
         /// </summary>
         [EnumMember(Value = "ApplyGroupInformation")]
-        ApplyGroupInformation = 81,
+        ApplyGroupInformation = 82,
 
         /// <summary>
         /// Enum ApplyGroupPolicy for value: ApplyGroupPolicy
         /// </summary>
         [EnumMember(Value = "ApplyGroupPolicy")]
-        ApplyGroupPolicy = 82,
+        ApplyGroupPolicy = 83,
 
         /// <summary>
         /// Enum ImportAzureGroup for value: ImportAzureGroup
         /// </summary>
         [EnumMember(Value = "ImportAzureGroup")]
-        ImportAzureGroup = 83,
+        ImportAzureGroup = 84,
 
         /// <summary>
         /// Enum ImportAzureUser for value: ImportAzureUser
         /// </summary>
         [EnumMember(Value = "ImportAzureUser")]
-        ImportAzureUser = 84,
+        ImportAzureUser = 85,
+
+        /// <summary>
+        /// Enum PostCreateGroup for value: PostCreateGroup
+        /// </summary>
+        [EnumMember(Value = "PostCreateGroup")]
+        PostCreateGroup = 86,
 
         /// <summary>
         /// Enum SyncSite for value: SyncSite
         /// </summary>
         [EnumMember(Value = "SyncSite")]
-        SyncSite = 85,
+        SyncSite = 87,
 
         /// <summary>
         /// Enum UpgradeSiteLifecycleSetting for value: UpgradeSiteLifecycleSetting
         /// </summary>
         [EnumMember(Value = "UpgradeSiteLifecycleSetting")]
-        UpgradeSiteLifecycleSetting = 86,
+        UpgradeSiteLifecycleSetting = 88,
 
         /// <summary>
         /// Enum AutoElection for value: AutoElection
         /// </summary>
         [EnumMember(Value = "AutoElection")]
-        AutoElection = 87,
+        AutoElection = 89,
 
         /// <summary>
         /// Enum ManualArchiveTimer for value: ManualArchiveTimer
         /// </summary>
         [EnumMember(Value = "ManualArchiveTimer")]
-        ManualArchiveTimer = 88,
+        ManualArchiveTimer = 90,
 
         /// <summary>
         /// Enum SyncWeb for value: SyncWeb
         /// </summary>
         [EnumMember(Value = "SyncWeb")]
-        SyncWeb = 89,
+        SyncWeb = 91,
 
         /// <summary>
         /// Enum QuotaThresholdTimerJob for value: QuotaThresholdTimerJob
         /// </summary>
         [EnumMember(Value = "QuotaThresholdTimerJob")]
-        QuotaThresholdTimerJob = 90,
+        QuotaThresholdTimerJob = 92,
 
         /// <summary>
         /// Enum SyncUserForDynamicRule for value: SyncUserForDynamicRule
         /// </summary>
         [EnumMember(Value = "SyncUserForDynamicRule")]
-        SyncUserForDynamicRule = 91,
+        SyncUserForDynamicRule = 93,
 
         /// <summary>
         /// Enum SyncGroup for value: SyncGroup
         /// </summary>
         [EnumMember(Value = "SyncGroup")]
-        SyncGroup = 92,
+        SyncGroup = 94,
 
         /// <summary>
         /// Enum AutoImportSiteCustomService for value: AutoImportSiteCustomService
         /// </summary>
         [EnumMember(Value = "AutoImportSiteCustomService")]
-        AutoImportSiteCustomService = 93,
+        AutoImportSiteCustomService = 95,
 
         /// <summary>
         /// Enum AutoImportSite for value: AutoImportSite
         /// </summary>
         [EnumMember(Value = "AutoImportSite")]
-        AutoImportSite = 94,
+        AutoImportSite = 96,
 
         /// <summary>
         /// Enum AutoImportGroup for value: AutoImportGroup
         /// </summary>
         [EnumMember(Value = "AutoImportGroup")]
-        AutoImportGroup = 95,
+        AutoImportGroup = 97,
 
         /// <summary>
         /// Enum TemporaryPermissionStart for value: TemporaryPermissionStart
         /// </summary>
         [EnumMember(Value = "TemporaryPermissionStart")]
-        TemporaryPermissionStart = 96,
+        TemporaryPermissionStart = 98,
 
         /// <summary>
         /// Enum TemporaryPermissionEnd for value: TemporaryPermissionEnd
         /// </summary>
         [EnumMember(Value = "TemporaryPermissionEnd")]
-        TemporaryPermissionEnd = 97,
+        TemporaryPermissionEnd = 99,
 
         /// <summary>
         /// Enum TemporaryPermissionExpiringNotificationJob for value: TemporaryPermissionExpiringNotificationJob
         /// </summary>
         [EnumMember(Value = "TemporaryPermissionExpiringNotificationJob")]
-        TemporaryPermissionExpiringNotificationJob = 98,
+        TemporaryPermissionExpiringNotificationJob = 100,
 
         /// <summary>
         /// Enum RenewTeams for value: RenewTeams
         /// </summary>
         [EnumMember(Value = "RenewTeams")]
-        RenewTeams = 99,
+        RenewTeams = 101,
 
         /// <summary>
         /// Enum AutoExportReport for value: AutoExportReport
         /// </summary>
         [EnumMember(Value = "AutoExportReport")]
-        AutoExportReport = 100,
+        AutoExportReport = 102,
 
         /// <summary>
         /// Enum SyncUserInformation for value: SyncUserInformation
         /// </summary>
         [EnumMember(Value = "SyncUserInformation")]
-        SyncUserInformation = 101,
+        SyncUserInformation = 103,
 
         /// <summary>
         /// Enum SyncUpsMetadata for value: SyncUpsMetadata
         /// </summary>
         [EnumMember(Value = "SyncUpsMetadata")]
-        SyncUpsMetadata = 102
+        SyncUpsMetadata = 104
 
     }
 

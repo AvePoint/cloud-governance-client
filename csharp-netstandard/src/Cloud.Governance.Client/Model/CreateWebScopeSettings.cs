@@ -55,9 +55,6 @@ namespace Cloud.Governance.Client.Model
         public CreateWebScopeSettings(string restrictParentUrl = default(string), ScopeType scopeType = default(ScopeType), bool useTitleInUrl = default(bool), bool enableUrlValidation = default(bool), TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), List<SPNode> selectedNodes = default(List<SPNode>), bool autoPopulateUrlWithSPContext = default(bool), AssignBy autoPopulateUrlWithSPContextAssignBy = default(AssignBy))
         {
             this.RestrictParentUrl = restrictParentUrl;
-            this.TextValidationRule = textValidationRule;
-            this.SelectedNodes = selectedNodes;
-            this.RestrictParentUrl = restrictParentUrl;
             this.ScopeType = scopeType;
             this.UseTitleInUrl = useTitleInUrl;
             this.EnableUrlValidation = enableUrlValidation;

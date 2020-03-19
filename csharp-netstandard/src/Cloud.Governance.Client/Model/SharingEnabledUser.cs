@@ -43,9 +43,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isGroup">isGroup.</param>
         public SharingEnabledUser(bool isSharePointGroup = default(bool), bool isGuestUser = default(bool), bool isGuestUserExistsInOrganization = default(bool), string id = default(string), string loginName = default(string), string displayName = default(string), bool isGroup = default(bool))
         {
-            this.Id = id;
-            this.LoginName = loginName;
-            this.DisplayName = displayName;
             this.IsSharePointGroup = isSharePointGroup;
             this.IsGuestUser = isGuestUser;
             this.IsGuestUserExistsInOrganization = isGuestUserExistsInOrganization;

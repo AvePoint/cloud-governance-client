@@ -67,10 +67,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="status">status.</param>
         public TaskList(Guid id = default(Guid), string title = default(string), string requester = default(string), int requestTicketNumber = default(int), string requesterDisplayName = default(string), DateTime? dueDate = default(DateTime?), DueDateType dueDateType = default(DueDateType), ServiceType serviceType = default(ServiceType), DateTime createdTime = default(DateTime), TaskType taskType = default(TaskType), TaskResult status = default(TaskResult))
         {
-            this.Title = title;
-            this.Requester = requester;
-            this.RequesterDisplayName = requesterDisplayName;
-            this.DueDate = dueDate;
             this.Id = id;
             this.Title = title;
             this.Requester = requester;

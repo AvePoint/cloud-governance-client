@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="storagePolicy">storagePolicy.</param>
         public BackupEnvironmentSetting(bool isBackupSource = default(bool), bool isBackupDestination = default(bool), GuidModel storagePolicy = default(GuidModel))
         {
-            this.StoragePolicy = storagePolicy;
             this.IsBackupSource = isBackupSource;
             this.IsBackupDestination = isBackupDestination;
             this.StoragePolicy = storagePolicy;

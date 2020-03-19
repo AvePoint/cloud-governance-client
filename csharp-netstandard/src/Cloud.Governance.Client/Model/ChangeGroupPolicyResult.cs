@@ -62,8 +62,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.CurrentPolicy = currentPolicy;
             this.AllPolicies = allPolicies;
-            this.CurrentPolicy = currentPolicy;
-            this.AllPolicies = allPolicies;
             this.ChangePolicyAssignBy = changePolicyAssignBy;
             this.StartDateType = startDateType;
             this.ServiceSpecifyDate = serviceSpecifyDate;

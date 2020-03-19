@@ -66,23 +66,6 @@ namespace Cloud.Governance.Client.Model
         public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = default(int), bool enableTeamCollaboration = default(bool), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), Guid id = default(Guid), AutoImportPhase phase = default(AutoImportPhase), DateTime? phaseStartTime = default(DateTime?), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = default(bool), List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser))
         {
             this.ObjectId = objectId;
-            this.GroupName = groupName;
-            this.Email = email;
-            this.Language = language;
-            this.CreatedTime = createdTime;
-            this.Owners = owners;
-            this.PreferredDataLocation = preferredDataLocation;
-            this.PhaseStartTime = phaseStartTime;
-            this.AutoImportProfileId = autoImportProfileId;
-            this.AutoImportProfileName = autoImportProfileName;
-            this.PolicyName = policyName;
-            this.PolicyDescription = policyDescription;
-            this.PhaseAssignees = phaseAssignees;
-            this.PhaseDueDate = phaseDueDate;
-            this.Metadatas = metadatas;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.ObjectId = objectId;
             this.PolicyId = policyId;
             this.TenantId = tenantId;
             this.GroupName = groupName;

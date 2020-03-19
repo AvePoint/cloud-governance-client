@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
         public AzureAdMetadataSettings(GuidModel office365Tenant = default(GuidModel), bool useBuiltInProperty = default(bool), LookupValue value = default(LookupValue), string property = default(string), bool allowReferenceAsRoleInApprovalProcess = default(bool))
         {
             this.Office365Tenant = office365Tenant;
-            this.Value = value;
-            this.Property = property;
-            this.Office365Tenant = office365Tenant;
             this.UseBuiltInProperty = useBuiltInProperty;
             this.Value = value;
             this.Property = property;

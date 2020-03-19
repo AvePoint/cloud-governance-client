@@ -44,7 +44,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="type">type.</param>
         public DynamicRuleElement(Guid id = default(Guid), string name = default(string), MetadataFieldType type = default(MetadataFieldType))
         {
-            this.Name = name;
             this.Id = id;
             this.Name = name;
             this.Type = type;

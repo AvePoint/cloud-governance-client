@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.CustomizedTitle = customizedTitle;
             this.Title = title;
             this.Content = content;
-            this.CustomizedTitle = customizedTitle;
-            this.Title = title;
-            this.Content = content;
         }
         
         /// <summary>

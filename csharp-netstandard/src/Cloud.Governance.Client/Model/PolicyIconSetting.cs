@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="referenceUrl">referenceUrl.</param>
         public PolicyIconSetting(bool isEnabled = default(bool), string address = default(string), string referenceUrl = default(string))
         {
-            this.Address = address;
-            this.ReferenceUrl = referenceUrl;
             this.IsEnabled = isEnabled;
             this.Address = address;
             this.ReferenceUrl = referenceUrl;

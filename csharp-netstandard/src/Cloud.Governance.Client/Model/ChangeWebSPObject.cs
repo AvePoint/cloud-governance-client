@@ -42,8 +42,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.SiteUrl = siteUrl;
             this.WebUrl = webUrl;
-            this.SiteUrl = siteUrl;
-            this.WebUrl = webUrl;
             this.SiteId = siteId;
             this.WebId = webId;
         }

@@ -46,11 +46,6 @@ namespace Cloud.Governance.Client.Model
             this.SitePrimaryContact = sitePrimaryContact;
             this.SiteSecondaryContact = siteSecondaryContact;
             this.ErrorMessage = errorMessage;
-            this.ParentWebUrl = parentWebUrl;
-            this.ParentSiteUrl = parentSiteUrl;
-            this.SitePrimaryContact = sitePrimaryContact;
-            this.SiteSecondaryContact = siteSecondaryContact;
-            this.ErrorMessage = errorMessage;
         }
         
         /// <summary>

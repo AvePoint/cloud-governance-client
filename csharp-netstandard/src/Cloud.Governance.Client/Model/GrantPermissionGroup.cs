@@ -41,10 +41,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="description">description.</param>
         public GrantPermissionGroup(int id = default(int), string name = default(string), string displayName = default(string), List<string> permissionIds = default(List<string>), string description = default(string))
         {
-            this.Name = name;
-            this.DisplayName = displayName;
-            this.PermissionIds = permissionIds;
-            this.Description = description;
             this.Id = id;
             this.Name = name;
             this.DisplayName = displayName;

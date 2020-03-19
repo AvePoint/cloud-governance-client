@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         public ResourceValue(string display = default(string), int value = default(int), string resourceKey = default(string))
         {
             this.Display = display;
-            this.ResourceKey = resourceKey;
-            this.Display = display;
             this.Value = value;
             this.ResourceKey = resourceKey;
         }

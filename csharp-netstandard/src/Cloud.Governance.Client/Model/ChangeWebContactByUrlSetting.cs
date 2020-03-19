@@ -42,10 +42,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="secondaryContact">secondaryContact.</param>
         public ChangeWebContactByUrlSetting(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webUrl = default(string), ApiUserChangedProperty primaryContact = default(ApiUserChangedProperty), ApiUserChangedProperty secondaryContact = default(ApiUserChangedProperty))
         {
-            this.SiteUrl = siteUrl;
-            this.WebUrl = webUrl;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.WebId = webId;

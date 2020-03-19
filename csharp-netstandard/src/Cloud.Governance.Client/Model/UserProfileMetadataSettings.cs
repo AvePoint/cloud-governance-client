@@ -43,9 +43,6 @@ namespace Cloud.Governance.Client.Model
         public UserProfileMetadataSettings(string adminCenter = default(string), bool enableValueSync = default(bool), bool enableRoleValueSync = default(bool), LookupValue value = default(LookupValue), string property = default(string), bool allowReferenceAsRoleInApprovalProcess = default(bool))
         {
             this.AdminCenter = adminCenter;
-            this.Value = value;
-            this.Property = property;
-            this.AdminCenter = adminCenter;
             this.EnableValueSync = enableValueSync;
             this.EnableRoleValueSync = enableRoleValueSync;
             this.Value = value;

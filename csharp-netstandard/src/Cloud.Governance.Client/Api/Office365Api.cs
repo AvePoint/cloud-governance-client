@@ -1286,6 +1286,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of AzureADGroup</returns>
         public Cloud.Governance.Client.Client.ApiResponse< AzureADGroup > GetGroupInfoWithHttpInfo (string tenantid, string id)
         {
+            // verify the required parameter 'tenantid' is set
+            if (tenantid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantid' when calling Office365Api->GetGroupInfo");
+
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling Office365Api->GetGroupInfo");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1360,6 +1368,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (AzureADGroup)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<AzureADGroup>> GetGroupInfoAsyncWithHttpInfo (string tenantid, string id)
         {
+            // verify the required parameter 'tenantid' is set
+            if (tenantid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantid' when calling Office365Api->GetGroupInfo");
+
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling Office365Api->GetGroupInfo");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1439,6 +1455,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< ApiUserPageResult > GetGroupMembersWithHttpInfo (string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'email' when calling Office365Api->GetGroupMembers");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1545,6 +1565,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult>> GetGroupMembersAsyncWithHttpInfo (string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'email' when calling Office365Api->GetGroupMembers");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1654,6 +1678,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< ApiUserPageResult > GetGroupMembersByGroupNameWithHttpInfo (string url, string name = default(string), int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling Office365Api->GetGroupMembersByGroupName");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1780,6 +1808,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult>> GetGroupMembersByGroupNameAsyncWithHttpInfo (string url, string name = default(string), int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling Office365Api->GetGroupMembersByGroupName");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1905,6 +1937,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< ApiUserPageResult > GetGroupOwnersWithHttpInfo (string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'email' when calling Office365Api->GetGroupOwners");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2011,6 +2047,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult>> GetGroupOwnersAsyncWithHttpInfo (string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'email' when calling Office365Api->GetGroupOwners");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2112,10 +2152,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;GuidModel&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<GuidModel> > GetHubSitesWithHttpInfo (Guid tenantid)
         {
-            // verify the required parameter 'tenantid' is set
-            if (tenantid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantid' when calling Office365Api->GetHubSites");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2134,8 +2170,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (tenantid != null)
-                localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -2186,10 +2221,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;GuidModel&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>>> GetHubSitesAsyncWithHttpInfo (Guid tenantid)
         {
-            // verify the required parameter 'tenantid' is set
-            if (tenantid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantid' when calling Office365Api->GetHubSites");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2209,8 +2240,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (tenantid != null)
-                localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("tenantid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantid)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -2551,6 +2581,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of UserGroupPermissions</returns>
         public Cloud.Governance.Client.Client.ApiResponse< UserGroupPermissions > GetPermissionsWithHttpInfo (string webUrl)
         {
+            // verify the required parameter 'webUrl' is set
+            if (webUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'webUrl' when calling Office365Api->GetPermissions");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2629,6 +2663,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (UserGroupPermissions)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<UserGroupPermissions>> GetPermissionsAsyncWithHttpInfo (string webUrl)
         {
+            // verify the required parameter 'webUrl' is set
+            if (webUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'webUrl' when calling Office365Api->GetPermissions");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2710,6 +2748,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;SPRoleAssignment&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<SPRoleAssignment> > GetRoleAssignmentWithHttpInfo (string url, NodeType type)
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling Office365Api->GetRoleAssignment");
+
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'type' when calling Office365Api->GetRoleAssignment");
@@ -2804,6 +2846,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;SPRoleAssignment&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<SPRoleAssignment>>> GetRoleAssignmentAsyncWithHttpInfo (string url, NodeType type)
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling Office365Api->GetRoleAssignment");
+
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'type' when calling Office365Api->GetRoleAssignment");
@@ -3054,6 +3100,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of SiteInfo</returns>
         public Cloud.Governance.Client.Client.ApiResponse< SiteInfo > GetSiteInfoWithHttpInfo (string fullUrl)
         {
+            // verify the required parameter 'fullUrl' is set
+            if (fullUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'fullUrl' when calling Office365Api->GetSiteInfo");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3132,6 +3182,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (SiteInfo)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SiteInfo>> GetSiteInfoAsyncWithHttpInfo (string fullUrl)
         {
+            // verify the required parameter 'fullUrl' is set
+            if (fullUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'fullUrl' when calling Office365Api->GetSiteInfo");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3211,6 +3265,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;PermissionLevel&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<PermissionLevel> > GetSitePermissionLevelsWithHttpInfo (string uri)
         {
+            // verify the required parameter 'uri' is set
+            if (uri == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'uri' when calling Office365Api->GetSitePermissionLevels");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3289,6 +3347,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;PermissionLevel&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<PermissionLevel>>> GetSitePermissionLevelsAsyncWithHttpInfo (string uri)
         {
+            // verify the required parameter 'uri' is set
+            if (uri == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'uri' when calling Office365Api->GetSitePermissionLevels");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3368,6 +3430,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;SPGroup&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<SPGroup> > GetSiteSharePointGroupsWithHttpInfo (string uri)
         {
+            // verify the required parameter 'uri' is set
+            if (uri == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'uri' when calling Office365Api->GetSiteSharePointGroups");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3446,6 +3512,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;SPGroup&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<SPGroup>>> GetSiteSharePointGroupsAsyncWithHttpInfo (string uri)
         {
+            // verify the required parameter 'uri' is set
+            if (uri == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'uri' when calling Office365Api->GetSiteSharePointGroups");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3527,10 +3597,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;SiteTemplate&gt;</returns>
         public Cloud.Governance.Client.Client.ApiResponse< List<SiteTemplate> > GetSiteTemplatesWithHttpInfo (int languageid, string url = default(string))
         {
-            // verify the required parameter 'languageid' is set
-            if (languageid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'languageid' when calling Office365Api->GetSiteTemplates");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3549,8 +3615,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (languageid != null)
-                localVarRequestOptions.PathParameters.Add("languageid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(languageid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("languageid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(languageid)); // path parameter
             if (url != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url))
@@ -3613,10 +3678,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;SiteTemplate&gt;)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>>> GetSiteTemplatesAsyncWithHttpInfo (int languageid, string url = default(string))
         {
-            // verify the required parameter 'languageid' is set
-            if (languageid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'languageid' when calling Office365Api->GetSiteTemplates");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3636,8 +3697,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (languageid != null)
-                localVarRequestOptions.PathParameters.Add("languageid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(languageid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("languageid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(languageid)); // path parameter
             if (url != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url))
@@ -3700,6 +3760,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of YammerGroup</returns>
         public Cloud.Governance.Client.Client.ApiResponse< YammerGroup > GetYammerGroupWithHttpInfo (string networkid, string name)
         {
+            // verify the required parameter 'networkid' is set
+            if (networkid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'networkid' when calling Office365Api->GetYammerGroup");
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling Office365Api->GetYammerGroup");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3774,6 +3842,14 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (YammerGroup)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<YammerGroup>> GetYammerGroupAsyncWithHttpInfo (string networkid, string name)
         {
+            // verify the required parameter 'networkid' is set
+            if (networkid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'networkid' when calling Office365Api->GetYammerGroup");
+
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling Office365Api->GetYammerGroup");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3853,6 +3929,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of SPNodePageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< SPNodePageResult > LoadContainersWithHttpInfo (string serviceid, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'serviceid' is set
+            if (serviceid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'serviceid' when calling Office365Api->LoadContainers");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -3959,6 +4039,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (SPNodePageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SPNodePageResult>> LoadContainersAsyncWithHttpInfo (string serviceid, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'serviceid' is set
+            if (serviceid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'serviceid' when calling Office365Api->LoadContainers");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4068,9 +4152,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of SPNodePageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< SPNodePageResult > LoadFoldersWithHttpInfo (Guid listid, string folderorlisturl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'listid' is set
-            if (listid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'listid' when calling Office365Api->LoadFolders");
+            // verify the required parameter 'folderorlisturl' is set
+            if (folderorlisturl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'folderorlisturl' when calling Office365Api->LoadFolders");
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4090,8 +4174,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (listid != null)
-                localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
             if (folderorlisturl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "folderorlisturl", folderorlisturl))
@@ -4190,9 +4273,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (SPNodePageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SPNodePageResult>> LoadFoldersAsyncWithHttpInfo (Guid listid, string folderorlisturl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'listid' is set
-            if (listid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'listid' when calling Office365Api->LoadFolders");
+            // verify the required parameter 'folderorlisturl' is set
+            if (folderorlisturl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'folderorlisturl' when calling Office365Api->LoadFolders");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4213,8 +4296,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (listid != null)
-                localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
             if (folderorlisturl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "folderorlisturl", folderorlisturl))
@@ -4313,9 +4395,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of SPNodePageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< SPNodePageResult > LoadItemsWithHttpInfo (Guid listid, string folderorlisturl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'listid' is set
-            if (listid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'listid' when calling Office365Api->LoadItems");
+            // verify the required parameter 'folderorlisturl' is set
+            if (folderorlisturl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'folderorlisturl' when calling Office365Api->LoadItems");
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4335,8 +4417,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (listid != null)
-                localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
             if (folderorlisturl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "folderorlisturl", folderorlisturl))
@@ -4435,9 +4516,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (SPNodePageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SPNodePageResult>> LoadItemsAsyncWithHttpInfo (Guid listid, string folderorlisturl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'listid' is set
-            if (listid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'listid' when calling Office365Api->LoadItems");
+            // verify the required parameter 'folderorlisturl' is set
+            if (folderorlisturl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'folderorlisturl' when calling Office365Api->LoadItems");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4458,8 +4539,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (listid != null)
-                localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("listid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(listid)); // path parameter
             if (folderorlisturl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "folderorlisturl", folderorlisturl))
@@ -4556,6 +4636,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of SPNodePageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< SPNodePageResult > LoadListsWithHttpInfo (string siteorweburl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'siteorweburl' is set
+            if (siteorweburl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteorweburl' when calling Office365Api->LoadLists");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -4670,6 +4754,10 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (SPNodePageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SPNodePageResult>> LoadListsAsyncWithHttpInfo (string siteorweburl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
+            // verify the required parameter 'siteorweburl' is set
+            if (siteorweburl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteorweburl' when calling Office365Api->LoadLists");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4793,21 +4881,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ApiTermInfoPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< ApiTermInfoPageResult > LoadManagedMetadataWithHttpInfo (Guid termStoreid, Guid groupid, Guid termsetid, Guid parentid, string admincenterurl, int? skip = default(int?), int? top = default(int?), string search = default(string))
         {
-            // verify the required parameter 'termStoreid' is set
-            if (termStoreid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'termStoreid' when calling Office365Api->LoadManagedMetadata");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling Office365Api->LoadManagedMetadata");
-
-            // verify the required parameter 'termsetid' is set
-            if (termsetid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'termsetid' when calling Office365Api->LoadManagedMetadata");
-
-            // verify the required parameter 'parentid' is set
-            if (parentid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'parentid' when calling Office365Api->LoadManagedMetadata");
+            // verify the required parameter 'admincenterurl' is set
+            if (admincenterurl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'admincenterurl' when calling Office365Api->LoadManagedMetadata");
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4827,14 +4903,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (termStoreid != null)
-                localVarRequestOptions.PathParameters.Add("termStoreid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termStoreid)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
-            if (termsetid != null)
-                localVarRequestOptions.PathParameters.Add("termsetid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termsetid)); // path parameter
-            if (parentid != null)
-                localVarRequestOptions.PathParameters.Add("parentid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(parentid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("termStoreid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termStoreid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("termsetid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termsetid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("parentid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(parentid)); // path parameter
             if (admincenterurl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "admincenterurl", admincenterurl))
@@ -4939,21 +5011,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ApiTermInfoPageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ApiTermInfoPageResult>> LoadManagedMetadataAsyncWithHttpInfo (Guid termStoreid, Guid groupid, Guid termsetid, Guid parentid, string admincenterurl, int? skip = default(int?), int? top = default(int?), string search = default(string))
         {
-            // verify the required parameter 'termStoreid' is set
-            if (termStoreid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'termStoreid' when calling Office365Api->LoadManagedMetadata");
-
-            // verify the required parameter 'groupid' is set
-            if (groupid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupid' when calling Office365Api->LoadManagedMetadata");
-
-            // verify the required parameter 'termsetid' is set
-            if (termsetid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'termsetid' when calling Office365Api->LoadManagedMetadata");
-
-            // verify the required parameter 'parentid' is set
-            if (parentid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'parentid' when calling Office365Api->LoadManagedMetadata");
+            // verify the required parameter 'admincenterurl' is set
+            if (admincenterurl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'admincenterurl' when calling Office365Api->LoadManagedMetadata");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4974,14 +5034,10 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (termStoreid != null)
-                localVarRequestOptions.PathParameters.Add("termStoreid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termStoreid)); // path parameter
-            if (groupid != null)
-                localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
-            if (termsetid != null)
-                localVarRequestOptions.PathParameters.Add("termsetid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termsetid)); // path parameter
-            if (parentid != null)
-                localVarRequestOptions.PathParameters.Add("parentid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(parentid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("termStoreid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termStoreid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("groupid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(groupid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("termsetid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(termsetid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("parentid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(parentid)); // path parameter
             if (admincenterurl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "admincenterurl", admincenterurl))
@@ -5082,13 +5138,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of SPNodePageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< SPNodePageResult > LoadManagedSitesWithHttpInfo (string serviceid, Guid containerid, bool isselected, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'containerid' is set
-            if (containerid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'containerid' when calling Office365Api->LoadManagedSites");
-
-            // verify the required parameter 'isselected' is set
-            if (isselected == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'isselected' when calling Office365Api->LoadManagedSites");
+            // verify the required parameter 'serviceid' is set
+            if (serviceid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'serviceid' when calling Office365Api->LoadManagedSites");
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5110,10 +5162,8 @@ namespace Cloud.Governance.Client.Api
 
             if (serviceid != null)
                 localVarRequestOptions.PathParameters.Add("serviceid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceid)); // path parameter
-            if (containerid != null)
-                localVarRequestOptions.PathParameters.Add("containerid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(containerid)); // path parameter
-            if (isselected != null)
-                localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
+            localVarRequestOptions.PathParameters.Add("containerid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(containerid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
             if (top != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "top", top))
@@ -5204,13 +5254,9 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (SPNodePageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SPNodePageResult>> LoadManagedSitesAsyncWithHttpInfo (string serviceid, Guid containerid, bool isselected, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'containerid' is set
-            if (containerid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'containerid' when calling Office365Api->LoadManagedSites");
-
-            // verify the required parameter 'isselected' is set
-            if (isselected == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'isselected' when calling Office365Api->LoadManagedSites");
+            // verify the required parameter 'serviceid' is set
+            if (serviceid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'serviceid' when calling Office365Api->LoadManagedSites");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -5233,10 +5279,8 @@ namespace Cloud.Governance.Client.Api
             
             if (serviceid != null)
                 localVarRequestOptions.PathParameters.Add("serviceid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceid)); // path parameter
-            if (containerid != null)
-                localVarRequestOptions.PathParameters.Add("containerid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(containerid)); // path parameter
-            if (isselected != null)
-                localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
+            localVarRequestOptions.PathParameters.Add("containerid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(containerid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
             if (top != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "top", top))
@@ -5331,17 +5375,13 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of SPNodePageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse< SPNodePageResult > LoadWebsWithHttpInfo (string serviceid, Guid siteorwebid, bool isselected, bool issite, string siteOrWebUrl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'siteorwebid' is set
-            if (siteorwebid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteorwebid' when calling Office365Api->LoadWebs");
+            // verify the required parameter 'serviceid' is set
+            if (serviceid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'serviceid' when calling Office365Api->LoadWebs");
 
-            // verify the required parameter 'isselected' is set
-            if (isselected == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'isselected' when calling Office365Api->LoadWebs");
-
-            // verify the required parameter 'issite' is set
-            if (issite == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'issite' when calling Office365Api->LoadWebs");
+            // verify the required parameter 'siteOrWebUrl' is set
+            if (siteOrWebUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteOrWebUrl' when calling Office365Api->LoadWebs");
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5363,12 +5403,9 @@ namespace Cloud.Governance.Client.Api
 
             if (serviceid != null)
                 localVarRequestOptions.PathParameters.Add("serviceid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceid)); // path parameter
-            if (siteorwebid != null)
-                localVarRequestOptions.PathParameters.Add("siteorwebid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(siteorwebid)); // path parameter
-            if (isselected != null)
-                localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
-            if (issite != null)
-                localVarRequestOptions.PathParameters.Add("issite", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(issite)); // path parameter
+            localVarRequestOptions.PathParameters.Add("siteorwebid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(siteorwebid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
+            localVarRequestOptions.PathParameters.Add("issite", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(issite)); // path parameter
             if (siteOrWebUrl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteOrWebUrl", siteOrWebUrl))
@@ -5473,17 +5510,13 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (SPNodePageResult)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SPNodePageResult>> LoadWebsAsyncWithHttpInfo (string serviceid, Guid siteorwebid, bool isselected, bool issite, string siteOrWebUrl, int? top = default(int?), int? skip = default(int?), string search = default(string))
         {
-            // verify the required parameter 'siteorwebid' is set
-            if (siteorwebid == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteorwebid' when calling Office365Api->LoadWebs");
+            // verify the required parameter 'serviceid' is set
+            if (serviceid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'serviceid' when calling Office365Api->LoadWebs");
 
-            // verify the required parameter 'isselected' is set
-            if (isselected == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'isselected' when calling Office365Api->LoadWebs");
-
-            // verify the required parameter 'issite' is set
-            if (issite == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'issite' when calling Office365Api->LoadWebs");
+            // verify the required parameter 'siteOrWebUrl' is set
+            if (siteOrWebUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteOrWebUrl' when calling Office365Api->LoadWebs");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -5506,12 +5539,9 @@ namespace Cloud.Governance.Client.Api
             
             if (serviceid != null)
                 localVarRequestOptions.PathParameters.Add("serviceid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceid)); // path parameter
-            if (siteorwebid != null)
-                localVarRequestOptions.PathParameters.Add("siteorwebid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(siteorwebid)); // path parameter
-            if (isselected != null)
-                localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
-            if (issite != null)
-                localVarRequestOptions.PathParameters.Add("issite", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(issite)); // path parameter
+            localVarRequestOptions.PathParameters.Add("siteorwebid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(siteorwebid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("isselected", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(isselected)); // path parameter
+            localVarRequestOptions.PathParameters.Add("issite", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(issite)); // path parameter
             if (siteOrWebUrl != null)
             {
                 foreach (var _kvp in Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteOrWebUrl", siteOrWebUrl))

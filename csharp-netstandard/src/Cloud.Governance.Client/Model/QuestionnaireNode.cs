@@ -46,9 +46,6 @@ namespace Cloud.Governance.Client.Model
         public QuestionnaireNode(List<Guid> objectIds = default(List<Guid>), QuestionnaireNodeType type = default(QuestionnaireNodeType), List<JointNode> joints = default(List<JointNode>), string msg = default(string))
         {
             this.ObjectIds = objectIds;
-            this.Joints = joints;
-            this.Msg = msg;
-            this.ObjectIds = objectIds;
             this.Type = type;
             this.Joints = joints;
             this.Msg = msg;

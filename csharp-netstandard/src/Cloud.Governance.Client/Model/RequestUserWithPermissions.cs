@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.User = user;
             this.PermissionLevels = permissionLevels;
-            this.User = user;
-            this.PermissionLevels = permissionLevels;
         }
         
         /// <summary>

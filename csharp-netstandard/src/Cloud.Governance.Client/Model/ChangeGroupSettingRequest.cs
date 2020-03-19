@@ -85,30 +85,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadatas">metadatas.</param>
         public ChangeGroupSettingRequest(Guid groupId = default(Guid), string groupEmail = default(string), string groupName = default(string), string originalGroupName = default(string), string groupDescription = default(string), string originalGroupDescription = default(string), ApiUser primaryContact = default(ApiUser), ApiUser originalPrimaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser originalSecondaryContact = default(ApiUser), List<GroupMembershipItem> groupOwners = default(List<GroupMembershipItem>), List<GroupMembershipItem> groupMembers = default(List<GroupMembershipItem>), bool isDynamicMembership = default(bool), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), bool enabledSubscribe = default(bool), bool originalEnabledSubscribe = default(bool), bool enabledOutsideSender = default(bool), bool originalEnabledOutsideSender = default(bool), ChangeHubsiteActionType hubSiteActionType = default(ChangeHubsiteActionType), Guid? associateHubSiteId = default(Guid?), string associateHubSiteTitle = default(string), string classification = default(string), string originalClassification = default(string), bool enableTeams = default(bool), bool originalEnableTeams = default(bool), List<RequestMetadata> groupMetadatas = default(List<RequestMetadata>), List<RequestMetadata> originalGroupMetadata = default(List<RequestMetadata>), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
-            this.GroupEmail = groupEmail;
-            this.GroupName = groupName;
-            this.OriginalGroupName = originalGroupName;
-            this.GroupDescription = groupDescription;
-            this.OriginalGroupDescription = originalGroupDescription;
-            this.PrimaryContact = primaryContact;
-            this.OriginalPrimaryContact = originalPrimaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.OriginalSecondaryContact = originalSecondaryContact;
-            this.GroupOwners = groupOwners;
-            this.GroupMembers = groupMembers;
-            this.DynamicMembershipRules = dynamicMembershipRules;
-            this.AssociateHubSiteId = associateHubSiteId;
-            this.AssociateHubSiteTitle = associateHubSiteTitle;
-            this.Classification = classification;
-            this.OriginalClassification = originalClassification;
-            this.GroupMetadatas = groupMetadatas;
-            this.OriginalGroupMetadata = originalGroupMetadata;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
             this.GroupId = groupId;
             this.GroupEmail = groupEmail;
             this.GroupName = groupName;

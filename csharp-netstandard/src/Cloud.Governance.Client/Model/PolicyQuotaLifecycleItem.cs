@@ -49,7 +49,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="processId">processId.</param>
         public PolicyQuotaLifecycleItem(QuotaOption option = default(QuotaOption), int size = default(int), bool isNotifyEnabled = default(bool), string notifyUser = default(string), Guid notifyTemplate = default(Guid), bool isEnabled = default(bool), bool isDefaultProcess = default(bool), Guid processId = default(Guid))
         {
-            this.NotifyUser = notifyUser;
             this.Option = option;
             this.Size = size;
             this.IsNotifyEnabled = isNotifyEnabled;

@@ -51,13 +51,6 @@ namespace Cloud.Governance.Client.Model
             this.Unlock = unlock;
             this.Lock = _lock;
             this.Quota = quota;
-            this.Archiver = archiver;
-            this.Deletion = deletion;
-            this.Extension = extension;
-            this.Change = change;
-            this.Unlock = unlock;
-            this.Lock = _lock;
-            this.Quota = quota;
             this.DefaultProcessId = defaultProcessId;
         }
         

@@ -45,7 +45,6 @@ namespace Cloud.Governance.Client.Model
         public ServiceScopeSettings(List<SPNode> selectedNodes = default(List<SPNode>), bool autoPopulateUrlWithSPContext = default(bool), AssignBy autoPopulateUrlWithSPContextAssignBy = default(AssignBy))
         {
             this.SelectedNodes = selectedNodes;
-            this.SelectedNodes = selectedNodes;
             this.AutoPopulateUrlWithSPContext = autoPopulateUrlWithSPContext;
             this.AutoPopulateUrlWithSPContextAssignBy = autoPopulateUrlWithSPContextAssignBy;
         }

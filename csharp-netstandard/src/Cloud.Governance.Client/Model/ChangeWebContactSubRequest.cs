@@ -46,9 +46,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="contactChangeSettings">contactChangeSettings.</param>
         public ChangeWebContactSubRequest(Guid id = default(Guid), ApiUser assignTo = default(ApiUser), string reason = default(string), ApiRequestProgressStatus progressStatus = default(ApiRequestProgressStatus), ChangeWebContactByUrlSetting contactChangeSettings = default(ChangeWebContactByUrlSetting))
         {
-            this.AssignTo = assignTo;
-            this.Reason = reason;
-            this.ContactChangeSettings = contactChangeSettings;
             this.Id = id;
             this.AssignTo = assignTo;
             this.Reason = reason;

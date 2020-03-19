@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         public ClonePermissionValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), string errorMessage = default(string))
         {
-            this.SiteUrl = siteUrl;
-            this.ErrorMessage = errorMessage;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.ErrorMessage = errorMessage;

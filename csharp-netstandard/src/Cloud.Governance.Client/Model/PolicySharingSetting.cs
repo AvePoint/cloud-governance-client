@@ -55,8 +55,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="accessRequestMessage">accessRequestMessage.</param>
         public PolicySharingSetting(bool isEnabled = default(bool), SharingCapabilities sharingCapabilities = default(SharingCapabilities), bool turnOffForNonOwnerUserSharing = default(bool), bool membersCanShare = default(bool), bool allowMembersEditMembership = default(bool), bool allowAccessRequests = default(bool), string requestAccessEmail = default(string), AccessRequestType accessRequestType = default(AccessRequestType), string accessRequestMessage = default(string))
         {
-            this.RequestAccessEmail = requestAccessEmail;
-            this.AccessRequestMessage = accessRequestMessage;
             this.IsEnabled = isEnabled;
             this.SharingCapabilities = sharingCapabilities;
             this.TurnOffForNonOwnerUserSharing = turnOffForNonOwnerUserSharing;

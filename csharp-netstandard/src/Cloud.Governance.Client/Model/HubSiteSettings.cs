@@ -44,7 +44,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="associatedHubSiteId">associatedHubSiteId.</param>
         public HubSiteSettings(bool enabled = default(bool), ConvertHubSiteActionType action = default(ConvertHubSiteActionType), Guid? associatedHubSiteId = default(Guid?))
         {
-            this.AssociatedHubSiteId = associatedHubSiteId;
             this.Enabled = enabled;
             this.Action = action;
             this.AssociatedHubSiteId = associatedHubSiteId;

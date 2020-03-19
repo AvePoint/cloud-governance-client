@@ -48,13 +48,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="sharePointSiteUrl">sharePointSiteUrl.</param>
         public AzureADGroup(Guid id = default(Guid), string objectId = default(string), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string description = default(string), bool privacy = default(bool), bool subscribe = default(bool), bool outsideSender = default(bool), string language = default(string), string classification = default(string), string sharePointSiteUrl = default(string))
         {
-            this.ObjectId = objectId;
-            this.GroupName = groupName;
-            this.Email = email;
-            this.Description = description;
-            this.Language = language;
-            this.Classification = classification;
-            this.SharePointSiteUrl = sharePointSiteUrl;
             this.Id = id;
             this.ObjectId = objectId;
             this.TenantId = tenantId;

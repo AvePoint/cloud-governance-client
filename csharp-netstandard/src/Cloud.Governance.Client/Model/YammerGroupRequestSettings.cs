@@ -54,8 +54,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.NameOrId = nameOrId;
             this.Description = description;
-            this.NameOrId = nameOrId;
-            this.Description = description;
             this.Type = type;
             this.JoinType = joinType;
             this.IsListInDirectory = isListInDirectory;

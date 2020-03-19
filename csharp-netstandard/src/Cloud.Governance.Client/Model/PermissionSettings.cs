@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="preventPermissionLevles">preventPermissionLevles.</param>
         public PermissionSettings(bool allowGrantUserPermission = default(bool), bool preventGrantSpecificPermissionLevels = default(bool), List<PermissionLevel> preventPermissionLevles = default(List<PermissionLevel>))
         {
-            this.PreventPermissionLevles = preventPermissionLevles;
             this.AllowGrantUserPermission = allowGrantUserPermission;
             this.PreventGrantSpecificPermissionLevels = preventGrantSpecificPermissionLevels;
             this.PreventPermissionLevles = preventPermissionLevles;

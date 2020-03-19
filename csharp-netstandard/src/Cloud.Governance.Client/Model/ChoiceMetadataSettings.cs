@@ -46,8 +46,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.Choices = choices;
             this.Value = value;
-            this.Choices = choices;
-            this.Value = value;
             this.ChoiceType = choiceType;
         }
         

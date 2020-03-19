@@ -107,20 +107,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="categoryId">categoryId.</param>
         public CreateListService(bool enableNavigation = default(bool), ListType defaultListType = default(ListType), ListVersionSettings versionSettings = default(ListVersionSettings), ListTemplateSettings listTemplateSettings = default(ListTemplateSettings), CreateListUrlSettings urlSettings = default(CreateListUrlSettings), bool allowBreakPermissionInheritance = default(bool), PermissionSettings permissionSettings = default(PermissionSettings), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), AssignBy listVersionAssignBy = default(AssignBy), AssignBy listTemplateAssignBy = default(AssignBy), AssignBy navigationAssignBy = default(AssignBy), AssignBy listTypeAssignBy = default(AssignBy), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
         {
-            this.VersionSettings = versionSettings;
-            this.ListTemplateSettings = listTemplateSettings;
-            this.UrlSettings = urlSettings;
-            this.PermissionSettings = permissionSettings;
-            this.ScopeSettings = scopeSettings;
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
             this.EnableNavigation = enableNavigation;
             this.DefaultListType = defaultListType;
             this.VersionSettings = versionSettings;

@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.Contacts = contacts;
             this.Metadatas = metadatas;
             this.Memberships = memberships;
-            this.Contacts = contacts;
-            this.Metadatas = metadatas;
-            this.Memberships = memberships;
         }
         
         /// <summary>

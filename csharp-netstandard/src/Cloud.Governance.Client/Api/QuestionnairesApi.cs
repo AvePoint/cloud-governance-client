@@ -310,10 +310,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of QuestionnaireRef</returns>
         public Cloud.Governance.Client.Client.ApiResponse< QuestionnaireRef > GetQuestionnaireByIdWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling QuestionnairesApi->GetQuestionnaireById");
-
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -332,8 +328,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -384,10 +379,6 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (QuestionnaireRef)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<QuestionnaireRef>> GetQuestionnaireByIdAsyncWithHttpInfo (Guid id)
         {
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'id' when calling QuestionnairesApi->GetQuestionnaireById");
-
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -407,8 +398,7 @@ namespace Cloud.Governance.Client.Api
             foreach (var _accept in _accepts)
                 localVarRequestOptions.HeaderParameters.Add("Accept", _accept);
             
-            if (id != null)
-                localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
 
             // authentication (ClientId) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientId")))
@@ -614,6 +604,10 @@ namespace Cloud.Governance.Client.Api
             if (objecttype == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'objecttype' when calling QuestionnairesApi->SubmitQuestionnaireInWorkspace");
 
+            // verify the required parameter 'objectid' is set
+            if (objectid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'objectid' when calling QuestionnairesApi->SubmitQuestionnaireInWorkspace");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -698,6 +692,10 @@ namespace Cloud.Governance.Client.Api
             // verify the required parameter 'objecttype' is set
             if (objecttype == null)
                 throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'objecttype' when calling QuestionnairesApi->SubmitQuestionnaireInWorkspace");
+
+            // verify the required parameter 'objectid' is set
+            if (objectid == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'objectid' when calling QuestionnairesApi->SubmitQuestionnaireInWorkspace");
 
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();

@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="templates">templates.</param>
         public PolicyWithTemplates(Guid policyId = default(Guid), string defaultTemplate = default(string), List<SiteTemplate> templates = default(List<SiteTemplate>))
         {
-            this.DefaultTemplate = defaultTemplate;
-            this.Templates = templates;
             this.PolicyId = policyId;
             this.DefaultTemplate = defaultTemplate;
             this.Templates = templates;

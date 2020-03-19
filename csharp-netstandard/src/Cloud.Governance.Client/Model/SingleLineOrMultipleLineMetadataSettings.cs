@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         public SingleLineOrMultipleLineMetadataSettings(string value = default(string))
         {
             this.Value = value;
-            this.Value = value;
         }
         
         /// <summary>

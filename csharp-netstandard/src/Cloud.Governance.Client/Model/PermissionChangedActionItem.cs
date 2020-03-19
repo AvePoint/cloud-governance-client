@@ -60,14 +60,6 @@ namespace Cloud.Governance.Client.Model
             this.Name = name;
             this.GroupChanges = groupChanges;
             this.PermissionChanges = permissionChanges;
-            this.ChangedBy = changedBy;
-            this.ObjectTitle = objectTitle;
-            this.ObjectUrl = objectUrl;
-            this.ObjectType = objectType;
-            this.Id = id;
-            this.Name = name;
-            this.GroupChanges = groupChanges;
-            this.PermissionChanges = permissionChanges;
             this.AccountType = accountType;
             this.ActionType = actionType;
             this.ChangedBy = changedBy;

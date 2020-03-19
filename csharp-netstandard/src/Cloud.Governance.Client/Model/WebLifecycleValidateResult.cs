@@ -42,10 +42,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         public WebLifecycleValidateResult(Guid webId = default(Guid), string webUrl = default(string), string webRelativeUrl = default(string), Guid siteId = default(Guid), string siteUrl = default(string), string errorMessage = default(string))
         {
-            this.WebUrl = webUrl;
-            this.WebRelativeUrl = webRelativeUrl;
-            this.SiteUrl = siteUrl;
-            this.ErrorMessage = errorMessage;
             this.WebId = webId;
             this.WebUrl = webUrl;
             this.WebRelativeUrl = webRelativeUrl;

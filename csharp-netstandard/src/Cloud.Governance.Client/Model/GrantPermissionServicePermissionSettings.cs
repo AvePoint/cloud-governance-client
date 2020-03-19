@@ -45,7 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="excludedPermissionLevles">excludedPermissionLevles.</param>
         public GrantPermissionServicePermissionSettings(AssignBy assignBy = default(AssignBy), bool isGrantPermissionDirectly = default(bool), bool enableExcludePermissionLevles = default(bool), List<PermissionLevel> excludedPermissionLevles = default(List<PermissionLevel>))
         {
-            this.ExcludedPermissionLevles = excludedPermissionLevles;
             this.AssignBy = assignBy;
             this.IsGrantPermissionDirectly = isGrantPermissionDirectly;
             this.EnableExcludePermissionLevles = enableExcludePermissionLevles;

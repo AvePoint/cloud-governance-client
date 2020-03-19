@@ -46,11 +46,6 @@ namespace Cloud.Governance.Client.Model
             this.GroupFilesLink = groupFilesLink;
             this.GroupConversationsLink = groupConversationsLink;
             this.GroupNotebookLink = groupNotebookLink;
-            this.GroupSiteLink = groupSiteLink;
-            this.GroupPlannerLink = groupPlannerLink;
-            this.GroupFilesLink = groupFilesLink;
-            this.GroupConversationsLink = groupConversationsLink;
-            this.GroupNotebookLink = groupNotebookLink;
         }
         
         /// <summary>

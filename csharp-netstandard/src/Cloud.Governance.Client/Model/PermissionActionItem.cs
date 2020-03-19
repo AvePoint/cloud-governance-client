@@ -71,18 +71,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.Id = id;
             this.IdInSharepoint = idInSharepoint;
-            this.DisplayName = displayName;
-            this.Level = level;
-            this.LevelDescription = levelDescription;
-            this.MemberOf = memberOf;
-            this.Path = path;
-            this.PermissionLevel = permissionLevel;
-            this.SharePointGroup = sharePointGroup;
-            this.TitleName = titleName;
-            this.UserOrGroup = userOrGroup;
-            this.ParentId = parentId;
-            this.Id = id;
-            this.IdInSharepoint = idInSharepoint;
             this.AccountType = accountType;
             this.DisplayName = displayName;
             this.Level = level;

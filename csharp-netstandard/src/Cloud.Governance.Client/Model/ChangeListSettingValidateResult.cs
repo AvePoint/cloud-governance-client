@@ -43,10 +43,6 @@ namespace Cloud.Governance.Client.Model
         public ChangeListSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string webUrl = default(string), Guid webId = default(Guid), List<SPList> lists = default(List<SPList>), string errorMessage = default(string))
         {
             this.SiteUrl = siteUrl;
-            this.WebUrl = webUrl;
-            this.Lists = lists;
-            this.ErrorMessage = errorMessage;
-            this.SiteUrl = siteUrl;
             this.SiteId = siteId;
             this.WebUrl = webUrl;
             this.WebId = webId;

@@ -48,12 +48,6 @@ namespace Cloud.Governance.Client.Model
             this.Description = description;
             this.Privacy = privacy;
             this.NetworkId = networkId;
-            this.Name = name;
-            this.Id = id;
-            this.ImageUrl = imageUrl;
-            this.Description = description;
-            this.Privacy = privacy;
-            this.NetworkId = networkId;
         }
         
         /// <summary>

@@ -39,8 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="password">password.</param>
         public TreeNodeExtension(int size = default(int), string userName = default(string), string password = default(string))
         {
-            this.UserName = userName;
-            this.Password = password;
             this.Size = size;
             this.UserName = userName;
             this.Password = password;

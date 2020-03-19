@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="textValidationRule">textValidationRule.</param>
         public CreateListUrlSettings(bool enableContructUrl = default(bool), ContructUrlSetting contructUrlSetting = default(ContructUrlSetting), bool enableUrlValidation = default(bool), TextValidationRuleRef textValidationRule = default(TextValidationRuleRef))
         {
-            this.ContructUrlSetting = contructUrlSetting;
-            this.TextValidationRule = textValidationRule;
             this.EnableContructUrl = enableContructUrl;
             this.ContructUrlSetting = contructUrlSetting;
             this.EnableUrlValidation = enableUrlValidation;

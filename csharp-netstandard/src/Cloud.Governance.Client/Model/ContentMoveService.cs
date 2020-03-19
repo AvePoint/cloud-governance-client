@@ -165,20 +165,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="categoryId">categoryId.</param>
         public ContentMoveService(ContentMoveMethod method = default(ContentMoveMethod), ContentMoveAction action = default(ContentMoveAction), CopyMoveSetting copySettings = default(CopyMoveSetting), CopyMoveSetting moveSettings = default(CopyMoveSetting), ContentMoveCommonSetting commonSettings = default(ContentMoveCommonSetting), AssignBy conflictResolutionAssignBy = default(AssignBy), AssignBy deleteTypeAssignBy = default(AssignBy), AssignBy deleteCheckedFilesAssignBy = default(AssignBy), AssignBy filterPolicyAssignBy = default(AssignBy), AssignBy methodAssignBy = default(AssignBy), AssignBy actionAssignBy = default(AssignBy), CopyMoveSettingAssignBy copySettingAssignBy = default(CopyMoveSettingAssignBy), CopyMoveSettingAssignBy moveSettingAssignBy = default(CopyMoveSettingAssignBy), AssignBy versionsAssignBy = default(AssignBy), AssignBy workflowAssignBy = default(AssignBy), AssignBy informationRightsManagementAssignBy = default(AssignBy), AssignBy nullColumnValueAssignBy = default(AssignBy), AssignBy modifiedByAndModifiedTimeAssignBy = default(AssignBy), AssignBy mappingSettingAssignBy = default(AssignBy), AssignBy backupEnvironmentAssignBy = default(AssignBy), AssignBy departmentAssignBy = default(AssignBy), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType type = default(ServiceType), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus status = default(CommonStatus), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
         {
-            this.CopySettings = copySettings;
-            this.MoveSettings = moveSettings;
-            this.CommonSettings = commonSettings;
-            this.CopySettingAssignBy = copySettingAssignBy;
-            this.MoveSettingAssignBy = moveSettingAssignBy;
-            this.Metadatas = metadatas;
-            this.Name = name;
-            this.Description = description;
-            this.Department = department;
-            this.Departments = departments;
-            this.ServiceContact = serviceContact;
-            this.ServiceAdminContact = serviceAdminContact;
-            this.CustomActions = customActions;
-            this.CategoryId = categoryId;
             this.Method = method;
             this.Action = action;
             this.CopySettings = copySettings;

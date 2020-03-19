@@ -43,12 +43,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         public ChangeSiteContactValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrators = default(List<ApiUser>), string errorMessage = default(string))
         {
-            this.SiteUrl = siteUrl;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.PrimaryAdministrator = primaryAdministrator;
-            this.AdditionalAdministrators = additionalAdministrators;
-            this.ErrorMessage = errorMessage;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.PrimaryContact = primaryContact;

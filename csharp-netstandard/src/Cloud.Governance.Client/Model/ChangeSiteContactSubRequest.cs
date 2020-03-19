@@ -46,9 +46,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="progressStatus">progressStatus.</param>
         public ChangeSiteContactSubRequest(Guid id = default(Guid), List<ApiUser> assignTo = default(List<ApiUser>), string reason = default(string), ChangeContactByUrlSetting adminContactSettings = default(ChangeContactByUrlSetting), ApiRequestProgressStatus progressStatus = default(ApiRequestProgressStatus))
         {
-            this.AssignTo = assignTo;
-            this.Reason = reason;
-            this.AdminContactSettings = adminContactSettings;
             this.Id = id;
             this.AssignTo = assignTo;
             this.Reason = reason;

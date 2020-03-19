@@ -50,8 +50,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableInviteGuestUser">enableInviteGuestUser.</param>
         public BriefGroupPolicy(Guid id = default(Guid), string name = default(string), string description = default(string), bool enableLeaseExpiration = default(bool), int leaseExpiredInterval = default(int), ApiDurationType leaseExpiredIntervalType = default(ApiDurationType), bool enableManageGroupSharing = default(bool), bool enableInviteAuthorizedGuestUser = default(bool), bool enableInviteGuestUser = default(bool))
         {
-            this.Name = name;
-            this.Description = description;
             this.Id = id;
             this.Name = name;
             this.Description = description;

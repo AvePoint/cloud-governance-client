@@ -64,11 +64,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="pendingAction">pendingAction.</param>
         public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType type = default(WorkspaceType), string siteUrl = default(string), string groupEmail = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase phase = default(AutoImportPhase), bool isCurrentRenewer = default(bool), DateTime createdTime = default(DateTime), SiteStatus status = default(SiteStatus), Guid autoImportProfileId = default(Guid), int pendingAction = default(int))
         {
-            this.Name = name;
-            this.SiteUrl = siteUrl;
-            this.GroupEmail = groupEmail;
-            this.PrimaryContact = primaryContact;
-            this.PrimaryContactEmail = primaryContactEmail;
             this.Id = id;
             this.Name = name;
             this.Type = type;

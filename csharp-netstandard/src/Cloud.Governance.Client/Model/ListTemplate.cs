@@ -54,9 +54,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.Title = title;
             this.Description = description;
-            this.Name = name;
-            this.Title = title;
-            this.Description = description;
             this.Type = type;
             this.BaseType = baseType;
             this.Name = name;

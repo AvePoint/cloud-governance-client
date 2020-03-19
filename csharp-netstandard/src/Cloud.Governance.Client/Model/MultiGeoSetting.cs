@@ -53,10 +53,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="allLocations">allLocations.</param>
         public MultiGeoSetting(bool isEnabled = default(bool), MultiGeoControlMode controlMode = default(MultiGeoControlMode), GeoLocationBase defaultLocation = default(GeoLocationBase), List<GeoLocationBase> selectedLocations = default(List<GeoLocationBase>), AssignBy locationAssignBy = default(AssignBy), string userRoleForLocation = default(string), List<GeoLocationBase> allLocations = default(List<GeoLocationBase>))
         {
-            this.DefaultLocation = defaultLocation;
-            this.SelectedLocations = selectedLocations;
-            this.UserRoleForLocation = userRoleForLocation;
-            this.AllLocations = allLocations;
             this.IsEnabled = isEnabled;
             this.ControlMode = controlMode;
             this.DefaultLocation = defaultLocation;

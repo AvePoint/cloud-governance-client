@@ -72,24 +72,6 @@ namespace Cloud.Governance.Client.Model
             this.SiteTitle = siteTitle;
             this.SiteDescription = siteDescription;
             this.Requester = requester;
-            this.None = none;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.SiteId = siteId;
-            this.SiteUrl = siteUrl;
-            this.GroupName = groupName;
-            this.ExpirationDate = expirationDate;
-            this.GroupOwners = groupOwners;
-            this.AutoTaskActionHistories = autoTaskActionHistories;
-            this.InactivityThresholdDate = inactivityThresholdDate;
-            this.GroupEmail = groupEmail;
-            this.GroupId = groupId;
-            this.PolicyName = policyName;
-            this.PrimaryAdministrator = primaryAdministrator;
-            this.SiteTemplate = siteTemplate;
-            this.SiteTitle = siteTitle;
-            this.SiteDescription = siteDescription;
-            this.Requester = requester;
         }
         
         /// <summary>

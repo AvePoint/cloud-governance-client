@@ -40,9 +40,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         public TextValidationRuleRef(Guid id = default(Guid), string name = default(string), string expression = default(string), string errorMessage = default(string))
         {
-            this.Name = name;
-            this.Expression = expression;
-            this.ErrorMessage = errorMessage;
             this.Id = id;
             this.Name = name;
             this.Expression = expression;

@@ -61,17 +61,6 @@ namespace Cloud.Governance.Client.Model
             this.GroupName = groupName;
             this.GroupEmail = groupEmail;
             this.GroupDescription = groupDescription;
-            this.Classification = classification;
-            this.AssociatedHubSiteId = associatedHubSiteId;
-            this.DynamicMembershipRules = dynamicMembershipRules;
-            this.Metadatas = metadatas;
-            this.ErrorMessage = errorMessage;
-            this.PrimaryContact = primaryContact;
-            this.SecondaryContact = secondaryContact;
-            this.GroupId = groupId;
-            this.GroupName = groupName;
-            this.GroupEmail = groupEmail;
-            this.GroupDescription = groupDescription;
             this.IsEnableSubscribeMembers = isEnableSubscribeMembers;
             this.IsEnableOutsideSender = isEnableOutsideSender;
             this.Classification = classification;

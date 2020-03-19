@@ -40,8 +40,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.UserPermissions = userPermissions;
             this.GroupPermissions = groupPermissions;
-            this.UserPermissions = userPermissions;
-            this.GroupPermissions = groupPermissions;
         }
         
         /// <summary>

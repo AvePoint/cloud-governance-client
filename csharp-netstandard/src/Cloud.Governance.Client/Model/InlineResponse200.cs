@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
             this.Contact = contact;
             this.License = license;
             this.Organization = organization;
-            this.Contact = contact;
-            this.License = license;
-            this.Organization = organization;
         }
         
         /// <summary>

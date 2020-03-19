@@ -43,8 +43,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.ParentUrl = parentUrl;
             this.Uri = uri;
-            this.ParentUrl = parentUrl;
-            this.Uri = uri;
             this.IgnoreLock = ignoreLock;
             this.IsEditTask = isEditTask;
             this.IsFromQuestionnaire = isFromQuestionnaire;

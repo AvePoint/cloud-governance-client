@@ -52,10 +52,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isDeleteCheckedFiles">isDeleteCheckedFiles.</param>
         public ContentMoveCommonSetting(bool isIncludeVersions = default(bool), bool isIncludeWorkflowDefinition = default(bool), bool isDisableInformationRightsManagement = default(bool), bool isPreserveNullColumnValues = default(bool), bool isKeepModifiedByAndModifiedTime = default(bool), ContentMoveProfileMappings profileMappings = default(ContentMoveProfileMappings), BackupEnvironmentSetting backupSettings = default(BackupEnvironmentSetting), ConflictResolutionSetting conflictResolutionSettings = default(ConflictResolutionSetting), GuidModel filterPolicy = default(GuidModel), DeleteType deleteType = default(DeleteType), bool isDeleteCheckedFiles = default(bool))
         {
-            this.ProfileMappings = profileMappings;
-            this.BackupSettings = backupSettings;
-            this.ConflictResolutionSettings = conflictResolutionSettings;
-            this.FilterPolicy = filterPolicy;
             this.IsIncludeVersions = isIncludeVersions;
             this.IsIncludeWorkflowDefinition = isIncludeWorkflowDefinition;
             this.IsDisableInformationRightsManagement = isDisableInformationRightsManagement;

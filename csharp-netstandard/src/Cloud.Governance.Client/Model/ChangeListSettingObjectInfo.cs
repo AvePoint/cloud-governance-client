@@ -43,10 +43,6 @@ namespace Cloud.Governance.Client.Model
         public ChangeListSettingObjectInfo(string siteUrl = default(string), Guid webId = default(Guid), string webUrl = default(string), Guid siteId = default(Guid), string objectUrl = default(string), string objectTitle = default(string))
         {
             this.SiteUrl = siteUrl;
-            this.WebUrl = webUrl;
-            this.ObjectUrl = objectUrl;
-            this.ObjectTitle = objectTitle;
-            this.SiteUrl = siteUrl;
             this.WebId = webId;
             this.WebUrl = webUrl;
             this.SiteId = siteId;

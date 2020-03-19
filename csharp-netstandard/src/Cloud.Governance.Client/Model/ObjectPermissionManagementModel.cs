@@ -59,11 +59,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="grantPermissionSetting">grantPermissionSetting.</param>
         public ObjectPermissionManagementModel(SPPrincipalType objectType = default(SPPrincipalType), ApiUser objectInfo = default(ApiUser), ManagePermissionAction action = default(ManagePermissionAction), List<string> permissions = default(List<string>), List<string> originalPermissions = default(List<string>), ExternalUserType externalUserType = default(ExternalUserType), List<SharingEnabledUser> members = default(List<SharingEnabledUser>), GrantPermissionModel grantPermissionSetting = default(GrantPermissionModel))
         {
-            this.ObjectInfo = objectInfo;
-            this.Permissions = permissions;
-            this.OriginalPermissions = originalPermissions;
-            this.Members = members;
-            this.GrantPermissionSetting = grantPermissionSetting;
             this.ObjectType = objectType;
             this.ObjectInfo = objectInfo;
             this.Action = action;

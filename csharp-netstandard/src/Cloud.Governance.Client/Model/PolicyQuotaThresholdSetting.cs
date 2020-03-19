@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="quotaThresholdNotifyUsers">quotaThresholdNotifyUsers.</param>
         public PolicyQuotaThresholdSetting(bool enableQuotaThreshold = default(bool), int quotaThreshold = default(int), string quotaThresholdNotifyUsers = default(string))
         {
-            this.QuotaThresholdNotifyUsers = quotaThresholdNotifyUsers;
             this.EnableQuotaThreshold = enableQuotaThreshold;
             this.QuotaThreshold = quotaThreshold;
             this.QuotaThresholdNotifyUsers = quotaThresholdNotifyUsers;

@@ -46,8 +46,6 @@ namespace Cloud.Governance.Client.Model
         {
             this.Source = source;
             this.Destination = destination;
-            this.Source = source;
-            this.Destination = destination;
             this.Action = action;
         }
         

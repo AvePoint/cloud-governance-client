@@ -50,18 +50,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="action">action.</param>
         public ClonePermissionSecuritySearchResult(string permissionsAfterClone = default(string), Guid id = default(Guid), string objectType = default(string), ApprovalAction action = default(ApprovalAction))
         {
-            this.PermissionsAfterClone = permissionsAfterClone;
-            // to ensure "id" is required (not null)
-            if (id == null)
-            {
-                throw new InvalidDataException("id is a required property for ClonePermissionSecuritySearchResult and cannot be null");
-            }
-            else
-            {
-                this.Id = id;
-            }
-
-            this.ObjectType = objectType;
+            this.Id = id;
             this.PermissionsAfterClone = permissionsAfterClone;
             this.ObjectType = objectType;
             this.Action = action;

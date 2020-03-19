@@ -39,7 +39,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="termsAndConditions">termsAndConditions.</param>
         public BooleanMetadataSettings(bool enableTerms = default(bool), bool value = default(bool), string termsAndConditions = default(string))
         {
-            this.TermsAndConditions = termsAndConditions;
             this.EnableTerms = enableTerms;
             this.Value = value;
             this.TermsAndConditions = termsAndConditions;

@@ -57,12 +57,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         public ChangePermissionValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string objectUrl = default(string), bool isInherit = default(bool), NodeType inheritNodeType = default(NodeType), string topInheritUrl = default(string), NodeType checkType = default(NodeType), string errorMessage = default(string))
         {
-            this.SiteUrl = siteUrl;
-            this.WebServerRelativeUrl = webServerRelativeUrl;
-            this.ListTitle = listTitle;
-            this.ObjectUrl = objectUrl;
-            this.TopInheritUrl = topInheritUrl;
-            this.ErrorMessage = errorMessage;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.WebId = webId;

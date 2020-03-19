@@ -42,9 +42,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isGroup">isGroup.</param>
         public GroupUser(bool isEnforce = default(bool), bool isHide = default(bool), string id = default(string), string loginName = default(string), string displayName = default(string), bool isGroup = default(bool))
         {
-            this.Id = id;
-            this.LoginName = loginName;
-            this.DisplayName = displayName;
             this.IsEnforce = isEnforce;
             this.IsHide = isHide;
             this.Id = id;

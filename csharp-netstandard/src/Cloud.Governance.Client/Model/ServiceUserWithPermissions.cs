@@ -44,8 +44,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="permissionLevels">permissionLevels.</param>
         public ServiceUserWithPermissions(AssignBy userAssignBy = default(AssignBy), ApiUser user = default(ApiUser), List<PermissionLevel> permissionLevels = default(List<PermissionLevel>))
         {
-            this.User = user;
-            this.PermissionLevels = permissionLevels;
             this.UserAssignBy = userAssignBy;
             this.User = user;
             this.PermissionLevels = permissionLevels;

@@ -45,8 +45,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="assignBy">assignBy.</param>
         public DpmServiceSetting(bool isEnabled = default(bool), string defaultValue = default(string), List<string> selectedItems = default(List<string>), AssignBy assignBy = default(AssignBy))
         {
-            this.DefaultValue = defaultValue;
-            this.SelectedItems = selectedItems;
             this.IsEnabled = isEnabled;
             this.DefaultValue = defaultValue;
             this.SelectedItems = selectedItems;

@@ -77,15 +77,6 @@ namespace Cloud.Governance.Client.Model
         public ChangeSitePolicyRequest(GuidModel policy = default(GuidModel), bool isLeaseEnabled = default(bool), AssignBy changePolicyConfig = default(AssignBy), StartDateType startDateType = default(StartDateType), DateTime? specifyStartDate = default(DateTime?), SiteLifecycleActionType action = default(SiteLifecycleActionType), Guid siteId = default(Guid), string siteUrl = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.Policy = policy;
-            this.SpecifyStartDate = specifyStartDate;
-            this.SiteUrl = siteUrl;
-            this.Id = id;
-            this.Department = department;
-            this.Summary = summary;
-            this.NotesToApprovers = notesToApprovers;
-            this.QuestionnaireId = questionnaireId;
-            this.Metadatas = metadatas;
-            this.Policy = policy;
             this.IsLeaseEnabled = isLeaseEnabled;
             this.ChangePolicyConfig = changePolicyConfig;
             this.StartDateType = startDateType;

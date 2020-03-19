@@ -43,7 +43,6 @@ namespace Cloud.Governance.Client.Model
         /// <param name="helpLink">helpLink.</param>
         public CustomHelpLinkModel(HelpLinkType linkType = default(HelpLinkType), string helpLink = default(string))
         {
-            this.HelpLink = helpLink;
             this.LinkType = linkType;
             this.HelpLink = helpLink;
         }
