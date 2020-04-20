@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Admin\GetAllRequestsExample.cs" />
     <Compile Include="CreateSiteRequestExample.cs" />
+    <Compile Include="CreateSiteWithMultiGeoRequestExample.cs" />
     <Compile Include="ExampleBase.cs" />
     <Compile Include="Admin\GetAllSitesExample.cs" />
     <Compile Include="ManagePermissionRequestExample.cs" />

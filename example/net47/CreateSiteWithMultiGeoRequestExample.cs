@@ -5,9 +5,8 @@
     using Cloud.Governance.Client.Model;
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics;
 
-    public class CreateSiteRequestExample:ExampleBase
+    public class CreateSiteWithMultiGeoRequestExample: ExampleBase
     {
         public override void Run()
         {
@@ -23,9 +22,25 @@
                 request.Summary = siteName + " Summary";
                 request.SiteTitle = siteName + " Title";
 
+                var apiServiceInstance = new ServicesApi(Configuration.Default);
+                CreateSiteService serviceInfo = apiServiceInstance.GetCreateSiteService(request.ServiceId);
+                var allLocations = serviceInfo.MultiGeoSetting.AllLocations;
+
+                var locationName = "KOR";
+                var locationDisplayName = "Korea";
+                request.MultiGeoLocation = new GeoLocationBase { Name = locationName, DisplayName = locationDisplayName };
+                var rootSiteUrl = "https://xxxxx.sharepoint.com";
+                foreach (var location in allLocations)
+                {
+                    if (location.Name.Equals(locationName))
+                    {
+                        rootSiteUrl = location.RootSiteUrl;
+                        break;
+                    }
+                }
                 request.SiteUrl = new SiteUrl()
                 {
-                    Root = "https://xxxxx.sharepoint.com",
+                    Root = rootSiteUrl,
                     Name = siteName,
                     ManagedPath = "/sites/"
                 };
