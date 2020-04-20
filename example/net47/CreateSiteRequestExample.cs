@@ -23,12 +23,39 @@
                 request.Summary = siteName + " Summary";
                 request.SiteTitle = siteName + " Title";
 
+#if MultiGeo
+
+                var apiServiceInstance = new ServicesApi(Configuration.Default);
+                CreateSiteService serviceInfo = apiServiceInstance.GetCreateSiteService(request.ServiceId);
+                var allLocations = serviceInfo.MultiGeoSetting.AllLocations;
+
+                var locationName = "KOR";
+                var locationDisplayName = "Korea";
+                request.MultiGeoLocation = new GeoLocationBase { Name = locationName, DisplayName = locationDisplayName };
+                var rootSiteUrl = "https://xxxxx.sharepoint.com";
+                foreach (var location in allLocations)
+                {
+                    if (location.Name.Equals(locationName))
+                    {
+                        rootSiteUrl = location.RootSiteUrl;
+                        break;
+                    }
+                }
+                request.SiteUrl = new SiteUrl()
+                {
+                    Root = rootSiteUrl,
+                    Name = siteName,
+                    ManagedPath = "/sites/"
+                };
+
+#else
                 request.SiteUrl = new SiteUrl()
                 {
                     Root = "https://xxxxx.sharepoint.com",
                     Name = siteName,
                     ManagedPath = "/sites/"
                 };
+#endif
 
                 request.PolicyId = new Guid("ac758b7f-6079-4fd0-8250-48490a5a34a6");
                 request.TimeZone = 21;
@@ -52,7 +79,10 @@
                     LoginName = "SecondaryContact@example.com",
                     DisplayName = "SecondaryContact"
                 };
-               
+
+                request.HubSiteSettings = new HubSiteSettings();
+                request.UserPermissions = new List<RequestUserWithPermissions>();
+                request.GroupPermissions = new List<RequestGroupWithPermissions>();
                 request.Metadatas = this.GetSampleMetadatas();
 
                 var result = apiInstance.SubmitCreateSiteRequest(request);
