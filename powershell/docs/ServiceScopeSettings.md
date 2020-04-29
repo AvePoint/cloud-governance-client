@@ -1,0 +1,26 @@
+# ServiceScopeSettings
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**SelectedNodes** | [**SPNode[]**](SPNode.md) |  | [optional] [default to null]
+**AutoPopulateUrlWithSPContext** | **Boolean** |  | [optional] [default to null]
+**AutoPopulateUrlWithSPContextAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
+
+## Examples
+
+- Create a new object
+```powershell
+New-Cloud.Governance.ClientServiceScopeSettings  -SelectedNodes null `
+ -AutoPopulateUrlWithSPContext null `
+ -AutoPopulateUrlWithSPContextAssignBy null
+```
+
+- Convert the object to JSON
+```powershell
+$ | Convert-ToJSON
+```
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
