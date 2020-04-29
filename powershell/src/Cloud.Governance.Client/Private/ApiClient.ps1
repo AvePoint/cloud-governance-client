@@ -42,6 +42,10 @@ function Invoke-ApiClient {
     $RequestUri = $Configuration["BaseUrl"] + $Uri
     $SkipCertificateCheck = $Configuration["SkipCertificateCheck"]
 
+    if($Configuration["Authorization"]){
+     $HeaderParameters["Authorization"]=$Configuration["Authorization"]
+    }
+
     # cookie parameters
     foreach ($Parameter in $CookieParameters.GetEnumerator()) {
         if ($Parameter.Name -eq "cookieAuth") {
@@ -68,7 +72,7 @@ function Invoke-ApiClient {
     $HeaderParameters['Accept-Encoding']='gzip, deflate'
 
     # constrcut URL query string
-    $HttpValues = New-Object System.Collections.Specialized.NameValueCollection
+    $HttpValues = [System.Web.HttpUtility]::ParseQueryString([String]::Empty)
     foreach ($Parameter in $QueryParameters.GetEnumerator()) {
         if ($Parameter.Value.Count -gt 1) { // array
             foreach ($Value in $Parameter.Value) {

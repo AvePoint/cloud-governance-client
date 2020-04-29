@@ -54,7 +54,7 @@ $Manifest = @{
     CompanyName = 'AvePoint'
     Description = 'PowerShell API client for AvePoint Cloud Governance'
 
-    ModuleVersion = '1.0.4'
+    ModuleVersion = '1.0.5'
 
     RootModule = 'Cloud.Governance.Client.psm1'
     Guid = '{38968A2B-707F-4EE7-A45F-195CB4B709D5}' # Has to be static, otherwise each new build will be considered different module
@@ -65,6 +65,7 @@ $Manifest = @{
     VariablesToExport = @()
     AliasesToExport = @()
     CmdletsToExport = @()
+    RequiredAssemblies = @('System.Web')
     Tags = 'AvePoint,CloudGovernance,API,CG,ACG,Cloud,Governance'
     LicenseUri = 'https://licenses.nuget.org/MIT'
     ProjectUri = 'https://github.com/AvePoint/cloud-governance-client'
