@@ -4,6 +4,8 @@
 
 *  [**C#**](https://github.com/AvePoint/cloud-governance-client/tree/master/csharp-netstandard)
 
+*  [**PowerShell**](https://github.com/AvePoint/cloud-governance-client/tree/master/powershell)
+
 *  [**JavaScript**](https://github.com/AvePoint/cloud-governance-client/tree/master/javascript_promise)
 
 <br/><br/>
