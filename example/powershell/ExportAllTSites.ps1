@@ -1,16 +1,31 @@
 
 $ModuleName="Cloud.Governance.Client"
-if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "1.0.5")){
+if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "1.0.5" -ErrorAction Ignore)){
+    Write-Host "Begin to install module $ModuleName"
     Install-Module -Name $ModuleName -Force -MinimumVersion "1.0.5"
+    Write-Host "Install module successfully"
 }
 
 Import-Module -Name $ModuleName
 
 $Configuration = Get-Configuration
-$Configuration["BaseUrl"] = "API URL"
-$Configuration["ApiKey"]["clientId"] = ""
+$Configuration["BaseUrl"] = ""
 $Configuration["ApiKey"]["clientSecret"] = ""
 $Configuration["ApiKey"]["userPrincipalName"] = ""
+
+if($Configuration["BaseUrl"] -eq ""){
+ $Configuration["BaseUrl"] = Read-Host -Prompt 'Input API URL'
+}
+
+if($Configuration["ApiKey"]["userPrincipalName"] -eq ""){
+ $Configuration["ApiKey"]["userPrincipalName"] = Read-Host -Prompt 'Input UserPrincipalName'
+}
+
+if($Configuration["ApiKey"]["clientSecret"] -eq ""){
+ $Configuration["ApiKey"]["clientSecret"] = Read-Host -Prompt 'Input Client Secret'
+}
+
+
 
 $Top = 1000
 
