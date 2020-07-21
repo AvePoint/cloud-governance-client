@@ -12,8 +12,6 @@
         static ExampleBase()
         {
             Configuration.Default.BasePath = "https://api_base_url";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "ceb5...");
 
             // Configure API key authorization: ClientSecret
             Configuration.Default.AddApiKey("clientSecret", "BtH...");
