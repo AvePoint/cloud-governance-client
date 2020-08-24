@@ -38,37 +38,37 @@ namespace Cloud.Governance.Client.Model
         /// Enum UserOrGroup for value: UserOrGroup
         /// </summary>
         [EnumMember(Value = "UserOrGroup")]
-        UserOrGroup = 1,
+        UserOrGroup = 0,
 
         /// <summary>
         /// Enum ObjeceSiteRoles for value: ObjeceSiteRoles
         /// </summary>
         [EnumMember(Value = "ObjeceSiteRoles")]
-        ObjeceSiteRoles = 2,
+        ObjeceSiteRoles = 1,
 
         /// <summary>
         /// Enum SharePointOnlineGroup for value: SharePointOnlineGroup
         /// </summary>
         [EnumMember(Value = "SharePointOnlineGroup")]
-        SharePointOnlineGroup = 3,
+        SharePointOnlineGroup = 2,
 
         /// <summary>
         /// Enum GroupRoles for value: GroupRoles
         /// </summary>
         [EnumMember(Value = "GroupRoles")]
-        GroupRoles = 4,
+        GroupRoles = 3,
 
         /// <summary>
         /// Enum PermissionLevel for value: PermissionLevel
         /// </summary>
         [EnumMember(Value = "PermissionLevel")]
-        PermissionLevel = 5,
+        PermissionLevel = 4,
 
         /// <summary>
         /// Enum AzureADProperty for value: AzureADProperty
         /// </summary>
         [EnumMember(Value = "AzureADProperty")]
-        AzureADProperty = 6
+        AzureADProperty = 5,
 
     }
 

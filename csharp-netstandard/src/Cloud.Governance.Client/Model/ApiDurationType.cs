@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum Day for value: Day
         /// </summary>
         [EnumMember(Value = "Day")]
-        Day = 1,
+        Day = 0,
 
         /// <summary>
         /// Enum Week for value: Week
         /// </summary>
         [EnumMember(Value = "Week")]
-        Week = 2,
+        Week = 1,
 
         /// <summary>
         /// Enum Month for value: Month
         /// </summary>
         [EnumMember(Value = "Month")]
-        Month = 3,
+        Month = 2,
 
         /// <summary>
         /// Enum Year for value: Year
         /// </summary>
         [EnumMember(Value = "Year")]
-        Year = 4
+        Year = 3,
 
     }
 

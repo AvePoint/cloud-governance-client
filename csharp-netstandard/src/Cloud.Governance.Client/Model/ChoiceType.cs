@@ -50,7 +50,7 @@ namespace Cloud.Governance.Client.Model
         /// Enum CheckBoxes for value: CheckBoxes
         /// </summary>
         [EnumMember(Value = "CheckBoxes")]
-        CheckBoxes = 3
+        CheckBoxes = 3,
 
     }
 

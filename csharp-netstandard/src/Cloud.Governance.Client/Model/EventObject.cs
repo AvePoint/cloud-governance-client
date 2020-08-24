@@ -38,61 +38,61 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum ServiceDefinition for value: ServiceDefinition
         /// </summary>
         [EnumMember(Value = "ServiceDefinition")]
-        ServiceDefinition = 2,
+        ServiceDefinition = 1,
 
         /// <summary>
         /// Enum PolicyDefinition for value: PolicyDefinition
         /// </summary>
         [EnumMember(Value = "PolicyDefinition")]
-        PolicyDefinition = 3,
+        PolicyDefinition = 2,
 
         /// <summary>
         /// Enum WorkflowDefinition for value: WorkflowDefinition
         /// </summary>
         [EnumMember(Value = "WorkflowDefinition")]
-        WorkflowDefinition = 4,
+        WorkflowDefinition = 3,
 
         /// <summary>
         /// Enum SystemSetting for value: SystemSetting
         /// </summary>
         [EnumMember(Value = "SystemSetting")]
-        SystemSetting = 5,
+        SystemSetting = 4,
 
         /// <summary>
         /// Enum System for value: System
         /// </summary>
         [EnumMember(Value = "System")]
-        System = 6,
+        System = 5,
 
         /// <summary>
         /// Enum Requests for value: Requests
         /// </summary>
         [EnumMember(Value = "Requests")]
-        Requests = 7,
+        Requests = 6,
 
         /// <summary>
         /// Enum Tasks for value: Tasks
         /// </summary>
         [EnumMember(Value = "Tasks")]
-        Tasks = 8,
+        Tasks = 7,
 
         /// <summary>
         /// Enum MySites for value: MySites
         /// </summary>
         [EnumMember(Value = "MySites")]
-        MySites = 9,
+        MySites = 8,
 
         /// <summary>
         /// Enum MyTeamsAndGroups for value: MyTeamsAndGroups
         /// </summary>
         [EnumMember(Value = "MyTeamsAndGroups")]
-        MyTeamsAndGroups = 10
+        MyTeamsAndGroups = 9,
 
     }
 

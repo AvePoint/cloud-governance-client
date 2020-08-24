@@ -38,55 +38,55 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Skipped for value: Skipped
         /// </summary>
         [EnumMember(Value = "Skipped")]
-        Skipped = 2,
+        Skipped = 1,
 
         /// <summary>
         /// Enum Approved for value: Approved
         /// </summary>
         [EnumMember(Value = "Approved")]
-        Approved = 3,
+        Approved = 2,
 
         /// <summary>
         /// Enum Reassign for value: Reassign
         /// </summary>
         [EnumMember(Value = "Reassign")]
-        Reassign = 4,
+        Reassign = 3,
 
         /// <summary>
         /// Enum ApplyPolicy for value: ApplyPolicy
         /// </summary>
         [EnumMember(Value = "ApplyPolicy")]
-        ApplyPolicy = 5,
+        ApplyPolicy = 4,
 
         /// <summary>
         /// Enum RenewalTaskAssigned for value: RenewalTaskAssigned
         /// </summary>
         [EnumMember(Value = "RenewalTaskAssigned")]
-        RenewalTaskAssigned = 6,
+        RenewalTaskAssigned = 5,
 
         /// <summary>
         /// Enum SiteCollectionLocked for value: SiteCollectionLocked
         /// </summary>
         [EnumMember(Value = "SiteCollectionLocked")]
-        SiteCollectionLocked = 7,
+        SiteCollectionLocked = 6,
 
         /// <summary>
         /// Enum ChangePolicy for value: ChangePolicy
         /// </summary>
         [EnumMember(Value = "ChangePolicy")]
-        ChangePolicy = 8,
+        ChangePolicy = 7,
 
         /// <summary>
         /// Enum CancelRenewalTask for value: CancelRenewalTask
         /// </summary>
         [EnumMember(Value = "CancelRenewalTask")]
-        CancelRenewalTask = 9
+        CancelRenewalTask = 8,
 
     }
 

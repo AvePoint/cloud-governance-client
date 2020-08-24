@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum View for value: View
         /// </summary>
         [EnumMember(Value = "View")]
-        View = 1,
+        View = 0,
 
         /// <summary>
         /// Enum Edit for value: Edit
         /// </summary>
         [EnumMember(Value = "Edit")]
-        Edit = 2
+        Edit = 1,
 
     }
 

@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Text for value: Text
         /// </summary>
         [EnumMember(Value = "Text")]
-        Text = 1,
+        Text = 0,
 
         /// <summary>
         /// Enum Metadata for value: Metadata
         /// </summary>
         [EnumMember(Value = "Metadata")]
-        Metadata = 2
+        Metadata = 1,
 
     }
 

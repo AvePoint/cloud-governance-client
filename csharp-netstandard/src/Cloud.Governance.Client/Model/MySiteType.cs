@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Site for value: Site
         /// </summary>
         [EnumMember(Value = "Site")]
-        Site = 1,
+        Site = 0,
 
         /// <summary>
         /// Enum Web for value: Web
         /// </summary>
         [EnumMember(Value = "Web")]
-        Web = 2
+        Web = 1,
 
     }
 

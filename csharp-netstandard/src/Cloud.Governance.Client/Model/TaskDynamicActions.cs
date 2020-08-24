@@ -38,67 +38,67 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Extend for value: Extend
         /// </summary>
         [EnumMember(Value = "Extend")]
-        Extend = 2,
+        Extend = 1,
 
         /// <summary>
         /// Enum Archive for value: Archive
         /// </summary>
         [EnumMember(Value = "Archive")]
-        Archive = 3,
+        Archive = 2,
 
         /// <summary>
         /// Enum ChangePolicy for value: ChangePolicy
         /// </summary>
         [EnumMember(Value = "ChangePolicy")]
-        ChangePolicy = 4,
+        ChangePolicy = 3,
 
         /// <summary>
         /// Enum OffBoarding for value: OffBoarding
         /// </summary>
         [EnumMember(Value = "OffBoarding")]
-        OffBoarding = 5,
+        OffBoarding = 4,
 
         /// <summary>
         /// Enum Delete for value: Delete
         /// </summary>
         [EnumMember(Value = "Delete")]
-        Delete = 6,
+        Delete = 5,
 
         /// <summary>
         /// Enum ContinueAccess for value: ContinueAccess
         /// </summary>
         [EnumMember(Value = "ContinueAccess")]
-        ContinueAccess = 7,
+        ContinueAccess = 6,
 
         /// <summary>
         /// Enum Claim for value: Claim
         /// </summary>
         [EnumMember(Value = "Claim")]
-        Claim = 8,
+        Claim = 7,
 
         /// <summary>
         /// Enum Decline for value: Decline
         /// </summary>
         [EnumMember(Value = "Decline")]
-        Decline = 9,
+        Decline = 8,
 
         /// <summary>
         /// Enum SpecifyContacts for value: SpecifyContacts
         /// </summary>
         [EnumMember(Value = "SpecifyContacts")]
-        SpecifyContacts = 10,
+        SpecifyContacts = 9,
 
         /// <summary>
         /// Enum SpecifySecondaryContact for value: SpecifySecondaryContact
         /// </summary>
         [EnumMember(Value = "SpecifySecondaryContact")]
-        SpecifySecondaryContact = 11
+        SpecifySecondaryContact = 10,
 
     }
 

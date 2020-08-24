@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum AddUserToTheSameGroup for value: AddUserToTheSameGroup
         /// </summary>
         [EnumMember(Value = "AddUserToTheSameGroup")]
-        AddUserToTheSameGroup = 1,
+        AddUserToTheSameGroup = 0,
 
         /// <summary>
         /// Enum GranPermissionDirectly for value: GranPermissionDirectly
         /// </summary>
         [EnumMember(Value = "GranPermissionDirectly")]
-        GranPermissionDirectly = 2
+        GranPermissionDirectly = 1,
 
     }
 

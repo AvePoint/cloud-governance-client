@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Duration for value: Duration
         /// </summary>
         [EnumMember(Value = "Duration")]
-        Duration = 1,
+        Duration = 0,
 
         /// <summary>
         /// Enum Date for value: Date
         /// </summary>
         [EnumMember(Value = "Date")]
-        Date = 2
+        Date = 1,
 
     }
 

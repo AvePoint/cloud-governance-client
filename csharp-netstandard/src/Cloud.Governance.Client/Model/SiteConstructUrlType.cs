@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum ManualInputUrl for value: ManualInputUrl
         /// </summary>
         [EnumMember(Value = "ManualInputUrl")]
-        ManualInputUrl = 1,
+        ManualInputUrl = 0,
 
         /// <summary>
         /// Enum AutoGenerateUrl for value: AutoGenerateUrl
         /// </summary>
         [EnumMember(Value = "AutoGenerateUrl")]
-        AutoGenerateUrl = 2
+        AutoGenerateUrl = 1,
 
     }
 

@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Site for value: Site
         /// </summary>
         [EnumMember(Value = "Site")]
-        Site = 1,
+        Site = 0,
 
         /// <summary>
         /// Enum Office365Group for value: Office365Group
         /// </summary>
         [EnumMember(Value = "Office365Group")]
-        Office365Group = 2
+        Office365Group = 1,
 
     }
 

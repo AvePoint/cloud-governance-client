@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Peers for value: Peers
         /// </summary>
         [EnumMember(Value = "Peers")]
-        Peers = 2,
+        Peers = 1,
 
         /// <summary>
         /// Enum DirectSubordinate for value: DirectSubordinate
         /// </summary>
         [EnumMember(Value = "DirectSubordinate")]
-        DirectSubordinate = 3,
+        DirectSubordinate = 2,
 
         /// <summary>
         /// Enum IndirectSubordinate for value: IndirectSubordinate
         /// </summary>
         [EnumMember(Value = "IndirectSubordinate")]
-        IndirectSubordinate = 4
+        IndirectSubordinate = 3,
 
     }
 

@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Applying for value: Applying
         /// </summary>
         [EnumMember(Value = "Applying")]
-        Applying = 2,
+        Applying = 1,
 
         /// <summary>
         /// Enum Waiting for value: Waiting
         /// </summary>
         [EnumMember(Value = "Waiting")]
-        Waiting = 3,
+        Waiting = 2,
 
         /// <summary>
         /// Enum Succeed for value: Succeed
         /// </summary>
         [EnumMember(Value = "Succeed")]
-        Succeed = 4,
+        Succeed = 3,
 
         /// <summary>
         /// Enum Failed for value: Failed
         /// </summary>
         [EnumMember(Value = "Failed")]
-        Failed = 5
+        Failed = 4,
 
     }
 

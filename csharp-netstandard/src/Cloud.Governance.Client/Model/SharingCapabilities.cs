@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum Disabled for value: Disabled
         /// </summary>
         [EnumMember(Value = "Disabled")]
-        Disabled = 1,
+        Disabled = 0,
 
         /// <summary>
         /// Enum ExternalUserSharingOnly for value: ExternalUserSharingOnly
         /// </summary>
         [EnumMember(Value = "ExternalUserSharingOnly")]
-        ExternalUserSharingOnly = 2,
+        ExternalUserSharingOnly = 1,
 
         /// <summary>
         /// Enum ExternalUserAndGuestSharing for value: ExternalUserAndGuestSharing
         /// </summary>
         [EnumMember(Value = "ExternalUserAndGuestSharing")]
-        ExternalUserAndGuestSharing = 3,
+        ExternalUserAndGuestSharing = 2,
 
         /// <summary>
         /// Enum ExistingExternalUserSharingOnly for value: ExistingExternalUserSharingOnly
         /// </summary>
         [EnumMember(Value = "ExistingExternalUserSharingOnly")]
-        ExistingExternalUserSharingOnly = 4
+        ExistingExternalUserSharingOnly = 3,
 
     }
 

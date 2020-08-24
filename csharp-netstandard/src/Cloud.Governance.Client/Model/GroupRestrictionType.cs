@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum AnyGroup for value: AnyGroup
         /// </summary>
         [EnumMember(Value = "AnyGroup")]
-        AnyGroup = 1,
+        AnyGroup = 0,
 
         /// <summary>
         /// Enum PartOf for value: PartOf
         /// </summary>
         [EnumMember(Value = "PartOf")]
-        PartOf = 2
+        PartOf = 1,
 
     }
 

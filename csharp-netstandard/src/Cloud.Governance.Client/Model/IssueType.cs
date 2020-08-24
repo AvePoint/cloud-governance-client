@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum GeneralGuidence for value: GeneralGuidence
         /// </summary>
         [EnumMember(Value = "GeneralGuidence")]
-        GeneralGuidence = 1,
+        GeneralGuidence = 0,
 
         /// <summary>
         /// Enum Troubleshoot for value: Troubleshoot
         /// </summary>
         [EnumMember(Value = "Troubleshoot")]
-        Troubleshoot = 2
+        Troubleshoot = 1,
 
     }
 

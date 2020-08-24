@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum DrowDownList for value: DrowDownList
         /// </summary>
         [EnumMember(Value = "DrowDownList")]
-        DrowDownList = 1,
+        DrowDownList = 0,
 
         /// <summary>
         /// Enum RadioButton for value: RadioButton
         /// </summary>
         [EnumMember(Value = "RadioButton")]
-        RadioButton = 2,
+        RadioButton = 1,
 
         /// <summary>
         /// Enum ManageredMetadata for value: ManageredMetadata
@@ -56,7 +56,7 @@ namespace Cloud.Governance.Client.Model
         /// Enum YesNoMetadata for value: YesNoMetadata
         /// </summary>
         [EnumMember(Value = "YesNoMetadata")]
-        YesNoMetadata = 4
+        YesNoMetadata = 4,
 
     }
 

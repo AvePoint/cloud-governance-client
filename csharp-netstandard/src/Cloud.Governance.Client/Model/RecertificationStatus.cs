@@ -38,37 +38,37 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum InProgress for value: InProgress
         /// </summary>
         [EnumMember(Value = "InProgress")]
-        InProgress = 2,
+        InProgress = 1,
 
         /// <summary>
         /// Enum Overdue for value: Overdue
         /// </summary>
         [EnumMember(Value = "Overdue")]
-        Overdue = 3,
+        Overdue = 2,
 
         /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 4,
+        Completed = 3,
 
         /// <summary>
         /// Enum Exception for value: Exception
         /// </summary>
         [EnumMember(Value = "Exception")]
-        Exception = 5,
+        Exception = 4,
 
         /// <summary>
         /// Enum Rejected for value: Rejected
         /// </summary>
         [EnumMember(Value = "Rejected")]
-        Rejected = 6
+        Rejected = 5,
 
     }
 

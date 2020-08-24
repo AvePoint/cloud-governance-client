@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum ConstructGroupId for value: ConstructGroupId
         /// </summary>
         [EnumMember(Value = "ConstructGroupId")]
-        ConstructGroupId = 1,
+        ConstructGroupId = 0,
 
         /// <summary>
         /// Enum PopulateGroupIdWithGroupName for value: PopulateGroupIdWithGroupName
         /// </summary>
         [EnumMember(Value = "PopulateGroupIdWithGroupName")]
-        PopulateGroupIdWithGroupName = 2
+        PopulateGroupIdWithGroupName = 1,
 
     }
 

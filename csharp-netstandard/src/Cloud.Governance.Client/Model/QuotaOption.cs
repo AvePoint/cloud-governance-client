@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Scope for value: Scope
         /// </summary>
         [EnumMember(Value = "Scope")]
-        Scope = 1,
+        Scope = 0,
 
         /// <summary>
         /// Enum Specifid for value: Specifid
         /// </summary>
         [EnumMember(Value = "Specifid")]
-        Specifid = 2
+        Specifid = 1,
 
     }
 

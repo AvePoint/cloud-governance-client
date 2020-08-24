@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum And for value: And
         /// </summary>
         [EnumMember(Value = "And")]
-        And = 1,
+        And = 0,
 
         /// <summary>
         /// Enum Or for value: Or
         /// </summary>
         [EnumMember(Value = "Or")]
-        Or = 2
+        Or = 1,
 
     }
 

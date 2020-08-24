@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum ExpiredTime for value: ExpiredTime
         /// </summary>
         [EnumMember(Value = "ExpiredTime")]
-        ExpiredTime = 2,
+        ExpiredTime = 1,
 
         /// <summary>
         /// Enum ApprovaledTime for value: ApprovaledTime
         /// </summary>
         [EnumMember(Value = "ApprovaledTime")]
-        ApprovaledTime = 3
+        ApprovaledTime = 2,
 
     }
 

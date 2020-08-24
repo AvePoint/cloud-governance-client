@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum SiteCollectionProvision for value: SiteCollectionProvision
         /// </summary>
         [EnumMember(Value = "SiteCollectionProvision")]
-        SiteCollectionProvision = 2,
+        SiteCollectionProvision = 1,
 
         /// <summary>
         /// Enum Storage for value: Storage
         /// </summary>
         [EnumMember(Value = "Storage")]
-        Storage = 3,
+        Storage = 2,
 
         /// <summary>
         /// Enum User for value: User
         /// </summary>
         [EnumMember(Value = "User")]
-        User = 4,
+        User = 3,
 
         /// <summary>
         /// Enum Group for value: Group
         /// </summary>
         [EnumMember(Value = "Group")]
-        Group = 5
+        Group = 4,
 
     }
 

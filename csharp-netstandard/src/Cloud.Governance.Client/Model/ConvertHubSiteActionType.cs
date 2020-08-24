@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum ConvertToHubSite for value: ConvertToHubSite
         /// </summary>
         [EnumMember(Value = "ConvertToHubSite")]
-        ConvertToHubSite = 1,
+        ConvertToHubSite = 0,
 
         /// <summary>
         /// Enum AssociateOneHubSite for value: AssociateOneHubSite
         /// </summary>
         [EnumMember(Value = "AssociateOneHubSite")]
-        AssociateOneHubSite = 2
+        AssociateOneHubSite = 1,
 
     }
 

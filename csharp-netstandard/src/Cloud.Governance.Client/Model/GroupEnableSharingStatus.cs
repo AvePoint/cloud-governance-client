@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Allowed for value: Allowed
         /// </summary>
         [EnumMember(Value = "Allowed")]
-        Allowed = 2,
+        Allowed = 1,
 
         /// <summary>
         /// Enum NotAllowed for value: NotAllowed
         /// </summary>
         [EnumMember(Value = "NotAllowed")]
-        NotAllowed = 3
+        NotAllowed = 2,
 
     }
 

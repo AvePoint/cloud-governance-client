@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum Disabled for value: Disabled
         /// </summary>
         [EnumMember(Value = "Disabled")]
-        Disabled = 1,
+        Disabled = 0,
 
         /// <summary>
         /// Enum VerifiedGuestUser for value: VerifiedGuestUser
         /// </summary>
         [EnumMember(Value = "VerifiedGuestUser")]
-        VerifiedGuestUser = 2,
+        VerifiedGuestUser = 1,
 
         /// <summary>
         /// Enum Anyone for value: Anyone
         /// </summary>
         [EnumMember(Value = "Anyone")]
-        Anyone = 3,
+        Anyone = 2,
 
         /// <summary>
         /// Enum ExistingGuestUser for value: ExistingGuestUser
         /// </summary>
         [EnumMember(Value = "ExistingGuestUser")]
-        ExistingGuestUser = 4
+        ExistingGuestUser = 3,
 
     }
 

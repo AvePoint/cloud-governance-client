@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Phone for value: Phone
         /// </summary>
         [EnumMember(Value = "Phone")]
-        Phone = 1,
+        Phone = 0,
 
         /// <summary>
         /// Enum Email for value: Email
         /// </summary>
         [EnumMember(Value = "Email")]
-        Email = 2
+        Email = 1,
 
     }
 

@@ -38,235 +38,235 @@ namespace Cloud.Governance.Client.Model
         /// Enum Assigned for value: Assigned
         /// </summary>
         [EnumMember(Value = "Assigned")]
-        Assigned = 1,
+        Assigned = 0,
 
         /// <summary>
         /// Enum Rejected for value: Rejected
         /// </summary>
         [EnumMember(Value = "Rejected")]
-        Rejected = 2,
+        Rejected = 1,
 
         /// <summary>
         /// Enum Approved for value: Approved
         /// </summary>
         [EnumMember(Value = "Approved")]
-        Approved = 3,
+        Approved = 2,
 
         /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 4,
+        Completed = 3,
 
         /// <summary>
         /// Enum NotifyTemplate for value: NotifyTemplate
         /// </summary>
         [EnumMember(Value = "NotifyTemplate")]
-        NotifyTemplate = 5,
+        NotifyTemplate = 4,
 
         /// <summary>
         /// Enum AdminContactTemplate for value: AdminContactTemplate
         /// </summary>
         [EnumMember(Value = "AdminContactTemplate")]
-        AdminContactTemplate = 6,
+        AdminContactTemplate = 5,
 
         /// <summary>
         /// Enum ExpirationTemplate for value: ExpirationTemplate
         /// </summary>
         [EnumMember(Value = "ExpirationTemplate")]
-        ExpirationTemplate = 7,
+        ExpirationTemplate = 6,
 
         /// <summary>
         /// Enum WarningPeriodTemplate for value: WarningPeriodTemplate
         /// </summary>
         [EnumMember(Value = "WarningPeriodTemplate")]
-        WarningPeriodTemplate = 8,
+        WarningPeriodTemplate = 7,
 
         /// <summary>
         /// Enum PermissionBeforeExpired for value: PermissionBeforeExpired
         /// </summary>
         [EnumMember(Value = "PermissionBeforeExpired")]
-        PermissionBeforeExpired = 9,
+        PermissionBeforeExpired = 8,
 
         /// <summary>
         /// Enum RequestModify for value: RequestModify
         /// </summary>
         [EnumMember(Value = "RequestModify")]
-        RequestModify = 10,
+        RequestModify = 9,
 
         /// <summary>
         /// Enum OwnershipNotifyContact for value: OwnershipNotifyContact
         /// </summary>
         [EnumMember(Value = "OwnershipNotifyContact")]
-        OwnershipNotifyContact = 11,
+        OwnershipNotifyContact = 10,
 
         /// <summary>
         /// Enum TaskReminderTemplate for value: TaskReminderTemplate
         /// </summary>
         [EnumMember(Value = "TaskReminderTemplate")]
-        TaskReminderTemplate = 12,
+        TaskReminderTemplate = 11,
 
         /// <summary>
         /// Enum SiteCollectionStatus for value: SiteCollectionStatus
         /// </summary>
         [EnumMember(Value = "SiteCollectionStatus")]
-        SiteCollectionStatus = 13,
+        SiteCollectionStatus = 12,
 
         /// <summary>
         /// Enum UserStatus for value: UserStatus
         /// </summary>
         [EnumMember(Value = "UserStatus")]
-        UserStatus = 14,
+        UserStatus = 13,
 
         /// <summary>
         /// Enum GroupStatus for value: GroupStatus
         /// </summary>
         [EnumMember(Value = "GroupStatus")]
-        GroupStatus = 15,
+        GroupStatus = 14,
 
         /// <summary>
         /// Enum SendUserPasswordTemplate for value: SendUserPasswordTemplate
         /// </summary>
         [EnumMember(Value = "SendUserPasswordTemplate")]
-        SendUserPasswordTemplate = 16,
+        SendUserPasswordTemplate = 15,
 
         /// <summary>
         /// Enum RequestFailedValidation for value: RequestFailedValidation
         /// </summary>
         [EnumMember(Value = "RequestFailedValidation")]
-        RequestFailedValidation = 17,
+        RequestFailedValidation = 16,
 
         /// <summary>
         /// Enum GroupQuotaThresholdWarning for value: GroupQuotaThresholdWarning
         /// </summary>
         [EnumMember(Value = "GroupQuotaThresholdWarning")]
-        GroupQuotaThresholdWarning = 18,
+        GroupQuotaThresholdWarning = 17,
 
         /// <summary>
         /// Enum SiteCollectionRenewalReport for value: SiteCollectionRenewalReport
         /// </summary>
         [EnumMember(Value = "SiteCollectionRenewalReport")]
-        SiteCollectionRenewalReport = 19,
+        SiteCollectionRenewalReport = 18,
 
         /// <summary>
         /// Enum Office365GroupRenewalReport for value: Office365GroupRenewalReport
         /// </summary>
         [EnumMember(Value = "Office365GroupRenewalReport")]
-        Office365GroupRenewalReport = 20,
+        Office365GroupRenewalReport = 19,
 
         /// <summary>
         /// Enum SiteCollectionRenewalError for value: SiteCollectionRenewalError
         /// </summary>
         [EnumMember(Value = "SiteCollectionRenewalError")]
-        SiteCollectionRenewalError = 21,
+        SiteCollectionRenewalError = 20,
 
         /// <summary>
         /// Enum Office365GroupRenewalError for value: Office365GroupRenewalError
         /// </summary>
         [EnumMember(Value = "Office365GroupRenewalError")]
-        Office365GroupRenewalError = 22,
+        Office365GroupRenewalError = 21,
 
         /// <summary>
         /// Enum SiteCollectionRenewalGeneratesFailed for value: SiteCollectionRenewalGeneratesFailed
         /// </summary>
         [EnumMember(Value = "SiteCollectionRenewalGeneratesFailed")]
-        SiteCollectionRenewalGeneratesFailed = 23,
+        SiteCollectionRenewalGeneratesFailed = 22,
 
         /// <summary>
         /// Enum Office365GroupRenewalGeneratesFailed for value: Office365GroupRenewalGeneratesFailed
         /// </summary>
         [EnumMember(Value = "Office365GroupRenewalGeneratesFailed")]
-        Office365GroupRenewalGeneratesFailed = 24,
+        Office365GroupRenewalGeneratesFailed = 23,
 
         /// <summary>
         /// Enum SiteCollectionRenewalProcessOverdue for value: SiteCollectionRenewalProcessOverdue
         /// </summary>
         [EnumMember(Value = "SiteCollectionRenewalProcessOverdue")]
-        SiteCollectionRenewalProcessOverdue = 25,
+        SiteCollectionRenewalProcessOverdue = 24,
 
         /// <summary>
         /// Enum Office365GroupRenewalProcessOverdue for value: Office365GroupRenewalProcessOverdue
         /// </summary>
         [EnumMember(Value = "Office365GroupRenewalProcessOverdue")]
-        Office365GroupRenewalProcessOverdue = 26,
+        Office365GroupRenewalProcessOverdue = 25,
 
         /// <summary>
         /// Enum AutoRejectTask for value: AutoRejectTask
         /// </summary>
         [EnumMember(Value = "AutoRejectTask")]
-        AutoRejectTask = 27,
+        AutoRejectTask = 26,
 
         /// <summary>
         /// Enum SiteQuotaThreshold for value: SiteQuotaThreshold
         /// </summary>
         [EnumMember(Value = "SiteQuotaThreshold")]
-        SiteQuotaThreshold = 28,
+        SiteQuotaThreshold = 27,
 
         /// <summary>
         /// Enum SCApplyInformation for value: SCApplyInformation
         /// </summary>
         [EnumMember(Value = "SCApplyInformation")]
-        SCApplyInformation = 29,
+        SCApplyInformation = 28,
 
         /// <summary>
         /// Enum GroupApplyInformation for value: GroupApplyInformation
         /// </summary>
         [EnumMember(Value = "GroupApplyInformation")]
-        GroupApplyInformation = 30,
+        GroupApplyInformation = 29,
 
         /// <summary>
         /// Enum ImportResult for value: ImportResult
         /// </summary>
         [EnumMember(Value = "ImportResult")]
-        ImportResult = 31,
+        ImportResult = 30,
 
         /// <summary>
         /// Enum ApplyResult for value: ApplyResult
         /// </summary>
         [EnumMember(Value = "ApplyResult")]
-        ApplyResult = 32,
+        ApplyResult = 31,
 
         /// <summary>
         /// Enum DelayedEmailNotification for value: DelayedEmailNotification
         /// </summary>
         [EnumMember(Value = "DelayedEmailNotification")]
-        DelayedEmailNotification = 33,
+        DelayedEmailNotification = 32,
 
         /// <summary>
         /// Enum ArchiveTeamEmailNotification for value: ArchiveTeamEmailNotification
         /// </summary>
         [EnumMember(Value = "ArchiveTeamEmailNotification")]
-        ArchiveTeamEmailNotification = 34,
+        ArchiveTeamEmailNotification = 33,
 
         /// <summary>
         /// Enum Cancelled for value: Cancelled
         /// </summary>
         [EnumMember(Value = "Cancelled")]
-        Cancelled = 35,
+        Cancelled = 34,
 
         /// <summary>
         /// Enum NotifyApproverRejected for value: NotifyApproverRejected
         /// </summary>
         [EnumMember(Value = "NotifyApproverRejected")]
-        NotifyApproverRejected = 36,
+        NotifyApproverRejected = 35,
 
         /// <summary>
         /// Enum InviteSupportToUserPartner for value: InviteSupportToUserPartner
         /// </summary>
         [EnumMember(Value = "InviteSupportToUserPartner")]
-        InviteSupportToUserPartner = 37,
+        InviteSupportToUserPartner = 36,
 
         /// <summary>
         /// Enum InviteSupportToUser for value: InviteSupportToUser
         /// </summary>
         [EnumMember(Value = "InviteSupportToUser")]
-        InviteSupportToUser = 38,
+        InviteSupportToUser = 37,
 
         /// <summary>
         /// Enum InviteSupportToSupport for value: InviteSupportToSupport
         /// </summary>
         [EnumMember(Value = "InviteSupportToSupport")]
-        InviteSupportToSupport = 39
+        InviteSupportToSupport = 38,
 
     }
 

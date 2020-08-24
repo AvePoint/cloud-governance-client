@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum SpecifiedDirectly for value: SpecifiedDirectly
         /// </summary>
         [EnumMember(Value = "SpecifiedDirectly")]
-        SpecifiedDirectly = 2,
+        SpecifiedDirectly = 1,
 
         /// <summary>
         /// Enum SpecifiedByRole for value: SpecifiedByRole
         /// </summary>
         [EnumMember(Value = "SpecifiedByRole")]
-        SpecifiedByRole = 3
+        SpecifiedByRole = 2,
 
     }
 

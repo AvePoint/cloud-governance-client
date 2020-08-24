@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum Hide for value: Hide
         /// </summary>
         [EnumMember(Value = "Hide")]
-        Hide = 1,
+        Hide = 0,
 
         /// <summary>
         /// Enum Default for value: Default
         /// </summary>
         [EnumMember(Value = "Default")]
-        Default = 2,
+        Default = 1,
 
         /// <summary>
         /// Enum Custom for value: Custom
         /// </summary>
         [EnumMember(Value = "Custom")]
-        Custom = 3
+        Custom = 2,
 
     }
 

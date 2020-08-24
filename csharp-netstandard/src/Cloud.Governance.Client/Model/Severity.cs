@@ -62,7 +62,7 @@ namespace Cloud.Governance.Client.Model
         /// Enum Critical for value: Critical
         /// </summary>
         [EnumMember(Value = "Critical")]
-        Critical = 5
+        Critical = 5,
 
     }
 

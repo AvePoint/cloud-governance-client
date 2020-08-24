@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum User for value: User
         /// </summary>
         [EnumMember(Value = "User")]
-        User = 2,
+        User = 1,
 
         /// <summary>
         /// Enum DistributionList for value: DistributionList
         /// </summary>
         [EnumMember(Value = "DistributionList")]
-        DistributionList = 3,
+        DistributionList = 2,
 
         /// <summary>
         /// Enum SecurityGroup for value: SecurityGroup
@@ -62,19 +62,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum SharePointGroup for value: SharePointGroup
         /// </summary>
         [EnumMember(Value = "SharePointGroup")]
-        SharePointGroup = 5,
+        SharePointGroup = 8,
 
         /// <summary>
         /// Enum All for value: All
         /// </summary>
         [EnumMember(Value = "All")]
-        All = 6,
+        All = 15,
 
         /// <summary>
         /// Enum Guest for value: Guest
         /// </summary>
         [EnumMember(Value = "Guest")]
-        Guest = 7
+        Guest = 16,
 
     }
 

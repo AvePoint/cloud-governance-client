@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum AnyUser for value: AnyUser
         /// </summary>
         [EnumMember(Value = "AnyUser")]
-        AnyUser = 1,
+        AnyUser = 0,
 
         /// <summary>
         /// Enum PeersAndDirectOrIndirectReport for value: PeersAndDirectOrIndirectReport
         /// </summary>
         [EnumMember(Value = "PeersAndDirectOrIndirectReport")]
-        PeersAndDirectOrIndirectReport = 2,
+        PeersAndDirectOrIndirectReport = 1,
 
         /// <summary>
         /// Enum DirectOrIndirectReports for value: DirectOrIndirectReports
         /// </summary>
         [EnumMember(Value = "DirectOrIndirectReports")]
-        DirectOrIndirectReports = 3
+        DirectOrIndirectReports = 2,
 
     }
 

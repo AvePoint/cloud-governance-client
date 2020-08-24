@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum Active for value: Active
         /// </summary>
         [EnumMember(Value = "Active")]
-        Active = 1,
+        Active = 0,
 
         /// <summary>
         /// Enum Deleted for value: Deleted
         /// </summary>
         [EnumMember(Value = "Deleted")]
-        Deleted = 2,
+        Deleted = 1,
 
         /// <summary>
         /// Enum Archived for value: Archived
         /// </summary>
         [EnumMember(Value = "Archived")]
-        Archived = 3,
+        Archived = 2,
 
         /// <summary>
         /// Enum Locked for value: Locked
         /// </summary>
         [EnumMember(Value = "Locked")]
-        Locked = 4,
+        Locked = 3,
 
         /// <summary>
         /// Enum TemporaryLocked for value: TemporaryLocked
         /// </summary>
         [EnumMember(Value = "TemporaryLocked")]
-        TemporaryLocked = 5
+        TemporaryLocked = 4,
 
     }
 

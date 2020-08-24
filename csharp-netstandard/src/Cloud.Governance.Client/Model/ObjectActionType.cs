@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Add for value: Add
         /// </summary>
         [EnumMember(Value = "Add")]
-        Add = 2,
+        Add = 1,
 
         /// <summary>
         /// Enum Edit for value: Edit
         /// </summary>
         [EnumMember(Value = "Edit")]
-        Edit = 3,
+        Edit = 2,
 
         /// <summary>
         /// Enum Delete for value: Delete
         /// </summary>
         [EnumMember(Value = "Delete")]
-        Delete = 4
+        Delete = 3,
 
     }
 

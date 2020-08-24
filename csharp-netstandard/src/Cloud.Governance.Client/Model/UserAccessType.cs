@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Internal for value: Internal
         /// </summary>
         [EnumMember(Value = "Internal")]
-        Internal = 2,
+        Internal = 1,
 
         /// <summary>
         /// Enum External for value: External
         /// </summary>
         [EnumMember(Value = "External")]
-        External = 3
+        External = 2,
 
     }
 

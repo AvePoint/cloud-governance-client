@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum GroupMembership for value: GroupMembership
         /// </summary>
         [EnumMember(Value = "GroupMembership")]
-        GroupMembership = 2,
+        GroupMembership = 1,
 
         /// <summary>
         /// Enum GroupPermission for value: GroupPermission
         /// </summary>
         [EnumMember(Value = "GroupPermission")]
-        GroupPermission = 3,
+        GroupPermission = 2,
 
         /// <summary>
         /// Enum UserPermission for value: UserPermission
         /// </summary>
         [EnumMember(Value = "UserPermission")]
-        UserPermission = 4
+        UserPermission = 4,
 
     }
 

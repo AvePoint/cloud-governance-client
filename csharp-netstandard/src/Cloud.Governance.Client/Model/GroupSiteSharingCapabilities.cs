@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum Anyone for value: Anyone
         /// </summary>
         [EnumMember(Value = "Anyone")]
-        Anyone = 1,
+        Anyone = 0,
 
         /// <summary>
         /// Enum NewAndExist for value: NewAndExist
         /// </summary>
         [EnumMember(Value = "NewAndExist")]
-        NewAndExist = 2,
+        NewAndExist = 1,
 
         /// <summary>
         /// Enum Exist for value: Exist
         /// </summary>
         [EnumMember(Value = "Exist")]
-        Exist = 3,
+        Exist = 2,
 
         /// <summary>
         /// Enum Disabled for value: Disabled
         /// </summary>
         [EnumMember(Value = "Disabled")]
-        Disabled = 4
+        Disabled = 3,
 
     }
 

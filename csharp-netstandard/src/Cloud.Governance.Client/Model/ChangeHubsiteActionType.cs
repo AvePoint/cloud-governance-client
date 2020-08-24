@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum RegisterAsHubSite for value: RegisterAsHubSite
         /// </summary>
         [EnumMember(Value = "RegisterAsHubSite")]
-        RegisterAsHubSite = 2,
+        RegisterAsHubSite = 1,
 
         /// <summary>
         /// Enum AssociateToHubSite for value: AssociateToHubSite
         /// </summary>
         [EnumMember(Value = "AssociateToHubSite")]
-        AssociateToHubSite = 3,
+        AssociateToHubSite = 2,
 
         /// <summary>
         /// Enum UnRegisterAsHubSite for value: UnRegisterAsHubSite
         /// </summary>
         [EnumMember(Value = "UnRegisterAsHubSite")]
-        UnRegisterAsHubSite = 4,
+        UnRegisterAsHubSite = 3,
 
         /// <summary>
         /// Enum UnRegisterAndAssociateToHubSite for value: UnRegisterAndAssociateToHubSite
         /// </summary>
         [EnumMember(Value = "UnRegisterAndAssociateToHubSite")]
-        UnRegisterAndAssociateToHubSite = 5
+        UnRegisterAndAssociateToHubSite = 4,
 
     }
 

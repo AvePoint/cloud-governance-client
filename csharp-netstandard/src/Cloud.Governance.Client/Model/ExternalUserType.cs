@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Authentication for value: Authentication
         /// </summary>
         [EnumMember(Value = "Authentication")]
-        Authentication = 2,
+        Authentication = 1,
 
         /// <summary>
         /// Enum NoAuthentication for value: NoAuthentication
         /// </summary>
         [EnumMember(Value = "NoAuthentication")]
-        NoAuthentication = 3
+        NoAuthentication = 2,
 
     }
 

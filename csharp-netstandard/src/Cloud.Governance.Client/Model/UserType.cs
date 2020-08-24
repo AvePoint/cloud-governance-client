@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum All for value: All
         /// </summary>
         [EnumMember(Value = "All")]
-        All = 1,
+        All = 0,
 
         /// <summary>
         /// Enum User for value: User
         /// </summary>
         [EnumMember(Value = "User")]
-        User = 2,
+        User = 1,
 
         /// <summary>
         /// Enum Group for value: Group
         /// </summary>
         [EnumMember(Value = "Group")]
-        Group = 3,
+        Group = 2,
 
         /// <summary>
         /// Enum DistributionList for value: DistributionList
         /// </summary>
         [EnumMember(Value = "DistributionList")]
-        DistributionList = 4,
+        DistributionList = 3,
 
         /// <summary>
         /// Enum UserAndGroup for value: UserAndGroup
         /// </summary>
         [EnumMember(Value = "UserAndGroup")]
-        UserAndGroup = 5
+        UserAndGroup = 4,
 
     }
 

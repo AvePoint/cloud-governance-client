@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum Site for value: Site
         /// </summary>
         [EnumMember(Value = "Site")]
-        Site = 1,
+        Site = 0,
 
         /// <summary>
         /// Enum Web for value: Web
         /// </summary>
         [EnumMember(Value = "Web")]
-        Web = 2,
+        Web = 1,
 
         /// <summary>
         /// Enum Group for value: Group
         /// </summary>
         [EnumMember(Value = "Group")]
-        Group = 3,
+        Group = 2,
 
         /// <summary>
         /// Enum Teams for value: Teams
         /// </summary>
         [EnumMember(Value = "Teams")]
-        Teams = 4
+        Teams = 3,
 
     }
 

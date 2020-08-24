@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum RemovePermission for value: RemovePermission
         /// </summary>
         [EnumMember(Value = "RemovePermission")]
-        RemovePermission = 1,
+        RemovePermission = 0,
 
         /// <summary>
         /// Enum ChangePermission for value: ChangePermission
         /// </summary>
         [EnumMember(Value = "ChangePermission")]
-        ChangePermission = 2
+        ChangePermission = 1,
 
     }
 

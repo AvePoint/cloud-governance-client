@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum NoAccess for value: NoAccess
         /// </summary>
         [EnumMember(Value = "NoAccess")]
-        NoAccess = 1,
+        NoAccess = 0,
 
         /// <summary>
         /// Enum ReadOnly for value: ReadOnly
         /// </summary>
         [EnumMember(Value = "ReadOnly")]
-        ReadOnly = 2,
+        ReadOnly = 1,
 
         /// <summary>
         /// Enum NoAccessAndReadOnly for value: NoAccessAndReadOnly
         /// </summary>
         [EnumMember(Value = "NoAccessAndReadOnly")]
-        NoAccessAndReadOnly = 3,
+        NoAccessAndReadOnly = 2,
 
         /// <summary>
         /// Enum Unlock for value: Unlock
         /// </summary>
         [EnumMember(Value = "Unlock")]
-        Unlock = 4
+        Unlock = 3,
 
     }
 

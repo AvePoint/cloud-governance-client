@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Anyone for value: Anyone
         /// </summary>
         [EnumMember(Value = "Anyone")]
-        Anyone = 1,
+        Anyone = 0,
 
         /// <summary>
         /// Enum AdminApproved for value: AdminApproved
         /// </summary>
         [EnumMember(Value = "AdminApproved")]
-        AdminApproved = 2
+        AdminApproved = 1,
 
     }
 

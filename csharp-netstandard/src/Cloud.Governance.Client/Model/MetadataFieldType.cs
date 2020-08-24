@@ -38,61 +38,61 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum SingleLineText for value: SingleLineText
         /// </summary>
         [EnumMember(Value = "SingleLineText")]
-        SingleLineText = 2,
+        SingleLineText = 1,
 
         /// <summary>
         /// Enum MultiLineText for value: MultiLineText
         /// </summary>
         [EnumMember(Value = "MultiLineText")]
-        MultiLineText = 3,
+        MultiLineText = 2,
 
         /// <summary>
         /// Enum YesOrNo for value: YesOrNo
         /// </summary>
         [EnumMember(Value = "YesOrNo")]
-        YesOrNo = 4,
+        YesOrNo = 3,
 
         /// <summary>
         /// Enum Choices for value: Choices
         /// </summary>
         [EnumMember(Value = "Choices")]
-        Choices = 5,
+        Choices = 4,
 
         /// <summary>
         /// Enum PeoplePickerValue for value: PeoplePickerValue
         /// </summary>
         [EnumMember(Value = "PeoplePickerValue")]
-        PeoplePickerValue = 6,
+        PeoplePickerValue = 5,
 
         /// <summary>
         /// Enum Terms for value: Terms
         /// </summary>
         [EnumMember(Value = "Terms")]
-        Terms = 7,
+        Terms = 6,
 
         /// <summary>
         /// Enum Hyperlink for value: Hyperlink
         /// </summary>
         [EnumMember(Value = "Hyperlink")]
-        Hyperlink = 8,
+        Hyperlink = 7,
 
         /// <summary>
         /// Enum UserProfileService for value: UserProfileService
         /// </summary>
         [EnumMember(Value = "UserProfileService")]
-        UserProfileService = 9,
+        UserProfileService = 8,
 
         /// <summary>
         /// Enum AzureADProperty for value: AzureADProperty
         /// </summary>
         [EnumMember(Value = "AzureADProperty")]
-        AzureADProperty = 10
+        AzureADProperty = 9,
 
     }
 

@@ -38,43 +38,43 @@ namespace Cloud.Governance.Client.Model
         /// Enum DiscussionBoard for value: DiscussionBoard
         /// </summary>
         [EnumMember(Value = "DiscussionBoard")]
-        DiscussionBoard = 1,
+        DiscussionBoard = 3,
 
         /// <summary>
         /// Enum DocumentLibrary for value: DocumentLibrary
         /// </summary>
         [EnumMember(Value = "DocumentLibrary")]
-        DocumentLibrary = 2,
+        DocumentLibrary = 1,
 
         /// <summary>
         /// Enum GenericList for value: GenericList
         /// </summary>
         [EnumMember(Value = "GenericList")]
-        GenericList = 3,
+        GenericList = 0,
 
         /// <summary>
         /// Enum Issue for value: Issue
         /// </summary>
         [EnumMember(Value = "Issue")]
-        Issue = 4,
+        Issue = 5,
 
         /// <summary>
         /// Enum Survey for value: Survey
         /// </summary>
         [EnumMember(Value = "Survey")]
-        Survey = 5,
+        Survey = 4,
 
         /// <summary>
         /// Enum UnspecifiedBaseType for value: UnspecifiedBaseType
         /// </summary>
         [EnumMember(Value = "UnspecifiedBaseType")]
-        UnspecifiedBaseType = 6,
+        UnspecifiedBaseType = -1,
 
         /// <summary>
         /// Enum Unused for value: Unused
         /// </summary>
         [EnumMember(Value = "Unused")]
-        Unused = 7
+        Unused = 2,
 
     }
 

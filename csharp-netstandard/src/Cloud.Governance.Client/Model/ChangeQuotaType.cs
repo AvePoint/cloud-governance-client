@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum AllowAnyValue for value: AllowAnyValue
         /// </summary>
         [EnumMember(Value = "AllowAnyValue")]
-        AllowAnyValue = 1,
+        AllowAnyValue = 0,
 
         /// <summary>
         /// Enum WithinSpecifyLimit for value: WithinSpecifyLimit
         /// </summary>
         [EnumMember(Value = "WithinSpecifyLimit")]
-        WithinSpecifyLimit = 2
+        WithinSpecifyLimit = 1,
 
     }
 

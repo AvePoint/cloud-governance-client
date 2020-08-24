@@ -38,67 +38,67 @@ namespace Cloud.Governance.Client.Model
         /// Enum Confirmed for value: Confirmed
         /// </summary>
         [EnumMember(Value = "Confirmed")]
-        Confirmed = 1,
+        Confirmed = 0,
 
         /// <summary>
         /// Enum Processing for value: Processing
         /// </summary>
         [EnumMember(Value = "Processing")]
-        Processing = 2,
+        Processing = 1,
 
         /// <summary>
         /// Enum PendingInition for value: PendingInition
         /// </summary>
         [EnumMember(Value = "PendingInition")]
-        PendingInition = 3,
+        PendingInition = 2,
 
         /// <summary>
         /// Enum ApplyInformationException for value: ApplyInformationException
         /// </summary>
         [EnumMember(Value = "ApplyInformationException")]
-        ApplyInformationException = 4,
+        ApplyInformationException = 3,
 
         /// <summary>
         /// Enum Overdue for value: Overdue
         /// </summary>
         [EnumMember(Value = "Overdue")]
-        Overdue = 5,
+        Overdue = 4,
 
         /// <summary>
         /// Enum PendingRenewal for value: PendingRenewal
         /// </summary>
         [EnumMember(Value = "PendingRenewal")]
-        PendingRenewal = 6,
+        PendingRenewal = 5,
 
         /// <summary>
         /// Enum RenewalExpired for value: RenewalExpired
         /// </summary>
         [EnumMember(Value = "RenewalExpired")]
-        RenewalExpired = 7,
+        RenewalExpired = 6,
 
         /// <summary>
         /// Enum RenewalProcessing for value: RenewalProcessing
         /// </summary>
         [EnumMember(Value = "RenewalProcessing")]
-        RenewalProcessing = 8,
+        RenewalProcessing = 7,
 
         /// <summary>
         /// Enum RenewalException for value: RenewalException
         /// </summary>
         [EnumMember(Value = "RenewalException")]
-        RenewalException = 9,
+        RenewalException = 8,
 
         /// <summary>
         /// Enum Locked for value: Locked
         /// </summary>
         [EnumMember(Value = "Locked")]
-        Locked = 10,
+        Locked = 9,
 
         /// <summary>
         /// Enum RenewalCanceled for value: RenewalCanceled
         /// </summary>
         [EnumMember(Value = "RenewalCanceled")]
-        RenewalCanceled = 11
+        RenewalCanceled = 10,
 
     }
 

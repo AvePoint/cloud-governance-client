@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Owner for value: Owner
         /// </summary>
         [EnumMember(Value = "Owner")]
-        Owner = 1,
+        Owner = 0,
 
         /// <summary>
         /// Enum Member for value: Member
         /// </summary>
         [EnumMember(Value = "Member")]
-        Member = 2
+        Member = 1,
 
     }
 

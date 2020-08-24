@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Merge for value: Merge
         /// </summary>
         [EnumMember(Value = "Merge")]
-        Merge = 1,
+        Merge = 0,
 
         /// <summary>
         /// Enum Attach for value: Attach
         /// </summary>
         [EnumMember(Value = "Attach")]
-        Attach = 2
+        Attach = 1,
 
     }
 

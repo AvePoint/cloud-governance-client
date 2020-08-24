@@ -38,535 +38,535 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum ErrorStart for value: ErrorStart
         /// </summary>
         [EnumMember(Value = "ErrorStart")]
-        ErrorStart = 2,
+        ErrorStart = 1,
 
         /// <summary>
         /// Enum Error for value: Error
         /// </summary>
         [EnumMember(Value = "Error")]
-        Error = 3,
+        Error = 2,
 
         /// <summary>
         /// Enum RequestSubmitted for value: RequestSubmitted
         /// </summary>
         [EnumMember(Value = "RequestSubmitted")]
-        RequestSubmitted = 4,
+        RequestSubmitted = 3,
 
         /// <summary>
         /// Enum TaskCreated for value: TaskCreated
         /// </summary>
         [EnumMember(Value = "TaskCreated")]
-        TaskCreated = 5,
+        TaskCreated = 4,
 
         /// <summary>
         /// Enum AdminContactIssueReview for value: AdminContactIssueReview
         /// </summary>
         [EnumMember(Value = "AdminContactIssueReview")]
-        AdminContactIssueReview = 6,
+        AdminContactIssueReview = 5,
 
         /// <summary>
         /// Enum Cancelled for value: Cancelled
         /// </summary>
         [EnumMember(Value = "Cancelled")]
-        Cancelled = 7,
+        Cancelled = 6,
 
         /// <summary>
         /// Enum Rejected for value: Rejected
         /// </summary>
         [EnumMember(Value = "Rejected")]
-        Rejected = 8,
+        Rejected = 7,
 
         /// <summary>
         /// Enum FirstStageApproval for value: FirstStageApproval
         /// </summary>
         [EnumMember(Value = "FirstStageApproval")]
-        FirstStageApproval = 9,
+        FirstStageApproval = 8,
 
         /// <summary>
         /// Enum SecondStageApproval for value: SecondStageApproval
         /// </summary>
         [EnumMember(Value = "SecondStageApproval")]
-        SecondStageApproval = 10,
+        SecondStageApproval = 9,
 
         /// <summary>
         /// Enum ThirdStageApproval for value: ThirdStageApproval
         /// </summary>
         [EnumMember(Value = "ThirdStageApproval")]
-        ThirdStageApproval = 11,
+        ThirdStageApproval = 10,
 
         /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 12,
+        Completed = 11,
 
         /// <summary>
         /// Enum AssignContentDatabase for value: AssignContentDatabase
         /// </summary>
         [EnumMember(Value = "AssignContentDatabase")]
-        AssignContentDatabase = 13,
+        AssignContentDatabase = 12,
 
         /// <summary>
         /// Enum CreateSiteCollection for value: CreateSiteCollection
         /// </summary>
         [EnumMember(Value = "CreateSiteCollection")]
-        CreateSiteCollection = 14,
+        CreateSiteCollection = 13,
 
         /// <summary>
         /// Enum ApplySecuritySettings for value: ApplySecuritySettings
         /// </summary>
         [EnumMember(Value = "ApplySecuritySettings")]
-        ApplySecuritySettings = 15,
+        ApplySecuritySettings = 14,
 
         /// <summary>
         /// Enum ApplySharePointConfigurations for value: ApplySharePointConfigurations
         /// </summary>
         [EnumMember(Value = "ApplySharePointConfigurations")]
-        ApplySharePointConfigurations = 16,
+        ApplySharePointConfigurations = 15,
 
         /// <summary>
         /// Enum ApplyCustomMetadata for value: ApplyCustomMetadata
         /// </summary>
         [EnumMember(Value = "ApplyCustomMetadata")]
-        ApplyCustomMetadata = 17,
+        ApplyCustomMetadata = 16,
 
         /// <summary>
         /// Enum AddToSiteCollectionDirectory for value: AddToSiteCollectionDirectory
         /// </summary>
         [EnumMember(Value = "AddToSiteCollectionDirectory")]
-        AddToSiteCollectionDirectory = 18,
+        AddToSiteCollectionDirectory = 17,
 
         /// <summary>
         /// Enum ApplyDocAveGranularBackupPlan for value: ApplyDocAveGranularBackupPlan
         /// </summary>
         [EnumMember(Value = "ApplyDocAveGranularBackupPlan")]
-        ApplyDocAveGranularBackupPlan = 19,
+        ApplyDocAveGranularBackupPlan = 18,
 
         /// <summary>
         /// Enum ApplyDocAveAuditorPlan for value: ApplyDocAveAuditorPlan
         /// </summary>
         [EnumMember(Value = "ApplyDocAveAuditorPlan")]
-        ApplyDocAveAuditorPlan = 20,
+        ApplyDocAveAuditorPlan = 19,
 
         /// <summary>
         /// Enum ApplyDocAveDeadAccountCleaningPlan for value: ApplyDocAveDeadAccountCleaningPlan
         /// </summary>
         [EnumMember(Value = "ApplyDocAveDeadAccountCleaningPlan")]
-        ApplyDocAveDeadAccountCleaningPlan = 21,
+        ApplyDocAveDeadAccountCleaningPlan = 20,
 
         /// <summary>
         /// Enum ApplyDocAveScheduledStorageManagerProfile for value: ApplyDocAveScheduledStorageManagerProfile
         /// </summary>
         [EnumMember(Value = "ApplyDocAveScheduledStorageManagerProfile")]
-        ApplyDocAveScheduledStorageManagerProfile = 22,
+        ApplyDocAveScheduledStorageManagerProfile = 21,
 
         /// <summary>
         /// Enum ApplyDocAveArchiverProfile for value: ApplyDocAveArchiverProfile
         /// </summary>
         [EnumMember(Value = "ApplyDocAveArchiverProfile")]
-        ApplyDocAveArchiverProfile = 23,
+        ApplyDocAveArchiverProfile = 22,
 
         /// <summary>
         /// Enum ApplyDocAveVaultProfile for value: ApplyDocAveVaultProfile
         /// </summary>
         [EnumMember(Value = "ApplyDocAveVaultProfile")]
-        ApplyDocAveVaultProfile = 24,
+        ApplyDocAveVaultProfile = 23,
 
         /// <summary>
         /// Enum ApplyAndRunDPMPlan for value: ApplyAndRunDPMPlan
         /// </summary>
         [EnumMember(Value = "ApplyAndRunDPMPlan")]
-        ApplyAndRunDPMPlan = 25,
+        ApplyAndRunDPMPlan = 24,
 
         /// <summary>
         /// Enum ApplyPolicyEnforcerProfile for value: ApplyPolicyEnforcerProfile
         /// </summary>
         [EnumMember(Value = "ApplyPolicyEnforcerProfile")]
-        ApplyPolicyEnforcerProfile = 26,
+        ApplyPolicyEnforcerProfile = 73,
 
         /// <summary>
         /// Enum ApplyAdditionalAdministrators for value: ApplyAdditionalAdministrators
         /// </summary>
         [EnumMember(Value = "ApplyAdditionalAdministrators")]
-        ApplyAdditionalAdministrators = 27,
+        ApplyAdditionalAdministrators = 101,
 
         /// <summary>
         /// Enum CreateOrValidYammerGroup for value: CreateOrValidYammerGroup
         /// </summary>
         [EnumMember(Value = "CreateOrValidYammerGroup")]
-        CreateOrValidYammerGroup = 28,
+        CreateOrValidYammerGroup = 88,
 
         /// <summary>
         /// Enum AddYammerGroupFeed for value: AddYammerGroupFeed
         /// </summary>
         [EnumMember(Value = "AddYammerGroupFeed")]
-        AddYammerGroupFeed = 29,
+        AddYammerGroupFeed = 89,
 
         /// <summary>
         /// Enum ArchiveSiteCollection for value: ArchiveSiteCollection
         /// </summary>
         [EnumMember(Value = "ArchiveSiteCollection")]
-        ArchiveSiteCollection = 30,
+        ArchiveSiteCollection = 25,
 
         /// <summary>
         /// Enum UpdateSiteCollectionArchived for value: UpdateSiteCollectionArchived
         /// </summary>
         [EnumMember(Value = "UpdateSiteCollectionArchived")]
-        UpdateSiteCollectionArchived = 31,
+        UpdateSiteCollectionArchived = 26,
 
         /// <summary>
         /// Enum ExtendSiteCollection for value: ExtendSiteCollection
         /// </summary>
         [EnumMember(Value = "ExtendSiteCollection")]
-        ExtendSiteCollection = 32,
+        ExtendSiteCollection = 27,
 
         /// <summary>
         /// Enum UpdateCustomMetadata for value: UpdateCustomMetadata
         /// </summary>
         [EnumMember(Value = "UpdateCustomMetadata")]
-        UpdateCustomMetadata = 33,
+        UpdateCustomMetadata = 28,
 
         /// <summary>
         /// Enum UpdateSiteDirectory for value: UpdateSiteDirectory
         /// </summary>
         [EnumMember(Value = "UpdateSiteDirectory")]
-        UpdateSiteDirectory = 34,
+        UpdateSiteDirectory = 29,
 
         /// <summary>
         /// Enum DeleteSiteCollection for value: DeleteSiteCollection
         /// </summary>
         [EnumMember(Value = "DeleteSiteCollection")]
-        DeleteSiteCollection = 35,
+        DeleteSiteCollection = 30,
 
         /// <summary>
         /// Enum UpdateSiteCollectionDeleted for value: UpdateSiteCollectionDeleted
         /// </summary>
         [EnumMember(Value = "UpdateSiteCollectionDeleted")]
-        UpdateSiteCollectionDeleted = 36,
+        UpdateSiteCollectionDeleted = 31,
 
         /// <summary>
         /// Enum CreateSubSite for value: CreateSubSite
         /// </summary>
         [EnumMember(Value = "CreateSubSite")]
-        CreateSubSite = 37,
+        CreateSubSite = 32,
 
         /// <summary>
         /// Enum AddToSubSiteDirectory for value: AddToSubSiteDirectory
         /// </summary>
         [EnumMember(Value = "AddToSubSiteDirectory")]
-        AddToSubSiteDirectory = 38,
+        AddToSubSiteDirectory = 33,
 
         /// <summary>
         /// Enum RetractDocAveGranularBackupPlan for value: RetractDocAveGranularBackupPlan
         /// </summary>
         [EnumMember(Value = "RetractDocAveGranularBackupPlan")]
-        RetractDocAveGranularBackupPlan = 39,
+        RetractDocAveGranularBackupPlan = 34,
 
         /// <summary>
         /// Enum RetractDocAveAuditorPlan for value: RetractDocAveAuditorPlan
         /// </summary>
         [EnumMember(Value = "RetractDocAveAuditorPlan")]
-        RetractDocAveAuditorPlan = 40,
+        RetractDocAveAuditorPlan = 35,
 
         /// <summary>
         /// Enum RetractDocAveDeadAccountCleaningPlan for value: RetractDocAveDeadAccountCleaningPlan
         /// </summary>
         [EnumMember(Value = "RetractDocAveDeadAccountCleaningPlan")]
-        RetractDocAveDeadAccountCleaningPlan = 41,
+        RetractDocAveDeadAccountCleaningPlan = 36,
 
         /// <summary>
         /// Enum RetractDocAveScheduledStorageManagerProfile for value: RetractDocAveScheduledStorageManagerProfile
         /// </summary>
         [EnumMember(Value = "RetractDocAveScheduledStorageManagerProfile")]
-        RetractDocAveScheduledStorageManagerProfile = 42,
+        RetractDocAveScheduledStorageManagerProfile = 37,
 
         /// <summary>
         /// Enum RetrieveDocAveArchiveProfile for value: RetrieveDocAveArchiveProfile
         /// </summary>
         [EnumMember(Value = "RetrieveDocAveArchiveProfile")]
-        RetrieveDocAveArchiveProfile = 43,
+        RetrieveDocAveArchiveProfile = 38,
 
         /// <summary>
         /// Enum RetrieveDocAveVaultProfile for value: RetrieveDocAveVaultProfile
         /// </summary>
         [EnumMember(Value = "RetrieveDocAveVaultProfile")]
-        RetrieveDocAveVaultProfile = 44,
+        RetrieveDocAveVaultProfile = 39,
 
         /// <summary>
         /// Enum UpdateChangeSCPolicyMetadata for value: UpdateChangeSCPolicyMetadata
         /// </summary>
         [EnumMember(Value = "UpdateChangeSCPolicyMetadata")]
-        UpdateChangeSCPolicyMetadata = 45,
+        UpdateChangeSCPolicyMetadata = 40,
 
         /// <summary>
         /// Enum UpdateSiteCollectionPolicyChanged for value: UpdateSiteCollectionPolicyChanged
         /// </summary>
         [EnumMember(Value = "UpdateSiteCollectionPolicyChanged")]
-        UpdateSiteCollectionPolicyChanged = 46,
+        UpdateSiteCollectionPolicyChanged = 41,
 
         /// <summary>
         /// Enum UpdatePolicyEnforcerProfileCompleted for value: UpdatePolicyEnforcerProfileCompleted
         /// </summary>
         [EnumMember(Value = "UpdatePolicyEnforcerProfileCompleted")]
-        UpdatePolicyEnforcerProfileCompleted = 47,
+        UpdatePolicyEnforcerProfileCompleted = 74,
 
         /// <summary>
         /// Enum CreateHiddenList for value: CreateHiddenList
         /// </summary>
         [EnumMember(Value = "CreateHiddenList")]
-        CreateHiddenList = 48,
+        CreateHiddenList = 42,
 
         /// <summary>
         /// Enum ChangeSiteCollectionMetadata for value: ChangeSiteCollectionMetadata
         /// </summary>
         [EnumMember(Value = "ChangeSiteCollectionMetadata")]
-        ChangeSiteCollectionMetadata = 49,
+        ChangeSiteCollectionMetadata = 43,
 
         /// <summary>
         /// Enum UpdateSiteDirectoryForChangeSCMetadata for value: UpdateSiteDirectoryForChangeSCMetadata
         /// </summary>
         [EnumMember(Value = "UpdateSiteDirectoryForChangeSCMetadata")]
-        UpdateSiteDirectoryForChangeSCMetadata = 50,
+        UpdateSiteDirectoryForChangeSCMetadata = 44,
 
         /// <summary>
         /// Enum ChangeSiteCollectionContact for value: ChangeSiteCollectionContact
         /// </summary>
         [EnumMember(Value = "ChangeSiteCollectionContact")]
-        ChangeSiteCollectionContact = 51,
+        ChangeSiteCollectionContact = 45,
 
         /// <summary>
         /// Enum ChangeSiteCollectionOwner for value: ChangeSiteCollectionOwner
         /// </summary>
         [EnumMember(Value = "ChangeSiteCollectionOwner")]
-        ChangeSiteCollectionOwner = 52,
+        ChangeSiteCollectionOwner = 86,
 
         /// <summary>
         /// Enum ChangeSiteCollectionAdditionalAdmin for value: ChangeSiteCollectionAdditionalAdmin
         /// </summary>
         [EnumMember(Value = "ChangeSiteCollectionAdditionalAdmin")]
-        ChangeSiteCollectionAdditionalAdmin = 53,
+        ChangeSiteCollectionAdditionalAdmin = 87,
 
         /// <summary>
         /// Enum UpdateSiteDirectoryForChangeSCContact for value: UpdateSiteDirectoryForChangeSCContact
         /// </summary>
         [EnumMember(Value = "UpdateSiteDirectoryForChangeSCContact")]
-        UpdateSiteDirectoryForChangeSCContact = 54,
+        UpdateSiteDirectoryForChangeSCContact = 46,
 
         /// <summary>
         /// Enum CloneUserPermission for value: CloneUserPermission
         /// </summary>
         [EnumMember(Value = "CloneUserPermission")]
-        CloneUserPermission = 55,
+        CloneUserPermission = 47,
 
         /// <summary>
         /// Enum SearchUserPermission for value: SearchUserPermission
         /// </summary>
         [EnumMember(Value = "SearchUserPermission")]
-        SearchUserPermission = 56,
+        SearchUserPermission = 48,
 
         /// <summary>
         /// Enum InProgress for value: InProgress
         /// </summary>
         [EnumMember(Value = "InProgress")]
-        InProgress = 57,
+        InProgress = 49,
 
         /// <summary>
         /// Enum CompletedWithException for value: CompletedWithException
         /// </summary>
         [EnumMember(Value = "CompletedWithException")]
-        CompletedWithException = 58,
+        CompletedWithException = 50,
 
         /// <summary>
         /// Enum DeleteSubSite for value: DeleteSubSite
         /// </summary>
         [EnumMember(Value = "DeleteSubSite")]
-        DeleteSubSite = 59,
+        DeleteSubSite = 51,
 
         /// <summary>
         /// Enum UpdateDeleteSubSite for value: UpdateDeleteSubSite
         /// </summary>
         [EnumMember(Value = "UpdateDeleteSubSite")]
-        UpdateDeleteSubSite = 60,
+        UpdateDeleteSubSite = 52,
 
         /// <summary>
         /// Enum ArchiveSubSite for value: ArchiveSubSite
         /// </summary>
         [EnumMember(Value = "ArchiveSubSite")]
-        ArchiveSubSite = 61,
+        ArchiveSubSite = 53,
 
         /// <summary>
         /// Enum UpdateArchiveSubSite for value: UpdateArchiveSubSite
         /// </summary>
         [EnumMember(Value = "UpdateArchiveSubSite")]
-        UpdateArchiveSubSite = 62,
+        UpdateArchiveSubSite = 54,
 
         /// <summary>
         /// Enum ChangeSubSiteMetadata for value: ChangeSubSiteMetadata
         /// </summary>
         [EnumMember(Value = "ChangeSubSiteMetadata")]
-        ChangeSubSiteMetadata = 63,
+        ChangeSubSiteMetadata = 55,
 
         /// <summary>
         /// Enum UpdateSiteDirectoryForChangeSSMetadata for value: UpdateSiteDirectoryForChangeSSMetadata
         /// </summary>
         [EnumMember(Value = "UpdateSiteDirectoryForChangeSSMetadata")]
-        UpdateSiteDirectoryForChangeSSMetadata = 64,
+        UpdateSiteDirectoryForChangeSSMetadata = 56,
 
         /// <summary>
         /// Enum FirstTaskCreated for value: FirstTaskCreated
         /// </summary>
         [EnumMember(Value = "FirstTaskCreated")]
-        FirstTaskCreated = 65,
+        FirstTaskCreated = 57,
 
         /// <summary>
         /// Enum SecondTaskCreated for value: SecondTaskCreated
         /// </summary>
         [EnumMember(Value = "SecondTaskCreated")]
-        SecondTaskCreated = 66,
+        SecondTaskCreated = 58,
 
         /// <summary>
         /// Enum ThirdTaskCreated for value: ThirdTaskCreated
         /// </summary>
         [EnumMember(Value = "ThirdTaskCreated")]
-        ThirdTaskCreated = 67,
+        ThirdTaskCreated = 59,
 
         /// <summary>
         /// Enum GrantUserPermission for value: GrantUserPermission
         /// </summary>
         [EnumMember(Value = "GrantUserPermission")]
-        GrantUserPermission = 68,
+        GrantUserPermission = 60,
 
         /// <summary>
         /// Enum RemoveUserPermission for value: RemoveUserPermission
         /// </summary>
         [EnumMember(Value = "RemoveUserPermission")]
-        RemoveUserPermission = 69,
+        RemoveUserPermission = 61,
 
         /// <summary>
         /// Enum ChangeSCSettingsTitleDes for value: ChangeSCSettingsTitleDes
         /// </summary>
         [EnumMember(Value = "ChangeSCSettingsTitleDes")]
-        ChangeSCSettingsTitleDes = 70,
+        ChangeSCSettingsTitleDes = 62,
 
         /// <summary>
         /// Enum CreateMySiteCompleted for value: CreateMySiteCompleted
         /// </summary>
         [EnumMember(Value = "CreateMySiteCompleted")]
-        CreateMySiteCompleted = 71,
+        CreateMySiteCompleted = 63,
 
         /// <summary>
         /// Enum CreateCMPlan for value: CreateCMPlan
         /// </summary>
         [EnumMember(Value = "CreateCMPlan")]
-        CreateCMPlan = 72,
+        CreateCMPlan = 64,
 
         /// <summary>
         /// Enum RunCMPlan for value: RunCMPlan
         /// </summary>
         [EnumMember(Value = "RunCMPlan")]
-        RunCMPlan = 73,
+        RunCMPlan = 65,
 
         /// <summary>
         /// Enum CreateListCompleted for value: CreateListCompleted
         /// </summary>
         [EnumMember(Value = "CreateListCompleted")]
-        CreateListCompleted = 74,
+        CreateListCompleted = 68,
 
         /// <summary>
         /// Enum ChangeListURL for value: ChangeListURL
         /// </summary>
         [EnumMember(Value = "ChangeListURL")]
-        ChangeListURL = 75,
+        ChangeListURL = 69,
 
         /// <summary>
         /// Enum ChangeListSettingsCompleted for value: ChangeListSettingsCompleted
         /// </summary>
         [EnumMember(Value = "ChangeListSettingsCompleted")]
-        ChangeListSettingsCompleted = 76,
+        ChangeListSettingsCompleted = 71,
 
         /// <summary>
         /// Enum RegistSiteCollectionToDcoAveGroup for value: RegistSiteCollectionToDcoAveGroup
         /// </summary>
         [EnumMember(Value = "RegistSiteCollectionToDcoAveGroup")]
-        RegistSiteCollectionToDcoAveGroup = 77,
+        RegistSiteCollectionToDcoAveGroup = 72,
 
         /// <summary>
         /// Enum PermissionRecertificationTriggered for value: PermissionRecertificationTriggered
         /// </summary>
         [EnumMember(Value = "PermissionRecertificationTriggered")]
-        PermissionRecertificationTriggered = 78,
+        PermissionRecertificationTriggered = 75,
 
         /// <summary>
         /// Enum ChangingUserPermission for value: ChangingUserPermission
         /// </summary>
         [EnumMember(Value = "ChangingUserPermission")]
-        ChangingUserPermission = 79,
+        ChangingUserPermission = 76,
 
         /// <summary>
         /// Enum RequesterReportCreated for value: RequesterReportCreated
         /// </summary>
         [EnumMember(Value = "RequesterReportCreated")]
-        RequesterReportCreated = 80,
+        RequesterReportCreated = 77,
 
         /// <summary>
         /// Enum ApplyDeployAppPart for value: ApplyDeployAppPart
         /// </summary>
         [EnumMember(Value = "ApplyDeployAppPart")]
-        ApplyDeployAppPart = 81,
+        ApplyDeployAppPart = 78,
 
         /// <summary>
         /// Enum ApplyAddAppPart for value: ApplyAddAppPart
         /// </summary>
         [EnumMember(Value = "ApplyAddAppPart")]
-        ApplyAddAppPart = 82,
+        ApplyAddAppPart = 79,
 
         /// <summary>
         /// Enum ApplyingDeploymentManagerPlan for value: ApplyingDeploymentManagerPlan
         /// </summary>
         [EnumMember(Value = "ApplyingDeploymentManagerPlan")]
-        ApplyingDeploymentManagerPlan = 83,
+        ApplyingDeploymentManagerPlan = 80,
 
         /// <summary>
         /// Enum ApplyPermissionRecertification for value: ApplyPermissionRecertification
         /// </summary>
         [EnumMember(Value = "ApplyPermissionRecertification")]
-        ApplyPermissionRecertification = 84,
+        ApplyPermissionRecertification = 81,
 
         /// <summary>
         /// Enum ApplyMetadataRecertification for value: ApplyMetadataRecertification
         /// </summary>
         [EnumMember(Value = "ApplyMetadataRecertification")]
-        ApplyMetadataRecertification = 85,
+        ApplyMetadataRecertification = 82,
 
         /// <summary>
         /// Enum ApplyOwnershipRecertification for value: ApplyOwnershipRecertification
         /// </summary>
         [EnumMember(Value = "ApplyOwnershipRecertification")]
-        ApplyOwnershipRecertification = 86,
+        ApplyOwnershipRecertification = 83,
 
         /// <summary>
         /// Enum UnlockSiteCollection for value: UnlockSiteCollection
         /// </summary>
         [EnumMember(Value = "UnlockSiteCollection")]
-        UnlockSiteCollection = 87,
+        UnlockSiteCollection = 84,
 
         /// <summary>
         /// Enum UpdateSiteCollectionUnlocked for value: UpdateSiteCollectionUnlocked
         /// </summary>
         [EnumMember(Value = "UpdateSiteCollectionUnlocked")]
-        UpdateSiteCollectionUnlocked = 88,
+        UpdateSiteCollectionUnlocked = 85,
 
         /// <summary>
         /// Enum ApplyArchiverProfile for value: ApplyArchiverProfile
         /// </summary>
         [EnumMember(Value = "ApplyArchiverProfile")]
-        ApplyArchiverProfile = 89,
+        ApplyArchiverProfile = 67,
 
         /// <summary>
         /// Enum CancelAutoTask for value: CancelAutoTask
@@ -590,691 +590,691 @@ namespace Cloud.Governance.Client.Model
         /// Enum FailedToSubmit for value: FailedToSubmit
         /// </summary>
         [EnumMember(Value = "FailedToSubmit")]
-        FailedToSubmit = 93,
+        FailedToSubmit = 94,
 
         /// <summary>
         /// Enum WaitingForSubmission for value: WaitingForSubmission
         /// </summary>
         [EnumMember(Value = "WaitingForSubmission")]
-        WaitingForSubmission = 94,
+        WaitingForSubmission = 95,
 
         /// <summary>
         /// Enum AllApprovalStageComplete for value: AllApprovalStageComplete
         /// </summary>
         [EnumMember(Value = "AllApprovalStageComplete")]
-        AllApprovalStageComplete = 95,
+        AllApprovalStageComplete = 96,
 
         /// <summary>
         /// Enum LockSiteCollection for value: LockSiteCollection
         /// </summary>
         [EnumMember(Value = "LockSiteCollection")]
-        LockSiteCollection = 96,
+        LockSiteCollection = 97,
 
         /// <summary>
         /// Enum UpdateSiteCollectionLocked for value: UpdateSiteCollectionLocked
         /// </summary>
         [EnumMember(Value = "UpdateSiteCollectionLocked")]
-        UpdateSiteCollectionLocked = 97,
+        UpdateSiteCollectionLocked = 98,
 
         /// <summary>
         /// Enum ChangeSiteCollectionQuota for value: ChangeSiteCollectionQuota
         /// </summary>
         [EnumMember(Value = "ChangeSiteCollectionQuota")]
-        ChangeSiteCollectionQuota = 98,
+        ChangeSiteCollectionQuota = 99,
 
         /// <summary>
         /// Enum UpdateSiteCollectionChangedQuota for value: UpdateSiteCollectionChangedQuota
         /// </summary>
         [EnumMember(Value = "UpdateSiteCollectionChangedQuota")]
-        UpdateSiteCollectionChangedQuota = 99,
+        UpdateSiteCollectionChangedQuota = 100,
 
         /// <summary>
         /// Enum CallCustomActionBeforeApproval for value: CallCustomActionBeforeApproval
         /// </summary>
         [EnumMember(Value = "CallCustomActionBeforeApproval")]
-        CallCustomActionBeforeApproval = 100,
+        CallCustomActionBeforeApproval = 400,
 
         /// <summary>
         /// Enum MaintanceWindow for value: MaintanceWindow
         /// </summary>
         [EnumMember(Value = "MaintanceWindow")]
-        MaintanceWindow = 101,
+        MaintanceWindow = 401,
 
         /// <summary>
         /// Enum CreateUser for value: CreateUser
         /// </summary>
         [EnumMember(Value = "CreateUser")]
-        CreateUser = 102,
+        CreateUser = 500,
 
         /// <summary>
         /// Enum AssignManager for value: AssignManager
         /// </summary>
         [EnumMember(Value = "AssignManager")]
-        AssignManager = 103,
+        AssignManager = 501,
 
         /// <summary>
         /// Enum AssignLicense for value: AssignLicense
         /// </summary>
         [EnumMember(Value = "AssignLicense")]
-        AssignLicense = 104,
+        AssignLicense = 502,
 
         /// <summary>
         /// Enum AddUserToGroups for value: AddUserToGroups
         /// </summary>
         [EnumMember(Value = "AddUserToGroups")]
-        AddUserToGroups = 105,
+        AddUserToGroups = 503,
 
         /// <summary>
         /// Enum RemoveUserFromGroups for value: RemoveUserFromGroups
         /// </summary>
         [EnumMember(Value = "RemoveUserFromGroups")]
-        RemoveUserFromGroups = 106,
+        RemoveUserFromGroups = 504,
 
         /// <summary>
         /// Enum AddUserReport for value: AddUserReport
         /// </summary>
         [EnumMember(Value = "AddUserReport")]
-        AddUserReport = 107,
+        AddUserReport = 505,
 
         /// <summary>
         /// Enum ApplyUserPolicy for value: ApplyUserPolicy
         /// </summary>
         [EnumMember(Value = "ApplyUserPolicy")]
-        ApplyUserPolicy = 108,
+        ApplyUserPolicy = 506,
 
         /// <summary>
         /// Enum ApplyOneDriveSiteProperties for value: ApplyOneDriveSiteProperties
         /// </summary>
         [EnumMember(Value = "ApplyOneDriveSiteProperties")]
-        ApplyOneDriveSiteProperties = 109,
+        ApplyOneDriveSiteProperties = 507,
 
         /// <summary>
         /// Enum ChangeUser for value: ChangeUser
         /// </summary>
         [EnumMember(Value = "ChangeUser")]
-        ChangeUser = 110,
+        ChangeUser = 510,
 
         /// <summary>
         /// Enum ChangeUserContact for value: ChangeUserContact
         /// </summary>
         [EnumMember(Value = "ChangeUserContact")]
-        ChangeUserContact = 111,
+        ChangeUserContact = 511,
 
         /// <summary>
         /// Enum ChangeUserLicense for value: ChangeUserLicense
         /// </summary>
         [EnumMember(Value = "ChangeUserLicense")]
-        ChangeUserLicense = 112,
+        ChangeUserLicense = 512,
 
         /// <summary>
         /// Enum ChangeUserManager for value: ChangeUserManager
         /// </summary>
         [EnumMember(Value = "ChangeUserManager")]
-        ChangeUserManager = 113,
+        ChangeUserManager = 513,
 
         /// <summary>
         /// Enum ChangeUserGroups for value: ChangeUserGroups
         /// </summary>
         [EnumMember(Value = "ChangeUserGroups")]
-        ChangeUserGroups = 114,
+        ChangeUserGroups = 514,
 
         /// <summary>
         /// Enum UpdateUserReport for value: UpdateUserReport
         /// </summary>
         [EnumMember(Value = "UpdateUserReport")]
-        UpdateUserReport = 115,
+        UpdateUserReport = 515,
 
         /// <summary>
         /// Enum ApplyUserRole for value: ApplyUserRole
         /// </summary>
         [EnumMember(Value = "ApplyUserRole")]
-        ApplyUserRole = 116,
+        ApplyUserRole = 516,
 
         /// <summary>
         /// Enum DeleteUser for value: DeleteUser
         /// </summary>
         [EnumMember(Value = "DeleteUser")]
-        DeleteUser = 117,
+        DeleteUser = 520,
 
         /// <summary>
         /// Enum BlockUser for value: BlockUser
         /// </summary>
         [EnumMember(Value = "BlockUser")]
-        BlockUser = 118,
+        BlockUser = 521,
 
         /// <summary>
         /// Enum ResetPassword for value: ResetPassword
         /// </summary>
         [EnumMember(Value = "ResetPassword")]
-        ResetPassword = 119,
+        ResetPassword = 522,
 
         /// <summary>
         /// Enum ExtendUser for value: ExtendUser
         /// </summary>
         [EnumMember(Value = "ExtendUser")]
-        ExtendUser = 120,
+        ExtendUser = 523,
 
         /// <summary>
         /// Enum ChangeUserPolicy for value: ChangeUserPolicy
         /// </summary>
         [EnumMember(Value = "ChangeUserPolicy")]
-        ChangeUserPolicy = 121,
+        ChangeUserPolicy = 524,
 
         /// <summary>
         /// Enum UnblockUser for value: UnblockUser
         /// </summary>
         [EnumMember(Value = "UnblockUser")]
-        UnblockUser = 122,
+        UnblockUser = 525,
 
         /// <summary>
         /// Enum ChangeGroup for value: ChangeGroup
         /// </summary>
         [EnumMember(Value = "ChangeGroup")]
-        ChangeGroup = 123,
+        ChangeGroup = 530,
 
         /// <summary>
         /// Enum UpdateGroupReport for value: UpdateGroupReport
         /// </summary>
         [EnumMember(Value = "UpdateGroupReport")]
-        UpdateGroupReport = 124,
+        UpdateGroupReport = 531,
 
         /// <summary>
         /// Enum AddOwnersToGroup for value: AddOwnersToGroup
         /// </summary>
         [EnumMember(Value = "AddOwnersToGroup")]
-        AddOwnersToGroup = 125,
+        AddOwnersToGroup = 532,
 
         /// <summary>
         /// Enum AddMembersToGroup for value: AddMembersToGroup
         /// </summary>
         [EnumMember(Value = "AddMembersToGroup")]
-        AddMembersToGroup = 126,
+        AddMembersToGroup = 533,
 
         /// <summary>
         /// Enum RemoveOwnersFromGroup for value: RemoveOwnersFromGroup
         /// </summary>
         [EnumMember(Value = "RemoveOwnersFromGroup")]
-        RemoveOwnersFromGroup = 127,
+        RemoveOwnersFromGroup = 534,
 
         /// <summary>
         /// Enum RemoveMembersFromGroup for value: RemoveMembersFromGroup
         /// </summary>
         [EnumMember(Value = "RemoveMembersFromGroup")]
-        RemoveMembersFromGroup = 128,
+        RemoveMembersFromGroup = 535,
 
         /// <summary>
         /// Enum UpdateMetadatasToSite for value: UpdateMetadatasToSite
         /// </summary>
         [EnumMember(Value = "UpdateMetadatasToSite")]
-        UpdateMetadatasToSite = 129,
+        UpdateMetadatasToSite = 536,
 
         /// <summary>
         /// Enum ChangeDynamicGroupRules for value: ChangeDynamicGroupRules
         /// </summary>
         [EnumMember(Value = "ChangeDynamicGroupRules")]
-        ChangeDynamicGroupRules = 130,
+        ChangeDynamicGroupRules = 537,
 
         /// <summary>
         /// Enum CreateGroup for value: CreateGroup
         /// </summary>
         [EnumMember(Value = "CreateGroup")]
-        CreateGroup = 131,
+        CreateGroup = 540,
 
         /// <summary>
         /// Enum UpdateGroup for value: UpdateGroup
         /// </summary>
         [EnumMember(Value = "UpdateGroup")]
-        UpdateGroup = 132,
+        UpdateGroup = 541,
 
         /// <summary>
         /// Enum SetGroupOwners for value: SetGroupOwners
         /// </summary>
         [EnumMember(Value = "SetGroupOwners")]
-        SetGroupOwners = 133,
+        SetGroupOwners = 542,
 
         /// <summary>
         /// Enum SetGroupMembers for value: SetGroupMembers
         /// </summary>
         [EnumMember(Value = "SetGroupMembers")]
-        SetGroupMembers = 134,
+        SetGroupMembers = 543,
 
         /// <summary>
         /// Enum SetGroupQuota for value: SetGroupQuota
         /// </summary>
         [EnumMember(Value = "SetGroupQuota")]
-        SetGroupQuota = 135,
+        SetGroupQuota = 544,
 
         /// <summary>
         /// Enum AddGroupReport for value: AddGroupReport
         /// </summary>
         [EnumMember(Value = "AddGroupReport")]
-        AddGroupReport = 136,
+        AddGroupReport = 545,
 
         /// <summary>
         /// Enum ApplyGroupPolicy for value: ApplyGroupPolicy
         /// </summary>
         [EnumMember(Value = "ApplyGroupPolicy")]
-        ApplyGroupPolicy = 137,
+        ApplyGroupPolicy = 546,
 
         /// <summary>
         /// Enum EnableTeamCollaboration for value: EnableTeamCollaboration
         /// </summary>
         [EnumMember(Value = "EnableTeamCollaboration")]
-        EnableTeamCollaboration = 138,
+        EnableTeamCollaboration = 547,
 
         /// <summary>
         /// Enum ApplySiteDesign for value: ApplySiteDesign
         /// </summary>
         [EnumMember(Value = "ApplySiteDesign")]
-        ApplySiteDesign = 139,
+        ApplySiteDesign = 548,
 
         /// <summary>
         /// Enum ApplyGroupCustomMetadata for value: ApplyGroupCustomMetadata
         /// </summary>
         [EnumMember(Value = "ApplyGroupCustomMetadata")]
-        ApplyGroupCustomMetadata = 140,
+        ApplyGroupCustomMetadata = 549,
 
         /// <summary>
         /// Enum DeleteGroup for value: DeleteGroup
         /// </summary>
         [EnumMember(Value = "DeleteGroup")]
-        DeleteGroup = 141,
+        DeleteGroup = 550,
 
         /// <summary>
         /// Enum ChangeGroupPolicy for value: ChangeGroupPolicy
         /// </summary>
         [EnumMember(Value = "ChangeGroupPolicy")]
-        ChangeGroupPolicy = 142,
+        ChangeGroupPolicy = 551,
 
         /// <summary>
         /// Enum ExtendGroup for value: ExtendGroup
         /// </summary>
         [EnumMember(Value = "ExtendGroup")]
-        ExtendGroup = 143,
+        ExtendGroup = 552,
 
         /// <summary>
         /// Enum UpdateGroupStatus for value: UpdateGroupStatus
         /// </summary>
         [EnumMember(Value = "UpdateGroupStatus")]
-        UpdateGroupStatus = 144,
+        UpdateGroupStatus = 553,
 
         /// <summary>
         /// Enum InstallApp for value: InstallApp
         /// </summary>
         [EnumMember(Value = "InstallApp")]
-        InstallApp = 145,
+        InstallApp = 554,
 
         /// <summary>
         /// Enum ArchiveTeam for value: ArchiveTeam
         /// </summary>
         [EnumMember(Value = "ArchiveTeam")]
-        ArchiveTeam = 146,
+        ArchiveTeam = 560,
 
         /// <summary>
         /// Enum UnArchiveTeam for value: UnArchiveTeam
         /// </summary>
         [EnumMember(Value = "UnArchiveTeam")]
-        UnArchiveTeam = 147,
+        UnArchiveTeam = 561,
 
         /// <summary>
         /// Enum GetGroup for value: GetGroup
         /// </summary>
         [EnumMember(Value = "GetGroup")]
-        GetGroup = 148,
+        GetGroup = 555,
 
         /// <summary>
         /// Enum RegisterSiteDocave for value: RegisterSiteDocave
         /// </summary>
         [EnumMember(Value = "RegisterSiteDocave")]
-        RegisterSiteDocave = 149,
+        RegisterSiteDocave = 556,
 
         /// <summary>
         /// Enum GetGroupSite for value: GetGroupSite
         /// </summary>
         [EnumMember(Value = "GetGroupSite")]
-        GetGroupSite = 150,
+        GetGroupSite = 557,
 
         /// <summary>
         /// Enum ChangeGroupQuota for value: ChangeGroupQuota
         /// </summary>
         [EnumMember(Value = "ChangeGroupQuota")]
-        ChangeGroupQuota = 151,
+        ChangeGroupQuota = 558,
 
         /// <summary>
         /// Enum CreatingSite for value: CreatingSite
         /// </summary>
         [EnumMember(Value = "CreatingSite")]
-        CreatingSite = 152,
+        CreatingSite = 600,
 
         /// <summary>
         /// Enum ApplyingCustomTemplate for value: ApplyingCustomTemplate
         /// </summary>
         [EnumMember(Value = "ApplyingCustomTemplate")]
-        ApplyingCustomTemplate = 153,
+        ApplyingCustomTemplate = 601,
 
         /// <summary>
         /// Enum ApplyingSecuritySettings for value: ApplyingSecuritySettings
         /// </summary>
         [EnumMember(Value = "ApplyingSecuritySettings")]
-        ApplyingSecuritySettings = 154,
+        ApplyingSecuritySettings = 602,
 
         /// <summary>
         /// Enum ApplyingCustomMetadata for value: ApplyingCustomMetadata
         /// </summary>
         [EnumMember(Value = "ApplyingCustomMetadata")]
-        ApplyingCustomMetadata = 155,
+        ApplyingCustomMetadata = 603,
 
         /// <summary>
         /// Enum ApplyingSitePolicy for value: ApplyingSitePolicy
         /// </summary>
         [EnumMember(Value = "ApplyingSitePolicy")]
-        ApplyingSitePolicy = 156,
+        ApplyingSitePolicy = 604,
 
         /// <summary>
         /// Enum ApplyingAdditionalAdministrators for value: ApplyingAdditionalAdministrators
         /// </summary>
         [EnumMember(Value = "ApplyingAdditionalAdministrators")]
-        ApplyingAdditionalAdministrators = 157,
+        ApplyingAdditionalAdministrators = 605,
 
         /// <summary>
         /// Enum AddingToSiteDirectory for value: AddingToSiteDirectory
         /// </summary>
         [EnumMember(Value = "AddingToSiteDirectory")]
-        AddingToSiteDirectory = 158,
+        AddingToSiteDirectory = 606,
 
         /// <summary>
         /// Enum RegistingSiteToDao for value: RegistingSiteToDao
         /// </summary>
         [EnumMember(Value = "RegistingSiteToDao")]
-        RegistingSiteToDao = 159,
+        RegistingSiteToDao = 607,
 
         /// <summary>
         /// Enum ApplyingServiceDpmPlan for value: ApplyingServiceDpmPlan
         /// </summary>
         [EnumMember(Value = "ApplyingServiceDpmPlan")]
-        ApplyingServiceDpmPlan = 160,
+        ApplyingServiceDpmPlan = 608,
 
         /// <summary>
         /// Enum ServiceDpmPlanExecuted for value: ServiceDpmPlanExecuted
         /// </summary>
         [EnumMember(Value = "ServiceDpmPlanExecuted")]
-        ServiceDpmPlanExecuted = 161,
+        ServiceDpmPlanExecuted = 609,
 
         /// <summary>
         /// Enum ApplyingPolicyDpmPlan for value: ApplyingPolicyDpmPlan
         /// </summary>
         [EnumMember(Value = "ApplyingPolicyDpmPlan")]
-        ApplyingPolicyDpmPlan = 162,
+        ApplyingPolicyDpmPlan = 610,
 
         /// <summary>
         /// Enum PolicyDpmPlanExecuted for value: PolicyDpmPlanExecuted
         /// </summary>
         [EnumMember(Value = "PolicyDpmPlanExecuted")]
-        PolicyDpmPlanExecuted = 163,
+        PolicyDpmPlanExecuted = 611,
 
         /// <summary>
         /// Enum ApplyingPolicyEnforcerProfile for value: ApplyingPolicyEnforcerProfile
         /// </summary>
         [EnumMember(Value = "ApplyingPolicyEnforcerProfile")]
-        ApplyingPolicyEnforcerProfile = 164,
+        ApplyingPolicyEnforcerProfile = 612,
 
         /// <summary>
         /// Enum ApplyingArchiverProfile for value: ApplyingArchiverProfile
         /// </summary>
         [EnumMember(Value = "ApplyingArchiverProfile")]
-        ApplyingArchiverProfile = 165,
+        ApplyingArchiverProfile = 613,
 
         /// <summary>
         /// Enum ApplyingRecertification for value: ApplyingRecertification
         /// </summary>
         [EnumMember(Value = "ApplyingRecertification")]
-        ApplyingRecertification = 166,
+        ApplyingRecertification = 614,
 
         /// <summary>
         /// Enum InstallingApp for value: InstallingApp
         /// </summary>
         [EnumMember(Value = "InstallingApp")]
-        InstallingApp = 167,
+        InstallingApp = 615,
 
         /// <summary>
         /// Enum AddingAppParts for value: AddingAppParts
         /// </summary>
         [EnumMember(Value = "AddingAppParts")]
-        AddingAppParts = 168,
+        AddingAppParts = 616,
 
         /// <summary>
         /// Enum CreatingOrValidYammerGroup for value: CreatingOrValidYammerGroup
         /// </summary>
         [EnumMember(Value = "CreatingOrValidYammerGroup")]
-        CreatingOrValidYammerGroup = 169,
+        CreatingOrValidYammerGroup = 617,
 
         /// <summary>
         /// Enum AddingYammerGroupFeed for value: AddingYammerGroupFeed
         /// </summary>
         [EnumMember(Value = "AddingYammerGroupFeed")]
-        AddingYammerGroupFeed = 170,
+        AddingYammerGroupFeed = 618,
 
         /// <summary>
         /// Enum RemovingServiceAccount for value: RemovingServiceAccount
         /// </summary>
         [EnumMember(Value = "RemovingServiceAccount")]
-        RemovingServiceAccount = 171,
+        RemovingServiceAccount = 619,
 
         /// <summary>
         /// Enum CreatingWeb for value: CreatingWeb
         /// </summary>
         [EnumMember(Value = "CreatingWeb")]
-        CreatingWeb = 172,
+        CreatingWeb = 700,
 
         /// <summary>
         /// Enum ApplyingSecuritySettingsToWeb for value: ApplyingSecuritySettingsToWeb
         /// </summary>
         [EnumMember(Value = "ApplyingSecuritySettingsToWeb")]
-        ApplyingSecuritySettingsToWeb = 173,
+        ApplyingSecuritySettingsToWeb = 701,
 
         /// <summary>
         /// Enum ApplyingSharePointConfigurationsToWeb for value: ApplyingSharePointConfigurationsToWeb
         /// </summary>
         [EnumMember(Value = "ApplyingSharePointConfigurationsToWeb")]
-        ApplyingSharePointConfigurationsToWeb = 174,
+        ApplyingSharePointConfigurationsToWeb = 702,
 
         /// <summary>
         /// Enum ApplyingCustomMetadataToWeb for value: ApplyingCustomMetadataToWeb
         /// </summary>
         [EnumMember(Value = "ApplyingCustomMetadataToWeb")]
-        ApplyingCustomMetadataToWeb = 175,
+        ApplyingCustomMetadataToWeb = 703,
 
         /// <summary>
         /// Enum ApplyAndRunDPMPlanInCreatingWeb for value: ApplyAndRunDPMPlanInCreatingWeb
         /// </summary>
         [EnumMember(Value = "ApplyAndRunDPMPlanInCreatingWeb")]
-        ApplyAndRunDPMPlanInCreatingWeb = 176,
+        ApplyAndRunDPMPlanInCreatingWeb = 704,
 
         /// <summary>
         /// Enum AddingWebToDatabase for value: AddingWebToDatabase
         /// </summary>
         [EnumMember(Value = "AddingWebToDatabase")]
-        AddingWebToDatabase = 177,
+        AddingWebToDatabase = 705,
 
         /// <summary>
         /// Enum UpdatingWebInDatabase for value: UpdatingWebInDatabase
         /// </summary>
         [EnumMember(Value = "UpdatingWebInDatabase")]
-        UpdatingWebInDatabase = 178,
+        UpdatingWebInDatabase = 706,
 
         /// <summary>
         /// Enum DeployingAppPartToWeb for value: DeployingAppPartToWeb
         /// </summary>
         [EnumMember(Value = "DeployingAppPartToWeb")]
-        DeployingAppPartToWeb = 179,
+        DeployingAppPartToWeb = 707,
 
         /// <summary>
         /// Enum AddingAppPartToWeb for value: AddingAppPartToWeb
         /// </summary>
         [EnumMember(Value = "AddingAppPartToWeb")]
-        AddingAppPartToWeb = 180,
+        AddingAppPartToWeb = 708,
 
         /// <summary>
         /// Enum CreatingOrValidingYammerGroupInCreatingWeb for value: CreatingOrValidingYammerGroupInCreatingWeb
         /// </summary>
         [EnumMember(Value = "CreatingOrValidingYammerGroupInCreatingWeb")]
-        CreatingOrValidingYammerGroupInCreatingWeb = 181,
+        CreatingOrValidingYammerGroupInCreatingWeb = 709,
 
         /// <summary>
         /// Enum AddingYammerGroupFeedInWeb for value: AddingYammerGroupFeedInWeb
         /// </summary>
         [EnumMember(Value = "AddingYammerGroupFeedInWeb")]
-        AddingYammerGroupFeedInWeb = 182,
+        AddingYammerGroupFeedInWeb = 710,
 
         /// <summary>
         /// Enum DeletingSite for value: DeletingSite
         /// </summary>
         [EnumMember(Value = "DeletingSite")]
-        DeletingSite = 183,
+        DeletingSite = 800,
 
         /// <summary>
         /// Enum ArchivingSite for value: ArchivingSite
         /// </summary>
         [EnumMember(Value = "ArchivingSite")]
-        ArchivingSite = 184,
+        ArchivingSite = 801,
 
         /// <summary>
         /// Enum ChangingSitePolicy for value: ChangingSitePolicy
         /// </summary>
         [EnumMember(Value = "ChangingSitePolicy")]
-        ChangingSitePolicy = 185,
+        ChangingSitePolicy = 802,
 
         /// <summary>
         /// Enum UnlockingSite for value: UnlockingSite
         /// </summary>
         [EnumMember(Value = "UnlockingSite")]
-        UnlockingSite = 186,
+        UnlockingSite = 803,
 
         /// <summary>
         /// Enum LockingSite for value: LockingSite
         /// </summary>
         [EnumMember(Value = "LockingSite")]
-        LockingSite = 187,
+        LockingSite = 804,
 
         /// <summary>
         /// Enum ExtendingSite for value: ExtendingSite
         /// </summary>
         [EnumMember(Value = "ExtendingSite")]
-        ExtendingSite = 188,
+        ExtendingSite = 805,
 
         /// <summary>
         /// Enum ChangingSiteQuota for value: ChangingSiteQuota
         /// </summary>
         [EnumMember(Value = "ChangingSiteQuota")]
-        ChangingSiteQuota = 189,
+        ChangingSiteQuota = 806,
 
         /// <summary>
         /// Enum ChangingListSetting for value: ChangingListSetting
         /// </summary>
         [EnumMember(Value = "ChangingListSetting")]
-        ChangingListSetting = 190,
+        ChangingListSetting = 900,
 
         /// <summary>
         /// Enum ChangingSiteTitleAndDescription for value: ChangingSiteTitleAndDescription
         /// </summary>
         [EnumMember(Value = "ChangingSiteTitleAndDescription")]
-        ChangingSiteTitleAndDescription = 191,
+        ChangingSiteTitleAndDescription = 830,
 
         /// <summary>
         /// Enum ChangingSiteMetadata for value: ChangingSiteMetadata
         /// </summary>
         [EnumMember(Value = "ChangingSiteMetadata")]
-        ChangingSiteMetadata = 192,
+        ChangingSiteMetadata = 831,
 
         /// <summary>
         /// Enum UpdatingSiteDirectory for value: UpdatingSiteDirectory
         /// </summary>
         [EnumMember(Value = "UpdatingSiteDirectory")]
-        UpdatingSiteDirectory = 193,
+        UpdatingSiteDirectory = 832,
 
         /// <summary>
         /// Enum ConvertingToHubSite for value: ConvertingToHubSite
         /// </summary>
         [EnumMember(Value = "ConvertingToHubSite")]
-        ConvertingToHubSite = 194,
+        ConvertingToHubSite = 833,
 
         /// <summary>
         /// Enum ConnectingToHubSite for value: ConnectingToHubSite
         /// </summary>
         [EnumMember(Value = "ConnectingToHubSite")]
-        ConnectingToHubSite = 195,
+        ConnectingToHubSite = 834,
 
         /// <summary>
         /// Enum UnregisteringHubSite for value: UnregisteringHubSite
         /// </summary>
         [EnumMember(Value = "UnregisteringHubSite")]
-        UnregisteringHubSite = 196,
+        UnregisteringHubSite = 835,
 
         /// <summary>
         /// Enum ChangingWebTitleAndDescription for value: ChangingWebTitleAndDescription
         /// </summary>
         [EnumMember(Value = "ChangingWebTitleAndDescription")]
-        ChangingWebTitleAndDescription = 197,
+        ChangingWebTitleAndDescription = 850,
 
         /// <summary>
         /// Enum CheckingList for value: CheckingList
         /// </summary>
         [EnumMember(Value = "CheckingList")]
-        CheckingList = 198,
+        CheckingList = 1000,
 
         /// <summary>
         /// Enum UploadingTemplate for value: UploadingTemplate
         /// </summary>
         [EnumMember(Value = "UploadingTemplate")]
-        UploadingTemplate = 199,
+        UploadingTemplate = 1001,
 
         /// <summary>
         /// Enum CreatingList for value: CreatingList
         /// </summary>
         [EnumMember(Value = "CreatingList")]
-        CreatingList = 200,
+        CreatingList = 1002,
 
         /// <summary>
         /// Enum WaitingForGrantPermission for value: WaitingForGrantPermission
         /// </summary>
         [EnumMember(Value = "WaitingForGrantPermission")]
-        WaitingForGrantPermission = 201,
+        WaitingForGrantPermission = 950,
 
         /// <summary>
         /// Enum GrantingPermission for value: GrantingPermission
         /// </summary>
         [EnumMember(Value = "GrantingPermission")]
-        GrantingPermission = 202,
+        GrantingPermission = 951,
 
         /// <summary>
         /// Enum CreatingCMPlan for value: CreatingCMPlan
         /// </summary>
         [EnumMember(Value = "CreatingCMPlan")]
-        CreatingCMPlan = 203,
+        CreatingCMPlan = 1050,
 
         /// <summary>
         /// Enum RunningCMPlan for value: RunningCMPlan
         /// </summary>
         [EnumMember(Value = "RunningCMPlan")]
-        RunningCMPlan = 204,
+        RunningCMPlan = 1051,
 
         /// <summary>
         /// Enum SettingGroupSharing for value: SettingGroupSharing
         /// </summary>
         [EnumMember(Value = "SettingGroupSharing")]
-        SettingGroupSharing = 205,
+        SettingGroupSharing = 1052,
 
         /// <summary>
         /// Enum SettingOutlookExperience for value: SettingOutlookExperience
         /// </summary>
         [EnumMember(Value = "SettingOutlookExperience")]
-        SettingOutlookExperience = 206,
+        SettingOutlookExperience = 1053,
 
         /// <summary>
         /// Enum StartingProcess for value: StartingProcess
         /// </summary>
         [EnumMember(Value = "StartingProcess")]
-        StartingProcess = 207
+        StartingProcess = 3000,
 
     }
 

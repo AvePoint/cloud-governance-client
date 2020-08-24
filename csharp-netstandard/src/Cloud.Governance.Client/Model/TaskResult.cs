@@ -38,151 +38,151 @@ namespace Cloud.Governance.Client.Model
         /// Enum Running for value: Running
         /// </summary>
         [EnumMember(Value = "Running")]
-        Running = 1,
+        Running = 0,
 
         /// <summary>
         /// Enum Approved for value: Approved
         /// </summary>
         [EnumMember(Value = "Approved")]
-        Approved = 2,
+        Approved = 1,
 
         /// <summary>
         /// Enum Rejected for value: Rejected
         /// </summary>
         [EnumMember(Value = "Rejected")]
-        Rejected = 3,
+        Rejected = 2,
 
         /// <summary>
         /// Enum Canceled for value: Canceled
         /// </summary>
         [EnumMember(Value = "Canceled")]
-        Canceled = 4,
+        Canceled = 3,
 
         /// <summary>
         /// Enum TimeOut for value: TimeOut
         /// </summary>
         [EnumMember(Value = "TimeOut")]
-        TimeOut = 5,
+        TimeOut = 4,
 
         /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 6,
+        Completed = 5,
 
         /// <summary>
         /// Enum AutoActionApproved for value: AutoActionApproved
         /// </summary>
         [EnumMember(Value = "AutoActionApproved")]
-        AutoActionApproved = 7,
+        AutoActionApproved = 6,
 
         /// <summary>
         /// Enum Retried for value: Retried
         /// </summary>
         [EnumMember(Value = "Retried")]
-        Retried = 8,
+        Retried = 7,
 
         /// <summary>
         /// Enum Skipped for value: Skipped
         /// </summary>
         [EnumMember(Value = "Skipped")]
-        Skipped = 9,
+        Skipped = 8,
 
         /// <summary>
         /// Enum Submited for value: Submited
         /// </summary>
         [EnumMember(Value = "Submited")]
-        Submited = 10,
+        Submited = 9,
 
         /// <summary>
         /// Enum WaitingForSubmission for value: WaitingForSubmission
         /// </summary>
         [EnumMember(Value = "WaitingForSubmission")]
-        WaitingForSubmission = 11,
+        WaitingForSubmission = 10,
 
         /// <summary>
         /// Enum AllStagesTimeOut for value: AllStagesTimeOut
         /// </summary>
         [EnumMember(Value = "AllStagesTimeOut")]
-        AllStagesTimeOut = 12,
+        AllStagesTimeOut = 11,
 
         /// <summary>
         /// Enum Declined for value: Declined
         /// </summary>
         [EnumMember(Value = "Declined")]
-        Declined = 13,
+        Declined = 12,
 
         /// <summary>
         /// Enum WaitingForClaim for value: WaitingForClaim
         /// </summary>
         [EnumMember(Value = "WaitingForClaim")]
-        WaitingForClaim = 14,
+        WaitingForClaim = 13,
 
         /// <summary>
         /// Enum ElectionTaskTimeOut for value: ElectionTaskTimeOut
         /// </summary>
         [EnumMember(Value = "ElectionTaskTimeOut")]
-        ElectionTaskTimeOut = 15,
+        ElectionTaskTimeOut = 14,
 
         /// <summary>
         /// Enum Claimed for value: Claimed
         /// </summary>
         [EnumMember(Value = "Claimed")]
-        Claimed = 16,
+        Claimed = 15,
 
         /// <summary>
         /// Enum AutoComplete for value: AutoComplete
         /// </summary>
         [EnumMember(Value = "AutoComplete")]
-        AutoComplete = 17,
+        AutoComplete = 16,
 
         /// <summary>
         /// Enum WaitingForSpecify for value: WaitingForSpecify
         /// </summary>
         [EnumMember(Value = "WaitingForSpecify")]
-        WaitingForSpecify = 18,
+        WaitingForSpecify = 17,
 
         /// <summary>
         /// Enum WaitingForSpecifyBothContacts for value: WaitingForSpecifyBothContacts
         /// </summary>
         [EnumMember(Value = "WaitingForSpecifyBothContacts")]
-        WaitingForSpecifyBothContacts = 19,
+        WaitingForSpecifyBothContacts = 25,
 
         /// <summary>
         /// Enum PendingConfirm for value: PendingConfirm
         /// </summary>
         [EnumMember(Value = "PendingConfirm")]
-        PendingConfirm = 20,
+        PendingConfirm = 19,
 
         /// <summary>
         /// Enum ConfirmOverdue for value: ConfirmOverdue
         /// </summary>
         [EnumMember(Value = "ConfirmOverdue")]
-        ConfirmOverdue = 21,
+        ConfirmOverdue = 20,
 
         /// <summary>
         /// Enum PendingRenewal for value: PendingRenewal
         /// </summary>
         [EnumMember(Value = "PendingRenewal")]
-        PendingRenewal = 22,
+        PendingRenewal = 21,
 
         /// <summary>
         /// Enum RenewalExpired for value: RenewalExpired
         /// </summary>
         [EnumMember(Value = "RenewalExpired")]
-        RenewalExpired = 23,
+        RenewalExpired = 22,
 
         /// <summary>
         /// Enum ConfirmException for value: ConfirmException
         /// </summary>
         [EnumMember(Value = "ConfirmException")]
-        ConfirmException = 24,
+        ConfirmException = 23,
 
         /// <summary>
         /// Enum RenewalException for value: RenewalException
         /// </summary>
         [EnumMember(Value = "RenewalException")]
-        RenewalException = 25
+        RenewalException = 24,
 
     }
 

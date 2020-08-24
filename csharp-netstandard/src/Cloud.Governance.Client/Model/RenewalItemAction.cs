@@ -38,43 +38,43 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Remove for value: Remove
         /// </summary>
         [EnumMember(Value = "Remove")]
-        Remove = 2,
+        Remove = 1,
 
         /// <summary>
         /// Enum Add for value: Add
         /// </summary>
         [EnumMember(Value = "Add")]
-        Add = 3,
+        Add = 2,
 
         /// <summary>
         /// Enum Edit for value: Edit
         /// </summary>
         [EnumMember(Value = "Edit")]
-        Edit = 4,
+        Edit = 3,
 
         /// <summary>
         /// Enum DeleteUser for value: DeleteUser
         /// </summary>
         [EnumMember(Value = "DeleteUser")]
-        DeleteUser = 5,
+        DeleteUser = 4,
 
         /// <summary>
         /// Enum PromoteAsOwner for value: PromoteAsOwner
         /// </summary>
         [EnumMember(Value = "PromoteAsOwner")]
-        PromoteAsOwner = 6,
+        PromoteAsOwner = 5,
 
         /// <summary>
         /// Enum DemoteAsMember for value: DemoteAsMember
         /// </summary>
         [EnumMember(Value = "DemoteAsMember")]
-        DemoteAsMember = 7
+        DemoteAsMember = 6,
 
     }
 

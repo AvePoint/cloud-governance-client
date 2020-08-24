@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum Unclaimed for value: Unclaimed
         /// </summary>
         [EnumMember(Value = "Unclaimed")]
-        Unclaimed = 1,
+        Unclaimed = 0,
 
         /// <summary>
         /// Enum Claiming for value: Claiming
         /// </summary>
         [EnumMember(Value = "Claiming")]
-        Claiming = 2,
+        Claiming = 1,
 
         /// <summary>
         /// Enum Claimed for value: Claimed
         /// </summary>
         [EnumMember(Value = "Claimed")]
-        Claimed = 3,
+        Claimed = 2,
 
         /// <summary>
         /// Enum Failed for value: Failed
         /// </summary>
         [EnumMember(Value = "Failed")]
-        Failed = 4
+        Failed = 3,
 
     }
 

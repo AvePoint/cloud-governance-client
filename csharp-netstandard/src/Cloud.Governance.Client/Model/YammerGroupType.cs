@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Public for value: Public
         /// </summary>
         [EnumMember(Value = "Public")]
-        Public = 1,
+        Public = 0,
 
         /// <summary>
         /// Enum Private for value: Private
         /// </summary>
         [EnumMember(Value = "Private")]
-        Private = 2
+        Private = 1,
 
     }
 

@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum RenewSiteContact for value: RenewSiteContact
         /// </summary>
         [EnumMember(Value = "RenewSiteContact")]
-        RenewSiteContact = 2,
+        RenewSiteContact = 1,
 
         /// <summary>
         /// Enum RenewSiteMetadata for value: RenewSiteMetadata
         /// </summary>
         [EnumMember(Value = "RenewSiteMetadata")]
-        RenewSiteMetadata = 3,
+        RenewSiteMetadata = 2,
 
         /// <summary>
         /// Enum RenewSitePermission for value: RenewSitePermission
@@ -62,25 +62,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum RenewGroupContact for value: RenewGroupContact
         /// </summary>
         [EnumMember(Value = "RenewGroupContact")]
-        RenewGroupContact = 5,
+        RenewGroupContact = 11,
 
         /// <summary>
         /// Enum RenewGroupMetadata for value: RenewGroupMetadata
         /// </summary>
         [EnumMember(Value = "RenewGroupMetadata")]
-        RenewGroupMetadata = 6,
+        RenewGroupMetadata = 12,
 
         /// <summary>
         /// Enum RenewGroupMembership for value: RenewGroupMembership
         /// </summary>
         [EnumMember(Value = "RenewGroupMembership")]
-        RenewGroupMembership = 7,
+        RenewGroupMembership = 13,
 
         /// <summary>
         /// Enum RenewGroupPermission for value: RenewGroupPermission
         /// </summary>
         [EnumMember(Value = "RenewGroupPermission")]
-        RenewGroupPermission = 8
+        RenewGroupPermission = 14,
 
     }
 

@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Added for value: Added
         /// </summary>
         [EnumMember(Value = "Added")]
-        Added = 2,
+        Added = 1,
 
         /// <summary>
         /// Enum Changed for value: Changed
         /// </summary>
         [EnumMember(Value = "Changed")]
-        Changed = 3,
+        Changed = 2,
 
         /// <summary>
         /// Enum Deleted for value: Deleted
         /// </summary>
         [EnumMember(Value = "Deleted")]
-        Deleted = 4,
+        Deleted = 3,
 
         /// <summary>
         /// Enum Copied for value: Copied
         /// </summary>
         [EnumMember(Value = "Copied")]
-        Copied = 5
+        Copied = 4,
 
     }
 

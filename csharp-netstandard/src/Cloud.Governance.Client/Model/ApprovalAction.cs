@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Reject for value: Reject
         /// </summary>
         [EnumMember(Value = "Reject")]
-        Reject = 1,
+        Reject = 0,
 
         /// <summary>
         /// Enum Approval for value: Approval
         /// </summary>
         [EnumMember(Value = "Approval")]
-        Approval = 2
+        Approval = 1,
 
     }
 

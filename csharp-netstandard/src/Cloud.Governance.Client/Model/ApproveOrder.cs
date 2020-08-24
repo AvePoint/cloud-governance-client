@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Serial for value: Serial
         /// </summary>
         [EnumMember(Value = "Serial")]
-        Serial = 1,
+        Serial = 0,
 
         /// <summary>
         /// Enum Parallel for value: Parallel
         /// </summary>
         [EnumMember(Value = "Parallel")]
-        Parallel = 2
+        Parallel = 1,
 
     }
 

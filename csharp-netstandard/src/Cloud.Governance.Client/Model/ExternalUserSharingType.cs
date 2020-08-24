@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum RequireSignIn for value: RequireSignIn
         /// </summary>
         [EnumMember(Value = "RequireSignIn")]
-        RequireSignIn = 1,
+        RequireSignIn = 0,
 
         /// <summary>
         /// Enum AnonymousLink for value: AnonymousLink
         /// </summary>
         [EnumMember(Value = "AnonymousLink")]
-        AnonymousLink = 2
+        AnonymousLink = 1,
 
     }
 

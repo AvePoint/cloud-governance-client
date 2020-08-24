@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum PermissionRecertification for value: PermissionRecertification
         /// </summary>
         [EnumMember(Value = "PermissionRecertification")]
-        PermissionRecertification = 1,
+        PermissionRecertification = 0,
 
         /// <summary>
         /// Enum MembershipRecertification for value: MembershipRecertification
         /// </summary>
         [EnumMember(Value = "MembershipRecertification")]
-        MembershipRecertification = 2
+        MembershipRecertification = 1,
 
     }
 

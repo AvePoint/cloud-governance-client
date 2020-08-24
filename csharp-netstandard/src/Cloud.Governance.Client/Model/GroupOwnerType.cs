@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum SpoGroup for value: SpoGroup
         /// </summary>
         [EnumMember(Value = "SpoGroup")]
-        SpoGroup = 1,
+        SpoGroup = 0,
 
         /// <summary>
         /// Enum User for value: User
         /// </summary>
         [EnumMember(Value = "User")]
-        User = 2
+        User = 1,
 
     }
 

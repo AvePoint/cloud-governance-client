@@ -38,121 +38,121 @@ namespace Cloud.Governance.Client.Model
         /// Enum CreateSiteCollection for value: CreateSiteCollection
         /// </summary>
         [EnumMember(Value = "CreateSiteCollection")]
-        CreateSiteCollection = 1,
+        CreateSiteCollection = 0,
 
         /// <summary>
         /// Enum CreateSite for value: CreateSite
         /// </summary>
         [EnumMember(Value = "CreateSite")]
-        CreateSite = 2,
+        CreateSite = 1,
 
         /// <summary>
         /// Enum CreateList for value: CreateList
         /// </summary>
         [EnumMember(Value = "CreateList")]
-        CreateList = 3,
+        CreateList = 2,
 
         /// <summary>
         /// Enum ChangeSiteCollectionSettings for value: ChangeSiteCollectionSettings
         /// </summary>
         [EnumMember(Value = "ChangeSiteCollectionSettings")]
-        ChangeSiteCollectionSettings = 4,
+        ChangeSiteCollectionSettings = 3,
 
         /// <summary>
         /// Enum ChangeSiteCollectionContact for value: ChangeSiteCollectionContact
         /// </summary>
         [EnumMember(Value = "ChangeSiteCollectionContact")]
-        ChangeSiteCollectionContact = 5,
+        ChangeSiteCollectionContact = 4,
 
         /// <summary>
         /// Enum ChangeSiteContact for value: ChangeSiteContact
         /// </summary>
         [EnumMember(Value = "ChangeSiteContact")]
-        ChangeSiteContact = 6,
+        ChangeSiteContact = 5,
 
         /// <summary>
         /// Enum ChangeSiteMetadata for value: ChangeSiteMetadata
         /// </summary>
         [EnumMember(Value = "ChangeSiteMetadata")]
-        ChangeSiteMetadata = 7,
+        ChangeSiteMetadata = 6,
 
         /// <summary>
         /// Enum ChangeList for value: ChangeList
         /// </summary>
         [EnumMember(Value = "ChangeList")]
-        ChangeList = 8,
+        ChangeList = 7,
 
         /// <summary>
         /// Enum SiteCollectionLifeCycle for value: SiteCollectionLifeCycle
         /// </summary>
         [EnumMember(Value = "SiteCollectionLifeCycle")]
-        SiteCollectionLifeCycle = 9,
+        SiteCollectionLifeCycle = 8,
 
         /// <summary>
         /// Enum SiteLifeCycle for value: SiteLifeCycle
         /// </summary>
         [EnumMember(Value = "SiteLifeCycle")]
-        SiteLifeCycle = 10,
+        SiteLifeCycle = 9,
 
         /// <summary>
         /// Enum RemovePermission for value: RemovePermission
         /// </summary>
         [EnumMember(Value = "RemovePermission")]
-        RemovePermission = 11,
+        RemovePermission = 10,
 
         /// <summary>
         /// Enum GrantPermission for value: GrantPermission
         /// </summary>
         [EnumMember(Value = "GrantPermission")]
-        GrantPermission = 12,
+        GrantPermission = 11,
 
         /// <summary>
         /// Enum TransferPermission for value: TransferPermission
         /// </summary>
         [EnumMember(Value = "TransferPermission")]
-        TransferPermission = 13,
+        TransferPermission = 12,
 
         /// <summary>
         /// Enum ContentManager for value: ContentManager
         /// </summary>
         [EnumMember(Value = "ContentManager")]
-        ContentManager = 14,
+        ContentManager = 13,
 
         /// <summary>
         /// Enum CreateTeam for value: CreateTeam
         /// </summary>
         [EnumMember(Value = "CreateTeam")]
-        CreateTeam = 15,
+        CreateTeam = 14,
 
         /// <summary>
         /// Enum CreateGroup for value: CreateGroup
         /// </summary>
         [EnumMember(Value = "CreateGroup")]
-        CreateGroup = 16,
+        CreateGroup = 15,
 
         /// <summary>
         /// Enum TeamLifeCycle for value: TeamLifeCycle
         /// </summary>
         [EnumMember(Value = "TeamLifeCycle")]
-        TeamLifeCycle = 17,
+        TeamLifeCycle = 16,
 
         /// <summary>
         /// Enum GroupLifeCycle for value: GroupLifeCycle
         /// </summary>
         [EnumMember(Value = "GroupLifeCycle")]
-        GroupLifeCycle = 18,
+        GroupLifeCycle = 17,
 
         /// <summary>
         /// Enum ChangeTeam for value: ChangeTeam
         /// </summary>
         [EnumMember(Value = "ChangeTeam")]
-        ChangeTeam = 19,
+        ChangeTeam = 18,
 
         /// <summary>
         /// Enum ChangeGroup for value: ChangeGroup
         /// </summary>
         [EnumMember(Value = "ChangeGroup")]
-        ChangeGroup = 20
+        ChangeGroup = 19,
 
     }
 

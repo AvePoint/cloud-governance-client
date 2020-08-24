@@ -50,7 +50,7 @@ namespace Cloud.Governance.Client.Model
         /// Enum Pie for value: Pie
         /// </summary>
         [EnumMember(Value = "Pie")]
-        Pie = 3
+        Pie = 3,
 
     }
 

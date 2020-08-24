@@ -44,67 +44,67 @@ namespace Cloud.Governance.Client.Model
         /// Enum Web for value: Web
         /// </summary>
         [EnumMember(Value = "Web")]
-        Web = 2,
+        Web = 3,
 
         /// <summary>
         /// Enum List for value: List
         /// </summary>
         [EnumMember(Value = "List")]
-        List = 3,
+        List = 1000,
 
         /// <summary>
         /// Enum Folder for value: Folder
         /// </summary>
         [EnumMember(Value = "Folder")]
-        Folder = 4,
+        Folder = 1002,
 
         /// <summary>
         /// Enum Item for value: Item
         /// </summary>
         [EnumMember(Value = "Item")]
-        Item = 5,
+        Item = 10000,
 
         /// <summary>
         /// Enum ItemVersion for value: ItemVersion
         /// </summary>
         [EnumMember(Value = "ItemVersion")]
-        ItemVersion = 6,
+        ItemVersion = 10001,
 
         /// <summary>
         /// Enum Attachment for value: Attachment
         /// </summary>
         [EnumMember(Value = "Attachment")]
-        Attachment = 7,
+        Attachment = 20000,
 
         /// <summary>
         /// Enum Document for value: Document
         /// </summary>
         [EnumMember(Value = "Document")]
-        Document = 8,
+        Document = 50000,
 
         /// <summary>
         /// Enum DocumentVersion for value: DocumentVersion
         /// </summary>
         [EnumMember(Value = "DocumentVersion")]
-        DocumentVersion = 9,
+        DocumentVersion = 50001,
 
         /// <summary>
         /// Enum FitParentRule for value: FitParentRule
         /// </summary>
         [EnumMember(Value = "FitParentRule")]
-        FitParentRule = 10,
+        FitParentRule = 70000,
 
         /// <summary>
         /// Enum FileSysFile for value: FileSysFile
         /// </summary>
         [EnumMember(Value = "FileSysFile")]
-        FileSysFile = 11,
+        FileSysFile = 80001,
 
         /// <summary>
         /// Enum FileSysFolder for value: FileSysFolder
         /// </summary>
         [EnumMember(Value = "FileSysFolder")]
-        FileSysFolder = 12
+        FileSysFolder = 80002,
 
     }
 

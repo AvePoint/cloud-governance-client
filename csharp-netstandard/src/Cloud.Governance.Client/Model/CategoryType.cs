@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum Contact for value: Contact
         /// </summary>
         [EnumMember(Value = "Contact")]
-        Contact = 1,
+        Contact = 0,
 
         /// <summary>
         /// Enum License for value: License
         /// </summary>
         [EnumMember(Value = "License")]
-        License = 2,
+        License = 1,
 
         /// <summary>
         /// Enum Organization for value: Organization
         /// </summary>
         [EnumMember(Value = "Organization")]
-        Organization = 3
+        Organization = 2,
 
     }
 

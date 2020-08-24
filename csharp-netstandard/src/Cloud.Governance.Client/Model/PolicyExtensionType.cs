@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Each for value: Each
         /// </summary>
         [EnumMember(Value = "Each")]
-        Each = 1,
+        Each = 0,
 
         /// <summary>
         /// Enum NoMore for value: NoMore
         /// </summary>
         [EnumMember(Value = "NoMore")]
-        NoMore = 2
+        NoMore = 1,
 
     }
 

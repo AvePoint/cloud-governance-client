@@ -68,133 +68,133 @@ namespace Cloud.Governance.Client.Model
         /// Enum Activate for value: Activate
         /// </summary>
         [EnumMember(Value = "Activate")]
-        Activate = 6,
+        Activate = 7,
 
         /// <summary>
         /// Enum Deactivate for value: Deactivate
         /// </summary>
         [EnumMember(Value = "Deactivate")]
-        Deactivate = 7,
+        Deactivate = 8,
 
         /// <summary>
         /// Enum Cancel for value: Cancel
         /// </summary>
         [EnumMember(Value = "Cancel")]
-        Cancel = 8,
+        Cancel = 9,
 
         /// <summary>
         /// Enum Submit for value: Submit
         /// </summary>
         [EnumMember(Value = "Submit")]
-        Submit = 9,
+        Submit = 10,
 
         /// <summary>
         /// Enum Approve for value: Approve
         /// </summary>
         [EnumMember(Value = "Approve")]
-        Approve = 10,
+        Approve = 11,
 
         /// <summary>
         /// Enum Reject for value: Reject
         /// </summary>
         [EnumMember(Value = "Reject")]
-        Reject = 11,
+        Reject = 12,
 
         /// <summary>
         /// Enum Import for value: Import
         /// </summary>
         [EnumMember(Value = "Import")]
-        Import = 12,
+        Import = 13,
 
         /// <summary>
         /// Enum Export for value: Export
         /// </summary>
         [EnumMember(Value = "Export")]
-        Export = 13,
+        Export = 14,
 
         /// <summary>
         /// Enum ContinueAccess for value: ContinueAccess
         /// </summary>
         [EnumMember(Value = "ContinueAccess")]
-        ContinueAccess = 14,
+        ContinueAccess = 15,
 
         /// <summary>
         /// Enum Extend for value: Extend
         /// </summary>
         [EnumMember(Value = "Extend")]
-        Extend = 15,
+        Extend = 16,
 
         /// <summary>
         /// Enum Archive for value: Archive
         /// </summary>
         [EnumMember(Value = "Archive")]
-        Archive = 16,
+        Archive = 17,
 
         /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 17,
+        Completed = 18,
 
         /// <summary>
         /// Enum Apply for value: Apply
         /// </summary>
         [EnumMember(Value = "Apply")]
-        Apply = 18,
+        Apply = 19,
 
         /// <summary>
         /// Enum ChangePolicy for value: ChangePolicy
         /// </summary>
         [EnumMember(Value = "ChangePolicy")]
-        ChangePolicy = 19,
+        ChangePolicy = 20,
 
         /// <summary>
         /// Enum Remove for value: Remove
         /// </summary>
         [EnumMember(Value = "Remove")]
-        Remove = 20,
+        Remove = 21,
 
         /// <summary>
         /// Enum Retried for value: Retried
         /// </summary>
         [EnumMember(Value = "Retried")]
-        Retried = 21,
+        Retried = 22,
 
         /// <summary>
         /// Enum Skipped for value: Skipped
         /// </summary>
         [EnumMember(Value = "Skipped")]
-        Skipped = 22,
+        Skipped = 23,
 
         /// <summary>
         /// Enum Reassigned for value: Reassigned
         /// </summary>
         [EnumMember(Value = "Reassigned")]
-        Reassigned = 23,
+        Reassigned = 24,
 
         /// <summary>
         /// Enum Claim for value: Claim
         /// </summary>
         [EnumMember(Value = "Claim")]
-        Claim = 24,
+        Claim = 25,
 
         /// <summary>
         /// Enum Decline for value: Decline
         /// </summary>
         [EnumMember(Value = "Decline")]
-        Decline = 25,
+        Decline = 26,
 
         /// <summary>
         /// Enum SpecifyContact for value: SpecifyContact
         /// </summary>
         [EnumMember(Value = "SpecifyContact")]
-        SpecifyContact = 26,
+        SpecifyContact = 27,
 
         /// <summary>
         /// Enum Send for value: Send
         /// </summary>
         [EnumMember(Value = "Send")]
-        Send = 27
+        Send = 28,
 
     }
 

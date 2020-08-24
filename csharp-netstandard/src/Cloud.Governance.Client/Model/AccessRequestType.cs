@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum SpecifyEmail for value: SpecifyEmail
         /// </summary>
         [EnumMember(Value = "SpecifyEmail")]
-        SpecifyEmail = 1,
+        SpecifyEmail = 0,
 
         /// <summary>
         /// Enum OwnerGroup for value: OwnerGroup
         /// </summary>
         [EnumMember(Value = "OwnerGroup")]
-        OwnerGroup = 2
+        OwnerGroup = 1,
 
     }
 

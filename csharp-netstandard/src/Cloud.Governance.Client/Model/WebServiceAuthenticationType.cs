@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Anonymous for value: Anonymous
         /// </summary>
         [EnumMember(Value = "Anonymous")]
-        Anonymous = 1,
+        Anonymous = 0,
 
         /// <summary>
         /// Enum AzureAD for value: AzureAD
         /// </summary>
         [EnumMember(Value = "AzureAD")]
-        AzureAD = 2
+        AzureAD = 1,
 
     }
 

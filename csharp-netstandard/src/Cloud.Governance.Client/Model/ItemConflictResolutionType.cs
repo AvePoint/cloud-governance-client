@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum DoNotMigrateTheItems for value: DoNotMigrateTheItems
         /// </summary>
         [EnumMember(Value = "DoNotMigrateTheItems")]
-        DoNotMigrateTheItems = 1,
+        DoNotMigrateTheItems = 0,
 
         /// <summary>
         /// Enum OverwriteIdenticalItemsInDestination for value: OverwriteIdenticalItemsInDestination
         /// </summary>
         [EnumMember(Value = "OverwriteIdenticalItemsInDestination")]
-        OverwriteIdenticalItemsInDestination = 2,
+        OverwriteIdenticalItemsInDestination = 1,
 
         /// <summary>
         /// Enum Append for value: Append
         /// </summary>
         [EnumMember(Value = "Append")]
-        Append = 3,
+        Append = 2,
 
         /// <summary>
         /// Enum IgnoreDifferenceAndMoveItems for value: IgnoreDifferenceAndMoveItems
         /// </summary>
         [EnumMember(Value = "IgnoreDifferenceAndMoveItems")]
-        IgnoreDifferenceAndMoveItems = 4
+        IgnoreDifferenceAndMoveItems = 3,
 
     }
 

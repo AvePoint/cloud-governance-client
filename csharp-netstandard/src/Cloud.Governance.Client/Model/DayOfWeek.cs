@@ -38,43 +38,43 @@ namespace Cloud.Governance.Client.Model
         /// Enum Sunday for value: Sunday
         /// </summary>
         [EnumMember(Value = "Sunday")]
-        Sunday = 1,
+        Sunday = 0,
 
         /// <summary>
         /// Enum Monday for value: Monday
         /// </summary>
         [EnumMember(Value = "Monday")]
-        Monday = 2,
+        Monday = 1,
 
         /// <summary>
         /// Enum Tuesday for value: Tuesday
         /// </summary>
         [EnumMember(Value = "Tuesday")]
-        Tuesday = 3,
+        Tuesday = 2,
 
         /// <summary>
         /// Enum Wednesday for value: Wednesday
         /// </summary>
         [EnumMember(Value = "Wednesday")]
-        Wednesday = 4,
+        Wednesday = 3,
 
         /// <summary>
         /// Enum Thursday for value: Thursday
         /// </summary>
         [EnumMember(Value = "Thursday")]
-        Thursday = 5,
+        Thursday = 4,
 
         /// <summary>
         /// Enum Friday for value: Friday
         /// </summary>
         [EnumMember(Value = "Friday")]
-        Friday = 6,
+        Friday = 5,
 
         /// <summary>
         /// Enum Saturday for value: Saturday
         /// </summary>
         [EnumMember(Value = "Saturday")]
-        Saturday = 7
+        Saturday = 6,
 
     }
 

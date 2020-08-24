@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum LocalSystem for value: LocalSystem
         /// </summary>
         [EnumMember(Value = "LocalSystem")]
-        LocalSystem = 1,
+        LocalSystem = 0,
 
         /// <summary>
         /// Enum WindowsIntegration for value: WindowsIntegration
         /// </summary>
         [EnumMember(Value = "WindowsIntegration")]
-        WindowsIntegration = 2,
+        WindowsIntegration = 1,
 
         /// <summary>
         /// Enum ADIntegration for value: ADIntegration
         /// </summary>
         [EnumMember(Value = "ADIntegration")]
-        ADIntegration = 3,
+        ADIntegration = 2,
 
         /// <summary>
         /// Enum ADFSIntegration for value: ADFSIntegration
         /// </summary>
         [EnumMember(Value = "ADFSIntegration")]
-        ADFSIntegration = 4,
+        ADFSIntegration = 3,
 
         /// <summary>
         /// Enum Federation for value: Federation
         /// </summary>
         [EnumMember(Value = "Federation")]
-        Federation = 5,
+        Federation = 4,
 
         /// <summary>
         /// Enum SharePointOnline for value: SharePointOnline
@@ -104,7 +104,7 @@ namespace Cloud.Governance.Client.Model
         /// Enum Exchange for value: Exchange
         /// </summary>
         [EnumMember(Value = "Exchange")]
-        Exchange = 12
+        Exchange = 12,
 
     }
 

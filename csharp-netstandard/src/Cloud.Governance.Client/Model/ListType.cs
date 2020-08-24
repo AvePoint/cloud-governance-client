@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Library for value: Library
         /// </summary>
         [EnumMember(Value = "Library")]
-        Library = 1,
+        Library = 0,
 
         /// <summary>
         /// Enum List for value: List
         /// </summary>
         [EnumMember(Value = "List")]
-        List = 2
+        List = 1,
 
     }
 

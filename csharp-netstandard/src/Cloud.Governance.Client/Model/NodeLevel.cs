@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum Root for value: Root
         /// </summary>
         [EnumMember(Value = "Root")]
-        Root = 1,
+        Root = -2,
 
         /// <summary>
         /// Enum Farm for value: Farm
         /// </summary>
         [EnumMember(Value = "Farm")]
-        Farm = 2,
+        Farm = -1,
 
         /// <summary>
         /// Enum Undefined for value: Undefined
         /// </summary>
         [EnumMember(Value = "Undefined")]
-        Undefined = 3,
+        Undefined = 0,
 
         /// <summary>
         /// Enum WebApplication for value: WebApplication
         /// </summary>
         [EnumMember(Value = "WebApplication")]
-        WebApplication = 4,
+        WebApplication = 2,
 
         /// <summary>
         /// Enum ContentDBs for value: ContentDBs
         /// </summary>
         [EnumMember(Value = "ContentDBs")]
-        ContentDBs = 5,
+        ContentDBs = 4,
 
         /// <summary>
         /// Enum SiteCollections for value: SiteCollections
@@ -74,955 +74,955 @@ namespace Cloud.Governance.Client.Model
         /// Enum ContentDB for value: ContentDB
         /// </summary>
         [EnumMember(Value = "ContentDB")]
-        ContentDB = 7,
+        ContentDB = 30,
 
         /// <summary>
         /// Enum SiteCollection for value: SiteCollection
         /// </summary>
         [EnumMember(Value = "SiteCollection")]
-        SiteCollection = 8,
+        SiteCollection = 100,
 
         /// <summary>
         /// Enum Site for value: Site
         /// </summary>
         [EnumMember(Value = "Site")]
-        Site = 9,
+        Site = 200,
 
         /// <summary>
         /// Enum Lists for value: Lists
         /// </summary>
         [EnumMember(Value = "Lists")]
-        Lists = 10,
+        Lists = 201,
 
         /// <summary>
         /// Enum Sites for value: Sites
         /// </summary>
         [EnumMember(Value = "Sites")]
-        Sites = 11,
+        Sites = 202,
 
         /// <summary>
         /// Enum VDesignLists for value: VDesignLists
         /// </summary>
         [EnumMember(Value = "VDesignLists")]
-        VDesignLists = 12,
+        VDesignLists = 203,
 
         /// <summary>
         /// Enum VSiteAdmin for value: VSiteAdmin
         /// </summary>
         [EnumMember(Value = "VSiteAdmin")]
-        VSiteAdmin = 13,
+        VSiteAdmin = 204,
 
         /// <summary>
         /// Enum VSiteColumns for value: VSiteColumns
         /// </summary>
         [EnumMember(Value = "VSiteColumns")]
-        VSiteColumns = 14,
+        VSiteColumns = 205,
 
         /// <summary>
         /// Enum VContentTypes for value: VContentTypes
         /// </summary>
         [EnumMember(Value = "VContentTypes")]
-        VContentTypes = 15,
+        VContentTypes = 206,
 
         /// <summary>
         /// Enum VLookAndFeels for value: VLookAndFeels
         /// </summary>
         [EnumMember(Value = "VLookAndFeels")]
-        VLookAndFeels = 16,
+        VLookAndFeels = 207,
 
         /// <summary>
         /// Enum VUsersAndPerms for value: VUsersAndPerms
         /// </summary>
         [EnumMember(Value = "VUsersAndPerms")]
-        VUsersAndPerms = 17,
+        VUsersAndPerms = 208,
 
         /// <summary>
         /// Enum ContentTypeGroup for value: ContentTypeGroup
         /// </summary>
         [EnumMember(Value = "ContentTypeGroup")]
-        ContentTypeGroup = 18,
+        ContentTypeGroup = 209,
 
         /// <summary>
         /// Enum SiteContentType for value: SiteContentType
         /// </summary>
         [EnumMember(Value = "SiteContentType")]
-        SiteContentType = 19,
+        SiteContentType = 210,
 
         /// <summary>
         /// Enum SiteColumnGroup for value: SiteColumnGroup
         /// </summary>
         [EnumMember(Value = "SiteColumnGroup")]
-        SiteColumnGroup = 20,
+        SiteColumnGroup = 211,
 
         /// <summary>
         /// Enum SiteColumn for value: SiteColumn
         /// </summary>
         [EnumMember(Value = "SiteColumn")]
-        SiteColumn = 21,
+        SiteColumn = 212,
 
         /// <summary>
         /// Enum SiteCTWorkflow for value: SiteCTWorkflow
         /// </summary>
         [EnumMember(Value = "SiteCTWorkflow")]
-        SiteCTWorkflow = 22,
+        SiteCTWorkflow = 213,
 
         /// <summary>
         /// Enum VSiteCTWorkflow for value: VSiteCTWorkflow
         /// </summary>
         [EnumMember(Value = "VSiteCTWorkflow")]
-        VSiteCTWorkflow = 23,
+        VSiteCTWorkflow = 214,
 
         /// <summary>
         /// Enum SiteWorkflow for value: SiteWorkflow
         /// </summary>
         [EnumMember(Value = "SiteWorkflow")]
-        SiteWorkflow = 24,
+        SiteWorkflow = 215,
 
         /// <summary>
         /// Enum VSiteWorkflow for value: VSiteWorkflow
         /// </summary>
         [EnumMember(Value = "VSiteWorkflow")]
-        VSiteWorkflow = 25,
+        VSiteWorkflow = 216,
 
         /// <summary>
         /// Enum DeprecatedSites for value: Deprecated_Sites
         /// </summary>
         [EnumMember(Value = "Deprecated_Sites")]
-        DeprecatedSites = 26,
+        Deprecated_Sites = 251,
 
         /// <summary>
         /// Enum DeprecatedLists for value: Deprecated_Lists
         /// </summary>
         [EnumMember(Value = "Deprecated_Lists")]
-        DeprecatedLists = 27,
+        Deprecated_Lists = 252,
 
         /// <summary>
         /// Enum SiteSetting for value: SiteSetting
         /// </summary>
         [EnumMember(Value = "SiteSetting")]
-        SiteSetting = 28,
+        SiteSetting = 255,
 
         /// <summary>
         /// Enum Apps for value: Apps
         /// </summary>
         [EnumMember(Value = "Apps")]
-        Apps = 29,
+        Apps = 280,
 
         /// <summary>
         /// Enum App for value: App
         /// </summary>
         [EnumMember(Value = "App")]
-        App = 30,
+        App = 281,
 
         /// <summary>
         /// Enum AppData for value: AppData
         /// </summary>
         [EnumMember(Value = "AppData")]
-        AppData = 31,
+        AppData = 282,
 
         /// <summary>
         /// Enum List for value: List
         /// </summary>
         [EnumMember(Value = "List")]
-        List = 32,
+        List = 300,
 
         /// <summary>
         /// Enum Library for value: Library
         /// </summary>
         [EnumMember(Value = "Library")]
-        Library = 33,
+        Library = 301,
 
         /// <summary>
         /// Enum Folder for value: Folder
         /// </summary>
         [EnumMember(Value = "Folder")]
-        Folder = 34,
+        Folder = 400,
 
         /// <summary>
         /// Enum Folders for value: Folders
         /// </summary>
         [EnumMember(Value = "Folders")]
-        Folders = 35,
+        Folders = 401,
 
         /// <summary>
         /// Enum RootFolder for value: RootFolder
         /// </summary>
         [EnumMember(Value = "RootFolder")]
-        RootFolder = 36,
+        RootFolder = 402,
 
         /// <summary>
         /// Enum DesignObjRootFolder for value: DesignObjRootFolder
         /// </summary>
         [EnumMember(Value = "DesignObjRootFolder")]
-        DesignObjRootFolder = 37,
+        DesignObjRootFolder = 403,
 
         /// <summary>
         /// Enum DesignFolder for value: DesignFolder
         /// </summary>
         [EnumMember(Value = "DesignFolder")]
-        DesignFolder = 38,
+        DesignFolder = 404,
 
         /// <summary>
         /// Enum DeprecatedItem for value: Deprecated_Item
         /// </summary>
         [EnumMember(Value = "Deprecated_Item")]
-        DeprecatedItem = 39,
+        Deprecated_Item = 453,
 
         /// <summary>
         /// Enum DeprecatedFolder for value: Deprecated_Folder
         /// </summary>
         [EnumMember(Value = "Deprecated_Folder")]
-        DeprecatedFolder = 40,
+        Deprecated_Folder = 454,
 
         /// <summary>
         /// Enum Item for value: Item
         /// </summary>
         [EnumMember(Value = "Item")]
-        Item = 41,
+        Item = 500,
 
         /// <summary>
         /// Enum Items for value: Items
         /// </summary>
         [EnumMember(Value = "Items")]
-        Items = 42,
+        Items = 501,
 
         /// <summary>
         /// Enum DesignItem for value: DesignItem
         /// </summary>
         [EnumMember(Value = "DesignItem")]
-        DesignItem = 43,
+        DesignItem = 502,
 
         /// <summary>
         /// Enum DesignItems for value: DesignItems
         /// </summary>
         [EnumMember(Value = "DesignItems")]
-        DesignItems = 44,
+        DesignItems = 503,
 
         /// <summary>
         /// Enum DesignFolders for value: DesignFolders
         /// </summary>
         [EnumMember(Value = "DesignFolders")]
-        DesignFolders = 45,
+        DesignFolders = 504,
 
         /// <summary>
         /// Enum Document for value: Document
         /// </summary>
         [EnumMember(Value = "Document")]
-        Document = 46,
+        Document = 531,
 
         /// <summary>
         /// Enum ItemVersion for value: ItemVersion
         /// </summary>
         [EnumMember(Value = "ItemVersion")]
-        ItemVersion = 47,
+        ItemVersion = 550,
 
         /// <summary>
         /// Enum ListSetting for value: ListSetting
         /// </summary>
         [EnumMember(Value = "ListSetting")]
-        ListSetting = 48,
+        ListSetting = 600,
 
         /// <summary>
         /// Enum VListAdmin for value: VListAdmin
         /// </summary>
         [EnumMember(Value = "VListAdmin")]
-        VListAdmin = 49,
+        VListAdmin = 601,
 
         /// <summary>
         /// Enum VListColumns for value: VListColumns
         /// </summary>
         [EnumMember(Value = "VListColumns")]
-        VListColumns = 50,
+        VListColumns = 602,
 
         /// <summary>
         /// Enum VListContentTypes for value: VListContentTypes
         /// </summary>
         [EnumMember(Value = "VListContentTypes")]
-        VListContentTypes = 51,
+        VListContentTypes = 603,
 
         /// <summary>
         /// Enum ListContentTypeGroup for value: ListContentTypeGroup
         /// </summary>
         [EnumMember(Value = "ListContentTypeGroup")]
-        ListContentTypeGroup = 52,
+        ListContentTypeGroup = 604,
 
         /// <summary>
         /// Enum ListContentType for value: ListContentType
         /// </summary>
         [EnumMember(Value = "ListContentType")]
-        ListContentType = 53,
+        ListContentType = 605,
 
         /// <summary>
         /// Enum ListColumnGroup for value: ListColumnGroup
         /// </summary>
         [EnumMember(Value = "ListColumnGroup")]
-        ListColumnGroup = 54,
+        ListColumnGroup = 606,
 
         /// <summary>
         /// Enum ListColumn for value: ListColumn
         /// </summary>
         [EnumMember(Value = "ListColumn")]
-        ListColumn = 55,
+        ListColumn = 607,
 
         /// <summary>
         /// Enum ListWorkflow for value: ListWorkflow
         /// </summary>
         [EnumMember(Value = "ListWorkflow")]
-        ListWorkflow = 56,
+        ListWorkflow = 608,
 
         /// <summary>
         /// Enum VListWorkflow for value: VListWorkflow
         /// </summary>
         [EnumMember(Value = "VListWorkflow")]
-        VListWorkflow = 57,
+        VListWorkflow = 609,
 
         /// <summary>
         /// Enum ListCTWorkflow for value: ListCTWorkflow
         /// </summary>
         [EnumMember(Value = "ListCTWorkflow")]
-        ListCTWorkflow = 58,
+        ListCTWorkflow = 610,
 
         /// <summary>
         /// Enum VListCTWorkflow for value: VListCTWorkflow
         /// </summary>
         [EnumMember(Value = "VListCTWorkflow")]
-        VListCTWorkflow = 59,
+        VListCTWorkflow = 611,
 
         /// <summary>
         /// Enum SiteRegionalSettings for value: SiteRegionalSettings
         /// </summary>
         [EnumMember(Value = "SiteRegionalSettings")]
-        SiteRegionalSettings = 60,
+        SiteRegionalSettings = 612,
 
         /// <summary>
         /// Enum SiteAccessSettings for value: SiteAccessSettings
         /// </summary>
         [EnumMember(Value = "SiteAccessSettings")]
-        SiteAccessSettings = 61,
+        SiteAccessSettings = 613,
 
         /// <summary>
         /// Enum SiteSharePointDesignerSettings for value: SiteSharePointDesignerSettings
         /// </summary>
         [EnumMember(Value = "SiteSharePointDesignerSettings")]
-        SiteSharePointDesignerSettings = 62,
+        SiteSharePointDesignerSettings = 614,
 
         /// <summary>
         /// Enum SiteLanguageSettings for value: SiteLanguageSettings
         /// </summary>
         [EnumMember(Value = "SiteLanguageSettings")]
-        SiteLanguageSettings = 63,
+        SiteLanguageSettings = 615,
 
         /// <summary>
         /// Enum SiteAuditSettings for value: SiteAuditSettings
         /// </summary>
         [EnumMember(Value = "SiteAuditSettings")]
-        SiteAuditSettings = 64,
+        SiteAuditSettings = 616,
 
         /// <summary>
         /// Enum SiteOtherSettings for value: SiteOtherSettings
         /// </summary>
         [EnumMember(Value = "SiteOtherSettings")]
-        SiteOtherSettings = 65,
+        SiteOtherSettings = 617,
 
         /// <summary>
         /// Enum SiteLookAndFeel for value: SiteLookAndFeel
         /// </summary>
         [EnumMember(Value = "SiteLookAndFeel")]
-        SiteLookAndFeel = 66,
+        SiteLookAndFeel = 618,
 
         /// <summary>
         /// Enum SiteTitleAndDescription for value: SiteTitleAndDescription
         /// </summary>
         [EnumMember(Value = "SiteTitleAndDescription")]
-        SiteTitleAndDescription = 67,
+        SiteTitleAndDescription = 619,
 
         /// <summary>
         /// Enum Groups for value: Groups
         /// </summary>
         [EnumMember(Value = "Groups")]
-        Groups = 68,
+        Groups = 1000,
 
         /// <summary>
         /// Enum SharePointGroup for value: SharePointGroup
         /// </summary>
         [EnumMember(Value = "SharePointGroup")]
-        SharePointGroup = 69,
+        SharePointGroup = 1001,
 
         /// <summary>
         /// Enum DomainGroup for value: DomainGroup
         /// </summary>
         [EnumMember(Value = "DomainGroup")]
-        DomainGroup = 70,
+        DomainGroup = 1002,
 
         /// <summary>
         /// Enum SharePointUser for value: SharePointUser
         /// </summary>
         [EnumMember(Value = "SharePointUser")]
-        SharePointUser = 71,
+        SharePointUser = 1003,
 
         /// <summary>
         /// Enum Users for value: Users
         /// </summary>
         [EnumMember(Value = "Users")]
-        Users = 72,
+        Users = 1100,
 
         /// <summary>
         /// Enum User for value: User
         /// </summary>
         [EnumMember(Value = "User")]
-        User = 73,
+        User = 1101,
 
         /// <summary>
         /// Enum AgentGroup for value: AgentGroup
         /// </summary>
         [EnumMember(Value = "AgentGroup")]
-        AgentGroup = 74,
+        AgentGroup = 2000,
 
         /// <summary>
         /// Enum Device for value: Device
         /// </summary>
         [EnumMember(Value = "Device")]
-        Device = 75,
+        Device = 2002,
 
         /// <summary>
         /// Enum FSFolder for value: FSFolder
         /// </summary>
         [EnumMember(Value = "FSFolder")]
-        FSFolder = 76,
+        FSFolder = 2100,
 
         /// <summary>
         /// Enum FSFile for value: FSFile
         /// </summary>
         [EnumMember(Value = "FSFile")]
-        FSFile = 77,
+        FSFile = 2200,
 
         /// <summary>
         /// Enum DMVirtualNode for value: DMVirtualNode
         /// </summary>
         [EnumMember(Value = "DMVirtualNode")]
-        DMVirtualNode = 78,
+        DMVirtualNode = 2300,
 
         /// <summary>
         /// Enum FEWVirtualNode for value: FEWVirtualNode
         /// </summary>
         [EnumMember(Value = "FEWVirtualNode")]
-        FEWVirtualNode = 79,
+        FEWVirtualNode = 2301,
 
         /// <summary>
         /// Enum SLCVirtualNode for value: SLCVirtualNode
         /// </summary>
         [EnumMember(Value = "SLCVirtualNode")]
-        SLCVirtualNode = 80,
+        SLCVirtualNode = 2302,
 
         /// <summary>
         /// Enum SharedServices for value: SharedServices
         /// </summary>
         [EnumMember(Value = "SharedServices")]
-        SharedServices = 81,
+        SharedServices = 2303,
 
         /// <summary>
         /// Enum FEWAgentNode for value: FEWAgentNode
         /// </summary>
         [EnumMember(Value = "FEWAgentNode")]
-        FEWAgentNode = 82,
+        FEWAgentNode = 2400,
 
         /// <summary>
         /// Enum IISettingsVirtualNode for value: IISettingsVirtualNode
         /// </summary>
         [EnumMember(Value = "IISettingsVirtualNode")]
-        IISettingsVirtualNode = 83,
+        IISettingsVirtualNode = 2401,
 
         /// <summary>
         /// Enum GACVirtualNode for value: GACVirtualNode
         /// </summary>
         [EnumMember(Value = "GACVirtualNode")]
-        GACVirtualNode = 84,
+        GACVirtualNode = 2402,
 
         /// <summary>
         /// Enum CustomFeatureVirtualNode for value: CustomFeatureVirtualNode
         /// </summary>
         [EnumMember(Value = "CustomFeatureVirtualNode")]
-        CustomFeatureVirtualNode = 85,
+        CustomFeatureVirtualNode = 2403,
 
         /// <summary>
         /// Enum SiteDefinitionVirtualNode for value: SiteDefinitionVirtualNode
         /// </summary>
         [EnumMember(Value = "SiteDefinitionVirtualNode")]
-        SiteDefinitionVirtualNode = 86,
+        SiteDefinitionVirtualNode = 2404,
 
         /// <summary>
         /// Enum FileSystemVirtualNode for value: FileSystemVirtualNode
         /// </summary>
         [EnumMember(Value = "FileSystemVirtualNode")]
-        FileSystemVirtualNode = 87,
+        FileSystemVirtualNode = 2405,
 
         /// <summary>
         /// Enum IISPNode for value: IISPNode
         /// </summary>
         [EnumMember(Value = "IISPNode")]
-        IISPNode = 88,
+        IISPNode = 2406,
 
         /// <summary>
         /// Enum IISDefaultSiteNode for value: IISDefaultSiteNode
         /// </summary>
         [EnumMember(Value = "IISDefaultSiteNode")]
-        IISDefaultSiteNode = 89,
+        IISDefaultSiteNode = 2407,
 
         /// <summary>
         /// Enum IISNonIISiteNode for value: IISNonIISiteNode
         /// </summary>
         [EnumMember(Value = "IISNonIISiteNode")]
-        IISNonIISiteNode = 90,
+        IISNonIISiteNode = 2408,
 
         /// <summary>
         /// Enum GACFirstVirtualNode for value: GACFirstVirtualNode
         /// </summary>
         [EnumMember(Value = "GACFirstVirtualNode")]
-        GACFirstVirtualNode = 91,
+        GACFirstVirtualNode = 2409,
 
         /// <summary>
         /// Enum GACSecondVirtualNode for value: GACSecondVirtualNode
         /// </summary>
         [EnumMember(Value = "GACSecondVirtualNode")]
-        GACSecondVirtualNode = 92,
+        GACSecondVirtualNode = 2410,
 
         /// <summary>
         /// Enum GACNode for value: GACNode
         /// </summary>
         [EnumMember(Value = "GACNode")]
-        GACNode = 93,
+        GACNode = 2411,
 
         /// <summary>
         /// Enum CustomFeatureNode for value: CustomFeatureNode
         /// </summary>
         [EnumMember(Value = "CustomFeatureNode")]
-        CustomFeatureNode = 94,
+        CustomFeatureNode = 2412,
 
         /// <summary>
         /// Enum SiteDefinitionNode for value: SiteDefinitionNode
         /// </summary>
         [EnumMember(Value = "SiteDefinitionNode")]
-        SiteDefinitionNode = 95,
+        SiteDefinitionNode = 2413,
 
         /// <summary>
         /// Enum FileSystemDiskNode for value: FileSystemDiskNode
         /// </summary>
         [EnumMember(Value = "FileSystemDiskNode")]
-        FileSystemDiskNode = 96,
+        FileSystemDiskNode = 2414,
 
         /// <summary>
         /// Enum FileSystemFolderNode for value: FileSystemFolderNode
         /// </summary>
         [EnumMember(Value = "FileSystemFolderNode")]
-        FileSystemFolderNode = 97,
+        FileSystemFolderNode = 2415,
 
         /// <summary>
         /// Enum FileSystemFileNode for value: FileSystemFileNode
         /// </summary>
         [EnumMember(Value = "FileSystemFileNode")]
-        FileSystemFileNode = 98,
+        FileSystemFileNode = 2416,
 
         /// <summary>
         /// Enum FileSystemFoldersNode for value: FileSystemFoldersNode
         /// </summary>
         [EnumMember(Value = "FileSystemFoldersNode")]
-        FileSystemFoldersNode = 99,
+        FileSystemFoldersNode = 2417,
 
         /// <summary>
         /// Enum FileSystemFilesNode for value: FileSystemFilesNode
         /// </summary>
         [EnumMember(Value = "FileSystemFilesNode")]
-        FileSystemFilesNode = 100,
+        FileSystemFilesNode = 2418,
 
         /// <summary>
         /// Enum IISTemplatesNode for value: IISTemplatesNode
         /// </summary>
         [EnumMember(Value = "IISTemplatesNode")]
-        IISTemplatesNode = 101,
+        IISTemplatesNode = 2419,
 
         /// <summary>
         /// Enum IISiteNode for value: IISiteNode
         /// </summary>
         [EnumMember(Value = "IISiteNode")]
-        IISiteNode = 102,
+        IISiteNode = 2420,
 
         /// <summary>
         /// Enum IISFolderNode for value: IISFolderNode
         /// </summary>
         [EnumMember(Value = "IISFolderNode")]
-        IISFolderNode = 103,
+        IISFolderNode = 2421,
 
         /// <summary>
         /// Enum IISWebConfigNode for value: IISWebConfigNode
         /// </summary>
         [EnumMember(Value = "IISWebConfigNode")]
-        IISWebConfigNode = 104,
+        IISWebConfigNode = 2422,
 
         /// <summary>
         /// Enum SolutionNode for value: SolutionNode
         /// </summary>
         [EnumMember(Value = "SolutionNode")]
-        SolutionNode = 105,
+        SolutionNode = 2423,
 
         /// <summary>
         /// Enum IISFileNode for value: IISFileNode
         /// </summary>
         [EnumMember(Value = "IISFileNode")]
-        IISFileNode = 106,
+        IISFileNode = 2424,
 
         /// <summary>
         /// Enum GACThirdVirtualNode for value: GACThirdVirtualNode
         /// </summary>
         [EnumMember(Value = "GACThirdVirtualNode")]
-        GACThirdVirtualNode = 107,
+        GACThirdVirtualNode = 2425,
 
         /// <summary>
         /// Enum VSiteSolutionNode for value: VSiteSolutionNode
         /// </summary>
         [EnumMember(Value = "VSiteSolutionNode")]
-        VSiteSolutionNode = 108,
+        VSiteSolutionNode = 2500,
 
         /// <summary>
         /// Enum StorageLevel for value: StorageLevel
         /// </summary>
         [EnumMember(Value = "StorageLevel")]
-        StorageLevel = 109,
+        StorageLevel = 2550,
 
         /// <summary>
         /// Enum ManagedMetadataService for value: ManagedMetadataService
         /// </summary>
         [EnumMember(Value = "ManagedMetadataService")]
-        ManagedMetadataService = 110,
+        ManagedMetadataService = 2600,
 
         /// <summary>
         /// Enum MMS for value: MMS
         /// </summary>
         [EnumMember(Value = "MMS")]
-        MMS = 111,
+        MMS = 2610,
 
         /// <summary>
         /// Enum TermStore for value: TermStore
         /// </summary>
         [EnumMember(Value = "TermStore")]
-        TermStore = 112,
+        TermStore = 2620,
 
         /// <summary>
         /// Enum GlobalTermGroup for value: GlobalTermGroup
         /// </summary>
         [EnumMember(Value = "GlobalTermGroup")]
-        GlobalTermGroup = 113,
+        GlobalTermGroup = 2630,
 
         /// <summary>
         /// Enum LocalTermGroup for value: LocalTermGroup
         /// </summary>
         [EnumMember(Value = "LocalTermGroup")]
-        LocalTermGroup = 114,
+        LocalTermGroup = 2631,
 
         /// <summary>
         /// Enum TermGroup for value: TermGroup
         /// </summary>
         [EnumMember(Value = "TermGroup")]
-        TermGroup = 115,
+        TermGroup = 2640,
 
         /// <summary>
         /// Enum TermSet for value: TermSet
         /// </summary>
         [EnumMember(Value = "TermSet")]
-        TermSet = 116,
+        TermSet = 2650,
 
         /// <summary>
         /// Enum Term for value: Term
         /// </summary>
         [EnumMember(Value = "Term")]
-        Term = 117,
+        Term = 2670,
 
         /// <summary>
         /// Enum ContentTypeHub for value: ContentTypeHub
         /// </summary>
         [EnumMember(Value = "ContentTypeHub")]
-        ContentTypeHub = 118,
+        ContentTypeHub = 2680,
 
         /// <summary>
         /// Enum PublishingContentType for value: PublishingContentType
         /// </summary>
         [EnumMember(Value = "PublishingContentType")]
-        PublishingContentType = 119,
+        PublishingContentType = 2690,
 
         /// <summary>
         /// Enum Agent for value: Agent
         /// </summary>
         [EnumMember(Value = "Agent")]
-        Agent = 120,
+        Agent = 3000,
 
         /// <summary>
         /// Enum FileConnection for value: FileConnection
         /// </summary>
         [EnumMember(Value = "FileConnection")]
-        FileConnection = 121,
+        FileConnection = 3010,
 
         /// <summary>
         /// Enum LivelinkConnection for value: LivelinkConnection
         /// </summary>
         [EnumMember(Value = "LivelinkConnection")]
-        LivelinkConnection = 122,
+        LivelinkConnection = 3011,
 
         /// <summary>
         /// Enum NotesConnection for value: NotesConnection
         /// </summary>
         [EnumMember(Value = "NotesConnection")]
-        NotesConnection = 123,
+        NotesConnection = 3012,
 
         /// <summary>
         /// Enum ExchangeConnection for value: ExchangeConnection
         /// </summary>
         [EnumMember(Value = "ExchangeConnection")]
-        ExchangeConnection = 124,
+        ExchangeConnection = 3013,
 
         /// <summary>
         /// Enum ExchangeFolder for value: ExchangeFolder
         /// </summary>
         [EnumMember(Value = "ExchangeFolder")]
-        ExchangeFolder = 125,
+        ExchangeFolder = 3014,
 
         /// <summary>
         /// Enum ExchangeItem for value: ExchangeItem
         /// </summary>
         [EnumMember(Value = "ExchangeItem")]
-        ExchangeItem = 126,
+        ExchangeItem = 3015,
 
         /// <summary>
         /// Enum FileItems for value: FileItems
         /// </summary>
         [EnumMember(Value = "FileItems")]
-        FileItems = 127,
+        FileItems = 3020,
 
         /// <summary>
         /// Enum ERoomItems for value: eRoomItems
         /// </summary>
         [EnumMember(Value = "eRoomItems")]
-        ERoomItems = 128,
+        eRoomItems = 3021,
 
         /// <summary>
         /// Enum LivelinkItems for value: LivelinkItems
         /// </summary>
         [EnumMember(Value = "LivelinkItems")]
-        LivelinkItems = 129,
+        LivelinkItems = 3022,
 
         /// <summary>
         /// Enum NotesItems for value: NotesItems
         /// </summary>
         [EnumMember(Value = "NotesItems")]
-        NotesItems = 130,
+        NotesItems = 3023,
 
         /// <summary>
         /// Enum ERoomCommunity for value: eRoomCommunity
         /// </summary>
         [EnumMember(Value = "eRoomCommunity")]
-        ERoomCommunity = 131,
+        eRoomCommunity = 3100,
 
         /// <summary>
         /// Enum ERoomFacility for value: eRoomFacility
         /// </summary>
         [EnumMember(Value = "eRoomFacility")]
-        ERoomFacility = 132,
+        eRoomFacility = 3101,
 
         /// <summary>
         /// Enum ERoomRoom for value: eRoomRoom
         /// </summary>
         [EnumMember(Value = "eRoomRoom")]
-        ERoomRoom = 133,
+        eRoomRoom = 3102,
 
         /// <summary>
         /// Enum ERoomList for value: eRoomList
         /// </summary>
         [EnumMember(Value = "eRoomList")]
-        ERoomList = 134,
+        eRoomList = 3103,
 
         /// <summary>
         /// Enum ERoomFolder for value: eRoomFolder
         /// </summary>
         [EnumMember(Value = "eRoomFolder")]
-        ERoomFolder = 135,
+        eRoomFolder = 3104,
 
         /// <summary>
         /// Enum ERoomItem for value: eRoomItem
         /// </summary>
         [EnumMember(Value = "eRoomItem")]
-        ERoomItem = 136,
+        eRoomItem = 3105,
 
         /// <summary>
         /// Enum LivelinkWorkspace for value: LivelinkWorkspace
         /// </summary>
         [EnumMember(Value = "LivelinkWorkspace")]
-        LivelinkWorkspace = 137,
+        LivelinkWorkspace = 3150,
 
         /// <summary>
         /// Enum LivelinkProject for value: LivelinkProject
         /// </summary>
         [EnumMember(Value = "LivelinkProject")]
-        LivelinkProject = 138,
+        LivelinkProject = 3151,
 
         /// <summary>
         /// Enum LivelinkList for value: LivelinkList
         /// </summary>
         [EnumMember(Value = "LivelinkList")]
-        LivelinkList = 139,
+        LivelinkList = 3152,
 
         /// <summary>
         /// Enum LivelinkItem for value: LivelinkItem
         /// </summary>
         [EnumMember(Value = "LivelinkItem")]
-        LivelinkItem = 140,
+        LivelinkItem = 3153,
 
         /// <summary>
         /// Enum LotusNotesDominoServer for value: LotusNotesDominoServer
         /// </summary>
         [EnumMember(Value = "LotusNotesDominoServer")]
-        LotusNotesDominoServer = 141,
+        LotusNotesDominoServer = 3160,
 
         /// <summary>
         /// Enum LotusNotesDatabase for value: LotusNotesDatabase
         /// </summary>
         [EnumMember(Value = "LotusNotesDatabase")]
-        LotusNotesDatabase = 142,
+        LotusNotesDatabase = 3161,
 
         /// <summary>
         /// Enum LotusNotesView for value: LotusNotesView
         /// </summary>
         [EnumMember(Value = "LotusNotesView")]
-        LotusNotesView = 143,
+        LotusNotesView = 3162,
 
         /// <summary>
         /// Enum LotusNotesDocument for value: LotusNotesDocument
         /// </summary>
         [EnumMember(Value = "LotusNotesDocument")]
-        LotusNotesDocument = 144,
+        LotusNotesDocument = 3163,
 
         /// <summary>
         /// Enum CustomDatabase for value: CustomDatabase
         /// </summary>
         [EnumMember(Value = "CustomDatabase")]
-        CustomDatabase = 145,
+        CustomDatabase = 4000,
 
         /// <summary>
         /// Enum Plan for value: Plan
         /// </summary>
         [EnumMember(Value = "Plan")]
-        Plan = 146,
+        Plan = 4010,
 
         /// <summary>
         /// Enum Cycle for value: Cycle
         /// </summary>
         [EnumMember(Value = "Cycle")]
-        Cycle = 147,
+        Cycle = 4012,
 
         /// <summary>
         /// Enum Job for value: Job
         /// </summary>
         [EnumMember(Value = "Job")]
-        Job = 148,
+        Job = 4013,
 
         /// <summary>
         /// Enum PERule for value: PERule
         /// </summary>
         [EnumMember(Value = "PERule")]
-        PERule = 149,
+        PERule = 4040,
 
         /// <summary>
         /// Enum PEDetail for value: PEDetail
         /// </summary>
         [EnumMember(Value = "PEDetail")]
-        PEDetail = 150,
+        PEDetail = 4041,
 
         /// <summary>
         /// Enum ExchangeOnlineFarm for value: ExchangeOnlineFarm
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineFarm")]
-        ExchangeOnlineFarm = 151,
+        ExchangeOnlineFarm = 5000,
 
         /// <summary>
         /// Enum ExchangeOnlineMailboxGroup for value: ExchangeOnlineMailboxGroup
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineMailboxGroup")]
-        ExchangeOnlineMailboxGroup = 152,
+        ExchangeOnlineMailboxGroup = 5010,
 
         /// <summary>
         /// Enum ExchangeOnlineMailbox for value: ExchangeOnlineMailbox
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineMailbox")]
-        ExchangeOnlineMailbox = 153,
+        ExchangeOnlineMailbox = 5020,
 
         /// <summary>
         /// Enum ExchangeOnlineO365GroupGroup for value: ExchangeOnlineO365GroupGroup
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineO365GroupGroup")]
-        ExchangeOnlineO365GroupGroup = 154,
+        ExchangeOnlineO365GroupGroup = 5030,
 
         /// <summary>
         /// Enum ExchangeOnlineO365Group for value: ExchangeOnlineO365Group
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineO365Group")]
-        ExchangeOnlineO365Group = 155,
+        ExchangeOnlineO365Group = 5040,
 
         /// <summary>
         /// Enum ExchangeOnlineItems for value: ExchangeOnlineItems
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineItems")]
-        ExchangeOnlineItems = 156,
+        ExchangeOnlineItems = 5100,
 
         /// <summary>
         /// Enum ExchangeOnlineItem for value: ExchangeOnlineItem
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineItem")]
-        ExchangeOnlineItem = 157,
+        ExchangeOnlineItem = 5110,
 
         /// <summary>
         /// Enum ExchangeOnlineFolders for value: ExchangeOnlineFolders
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineFolders")]
-        ExchangeOnlineFolders = 158,
+        ExchangeOnlineFolders = 5200,
 
         /// <summary>
         /// Enum ExchangeOnlineFolder for value: ExchangeOnlineFolder
         /// </summary>
         [EnumMember(Value = "ExchangeOnlineFolder")]
-        ExchangeOnlineFolder = 159,
+        ExchangeOnlineFolder = 5210,
 
         /// <summary>
         /// Enum SkyDrivePro for value: SkyDrivePro
         /// </summary>
         [EnumMember(Value = "SkyDrivePro")]
-        SkyDrivePro = 160,
+        SkyDrivePro = 6000,
 
         /// <summary>
         /// Enum SkyDriveProGroup for value: SkyDriveProGroup
         /// </summary>
         [EnumMember(Value = "SkyDriveProGroup")]
-        SkyDriveProGroup = 161,
+        SkyDriveProGroup = 6010,
 
         /// <summary>
         /// Enum O365GroupSites for value: O365GroupSites
         /// </summary>
         [EnumMember(Value = "O365GroupSites")]
-        O365GroupSites = 162,
+        O365GroupSites = 6020,
 
         /// <summary>
         /// Enum O365GroupSitesGroup for value: O365GroupSitesGroup
         /// </summary>
         [EnumMember(Value = "O365GroupSitesGroup")]
-        O365GroupSitesGroup = 163,
+        O365GroupSitesGroup = 6030,
 
         /// <summary>
         /// Enum ProjectOnline for value: ProjectOnline
         /// </summary>
         [EnumMember(Value = "ProjectOnline")]
-        ProjectOnline = 164,
+        ProjectOnline = 6040,
 
         /// <summary>
         /// Enum ProjectOnlines for value: ProjectOnlines
         /// </summary>
         [EnumMember(Value = "ProjectOnlines")]
-        ProjectOnlines = 165
+        ProjectOnlines = 6050,
 
     }
 

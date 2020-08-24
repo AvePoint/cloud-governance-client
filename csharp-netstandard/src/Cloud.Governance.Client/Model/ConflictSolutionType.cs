@@ -38,49 +38,49 @@ namespace Cloud.Governance.Client.Model
         /// Enum Skip for value: Skip
         /// </summary>
         [EnumMember(Value = "Skip")]
-        Skip = 1,
+        Skip = 0,
 
         /// <summary>
         /// Enum NotOverWrite for value: NotOverWrite
         /// </summary>
         [EnumMember(Value = "NotOverWrite")]
-        NotOverWrite = 2,
+        NotOverWrite = 1,
 
         /// <summary>
         /// Enum Append for value: Append
         /// </summary>
         [EnumMember(Value = "Append")]
-        Append = 3,
+        Append = 2,
 
         /// <summary>
         /// Enum OverWrite for value: OverWrite
         /// </summary>
         [EnumMember(Value = "OverWrite")]
-        OverWrite = 4,
+        OverWrite = 3,
 
         /// <summary>
         /// Enum Replace for value: Replace
         /// </summary>
         [EnumMember(Value = "Replace")]
-        Replace = 5,
+        Replace = 4,
 
         /// <summary>
         /// Enum Merge for value: Merge
         /// </summary>
         [EnumMember(Value = "Merge")]
-        Merge = 6,
+        Merge = 5,
 
         /// <summary>
         /// Enum OverWritebyLastModifiedTime for value: OverWritebyLastModifiedTime
         /// </summary>
         [EnumMember(Value = "OverWritebyLastModifiedTime")]
-        OverWritebyLastModifiedTime = 7,
+        OverWritebyLastModifiedTime = 6,
 
         /// <summary>
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 8
+        None = 7,
 
     }
 

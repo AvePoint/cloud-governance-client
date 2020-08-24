@@ -38,127 +38,127 @@ namespace Cloud.Governance.Client.Model
         /// Enum SelectAll for value: SelectAll
         /// </summary>
         [EnumMember(Value = "SelectAll")]
-        SelectAll = 1,
+        SelectAll = -3,
 
         /// <summary>
         /// Enum Root for value: Root
         /// </summary>
         [EnumMember(Value = "Root")]
-        Root = 2,
+        Root = 0,
 
         /// <summary>
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 3,
+        None = -2,
 
         /// <summary>
         /// Enum Farm for value: Farm
         /// </summary>
         [EnumMember(Value = "Farm")]
-        Farm = 4,
+        Farm = -1,
 
         /// <summary>
         /// Enum BPOSDCA for value: BPOSDCA
         /// </summary>
         [EnumMember(Value = "BPOSDCA")]
-        BPOSDCA = 5,
+        BPOSDCA = -4,
 
         /// <summary>
         /// Enum WebApplication for value: WebApplication
         /// </summary>
         [EnumMember(Value = "WebApplication")]
-        WebApplication = 6,
+        WebApplication = 2,
 
         /// <summary>
         /// Enum WebApplicationD for value: WebApplication_D
         /// </summary>
         [EnumMember(Value = "WebApplication_D")]
-        WebApplicationD = 7,
+        WebApplication_D = -5,
 
         /// <summary>
         /// Enum ManagedPath for value: ManagedPath
         /// </summary>
         [EnumMember(Value = "ManagedPath")]
-        ManagedPath = 8,
+        ManagedPath = 10,
 
         /// <summary>
         /// Enum SiteCollection for value: SiteCollection
         /// </summary>
         [EnumMember(Value = "SiteCollection")]
-        SiteCollection = 9,
+        SiteCollection = 100,
 
         /// <summary>
         /// Enum Site for value: Site
         /// </summary>
         [EnumMember(Value = "Site")]
-        Site = 10,
+        Site = 200,
 
         /// <summary>
         /// Enum Sites for value: Sites
         /// </summary>
         [EnumMember(Value = "Sites")]
-        Sites = 11,
+        Sites = 201,
 
         /// <summary>
         /// Enum Lists for value: Lists
         /// </summary>
         [EnumMember(Value = "Lists")]
-        Lists = 12,
+        Lists = 202,
 
         /// <summary>
         /// Enum List for value: List
         /// </summary>
         [EnumMember(Value = "List")]
-        List = 13,
+        List = 300,
 
         /// <summary>
         /// Enum DocumentLibrary for value: DocumentLibrary
         /// </summary>
         [EnumMember(Value = "DocumentLibrary")]
-        DocumentLibrary = 14,
+        DocumentLibrary = 310,
 
         /// <summary>
         /// Enum Folder for value: Folder
         /// </summary>
         [EnumMember(Value = "Folder")]
-        Folder = 15,
+        Folder = 400,
 
         /// <summary>
         /// Enum Folders for value: Folders
         /// </summary>
         [EnumMember(Value = "Folders")]
-        Folders = 16,
+        Folders = 401,
 
         /// <summary>
         /// Enum Items for value: Items
         /// </summary>
         [EnumMember(Value = "Items")]
-        Items = 17,
+        Items = 402,
 
         /// <summary>
         /// Enum Item for value: Item
         /// </summary>
         [EnumMember(Value = "Item")]
-        Item = 18,
+        Item = 500,
 
         /// <summary>
         /// Enum File for value: File
         /// </summary>
         [EnumMember(Value = "File")]
-        File = 19,
+        File = 501,
 
         /// <summary>
         /// Enum Group for value: Group
         /// </summary>
         [EnumMember(Value = "Group")]
-        Group = 20,
+        Group = 600,
 
         /// <summary>
         /// Enum All for value: All
         /// </summary>
         [EnumMember(Value = "All")]
-        All = 21
+        All = 1000,
 
     }
 

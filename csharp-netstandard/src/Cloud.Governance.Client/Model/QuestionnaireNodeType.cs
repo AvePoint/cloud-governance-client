@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum StartState for value: StartState
         /// </summary>
         [EnumMember(Value = "StartState")]
-        StartState = 1,
+        StartState = 0,
 
         /// <summary>
         /// Enum Question for value: Question
         /// </summary>
         [EnumMember(Value = "Question")]
-        Question = 2,
+        Question = 1,
 
         /// <summary>
         /// Enum Service for value: Service
         /// </summary>
         [EnumMember(Value = "Service")]
-        Service = 3,
+        Service = 2,
 
         /// <summary>
         /// Enum EndState for value: EndState
         /// </summary>
         [EnumMember(Value = "EndState")]
-        EndState = 4,
+        EndState = 3,
 
         /// <summary>
         /// Enum Joint for value: Joint
         /// </summary>
         [EnumMember(Value = "Joint")]
-        Joint = 5
+        Joint = 4,
 
     }
 

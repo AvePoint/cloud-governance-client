@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum SequentialNumber for value: SequentialNumber
         /// </summary>
         [EnumMember(Value = "SequentialNumber")]
-        SequentialNumber = 1,
+        SequentialNumber = 0,
 
         /// <summary>
         /// Enum RandomString for value: RandomString
         /// </summary>
         [EnumMember(Value = "RandomString")]
-        RandomString = 2
+        RandomString = 1,
 
     }
 

@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum Equals for value: Equals
         /// </summary>
         [EnumMember(Value = "Equals")]
-        Equals = 1,
+        Equals = 0,
 
         /// <summary>
         /// Enum Contains for value: Contains
         /// </summary>
         [EnumMember(Value = "Contains")]
-        Contains = 2,
+        Contains = 1,
 
         /// <summary>
         /// Enum Is for value: Is
         /// </summary>
         [EnumMember(Value = "Is")]
-        Is = 3,
+        Is = 2,
 
         /// <summary>
         /// Enum In for value: In
         /// </summary>
         [EnumMember(Value = "In")]
-        In = 4,
+        In = 3,
 
         /// <summary>
         /// Enum DoesNotBelongTo for value: DoesNotBelongTo
         /// </summary>
         [EnumMember(Value = "DoesNotBelongTo")]
-        DoesNotBelongTo = 5
+        DoesNotBelongTo = 4,
 
     }
 

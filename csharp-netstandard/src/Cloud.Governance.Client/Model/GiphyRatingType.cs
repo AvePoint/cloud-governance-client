@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Moderate for value: Moderate
         /// </summary>
         [EnumMember(Value = "Moderate")]
-        Moderate = 1,
+        Moderate = 0,
 
         /// <summary>
         /// Enum Strict for value: Strict
         /// </summary>
         [EnumMember(Value = "Strict")]
-        Strict = 2
+        Strict = 1,
 
     }
 

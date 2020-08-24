@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Manually for value: Manually
         /// </summary>
         [EnumMember(Value = "Manually")]
-        Manually = 1,
+        Manually = 0,
 
         /// <summary>
         /// Enum Dynamically for value: Dynamically
         /// </summary>
         [EnumMember(Value = "Dynamically")]
-        Dynamically = 2
+        Dynamically = 1,
 
     }
 

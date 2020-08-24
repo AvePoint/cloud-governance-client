@@ -38,271 +38,271 @@ namespace Cloud.Governance.Client.Model
         /// Enum RequestSummary for value: RequestSummary
         /// </summary>
         [EnumMember(Value = "RequestSummary")]
-        RequestSummary = 1,
+        RequestSummary = 0,
 
         /// <summary>
         /// Enum Requester for value: Requester
         /// </summary>
         [EnumMember(Value = "Requester")]
-        Requester = 2,
+        Requester = 1,
 
         /// <summary>
         /// Enum TaskCreatedTime for value: TaskCreatedTime
         /// </summary>
         [EnumMember(Value = "TaskCreatedTime")]
-        TaskCreatedTime = 3,
+        TaskCreatedTime = 2,
 
         /// <summary>
         /// Enum Rejecter for value: Rejecter
         /// </summary>
         [EnumMember(Value = "Rejecter")]
-        Rejecter = 4,
+        Rejecter = 3,
 
         /// <summary>
         /// Enum Approver for value: Approver
         /// </summary>
         [EnumMember(Value = "Approver")]
-        Approver = 5,
+        Approver = 4,
 
         /// <summary>
         /// Enum RejectedTime for value: RejectedTime
         /// </summary>
         [EnumMember(Value = "RejectedTime")]
-        RejectedTime = 6,
+        RejectedTime = 5,
 
         /// <summary>
         /// Enum ApprovedTime for value: ApprovedTime
         /// </summary>
         [EnumMember(Value = "ApprovedTime")]
-        ApprovedTime = 7,
+        ApprovedTime = 6,
 
         /// <summary>
         /// Enum Comments for value: Comments
         /// </summary>
         [EnumMember(Value = "Comments")]
-        Comments = 8,
+        Comments = 7,
 
         /// <summary>
         /// Enum RequestObjectURL for value: RequestObjectURL
         /// </summary>
         [EnumMember(Value = "RequestObjectURL")]
-        RequestObjectURL = 9,
+        RequestObjectURL = 8,
 
         /// <summary>
         /// Enum TaskDuration for value: TaskDuration
         /// </summary>
         [EnumMember(Value = "TaskDuration")]
-        TaskDuration = 10,
+        TaskDuration = 9,
 
         /// <summary>
         /// Enum TaskLink for value: TaskLink
         /// </summary>
         [EnumMember(Value = "TaskLink")]
-        TaskLink = 11,
+        TaskLink = 10,
 
         /// <summary>
         /// Enum AvePointCloudGovernanceLink for value: AvePointCloudGovernanceLink
         /// </summary>
         [EnumMember(Value = "AvePointCloudGovernanceLink")]
-        AvePointCloudGovernanceLink = 12,
+        AvePointCloudGovernanceLink = 11,
 
         /// <summary>
         /// Enum ErrorMessage for value: ErrorMessage
         /// </summary>
         [EnumMember(Value = "ErrorMessage")]
-        ErrorMessage = 13,
+        ErrorMessage = 12,
 
         /// <summary>
         /// Enum SiteCollectionTitle for value: SiteCollectionTitle
         /// </summary>
         [EnumMember(Value = "SiteCollectionTitle")]
-        SiteCollectionTitle = 14,
+        SiteCollectionTitle = 13,
 
         /// <summary>
         /// Enum LeaseExpirationWarningPeriod for value: LeaseExpirationWarningPeriod
         /// </summary>
         [EnumMember(Value = "LeaseExpirationWarningPeriod")]
-        LeaseExpirationWarningPeriod = 15,
+        LeaseExpirationWarningPeriod = 14,
 
         /// <summary>
         /// Enum ExpirationDate for value: ExpirationDate
         /// </summary>
         [EnumMember(Value = "ExpirationDate")]
-        ExpirationDate = 16,
+        ExpirationDate = 15,
 
         /// <summary>
         /// Enum RequestFinalStatus for value: RequestFinalStatus
         /// </summary>
         [EnumMember(Value = "RequestFinalStatus")]
-        RequestFinalStatus = 17,
+        RequestFinalStatus = 16,
 
         /// <summary>
         /// Enum TaskName for value: TaskName
         /// </summary>
         [EnumMember(Value = "TaskName")]
-        TaskName = 18,
+        TaskName = 17,
 
         /// <summary>
         /// Enum RequestObjectType for value: RequestObjectType
         /// </summary>
         [EnumMember(Value = "RequestObjectType")]
-        RequestObjectType = 19,
+        RequestObjectType = 18,
 
         /// <summary>
         /// Enum RecertificationType for value: RecertificationType
         /// </summary>
         [EnumMember(Value = "RecertificationType")]
-        RecertificationType = 20,
+        RecertificationType = 19,
 
         /// <summary>
         /// Enum LockedReason for value: LockedReason
         /// </summary>
         [EnumMember(Value = "LockedReason")]
-        LockedReason = 21,
+        LockedReason = 20,
 
         /// <summary>
         /// Enum Consequence for value: Consequence
         /// </summary>
         [EnumMember(Value = "Consequence")]
-        Consequence = 22,
+        Consequence = 21,
 
         /// <summary>
         /// Enum ConsequenceExecutedTime for value: ConsequenceExecutedTime
         /// </summary>
         [EnumMember(Value = "ConsequenceExecutedTime")]
-        ConsequenceExecutedTime = 23,
+        ConsequenceExecutedTime = 22,
 
         /// <summary>
         /// Enum RequestId for value: RequestId
         /// </summary>
         [EnumMember(Value = "RequestId")]
-        RequestId = 24,
+        RequestId = 23,
 
         /// <summary>
         /// Enum UserName for value: UserName
         /// </summary>
         [EnumMember(Value = "UserName")]
-        UserName = 25,
+        UserName = 24,
 
         /// <summary>
         /// Enum UserDisplayName for value: UserDisplayName
         /// </summary>
         [EnumMember(Value = "UserDisplayName")]
-        UserDisplayName = 26,
+        UserDisplayName = 25,
 
         /// <summary>
         /// Enum UserPassword for value: UserPassword
         /// </summary>
         [EnumMember(Value = "UserPassword")]
-        UserPassword = 27,
+        UserPassword = 26,
 
         /// <summary>
         /// Enum GroupId for value: GroupId
         /// </summary>
         [EnumMember(Value = "GroupId")]
-        GroupId = 28,
+        GroupId = 27,
 
         /// <summary>
         /// Enum GroupName for value: GroupName
         /// </summary>
         [EnumMember(Value = "GroupName")]
-        GroupName = 29,
+        GroupName = 28,
 
         /// <summary>
         /// Enum UserStatus for value: UserStatus
         /// </summary>
         [EnumMember(Value = "UserStatus")]
-        UserStatus = 30,
+        UserStatus = 29,
 
         /// <summary>
         /// Enum AutomaticImportProfileName for value: AutomaticImportProfileName
         /// </summary>
         [EnumMember(Value = "AutomaticImportProfileName")]
-        AutomaticImportProfileName = 31,
+        AutomaticImportProfileName = 30,
 
         /// <summary>
         /// Enum ResultFileName for value: ResultFileName
         /// </summary>
         [EnumMember(Value = "ResultFileName")]
-        ResultFileName = 32,
+        ResultFileName = 31,
 
         /// <summary>
         /// Enum ContactforConfirmingGovernanceDetails for value: ContactforConfirmingGovernanceDetails
         /// </summary>
         [EnumMember(Value = "ContactforConfirmingGovernanceDetails")]
-        ContactforConfirmingGovernanceDetails = 33,
+        ContactforConfirmingGovernanceDetails = 32,
 
         /// <summary>
         /// Enum ResultFileLocation for value: ResultFileLocation
         /// </summary>
         [EnumMember(Value = "ResultFileLocation")]
-        ResultFileLocation = 34,
+        ResultFileLocation = 33,
 
         /// <summary>
         /// Enum Office365GroupPlannerLink for value: Office365GroupPlannerLink
         /// </summary>
         [EnumMember(Value = "Office365GroupPlannerLink")]
-        Office365GroupPlannerLink = 35,
+        Office365GroupPlannerLink = 34,
 
         /// <summary>
         /// Enum MicrosoftTeamLink for value: MicrosoftTeamLink
         /// </summary>
         [EnumMember(Value = "MicrosoftTeamLink")]
-        MicrosoftTeamLink = 36,
+        MicrosoftTeamLink = 35,
 
         /// <summary>
         /// Enum Approve for value: Approve
         /// </summary>
         [EnumMember(Value = "Approve")]
-        Approve = 37,
+        Approve = 36,
 
         /// <summary>
         /// Enum Reject for value: Reject
         /// </summary>
         [EnumMember(Value = "Reject")]
-        Reject = 38,
+        Reject = 37,
 
         /// <summary>
         /// Enum Retry for value: Retry
         /// </summary>
         [EnumMember(Value = "Retry")]
-        Retry = 39,
+        Retry = 38,
 
         /// <summary>
         /// Enum Skip for value: Skip
         /// </summary>
         [EnumMember(Value = "Skip")]
-        Skip = 40,
+        Skip = 39,
 
         /// <summary>
         /// Enum Office365GroupNotebookLink for value: Office365GroupNotebookLink
         /// </summary>
         [EnumMember(Value = "Office365GroupNotebookLink")]
-        Office365GroupNotebookLink = 41,
+        Office365GroupNotebookLink = 40,
 
         /// <summary>
         /// Enum PhaseStartTime for value: PhaseStartTime
         /// </summary>
         [EnumMember(Value = "PhaseStartTime")]
-        PhaseStartTime = 42,
+        PhaseStartTime = 41,
 
         /// <summary>
         /// Enum PermissionExpirationWarningPeriod for value: PermissionExpirationWarningPeriod
         /// </summary>
         [EnumMember(Value = "PermissionExpirationWarningPeriod")]
-        PermissionExpirationWarningPeriod = 43,
+        PermissionExpirationWarningPeriod = 42,
 
         /// <summary>
         /// Enum TodoListLink for value: TodoListLink
         /// </summary>
         [EnumMember(Value = "TodoListLink")]
-        TodoListLink = 44,
+        TodoListLink = 43,
 
         /// <summary>
         /// Enum CancelRequester for value: CancelRequester
         /// </summary>
         [EnumMember(Value = "CancelRequester")]
-        CancelRequester = 45
+        CancelRequester = 205,
 
     }
 

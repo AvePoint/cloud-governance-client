@@ -38,61 +38,61 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum RequestSubmitted for value: RequestSubmitted
         /// </summary>
         [EnumMember(Value = "RequestSubmitted")]
-        RequestSubmitted = 2,
+        RequestSubmitted = 1,
 
         /// <summary>
         /// Enum WaitingForApproval for value: WaitingForApproval
         /// </summary>
         [EnumMember(Value = "WaitingForApproval")]
-        WaitingForApproval = 3,
+        WaitingForApproval = 2,
 
         /// <summary>
         /// Enum WaitingForSubmission for value: WaitingForSubmission
         /// </summary>
         [EnumMember(Value = "WaitingForSubmission")]
-        WaitingForSubmission = 4,
+        WaitingForSubmission = 3,
 
         /// <summary>
         /// Enum Cancelled for value: Cancelled
         /// </summary>
         [EnumMember(Value = "Cancelled")]
-        Cancelled = 5,
+        Cancelled = 4,
 
         /// <summary>
         /// Enum Rejected for value: Rejected
         /// </summary>
         [EnumMember(Value = "Rejected")]
-        Rejected = 6,
+        Rejected = 5,
 
         /// <summary>
         /// Enum Completed for value: Completed
         /// </summary>
         [EnumMember(Value = "Completed")]
-        Completed = 7,
+        Completed = 6,
 
         /// <summary>
         /// Enum CompletedWithException for value: CompletedWithException
         /// </summary>
         [EnumMember(Value = "CompletedWithException")]
-        CompletedWithException = 8,
+        CompletedWithException = 7,
 
         /// <summary>
         /// Enum EncounterError for value: EncounterError
         /// </summary>
         [EnumMember(Value = "EncounterError")]
-        EncounterError = 9,
+        EncounterError = 8,
 
         /// <summary>
         /// Enum InProgress for value: InProgress
         /// </summary>
         [EnumMember(Value = "InProgress")]
-        InProgress = 10
+        InProgress = 9,
 
     }
 

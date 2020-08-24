@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Append for value: Append
         /// </summary>
         [EnumMember(Value = "Append")]
-        Append = 1,
+        Append = 0,
 
         /// <summary>
         /// Enum Replace for value: Replace
         /// </summary>
         [EnumMember(Value = "Replace")]
-        Replace = 2
+        Replace = 1,
 
     }
 

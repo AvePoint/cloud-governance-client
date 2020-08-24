@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum ChangeByUrl for value: ChangeByUrl
         /// </summary>
         [EnumMember(Value = "ChangeByUrl")]
-        ChangeByUrl = 1,
+        ChangeByUrl = 0,
 
         /// <summary>
         /// Enum ChangeByUser for value: ChangeByUser
         /// </summary>
         [EnumMember(Value = "ChangeByUser")]
-        ChangeByUser = 2
+        ChangeByUser = 1,
 
     }
 

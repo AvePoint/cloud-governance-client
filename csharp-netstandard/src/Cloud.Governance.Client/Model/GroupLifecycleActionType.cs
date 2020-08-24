@@ -38,37 +38,37 @@ namespace Cloud.Governance.Client.Model
         /// Enum Delete for value: Delete
         /// </summary>
         [EnumMember(Value = "Delete")]
-        Delete = 1,
+        Delete = 0,
 
         /// <summary>
         /// Enum Extend for value: Extend
         /// </summary>
         [EnumMember(Value = "Extend")]
-        Extend = 2,
+        Extend = 1,
 
         /// <summary>
         /// Enum ChangePolicy for value: ChangePolicy
         /// </summary>
         [EnumMember(Value = "ChangePolicy")]
-        ChangePolicy = 3,
+        ChangePolicy = 2,
 
         /// <summary>
         /// Enum ChangeQuota for value: ChangeQuota
         /// </summary>
         [EnumMember(Value = "ChangeQuota")]
-        ChangeQuota = 4,
+        ChangeQuota = 3,
 
         /// <summary>
         /// Enum Archive for value: Archive
         /// </summary>
         [EnumMember(Value = "Archive")]
-        Archive = 5,
+        Archive = 4,
 
         /// <summary>
         /// Enum Restor for value: Restor
         /// </summary>
         [EnumMember(Value = "Restor")]
-        Restor = 6
+        Restor = 5,
 
     }
 

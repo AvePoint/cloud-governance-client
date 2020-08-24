@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum WindowsAzure for value: WindowsAzure
         /// </summary>
         [EnumMember(Value = "WindowsAzure")]
-        WindowsAzure = 1,
+        WindowsAzure = 0,
 
         /// <summary>
         /// Enum SharePointObject for value: SharePointObject
         /// </summary>
         [EnumMember(Value = "SharePointObject")]
-        SharePointObject = 2
+        SharePointObject = 1,
 
     }
 

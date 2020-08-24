@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum InactivityThreshold for value: InactivityThreshold
         /// </summary>
         [EnumMember(Value = "InactivityThreshold")]
-        InactivityThreshold = 1,
+        InactivityThreshold = 0,
 
         /// <summary>
         /// Enum LeaseExpired for value: LeaseExpired
         /// </summary>
         [EnumMember(Value = "LeaseExpired")]
-        LeaseExpired = 2
+        LeaseExpired = 1,
 
     }
 

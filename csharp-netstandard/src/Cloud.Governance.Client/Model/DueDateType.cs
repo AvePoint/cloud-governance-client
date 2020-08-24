@@ -38,31 +38,31 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Expired for value: Expired
         /// </summary>
         [EnumMember(Value = "Expired")]
-        Expired = 2,
+        Expired = 1,
 
         /// <summary>
         /// Enum DueToday for value: DueToday
         /// </summary>
         [EnumMember(Value = "DueToday")]
-        DueToday = 3,
+        DueToday = 2,
 
         /// <summary>
         /// Enum DueThisWeek for value: DueThisWeek
         /// </summary>
         [EnumMember(Value = "DueThisWeek")]
-        DueThisWeek = 4,
+        DueThisWeek = 3,
 
         /// <summary>
         /// Enum DueThisMonth for value: DueThisMonth
         /// </summary>
         [EnumMember(Value = "DueThisMonth")]
-        DueThisMonth = 5
+        DueThisMonth = 4,
 
     }
 

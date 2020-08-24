@@ -38,55 +38,55 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum Extend for value: Extend
         /// </summary>
         [EnumMember(Value = "Extend")]
-        Extend = 2,
+        Extend = 1,
 
         /// <summary>
         /// Enum Delete for value: Delete
         /// </summary>
         [EnumMember(Value = "Delete")]
-        Delete = 3,
+        Delete = 2,
 
         /// <summary>
         /// Enum Archive for value: Archive
         /// </summary>
         [EnumMember(Value = "Archive")]
-        Archive = 4,
+        Archive = 3,
 
         /// <summary>
         /// Enum Policy for value: Policy
         /// </summary>
         [EnumMember(Value = "Policy")]
-        Policy = 5,
+        Policy = 4,
 
         /// <summary>
         /// Enum Unlock for value: Unlock
         /// </summary>
         [EnumMember(Value = "Unlock")]
-        Unlock = 6,
+        Unlock = 5,
 
         /// <summary>
         /// Enum Continue for value: Continue
         /// </summary>
         [EnumMember(Value = "Continue")]
-        Continue = 7,
+        Continue = 6,
 
         /// <summary>
         /// Enum Lock for value: Lock
         /// </summary>
         [EnumMember(Value = "Lock")]
-        Lock = 8,
+        Lock = 7,
 
         /// <summary>
         /// Enum Quota for value: Quota
         /// </summary>
         [EnumMember(Value = "Quota")]
-        Quota = 9
+        Quota = 8,
 
     }
 

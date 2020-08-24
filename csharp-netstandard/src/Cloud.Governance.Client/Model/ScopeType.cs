@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum ManuallyInput for value: ManuallyInput
         /// </summary>
         [EnumMember(Value = "ManuallyInput")]
-        ManuallyInput = 1,
+        ManuallyInput = 0,
 
         /// <summary>
         /// Enum SelectFromTree for value: SelectFromTree
         /// </summary>
         [EnumMember(Value = "SelectFromTree")]
-        SelectFromTree = 2
+        SelectFromTree = 1,
 
     }
 

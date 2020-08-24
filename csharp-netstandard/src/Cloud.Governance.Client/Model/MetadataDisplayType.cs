@@ -50,7 +50,7 @@ namespace Cloud.Governance.Client.Model
         /// Enum DisplayInAdministrationReport for value: DisplayInAdministrationReport
         /// </summary>
         [EnumMember(Value = "DisplayInAdministrationReport")]
-        DisplayInAdministrationReport = 3
+        DisplayInAdministrationReport = 3,
 
     }
 

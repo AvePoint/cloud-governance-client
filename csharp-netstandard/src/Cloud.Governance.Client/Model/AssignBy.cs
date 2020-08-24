@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum BusinessUser for value: BusinessUser
         /// </summary>
         [EnumMember(Value = "BusinessUser")]
-        BusinessUser = 1,
+        BusinessUser = 0,
 
         /// <summary>
         /// Enum BusinessUserWithRequired for value: BusinessUserWithRequired
         /// </summary>
         [EnumMember(Value = "BusinessUserWithRequired")]
-        BusinessUserWithRequired = 2,
+        BusinessUserWithRequired = 1,
 
         /// <summary>
         /// Enum ITAdminWithReadOnly for value: ITAdminWithReadOnly
         /// </summary>
         [EnumMember(Value = "ITAdminWithReadOnly")]
-        ITAdminWithReadOnly = 3,
+        ITAdminWithReadOnly = 2,
 
         /// <summary>
         /// Enum ITAdminWithHide for value: ITAdminWithHide
         /// </summary>
         [EnumMember(Value = "ITAdminWithHide")]
-        ITAdminWithHide = 4
+        ITAdminWithHide = 3,
 
     }
 

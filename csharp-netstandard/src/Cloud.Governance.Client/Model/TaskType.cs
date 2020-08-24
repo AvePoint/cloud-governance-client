@@ -38,73 +38,73 @@ namespace Cloud.Governance.Client.Model
         /// Enum ApprovalTask for value: ApprovalTask
         /// </summary>
         [EnumMember(Value = "ApprovalTask")]
-        ApprovalTask = 1,
+        ApprovalTask = 0,
 
         /// <summary>
         /// Enum ErrorHandlingTask for value: ErrorHandlingTask
         /// </summary>
         [EnumMember(Value = "ErrorHandlingTask")]
-        ErrorHandlingTask = 2,
+        ErrorHandlingTask = 1,
 
         /// <summary>
         /// Enum SCExpired for value: SCExpired
         /// </summary>
         [EnumMember(Value = "SCExpired")]
-        SCExpired = 3,
+        SCExpired = 2,
 
         /// <summary>
         /// Enum SCNoAccess for value: SCNoAccess
         /// </summary>
         [EnumMember(Value = "SCNoAccess")]
-        SCNoAccess = 4,
+        SCNoAccess = 3,
 
         /// <summary>
         /// Enum ToDoTask for value: ToDoTask
         /// </summary>
         [EnumMember(Value = "ToDoTask")]
-        ToDoTask = 5,
+        ToDoTask = 4,
 
         /// <summary>
         /// Enum UserExpired for value: UserExpired
         /// </summary>
         [EnumMember(Value = "UserExpired")]
-        UserExpired = 6,
+        UserExpired = 5,
 
         /// <summary>
         /// Enum GroupExpired for value: GroupExpired
         /// </summary>
         [EnumMember(Value = "GroupExpired")]
-        GroupExpired = 7,
+        GroupExpired = 6,
 
         /// <summary>
         /// Enum GroupInactivityThreshold for value: GroupInactivityThreshold
         /// </summary>
         [EnumMember(Value = "GroupInactivityThreshold")]
-        GroupInactivityThreshold = 8,
+        GroupInactivityThreshold = 7,
 
         /// <summary>
         /// Enum AutoImportGroup for value: AutoImportGroup
         /// </summary>
         [EnumMember(Value = "AutoImportGroup")]
-        AutoImportGroup = 9,
+        AutoImportGroup = 8,
 
         /// <summary>
         /// Enum AutoImportSite for value: AutoImportSite
         /// </summary>
         [EnumMember(Value = "AutoImportSite")]
-        AutoImportSite = 10,
+        AutoImportSite = 9,
 
         /// <summary>
         /// Enum RenewGroup for value: RenewGroup
         /// </summary>
         [EnumMember(Value = "RenewGroup")]
-        RenewGroup = 11,
+        RenewGroup = 10,
 
         /// <summary>
         /// Enum RenewSite for value: RenewSite
         /// </summary>
         [EnumMember(Value = "RenewSite")]
-        RenewSite = 12
+        RenewSite = 11,
 
     }
 

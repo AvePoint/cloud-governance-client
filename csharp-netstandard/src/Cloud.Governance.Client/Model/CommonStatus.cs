@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Inactive for value: Inactive
         /// </summary>
         [EnumMember(Value = "Inactive")]
-        Inactive = 1,
+        Inactive = 0,
 
         /// <summary>
         /// Enum Active for value: Active
         /// </summary>
         [EnumMember(Value = "Active")]
-        Active = 2
+        Active = 1,
 
     }
 

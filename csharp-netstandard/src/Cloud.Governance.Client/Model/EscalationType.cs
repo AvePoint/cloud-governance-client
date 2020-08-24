@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum Notify for value: Notify
         /// </summary>
         [EnumMember(Value = "Notify")]
-        Notify = 1,
+        Notify = 0,
 
         /// <summary>
         /// Enum ReAssignTo for value: ReAssignTo
         /// </summary>
         [EnumMember(Value = "ReAssignTo")]
-        ReAssignTo = 2,
+        ReAssignTo = 1,
 
         /// <summary>
         /// Enum AutoReject for value: AutoReject
         /// </summary>
         [EnumMember(Value = "AutoReject")]
-        AutoReject = 3
+        AutoReject = 2,
 
     }
 

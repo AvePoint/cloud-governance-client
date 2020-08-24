@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Custom for value: Custom
         /// </summary>
         [EnumMember(Value = "Custom")]
-        Custom = 1,
+        Custom = 0,
 
         /// <summary>
         /// Enum AzureADOrUserProfile for value: AzureADOrUserProfile
         /// </summary>
         [EnumMember(Value = "AzureADOrUserProfile")]
-        AzureADOrUserProfile = 2
+        AzureADOrUserProfile = 1,
 
     }
 

@@ -38,55 +38,55 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum DeleteUser for value: DeleteUser
         /// </summary>
         [EnumMember(Value = "DeleteUser")]
-        DeleteUser = 2,
+        DeleteUser = 1,
 
         /// <summary>
         /// Enum RemoveUserPermission for value: RemoveUserPermission
         /// </summary>
         [EnumMember(Value = "RemoveUserPermission")]
-        RemoveUserPermission = 3,
+        RemoveUserPermission = 2,
 
         /// <summary>
         /// Enum EditUserPermission for value: EditUserPermission
         /// </summary>
         [EnumMember(Value = "EditUserPermission")]
-        EditUserPermission = 4,
+        EditUserPermission = 3,
 
         /// <summary>
         /// Enum AddUserToSPGroup for value: AddUserToSPGroup
         /// </summary>
         [EnumMember(Value = "AddUserToSPGroup")]
-        AddUserToSPGroup = 5,
+        AddUserToSPGroup = 11,
 
         /// <summary>
         /// Enum RemoveGroupPermission for value: RemoveGroupPermission
         /// </summary>
         [EnumMember(Value = "RemoveGroupPermission")]
-        RemoveGroupPermission = 6,
+        RemoveGroupPermission = 12,
 
         /// <summary>
         /// Enum EditGroupPermission for value: EditGroupPermission
         /// </summary>
         [EnumMember(Value = "EditGroupPermission")]
-        EditGroupPermission = 7,
+        EditGroupPermission = 13,
 
         /// <summary>
         /// Enum RemoveUserFromGroup for value: RemoveUserFromGroup
         /// </summary>
         [EnumMember(Value = "RemoveUserFromGroup")]
-        RemoveUserFromGroup = 8,
+        RemoveUserFromGroup = 21,
 
         /// <summary>
         /// Enum ChangeGroup for value: ChangeGroup
         /// </summary>
         [EnumMember(Value = "ChangeGroup")]
-        ChangeGroup = 9
+        ChangeGroup = 22,
 
     }
 

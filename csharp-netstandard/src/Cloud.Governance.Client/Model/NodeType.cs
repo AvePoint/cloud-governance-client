@@ -38,7 +38,7 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = -2,
 
         /// <summary>
         /// Enum Container for value: Container
@@ -50,43 +50,43 @@ namespace Cloud.Governance.Client.Model
         /// Enum Site for value: Site
         /// </summary>
         [EnumMember(Value = "Site")]
-        Site = 3,
+        Site = 100,
 
         /// <summary>
         /// Enum Web for value: Web
         /// </summary>
         [EnumMember(Value = "Web")]
-        Web = 4,
+        Web = 200,
 
         /// <summary>
         /// Enum List for value: List
         /// </summary>
         [EnumMember(Value = "List")]
-        List = 5,
+        List = 300,
 
         /// <summary>
         /// Enum DocumentLibrary for value: DocumentLibrary
         /// </summary>
         [EnumMember(Value = "DocumentLibrary")]
-        DocumentLibrary = 6,
+        DocumentLibrary = 310,
 
         /// <summary>
         /// Enum Folder for value: Folder
         /// </summary>
         [EnumMember(Value = "Folder")]
-        Folder = 7,
+        Folder = 400,
 
         /// <summary>
         /// Enum Item for value: Item
         /// </summary>
         [EnumMember(Value = "Item")]
-        Item = 8,
+        Item = 500,
 
         /// <summary>
         /// Enum File for value: File
         /// </summary>
         [EnumMember(Value = "File")]
-        File = 9
+        File = 501,
 
     }
 

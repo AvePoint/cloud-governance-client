@@ -38,43 +38,43 @@ namespace Cloud.Governance.Client.Model
         /// Enum Custom for value: Custom
         /// </summary>
         [EnumMember(Value = "Custom")]
-        Custom = 1,
+        Custom = 0,
 
         /// <summary>
         /// Enum FullControl for value: FullControl
         /// </summary>
         [EnumMember(Value = "FullControl")]
-        FullControl = 2,
+        FullControl = 1,
 
         /// <summary>
         /// Enum Design for value: Design
         /// </summary>
         [EnumMember(Value = "Design")]
-        Design = 3,
+        Design = 2,
 
         /// <summary>
         /// Enum Edit for value: Edit
         /// </summary>
         [EnumMember(Value = "Edit")]
-        Edit = 4,
+        Edit = 3,
 
         /// <summary>
         /// Enum Contribute for value: Contribute
         /// </summary>
         [EnumMember(Value = "Contribute")]
-        Contribute = 5,
+        Contribute = 4,
 
         /// <summary>
         /// Enum Read for value: Read
         /// </summary>
         [EnumMember(Value = "Read")]
-        Read = 6,
+        Read = 5,
 
         /// <summary>
         /// Enum ViewOnly for value: ViewOnly
         /// </summary>
         [EnumMember(Value = "ViewOnly")]
-        ViewOnly = 7
+        ViewOnly = 6,
 
     }
 

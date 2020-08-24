@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum User for value: User
         /// </summary>
         [EnumMember(Value = "User")]
-        User = 1,
+        User = 0,
 
         /// <summary>
         /// Enum Group for value: Group
         /// </summary>
         [EnumMember(Value = "Group")]
-        Group = 2,
+        Group = 1,
 
         /// <summary>
         /// Enum All for value: All
         /// </summary>
         [EnumMember(Value = "All")]
-        All = 3
+        All = 2,
 
     }
 

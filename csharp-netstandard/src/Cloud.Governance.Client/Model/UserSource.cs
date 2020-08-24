@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum All for value: All
         /// </summary>
         [EnumMember(Value = "All")]
-        All = 1,
+        All = 0,
 
         /// <summary>
         /// Enum Local for value: Local
         /// </summary>
         [EnumMember(Value = "Local")]
-        Local = 2,
+        Local = 1,
 
         /// <summary>
         /// Enum Azure for value: Azure
         /// </summary>
         [EnumMember(Value = "Azure")]
-        Azure = 3,
+        Azure = 2,
 
         /// <summary>
         /// Enum SharePoint for value: SharePoint
         /// </summary>
         [EnumMember(Value = "SharePoint")]
-        SharePoint = 4
+        SharePoint = 3,
 
     }
 

@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum Copy for value: Copy
         /// </summary>
         [EnumMember(Value = "Copy")]
-        Copy = 1,
+        Copy = 0,
 
         /// <summary>
         /// Enum Move for value: Move
         /// </summary>
         [EnumMember(Value = "Move")]
-        Move = 2
+        Move = 1,
 
     }
 

@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum GroupMembers for value: GroupMembers
         /// </summary>
         [EnumMember(Value = "GroupMembers")]
-        GroupMembers = 1,
+        GroupMembers = 0,
 
         /// <summary>
         /// Enum EveryOne for value: EveryOne
         /// </summary>
         [EnumMember(Value = "EveryOne")]
-        EveryOne = 2
+        EveryOne = 1,
 
     }
 

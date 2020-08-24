@@ -38,25 +38,25 @@ namespace Cloud.Governance.Client.Model
         /// Enum AutomaticLock for value: AutomaticLock
         /// </summary>
         [EnumMember(Value = "AutomaticLock")]
-        AutomaticLock = 1,
+        AutomaticLock = 0,
 
         /// <summary>
         /// Enum AutomaticLockReminder for value: AutomaticLockReminder
         /// </summary>
         [EnumMember(Value = "AutomaticLockReminder")]
-        AutomaticLockReminder = 2,
+        AutomaticLockReminder = 1,
 
         /// <summary>
         /// Enum AdditionalAction for value: AdditionalAction
         /// </summary>
         [EnumMember(Value = "AdditionalAction")]
-        AdditionalAction = 3,
+        AdditionalAction = 2,
 
         /// <summary>
         /// Enum AdditionalActionWarningReminder for value: AdditionalActionWarningReminder
         /// </summary>
         [EnumMember(Value = "AdditionalActionWarningReminder")]
-        AdditionalActionWarningReminder = 4
+        AdditionalActionWarningReminder = 3,
 
     }
 

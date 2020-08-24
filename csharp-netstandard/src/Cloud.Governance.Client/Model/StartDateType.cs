@@ -38,19 +38,19 @@ namespace Cloud.Governance.Client.Model
         /// Enum None for value: None
         /// </summary>
         [EnumMember(Value = "None")]
-        None = 1,
+        None = 0,
 
         /// <summary>
         /// Enum CurrentDate for value: CurrentDate
         /// </summary>
         [EnumMember(Value = "CurrentDate")]
-        CurrentDate = 2,
+        CurrentDate = 1,
 
         /// <summary>
         /// Enum SpecifiedDate for value: SpecifiedDate
         /// </summary>
         [EnumMember(Value = "SpecifiedDate")]
-        SpecifiedDate = 3
+        SpecifiedDate = 2,
 
     }
 

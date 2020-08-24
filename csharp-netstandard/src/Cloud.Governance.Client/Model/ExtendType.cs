@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// Enum WithConstantValue for value: WithConstantValue
         /// </summary>
         [EnumMember(Value = "WithConstantValue")]
-        WithConstantValue = 1,
+        WithConstantValue = 0,
 
         /// <summary>
         /// Enum WithinSpecifyLimit for value: WithinSpecifyLimit
         /// </summary>
         [EnumMember(Value = "WithinSpecifyLimit")]
-        WithinSpecifyLimit = 2
+        WithinSpecifyLimit = 1,
 
     }
 
