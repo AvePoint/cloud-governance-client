@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.GroupLifecycleActionType
-Delete=0, Extend=1, ChangePolicy=2, </br>ChangeQuota=3, Archive=4, Restor=5, </br>
 ## Properties
 
 Name | Type | Description | Notes

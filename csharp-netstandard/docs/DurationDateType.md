@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.DurationDateType
-Day=0, Month=1, Year=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

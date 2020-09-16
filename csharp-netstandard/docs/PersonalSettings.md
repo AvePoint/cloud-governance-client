@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **UserID** | **int** |  | [optional] 
 **LanguageID** | **int** |  | [optional] 
 **TimeZoneID** | **int** |  | [optional] 
+**IsAdjustDaylight** | **bool** |  | [optional] 
 **Properties** | [**PersonalSettingsPropertyInfo**](PersonalSettingsPropertyInfo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

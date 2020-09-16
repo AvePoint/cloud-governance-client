@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.YammerGroupType
-Public=0, Private=1
 ## Properties
 
 Name | Type | Description | Notes

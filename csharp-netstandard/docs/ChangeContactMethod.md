@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ChangeContactMethod
-ChangeByUrl=0, ChangeByUser=1
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ClonePermissionOption
-Append=0, Replace=1
 ## Properties
 
 Name | Type | Description | Notes

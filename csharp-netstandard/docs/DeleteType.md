@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.DeleteType
-None=0, Manually=1, Auto=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

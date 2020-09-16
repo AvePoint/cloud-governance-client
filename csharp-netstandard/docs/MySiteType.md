@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.MySiteType
-Site=0, Web=1
 ## Properties
 
 Name | Type | Description | Notes

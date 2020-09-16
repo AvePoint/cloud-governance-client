@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ChoiceType
-DropDown=1, RadioButton=2, CheckBoxes=3, </br>
 ## Properties
 
 Name | Type | Description | Notes

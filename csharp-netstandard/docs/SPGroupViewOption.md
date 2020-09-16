@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.SPGroupViewOption
-GroupMembers=0, EveryOne=1
 ## Properties
 
 Name | Type | Description | Notes

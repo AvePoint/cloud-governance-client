@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.LogicalOperator
-And=0, Or=1
 ## Properties
 
 Name | Type | Description | Notes

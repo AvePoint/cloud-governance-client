@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.UserLevelControlMode
-AnyUserOrGroup=0, PeersAndDirectOrIn=1, DirectOrIn=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ExternalSharingOptions
-Disabled=0, VerifiedGuestUser=1, Anyone=2, </br>ExistingGuestUser=3
 ## Properties
 
 Name | Type | Description | Notes

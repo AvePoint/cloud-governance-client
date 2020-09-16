@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TenantId** | **Guid** |  | [optional] 
+**NetworkId** | **string** |  | [optional] 
 **GroupRestriction** | **GroupRestrictionType** |  | [optional] 
 **EnableChangeName** | **bool** |  | [optional] 
 **EnableChangeDescription** | **bool** |  | [optional] 
@@ -22,9 +23,14 @@ Name | Type | Description | Notes
 **EnableChangeHubSite** | **bool** |  | [optional] 
 **EnableChangeClassification** | **bool** |  | [optional] 
 **ClassificationList** | **List&lt;string&gt;** |  | [optional] 
+**EnableChangeSensitivity** | **bool** |  | [optional] 
+**SensitivityList** | **List&lt;string&gt;** |  | [optional] 
 **EnableChangeMetadata** | **bool** |  | [optional] 
 **EnableAddOrDeleteMetadata** | **bool** |  | [optional] 
 **MetadataList** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
+**EnableChangeMembershipType** | **bool** |  | [optional] 
+**GroupObjectType** | **GroupObjectType** |  | [optional] 
+**EnableChangeYammerGroupInfo** | **bool** |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 

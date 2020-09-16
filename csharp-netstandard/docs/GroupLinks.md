@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **GroupFilesLink** | **string** |  | [optional] 
 **GroupConversationsLink** | **string** |  | [optional] 
 **GroupNotebookLink** | **string** |  | [optional] 
+**YammerGroupLink** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

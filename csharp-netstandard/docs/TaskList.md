@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **DueDate** | **DateTime?** |  | [optional] 
 **DueDateType** | **DueDateType** |  | [optional] 
 **ServiceType** | **ServiceType** |  | [optional] 
-**ServiceTypeDescription** | **string** |  | [optional] [readonly] 
+**ServiceTypeDescription** | **string** |  | [optional] 
 **CreatedTime** | **DateTime** |  | [optional] 
 **TaskType** | **TaskType** |  | [optional] 
 **Status** | **TaskResult** |  | [optional] 
-**StatusDescription** | **string** |  | [optional] [readonly] 
+**StatusDescription** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

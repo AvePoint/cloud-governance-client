@@ -4,26 +4,20 @@ All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CheckUserExistsInAOS**](UsersApi.md#checkuserexistsinaos) | **GET** /users/avepointonlineservices/validate | check user exists in Aos
-[**GetAzureAdUserPropertyValue**](UsersApi.md#getazureaduserpropertyvalue) | **GET** /users/{username}/azuread/property | get user&#39;s property value by property name from azure ad
-[**GetUpsUserPropertyValue**](UsersApi.md#getupsuserpropertyvalue) | **GET** /users/{username}/userprofile/property | get user&#39;s property value by property name from user profile service
-[**GetUserBasicProperties**](UsersApi.md#getuserbasicproperties) | **GET** /users/me/properties | get my basic properties, City, Country, Office, Department, JobTitle,State
-[**GetUserBasicPropertyValue**](UsersApi.md#getuserbasicpropertyvalue) | **GET** /users/me/property/{name} | get my basic property value, Department, Email, DisplayName, Manager
-[**GetUserPhoto**](UsersApi.md#getuserphoto) | **GET** /users/{username}/photo | get user&#39;s photo
-[**GetUserRelationship**](UsersApi.md#getuserrelationship) | **GET** /users/{username}/relationship | get user relationship
-[**GetUsersFromSharePoint**](UsersApi.md#getusersfromsharepoint) | **POST** /users/sharepoint/validate | get users from sharepoint
+[**FilterUsersByAttribute**](UsersApi.md#filterusersbyattribute) | **GET** /users/filter | filter users by property value
+[**GetAzureAdUserPropertyValue**](UsersApi.md#getazureaduserpropertyvalue) | **GET** /users/{username}/azuread/property | get Azure Ad user&#39;s property value
+[**GetExtensionAzureAdUserPropertyValues**](UsersApi.md#getextensionazureaduserpropertyvalues) | **GET** /users/{username}/azuread/extensionproperties | get user&#39;s extension property value from azure ad
+[**IsMemberOfGroup**](UsersApi.md#ismemberofgroup) | **GET** /users/{userprincipalname}/ismemberof/{groupid} | Is Member Of Group
 [**ResolveUsers**](UsersApi.md#resolveusers) | **GET** /users/resolve | resolve users
-[**ResolveUsersWithExternalSharingOption**](UsersApi.md#resolveuserswithexternalsharingoption) | **GET** /users/resolve/{externalSharingOption} | resolve user including external users
 [**SearchUsers**](UsersApi.md#searchusers) | **GET** /users/search | search users
-[**SearchUsersWithExternalSharingOption**](UsersApi.md#searchuserswithexternalsharingoption) | **GET** /users/search/{externalSharingOption} | search user including external users
 [**UpdateUserInfo**](UsersApi.md#updateuserinfo) | **POST** /users | 
 
 
-<a name="checkuserexistsinaos"></a>
-# **CheckUserExistsInAOS**
-> bool CheckUserExistsInAOS (string name)
+<a name="filterusersbyattribute"></a>
+# **FilterUsersByAttribute**
+> List&lt;ApiUser&gt; FilterUsersByAttribute (string attributeName, string attributeValue, string office365TenantId = null)
 
-check user exists in Aos
+filter users by property value
 
 ### Example
 ```csharp
@@ -35,33 +29,38 @@ using Cloud.Governance.Client.Model;
 
 namespace Example
 {
-    public class CheckUserExistsInAOSExample
+    public class FilterUsersByAttributeExample
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new UsersApi(Configuration.Default);
-            var name = name_example;  // string | 
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new UsersApi(config);
+
+            var attributeName = attributeName_example;  // string | azure ad attribute name
+            var attributeValue = attributeValue_example;  // string | value of attribute name
+            var office365TenantId = office365TenantId_example;  // string | office 365 tenant id, optional, if not specified, only return the first tenant's result which is not empty (optional) 
 
             try
             {
-                // check user exists in Aos
-                bool result = apiInstance.CheckUserExistsInAOS(name);
+                // filter users by property value
+                List<ApiUser> result = apiInstance.FilterUsersByAttribute(attributeName, attributeValue, office365TenantId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.CheckUserExistsInAOS: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.FilterUsersByAttribute: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -74,15 +73,17 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**|  | 
+ **attributeName** | **string**| azure ad attribute name | 
+ **attributeValue** | **string**| value of attribute name | 
+ **office365TenantId** | **string**| office 365 tenant id, optional, if not specified, only return the first tenant&#39;s result which is not empty | [optional] 
 
 ### Return type
 
-**bool**
+[**List&lt;ApiUser&gt;**](ApiUser.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -92,7 +93,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Success |  -  |
+| **200** | only return the first 100 users |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |
@@ -103,7 +104,7 @@ Name | Type | Description  | Notes
 # **GetAzureAdUserPropertyValue**
 > StringModel GetAzureAdUserPropertyValue (string username, string propertyName)
 
-get user's property value by property name from azure ad
+get Azure Ad user's property value
 
 ### Example
 ```csharp
@@ -119,24 +120,27 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new UsersApi(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new UsersApi(config);
+
             var username = username_example;  // string | 
             var propertyName = propertyName_example;  // string | 
 
             try
             {
-                // get user's property value by property name from azure ad
+                // get Azure Ad user's property value
                 StringModel result = apiInstance.GetAzureAdUserPropertyValue(username, propertyName);
                 Debug.WriteLine(result);
             }
@@ -164,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -181,11 +185,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getupsuserpropertyvalue"></a>
-# **GetUpsUserPropertyValue**
-> StringModel GetUpsUserPropertyValue (string username, string propertyName)
+<a name="getextensionazureaduserpropertyvalues"></a>
+# **GetExtensionAzureAdUserPropertyValues**
+> List&lt;StringModel&gt; GetExtensionAzureAdUserPropertyValues (string username)
 
-get user's property value by property name from user profile service
+get user's extension property value from azure ad
 
 ### Example
 ```csharp
@@ -197,34 +201,36 @@ using Cloud.Governance.Client.Model;
 
 namespace Example
 {
-    public class GetUpsUserPropertyValueExample
+    public class GetExtensionAzureAdUserPropertyValuesExample
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new UsersApi(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new UsersApi(config);
+
             var username = username_example;  // string | 
-            var propertyName = propertyName_example;  // string | 
 
             try
             {
-                // get user's property value by property name from user profile service
-                StringModel result = apiInstance.GetUpsUserPropertyValue(username, propertyName);
+                // get user's extension property value from azure ad
+                List<StringModel> result = apiInstance.GetExtensionAzureAdUserPropertyValues(username);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUpsUserPropertyValue: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.GetExtensionAzureAdUserPropertyValues: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -238,15 +244,14 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**|  | 
- **propertyName** | **string**|  | 
 
 ### Return type
 
-[**StringModel**](StringModel.md)
+[**List&lt;StringModel&gt;**](StringModel.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -263,86 +268,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getuserbasicproperties"></a>
-# **GetUserBasicProperties**
-> void GetUserBasicProperties ()
+<a name="ismemberofgroup"></a>
+# **IsMemberOfGroup**
+> bool IsMemberOfGroup (string userprincipalname, string groupid)
 
-get my basic properties, City, Country, Office, Department, JobTitle,State
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class GetUserBasicPropertiesExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new UsersApi(Configuration.Default);
-
-            try
-            {
-                // get my basic properties, City, Country, Office, Department, JobTitle,State
-                apiInstance.GetUserBasicProperties();
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UsersApi.GetUserBasicProperties: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getuserbasicpropertyvalue"></a>
-# **GetUserBasicPropertyValue**
-> void GetUserBasicPropertyValue (string name)
-
-get my basic property value, Department, Email, DisplayName, Manager
+Is Member Of Group
 
 ### Example
 ```csharp
@@ -354,193 +284,37 @@ using Cloud.Governance.Client.Model;
 
 namespace Example
 {
-    public class GetUserBasicPropertyValueExample
+    public class IsMemberOfGroupExample
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new UsersApi(Configuration.Default);
-            var name = name_example;  // string | 
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
 
-            try
-            {
-                // get my basic property value, Department, Email, DisplayName, Manager
-                apiInstance.GetUserBasicPropertyValue(name);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UsersApi.GetUserBasicPropertyValue: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
 
-### Parameters
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**|  | 
+            var apiInstance = new UsersApi(config);
 
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getuserphoto"></a>
-# **GetUserPhoto**
-> void GetUserPhoto (string username, string size = null)
-
-get user's photo
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class GetUserPhotoExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new UsersApi(Configuration.Default);
-            var username = username_example;  // string | 
-            var size = size_example;  // string |  (optional)  (default to "48x48")
+            var userprincipalname = userprincipalname_example;  // string | 
+            var groupid = groupid_example;  // string | 
 
             try
             {
-                // get user's photo
-                apiInstance.GetUserPhoto(username, size);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UsersApi.GetUserPhoto: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **string**|  | 
- **size** | **string**|  | [optional] [default to &quot;48x48&quot;]
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getuserrelationship"></a>
-# **GetUserRelationship**
-> UserRelationShip GetUserRelationship (string username)
-
-get user relationship
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class GetUserRelationshipExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new UsersApi(Configuration.Default);
-            var username = username_example;  // string | 
-
-            try
-            {
-                // get user relationship
-                UserRelationShip result = apiInstance.GetUserRelationship(username);
+                // Is Member Of Group
+                bool result = apiInstance.IsMemberOfGroup(userprincipalname, groupid);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling UsersApi.GetUserRelationship: " + e.Message );
+                Debug.Print("Exception when calling UsersApi.IsMemberOfGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -553,101 +327,20 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **string**|  | 
+ **userprincipalname** | **string**|  | 
+ **groupid** | **string**|  | 
 
 ### Return type
 
-[**UserRelationShip**](UserRelationShip.md)
+**bool**
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getusersfromsharepoint"></a>
-# **GetUsersFromSharePoint**
-> ApiUser GetUsersFromSharePoint (string username = null, List<string> requestBody = null)
-
-get users from sharepoint
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class GetUsersFromSharePointExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new UsersApi(Configuration.Default);
-            var username = username_example;  // string |  (optional) 
-            var requestBody = new List<string>(); // List<string> |  (optional) 
-
-            try
-            {
-                // get users from sharepoint
-                ApiUser result = apiInstance.GetUsersFromSharePoint(username, requestBody);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UsersApi.GetUsersFromSharePoint: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **string**|  | [optional] 
- **requestBody** | [**List&lt;string&gt;**](string.md)|  | [optional] 
-
-### Return type
-
-[**ApiUser**](ApiUser.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
@@ -680,22 +373,25 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new UsersApi(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new UsersApi(config);
+
             var keyword = keyword_example;  // string | 
-            var userType = new UserType(); // UserType | All=0, User=1, Group=2, DistributionList=3, UserAndGroup=4
-            var userSource = new UserSource(); // UserSource | All=0, Local=1, Azure=2, SharePoint=3
-            var sharingOptions = new ExternalSharingOptions(); // ExternalSharingOptions | Disabled=0, VerifiedGuestUser=1, Anyone=2, ExistingGuestUser=3
+            var userType = ;  // UserType | All=0, User=1, Group=2, DistributionList=3, UserAndGroup=4, SecurityGroupOnly=100
+            var userSource = ;  // UserSource | All=0, Local=1, Azure=2, SharePoint=3, Yammer=4
+            var sharingOptions = ;  // ExternalSharingOptions | Disabled=0, VerifiedGuestUser=1, Anyone=2, ExistingGuestUser=3
             var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string |  (optional)  (default to "")
 
             try
@@ -720,9 +416,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyword** | **string**|  | 
- **userType** | [**UserType**](UserType.md)| All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4 | 
- **userSource** | [**UserSource**](UserSource.md)| All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3 | 
- **sharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)| Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3 | 
+ **userType** | **UserType**| All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100 | 
+ **userSource** | **UserSource**| All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4 | 
+ **sharingOptions** | **ExternalSharingOptions**| Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3 | 
  **siteUrlOrTenantId** | **string**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
@@ -731,95 +427,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="resolveuserswithexternalsharingoption"></a>
-# **ResolveUsersWithExternalSharingOption**
-> List&lt;SharingEnabledUser&gt; ResolveUsersWithExternalSharingOption (string keyword, string siteUrlOrTenantId, ExternalSharingOptions externalSharingOption, UserType userType, UserSource userSource)
-
-resolve user including external users
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class ResolveUsersWithExternalSharingOptionExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new UsersApi(Configuration.Default);
-            var keyword = keyword_example;  // string | 
-            var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string | 
-            var externalSharingOption = new ExternalSharingOptions(); // ExternalSharingOptions | 
-            var userType = new UserType(); // UserType | All=0, User=1, Group=2, DistributionList=3, UserAndGroup=4
-            var userSource = new UserSource(); // UserSource | All=0, Local=1, Azure=2, SharePoint=3
-
-            try
-            {
-                // resolve user including external users
-                List<SharingEnabledUser> result = apiInstance.ResolveUsersWithExternalSharingOption(keyword, siteUrlOrTenantId, externalSharingOption, userType, userSource);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UsersApi.ResolveUsersWithExternalSharingOption: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **keyword** | **string**|  | 
- **siteUrlOrTenantId** | **string**|  | 
- **externalSharingOption** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
- **userType** | [**UserType**](UserType.md)| All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4 | 
- **userSource** | [**UserSource**](UserSource.md)| All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3 | 
-
-### Return type
-
-[**List&lt;SharingEnabledUser&gt;**](SharingEnabledUser.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -856,22 +464,25 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new UsersApi(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new UsersApi(config);
+
             var keyword = keyword_example;  // string | 
-            var userType = new UserType(); // UserType | All=0, User=1, Group=2, DistributionList=3, UserAndGroup=4
-            var userSource = new UserSource(); // UserSource | All=0, Local=1, Azure=2, SharePoint=3
-            var sharingOptions = new ExternalSharingOptions(); // ExternalSharingOptions | Disabled=0, VerifiedGuestUser=1, Anyone=2, ExistingGuestUser=3
+            var userType = ;  // UserType | All=0, User=1, Group=2, DistributionList=3, UserAndGroup=4, SecurityGroupOnly=100
+            var userSource = ;  // UserSource | All=0, Local=1, Azure=2, SharePoint=3, Yammer=4
+            var sharingOptions = ;  // ExternalSharingOptions | Disabled=0, VerifiedGuestUser=1, Anyone=2, ExistingGuestUser=3
             var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string |  (optional)  (default to "")
 
             try
@@ -896,9 +507,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyword** | **string**|  | 
- **userType** | [**UserType**](UserType.md)| All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4 | 
- **userSource** | [**UserSource**](UserSource.md)| All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3 | 
- **sharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)| Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3 | 
+ **userType** | **UserType**| All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100 | 
+ **userSource** | **UserSource**| All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4 | 
+ **sharingOptions** | **ExternalSharingOptions**| Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3 | 
  **siteUrlOrTenantId** | **string**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
@@ -907,95 +518,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="searchuserswithexternalsharingoption"></a>
-# **SearchUsersWithExternalSharingOption**
-> List&lt;SharingEnabledUser&gt; SearchUsersWithExternalSharingOption (string keyword, string siteUrlOrTenantId, ExternalSharingOptions externalSharingOption, UserType userType, UserSource userSource)
-
-search user including external users
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class SearchUsersWithExternalSharingOptionExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new UsersApi(Configuration.Default);
-            var keyword = keyword_example;  // string | 
-            var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string | 
-            var externalSharingOption = new ExternalSharingOptions(); // ExternalSharingOptions | 
-            var userType = new UserType(); // UserType | All=0, User=1, Group=2, DistributionList=3, UserAndGroup=4
-            var userSource = new UserSource(); // UserSource | All=0, Local=1, Azure=2, SharePoint=3
-
-            try
-            {
-                // search user including external users
-                List<SharingEnabledUser> result = apiInstance.SearchUsersWithExternalSharingOption(keyword, siteUrlOrTenantId, externalSharingOption, userType, userSource);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling UsersApi.SearchUsersWithExternalSharingOption: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **keyword** | **string**|  | 
- **siteUrlOrTenantId** | **string**|  | 
- **externalSharingOption** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
- **userType** | [**UserType**](UserType.md)| All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4 | 
- **userSource** | [**UserSource**](UserSource.md)| All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3 | 
-
-### Return type
-
-[**List&lt;SharingEnabledUser&gt;**](SharingEnabledUser.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -1032,18 +555,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new UsersApi(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new UsersApi(config);
+
             var updatableApiUser = new UpdatableApiUser(); // UpdatableApiUser |  (optional) 
 
             try
@@ -1073,7 +599,7 @@ void (empty response body)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 

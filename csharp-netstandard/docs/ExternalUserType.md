@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ExternalUserType
-None=0, Authentication=1, NoAuthentication=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

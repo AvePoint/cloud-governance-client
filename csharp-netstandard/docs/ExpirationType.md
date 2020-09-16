@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ExpirationType
-Duration=0, Date=1
 ## Properties
 
 Name | Type | Description | Notes

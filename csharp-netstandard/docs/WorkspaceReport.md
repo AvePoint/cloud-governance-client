@@ -1,0 +1,46 @@
+# Cloud.Governance.Client.Model.WorkspaceReport
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | **string** |  | [optional] 
+**Name** | **string** |  | [optional] 
+**Description** | **string** |  | [optional] 
+**Status** | **string** |  | [optional] 
+**Type** | **string** |  | [optional] 
+**Url** | **string** |  | [optional] 
+**Email** | **string** |  | [optional] 
+**PolicyName** | **string** |  | [optional] 
+**PrimaryContact** | **string** |  | [optional] 
+**PrimaryContactEmail** | **string** |  | [optional] 
+**PrimaryContactDisplayName** | **string** |  | [optional] 
+**SecondaryContact** | **string** |  | [optional] 
+**SecondaryContactEmail** | **string** |  | [optional] 
+**SecondaryContactDisplayName** | **string** |  | [optional] 
+**PrimaryAdministrators** | **string** |  | [optional] 
+**PrimaryAdministratorDisplayNames** | **string** |  | [optional] 
+**AdditionalAdministrators** | **string** |  | [optional] 
+**AdditionalAdministratorDisplayNames** | **string** |  | [optional] 
+**Phase** | **string** |  | [optional] 
+**PhaseAssigneeDisplayNames** | **string** |  | [optional] 
+**PhaseAssignees** | **string** |  | [optional] 
+**PhaseProfileName** | **string** |  | [optional] 
+**PhaseStartTime** | **DateTime?** |  | [optional] 
+**RenewalDueDate** | **DateTime?** |  | [optional] 
+**NextRenewalDate** | **DateTime?** |  | [optional] 
+**Privacy** | **string** |  | [optional] 
+**AssociateHubTitle** | **string** |  | [optional] 
+**GeoLocation** | **string** |  | [optional] 
+**StorageLimit** | **long?** |  | [optional] 
+**StorageUsed** | **double?** |  | [optional] 
+**SiteSharing** | **string** |  | [optional] 
+**GroupSharing** | **string** |  | [optional] 
+**Classification** | **string** |  | [optional] 
+**ClaimStatus** | **string** |  | [optional] 
+**CreatedTime** | **DateTime** |  | [optional] 
+**LeaseExpirationTime** | **DateTime?** |  | [optional] 
+**InactivityThresholdTime** | **DateTime?** |  | [optional] 
+**Metadata** | **Dictionary&lt;string, string&gt;** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

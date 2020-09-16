@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **Parent** | [**TreeNode**](TreeNode.md) |  | [optional] 
 **Type** | **TreeNodeType** |  | [optional] 
 **SpObjectID** | **Guid** |  | [optional] 
+**NetworkId** | **string** |  | [optional] 
 **ParentSPObjectID** | **Guid** |  | [optional] 
 **Id** | **Guid** |  | [optional] 
 **LoadManagedPath** | **bool** |  | [optional] 

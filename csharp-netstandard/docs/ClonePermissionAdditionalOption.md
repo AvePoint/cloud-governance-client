@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ClonePermissionAdditionalOption
-AddUserToTheSameGroup=0, GranPermissionDirectly=1
 ## Properties
 
 Name | Type | Description | Notes

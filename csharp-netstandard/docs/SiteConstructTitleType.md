@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.SiteConstructTitleType
-Text=0, Metadata=1
 ## Properties
 
 Name | Type | Description | Notes

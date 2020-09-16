@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.GroupEnableSharingStatus
-None=0, Allowed=1, NotAllowed=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

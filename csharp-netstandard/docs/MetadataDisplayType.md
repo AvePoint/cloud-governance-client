@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.MetadataDisplayType
-DoNotDisplayInReport=1, DisplayInPublicSCDirectoryReport=2, DisplayInAdministrationReport=3, </br>
 ## Properties
 
 Name | Type | Description | Notes

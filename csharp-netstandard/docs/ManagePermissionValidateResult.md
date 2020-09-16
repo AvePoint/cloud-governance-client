@@ -7,8 +7,10 @@ Name | Type | Description | Notes
 **ExternalSharingOptions** | **ExternalSharingOptions** |  | [optional] 
 **EnableShareAnonymousLink** | **bool** |  | [optional] 
 **Object** | [**ManagePermissionSPObject**](ManagePermissionSPObject.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] [readonly] 
+**UserMetadata** | [**Dictionary&lt;string, UserInfo&gt;**](UserInfo.md) |  | [optional] 
+**IsValid** | **bool** |  | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
+**MessageCode** | **MessageCode** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

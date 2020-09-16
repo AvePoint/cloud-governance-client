@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TenantId** | **Guid** |  | [optional] 
 **Action** | **GroupLifecycleActionType** |  | [optional] 
+**GroupObjectType** | **GroupObjectType** |  | [optional] 
+**NetworkId** | **string** |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 

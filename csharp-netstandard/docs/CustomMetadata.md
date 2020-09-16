@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **ChoiceMetadataSettings** | [**ChoiceMetadataSettings**](ChoiceMetadataSettings.md) |  | [optional] 
 **LinkMetadataSettings** | [**LinkMetadataSettings**](LinkMetadataSettings.md) |  | [optional] 
 **SingleLineOrMultipleLineMetadataSettings** | [**SingleLineOrMultipleLineMetadataSettings**](SingleLineOrMultipleLineMetadataSettings.md) |  | [optional] 
+**SharePointListMetadataSettings** | [**SharePointListMetadataSettings**](SharePointListMetadataSettings.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

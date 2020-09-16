@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ExternalUserSharingType
-RequireSignIn=0, AnonymousLink=1
 ## Properties
 
 Name | Type | Description | Notes

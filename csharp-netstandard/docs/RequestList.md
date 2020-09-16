@@ -7,18 +7,18 @@ Name | Type | Description | Notes
 **ServiceId** | **Guid** |  | [optional] 
 **ServiceName** | **string** |  | [optional] 
 **ServiceType** | **ServiceType** |  | [optional] 
-**ServiceTypeDescription** | **string** |  | [optional] [readonly] 
+**ServiceTypeDescription** | **string** |  | [optional] 
 **TicketNumber** | **int** |  | [optional] 
 **Summary** | **string** |  | [optional] 
 **Status** | **RequestProgressStatus** |  | [optional] 
 **ProcessStatus** | **ApiRequestProgressStatus** |  | [optional] 
-**StatusDescription** | **string** |  | [optional] [readonly] 
+**StatusDescription** | **string** |  | [optional] 
 **Modified** | **DateTime** |  | [optional] 
 **SubmitStatus** | **int** |  | [optional] 
 **Assigned** | **string** |  | [optional] 
 **ServiceAdmin** | **string** |  | [optional] 
 **EnabledCopy** | **bool** |  | [optional] 
-**QuestionnaireId** | **Guid** |  | [optional] [readonly] 
+**QuestionnaireId** | **Guid** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

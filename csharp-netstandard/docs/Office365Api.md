@@ -4,35 +4,26 @@ All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetGroupInfo**](Office365Api.md#getgroupinfo) | **GET** /office365/groups/{tenantid}/{id} | get group information
+[**CreateSecurityGroup**](Office365Api.md#createsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
 [**GetGroupMembers**](Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/members | get group members by group email
-[**GetGroupMembersByGroupName**](Office365Api.md#getgroupmembersbygroupname) | **GET** /office365/groups/members | get group members by group name
 [**GetGroupOwners**](Office365Api.md#getgroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
-[**GetHubSites**](Office365Api.md#gethubsites) | **GET** /office365/hubsites/{tenantid} | get all hubsites from a specific tenant
 [**GetHubSitesFromTenantOfSite**](Office365Api.md#gethubsitesfromtenantofsite) | **GET** /office365/hubsites | get all hubsites from site&#39;s tenant
 [**GetOwnedTeams**](Office365Api.md#getownedteams) | **GET** /office365/teams/my | get all teams that owner is curernt user
 [**GetPermissions**](Office365Api.md#getpermissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
 [**GetRoleAssignment**](Office365Api.md#getroleassignment) | **GET** /office365/roleassignment | get site permimssion role assignment
 [**GetSiteDesigns**](Office365Api.md#getsitedesigns) | **GET** /office365/sitedesigns | get site designs by site url
-[**GetSiteInfo**](Office365Api.md#getsiteinfo) | **GET** /office365/sites | get site collection information with url
 [**GetSitePermissionLevels**](Office365Api.md#getsitepermissionlevels) | **GET** /office365/sites/permissionlevels | get site permission levels
 [**GetSiteSharePointGroups**](Office365Api.md#getsitesharepointgroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
+[**GetSiteStatus**](Office365Api.md#getsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 [**GetSiteTemplates**](Office365Api.md#getsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
-[**GetYammerGroup**](Office365Api.md#getyammergroup) | **GET** /office365/yammergroup/{networkid}/{name} | get yammer group
-[**LoadContainers**](Office365Api.md#loadcontainers) | **GET** /office365/containers/{serviceid} | load the containers from cloud management
-[**LoadFolders**](Office365Api.md#loadfolders) | **GET** /office365/folders/{listid} | load sharepoint folders
-[**LoadItems**](Office365Api.md#loaditems) | **GET** /office365/items/{listid} | load sharepoint items
-[**LoadLists**](Office365Api.md#loadlists) | **GET** /office365/lists | load sharepoint lists
-[**LoadManagedMetadata**](Office365Api.md#loadmanagedmetadata) | **GET** /office365/managedmetadata/{termStoreid}/{groupid}/{termsetid}/{parentid} | load managed metadata terms
-[**LoadManagedSites**](Office365Api.md#loadmanagedsites) | **GET** /office365/managedsites/{serviceid}/{containerid}/{isselected} | load sharepoint sites
-[**LoadWebs**](Office365Api.md#loadwebs) | **GET** /office365/webs/{serviceid}/{siteorwebid}/{isselected}/{issite} | load sharepoint webs
+[**RemoveSecurityGroup**](Office365Api.md#removesecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 
 
-<a name="getgroupinfo"></a>
-# **GetGroupInfo**
-> AzureADGroup GetGroupInfo (string tenantid, string id)
+<a name="createsecuritygroup"></a>
+# **CreateSecurityGroup**
+> void CreateSecurityGroup (GroupSettingModel groupSettingModel = null)
 
-get group information
+Create mail-enabled security group
 
 ### Example
 ```csharp
@@ -44,34 +35,35 @@ using Cloud.Governance.Client.Model;
 
 namespace Example
 {
-    public class GetGroupInfoExample
+    public class CreateSecurityGroupExample
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
-            var tenantid = tenantid_example;  // string | 
-            var id = id_example;  // string | 
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
+            var groupSettingModel = new GroupSettingModel(); // GroupSettingModel |  (optional) 
 
             try
             {
-                // get group information
-                AzureADGroup result = apiInstance.GetGroupInfo(tenantid, id);
-                Debug.WriteLine(result);
+                // Create mail-enabled security group
+                apiInstance.CreateSecurityGroup(groupSettingModel);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Office365Api.GetGroupInfo: " + e.Message );
+                Debug.Print("Exception when calling Office365Api.CreateSecurityGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -84,21 +76,20 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantid** | **string**|  | 
- **id** | **string**|  | 
+ **groupSettingModel** | [**GroupSettingModel**](GroupSettingModel.md)|  | [optional] 
 
 ### Return type
 
-[**AzureADGroup**](AzureADGroup.md)
+void (empty response body)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -130,18 +121,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var email = email_example;  // string | 
             var top = 56;  // int? |  (optional) 
             var skip = 56;  // int? |  (optional) 
@@ -179,95 +173,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getgroupmembersbygroupname"></a>
-# **GetGroupMembersByGroupName**
-> ApiUserPageResult GetGroupMembersByGroupName (string url, string name = null, int? top = null, int? skip = null, string search = null)
-
-get group members by group name
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class GetGroupMembersByGroupNameExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var url = url_example;  // string | 
-            var name = name_example;  // string |  (optional) 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // get group members by group name
-                ApiUserPageResult result = apiInstance.GetGroupMembersByGroupName(url, name, top, skip, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.GetGroupMembersByGroupName: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **url** | **string**|  | 
- **name** | **string**|  | [optional] 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**ApiUserPageResult**](ApiUserPageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -304,18 +210,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var email = email_example;  // string | 
             var top = 56;  // int? |  (optional) 
             var skip = 56;  // int? |  (optional) 
@@ -353,87 +262,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="gethubsites"></a>
-# **GetHubSites**
-> List&lt;GuidModel&gt; GetHubSites (Guid tenantid)
-
-get all hubsites from a specific tenant
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class GetHubSitesExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var tenantid = new Guid(); // Guid | 
-
-            try
-            {
-                // get all hubsites from a specific tenant
-                List<GuidModel> result = apiInstance.GetHubSites(tenantid);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.GetHubSites: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tenantid** | [**Guid**](Guid.md)|  | 
-
-### Return type
-
-[**List&lt;GuidModel&gt;**](GuidModel.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -470,18 +299,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var siteUrl = siteUrl_example;  // string | any site url in your tenant (optional) 
 
             try
@@ -513,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -550,18 +382,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
 
             try
             {
@@ -589,7 +424,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -626,18 +461,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var webUrl = webUrl_example;  // string | 
 
             try
@@ -669,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -706,20 +544,23 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var url = url_example;  // string | 
-            var type = new NodeType(); // NodeType | 
+            var type = ;  // NodeType | 
 
             try
             {
@@ -743,7 +584,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **url** | **string**|  | 
- **type** | [**NodeType**](NodeType.md)|  | 
+ **type** | **NodeType**|  | 
 
 ### Return type
 
@@ -751,7 +592,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -788,18 +629,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var siteUrl = siteUrl_example;  // string |  (optional) 
 
             try
@@ -831,87 +675,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getsiteinfo"></a>
-# **GetSiteInfo**
-> SiteInfo GetSiteInfo (string fullUrl)
-
-get site collection information with url
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class GetSiteInfoExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var fullUrl = fullUrl_example;  // string | 
-
-            try
-            {
-                // get site collection information with url
-                SiteInfo result = apiInstance.GetSiteInfo(fullUrl);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.GetSiteInfo: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fullUrl** | **string**|  | 
-
-### Return type
-
-[**SiteInfo**](SiteInfo.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -948,18 +712,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var uri = uri_example;  // string | 
 
             try
@@ -991,7 +758,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -1028,18 +795,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var uri = uri_example;  // string | 
 
             try
@@ -1071,7 +841,90 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsitestatus"></a>
+# **GetSiteStatus**
+> ApiSiteStatus GetSiteStatus (string fullUrl)
+
+check site collection status by full url
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetSiteStatusExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
+            var fullUrl = fullUrl_example;  // string | 
+
+            try
+            {
+                // check site collection status by full url
+                ApiSiteStatus result = apiInstance.GetSiteStatus(fullUrl);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Office365Api.GetSiteStatus: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fullUrl** | **string**|  | 
+
+### Return type
+
+[**ApiSiteStatus**](ApiSiteStatus.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -1108,18 +961,21 @@ namespace Example
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
             var languageid = 56;  // int | 
             var url = url_example;  // string |  (optional) 
 
@@ -1153,7 +1009,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
@@ -1170,11 +1026,11 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getyammergroup"></a>
-# **GetYammerGroup**
-> YammerGroup GetYammerGroup (string networkid, string name)
+<a name="removesecuritygroup"></a>
+# **RemoveSecurityGroup**
+> void RemoveSecurityGroup (string name)
 
-get yammer group
+Remove mail-enabled security group by group name
 
 ### Example
 ```csharp
@@ -1186,34 +1042,35 @@ using Cloud.Governance.Client.Model;
 
 namespace Example
 {
-    public class GetYammerGroupExample
+    public class RemoveSecurityGroupExample
     {
         public static void Main()
         {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
+            Configuration config = new Configuration();
 
-            var apiInstance = new Office365Api(Configuration.Default);
-            var networkid = networkid_example;  // string | 
-            var name = name_example;  // string | 
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
+            var name = name_example;  // string | group email address
 
             try
             {
-                // get yammer group
-                YammerGroup result = apiInstance.GetYammerGroup(networkid, name);
-                Debug.WriteLine(result);
+                // Remove mail-enabled security group by group name
+                apiInstance.RemoveSecurityGroup(name);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling Office365Api.GetYammerGroup: " + e.Message );
+                Debug.Print("Exception when calling Office365Api.RemoveSecurityGroup: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1226,647 +1083,20 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **networkid** | **string**|  | 
- **name** | **string**|  | 
+ **name** | **string**| group email address | 
 
 ### Return type
 
-[**YammerGroup**](YammerGroup.md)
+void (empty response body)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="loadcontainers"></a>
-# **LoadContainers**
-> SPNodePageResult LoadContainers (string serviceid, int? top = null, int? skip = null, string search = null)
-
-load the containers from cloud management
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class LoadContainersExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var serviceid = serviceid_example;  // string | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // load the containers from cloud management
-                SPNodePageResult result = apiInstance.LoadContainers(serviceid, top, skip, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.LoadContainers: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **serviceid** | **string**| If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="loadfolders"></a>
-# **LoadFolders**
-> SPNodePageResult LoadFolders (Guid listid, string folderorlisturl, int? top = null, int? skip = null, string search = null)
-
-load sharepoint folders
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class LoadFoldersExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var listid = new Guid(); // Guid | 
-            var folderorlisturl = folderorlisturl_example;  // string | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // load sharepoint folders
-                SPNodePageResult result = apiInstance.LoadFolders(listid, folderorlisturl, top, skip, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.LoadFolders: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **listid** | [**Guid**](Guid.md)|  | 
- **folderorlisturl** | **string**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="loaditems"></a>
-# **LoadItems**
-> SPNodePageResult LoadItems (Guid listid, string folderorlisturl, int? top = null, int? skip = null, string search = null)
-
-load sharepoint items
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class LoadItemsExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var listid = new Guid(); // Guid | 
-            var folderorlisturl = folderorlisturl_example;  // string | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // load sharepoint items
-                SPNodePageResult result = apiInstance.LoadItems(listid, folderorlisturl, top, skip, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.LoadItems: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **listid** | [**Guid**](Guid.md)|  | 
- **folderorlisturl** | **string**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="loadlists"></a>
-# **LoadLists**
-> SPNodePageResult LoadLists (string siteorweburl, int? top = null, int? skip = null, string search = null)
-
-load sharepoint lists
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class LoadListsExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var siteorweburl = siteorweburl_example;  // string | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // load sharepoint lists
-                SPNodePageResult result = apiInstance.LoadLists(siteorweburl, top, skip, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.LoadLists: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **siteorweburl** | **string**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="loadmanagedmetadata"></a>
-# **LoadManagedMetadata**
-> ApiTermInfoPageResult LoadManagedMetadata (Guid termStoreid, Guid groupid, Guid termsetid, Guid parentid, string admincenterurl, int? skip = null, int? top = null, string search = null)
-
-load managed metadata terms
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class LoadManagedMetadataExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var termStoreid = new Guid(); // Guid | 
-            var groupid = new Guid(); // Guid | 
-            var termsetid = new Guid(); // Guid | 
-            var parentid = new Guid(); // Guid | 
-            var admincenterurl = admincenterurl_example;  // string | 
-            var skip = 56;  // int? |  (optional) 
-            var top = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // load managed metadata terms
-                ApiTermInfoPageResult result = apiInstance.LoadManagedMetadata(termStoreid, groupid, termsetid, parentid, admincenterurl, skip, top, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.LoadManagedMetadata: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **termStoreid** | [**Guid**](Guid.md)|  | 
- **groupid** | [**Guid**](Guid.md)|  | 
- **termsetid** | [**Guid**](Guid.md)|  | 
- **parentid** | [**Guid**](Guid.md)|  | 
- **admincenterurl** | **string**|  | 
- **skip** | **int?**|  | [optional] 
- **top** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**ApiTermInfoPageResult**](ApiTermInfoPageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="loadmanagedsites"></a>
-# **LoadManagedSites**
-> SPNodePageResult LoadManagedSites (string serviceid, Guid containerid, bool isselected, int? top = null, int? skip = null, string search = null)
-
-load sharepoint sites
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class LoadManagedSitesExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var serviceid = serviceid_example;  // string | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree
-            var containerid = new Guid(); // Guid | 
-            var isselected = true;  // bool | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // load sharepoint sites
-                SPNodePageResult result = apiInstance.LoadManagedSites(serviceid, containerid, isselected, top, skip, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.LoadManagedSites: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **serviceid** | **string**| If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree | 
- **containerid** | [**Guid**](Guid.md)|  | 
- **isselected** | **bool**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad request |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | Internal server error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="loadwebs"></a>
-# **LoadWebs**
-> SPNodePageResult LoadWebs (string serviceid, Guid siteorwebid, bool isselected, bool issite, string siteOrWebUrl, int? top = null, int? skip = null, string search = null)
-
-load sharepoint webs
-
-### Example
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using Cloud.Governance.Client.Api;
-using Cloud.Governance.Client.Client;
-using Cloud.Governance.Client.Model;
-
-namespace Example
-{
-    public class LoadWebsExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "Cloud_Governance_Modern_API_Endpoint";
-            // Configure API key authorization: ClientId
-            Configuration.Default.AddApiKey("clientId", "Your Client Id");
-            
-            // Configure API key authorization: ClientSecret
-            Configuration.Default.AddApiKey("clientSecret", "Your Client Secret");
-            
-            // Configure API key authorization: UserPrincipalName
-            Configuration.Default.AddApiKey("userPrincipalName", "someone@example.com");
-            
-
-            var apiInstance = new Office365Api(Configuration.Default);
-            var serviceid = serviceid_example;  // string | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree
-            var siteorwebid = new Guid(); // Guid | 
-            var isselected = true;  // bool | 
-            var issite = true;  // bool | 
-            var siteOrWebUrl = siteOrWebUrl_example;  // string | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
-            var search = search_example;  // string |  (optional) 
-
-            try
-            {
-                // load sharepoint webs
-                SPNodePageResult result = apiInstance.LoadWebs(serviceid, siteorwebid, isselected, issite, siteOrWebUrl, top, skip, search);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException  e)
-            {
-                Debug.Print("Exception when calling Office365Api.LoadWebs: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **serviceid** | **string**| If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree | 
- **siteorwebid** | [**Guid**](Guid.md)|  | 
- **isselected** | **bool**|  | 
- **issite** | **bool**|  | 
- **siteOrWebUrl** | **string**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
- **search** | **string**|  | [optional] 
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |

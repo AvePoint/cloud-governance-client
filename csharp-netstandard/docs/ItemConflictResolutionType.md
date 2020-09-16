@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ItemConflictResolutionType
-DoNotMigrateTheItems=0, OverwriteIdenticalItemsInDestination=1, Append=2, </br>IgnoreDifferenceAndMoveItems=3
 ## Properties
 
 Name | Type | Description | Notes

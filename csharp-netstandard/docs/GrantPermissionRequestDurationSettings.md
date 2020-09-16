@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **IsGrantTemporaryPermission** | **bool** |  | [optional] 
 **ExpirationType** | **ExpirationType** |  | [optional] 
 **DurationInterval** | **int?** |  | [optional] 
-**DurationDateType** | **DurationDateTypeNullable** |  | [optional] 
+**DurationDateType** | **DurationDateType** |  | [optional] 
 **StartTime** | **DateTime?** |  | [optional] 
 **EndTime** | **DateTime?** |  | [optional] 
 

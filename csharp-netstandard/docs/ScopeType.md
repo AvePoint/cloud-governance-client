@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ScopeType
-ManuallyInput=0, SelectFromTree=1
 ## Properties
 
 Name | Type | Description | Notes

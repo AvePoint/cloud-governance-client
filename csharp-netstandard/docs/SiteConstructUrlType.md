@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.SiteConstructUrlType
-ManualInputUrl=0, AutoGenerateUrl=1
 ## Properties
 
 Name | Type | Description | Notes

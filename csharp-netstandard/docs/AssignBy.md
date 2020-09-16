@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.AssignBy
-BusinessUser=0, BusinessUserWithRequired=1, ITAdminWithReadOnly=2, </br>ITAdminWithHide=3
 ## Properties
 
 Name | Type | Description | Notes

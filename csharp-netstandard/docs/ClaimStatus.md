@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ClaimStatus
-Unclaimed=0, Claiming=1, Claimed=2, </br>Failed=3
 ## Properties
 
 Name | Type | Description | Notes

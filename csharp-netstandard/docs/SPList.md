@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Title** | **string** |  | [optional] 
 **Url** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
-**IsLibrary** | **bool** |  | [optional] [readonly] 
+**IsLibrary** | **bool** |  | [optional] 
 **IsOnQuickLaunch** | **bool** |  | [optional] 
 **IsEnableModeration** | **bool** |  | [optional] 
 **IsEnableVersioning** | **bool** |  | [optional] 

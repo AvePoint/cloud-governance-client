@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **ExternalUserType** | **ExternalUserType** |  | [optional] 
 **Members** | [**List&lt;SharingEnabledUser&gt;**](SharingEnabledUser.md) |  | [optional] 
 **GrantPermissionSetting** | [**GrantPermissionModel**](GrantPermissionModel.md) |  | [optional] 
+**OriginalName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

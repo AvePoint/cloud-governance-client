@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.StartDateType
-None=0, CurrentDate=1, SpecifiedDate=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ConvertHubSiteActionType
-ConvertToHubSite=0, AssociateOneHubSite=1
 ## Properties
 
 Name | Type | Description | Notes

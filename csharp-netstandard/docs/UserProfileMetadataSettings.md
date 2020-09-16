@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdminCenter** | **string** |  | [optional] 
+**ValueType** | **string** |  | [optional] 
 **EnableValueSync** | **bool** |  | [optional] 
 **EnableRoleValueSync** | **bool** |  | [optional] 
 **Value** | [**LookupValue**](LookupValue.md) |  | [optional] 

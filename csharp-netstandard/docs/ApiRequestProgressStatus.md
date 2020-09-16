@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ApiRequestProgressStatus
-None=0, RequestSubmitted=1, WaitingForApproval=2, </br>WaitingForSubmission=3, Cancelled=4, Rejected=5, </br>Completed=6, CompletedWithException=7, EncounterError=8, </br>InProgress=9
 ## Properties
 
 Name | Type | Description | Notes

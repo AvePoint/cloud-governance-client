@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.ApiDurationType
-Day=0, Week=1, Month=2, </br>Year=3
 ## Properties
 
 Name | Type | Description | Notes

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Contact** | **string** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **Type** | **ServiceType** |  | [optional] 
-**TypeDescription** | **string** |  | [optional] [readonly] 
+**TypeDescription** | **string** |  | [optional] 
 **IsQuestionnaire** | **bool** |  | [optional] 
 **QuestionnaireId** | **Guid?** |  | [optional] 
 

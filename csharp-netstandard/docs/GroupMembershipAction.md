@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.GroupMembershipAction
-None=0, Added=1, Deleted=2, </br>
 ## Properties
 
 Name | Type | Description | Notes

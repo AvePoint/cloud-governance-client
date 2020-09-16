@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.AutoGenerateUrlType
-SequentialNumber=0, RandomString=1
 ## Properties
 
 Name | Type | Description | Notes

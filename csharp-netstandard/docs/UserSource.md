@@ -1,5 +1,4 @@
 # Cloud.Governance.Client.Model.UserSource
-All=0, Local=1, Azure=2, </br>SharePoint=3
 ## Properties
 
 Name | Type | Description | Notes
