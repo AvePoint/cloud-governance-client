@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -168,6 +169,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="classificationAssignBy">classificationAssignBy.</param>
         /// <param name="sensitivityAssignBy">sensitivityAssignBy.</param>
         /// <param name="hubSiteAssignBy">hubSiteAssignBy.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -187,7 +189,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateSiteService(ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), string adminCenterUrl = default(string), List<IntModel> siteLanguages = default(List<IntModel>), List<RootSiteWithManagedPaths> rootSiteAndManagedPaths = default(List<RootSiteWithManagedPaths>), SiteUrlSetting siteUrlSetting = default(SiteUrlSetting), MultiGeoSerivceSetting multiGeoSetting = default(MultiGeoSerivceSetting), SiteTitleSetting siteTitleSetting = default(SiteTitleSetting), List<PolicyRef> policies = default(List<PolicyRef>), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), List<PolicyWithTemplates> policyIdsAndTemplates = default(List<PolicyWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), SiteLeasePeriodServiceSettings leasePeriodSettings = default(SiteLeasePeriodServiceSettings), List<IntModel> timeZones = default(List<IntModel>), List<StringModel> siteDesigns = default(List<StringModel>), GuidModel siteDesign = default(GuidModel), string defaultTeamSiteDesignId = default(string), AssignBy? siteDesignAssignBy = default(AssignBy?), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool enabledCustomTemplate = default(bool), string customSiteTemplateListURL = default(string), ApiUser defaultPrimaryAdmin = default(ApiUser), List<ApiUser> defaultAdditionalAdmins = default(List<ApiUser>), ApiUser defaultPrimaryAdminReal = default(ApiUser), List<ApiUser> defaultAdditionalAdminsReal = default(List<ApiUser>), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), int defaultSiteLanguage = default(int), string defaultRootSite = default(string), string defaultManagedPath = default(string), Guid defaultPolicy = default(Guid), string defaultTemplate = default(string), int defaultTimeZone = default(int), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultDesignType = default(string), AssignBy? siteLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), AssignBy? rootSiteAndManagedPathAssignBy = default(AssignBy?), AssignBy? timeZoneAssignBy = default(AssignBy?), AssignBy? primaryAdminAssignBy = default(AssignBy?), AssignBy? additionalAdminAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? designTypeAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public CreateSiteService(ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), string adminCenterUrl = default(string), List<IntModel> siteLanguages = default(List<IntModel>), List<RootSiteWithManagedPaths> rootSiteAndManagedPaths = default(List<RootSiteWithManagedPaths>), SiteUrlSetting siteUrlSetting = default(SiteUrlSetting), MultiGeoSerivceSetting multiGeoSetting = default(MultiGeoSerivceSetting), SiteTitleSetting siteTitleSetting = default(SiteTitleSetting), List<PolicyRef> policies = default(List<PolicyRef>), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), List<PolicyWithTemplates> policyIdsAndTemplates = default(List<PolicyWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), SiteLeasePeriodServiceSettings leasePeriodSettings = default(SiteLeasePeriodServiceSettings), List<IntModel> timeZones = default(List<IntModel>), List<StringModel> siteDesigns = default(List<StringModel>), GuidModel siteDesign = default(GuidModel), string defaultTeamSiteDesignId = default(string), AssignBy? siteDesignAssignBy = default(AssignBy?), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool enabledCustomTemplate = default(bool), string customSiteTemplateListURL = default(string), ApiUser defaultPrimaryAdmin = default(ApiUser), List<ApiUser> defaultAdditionalAdmins = default(List<ApiUser>), ApiUser defaultPrimaryAdminReal = default(ApiUser), List<ApiUser> defaultAdditionalAdminsReal = default(List<ApiUser>), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), int defaultSiteLanguage = default(int), string defaultRootSite = default(string), string defaultManagedPath = default(string), Guid defaultPolicy = default(Guid), string defaultTemplate = default(string), int defaultTimeZone = default(int), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultDesignType = default(string), AssignBy? siteLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), AssignBy? rootSiteAndManagedPathAssignBy = default(AssignBy?), AssignBy? timeZoneAssignBy = default(AssignBy?), AssignBy? primaryAdminAssignBy = default(AssignBy?), AssignBy? additionalAdminAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? designTypeAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), CreateSiteRequest requestTemplate = default(CreateSiteRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.ScopeSettings = scopeSettings;
             this.AdminCenterUrl = adminCenterUrl;
@@ -242,6 +245,7 @@ namespace Cloud.Governance.Client.Model
             this.ClassificationAssignBy = classificationAssignBy;
             this.SensitivityAssignBy = sensitivityAssignBy;
             this.HubSiteAssignBy = hubSiteAssignBy;
+            this.RequestTemplate = requestTemplate;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -261,12 +265,13 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
         /// Gets or Sets ScopeSettings
         /// </summary>
-        [DataMember(Name = "scopeSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "scopeSettings", EmitDefaultValue = true)]
         public ServiceScopeSettings ScopeSettings { get; set; }
 
         /// <summary>
@@ -290,19 +295,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets SiteUrlSetting
         /// </summary>
-        [DataMember(Name = "siteUrlSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "siteUrlSetting", EmitDefaultValue = true)]
         public SiteUrlSetting SiteUrlSetting { get; set; }
 
         /// <summary>
         /// Gets or Sets MultiGeoSetting
         /// </summary>
-        [DataMember(Name = "multiGeoSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "multiGeoSetting", EmitDefaultValue = true)]
         public MultiGeoSerivceSetting MultiGeoSetting { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteTitleSetting
         /// </summary>
-        [DataMember(Name = "siteTitleSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "siteTitleSetting", EmitDefaultValue = true)]
         public SiteTitleSetting SiteTitleSetting { get; set; }
 
         /// <summary>
@@ -314,7 +319,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets DeploymentManagerPlanSettings
         /// </summary>
-        [DataMember(Name = "deploymentManagerPlanSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "deploymentManagerPlanSettings", EmitDefaultValue = true)]
         public DeploymentManagerPlanSettings DeploymentManagerPlanSettings { get; set; }
 
         /// <summary>
@@ -332,13 +337,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PermissionSettings
         /// </summary>
-        [DataMember(Name = "permissionSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "permissionSettings", EmitDefaultValue = true)]
         public PermissionSettings PermissionSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets LeasePeriodSettings
         /// </summary>
-        [DataMember(Name = "leasePeriodSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "leasePeriodSettings", EmitDefaultValue = true)]
         public SiteLeasePeriodServiceSettings LeasePeriodSettings { get; set; }
 
         /// <summary>
@@ -356,7 +361,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets SiteDesign
         /// </summary>
-        [DataMember(Name = "siteDesign", EmitDefaultValue = false)]
+        [DataMember(Name = "siteDesign", EmitDefaultValue = true)]
         public GuidModel SiteDesign { get; set; }
 
         /// <summary>
@@ -368,7 +373,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets YammerGroupSettings
         /// </summary>
-        [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = true)]
         public YammerGroupServiceSettings YammerGroupSettings { get; set; }
 
         /// <summary>
@@ -386,7 +391,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets HubSiteSettings
         /// </summary>
-        [DataMember(Name = "hubSiteSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "hubSiteSettings", EmitDefaultValue = true)]
         public HubSiteSettings HubSiteSettings { get; set; }
 
         /// <summary>
@@ -404,7 +409,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets DefaultPrimaryAdmin
         /// </summary>
-        [DataMember(Name = "defaultPrimaryAdmin", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultPrimaryAdmin", EmitDefaultValue = true)]
         public ApiUser DefaultPrimaryAdmin { get; set; }
 
         /// <summary>
@@ -416,7 +421,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets DefaultPrimaryAdminReal
         /// </summary>
-        [DataMember(Name = "defaultPrimaryAdminReal", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultPrimaryAdminReal", EmitDefaultValue = true)]
         public ApiUser DefaultPrimaryAdminReal { get; set; }
 
         /// <summary>
@@ -428,13 +433,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets DefaultPrimaryContact
         /// </summary>
-        [DataMember(Name = "defaultPrimaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultPrimaryContact", EmitDefaultValue = true)]
         public ApiUser DefaultPrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultSecondaryContact
         /// </summary>
-        [DataMember(Name = "defaultSecondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultSecondaryContact", EmitDefaultValue = true)]
         public ApiUser DefaultSecondaryContact { get; set; }
 
         /// <summary>
@@ -492,6 +497,12 @@ namespace Cloud.Governance.Client.Model
         public string DefaultDesignType { get; set; }
 
         /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public CreateSiteRequest RequestTemplate { get; set; }
+
+        /// <summary>
         /// Gets or Sets Metadatas
         /// </summary>
         [DataMember(Name = "metadatas", EmitDefaultValue = true)]
@@ -542,13 +553,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -566,7 +577,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -586,6 +597,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "categoryId", EmitDefaultValue = true)]
         public string CategoryId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -648,6 +665,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ClassificationAssignBy: ").Append(ClassificationAssignBy).Append("\n");
             sb.Append("  SensitivityAssignBy: ").Append(SensitivityAssignBy).Append("\n");
             sb.Append("  HubSiteAssignBy: ").Append(HubSiteAssignBy).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -667,6 +685,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -960,6 +979,11 @@ namespace Cloud.Governance.Client.Model
                     this.HubSiteAssignBy.Equals(input.HubSiteAssignBy)
                 ) && 
                 (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
+                ) && 
+                (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
                     this.DepartmentAssignBy.Equals(input.DepartmentAssignBy)
                 ) && 
@@ -1047,6 +1071,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -1147,6 +1176,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.ClassificationAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.SensitivityAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.HubSiteAssignBy.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -1177,6 +1208,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

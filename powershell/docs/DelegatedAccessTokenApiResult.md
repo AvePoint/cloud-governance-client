@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | [**DelegatedAccessToken**](DelegatedAccessToken.md) |  | [optional] [default to null]
-**IsSuccess** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMsg** | **String** |  | [optional] [default to null]
+**Value** | [**DelegatedAccessToken**](DelegatedAccessToken.md) |  | [optional] 
+**IsSuccess** | **Boolean** |  | [optional] 
+**ErrorMsg** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientDelegatedAccessTokenApiResult  -Value null `
+$DelegatedAccessTokenApiResult = New-Cloud.Governance.ClientDelegatedAccessTokenApiResult  -Value null `
  -IsSuccess null `
  -ErrorMsg null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$DelegatedAccessTokenApiResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

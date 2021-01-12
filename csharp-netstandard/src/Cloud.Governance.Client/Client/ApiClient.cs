@@ -7,6 +7,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters;
 using System.Text;
@@ -38,7 +39,7 @@ namespace Cloud.Governance.Client.Client
             {
                 NamingStrategy = new CamelCaseNamingStrategy
                 {
-                    OverrideSpecifiedNames = true
+                    OverrideSpecifiedNames = false
                 }
             }
         };
@@ -54,10 +55,22 @@ namespace Cloud.Governance.Client.Client
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// Serialize the object into a JSON string.
+        /// </summary>
+        /// <param name="obj">Object to be serialized.</param>
+        /// <returns>A JSON string.</returns>
         public string Serialize(object obj)
         {
-            var result = JsonConvert.SerializeObject(obj, _serializerSettings);
-            return result;
+            if (obj != null && obj is Cloud.Governance.Client.Model.AbstractOpenAPISchema)
+            {
+                // the object to be serialized is an oneOf/anyOf schema
+                return ((Cloud.Governance.Client.Model.AbstractOpenAPISchema)obj).ToJson();
+            }
+            else
+            {
+                return JsonConvert.SerializeObject(obj, _serializerSettings);
+            }
         }
 
         public T Deserialize<T>(IRestResponse response)
@@ -405,6 +418,11 @@ namespace Cloud.Governance.Client.Client
 
             client.Timeout = configuration.Timeout;
 
+            if (configuration.Proxy != null)
+            {
+                client.Proxy = configuration.Proxy;
+            }
+
             if (configuration.UserAgent != null)
             {
                 client.UserAgent = configuration.UserAgent;
@@ -418,7 +436,7 @@ namespace Cloud.Governance.Client.Client
             InterceptRequest(req);
 
             IRestResponse<T> response;
-            if (RetryConfiguration.RetryPolicy != null)	
+            if (RetryConfiguration.RetryPolicy != null)
             {
                 var policy = RetryConfiguration.RetryPolicy;
                 var policyResult = policy.ExecuteAndCapture(() => client.Execute(req));
@@ -502,6 +520,11 @@ namespace Cloud.Governance.Client.Client
 
             client.Timeout = configuration.Timeout;
 
+            if (configuration.Proxy != null)
+            {
+                client.Proxy = configuration.Proxy;
+            }
+
             if (configuration.UserAgent != null)
             {
                 client.UserAgent = configuration.UserAgent;
@@ -527,7 +550,16 @@ namespace Cloud.Governance.Client.Client
             }
             else
             {
-                 response = await client.ExecuteAsync<T>(req, cancellationToken).ConfigureAwait(false);
+                response = await client.ExecuteAsync<T>(req, cancellationToken).ConfigureAwait(false);
+            }
+
+            // if the response type is oneOf/anyOf, call FromJSON to deserialize the data
+            if (typeof(Cloud.Governance.Client.Model.AbstractOpenAPISchema).IsAssignableFrom(typeof(T)))
+            {
+                T instance = (T)Activator.CreateInstance(typeof(T));
+                MethodInfo method = typeof(T).GetMethod("FromJson");
+                method.Invoke(instance, new object[] { response.Content });
+                response.Data = instance;
             }
 
             InterceptResponse(req, response);

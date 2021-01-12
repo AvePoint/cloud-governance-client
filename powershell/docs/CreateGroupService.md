@@ -3,84 +3,98 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**EnableTeams** | **Boolean** |  | [optional] [default to null]
-**IsPrivate** | **Boolean** |  | [optional] [default to null]
-**EnableSubscribe** | **Boolean** |  | [optional] [default to null]
-**EnableApplySiteDesign** | **Boolean** |  | [optional] [default to null]
-**EnableOutsideSender** | **Boolean** |  | [optional] [default to null]
-**EnableHideGroupMembership** | **Boolean** |  | [optional] [default to null]
-**EnableClassification** | **Boolean** |  | [optional] [default to null]
-**AllowConfigureLeasePeriod** | **Boolean** |  | [optional] [default to null]
-**ShowNotebookLink** | **Boolean** |  | [optional] [default to null]
-**ShowConversationsLink** | **Boolean** |  | [optional] [default to null]
-**ShowFilesLink** | **Boolean** |  | [optional] [default to null]
-**ShowTeamSiteLink** | **Boolean** |  | [optional] [default to null]
-**ShowPlannerLink** | **Boolean** |  | [optional] [default to null]
-**Classifications** | **String[]** |  | [optional] [default to null]
-**SiteDesigns** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
-**AddGroupMemberType** | [**AddGroupMemberType**](AddGroupMemberType.md) |  | [optional] [default to null]
-**SelectedPolicies** | [**BriefGroupPolicy[]**](BriefGroupPolicy.md) |  | [optional] [default to null]
-**SelectedLanguages** | [**StringModel[]**](StringModel.md) |  | [optional] [default to null]
-**TeamsSettings** | [**ServiceTeamsSettings**](ServiceTeamsSettings.md) |  | [optional] [default to null]
-**GroupNameConstructureSettings** | [**GroupNameConstructureSettings**](GroupNameConstructureSettings.md) |  | [optional] [default to null]
-**GroupIdConstructureSettings** | [**GroupIdConstructureSettings**](GroupIdConstructureSettings.md) |  | [optional] [default to null]
-**EnableInstallApp** | **Boolean** |  | [optional] [default to null]
-**EnableInstallPanel** | **Boolean** |  | [optional] [default to null]
-**TemplateSettings** | [**TeamsTemplateServiceSettings**](TeamsTemplateServiceSettings.md) |  | [optional] [default to null]
-**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**DefaultOwners** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**DefaultMembers** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**DefaultPolicy** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**DefaultClassification** | **String** |  | [optional] [default to null]
-**DefaultLanguage** | **String** |  | [optional] [default to null]
-**DefaultSiteDesign** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**DefaultOwnersReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**DefaultMembersReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**MemberAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**OwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PrivacyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**SubscribeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**OutsideSenderAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**ClassificationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**LanguageAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PrimaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**EnableDynamicMembership** | **Boolean** |  | [optional] [default to null]
-**HideGroupMembershipAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**SiteDesignAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**MultiGeoSetting** | [**MultiGeoSetting**](MultiGeoSetting.md) |  | [optional] [default to null]
-**IsShowHubSiteSection** | **Boolean** |  | [optional] [readonly] [default to null]
-**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] [default to null]
-**HasImpernastionUsers** | **Boolean** |  | [optional] [default to null]
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
-**HideRequestSummary** | **Boolean** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to null]
-**Departments** | **String[]** |  | [optional] [default to null]
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to null]
-**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] [default to null]
-**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to null]
-**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] [default to null]
-**ApprovalProcessId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LanguageId** | **Int32** |  | [optional] [default to null]
-**CategoryId** | **String** |  | [optional] [default to null]
+**GroupType** | [**CreateGroupType**](CreateGroupType.md) |  | [optional] 
+**TenantId** | **String** |  | [optional] 
+**NetworkId** | **String** |  | [optional] 
+**EnableTeams** | **Boolean** |  | [optional] 
+**IsPrivate** | **Boolean** |  | [optional] 
+**EnableSubscribe** | **Boolean** |  | [optional] 
+**EnableApplySiteDesign** | **Boolean** |  | [optional] 
+**EnableOutsideSender** | **Boolean** |  | [optional] 
+**EnableHideGroupMembership** | **Boolean** |  | [optional] 
+**EnableClassification** | **Boolean** |  | [optional] 
+**EnableSensitivity** | **Boolean** |  | [optional] 
+**AllowConfigureLeasePeriod** | **Boolean** |  | [optional] 
+**ShowNotebookLink** | **Boolean** |  | [optional] 
+**ShowConversationsLink** | **Boolean** |  | [optional] 
+**ShowFilesLink** | **Boolean** |  | [optional] 
+**ShowTeamSiteLink** | **Boolean** |  | [optional] 
+**ShowPlannerLink** | **Boolean** |  | [optional] 
+**ShowYammerGroupLink** | **Boolean** |  | [optional] 
+**Classifications** | **String[]** |  | [optional] 
+**Sensitivities** | **String[]** |  | [optional] 
+**SiteDesigns** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**AddGroupMemberType** | [**AddGroupMemberType**](AddGroupMemberType.md) |  | [optional] 
+**SelectedPolicies** | [**BriefGroupPolicy[]**](BriefGroupPolicy.md) |  | [optional] 
+**SelectedLanguages** | [**StringModel[]**](StringModel.md) |  | [optional] 
+**TeamsSettings** | [**ServiceTeamsSettings**](ServiceTeamsSettings.md) |  | [optional] 
+**GroupNameConstructureSettings** | [**GroupNameConstructureSettings**](GroupNameConstructureSettings.md) |  | [optional] 
+**GroupIdConstructureSettings** | [**GroupIdConstructureSettings**](GroupIdConstructureSettings.md) |  | [optional] 
+**EnableInstallApp** | **Boolean** |  | [optional] 
+**EnableInstallPanel** | **Boolean** |  | [optional] 
+**TemplateSettings** | [**TeamsTemplateServiceSettings**](TeamsTemplateServiceSettings.md) |  | [optional] 
+**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultOwners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**DefaultMembers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**DefaultPolicy** | **String** |  | [optional] 
+**DefaultClassification** | **String** |  | [optional] 
+**DefaultSensitivity** | **String** |  | [optional] 
+**DefaultLanguage** | **String** |  | [optional] 
+**DefaultSiteDesign** | **String** |  | [optional] 
+**DefaultOwnersReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**DefaultMembersReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryContactReal** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultSecondaryContactReal** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**MemberAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**OwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PrivacyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SubscribeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**OutsideSenderAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**ClassificationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SensitivityAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**LanguageAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PrimaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**EnableDynamicMembership** | **Boolean** |  | [optional] 
+**HideGroupMembershipAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SiteDesignAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**MultiGeoSetting** | [**MultiGeoSetting**](MultiGeoSetting.md) |  | [optional] 
+**IsShowHubSiteSection** | **Boolean** |  | [optional] [readonly] 
+**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] 
+**HasImpernastionUsers** | **Boolean** |  | [optional] 
+**PeoplePickerFilterProfileId** | **String** |  | [optional] 
+**RequestTemplate** | [**CreateGroupRequest**](CreateGroupRequest.md) |  | [optional] 
+**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**Department** | **String** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**Departments** | **String[]** |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
+**ApprovalProcessId** | **String** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] 
+**CategoryId** | **String** |  | [optional] 
+**Details** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateGroupService  -TenantId null `
+$CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType null `
+ -TenantId null `
+ -NetworkId null `
  -EnableTeams null `
  -IsPrivate null `
  -EnableSubscribe null `
@@ -88,13 +102,16 @@ New-Cloud.Governance.ClientCreateGroupService  -TenantId null `
  -EnableOutsideSender null `
  -EnableHideGroupMembership null `
  -EnableClassification null `
+ -EnableSensitivity null `
  -AllowConfigureLeasePeriod null `
  -ShowNotebookLink null `
  -ShowConversationsLink null `
  -ShowFilesLink null `
  -ShowTeamSiteLink null `
  -ShowPlannerLink null `
+ -ShowYammerGroupLink null `
  -Classifications null `
+ -Sensitivities null `
  -SiteDesigns null `
  -AddGroupMemberType null `
  -SelectedPolicies null `
@@ -111,16 +128,20 @@ New-Cloud.Governance.ClientCreateGroupService  -TenantId null `
  -DefaultMembers null `
  -DefaultPolicy null `
  -DefaultClassification null `
+ -DefaultSensitivity null `
  -DefaultLanguage null `
  -DefaultSiteDesign null `
  -DefaultOwnersReal null `
  -DefaultMembersReal null `
+ -DefaultPrimaryContactReal null `
+ -DefaultSecondaryContactReal null `
  -MemberAssignBy null `
  -OwnerAssignBy null `
  -PrivacyAssignBy null `
  -SubscribeAssignBy null `
  -OutsideSenderAssignBy null `
  -ClassificationAssignBy null `
+ -SensitivityAssignBy null `
  -LanguageAssignBy null `
  -SecondaryContactAssignBy null `
  -PrimaryContactAssignBy null `
@@ -133,6 +154,8 @@ New-Cloud.Governance.ClientCreateGroupService  -TenantId null `
  -IsShowHubSiteSection null `
  -HubSiteSettings null `
  -HasImpernastionUsers null `
+ -PeoplePickerFilterProfileId null `
+ -RequestTemplate null `
  -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
@@ -151,14 +174,14 @@ New-Cloud.Governance.ClientCreateGroupService  -TenantId null `
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null
+ -CategoryId null `
+ -Details null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateGroupService | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

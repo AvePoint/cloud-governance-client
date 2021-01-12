@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**WebId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**WebUrl** | **String** |  | [optional] [default to null]
-**PrimaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] [default to null]
-**SecondaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] [default to null]
+**SiteId** | **String** |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**WebId** | **String** |  | [optional] 
+**WebUrl** | **String** |  | [optional] 
+**PrimaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
+**SecondaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeWebContactByUrlSetting  -SiteId null `
+$ChangeWebContactByUrlSetting = New-Cloud.Governance.ClientChangeWebContactByUrlSetting  -SiteId null `
  -SiteUrl null `
  -WebId null `
  -WebUrl null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientChangeWebContactByUrlSetting  -SiteId null `
  -SecondaryContact null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeWebContactByUrlSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

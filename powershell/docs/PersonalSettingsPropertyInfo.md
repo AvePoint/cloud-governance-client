@@ -3,20 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SelectedLanguages** | **Int32[]** |  | [optional] [default to null]
+**Theme** | [**ThemeType**](ThemeType.md) |  | [optional] 
+**SelectedLanguages** | **Int32[]** |  | [optional] 
+**IsUsingBrowserLanguage** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientPersonalSettingsPropertyInfo  -SelectedLanguages null
+$PersonalSettingsPropertyInfo = New-Cloud.Governance.ClientPersonalSettingsPropertyInfo  -Theme null `
+ -SelectedLanguages null `
+ -IsUsingBrowserLanguage null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PersonalSettingsPropertyInfo | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

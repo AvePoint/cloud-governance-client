@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -46,7 +47,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ContructUrlSetting
         /// </summary>
-        [DataMember(Name = "contructUrlSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "contructUrlSetting", EmitDefaultValue = true)]
         public ContructUrlSetting ContructUrlSetting { get; set; }
 
         /// <summary>
@@ -58,7 +59,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets TextValidationRule
         /// </summary>
-        [DataMember(Name = "textValidationRule", EmitDefaultValue = false)]
+        [DataMember(Name = "textValidationRule", EmitDefaultValue = true)]
         public TextValidationRuleRef TextValidationRule { get; set; }
 
         /// <summary>

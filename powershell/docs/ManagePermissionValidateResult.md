@@ -3,30 +3,33 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] [default to null]
-**ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] [default to null]
-**EnableShareAnonymousLink** | **Boolean** |  | [optional] [default to null]
-**Object** | [**ManagePermissionSPObject**](ManagePermissionSPObject.md) |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
+**ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] 
+**EnableShareAnonymousLink** | **Boolean** |  | [optional] 
+**Object** | [**ManagePermissionSPObject**](ManagePermissionSPObject.md) |  | [optional] 
+**UserMetadata** | [**System.Collections.Hashtable**](UserInfo.md) |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientManagePermissionValidateResult  -PermissionLevels null `
+$ManagePermissionValidateResult = New-Cloud.Governance.ClientManagePermissionValidateResult  -PermissionLevels null `
  -ExternalSharingOptions null `
  -EnableShareAnonymousLink null `
  -Object null `
+ -UserMetadata null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ManagePermissionValidateResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

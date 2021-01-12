@@ -3,57 +3,59 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScopeSettings** | [**CreateWebScopeSettings**](CreateWebScopeSettings.md) |  | [optional] [default to null]
-**WebLanguages** | [**IntModel[]**](IntModel.md) |  | [optional] [default to null]
-**LanguageIdsAndTemplates** | [**LanguageWithTemplates[]**](LanguageWithTemplates.md) |  | [optional] [default to null]
-**TemplateIdsAndPermissions** | [**TemplateWithPermissions[]**](TemplateWithPermissions.md) |  | [optional] [default to null]
-**PermissionSettings** | [**PermissionSettings**](PermissionSettings.md) |  | [optional] [default to null]
-**UseUniquePermissions** | **Boolean** |  | [optional] [default to null]
-**DeploymentManagerPlanSettings** | [**DeploymentManagerPlanSettings**](DeploymentManagerPlanSettings.md) |  | [optional] [default to null]
-**YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] [default to null]
-**TemplateStoreUrl** | **String** |  | [optional] [default to null]
-**AppSettings** | [**AppSettings**](AppSettings.md) |  | [optional] [default to null]
-**NotifyPrimaryContactSettings** | [**GuidBooleanModel**](GuidBooleanModel.md) |  | [optional] [default to null]
-**NotifySecondaryContactSettings** | [**GuidBooleanModel**](GuidBooleanModel.md) |  | [optional] [default to null]
-**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**IsOnQuickLaunch** | **Boolean** |  | [optional] [default to null]
-**IsOnTopLinkBar** | **Boolean** |  | [optional] [default to null]
-**IsNavigationInheritance** | **Boolean** |  | [optional] [default to null]
-**DefaultWebLanguage** | **Int32** |  | [optional] [default to null]
-**ScopeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**WebLanguageAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**TemplateAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**NavigationInheritanceAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**NavigationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PrimaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
-**HideRequestSummary** | **Boolean** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to null]
-**Departments** | **String[]** |  | [optional] [default to null]
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to null]
-**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] [default to null]
-**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to null]
-**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] [default to null]
-**ApprovalProcessId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LanguageId** | **Int32** |  | [optional] [default to null]
-**CategoryId** | **String** |  | [optional] [default to null]
+**ScopeSettings** | [**CreateWebScopeSettings**](CreateWebScopeSettings.md) |  | [optional] 
+**WebLanguages** | [**IntModel[]**](IntModel.md) |  | [optional] 
+**LanguageIdsAndTemplates** | [**LanguageWithTemplates[]**](LanguageWithTemplates.md) |  | [optional] 
+**TemplateIdsAndPermissions** | [**TemplateWithPermissions[]**](TemplateWithPermissions.md) |  | [optional] 
+**PermissionSettings** | [**PermissionSettings**](PermissionSettings.md) |  | [optional] 
+**UseUniquePermissions** | **Boolean** |  | [optional] 
+**DeploymentManagerPlanSettings** | [**DeploymentManagerPlanSettings**](DeploymentManagerPlanSettings.md) |  | [optional] 
+**YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] 
+**TemplateStoreUrl** | **String** |  | [optional] 
+**AppSettings** | [**AppSettings**](AppSettings.md) |  | [optional] 
+**NotifyPrimaryContactSettings** | [**GuidBooleanModel**](GuidBooleanModel.md) |  | [optional] 
+**NotifySecondaryContactSettings** | [**GuidBooleanModel**](GuidBooleanModel.md) |  | [optional] 
+**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**IsOnQuickLaunch** | **Boolean** |  | [optional] 
+**IsOnTopLinkBar** | **Boolean** |  | [optional] 
+**IsNavigationInheritance** | **Boolean** |  | [optional] 
+**DefaultWebLanguage** | **Int32** |  | [optional] 
+**ScopeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**WebLanguageAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**TemplateAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**NavigationInheritanceAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**NavigationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PrimaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**RequestTemplate** | [**CreateWebRequest**](CreateWebRequest.md) |  | [optional] 
+**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**Department** | **String** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**Departments** | **String[]** |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
+**ApprovalProcessId** | **String** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] 
+**CategoryId** | **String** |  | [optional] 
+**Details** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateWebService  -ScopeSettings null `
+$CreateWebService = New-Cloud.Governance.ClientCreateWebService  -ScopeSettings null `
  -WebLanguages null `
  -LanguageIdsAndTemplates null `
  -TemplateIdsAndPermissions null `
@@ -79,6 +81,7 @@ New-Cloud.Governance.ClientCreateWebService  -ScopeSettings null `
  -PrimaryContactAssignBy null `
  -SecondaryContactAssignBy null `
  -PermissionAssignBy null `
+ -RequestTemplate null `
  -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
@@ -97,14 +100,14 @@ New-Cloud.Governance.ClientCreateWebService  -ScopeSettings null `
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null
+ -CategoryId null `
+ -Details null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateWebService | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

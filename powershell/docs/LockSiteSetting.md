@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableLockAsNoAccess** | **Boolean** |  | [optional] [default to null]
-**EnableLockAsReadonly** | **Boolean** |  | [optional] [default to null]
+**EnableLockAsNoAccess** | **Boolean** |  | [optional] 
+**EnableLockAsReadonly** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientLockSiteSetting  -EnableLockAsNoAccess null `
+$LockSiteSetting = New-Cloud.Governance.ClientLockSiteSetting  -EnableLockAsNoAccess null `
  -EnableLockAsReadonly null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$LockSiteSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

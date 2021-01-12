@@ -3,34 +3,35 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectType** | [**SPPrincipalType**](SPPrincipalType.md) |  | [optional] [default to null]
-**ObjectInfo** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] [default to null]
-**Permissions** | **String[]** |  | [optional] [default to null]
-**OriginalPermissions** | **String[]** |  | [optional] [default to null]
-**ExternalUserType** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] [default to null]
-**Members** | [**SharingEnabledUser[]**](SharingEnabledUser.md) |  | [optional] [default to null]
-**GrantPermissionSetting** | [**GrantPermissionModel**](GrantPermissionModel.md) |  | [optional] [default to null]
+**ObjectType** | [**SPPrincipalType**](SPPrincipalType.md) |  | [optional] 
+**ObjectInfo** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] 
+**Permissions** | **String[]** |  | [optional] 
+**OriginalPermissions** | **String[]** |  | [optional] 
+**ExternalUserType** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
+**Members** | [**SharingEnabledUser[]**](SharingEnabledUser.md) |  | [optional] 
+**GrantPermissionSetting** | [**GrantPermissionModel**](GrantPermissionModel.md) |  | [optional] 
+**OriginalName** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientObjectPermissionManagementModel  -ObjectType null `
+$ObjectPermissionManagementModel = New-Cloud.Governance.ClientObjectPermissionManagementModel  -ObjectType null `
  -ObjectInfo null `
  -Action null `
  -Permissions null `
  -OriginalPermissions null `
  -ExternalUserType null `
  -Members null `
- -GrantPermissionSetting null
+ -GrantPermissionSetting null `
+ -OriginalName null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ObjectPermissionManagementModel | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

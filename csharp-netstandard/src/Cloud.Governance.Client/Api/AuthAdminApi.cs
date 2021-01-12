@@ -22,9 +22,9 @@ namespace Cloud.Governance.Client.Api
         /// delete token cache
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <returns></returns>
-        void DeleteTokenCache(ApiCredential apiCredential = default(ApiCredential));
+        void DeleteTokenCache(ApiCredential apiCredential);
 
         /// <summary>
         /// delete token cache
@@ -33,27 +33,9 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteTokenCacheWithHttpInfo(ApiCredential apiCredential = default(ApiCredential));
-        /// <summary>
-        /// update token cache
-        /// </summary>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <returns></returns>
-        void UpdateTokenCache(ApiCredential apiCredential = default(ApiCredential));
-
-        /// <summary>
-        /// update token cache
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateTokenCacheWithHttpInfo(ApiCredential apiCredential = default(ApiCredential));
+        ApiResponse<Object> DeleteTokenCacheWithHttpInfo(ApiCredential apiCredential);
         #endregion Synchronous Operations
     }
 
@@ -70,10 +52,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteTokenCacheAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteTokenCacheAsync(ApiCredential apiCredential, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// delete token cache
@@ -82,33 +64,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokenCacheWithHttpInfoAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-        /// <summary>
-        /// update token cache
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateTokenCacheAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
-
-        /// <summary>
-        /// update token cache
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateTokenCacheWithHttpInfoAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokenCacheWithHttpInfoAsync(ApiCredential apiCredential, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -233,9 +192,9 @@ namespace Cloud.Governance.Client.Api
         /// delete token cache 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <returns></returns>
-        public void DeleteTokenCache(ApiCredential apiCredential = default(ApiCredential))
+        public void DeleteTokenCache(ApiCredential apiCredential)
         {
             DeleteTokenCacheWithHttpInfo(apiCredential);
         }
@@ -244,21 +203,23 @@ namespace Cloud.Governance.Client.Api
         /// delete token cache 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> DeleteTokenCacheWithHttpInfo(ApiCredential apiCredential = default(ApiCredential))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> DeleteTokenCacheWithHttpInfo(ApiCredential apiCredential)
         {
+            // verify the required parameter 'apiCredential' is set
+            if (apiCredential == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'apiCredential' when calling AuthAdminApi->DeleteTokenCache");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -296,10 +257,10 @@ namespace Cloud.Governance.Client.Api
         /// delete token cache 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteTokenCacheAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteTokenCacheAsync(ApiCredential apiCredential, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             await DeleteTokenCacheWithHttpInfoAsync(apiCredential, cancellationToken).ConfigureAwait(false);
         }
@@ -308,23 +269,25 @@ namespace Cloud.Governance.Client.Api
         /// delete token cache 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
+        /// <param name="apiCredential"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> DeleteTokenCacheWithHttpInfoAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> DeleteTokenCacheWithHttpInfoAsync(ApiCredential apiCredential, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'apiCredential' is set
+            if (apiCredential == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'apiCredential' when calling AuthAdminApi->DeleteTokenCache");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 
@@ -354,137 +317,6 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteTokenCache", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// update token cache 
-        /// </summary>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <returns></returns>
-        public void UpdateTokenCache(ApiCredential apiCredential = default(ApiCredential))
-        {
-            UpdateTokenCacheWithHttpInfo(apiCredential);
-        }
-
-        /// <summary>
-        /// update token cache 
-        /// </summary>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> UpdateTokenCacheWithHttpInfo(ApiCredential apiCredential = default(ApiCredential))
-        {
-            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
-
-            String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
-            };
-
-            // to determine the Accept header
-            String[] _accepts = new String[] {
-            };
-
-            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = apiCredential;
-
-            // authentication (clientSecret) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
-            }
-            // authentication (userPrincipalName) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
-            }
-
-            // make the HTTP request
-            var localVarResponse = this.Client.Put<Object>("/admin/auth/token/cache", localVarRequestOptions, this.Configuration);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCache", localVarResponse);
-                if (_exception != null) throw _exception;
-            }
-
-            return localVarResponse;
-        }
-
-        /// <summary>
-        /// update token cache 
-        /// </summary>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateTokenCacheAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-            await UpdateTokenCacheWithHttpInfoAsync(apiCredential, cancellationToken).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// update token cache 
-        /// </summary>
-        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="apiCredential"> (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> UpdateTokenCacheWithHttpInfoAsync(ApiCredential apiCredential = default(ApiCredential), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
-        {
-
-            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
-
-            String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
-            };
-
-            // to determine the Accept header
-            String[] _accepts = new String[] {
-            };
-
-
-            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-
-            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-
-            localVarRequestOptions.Data = apiCredential;
-
-            // authentication (clientSecret) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
-            }
-            // authentication (userPrincipalName) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
-            {
-                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
-            }
-
-            // make the HTTP request
-
-            var localVarResponse = await this.AsynchronousClient.PutAsync<Object>("/admin/auth/token/cache", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
-
-            if (this.ExceptionFactory != null)
-            {
-                Exception _exception = this.ExceptionFactory("UpdateTokenCache", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

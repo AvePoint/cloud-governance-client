@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -65,6 +66,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="reviewTaskEmailTemplate">reviewTaskEmailTemplate.</param>
         /// <param name="scopeSettings">scopeSettings.</param>
         /// <param name="stageCount">stageCount.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -84,7 +86,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public ChangePermissionService(List<TreeNode> selectedNodes = default(List<TreeNode>), List<TreeNode> uncheckedNodes = default(List<TreeNode>), UserLevelRestrictionType? userRestrictionType = default(UserLevelRestrictionType?), PermissionChangedType? permissionChangedType = default(PermissionChangedType?), AssignBy? permissionChangedTypeAssignBy = default(AssignBy?), bool enabledExcludePermissions = default(bool), List<PermissionLevel> excludedPermissions = default(List<PermissionLevel>), GuidModel reviewTaskEmailTemplate = default(GuidModel), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), int stageCount = default(int), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public ChangePermissionService(List<TreeNode> selectedNodes = default(List<TreeNode>), List<TreeNode> uncheckedNodes = default(List<TreeNode>), UserLevelRestrictionType? userRestrictionType = default(UserLevelRestrictionType?), PermissionChangedType? permissionChangedType = default(PermissionChangedType?), AssignBy? permissionChangedTypeAssignBy = default(AssignBy?), bool enabledExcludePermissions = default(bool), List<PermissionLevel> excludedPermissions = default(List<PermissionLevel>), GuidModel reviewTaskEmailTemplate = default(GuidModel), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), int stageCount = default(int), ChangePermissionRequest requestTemplate = default(ChangePermissionRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.SelectedNodes = selectedNodes;
             this.UncheckedNodes = uncheckedNodes;
@@ -96,6 +99,7 @@ namespace Cloud.Governance.Client.Model
             this.ReviewTaskEmailTemplate = reviewTaskEmailTemplate;
             this.ScopeSettings = scopeSettings;
             this.StageCount = stageCount;
+            this.RequestTemplate = requestTemplate;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -115,6 +119,7 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
@@ -144,13 +149,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ReviewTaskEmailTemplate
         /// </summary>
-        [DataMember(Name = "reviewTaskEmailTemplate", EmitDefaultValue = false)]
+        [DataMember(Name = "reviewTaskEmailTemplate", EmitDefaultValue = true)]
         public GuidModel ReviewTaskEmailTemplate { get; set; }
 
         /// <summary>
         /// Gets or Sets ScopeSettings
         /// </summary>
-        [DataMember(Name = "scopeSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "scopeSettings", EmitDefaultValue = true)]
         public ServiceScopeSettings ScopeSettings { get; set; }
 
         /// <summary>
@@ -158,6 +163,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "stageCount", EmitDefaultValue = false)]
         public int StageCount { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public ChangePermissionRequest RequestTemplate { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadatas
@@ -210,13 +221,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -234,7 +245,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -256,6 +267,12 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -273,6 +290,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ReviewTaskEmailTemplate: ").Append(ReviewTaskEmailTemplate).Append("\n");
             sb.Append("  ScopeSettings: ").Append(ScopeSettings).Append("\n");
             sb.Append("  StageCount: ").Append(StageCount).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -292,6 +310,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -373,6 +392,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.StageCount == input.StageCount ||
                     this.StageCount.Equals(input.StageCount)
+                ) && 
+                (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
                 ) && 
                 (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
@@ -462,6 +486,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -489,6 +518,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.ScopeSettings != null)
                     hashCode = hashCode * 59 + this.ScopeSettings.GetHashCode();
                 hashCode = hashCode * 59 + this.StageCount.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -519,6 +550,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

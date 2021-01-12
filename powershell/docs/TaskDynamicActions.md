@@ -6,16 +6,15 @@ Name | Type | Description | Notes
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTaskDynamicActions 
+$TaskDynamicActions = New-Cloud.Governance.ClientTaskDynamicActions 
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TaskDynamicActions | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

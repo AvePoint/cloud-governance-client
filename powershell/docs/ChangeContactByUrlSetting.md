@@ -3,22 +3,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**OriginalPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**NewPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**OriginalSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**NewSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**OriginalPrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**NewPrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**OriginalAdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**NewAdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
+**SiteId** | **String** |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**OriginalPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**NewPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**OriginalSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**NewSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**OriginalPrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**NewPrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**OriginalAdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**NewAdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeContactByUrlSetting  -SiteId null `
+$ChangeContactByUrlSetting = New-Cloud.Governance.ClientChangeContactByUrlSetting  -SiteId null `
  -SiteUrl null `
  -OriginalPrimaryContact null `
  -NewPrimaryContact null `
@@ -30,11 +30,10 @@ New-Cloud.Governance.ClientChangeContactByUrlSetting  -SiteId null `
  -NewAdditionalAdministrators null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeContactByUrlSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

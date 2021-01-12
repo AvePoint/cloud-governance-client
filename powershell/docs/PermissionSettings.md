@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowGrantUserPermission** | **Boolean** |  | [optional] [default to null]
-**PreventGrantSpecificPermissionLevels** | **Boolean** |  | [optional] [default to null]
-**PreventPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] [default to null]
+**AllowGrantUserPermission** | **Boolean** |  | [optional] 
+**PreventGrantSpecificPermissionLevels** | **Boolean** |  | [optional] 
+**PreventPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientPermissionSettings  -AllowGrantUserPermission null `
+$PermissionSettings = New-Cloud.Governance.ClientPermissionSettings  -AllowGrantUserPermission null `
  -PreventGrantSpecificPermissionLevels null `
  -PreventPermissionLevles null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PermissionSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

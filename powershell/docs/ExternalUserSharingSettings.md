@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [default to null]
-**SharingType** | [**ExternalUserSharingType**](ExternalUserSharingType.md) |  | [optional] [default to null]
-**AnonymousLinkSettings** | [**AnonymousLinkSettings**](AnonymousLinkSettings.md) |  | [optional] [default to null]
+**Enabled** | **Boolean** |  | [optional] 
+**SharingType** | [**ExternalUserSharingType**](ExternalUserSharingType.md) |  | [optional] 
+**AnonymousLinkSettings** | [**AnonymousLinkSettings**](AnonymousLinkSettings.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientExternalUserSharingSettings  -Enabled null `
+$ExternalUserSharingSettings = New-Cloud.Governance.ClientExternalUserSharingSettings  -Enabled null `
  -SharingType null `
  -AnonymousLinkSettings null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ExternalUserSharingSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -181,6 +182,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="multiGeoSetting">multiGeoSetting.</param>
         /// <param name="hubSiteSettings">hubSiteSettings.</param>
         /// <param name="hasImpernastionUsers">hasImpernastionUsers.</param>
+        /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -200,7 +203,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = default(bool), bool isPrivate = default(bool), bool enableSubscribe = default(bool), bool enableApplySiteDesign = default(bool), bool enableOutsideSender = default(bool), bool enableHideGroupMembership = default(bool), bool enableClassification = default(bool), bool enableSensitivity = default(bool), bool allowConfigureLeasePeriod = default(bool), bool showNotebookLink = default(bool), bool showConversationsLink = default(bool), bool showFilesLink = default(bool), bool showTeamSiteLink = default(bool), bool showPlannerLink = default(bool), bool showYammerGroupLink = default(bool), List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = default(bool), bool enableInstallPanel = default(bool), TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = default(bool), AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = default(bool), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = default(bool), bool isPrivate = default(bool), bool enableSubscribe = default(bool), bool enableApplySiteDesign = default(bool), bool enableOutsideSender = default(bool), bool enableHideGroupMembership = default(bool), bool enableClassification = default(bool), bool enableSensitivity = default(bool), bool allowConfigureLeasePeriod = default(bool), bool showNotebookLink = default(bool), bool showConversationsLink = default(bool), bool showFilesLink = default(bool), bool showTeamSiteLink = default(bool), bool showPlannerLink = default(bool), bool showYammerGroupLink = default(bool), List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = default(bool), bool enableInstallPanel = default(bool), TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = default(bool), AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = default(bool), Guid? peoplePickerFilterProfileId = default(Guid?), CreateGroupRequest requestTemplate = default(CreateGroupRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.GroupType = groupType;
             this.TenantId = tenantId;
@@ -263,6 +267,8 @@ namespace Cloud.Governance.Client.Model
             this.MultiGeoSetting = multiGeoSetting;
             this.HubSiteSettings = hubSiteSettings;
             this.HasImpernastionUsers = hasImpernastionUsers;
+            this.PeoplePickerFilterProfileId = peoplePickerFilterProfileId;
+            this.RequestTemplate = requestTemplate;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -282,6 +288,7 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
@@ -419,19 +426,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets TeamsSettings
         /// </summary>
-        [DataMember(Name = "teamsSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "teamsSettings", EmitDefaultValue = true)]
         public ServiceTeamsSettings TeamsSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupNameConstructureSettings
         /// </summary>
-        [DataMember(Name = "groupNameConstructureSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "groupNameConstructureSettings", EmitDefaultValue = true)]
         public GroupNameConstructureSettings GroupNameConstructureSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupIdConstructureSettings
         /// </summary>
-        [DataMember(Name = "groupIdConstructureSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "groupIdConstructureSettings", EmitDefaultValue = true)]
         public GroupIdConstructureSettings GroupIdConstructureSettings { get; set; }
 
         /// <summary>
@@ -449,19 +456,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets TemplateSettings
         /// </summary>
-        [DataMember(Name = "templateSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "templateSettings", EmitDefaultValue = true)]
         public TeamsTemplateServiceSettings TemplateSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultPrimaryContact
         /// </summary>
-        [DataMember(Name = "defaultPrimaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultPrimaryContact", EmitDefaultValue = true)]
         public ApiUser DefaultPrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultSecondaryContact
         /// </summary>
-        [DataMember(Name = "defaultSecondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultSecondaryContact", EmitDefaultValue = true)]
         public ApiUser DefaultSecondaryContact { get; set; }
 
         /// <summary>
@@ -521,13 +528,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets DefaultPrimaryContactReal
         /// </summary>
-        [DataMember(Name = "defaultPrimaryContactReal", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultPrimaryContactReal", EmitDefaultValue = true)]
         public ApiUser DefaultPrimaryContactReal { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultSecondaryContactReal
         /// </summary>
-        [DataMember(Name = "defaultSecondaryContactReal", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultSecondaryContactReal", EmitDefaultValue = true)]
         public ApiUser DefaultSecondaryContactReal { get; set; }
 
         /// <summary>
@@ -539,7 +546,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets MultiGeoSetting
         /// </summary>
-        [DataMember(Name = "multiGeoSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "multiGeoSetting", EmitDefaultValue = true)]
         public MultiGeoSetting MultiGeoSetting { get; set; }
 
         /// <summary>
@@ -549,9 +556,18 @@ namespace Cloud.Governance.Client.Model
         public bool IsShowHubSiteSection { get; private set; }
 
         /// <summary>
+        /// Returns false as IsShowHubSiteSection should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeIsShowHubSiteSection()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets HubSiteSettings
         /// </summary>
-        [DataMember(Name = "hubSiteSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "hubSiteSettings", EmitDefaultValue = true)]
         public HubSiteSettings HubSiteSettings { get; set; }
 
         /// <summary>
@@ -559,6 +575,18 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "hasImpernastionUsers", EmitDefaultValue = false)]
         public bool HasImpernastionUsers { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PeoplePickerFilterProfileId
+        /// </summary>
+        [DataMember(Name = "peoplePickerFilterProfileId", EmitDefaultValue = true)]
+        public Guid? PeoplePickerFilterProfileId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public CreateGroupRequest RequestTemplate { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadatas
@@ -611,13 +639,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -635,7 +663,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -655,6 +683,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "categoryId", EmitDefaultValue = true)]
         public string CategoryId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -726,6 +760,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsShowHubSiteSection: ").Append(IsShowHubSiteSection).Append("\n");
             sb.Append("  HubSiteSettings: ").Append(HubSiteSettings).Append("\n");
             sb.Append("  HasImpernastionUsers: ").Append(HasImpernastionUsers).Append("\n");
+            sb.Append("  PeoplePickerFilterProfileId: ").Append(PeoplePickerFilterProfileId).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -745,6 +781,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1063,6 +1100,16 @@ namespace Cloud.Governance.Client.Model
                     this.HasImpernastionUsers.Equals(input.HasImpernastionUsers)
                 ) && 
                 (
+                    this.PeoplePickerFilterProfileId == input.PeoplePickerFilterProfileId ||
+                    (this.PeoplePickerFilterProfileId != null &&
+                    this.PeoplePickerFilterProfileId.Equals(input.PeoplePickerFilterProfileId))
+                ) && 
+                (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
+                ) && 
+                (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
                     this.DepartmentAssignBy.Equals(input.DepartmentAssignBy)
                 ) && 
@@ -1150,6 +1197,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -1250,6 +1302,10 @@ namespace Cloud.Governance.Client.Model
                 if (this.HubSiteSettings != null)
                     hashCode = hashCode * 59 + this.HubSiteSettings.GetHashCode();
                 hashCode = hashCode * 59 + this.HasImpernastionUsers.GetHashCode();
+                if (this.PeoplePickerFilterProfileId != null)
+                    hashCode = hashCode * 59 + this.PeoplePickerFilterProfileId.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -1280,6 +1336,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

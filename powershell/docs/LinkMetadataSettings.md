@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | **String** |  | [optional] [default to null]
-**Address** | **String** |  | [optional] [default to null]
+**Title** | **String** |  | [optional] 
+**Address** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientLinkMetadataSettings  -Title null `
+$LinkMetadataSettings = New-Cloud.Governance.ClientLinkMetadataSettings  -Title null `
  -Address null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$LinkMetadataSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LoginName** | **String** |  | [optional] [default to null]
-**DisplayName** | **String** |  | [optional] [default to null]
-**Action** | [**GroupMembershipAction**](GroupMembershipAction.md) |  | [optional] [default to null]
+**LoginName** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
+**Action** | [**GroupMembershipAction**](GroupMembershipAction.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGroupMembershipItem  -LoginName null `
+$GroupMembershipItem = New-Cloud.Governance.ClientGroupMembershipItem  -LoginName null `
  -DisplayName null `
  -Action null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GroupMembershipItem | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

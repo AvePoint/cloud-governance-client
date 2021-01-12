@@ -3,44 +3,47 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] [default to null]
-**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] [default to null]
-**UserLevelControlSettings** | [**UserLevelControlSettings**](UserLevelControlSettings.md) |  | [optional] [default to null]
-**PermissionDurationSettings** | [**GrantPermissionServiceDurationSettings**](GrantPermissionServiceDurationSettings.md) |  | [optional] [default to null]
-**PermissionSettings** | [**GrantPermissionServicePermissionSettings**](GrantPermissionServicePermissionSettings.md) |  | [optional] [default to null]
-**DefaultWelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] [default to null]
-**WelcomeEmailAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
-**HideRequestSummary** | **Boolean** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to null]
-**Departments** | **String[]** |  | [optional] [default to null]
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to null]
-**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] [default to null]
-**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to null]
-**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] [default to null]
-**ApprovalProcessId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LanguageId** | **Int32** |  | [optional] [default to null]
-**CategoryId** | **String** |  | [optional] [default to null]
+**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] 
+**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
+**UserLevelControlSettings** | [**UserLevelControlSettings**](UserLevelControlSettings.md) |  | [optional] 
+**PermissionDurationSettings** | [**GrantPermissionServiceDurationSettings**](GrantPermissionServiceDurationSettings.md) |  | [optional] 
+**PermissionSettings** | [**GrantPermissionServicePermissionSettings**](GrantPermissionServicePermissionSettings.md) |  | [optional] 
+**DefaultWelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] 
+**WelcomeEmailAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**RequestTemplate** | [**GrantPermissionRequest**](GrantPermissionRequest.md) |  | [optional] 
+**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**Department** | **String** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**Departments** | **String[]** |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
+**ApprovalProcessId** | **String** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] 
+**CategoryId** | **String** |  | [optional] 
+**Details** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGrantPermissionService  -AllowBreakPermissionInheritance null `
+$GrantPermissionService = New-Cloud.Governance.ClientGrantPermissionService  -AllowBreakPermissionInheritance null `
  -ScopeSettings null `
  -UserLevelControlSettings null `
  -PermissionDurationSettings null `
  -PermissionSettings null `
  -DefaultWelcomeEmailSettings null `
  -WelcomeEmailAssignBy null `
+ -RequestTemplate null `
  -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
@@ -59,14 +62,14 @@ New-Cloud.Governance.ClientGrantPermissionService  -AllowBreakPermissionInherita
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null
+ -CategoryId null `
+ -Details null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GrantPermissionService | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,21 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Order** | **Int32** |  | [optional] [default to null]
-**Relation** | [**LogicalOperator**](LogicalOperator.md) |  | [optional] [default to null]
-**Category** | [**CategoryType**](CategoryType.md) |  | [optional] [default to null]
-**MetadataId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**MetadataName** | **String** |  | [optional] [default to null]
-**MetadataValue** | **String** |  | [optional] [default to null]
-**MetadataDisplayValue** | **String** |  | [optional] [default to null]
-**Condition** | [**DynamicRuleCondition**](DynamicRuleCondition.md) |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**Order** | **Int32** |  | [optional] 
+**Relation** | [**LogicalOperator**](LogicalOperator.md) |  | [optional] 
+**Category** | [**CategoryType**](CategoryType.md) |  | [optional] 
+**MetadataId** | **String** |  | [optional] 
+**MetadataName** | **String** |  | [optional] 
+**MetadataValue** | **String** |  | [optional] 
+**MetadataDisplayValue** | **String** |  | [optional] 
+**Condition** | [**DynamicRuleCondition**](DynamicRuleCondition.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientDynamicGroupRuleInfo  -Id null `
+$DynamicGroupRuleInfo = New-Cloud.Governance.ClientDynamicGroupRuleInfo  -Id null `
  -Order null `
  -Relation null `
  -Category null `
@@ -28,11 +28,10 @@ New-Cloud.Governance.ClientDynamicGroupRuleInfo  -Id null `
  -Condition null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$DynamicGroupRuleInfo | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

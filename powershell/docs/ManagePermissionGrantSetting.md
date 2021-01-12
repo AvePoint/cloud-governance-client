@@ -3,29 +3,30 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnableGrantPermission** | **Boolean** |  | [optional] [default to null]
-**IsGrantTemporaryPermission** | **Boolean** |  | [optional] [default to null]
-**GrantPermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**TemporaryPermissionDuration** | **Int32** |  | [optional] [default to null]
-**TemporaryDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
-**IsMaxTemporaryDurationSetted** | **Boolean** |  | [optional] [default to null]
-**TemporaryPermissionMaxDuration** | **Int32** |  | [optional] [default to null]
-**TemporaryPermissionMaxDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
-**IsEnableExpireNotify** | **Boolean** |  | [optional] [default to null]
-**ExpireNotifyDuration** | **Int32** |  | [optional] [default to null]
-**ExpireNotifyDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
-**ExpireNotifyEmailTemplate** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**IsEnableWelcomeNotify** | **Boolean** |  | [optional] [default to null]
-**WelcomeEmailSubject** | **String** |  | [optional] [default to null]
-**WelcomeEmailBody** | **String** |  | [optional] [default to null]
-**WelcomeEmailAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**AllowSpecifyTemporayPermissionDuration** | **Boolean** |  | [optional] [default to null]
+**IsEnableGrantPermission** | **Boolean** |  | [optional] 
+**IsGrantTemporaryPermission** | **Boolean** |  | [optional] 
+**GrantPermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**TemporaryPermissionDuration** | **Int32** |  | [optional] 
+**TemporaryDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
+**IsMaxTemporaryDurationSetted** | **Boolean** |  | [optional] 
+**TemporaryPermissionMaxDuration** | **Int32** |  | [optional] 
+**TemporaryPermissionMaxDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
+**IsEnableExpireNotify** | **Boolean** |  | [optional] 
+**IsAllowSelectAdmin** | **Boolean** |  | [optional] 
+**ExpireNotifyDuration** | **Int32** |  | [optional] 
+**ExpireNotifyDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
+**ExpireNotifyEmailTemplate** | **String** |  | [optional] 
+**IsEnableWelcomeNotify** | **Boolean** |  | [optional] 
+**WelcomeEmailSubject** | **String** |  | [optional] 
+**WelcomeEmailBody** | **String** |  | [optional] 
+**WelcomeEmailAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**AllowSpecifyTemporayPermissionDuration** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientManagePermissionGrantSetting  -IsEnableGrantPermission null `
+$ManagePermissionGrantSetting = New-Cloud.Governance.ClientManagePermissionGrantSetting  -IsEnableGrantPermission null `
  -IsGrantTemporaryPermission null `
  -GrantPermissionAssignBy null `
  -TemporaryPermissionDuration null `
@@ -34,6 +35,7 @@ New-Cloud.Governance.ClientManagePermissionGrantSetting  -IsEnableGrantPermissio
  -TemporaryPermissionMaxDuration null `
  -TemporaryPermissionMaxDurationType null `
  -IsEnableExpireNotify null `
+ -IsAllowSelectAdmin null `
  -ExpireNotifyDuration null `
  -ExpireNotifyDurationType null `
  -ExpireNotifyEmailTemplate null `
@@ -44,11 +46,10 @@ New-Cloud.Governance.ClientManagePermissionGrantSetting  -IsEnableGrantPermissio
  -AllowSpecifyTemporayPermissionDuration null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ManagePermissionGrantSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteUrl** | **String** |  | [optional] [default to null]
-**WebId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**WebUrl** | **String** |  | [optional] [default to null]
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ObjectUrl** | **String** |  | [optional] [default to null]
-**ObjectTitle** | **String** |  | [optional] [default to null]
+**SiteUrl** | **String** |  | [optional] 
+**WebId** | **String** |  | [optional] 
+**WebUrl** | **String** |  | [optional] 
+**SiteId** | **String** |  | [optional] 
+**ObjectUrl** | **String** |  | [optional] 
+**ObjectTitle** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeListSettingObjectInfo  -SiteUrl null `
+$ChangeListSettingObjectInfo = New-Cloud.Governance.ClientChangeListSettingObjectInfo  -SiteUrl null `
  -WebId null `
  -WebUrl null `
  -SiteId null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientChangeListSettingObjectInfo  -SiteUrl null `
  -ObjectTitle null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeListSettingObjectInfo | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

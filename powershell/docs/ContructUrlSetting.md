@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | **String[]** |  | [optional] [default to null]
-**Suffix** | **String** |  | [optional] [default to null]
-**Connection** | **String** |  | [optional] [default to null]
-**ContructUrlAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
+**Rules** | **String[]** |  | [optional] 
+**Suffix** | **String** |  | [optional] 
+**Connection** | **String** |  | [optional] 
+**ContructUrlAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientContructUrlSetting  -Rules null `
+$ContructUrlSetting = New-Cloud.Governance.ClientContructUrlSetting  -Rules null `
  -Suffix null `
  -Connection null `
  -ContructUrlAssignBy null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ContructUrlSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

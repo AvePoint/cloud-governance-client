@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -69,31 +70,31 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ChangeQuotaSetting
         /// </summary>
-        [DataMember(Name = "changeQuotaSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "changeQuotaSetting", EmitDefaultValue = true)]
         public ChangeSiteQuotaSettings ChangeQuotaSetting { get; set; }
 
         /// <summary>
         /// Gets or Sets ExtendSetting
         /// </summary>
-        [DataMember(Name = "extendSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "extendSetting", EmitDefaultValue = true)]
         public ExtendSiteSetting ExtendSetting { get; set; }
 
         /// <summary>
         /// Gets or Sets UnlockSetting
         /// </summary>
-        [DataMember(Name = "unlockSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "unlockSetting", EmitDefaultValue = true)]
         public UnlockSiteSetting UnlockSetting { get; set; }
 
         /// <summary>
         /// Gets or Sets ChangePolicySetting
         /// </summary>
-        [DataMember(Name = "changePolicySetting", EmitDefaultValue = false)]
+        [DataMember(Name = "changePolicySetting", EmitDefaultValue = true)]
         public ChangeSitePolicySetting ChangePolicySetting { get; set; }
 
         /// <summary>
         /// Gets or Sets LockSetting
         /// </summary>
-        [DataMember(Name = "lockSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "lockSetting", EmitDefaultValue = true)]
         public LockSiteSetting LockSetting { get; set; }
 
         /// <summary>

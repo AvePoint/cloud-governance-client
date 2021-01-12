@@ -3,23 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsIncludeVersions** | **Boolean** |  | [optional] [default to null]
-**IsIncludeWorkflowDefinition** | **Boolean** |  | [optional] [default to null]
-**IsDisableInformationRightsManagement** | **Boolean** |  | [optional] [default to null]
-**IsPreserveNullColumnValues** | **Boolean** |  | [optional] [default to null]
-**IsKeepModifiedByAndModifiedTime** | **Boolean** |  | [optional] [default to null]
-**ProfileMappings** | [**ContentMoveProfileMappings**](ContentMoveProfileMappings.md) |  | [optional] [default to null]
-**BackupSettings** | [**BackupEnvironmentSetting**](BackupEnvironmentSetting.md) |  | [optional] [default to null]
-**ConflictResolutionSettings** | [**ConflictResolutionSetting**](ConflictResolutionSetting.md) |  | [optional] [default to null]
-**FilterPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
-**DeleteType** | [**DeleteType**](DeleteType.md) |  | [optional] [default to null]
-**IsDeleteCheckedFiles** | **Boolean** |  | [optional] [default to null]
+**IsIncludeVersions** | **Boolean** |  | [optional] 
+**IsIncludeWorkflowDefinition** | **Boolean** |  | [optional] 
+**IsDisableInformationRightsManagement** | **Boolean** |  | [optional] 
+**IsPreserveNullColumnValues** | **Boolean** |  | [optional] 
+**IsKeepModifiedByAndModifiedTime** | **Boolean** |  | [optional] 
+**ProfileMappings** | [**ContentMoveProfileMappings**](ContentMoveProfileMappings.md) |  | [optional] 
+**BackupSettings** | [**BackupEnvironmentSetting**](BackupEnvironmentSetting.md) |  | [optional] 
+**ConflictResolutionSettings** | [**ConflictResolutionSetting**](ConflictResolutionSetting.md) |  | [optional] 
+**FilterPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**DeleteType** | [**DeleteType**](DeleteType.md) |  | [optional] 
+**IsDeleteCheckedFiles** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientContentMoveCommonSetting  -IsIncludeVersions null `
+$ContentMoveCommonSetting = New-Cloud.Governance.ClientContentMoveCommonSetting  -IsIncludeVersions null `
  -IsIncludeWorkflowDefinition null `
  -IsDisableInformationRightsManagement null `
  -IsPreserveNullColumnValues null `
@@ -32,11 +32,10 @@ New-Cloud.Governance.ClientContentMoveCommonSetting  -IsIncludeVersions null `
  -IsDeleteCheckedFiles null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ContentMoveCommonSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

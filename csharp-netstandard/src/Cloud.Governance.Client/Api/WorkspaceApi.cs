@@ -19,6 +19,24 @@ namespace Cloud.Governance.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// get group/teams metadata
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>List&lt;RequestMetadata&gt;</returns>
+        List<RequestMetadata> GetGroupMetadata(Guid id);
+
+        /// <summary>
+        /// get group/teams metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of List&lt;RequestMetadata&gt;</returns>
+        ApiResponse<List<RequestMetadata>> GetGroupMetadataWithHttpInfo(Guid id);
+        /// <summary>
         /// get O365 group/teams information
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -55,11 +73,29 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of MySite</returns>
         ApiResponse<MySite> GetMySiteInformationWithHttpInfo(Guid id);
         /// <summary>
+        /// get site metadata
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <returns>List&lt;CustomMetadata&gt;</returns>
+        List<CustomMetadata> GetSiteMetadata(string url);
+
+        /// <summary>
+        /// get site metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <returns>ApiResponse of List&lt;CustomMetadata&gt;</returns>
+        ApiResponse<List<CustomMetadata>> GetSiteMetadataWithHttpInfo(string url);
+        /// <summary>
         /// get my workspace items
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -74,8 +110,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -91,6 +127,29 @@ namespace Cloud.Governance.Client.Api
     public interface IWorkspaceApiAsync : IApiAccessor
     {
         #region Asynchronous Operations
+        /// <summary>
+        /// get group/teams metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;RequestMetadata&gt;</returns>
+        System.Threading.Tasks.Task<List<RequestMetadata>> GetGroupMetadataAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get group/teams metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;RequestMetadata&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<RequestMetadata>>> GetGroupMetadataWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get O365 group/teams information
         /// </summary>
@@ -138,14 +197,37 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (MySite)</returns>
         System.Threading.Tasks.Task<ApiResponse<MySite>> GetMySiteInformationWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// get site metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CustomMetadata&gt;</returns>
+        System.Threading.Tasks.Task<List<CustomMetadata>> GetSiteMetadataAsync(string url, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get site metadata
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CustomMetadata&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CustomMetadata>>> GetSiteMetadataWithHttpInfoAsync(string url, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// get my workspace items
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -161,8 +243,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -291,6 +373,135 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// get group/teams metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>List&lt;RequestMetadata&gt;</returns>
+        public List<RequestMetadata> GetGroupMetadata(Guid id)
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<RequestMetadata>> localVarResponse = GetGroupMetadataWithHttpInfo(id);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get group/teams metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of List&lt;RequestMetadata&gt;</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<List<RequestMetadata>> GetGroupMetadataWithHttpInfo(Guid id)
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<RequestMetadata>>("/workspace/groups/{id}/metadata", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetGroupMetadata", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get group/teams metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;RequestMetadata&gt;</returns>
+        public async System.Threading.Tasks.Task<List<RequestMetadata>> GetGroupMetadataAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<RequestMetadata>> localVarResponse = await GetGroupMetadataWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get group/teams metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;RequestMetadata&gt;)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<RequestMetadata>>> GetGroupMetadataWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<RequestMetadata>>("/workspace/groups/{id}/metadata", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetGroupMetadata", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// get O365 group/teams information 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -318,8 +529,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -384,8 +594,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -449,8 +658,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -515,8 +723,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -553,11 +760,148 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// get site metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <returns>List&lt;CustomMetadata&gt;</returns>
+        public List<CustomMetadata> GetSiteMetadata(string url)
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<CustomMetadata>> localVarResponse = GetSiteMetadataWithHttpInfo(url);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get site metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <returns>ApiResponse of List&lt;CustomMetadata&gt;</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<List<CustomMetadata>> GetSiteMetadataWithHttpInfo(string url)
+        {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling WorkspaceApi->GetSiteMetadata");
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url));
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<CustomMetadata>>("/workspace/sites/metadata", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetSiteMetadata", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get site metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;CustomMetadata&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CustomMetadata>> GetSiteMetadataAsync(string url, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<CustomMetadata>> localVarResponse = await GetSiteMetadataWithHttpInfoAsync(url, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get site metadata 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;CustomMetadata&gt;)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<CustomMetadata>>> GetSiteMetadataWithHttpInfoAsync(string url, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling WorkspaceApi->GetSiteMetadata");
+
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url));
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CustomMetadata>>("/workspace/sites/metadata", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetSiteMetadata", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// get my workspace items 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -573,8 +917,8 @@ namespace Cloud.Governance.Client.Api
         /// get my workspace items 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -590,8 +934,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -652,8 +995,8 @@ namespace Cloud.Governance.Client.Api
         /// get my workspace items 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -670,8 +1013,8 @@ namespace Cloud.Governance.Client.Api
         /// get my workspace items 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, primaryContactEmail, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -689,8 +1032,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 

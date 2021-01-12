@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -64,37 +65,37 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets OriginalPrimaryContact
         /// </summary>
-        [DataMember(Name = "originalPrimaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "originalPrimaryContact", EmitDefaultValue = true)]
         public ApiUser OriginalPrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets NewPrimaryContact
         /// </summary>
-        [DataMember(Name = "newPrimaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "newPrimaryContact", EmitDefaultValue = true)]
         public ApiUser NewPrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets OriginalSecondaryContact
         /// </summary>
-        [DataMember(Name = "originalSecondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "originalSecondaryContact", EmitDefaultValue = true)]
         public ApiUser OriginalSecondaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets NewSecondaryContact
         /// </summary>
-        [DataMember(Name = "newSecondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "newSecondaryContact", EmitDefaultValue = true)]
         public ApiUser NewSecondaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets OriginalPrimaryAdministrator
         /// </summary>
-        [DataMember(Name = "originalPrimaryAdministrator", EmitDefaultValue = false)]
+        [DataMember(Name = "originalPrimaryAdministrator", EmitDefaultValue = true)]
         public ApiUser OriginalPrimaryAdministrator { get; set; }
 
         /// <summary>
         /// Gets or Sets NewPrimaryAdministrator
         /// </summary>
-        [DataMember(Name = "newPrimaryAdministrator", EmitDefaultValue = false)]
+        [DataMember(Name = "newPrimaryAdministrator", EmitDefaultValue = true)]
         public ApiUser NewPrimaryAdministrator { get; set; }
 
         /// <summary>

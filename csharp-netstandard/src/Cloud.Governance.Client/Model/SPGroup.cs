@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -47,7 +48,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="autoAcceptRequestToJoinLeave">autoAcceptRequestToJoinLeave.</param>
         /// <param name="requestToJoinLeaveEmailSetting">requestToJoinLeaveEmailSetting.</param>
         /// <param name="isTemporaryGroup">isTemporaryGroup.</param>
-        public SPGroup(int id = default(int), string name = default(string), string description = default(string), SPPrincipal owner = default(SPPrincipal), List<ApiUser> members = default(List<ApiUser>), List<string> permissionLevels = default(List<string>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), bool isAllowJoinOrLeaveRequest = default(bool), bool autoAcceptRequestToJoinLeave = default(bool), string requestToJoinLeaveEmailSetting = default(string), bool isTemporaryGroup = default(bool))
+        /// <param name="roleID">roleID.</param>
+        public SPGroup(int id = default(int), string name = default(string), string description = default(string), SPPrincipal owner = default(SPPrincipal), List<ApiUser> members = default(List<ApiUser>), List<string> permissionLevels = default(List<string>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), bool isAllowJoinOrLeaveRequest = default(bool), bool autoAcceptRequestToJoinLeave = default(bool), string requestToJoinLeaveEmailSetting = default(string), bool isTemporaryGroup = default(bool), List<string> roleID = default(List<string>))
         {
             this.Id = id;
             this.Name = name;
@@ -61,6 +63,7 @@ namespace Cloud.Governance.Client.Model
             this.AutoAcceptRequestToJoinLeave = autoAcceptRequestToJoinLeave;
             this.RequestToJoinLeaveEmailSetting = requestToJoinLeaveEmailSetting;
             this.IsTemporaryGroup = isTemporaryGroup;
+            this.RoleID = roleID;
         }
 
         /// <summary>
@@ -84,7 +87,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Owner
         /// </summary>
-        [DataMember(Name = "owner", EmitDefaultValue = false)]
+        [DataMember(Name = "owner", EmitDefaultValue = true)]
         public SPPrincipal Owner { get; set; }
 
         /// <summary>
@@ -124,6 +127,12 @@ namespace Cloud.Governance.Client.Model
         public bool IsTemporaryGroup { get; set; }
 
         /// <summary>
+        /// Gets or Sets RoleID
+        /// </summary>
+        [DataMember(Name = "roleID", EmitDefaultValue = true)]
+        public List<string> RoleID { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -143,6 +152,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  AutoAcceptRequestToJoinLeave: ").Append(AutoAcceptRequestToJoinLeave).Append("\n");
             sb.Append("  RequestToJoinLeaveEmailSetting: ").Append(RequestToJoinLeaveEmailSetting).Append("\n");
             sb.Append("  IsTemporaryGroup: ").Append(IsTemporaryGroup).Append("\n");
+            sb.Append("  RoleID: ").Append(RoleID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -232,6 +242,12 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.IsTemporaryGroup == input.IsTemporaryGroup ||
                     this.IsTemporaryGroup.Equals(input.IsTemporaryGroup)
+                ) && 
+                (
+                    this.RoleID == input.RoleID ||
+                    this.RoleID != null &&
+                    input.RoleID != null &&
+                    this.RoleID.SequenceEqual(input.RoleID)
                 );
         }
 
@@ -262,6 +278,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.RequestToJoinLeaveEmailSetting != null)
                     hashCode = hashCode * 59 + this.RequestToJoinLeaveEmailSetting.GetHashCode();
                 hashCode = hashCode * 59 + this.IsTemporaryGroup.GetHashCode();
+                if (this.RoleID != null)
+                    hashCode = hashCode * 59 + this.RoleID.GetHashCode();
                 return hashCode;
             }
         }

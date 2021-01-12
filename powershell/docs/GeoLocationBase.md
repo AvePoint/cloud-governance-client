@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **String** |  | [optional] [default to null]
-**DisplayName** | **String** |  | [optional] [default to null]
+**Name** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGeoLocationBase  -Name null `
+$GeoLocationBase = New-Cloud.Governance.ClientGeoLocationBase  -Name null `
  -DisplayName null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GeoLocationBase | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

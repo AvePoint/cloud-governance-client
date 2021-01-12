@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableCreateTeamFromScratch** | **Boolean** |  | [optional] [default to null]
-**EnableCreateTeamFromExistTeam** | **Boolean** |  | [optional] [default to null]
-**EnableCreateTeamFromIT** | **Boolean** |  | [optional] [default to null]
-**EnableCreateTeamFromOwned** | **Boolean** |  | [optional] [default to null]
-**TemplateTeams** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
+**EnableCreateTeamFromScratch** | **Boolean** |  | [optional] 
+**EnableCreateTeamFromExistTeam** | **Boolean** |  | [optional] 
+**EnableCreateTeamFromIT** | **Boolean** |  | [optional] 
+**EnableCreateTeamFromOwned** | **Boolean** |  | [optional] 
+**TemplateTeams** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTeamsTemplateServiceSettings  -EnableCreateTeamFromScratch null `
+$TeamsTemplateServiceSettings = New-Cloud.Governance.ClientTeamsTemplateServiceSettings  -EnableCreateTeamFromScratch null `
  -EnableCreateTeamFromExistTeam null `
  -EnableCreateTeamFromIT null `
  -EnableCreateTeamFromOwned null `
  -TemplateTeams null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TeamsTemplateServiceSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

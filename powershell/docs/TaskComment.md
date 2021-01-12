@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssigneeDisplayName** | **String** |  | [optional] [default to null]
-**CommentTime** | **System.DateTime** |  | [optional] [default to null]
-**Content** | **String** |  | [optional] [default to null]
+**AssigneeDisplayName** | **String** |  | [optional] 
+**CommentTime** | **System.DateTime** |  | [optional] 
+**Content** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTaskComment  -AssigneeDisplayName null `
+$TaskComment = New-Cloud.Governance.ClientTaskComment  -AssigneeDisplayName null `
  -CommentTime null `
  -Content null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TaskComment | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

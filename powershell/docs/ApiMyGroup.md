@@ -3,39 +3,49 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectId** | **String** |  | [optional] [default to null]
-**PolicyId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**TenantId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**GroupName** | **String** |  | [optional] [default to null]
-**Email** | **String** |  | [optional] [default to null]
-**Language** | **String** |  | [optional] [default to null]
-**ApplyPolicyStatus** | **Int32** |  | [optional] [default to null]
-**EnableTeamCollaboration** | **Boolean** |  | [optional] [default to null]
-**GroupType** | **String** |  | [optional] [readonly] [default to null]
-**CreatedTime** | **System.DateTime** |  | [optional] [default to null]
-**Owners** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**PreferredDataLocation** | **String** |  | [optional] [default to null]
-**PreferredDataLocationName** | **String** |  | [optional] [readonly] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] [default to null]
-**PhaseStartTime** | **System.DateTime** |  | [optional] [default to null]
-**PhaseDescription** | **String** |  | [optional] [readonly] [default to null]
-**AutoImportProfileId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**AutoImportProfileName** | **String** |  | [optional] [default to null]
-**PolicyName** | **String** |  | [optional] [default to null]
-**PolicyDescription** | **String** |  | [optional] [default to null]
-**IsCurrentRenewer** | **Boolean** |  | [optional] [default to null]
-**PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**PhaseDueDate** | **System.DateTime** |  | [optional] [default to null]
-**Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] [default to null]
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
+**ObjectId** | **String** |  | [optional] 
+**PolicyId** | **String** |  | [optional] 
+**TenantId** | **String** |  | [optional] 
+**GroupName** | **String** |  | [optional] 
+**Email** | **String** |  | [optional] 
+**Language** | **String** |  | [optional] 
+**ApplyPolicyStatus** | **Int32** |  | [optional] 
+**EnableTeamCollaboration** | **Boolean** |  | [optional] 
+**GroupType** | **String** |  | [optional] 
+**CreatedTime** | **System.DateTime** |  | [optional] 
+**Owners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**PreferredDataLocation** | **String** |  | [optional] 
+**PreferredDataLocationName** | **String** |  | [optional] 
+**EnableDynamicMembership** | **Boolean** |  | [optional] 
+**GroupTeamSiteUrl** | **String** |  | [optional] 
+**TeamLink** | **String** |  | [optional] 
+**NoteBookLink** | **String** |  | [optional] 
+**PlannerLink** | **String** |  | [optional] 
+**Classification** | **String** |  | [optional] 
+**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
+**GroupObjectId** | **String** |  | [optional] 
+**NetworkId** | **String** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
+**PhaseStartTime** | **System.DateTime** |  | [optional] 
+**PhaseDescription** | **String** |  | [optional] 
+**AutoImportProfileId** | **String** |  | [optional] 
+**AutoImportProfileName** | **String** |  | [optional] 
+**PolicyName** | **String** |  | [optional] 
+**PolicyDescription** | **String** |  | [optional] 
+**IsCurrentRenewer** | **Boolean** |  | [optional] 
+**PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**PhaseDueDate** | **System.DateTime** |  | [optional] 
+**Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
+$ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -PolicyId null `
  -TenantId null `
  -GroupName null `
@@ -48,6 +58,15 @@ New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -Owners null `
  -PreferredDataLocation null `
  -PreferredDataLocationName null `
+ -EnableDynamicMembership null `
+ -GroupTeamSiteUrl null `
+ -TeamLink null `
+ -NoteBookLink null `
+ -PlannerLink null `
+ -Classification null `
+ -GroupObjectType null `
+ -GroupObjectId null `
+ -NetworkId null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `
@@ -61,14 +80,14 @@ New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -PhaseDueDate null `
  -Metadatas null `
  -PrimaryContact null `
- -SecondaryContact null
+ -SecondaryContact null `
+ -ErrorMessage null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ApiMyGroup | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

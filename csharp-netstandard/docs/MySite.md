@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Department** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Size** | **long?** |  | [optional] 
+**QuotaSize** | **long** |  | [optional] 
 **Type** | **MySiteType** |  | [optional] 
 **MySiteType** | **string** |  | [optional] 
 **Classification** | **string** |  | [optional] 

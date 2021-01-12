@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -42,31 +43,31 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets BeforeApprovalProcessExecution
         /// </summary>
-        [DataMember(Name = "beforeApprovalProcessExecution", EmitDefaultValue = false)]
+        [DataMember(Name = "beforeApprovalProcessExecution", EmitDefaultValue = true)]
         public ExecutionModel BeforeApprovalProcessExecution { get; set; }
 
         /// <summary>
         /// Gets or Sets AfterApprovalProcessExecution
         /// </summary>
-        [DataMember(Name = "afterApprovalProcessExecution", EmitDefaultValue = false)]
+        [DataMember(Name = "afterApprovalProcessExecution", EmitDefaultValue = true)]
         public ExecutionModel AfterApprovalProcessExecution { get; set; }
 
         /// <summary>
         /// Gets or Sets PostExecution
         /// </summary>
-        [DataMember(Name = "postExecution", EmitDefaultValue = false)]
+        [DataMember(Name = "postExecution", EmitDefaultValue = true)]
         public ExecutionModel PostExecution { get; set; }
 
         /// <summary>
         /// Gets or Sets BeforeSubmission
         /// </summary>
-        [DataMember(Name = "beforeSubmission", EmitDefaultValue = false)]
+        [DataMember(Name = "beforeSubmission", EmitDefaultValue = true)]
         public ExecutionModel BeforeSubmission { get; set; }
 
         /// <summary>
         /// Gets or Sets WhenErrorTaskGenerated
         /// </summary>
-        [DataMember(Name = "whenErrorTaskGenerated", EmitDefaultValue = false)]
+        [DataMember(Name = "whenErrorTaskGenerated", EmitDefaultValue = true)]
         public ExecutionModel WhenErrorTaskGenerated { get; set; }
 
         /// <summary>

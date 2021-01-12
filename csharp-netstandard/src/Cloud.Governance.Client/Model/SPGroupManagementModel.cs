@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -53,7 +54,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isAutoAcceptRequest">isAutoAcceptRequest.</param>
         /// <param name="sendMembershipRequestEmailAddress">sendMembershipRequestEmailAddress.</param>
         /// <param name="isTemporaryGroup">isTemporaryGroup.</param>
-        public SPGroupManagementModel(int id = default(int), StringChangedProperty name = default(StringChangedProperty), string description = default(string), ApiUser owner = default(ApiUser), List<SPUserManagementModel> members = default(List<SPUserManagementModel>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), List<string> permissions = default(List<string>), ManagePermissionAction? action = default(ManagePermissionAction?), bool isAllowJoinOrLeaveRequest = default(bool), bool isAutoAcceptRequest = default(bool), string sendMembershipRequestEmailAddress = default(string), bool isTemporaryGroup = default(bool))
+        /// <param name="roleID">roleID.</param>
+        public SPGroupManagementModel(int id = default(int), StringChangedProperty name = default(StringChangedProperty), string description = default(string), ApiUser owner = default(ApiUser), List<SPUserManagementModel> members = default(List<SPUserManagementModel>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), List<string> permissions = default(List<string>), ManagePermissionAction? action = default(ManagePermissionAction?), bool isAllowJoinOrLeaveRequest = default(bool), bool isAutoAcceptRequest = default(bool), string sendMembershipRequestEmailAddress = default(string), bool isTemporaryGroup = default(bool), List<string> roleID = default(List<string>))
         {
             this.Id = id;
             this.Name = name;
@@ -68,6 +70,7 @@ namespace Cloud.Governance.Client.Model
             this.IsAutoAcceptRequest = isAutoAcceptRequest;
             this.SendMembershipRequestEmailAddress = sendMembershipRequestEmailAddress;
             this.IsTemporaryGroup = isTemporaryGroup;
+            this.RoleID = roleID;
         }
 
         /// <summary>
@@ -79,7 +82,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "name", EmitDefaultValue = true)]
         public StringChangedProperty Name { get; set; }
 
         /// <summary>
@@ -91,7 +94,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Owner
         /// </summary>
-        [DataMember(Name = "owner", EmitDefaultValue = false)]
+        [DataMember(Name = "owner", EmitDefaultValue = true)]
         public ApiUser Owner { get; set; }
 
         /// <summary>
@@ -131,6 +134,12 @@ namespace Cloud.Governance.Client.Model
         public bool IsTemporaryGroup { get; set; }
 
         /// <summary>
+        /// Gets or Sets RoleID
+        /// </summary>
+        [DataMember(Name = "roleID", EmitDefaultValue = true)]
+        public List<string> RoleID { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -151,6 +160,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsAutoAcceptRequest: ").Append(IsAutoAcceptRequest).Append("\n");
             sb.Append("  SendMembershipRequestEmailAddress: ").Append(SendMembershipRequestEmailAddress).Append("\n");
             sb.Append("  IsTemporaryGroup: ").Append(IsTemporaryGroup).Append("\n");
+            sb.Append("  RoleID: ").Append(RoleID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -244,6 +254,12 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.IsTemporaryGroup == input.IsTemporaryGroup ||
                     this.IsTemporaryGroup.Equals(input.IsTemporaryGroup)
+                ) && 
+                (
+                    this.RoleID == input.RoleID ||
+                    this.RoleID != null &&
+                    input.RoleID != null &&
+                    this.RoleID.SequenceEqual(input.RoleID)
                 );
         }
 
@@ -275,6 +291,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.SendMembershipRequestEmailAddress != null)
                     hashCode = hashCode * 59 + this.SendMembershipRequestEmailAddress.GetHashCode();
                 hashCode = hashCode * 59 + this.IsTemporaryGroup.GetHashCode();
+                if (this.RoleID != null)
+                    hashCode = hashCode * 59 + this.RoleID.GetHashCode();
                 return hashCode;
             }
         }

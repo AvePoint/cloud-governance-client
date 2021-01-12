@@ -30,6 +30,8 @@ Name | Type | Description | Notes
 **PhysicalDeliveryOfficeName** | **string** |  | [optional] 
 **IsOtherTenantUser** | **bool** |  | [optional] 
 **NetworkId** | **string** |  | [optional] 
+**IsValidateByProfile** | **bool** |  | [optional] 
+**ProxyAddresses** | **List&lt;string&gt;** |  | [optional] 
 **Id** | **int** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 

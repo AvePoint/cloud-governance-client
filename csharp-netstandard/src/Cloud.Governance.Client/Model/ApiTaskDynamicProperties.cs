@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -45,7 +46,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="requester">requester.</param>
         /// <param name="isTeam">isTeam.</param>
         /// <param name="groupOwnersStr">groupOwnersStr.</param>
-        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object groupOwnersStr = default(Object))
+        /// <param name="tenantId">tenantId.</param>
+        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object groupOwnersStr = default(Object), Object tenantId = default(Object))
         {
             this.None = none;
             this.PrimaryContact = primaryContact;
@@ -67,127 +69,134 @@ namespace Cloud.Governance.Client.Model
             this.Requester = requester;
             this.IsTeam = isTeam;
             this.GroupOwnersStr = groupOwnersStr;
+            this.TenantId = tenantId;
         }
 
         /// <summary>
         /// Gets or Sets None
         /// </summary>
-        [DataMember(Name = "None", EmitDefaultValue = false)]
+        [DataMember(Name = "None", EmitDefaultValue = true)]
         public Object None { get; set; }
 
         /// <summary>
         /// Gets or Sets PrimaryContact
         /// </summary>
-        [DataMember(Name = "PrimaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "PrimaryContact", EmitDefaultValue = true)]
         public Object PrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets SecondaryContact
         /// </summary>
-        [DataMember(Name = "SecondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "SecondaryContact", EmitDefaultValue = true)]
         public Object SecondaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteId
         /// </summary>
-        [DataMember(Name = "SiteId", EmitDefaultValue = false)]
+        [DataMember(Name = "SiteId", EmitDefaultValue = true)]
         public Object SiteId { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteUrl
         /// </summary>
-        [DataMember(Name = "SiteUrl", EmitDefaultValue = false)]
+        [DataMember(Name = "SiteUrl", EmitDefaultValue = true)]
         public Object SiteUrl { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupName
         /// </summary>
-        [DataMember(Name = "GroupName", EmitDefaultValue = false)]
+        [DataMember(Name = "GroupName", EmitDefaultValue = true)]
         public Object GroupName { get; set; }
 
         /// <summary>
         /// Gets or Sets ExpirationDate
         /// </summary>
-        [DataMember(Name = "ExpirationDate", EmitDefaultValue = false)]
+        [DataMember(Name = "ExpirationDate", EmitDefaultValue = true)]
         public Object ExpirationDate { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupOwners
         /// </summary>
-        [DataMember(Name = "GroupOwners", EmitDefaultValue = false)]
+        [DataMember(Name = "GroupOwners", EmitDefaultValue = true)]
         public Object GroupOwners { get; set; }
 
         /// <summary>
         /// Gets or Sets AutoTaskActionHistories
         /// </summary>
-        [DataMember(Name = "AutoTaskActionHistories", EmitDefaultValue = false)]
+        [DataMember(Name = "AutoTaskActionHistories", EmitDefaultValue = true)]
         public Object AutoTaskActionHistories { get; set; }
 
         /// <summary>
         /// Gets or Sets InactivityThresholdDate
         /// </summary>
-        [DataMember(Name = "InactivityThresholdDate", EmitDefaultValue = false)]
+        [DataMember(Name = "InactivityThresholdDate", EmitDefaultValue = true)]
         public Object InactivityThresholdDate { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupEmail
         /// </summary>
-        [DataMember(Name = "GroupEmail", EmitDefaultValue = false)]
+        [DataMember(Name = "GroupEmail", EmitDefaultValue = true)]
         public Object GroupEmail { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupId
         /// </summary>
-        [DataMember(Name = "GroupId", EmitDefaultValue = false)]
+        [DataMember(Name = "GroupId", EmitDefaultValue = true)]
         public Object GroupId { get; set; }
 
         /// <summary>
         /// Gets or Sets PolicyName
         /// </summary>
-        [DataMember(Name = "PolicyName", EmitDefaultValue = false)]
+        [DataMember(Name = "PolicyName", EmitDefaultValue = true)]
         public Object PolicyName { get; set; }
 
         /// <summary>
         /// Gets or Sets PrimaryAdministrator
         /// </summary>
-        [DataMember(Name = "PrimaryAdministrator", EmitDefaultValue = false)]
+        [DataMember(Name = "PrimaryAdministrator", EmitDefaultValue = true)]
         public Object PrimaryAdministrator { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteTemplate
         /// </summary>
-        [DataMember(Name = "SiteTemplate", EmitDefaultValue = false)]
+        [DataMember(Name = "SiteTemplate", EmitDefaultValue = true)]
         public Object SiteTemplate { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteTitle
         /// </summary>
-        [DataMember(Name = "SiteTitle", EmitDefaultValue = false)]
+        [DataMember(Name = "SiteTitle", EmitDefaultValue = true)]
         public Object SiteTitle { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteDescription
         /// </summary>
-        [DataMember(Name = "SiteDescription", EmitDefaultValue = false)]
+        [DataMember(Name = "SiteDescription", EmitDefaultValue = true)]
         public Object SiteDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets Requester
         /// </summary>
-        [DataMember(Name = "Requester", EmitDefaultValue = false)]
+        [DataMember(Name = "Requester", EmitDefaultValue = true)]
         public Object Requester { get; set; }
 
         /// <summary>
         /// Gets or Sets IsTeam
         /// </summary>
-        [DataMember(Name = "IsTeam", EmitDefaultValue = false)]
+        [DataMember(Name = "IsTeam", EmitDefaultValue = true)]
         public Object IsTeam { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupOwnersStr
         /// </summary>
-        [DataMember(Name = "GroupOwnersStr", EmitDefaultValue = false)]
+        [DataMember(Name = "GroupOwnersStr", EmitDefaultValue = true)]
         public Object GroupOwnersStr { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TenantId
+        /// </summary>
+        [DataMember(Name = "TenantId", EmitDefaultValue = true)]
+        public Object TenantId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -217,6 +226,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Requester: ").Append(Requester).Append("\n");
             sb.Append("  IsTeam: ").Append(IsTeam).Append("\n");
             sb.Append("  GroupOwnersStr: ").Append(GroupOwnersStr).Append("\n");
+            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -350,6 +360,11 @@ namespace Cloud.Governance.Client.Model
                     this.GroupOwnersStr == input.GroupOwnersStr ||
                     (this.GroupOwnersStr != null &&
                     this.GroupOwnersStr.Equals(input.GroupOwnersStr))
+                ) && 
+                (
+                    this.TenantId == input.TenantId ||
+                    (this.TenantId != null &&
+                    this.TenantId.Equals(input.TenantId))
                 );
         }
 
@@ -402,6 +417,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.IsTeam.GetHashCode();
                 if (this.GroupOwnersStr != null)
                     hashCode = hashCode * 59 + this.GroupOwnersStr.GetHashCode();
+                if (this.TenantId != null)
+                    hashCode = hashCode * 59 + this.TenantId.GetHashCode();
                 return hashCode;
             }
         }

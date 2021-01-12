@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Tenant** | **String** |  | [optional] [readonly] [default to null]
-**Property** | **String** |  | [optional] [readonly] [default to null]
-**TargetUser** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**UserPropertyValue** | **String** |  | [optional] [default to null]
-**UserPropertyDisplayValue** | **String** |  | [optional] [default to null]
+**Tenant** | **String** |  | [optional] [readonly] 
+**Property** | **String** |  | [optional] [readonly] 
+**TargetUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**UserPropertyValue** | **String** |  | [optional] 
+**UserPropertyDisplayValue** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientLookupValue  -Tenant null `
+$LookupValue = New-Cloud.Governance.ClientLookupValue  -Tenant null `
  -Property null `
  -TargetUser null `
  -UserPropertyValue null `
  -UserPropertyDisplayValue null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$LookupValue | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

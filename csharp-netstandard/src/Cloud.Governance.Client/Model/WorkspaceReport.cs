@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -63,7 +64,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="leaseExpirationTime">leaseExpirationTime.</param>
         /// <param name="inactivityThresholdTime">inactivityThresholdTime.</param>
         /// <param name="metadata">metadata.</param>
-        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = default(long?), double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>))
+        /// <param name="hasOngoingTasks">hasOngoingTasks.</param>
+        /// <param name="lastRenewalTime">lastRenewalTime.</param>
+        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = default(long?), double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>), string hasOngoingTasks = default(string), DateTime? lastRenewalTime = default(DateTime?))
         {
             this.Id = id;
             this.Name = name;
@@ -103,6 +106,8 @@ namespace Cloud.Governance.Client.Model
             this.LeaseExpirationTime = leaseExpirationTime;
             this.InactivityThresholdTime = inactivityThresholdTime;
             this.Metadata = metadata;
+            this.HasOngoingTasks = hasOngoingTasks;
+            this.LastRenewalTime = lastRenewalTime;
         }
 
         /// <summary>
@@ -334,6 +339,18 @@ namespace Cloud.Governance.Client.Model
         public Dictionary<string, string> Metadata { get; set; }
 
         /// <summary>
+        /// Gets or Sets HasOngoingTasks
+        /// </summary>
+        [DataMember(Name = "HasOngoingTasks", EmitDefaultValue = true)]
+        public string HasOngoingTasks { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LastRenewalTime
+        /// </summary>
+        [DataMember(Name = "LastRenewalTime", EmitDefaultValue = true)]
+        public DateTime? LastRenewalTime { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -379,6 +396,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LeaseExpirationTime: ").Append(LeaseExpirationTime).Append("\n");
             sb.Append("  InactivityThresholdTime: ").Append(InactivityThresholdTime).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  HasOngoingTasks: ").Append(HasOngoingTasks).Append("\n");
+            sb.Append("  LastRenewalTime: ").Append(LastRenewalTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -603,6 +622,16 @@ namespace Cloud.Governance.Client.Model
                     this.Metadata != null &&
                     input.Metadata != null &&
                     this.Metadata.SequenceEqual(input.Metadata)
+                ) && 
+                (
+                    this.HasOngoingTasks == input.HasOngoingTasks ||
+                    (this.HasOngoingTasks != null &&
+                    this.HasOngoingTasks.Equals(input.HasOngoingTasks))
+                ) && 
+                (
+                    this.LastRenewalTime == input.LastRenewalTime ||
+                    (this.LastRenewalTime != null &&
+                    this.LastRenewalTime.Equals(input.LastRenewalTime))
                 );
         }
 
@@ -691,6 +720,10 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.InactivityThresholdTime.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.HasOngoingTasks != null)
+                    hashCode = hashCode * 59 + this.HasOngoingTasks.GetHashCode();
+                if (this.LastRenewalTime != null)
+                    hashCode = hashCode * 59 + this.LastRenewalTime.GetHashCode();
                 return hashCode;
             }
         }

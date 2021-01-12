@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | **String** |  | [optional] [default to null]
-**MaxLength** | **Int32** |  | [optional] [default to null]
-**MinLength** | **Int32** |  | [optional] [default to null]
+**Prefix** | **String** |  | [optional] 
+**MaxLength** | **Int32** |  | [optional] 
+**MinLength** | **Int32** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUrlRandomStringSettings  -Prefix null `
+$UrlRandomStringSettings = New-Cloud.Governance.ClientUrlRandomStringSettings  -Prefix null `
  -MaxLength null `
  -MinLength null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UrlRandomStringSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

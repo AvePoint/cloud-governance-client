@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **IsEnableChangeDescription** | **bool** |  | [optional] 
 **IsEnableChangeQuickLaunch** | **bool** |  | [optional] 
 **IsEnableChangeVersion** | **bool** |  | [optional] 
+**RequestTemplate** | [**ChangeListSettingRequest**](ChangeListSettingRequest.md) |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 
@@ -26,6 +27,7 @@ Name | Type | Description | Notes
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 
+**Details** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

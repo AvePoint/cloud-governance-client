@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ListUrl** | **String** |  | [optional] [default to null]
-**ParentUrl** | **String** |  | [optional] [default to null]
-**ListTitle** | **String** |  | [optional] [default to null]
-**IsDocumentLibrary** | **Boolean** |  | [optional] [default to null]
-**IsEditTask** | **Boolean** |  | [optional] [default to null]
-**IsFromQuestionnaire** | **Boolean** |  | [optional] [default to null]
+**ListUrl** | **String** |  | [optional] 
+**ParentUrl** | **String** |  | [optional] 
+**ListTitle** | **String** |  | [optional] 
+**IsDocumentLibrary** | **Boolean** |  | [optional] 
+**IsEditTask** | **Boolean** |  | [optional] 
+**IsFromQuestionnaire** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientListValidationParameter  -ListUrl null `
+$ListValidationParameter = New-Cloud.Governance.ClientListValidationParameter  -ListUrl null `
  -ParentUrl null `
  -ListTitle null `
  -IsDocumentLibrary null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientListValidationParameter  -ListUrl null `
  -IsFromQuestionnaire null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ListValidationParameter | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

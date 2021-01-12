@@ -3,22 +3,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Category** | **String** |  | [optional] [default to null]
-**Contact** | **String** |  | [optional] [default to null]
-**LanguageId** | **Int32** |  | [optional] [default to null]
-**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**TypeDescription** | **String** |  | [optional] [readonly] [default to null]
-**IsQuestionnaire** | **Boolean** |  | [optional] [default to null]
-**QuestionnaireId** | [**UUID**](UUID.md) |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Category** | **String** |  | [optional] 
+**Contact** | **String** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**TypeDescription** | **String** |  | [optional] 
+**IsQuestionnaire** | **Boolean** |  | [optional] 
+**QuestionnaireId** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientServiceList  -Id null `
+$ServiceList = New-Cloud.Governance.ClientServiceList  -Id null `
  -Name null `
  -Description null `
  -Category null `
@@ -30,11 +30,10 @@ New-Cloud.Governance.ClientServiceList  -Id null `
  -QuestionnaireId null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ServiceList | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

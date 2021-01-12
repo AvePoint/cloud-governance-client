@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -23,6 +24,11 @@ namespace Cloud.Governance.Client.Model
     public partial class UpdatableApiUser : IEquatable<UpdatableApiUser>, IValidatableObject
     {
         /// <summary>
+        /// Gets or Sets UserType
+        /// </summary>
+        [DataMember(Name = "userType", EmitDefaultValue = false)]
+        public UserType? UserType { get; set; }
+        /// <summary>
         /// Gets or Sets IsExternalUser
         /// </summary>
         [DataMember(Name = "isExternalUser", EmitDefaultValue = false)]
@@ -32,24 +38,26 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="email">email.</param>
         /// <param name="jobTitle">jobTitle.</param>
+        /// <param name="tenantId">tenantId.</param>
+        /// <param name="peopleFilterProfileId">peopleFilterProfileId.</param>
+        /// <param name="userType">userType.</param>
         /// <param name="id">id.</param>
         /// <param name="loginName">loginName.</param>
         /// <param name="isExternalUser">isExternalUser.</param>
-        /// <param name="azureUserType">azureUserType.</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="isGroup">isGroup.</param>
-        /// <param name="isLocalUser">isLocalUser.</param>
-        public UpdatableApiUser(string email = default(string), string jobTitle = default(string), string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string azureUserType = default(string), string displayName = default(string), bool isGroup = default(bool), bool isLocalUser = default(bool))
+        public UpdatableApiUser(string email = default(string), string jobTitle = default(string), string tenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), UserType? userType = default(UserType?), string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string displayName = default(string), bool isGroup = default(bool))
         {
             this.Email = email;
             this.JobTitle = jobTitle;
+            this.TenantId = tenantId;
+            this.PeopleFilterProfileId = peopleFilterProfileId;
+            this.UserType = userType;
             this.Id = id;
             this.LoginName = loginName;
             this.IsExternalUser = isExternalUser;
-            this.AzureUserType = azureUserType;
             this.DisplayName = displayName;
             this.IsGroup = isGroup;
-            this.IsLocalUser = isLocalUser;
         }
 
         /// <summary>
@@ -65,6 +73,18 @@ namespace Cloud.Governance.Client.Model
         public string JobTitle { get; set; }
 
         /// <summary>
+        /// Gets or Sets TenantId
+        /// </summary>
+        [DataMember(Name = "tenantId", EmitDefaultValue = true)]
+        public string TenantId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PeopleFilterProfileId
+        /// </summary>
+        [DataMember(Name = "peopleFilterProfileId", EmitDefaultValue = true)]
+        public Guid? PeopleFilterProfileId { get; set; }
+
+        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = true)]
@@ -75,12 +95,6 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "loginName", EmitDefaultValue = true)]
         public string LoginName { get; set; }
-
-        /// <summary>
-        /// Gets or Sets AzureUserType
-        /// </summary>
-        [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
-        public string AzureUserType { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayName
@@ -98,7 +112,16 @@ namespace Cloud.Governance.Client.Model
         /// Gets or Sets IsLocalUser
         /// </summary>
         [DataMember(Name = "isLocalUser", EmitDefaultValue = false)]
-        public bool IsLocalUser { get; set; }
+        public bool IsLocalUser { get; private set; }
+
+        /// <summary>
+        /// Returns false as IsLocalUser should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeIsLocalUser()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets PhysicalDeliveryOfficeName
@@ -107,10 +130,13 @@ namespace Cloud.Governance.Client.Model
         public string PhysicalDeliveryOfficeName { get; private set; }
 
         /// <summary>
-        /// Gets or Sets IsOtherTenantUser
+        /// Returns false as PhysicalDeliveryOfficeName should not be serialized given that it's read-only.
         /// </summary>
-        [DataMember(Name = "isOtherTenantUser", EmitDefaultValue = false)]
-        public bool IsOtherTenantUser { get; private set; }
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializePhysicalDeliveryOfficeName()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets IsValid
@@ -119,10 +145,28 @@ namespace Cloud.Governance.Client.Model
         public bool IsValid { get; private set; }
 
         /// <summary>
-        /// Gets or Sets TenantId
+        /// Returns false as IsValid should not be serialized given that it's read-only.
         /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = true)]
-        public string TenantId { get; private set; }
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeIsValid()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets AdditionalData
+        /// </summary>
+        [DataMember(Name = "additionalData", EmitDefaultValue = true)]
+        public Dictionary<string, Object> AdditionalData { get; private set; }
+
+        /// <summary>
+        /// Returns false as AdditionalData should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeAdditionalData()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -134,17 +178,18 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class UpdatableApiUser {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  JobTitle: ").Append(JobTitle).Append("\n");
+            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
+            sb.Append("  PeopleFilterProfileId: ").Append(PeopleFilterProfileId).Append("\n");
+            sb.Append("  UserType: ").Append(UserType).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  LoginName: ").Append(LoginName).Append("\n");
             sb.Append("  IsExternalUser: ").Append(IsExternalUser).Append("\n");
-            sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  IsGroup: ").Append(IsGroup).Append("\n");
             sb.Append("  IsLocalUser: ").Append(IsLocalUser).Append("\n");
             sb.Append("  PhysicalDeliveryOfficeName: ").Append(PhysicalDeliveryOfficeName).Append("\n");
-            sb.Append("  IsOtherTenantUser: ").Append(IsOtherTenantUser).Append("\n");
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
-            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
+            sb.Append("  AdditionalData: ").Append(AdditionalData).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,6 +235,20 @@ namespace Cloud.Governance.Client.Model
                     this.JobTitle.Equals(input.JobTitle))
                 ) && 
                 (
+                    this.TenantId == input.TenantId ||
+                    (this.TenantId != null &&
+                    this.TenantId.Equals(input.TenantId))
+                ) && 
+                (
+                    this.PeopleFilterProfileId == input.PeopleFilterProfileId ||
+                    (this.PeopleFilterProfileId != null &&
+                    this.PeopleFilterProfileId.Equals(input.PeopleFilterProfileId))
+                ) && 
+                (
+                    this.UserType == input.UserType ||
+                    this.UserType.Equals(input.UserType)
+                ) && 
+                (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
@@ -202,11 +261,6 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.IsExternalUser == input.IsExternalUser ||
                     this.IsExternalUser.Equals(input.IsExternalUser)
-                ) && 
-                (
-                    this.AzureUserType == input.AzureUserType ||
-                    (this.AzureUserType != null &&
-                    this.AzureUserType.Equals(input.AzureUserType))
                 ) && 
                 (
                     this.DisplayName == input.DisplayName ||
@@ -227,17 +281,14 @@ namespace Cloud.Governance.Client.Model
                     this.PhysicalDeliveryOfficeName.Equals(input.PhysicalDeliveryOfficeName))
                 ) && 
                 (
-                    this.IsOtherTenantUser == input.IsOtherTenantUser ||
-                    this.IsOtherTenantUser.Equals(input.IsOtherTenantUser)
-                ) && 
-                (
                     this.IsValid == input.IsValid ||
                     this.IsValid.Equals(input.IsValid)
                 ) && 
                 (
-                    this.TenantId == input.TenantId ||
-                    (this.TenantId != null &&
-                    this.TenantId.Equals(input.TenantId))
+                    this.AdditionalData == input.AdditionalData ||
+                    this.AdditionalData != null &&
+                    input.AdditionalData != null &&
+                    this.AdditionalData.SequenceEqual(input.AdditionalData)
                 );
         }
 
@@ -254,23 +305,25 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Email.GetHashCode();
                 if (this.JobTitle != null)
                     hashCode = hashCode * 59 + this.JobTitle.GetHashCode();
+                if (this.TenantId != null)
+                    hashCode = hashCode * 59 + this.TenantId.GetHashCode();
+                if (this.PeopleFilterProfileId != null)
+                    hashCode = hashCode * 59 + this.PeopleFilterProfileId.GetHashCode();
+                hashCode = hashCode * 59 + this.UserType.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.LoginName != null)
                     hashCode = hashCode * 59 + this.LoginName.GetHashCode();
                 hashCode = hashCode * 59 + this.IsExternalUser.GetHashCode();
-                if (this.AzureUserType != null)
-                    hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 hashCode = hashCode * 59 + this.IsGroup.GetHashCode();
                 hashCode = hashCode * 59 + this.IsLocalUser.GetHashCode();
                 if (this.PhysicalDeliveryOfficeName != null)
                     hashCode = hashCode * 59 + this.PhysicalDeliveryOfficeName.GetHashCode();
-                hashCode = hashCode * 59 + this.IsOtherTenantUser.GetHashCode();
                 hashCode = hashCode * 59 + this.IsValid.GetHashCode();
-                if (this.TenantId != null)
-                    hashCode = hashCode * 59 + this.TenantId.GetHashCode();
+                if (this.AdditionalData != null)
+                    hashCode = hashCode * 59 + this.AdditionalData.GetHashCode();
                 return hashCode;
             }
         }

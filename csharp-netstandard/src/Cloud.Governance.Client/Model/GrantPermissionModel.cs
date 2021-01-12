@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -36,13 +37,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PermissionDurationSettings
         /// </summary>
-        [DataMember(Name = "permissionDurationSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "permissionDurationSettings", EmitDefaultValue = true)]
         public TemporaryPermissionRequestSetting PermissionDurationSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets WelcomeEmailSettings
         /// </summary>
-        [DataMember(Name = "welcomeEmailSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "welcomeEmailSettings", EmitDefaultValue = true)]
         public WelcomeEmailSettings WelcomeEmailSettings { get; set; }
 
         /// <summary>

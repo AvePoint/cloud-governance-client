@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -653,6 +654,12 @@ namespace Cloud.Governance.Client.Model
 
         [EnumMember(Value = "1053")]
         SettingOutlookExperience = 1053,
+
+        [EnumMember(Value = "1054")]
+        WelcomeEmail = 1054,
+
+        [EnumMember(Value = "1055")]
+        FailedWithSubRequestException = 1055,
 
         [EnumMember(Value = "3000")]
         StartingProcess = 3000

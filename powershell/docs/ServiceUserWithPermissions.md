@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**User** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] [default to null]
+**UserAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**User** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientServiceUserWithPermissions  -UserAssignBy null `
+$ServiceUserWithPermissions = New-Cloud.Governance.ClientServiceUserWithPermissions  -UserAssignBy null `
  -User null `
  -PermissionLevels null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ServiceUserWithPermissions | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **TemporaryPermissionMaxDuration** | **int** |  | [optional] 
 **TemporaryPermissionMaxDurationType** | **ApiDurationType** |  | [optional] 
 **IsEnableExpireNotify** | **bool** |  | [optional] 
+**IsAllowSelectAdmin** | **bool** |  | [optional] 
 **ExpireNotifyDuration** | **int** |  | [optional] 
 **ExpireNotifyDurationType** | **ApiDurationType** |  | [optional] 
 **ExpireNotifyEmailTemplate** | **Guid?** |  | [optional] 

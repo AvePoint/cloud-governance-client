@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -25,8 +26,17 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public MetadataFieldType? Type { get; set; }
+
+        /// <summary>
+        /// Returns false as Type should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeType()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -45,10 +55,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="linkValue">linkValue.</param>
         /// <param name="choiceValue">choiceValue.</param>
         /// <param name="lookupListValue">lookupListValue.</param>
-        /// <param name="type">type.</param>
         /// <param name="value">value.</param>
         /// <param name="action">action.</param>
-        public RequestMetadata(Guid id = default(Guid), string name = default(string), bool? booleanValue = default(bool?), string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), MetadataFieldType? type = default(MetadataFieldType?), string value = default(string), MetadataActionType? action = default(MetadataActionType?))
+        public RequestMetadata(Guid id = default(Guid), string name = default(string), bool? booleanValue = default(bool?), string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), string value = default(string), MetadataActionType? action = default(MetadataActionType?))
         {
             this.Id = id;
             this.Name = name;
@@ -60,7 +69,6 @@ namespace Cloud.Governance.Client.Model
             this.LinkValue = linkValue;
             this.ChoiceValue = choiceValue;
             this.LookupListValue = lookupListValue;
-            this.Type = type;
             this.Value = value;
             this.Action = action;
         }
@@ -92,13 +100,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets UpsOrAzureAdValue
         /// </summary>
-        [DataMember(Name = "upsOrAzureAdValue", EmitDefaultValue = false)]
+        [DataMember(Name = "upsOrAzureAdValue", EmitDefaultValue = true)]
         public LookupValue UpsOrAzureAdValue { get; set; }
 
         /// <summary>
         /// Gets or Sets TermsValue
         /// </summary>
-        [DataMember(Name = "termsValue", EmitDefaultValue = false)]
+        [DataMember(Name = "termsValue", EmitDefaultValue = true)]
         public TermsValue TermsValue { get; set; }
 
         /// <summary>
@@ -110,7 +118,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets LinkValue
         /// </summary>
-        [DataMember(Name = "linkValue", EmitDefaultValue = false)]
+        [DataMember(Name = "linkValue", EmitDefaultValue = true)]
         public LinkValue LinkValue { get; set; }
 
         /// <summary>
@@ -122,7 +130,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets LookupListValue
         /// </summary>
-        [DataMember(Name = "lookupListValue", EmitDefaultValue = false)]
+        [DataMember(Name = "lookupListValue", EmitDefaultValue = true)]
         public LookupListValue LookupListValue { get; set; }
 
         /// <summary>
@@ -130,6 +138,15 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "valueString", EmitDefaultValue = true)]
         public string ValueString { get; private set; }
+
+        /// <summary>
+        /// Returns false as ValueString should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeValueString()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets Value

@@ -3,18 +3,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdminCenter** | **String** |  | [optional] [default to null]
-**EnableValueSync** | **Boolean** |  | [optional] [default to null]
-**EnableRoleValueSync** | **Boolean** |  | [optional] [default to null]
-**Value** | [**LookupValue**](LookupValue.md) |  | [optional] [default to null]
-**Property** | **String** |  | [optional] [default to null]
-**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to null]
+**AdminCenter** | **String** |  | [optional] 
+**ValueType** | **String** |  | [optional] 
+**EnableValueSync** | **Boolean** |  | [optional] 
+**EnableRoleValueSync** | **Boolean** |  | [optional] 
+**Value** | [**LookupValue**](LookupValue.md) |  | [optional] 
+**Property** | **String** |  | [optional] 
+**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUserProfileMetadataSettings  -AdminCenter null `
+$UserProfileMetadataSettings = New-Cloud.Governance.ClientUserProfileMetadataSettings  -AdminCenter null `
+ -ValueType null `
  -EnableValueSync null `
  -EnableRoleValueSync null `
  -Value null `
@@ -22,11 +24,10 @@ New-Cloud.Governance.ClientUserProfileMetadataSettings  -AdminCenter null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UserProfileMetadataSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

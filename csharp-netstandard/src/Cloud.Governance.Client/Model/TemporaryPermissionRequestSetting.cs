@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -30,20 +31,22 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets DurationDateType
         /// </summary>
-        [DataMember(Name = "durationDateType", EmitDefaultValue = false)]
+        [DataMember(Name = "durationDateType", EmitDefaultValue = true)]
         public ApiDurationType? DurationDateType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="TemporaryPermissionRequestSetting" /> class.
         /// </summary>
         /// <param name="isGrantTemporaryPermission">isGrantTemporaryPermission.</param>
+        /// <param name="isGrantAdminGroup">isGrantAdminGroup.</param>
         /// <param name="expirationType">expirationType.</param>
         /// <param name="durationInterval">durationInterval.</param>
         /// <param name="durationDateType">durationDateType.</param>
         /// <param name="startTime">startTime.</param>
         /// <param name="endTime">endTime.</param>
-        public TemporaryPermissionRequestSetting(bool isGrantTemporaryPermission = default(bool), ExpirationType? expirationType = default(ExpirationType?), int? durationInterval = default(int?), ApiDurationType? durationDateType = default(ApiDurationType?), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
+        public TemporaryPermissionRequestSetting(bool isGrantTemporaryPermission = default(bool), bool isGrantAdminGroup = default(bool), ExpirationType? expirationType = default(ExpirationType?), int? durationInterval = default(int?), ApiDurationType? durationDateType = default(ApiDurationType?), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
         {
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
+            this.IsGrantAdminGroup = isGrantAdminGroup;
             this.ExpirationType = expirationType;
             this.DurationInterval = durationInterval;
             this.DurationDateType = durationDateType;
@@ -56,6 +59,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "isGrantTemporaryPermission", EmitDefaultValue = false)]
         public bool IsGrantTemporaryPermission { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsGrantAdminGroup
+        /// </summary>
+        [DataMember(Name = "isGrantAdminGroup", EmitDefaultValue = false)]
+        public bool IsGrantAdminGroup { get; set; }
 
         /// <summary>
         /// Gets or Sets DurationInterval
@@ -84,6 +93,7 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class TemporaryPermissionRequestSetting {\n");
             sb.Append("  IsGrantTemporaryPermission: ").Append(IsGrantTemporaryPermission).Append("\n");
+            sb.Append("  IsGrantAdminGroup: ").Append(IsGrantAdminGroup).Append("\n");
             sb.Append("  ExpirationType: ").Append(ExpirationType).Append("\n");
             sb.Append("  DurationInterval: ").Append(DurationInterval).Append("\n");
             sb.Append("  DurationDateType: ").Append(DurationDateType).Append("\n");
@@ -128,6 +138,10 @@ namespace Cloud.Governance.Client.Model
                     this.IsGrantTemporaryPermission.Equals(input.IsGrantTemporaryPermission)
                 ) && 
                 (
+                    this.IsGrantAdminGroup == input.IsGrantAdminGroup ||
+                    this.IsGrantAdminGroup.Equals(input.IsGrantAdminGroup)
+                ) && 
+                (
                     this.ExpirationType == input.ExpirationType ||
                     this.ExpirationType.Equals(input.ExpirationType)
                 ) && 
@@ -162,6 +176,7 @@ namespace Cloud.Governance.Client.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.IsGrantTemporaryPermission.GetHashCode();
+                hashCode = hashCode * 59 + this.IsGrantAdminGroup.GetHashCode();
                 hashCode = hashCode * 59 + this.ExpirationType.GetHashCode();
                 if (this.DurationInterval != null)
                     hashCode = hashCode * 59 + this.DurationInterval.GetHashCode();

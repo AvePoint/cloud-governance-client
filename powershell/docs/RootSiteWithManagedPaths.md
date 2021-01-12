@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RootSite** | **String** |  | [optional] [default to null]
-**ManagedPaths** | **String[]** |  | [optional] [default to null]
+**RootSite** | **String** |  | [optional] 
+**ManagedPaths** | **String[]** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientRootSiteWithManagedPaths  -RootSite null `
+$RootSiteWithManagedPaths = New-Cloud.Governance.ClientRootSiteWithManagedPaths  -RootSite null `
  -ManagedPaths null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$RootSiteWithManagedPaths | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

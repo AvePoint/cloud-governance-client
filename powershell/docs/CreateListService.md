@@ -3,43 +3,45 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableNavigation** | **Boolean** |  | [optional] [default to null]
-**DefaultListType** | [**ListType**](ListType.md) |  | [optional] [default to null]
-**VersionSettings** | [**ListVersionSettings**](ListVersionSettings.md) |  | [optional] [default to null]
-**ListTemplateSettings** | [**ListTemplateSettings**](ListTemplateSettings.md) |  | [optional] [default to null]
-**UrlSettings** | [**CreateListUrlSettings**](CreateListUrlSettings.md) |  | [optional] [default to null]
-**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] [default to null]
-**PermissionSettings** | [**PermissionSettings**](PermissionSettings.md) |  | [optional] [default to null]
-**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] [default to null]
-**ListVersionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**ListTemplateAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**NavigationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**ListTypeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
-**HideRequestSummary** | **Boolean** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to null]
-**Departments** | **String[]** |  | [optional] [default to null]
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to null]
-**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] [default to null]
-**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to null]
-**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] [default to null]
-**ApprovalProcessId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LanguageId** | **Int32** |  | [optional] [default to null]
-**CategoryId** | **String** |  | [optional] [default to null]
+**EnableNavigation** | **Boolean** |  | [optional] 
+**DefaultListType** | [**ListType**](ListType.md) |  | [optional] 
+**VersionSettings** | [**ListVersionSettings**](ListVersionSettings.md) |  | [optional] 
+**ListTemplateSettings** | [**ListTemplateSettings**](ListTemplateSettings.md) |  | [optional] 
+**UrlSettings** | [**CreateListUrlSettings**](CreateListUrlSettings.md) |  | [optional] 
+**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] 
+**PermissionSettings** | [**PermissionSettings**](PermissionSettings.md) |  | [optional] 
+**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
+**ListVersionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**ListTemplateAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**NavigationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**ListTypeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**RequestTemplate** | [**CreateListRequest**](CreateListRequest.md) |  | [optional] 
+**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**Department** | **String** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**Departments** | **String[]** |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
+**ApprovalProcessId** | **String** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] 
+**CategoryId** | **String** |  | [optional] 
+**Details** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateListService  -EnableNavigation null `
+$CreateListService = New-Cloud.Governance.ClientCreateListService  -EnableNavigation null `
  -DefaultListType null `
  -VersionSettings null `
  -ListTemplateSettings null `
@@ -51,6 +53,7 @@ New-Cloud.Governance.ClientCreateListService  -EnableNavigation null `
  -ListTemplateAssignBy null `
  -NavigationAssignBy null `
  -ListTypeAssignBy null `
+ -RequestTemplate null `
  -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
@@ -69,14 +72,14 @@ New-Cloud.Governance.ClientCreateListService  -EnableNavigation null `
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null
+ -CategoryId null `
+ -Details null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateListService | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

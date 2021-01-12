@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BackupEnvironmentStoragePolices** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
-**ColumnMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
-**ContentTypeMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
-**UserMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
-**LanguageMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
-**FilterPolices** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
+**BackupEnvironmentStoragePolices** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**ColumnMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**ContentTypeMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**UserMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**LanguageMappings** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**FilterPolices** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientContentMoveProfiles  -BackupEnvironmentStoragePolices null `
+$ContentMoveProfiles = New-Cloud.Governance.ClientContentMoveProfiles  -BackupEnvironmentStoragePolices null `
  -ColumnMappings null `
  -ContentTypeMappings null `
  -UserMappings null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientContentMoveProfiles  -BackupEnvironmentStoragePolices
  -FilterPolices null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ContentMoveProfiles | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

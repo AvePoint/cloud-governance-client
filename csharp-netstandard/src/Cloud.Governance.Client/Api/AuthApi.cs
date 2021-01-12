@@ -256,17 +256,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -330,17 +326,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -408,8 +400,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -478,8 +469,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 

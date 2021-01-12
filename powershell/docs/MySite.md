@@ -3,45 +3,54 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FullUrl** | **String** |  | [optional] [default to null]
-**Title** | **String** |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Size** | **Int64** |  | [optional] [default to null]
-**Type** | [**MySiteType**](MySiteType.md) |  | [optional] [default to null]
-**MySiteType** | **String** |  | [optional] [readonly] [default to null]
-**CreatedTime** | **System.DateTime** |  | [optional] [default to null]
-**StorageUsed** | **String** |  | [optional] [default to null]
-**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**AdditionalAdministrator** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**PreferredDataLocation** | **String** |  | [optional] [default to null]
-**PreferredDataLocationName** | **String** |  | [optional] [readonly] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] [default to null]
-**PhaseStartTime** | **System.DateTime** |  | [optional] [default to null]
-**PhaseDescription** | **String** |  | [optional] [readonly] [default to null]
-**AutoImportProfileId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**AutoImportProfileName** | **String** |  | [optional] [default to null]
-**PolicyName** | **String** |  | [optional] [default to null]
-**PolicyDescription** | **String** |  | [optional] [default to null]
-**IsCurrentRenewer** | **Boolean** |  | [optional] [default to null]
-**PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**PhaseDueDate** | **System.DateTime** |  | [optional] [default to null]
-**Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] [default to null]
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
+**FullUrl** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**Department** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Size** | **Int64** |  | [optional] 
+**QuotaSize** | **Int64** |  | [optional] 
+**Type** | [**MySiteType**](MySiteType.md) |  | [optional] 
+**MySiteType** | **String** |  | [optional] 
+**Classification** | **String** |  | [optional] 
+**Sensitivity** | **String** |  | [optional] 
+**IsCommunicationSite** | **Boolean** |  | [optional] 
+**CreatedTime** | **System.DateTime** |  | [optional] 
+**StorageUsed** | **String** |  | [optional] 
+**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**AdditionalAdministrator** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**PreferredDataLocation** | **String** |  | [optional] 
+**PreferredDataLocationName** | **String** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
+**PhaseStartTime** | **System.DateTime** |  | [optional] 
+**PhaseDescription** | **String** |  | [optional] 
+**AutoImportProfileId** | **String** |  | [optional] 
+**AutoImportProfileName** | **String** |  | [optional] 
+**PolicyName** | **String** |  | [optional] 
+**PolicyDescription** | **String** |  | [optional] 
+**IsCurrentRenewer** | **Boolean** |  | [optional] 
+**PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**PhaseDueDate** | **System.DateTime** |  | [optional] 
+**Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientMySite  -FullUrl null `
+$MySite = New-Cloud.Governance.ClientMySite  -FullUrl null `
  -Title null `
  -Department null `
  -Description null `
  -Size null `
+ -QuotaSize null `
  -Type null `
  -MySiteType null `
+ -Classification null `
+ -Sensitivity null `
+ -IsCommunicationSite null `
  -CreatedTime null `
  -StorageUsed null `
  -PrimaryAdministrator null `
@@ -61,14 +70,14 @@ New-Cloud.Governance.ClientMySite  -FullUrl null `
  -PhaseDueDate null `
  -Metadatas null `
  -PrimaryContact null `
- -SecondaryContact null
+ -SecondaryContact null `
+ -ErrorMessage null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$MySite | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

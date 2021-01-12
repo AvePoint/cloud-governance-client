@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**FullUrl** | **String** |  | [optional] [default to null]
-**Type** | [**NodeType**](NodeType.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Title** | **String** |  | [optional] [default to null]
-**IsSelected** | **Boolean** |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**FullUrl** | **String** |  | [optional] 
+**Type** | [**NodeType**](NodeType.md) |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**IsSelected** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientSPNode  -Id null `
+$SPNode = New-Cloud.Governance.ClientSPNode  -Id null `
  -FullUrl null `
  -Type null `
  -Name null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientSPNode  -Id null `
  -IsSelected null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$SPNode | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

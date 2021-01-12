@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserLevelRestrictionType** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] [default to null]
-**UserManagementSourceType** | [**UserManagementSourceType**](UserManagementSourceType.md) |  | [optional] [default to null]
-**IsEnableShowAADGroupMembers** | **Boolean** |  | [optional] [default to null]
+**UserLevelRestrictionType** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] 
+**UserManagementSourceType** | [**UserManagementSourceType**](UserManagementSourceType.md) |  | [optional] 
+**IsEnableShowAADGroupMembers** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientManagePermissionUserSetting  -UserLevelRestrictionType null `
+$ManagePermissionUserSetting = New-Cloud.Governance.ClientManagePermissionUserSetting  -UserLevelRestrictionType null `
  -UserManagementSourceType null `
  -IsEnableShowAADGroupMembers null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ManagePermissionUserSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

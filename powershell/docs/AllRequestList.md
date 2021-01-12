@@ -3,31 +3,31 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ServiceId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ServiceName** | **String** |  | [optional] [default to null]
-**ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**ServiceTypeDescription** | **String** |  | [optional] [readonly] [default to null]
-**TicketNumber** | **Int32** |  | [optional] [default to null]
-**Summary** | **String** |  | [optional] [default to null]
-**Requester** | **String** |  | [optional] [default to null]
-**RequesterDisplayName** | **String** |  | [optional] [default to null]
-**DetailStatus** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] [default to null]
-**DetailStatusDescription** | **String** |  | [optional] [readonly] [default to null]
-**ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [default to null]
-**ProgressStatusDescription** | **String** |  | [optional] [readonly] [default to null]
-**Modified** | **System.DateTime** |  | [optional] [default to null]
-**AssignTo** | **String** |  | [optional] [default to null]
-**AssignToDisplayName** | **String** |  | [optional] [default to null]
-**ServiceAdmin** | **String** |  | [optional] [default to null]
-**ObjectUrl** | **String** |  | [optional] [default to null]
-**CreatedTime** | **String** |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**ServiceId** | **String** |  | [optional] 
+**ServiceName** | **String** |  | [optional] 
+**ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**ServiceTypeDescription** | **String** |  | [optional] 
+**TicketNumber** | **Int32** |  | [optional] 
+**Summary** | **String** |  | [optional] 
+**Requester** | **String** |  | [optional] 
+**RequesterDisplayName** | **String** |  | [optional] 
+**DetailStatus** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] 
+**DetailStatusDescription** | **String** |  | [optional] 
+**ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] 
+**ProgressStatusDescription** | **String** |  | [optional] 
+**Modified** | **System.DateTime** |  | [optional] 
+**AssignTo** | **String** |  | [optional] 
+**AssignToDisplayName** | **String** |  | [optional] 
+**ServiceAdmin** | **String** |  | [optional] 
+**ObjectUrl** | **String** |  | [optional] 
+**CreatedTime** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientAllRequestList  -Id null `
+$AllRequestList = New-Cloud.Governance.ClientAllRequestList  -Id null `
  -ServiceId null `
  -ServiceName null `
  -ServiceType null `
@@ -48,11 +48,10 @@ New-Cloud.Governance.ClientAllRequestList  -Id null `
  -CreatedTime null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AllRequestList | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -41,6 +41,8 @@ Name | Type | Description | Notes
 **LeaseExpirationTime** | **DateTime?** |  | [optional] 
 **InactivityThresholdTime** | **DateTime?** |  | [optional] 
 **Metadata** | **Dictionary&lt;string, string&gt;** |  | [optional] 
+**HasOngoingTasks** | **string** |  | [optional] 
+**LastRenewalTime** | **DateTime?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

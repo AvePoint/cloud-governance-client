@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] [default to null]
-**DefaultValue** | **String** |  | [optional] [default to null]
-**SelectedItems** | **String[]** |  | [optional] [default to null]
-**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
+**IsEnabled** | **Boolean** |  | [optional] 
+**DefaultValue** | **String** |  | [optional] 
+**SelectedItems** | **String[]** |  | [optional] 
+**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientDpmServiceSetting  -IsEnabled null `
+$DpmServiceSetting = New-Cloud.Governance.ClientDpmServiceSetting  -IsEnabled null `
  -DefaultValue null `
  -SelectedItems null `
  -AssignBy null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$DpmServiceSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -246,8 +246,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -345,8 +344,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 

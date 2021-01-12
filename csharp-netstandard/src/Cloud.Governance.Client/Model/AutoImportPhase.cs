@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -61,7 +62,10 @@ namespace Cloud.Governance.Client.Model
         Invalid = 12,
 
         [EnumMember(Value = "13")]
-        Archived = 13
+        Archived = 13,
+
+        [EnumMember(Value = "14")]
+        Escalation = 14
 
     }
 

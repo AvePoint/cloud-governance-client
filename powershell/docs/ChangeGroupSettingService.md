@@ -3,53 +3,64 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**GroupRestriction** | [**GroupRestrictionType**](GroupRestrictionType.md) |  | [optional] [default to null]
-**EnableChangeName** | **Boolean** |  | [optional] [default to null]
-**EnableChangeDescription** | **Boolean** |  | [optional] [default to null]
-**EnableChangeMemberSubscription** | **Boolean** |  | [optional] [default to null]
-**EnableChangeOutsideSenders** | **Boolean** |  | [optional] [default to null]
-**EnableChangePrimaryContact** | **Boolean** |  | [optional] [default to null]
-**EnableChangeSecondaryContact** | **Boolean** |  | [optional] [default to null]
-**EnableAddOwners** | **Boolean** |  | [optional] [default to null]
-**AddOwnerRestriction** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] [default to null]
-**EnableRemoveOwners** | **Boolean** |  | [optional] [default to null]
-**EnableAddMembers** | **Boolean** |  | [optional] [default to null]
-**AddMemberRestriction** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] [default to null]
-**EnableRemoveMembers** | **Boolean** |  | [optional] [default to null]
-**EnableChangeDynamicMembershipRules** | **Boolean** |  | [optional] [default to null]
-**EnableChangeTeamCollaboration** | **Boolean** |  | [optional] [default to null]
-**EnableChangeHubSite** | **Boolean** |  | [optional] [default to null]
-**EnableChangeClassification** | **Boolean** |  | [optional] [default to null]
-**ClassificationList** | **String[]** |  | [optional] [default to null]
-**EnableChangeMetadata** | **Boolean** |  | [optional] [default to null]
-**EnableAddOrDeleteMetadata** | **Boolean** |  | [optional] [default to null]
-**MetadataList** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
-**HideRequestSummary** | **Boolean** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to null]
-**Departments** | **String[]** |  | [optional] [default to null]
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to null]
-**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] [default to null]
-**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to null]
-**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] [default to null]
-**ApprovalProcessId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LanguageId** | **Int32** |  | [optional] [default to null]
-**CategoryId** | **String** |  | [optional] [default to null]
+**TenantId** | **String** |  | [optional] 
+**NetworkId** | **String** |  | [optional] 
+**GroupRestriction** | [**GroupRestrictionType**](GroupRestrictionType.md) |  | [optional] 
+**EnableChangeName** | **Boolean** |  | [optional] 
+**EnableChangeDescription** | **Boolean** |  | [optional] 
+**EnableChangeMemberSubscription** | **Boolean** |  | [optional] 
+**EnableChangeOutsideSenders** | **Boolean** |  | [optional] 
+**EnableChangePrimaryContact** | **Boolean** |  | [optional] 
+**EnableChangeSecondaryContact** | **Boolean** |  | [optional] 
+**EnableAddOwners** | **Boolean** |  | [optional] 
+**AddOwnerRestriction** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] 
+**EnableRemoveOwners** | **Boolean** |  | [optional] 
+**EnableAddMembers** | **Boolean** |  | [optional] 
+**AddMemberRestriction** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] 
+**EnableRemoveMembers** | **Boolean** |  | [optional] 
+**EnableChangeDynamicMembershipRules** | **Boolean** |  | [optional] 
+**EnableChangeTeamCollaboration** | **Boolean** |  | [optional] 
+**EnableChangeHubSite** | **Boolean** |  | [optional] 
+**EnableChangeClassification** | **Boolean** |  | [optional] 
+**ClassificationList** | **String[]** |  | [optional] 
+**EnableChangeSensitivity** | **Boolean** |  | [optional] 
+**SensitivityList** | **String[]** |  | [optional] 
+**EnableChangeMetadata** | **Boolean** |  | [optional] 
+**EnableAddOrDeleteMetadata** | **Boolean** |  | [optional] 
+**MetadataList** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
+**EnableChangeMembershipType** | **Boolean** |  | [optional] 
+**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
+**EnableChangeYammerGroupInfo** | **Boolean** |  | [optional] 
+**ScopePeoplePickerFilterProfileId** | **String** |  | [optional] 
+**PeoplePickerFilterProfileId** | **String** |  | [optional] 
+**RequestTemplate** | [**ChangeGroupSettingRequest**](ChangeGroupSettingRequest.md) |  | [optional] 
+**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**Department** | **String** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**Departments** | **String[]** |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
+**ApprovalProcessId** | **String** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] 
+**CategoryId** | **String** |  | [optional] 
+**Details** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeGroupSettingService  -TenantId null `
+$ChangeGroupSettingService = New-Cloud.Governance.ClientChangeGroupSettingService  -TenantId null `
+ -NetworkId null `
  -GroupRestriction null `
  -EnableChangeName null `
  -EnableChangeDescription null `
@@ -68,9 +79,17 @@ New-Cloud.Governance.ClientChangeGroupSettingService  -TenantId null `
  -EnableChangeHubSite null `
  -EnableChangeClassification null `
  -ClassificationList null `
+ -EnableChangeSensitivity null `
+ -SensitivityList null `
  -EnableChangeMetadata null `
  -EnableAddOrDeleteMetadata null `
  -MetadataList null `
+ -EnableChangeMembershipType null `
+ -GroupObjectType null `
+ -EnableChangeYammerGroupInfo null `
+ -ScopePeoplePickerFilterProfileId null `
+ -PeoplePickerFilterProfileId null `
+ -RequestTemplate null `
  -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
@@ -89,14 +108,14 @@ New-Cloud.Governance.ClientChangeGroupSettingService  -TenantId null `
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null
+ -CategoryId null `
+ -Details null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeGroupSettingService | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

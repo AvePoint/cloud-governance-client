@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] [default to null]
-**LeaseType** | [**GroupLeasePeriodType**](GroupLeasePeriodType.md) |  | [optional] [default to null]
-**DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
-**DurationInterval** | **Int32** |  | [optional] [default to null]
-**LeaseExpirationDate** | **System.DateTime** |  | [optional] [default to null]
+**IsEnabled** | **Boolean** |  | [optional] 
+**LeaseType** | [**GroupLeasePeriodType**](GroupLeasePeriodType.md) |  | [optional] 
+**DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
+**DurationInterval** | **Int32** |  | [optional] 
+**LeaseExpirationDate** | **System.DateTime** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGroupLeasePeriodSettings  -IsEnabled null `
+$GroupLeasePeriodSettings = New-Cloud.Governance.ClientGroupLeasePeriodSettings  -IsEnabled null `
  -LeaseType null `
  -DurationType null `
  -DurationInterval null `
  -LeaseExpirationDate null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GroupLeasePeriodSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

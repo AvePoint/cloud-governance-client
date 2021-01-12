@@ -3,27 +3,44 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**GroupEmail** | **String** |  | [optional] [default to null]
-**TypeDescription** | **String** |  | [optional] [readonly] [default to null]
-**PrimaryContact** | **String** |  | [optional] [default to null]
-**PrimaryContactEmail** | **String** |  | [optional] [default to null]
-**Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] [default to null]
-**PhaseDescription** | **String** |  | [optional] [readonly] [default to null]
-**IsCurrentRenewer** | **Boolean** |  | [optional] [default to null]
-**CreatedTime** | **System.DateTime** |  | [optional] [default to null]
-**Status** | [**SiteStatus**](SiteStatus.md) |  | [optional] [default to null]
-**AutoImportProfileId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**PendingAction** | **Int32** |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**GroupEmail** | **String** |  | [optional] 
+**TypeDescription** | **String** |  | [optional] 
+**PrimaryContact** | **String** |  | [optional] 
+**PrimaryContactEmail** | **String** |  | [optional] 
+**Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
+**PhaseDescription** | **String** |  | [optional] 
+**IsCurrentRenewer** | **Boolean** |  | [optional] 
+**CreatedTime** | **System.DateTime** |  | [optional] 
+**Status** | [**SiteStatus**](SiteStatus.md) |  | [optional] 
+**AutoImportProfileId** | **String** |  | [optional] 
+**PendingAction** | **Int32** |  | [optional] 
+**SecondaryContact** | **String** |  | [optional] 
+**SecondaryContactEmail** | **String** |  | [optional] 
+**Policy** | **String** |  | [optional] 
+**PolicyId** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**PrimaryAdmin** | **String** |  | [optional] 
+**PrimaryAdminEmail** | **String** |  | [optional] 
+**AdditionalAdmin** | **String** |  | [optional] 
+**AdditionalAdminEmail** | **String** |  | [optional] 
+**GeoLocation** | **String** |  | [optional] 
+**GeoLocationDescription** | **String** |  | [optional] 
+**StorageLimit** | **String** |  | [optional] 
+**StorageUsage** | **String** |  | [optional] 
+**Classification** | **String** |  | [optional] 
+**Privacy** | **Boolean** |  | [optional] 
+**PrivacyDescription** | **String** |  | [optional] 
+**Metadata** | [**EndUserReportMetadata[]**](EndUserReportMetadata.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientWorkspaceList  -Id null `
+$WorkspaceList = New-Cloud.Governance.ClientWorkspaceList  -Id null `
  -Name null `
  -Type null `
  -SiteUrl null `
@@ -37,14 +54,30 @@ New-Cloud.Governance.ClientWorkspaceList  -Id null `
  -CreatedTime null `
  -Status null `
  -AutoImportProfileId null `
- -PendingAction null
+ -PendingAction null `
+ -SecondaryContact null `
+ -SecondaryContactEmail null `
+ -Policy null `
+ -PolicyId null `
+ -Description null `
+ -PrimaryAdmin null `
+ -PrimaryAdminEmail null `
+ -AdditionalAdmin null `
+ -AdditionalAdminEmail null `
+ -GeoLocation null `
+ -GeoLocationDescription null `
+ -StorageLimit null `
+ -StorageUsage null `
+ -Classification null `
+ -Privacy null `
+ -PrivacyDescription null `
+ -Metadata null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WorkspaceList | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

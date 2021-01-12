@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Contact** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] [default to null]
-**License** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] [default to null]
-**Organization** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] [default to null]
+**Contact** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
+**License** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
+**Organization** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientInlineResponse200  -Contact null `
+$InlineResponse200 = New-Cloud.Governance.ClientInlineResponse200  -Contact null `
  -License null `
  -Organization null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$InlineResponse200 | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

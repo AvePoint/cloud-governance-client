@@ -3,21 +3,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**ChangeQuotaSetting** | [**ChangeSiteQuotaSettings**](ChangeSiteQuotaSettings.md) |  | [optional] [default to null]
-**ExtendSetting** | [**ExtendSiteSetting**](ExtendSiteSetting.md) |  | [optional] [default to null]
-**UnlockSetting** | [**UnlockSiteSetting**](UnlockSiteSetting.md) |  | [optional] [default to null]
-**ChangePolicySetting** | [**ChangeSitePolicySetting**](ChangeSitePolicySetting.md) |  | [optional] [default to null]
-**LockSetting** | [**LockSiteSetting**](LockSiteSetting.md) |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**SiteId** | **String** |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**ChangeQuotaSetting** | [**ChangeSiteQuotaSettings**](ChangeSiteQuotaSettings.md) |  | [optional] 
+**ExtendSetting** | [**ExtendSiteSetting**](ExtendSiteSetting.md) |  | [optional] 
+**UnlockSetting** | [**UnlockSiteSetting**](UnlockSiteSetting.md) |  | [optional] 
+**ChangePolicySetting** | [**ChangeSitePolicySetting**](ChangeSitePolicySetting.md) |  | [optional] 
+**LockSetting** | [**LockSiteSetting**](LockSiteSetting.md) |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientSiteLifecycleValidateResult  -SiteId null `
+$SiteLifecycleValidateResult = New-Cloud.Governance.ClientSiteLifecycleValidateResult  -SiteId null `
  -SiteUrl null `
  -ChangeQuotaSetting null `
  -ExtendSetting null `
@@ -25,14 +26,14 @@ New-Cloud.Governance.ClientSiteLifecycleValidateResult  -SiteId null `
  -ChangePolicySetting null `
  -LockSetting null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$SiteLifecycleValidateResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserLevelControlMode** | [**UserLevelControlMode**](UserLevelControlMode.md) |  | [optional] [default to null]
-**IsSetRequesterAsDefaultEnabled** | **Boolean** |  | [optional] [default to null]
+**UserLevelControlMode** | [**UserLevelControlMode**](UserLevelControlMode.md) |  | [optional] 
+**IsSetRequesterAsDefaultEnabled** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUserLevelControlSettings  -UserLevelControlMode null `
+$UserLevelControlSettings = New-Cloud.Governance.ClientUserLevelControlSettings  -UserLevelControlMode null `
  -IsSetRequesterAsDefaultEnabled null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UserLevelControlSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

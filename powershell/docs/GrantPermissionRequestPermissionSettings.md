@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsBreakInheritance** | **Boolean** |  | [optional] [default to null]
-**IsGrantPermissionDirectly** | **Boolean** |  | [optional] [default to null]
-**SelectedSPGroup** | [**GrantPermissionGroup**](GrantPermissionGroup.md) |  | [optional] [default to null]
-**SelectedPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] [default to null]
+**IsBreakInheritance** | **Boolean** |  | [optional] 
+**IsGrantPermissionDirectly** | **Boolean** |  | [optional] 
+**SelectedSPGroup** | [**GrantPermissionGroup**](GrantPermissionGroup.md) |  | [optional] 
+**SelectedPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGrantPermissionRequestPermissionSettings  -IsBreakInheritance null `
+$GrantPermissionRequestPermissionSettings = New-Cloud.Governance.ClientGrantPermissionRequestPermissionSettings  -IsBreakInheritance null `
  -IsGrantPermissionDirectly null `
  -SelectedSPGroup null `
  -SelectedPermissionLevels null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GrantPermissionRequestPermissionSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

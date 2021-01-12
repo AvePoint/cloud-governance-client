@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserPermissions** | [**ServiceUserWithPermissions[]**](ServiceUserWithPermissions.md) |  | [optional] [default to null]
-**GroupPermissions** | [**ServiceGroupWithPermissions[]**](ServiceGroupWithPermissions.md) |  | [optional] [default to null]
+**UserPermissions** | [**ServiceUserWithPermissions[]**](ServiceUserWithPermissions.md) |  | [optional] 
+**GroupPermissions** | [**ServiceGroupWithPermissions[]**](ServiceGroupWithPermissions.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUserGroupPermissions  -UserPermissions null `
+$UserGroupPermissions = New-Cloud.Governance.ClientUserGroupPermissions  -UserPermissions null `
  -GroupPermissions null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UserGroupPermissions | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

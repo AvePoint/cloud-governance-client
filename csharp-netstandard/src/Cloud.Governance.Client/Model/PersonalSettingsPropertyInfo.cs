@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -31,26 +32,26 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="PersonalSettingsPropertyInfo" /> class.
         /// </summary>
         /// <param name="theme">theme.</param>
-        /// <param name="isUsingBrowserLanguage">isUsingBrowserLanguage.</param>
         /// <param name="selectedLanguages">selectedLanguages.</param>
-        public PersonalSettingsPropertyInfo(ThemeType? theme = default(ThemeType?), bool isUsingBrowserLanguage = default(bool), List<int> selectedLanguages = default(List<int>))
+        /// <param name="isUsingBrowserLanguage">isUsingBrowserLanguage.</param>
+        public PersonalSettingsPropertyInfo(ThemeType? theme = default(ThemeType?), List<int> selectedLanguages = default(List<int>), bool isUsingBrowserLanguage = default(bool))
         {
             this.Theme = theme;
-            this.IsUsingBrowserLanguage = isUsingBrowserLanguage;
             this.SelectedLanguages = selectedLanguages;
+            this.IsUsingBrowserLanguage = isUsingBrowserLanguage;
         }
-
-        /// <summary>
-        /// Gets or Sets IsUsingBrowserLanguage
-        /// </summary>
-        [DataMember(Name = "isUsingBrowserLanguage", EmitDefaultValue = false)]
-        public bool IsUsingBrowserLanguage { get; set; }
 
         /// <summary>
         /// Gets or Sets SelectedLanguages
         /// </summary>
         [DataMember(Name = "selectedLanguages", EmitDefaultValue = true)]
         public List<int> SelectedLanguages { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsUsingBrowserLanguage
+        /// </summary>
+        [DataMember(Name = "isUsingBrowserLanguage", EmitDefaultValue = false)]
+        public bool IsUsingBrowserLanguage { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,8 +62,8 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class PersonalSettingsPropertyInfo {\n");
             sb.Append("  Theme: ").Append(Theme).Append("\n");
-            sb.Append("  IsUsingBrowserLanguage: ").Append(IsUsingBrowserLanguage).Append("\n");
             sb.Append("  SelectedLanguages: ").Append(SelectedLanguages).Append("\n");
+            sb.Append("  IsUsingBrowserLanguage: ").Append(IsUsingBrowserLanguage).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,14 +103,14 @@ namespace Cloud.Governance.Client.Model
                     this.Theme.Equals(input.Theme)
                 ) && 
                 (
-                    this.IsUsingBrowserLanguage == input.IsUsingBrowserLanguage ||
-                    this.IsUsingBrowserLanguage.Equals(input.IsUsingBrowserLanguage)
-                ) && 
-                (
                     this.SelectedLanguages == input.SelectedLanguages ||
                     this.SelectedLanguages != null &&
                     input.SelectedLanguages != null &&
                     this.SelectedLanguages.SequenceEqual(input.SelectedLanguages)
+                ) && 
+                (
+                    this.IsUsingBrowserLanguage == input.IsUsingBrowserLanguage ||
+                    this.IsUsingBrowserLanguage.Equals(input.IsUsingBrowserLanguage)
                 );
         }
 
@@ -123,9 +124,9 @@ namespace Cloud.Governance.Client.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.Theme.GetHashCode();
-                hashCode = hashCode * 59 + this.IsUsingBrowserLanguage.GetHashCode();
                 if (this.SelectedLanguages != null)
                     hashCode = hashCode * 59 + this.SelectedLanguages.GetHashCode();
+                hashCode = hashCode * 59 + this.IsUsingBrowserLanguage.GetHashCode();
                 return hashCode;
             }
         }

@@ -25,8 +25,8 @@ namespace Cloud.Governance.Client.Api
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>AllTaskListPageResult</returns>
-        AllTaskListPageResult GeTaskReport(int? top = default(int?), string skip = default(string), string nexttoken = default(string));
+        /// <returns>TaskReportPageResult</returns>
+        TaskReportPageResult GeTaskReport(int? top = default(int?), string skip = default(string), string nexttoken = default(string));
 
         /// <summary>
         /// get all tasks report
@@ -38,14 +38,14 @@ namespace Cloud.Governance.Client.Api
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>ApiResponse of AllTaskListPageResult</returns>
-        ApiResponse<AllTaskListPageResult> GeTaskReportWithHttpInfo(int? top = default(int?), string skip = default(string), string nexttoken = default(string));
+        /// <returns>ApiResponse of TaskReportPageResult</returns>
+        ApiResponse<TaskReportPageResult> GeTaskReportWithHttpInfo(int? top = default(int?), string skip = default(string), string nexttoken = default(string));
         /// <summary>
         /// get workspaces report
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -60,8 +60,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -88,8 +88,8 @@ namespace Cloud.Governance.Client.Api
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AllTaskListPageResult</returns>
-        System.Threading.Tasks.Task<AllTaskListPageResult> GeTaskReportAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of TaskReportPageResult</returns>
+        System.Threading.Tasks.Task<TaskReportPageResult> GeTaskReportAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get all tasks report
@@ -102,8 +102,8 @@ namespace Cloud.Governance.Client.Api
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AllTaskListPageResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AllTaskListPageResult>> GeTaskReportWithHttpInfoAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (TaskReportPageResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TaskReportPageResult>> GeTaskReportWithHttpInfoAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get workspaces report
         /// </summary>
@@ -111,8 +111,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -128,8 +128,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -264,10 +264,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>AllTaskListPageResult</returns>
-        public AllTaskListPageResult GeTaskReport(int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        /// <returns>TaskReportPageResult</returns>
+        public TaskReportPageResult GeTaskReport(int? top = default(int?), string skip = default(string), string nexttoken = default(string))
         {
-            Cloud.Governance.Client.Client.ApiResponse<AllTaskListPageResult> localVarResponse = GeTaskReportWithHttpInfo(top, skip, nexttoken);
+            Cloud.Governance.Client.Client.ApiResponse<TaskReportPageResult> localVarResponse = GeTaskReportWithHttpInfo(top, skip, nexttoken);
             return localVarResponse.Data;
         }
 
@@ -278,8 +278,8 @@ namespace Cloud.Governance.Client.Api
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>ApiResponse of AllTaskListPageResult</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<AllTaskListPageResult> GeTaskReportWithHttpInfo(int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        /// <returns>ApiResponse of TaskReportPageResult</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<TaskReportPageResult> GeTaskReportWithHttpInfo(int? top = default(int?), string skip = default(string), string nexttoken = default(string))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -289,8 +289,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -324,7 +323,7 @@ namespace Cloud.Governance.Client.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<AllTaskListPageResult>("/admin/report/tasks", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<TaskReportPageResult>("/admin/report/tasks", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -343,10 +342,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of AllTaskListPageResult</returns>
-        public async System.Threading.Tasks.Task<AllTaskListPageResult> GeTaskReportAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of TaskReportPageResult</returns>
+        public async System.Threading.Tasks.Task<TaskReportPageResult> GeTaskReportAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<AllTaskListPageResult> localVarResponse = await GeTaskReportWithHttpInfoAsync(top, skip, nexttoken, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<TaskReportPageResult> localVarResponse = await GeTaskReportWithHttpInfoAsync(top, skip, nexttoken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -358,8 +357,8 @@ namespace Cloud.Governance.Client.Api
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (AllTaskListPageResult)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<AllTaskListPageResult>> GeTaskReportWithHttpInfoAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (TaskReportPageResult)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<TaskReportPageResult>> GeTaskReportWithHttpInfoAsync(int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -370,8 +369,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -407,7 +405,7 @@ namespace Cloud.Governance.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<AllTaskListPageResult>("/admin/report/tasks", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TaskReportPageResult>("/admin/report/tasks", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -422,8 +420,8 @@ namespace Cloud.Governance.Client.Api
         /// get workspaces report 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -439,8 +437,8 @@ namespace Cloud.Governance.Client.Api
         /// get workspaces report 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -456,8 +454,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -518,8 +515,8 @@ namespace Cloud.Governance.Client.Api
         /// get workspaces report 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -536,8 +533,8 @@ namespace Cloud.Governance.Client.Api
         /// get workspaces report 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 3000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -555,8 +552,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 

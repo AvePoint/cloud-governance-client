@@ -3,21 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LeasePeriodAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**LeaseWarningAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**LeaseEnabled** | **Boolean** |  | [optional] [default to null]
-**LeaseWarningEnabled** | **Boolean** |  | [optional] [default to null]
-**ApprovalProcessId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LeaseInterval** | **Int32** |  | [optional] [default to null]
-**LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
-**LeaseWarningInterval** | **Int32** |  | [optional] [default to null]
-**LeaseWarningDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
+**LeasePeriodAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**LeaseWarningAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**LeaseEnabled** | **Boolean** |  | [optional] 
+**LeaseWarningEnabled** | **Boolean** |  | [optional] 
+**ApprovalProcessId** | **String** |  | [optional] 
+**LeaseInterval** | **Int32** |  | [optional] 
+**LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
+**LeaseWarningInterval** | **Int32** |  | [optional] 
+**LeaseWarningDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientSiteLeasePeriodServiceSettings  -LeasePeriodAssignBy null `
+$SiteLeasePeriodServiceSettings = New-Cloud.Governance.ClientSiteLeasePeriodServiceSettings  -LeasePeriodAssignBy null `
  -LeaseWarningAssignBy null `
  -LeaseEnabled null `
  -LeaseWarningEnabled null `
@@ -28,11 +28,10 @@ New-Cloud.Governance.ClientSiteLeasePeriodServiceSettings  -LeasePeriodAssignBy 
  -LeaseWarningDurationType null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$SiteLeasePeriodServiceSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,74 +1,18 @@
-# Cloud.Governance.Client.Cloud.Governance.Client\Api.Office365AdminApi
+# Office365AdminApi
 
-All URIs are relative to *https://API_BASE_URL*
+All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Get-AzureAdBuiltInPropertyNames**](Office365AdminApi.md#Get-AzureAdBuiltInPropertyNames) | **GET** /admin/office365/azuread/property/names/builtin | get azure ad custom property names
 [**Get-AzureAdCustomPropertyNames**](Office365AdminApi.md#Get-AzureAdCustomPropertyNames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
-[**Get-UpsPropertyNames**](Office365AdminApi.md#Get-UpsPropertyNames) | **GET** /admin/office365/userprofile/property/names | get user profile property names
+[**Get-TenantIdByUrl**](Office365AdminApi.md#Get-TenantIdByUrl) | **GET** /admin/office365/tenantid | get tenant ids by url
 
-
-<a name="Get-AzureAdBuiltInPropertyNames"></a>
-# **Get-AzureAdBuiltInPropertyNames**
-> String[] Get-AzureAdBuiltInPropertyNames<br>
-
-get azure ad custom property names
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-
-# get azure ad custom property names
-try {
-    $Result = Get-AzureAdBuiltInPropertyNames
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**String[]**
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Get-AzureAdCustomPropertyNames"></a>
 # **Get-AzureAdCustomPropertyNames**
 > String[] Get-AzureAdCustomPropertyNames<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsSearchUserProperty] <System.Nullable[Boolean]><br>
 
 get azure ad custom property names
 
@@ -78,30 +22,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$TenantId = TODO # UUID |  (default to null)
+$TenantId = "TenantId_example" # String | 
+$IsSearchUserProperty = true # Boolean |  (optional) (default to $false)
 
 # get azure ad custom property names
 try {
-    $Result = Get-AzureAdCustomPropertyNames -TenantId $TenantId
+     $Result = Get-AzureAdCustomPropertyNames -TenantId $TenantId -IsSearchUserProperty $IsSearchUserProperty
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-AzureAdCustomPropertyNames: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -109,29 +51,30 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **TenantId** | [**UUID**](UUID.md)|  | [default to null]
+ **TenantId** | [**String**](String.md)|  | 
+ **IsSearchUserProperty** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 **String[]**
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-UpsPropertyNames"></a>
-# **Get-UpsPropertyNames**
-> String[] Get-UpsPropertyNames<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-AdminCenterUrl] <String><br>
+<a name="Get-TenantIdByUrl"></a>
+# **Get-TenantIdByUrl**
+> void Get-TenantIdByUrl<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Uri] <String><br>
 
-get user profile property names
+get tenant ids by url
 
 ### Example
 ```powershell
@@ -139,30 +82,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$AdminCenterUrl = "AdminCenterUrl_example" # String |  (default to null)
+$Uri = "Uri_example" # String | 
 
-# get user profile property names
+# get tenant ids by url
 try {
-    $Result = Get-UpsPropertyNames -AdminCenterUrl $AdminCenterUrl
+     $Result = Get-TenantIdByUrl -Uri $Uri
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-TenantIdByUrl: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -170,20 +110,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **AdminCenterUrl** | **String**|  | [default to null]
+ **Uri** | **String**|  | 
 
 ### Return type
-
-**String[]**
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

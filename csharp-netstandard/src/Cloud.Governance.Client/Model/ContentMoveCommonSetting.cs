@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -89,25 +90,25 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ProfileMappings
         /// </summary>
-        [DataMember(Name = "profileMappings", EmitDefaultValue = false)]
+        [DataMember(Name = "profileMappings", EmitDefaultValue = true)]
         public ContentMoveProfileMappings ProfileMappings { get; set; }
 
         /// <summary>
         /// Gets or Sets BackupSettings
         /// </summary>
-        [DataMember(Name = "backupSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "backupSettings", EmitDefaultValue = true)]
         public BackupEnvironmentSetting BackupSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets ConflictResolutionSettings
         /// </summary>
-        [DataMember(Name = "conflictResolutionSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "conflictResolutionSettings", EmitDefaultValue = true)]
         public ConflictResolutionSetting ConflictResolutionSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets FilterPolicy
         /// </summary>
-        [DataMember(Name = "filterPolicy", EmitDefaultValue = false)]
+        [DataMember(Name = "filterPolicy", EmitDefaultValue = true)]
         public GuidModel FilterPolicy { get; set; }
 
         /// <summary>

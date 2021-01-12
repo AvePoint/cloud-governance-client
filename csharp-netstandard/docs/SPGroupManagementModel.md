@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **IsAutoAcceptRequest** | **bool** |  | [optional] 
 **SendMembershipRequestEmailAddress** | **string** |  | [optional] 
 **IsTemporaryGroup** | **bool** |  | [optional] 
+**RoleID** | **List&lt;string&gt;** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

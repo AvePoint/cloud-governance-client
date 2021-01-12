@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -25,13 +26,31 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public ServiceType? Type { get; set; }
+
+        /// <summary>
+        /// Returns false as Type should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeType()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", EmitDefaultValue = false)]
+        [DataMember(Name = "status", EmitDefaultValue = true)]
         public RequestStatus? Status { get; set; }
+
+        /// <summary>
+        /// Returns false as Status should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeStatus()
+        {
+            return false;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSiteRequest" /> class.
         /// </summary>
@@ -47,12 +66,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="additionalAdmins">additionalAdmins.</param>
         /// <param name="primaryContact">primaryContact.</param>
         /// <param name="secondaryContact">secondaryContact.</param>
-        /// <param name="isShownClassificationAndDesing">isShownClassificationAndDesing.</param>
         /// <param name="siteDesign">siteDesign.</param>
         /// <param name="teamSiteDesign">teamSiteDesign.</param>
         /// <param name="classification">classification.</param>
-        /// <param name="sensitivity">sensitivity.</param>
-        /// <param name="isShownHubsiteSettings">isShownHubsiteSettings.</param>
         /// <param name="hubSiteSettings">hubSiteSettings.</param>
         /// <param name="userPermissions">userPermissions.</param>
         /// <param name="groupPermissions">groupPermissions.</param>
@@ -67,12 +83,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">notesToApprovers.</param>
         /// <param name="questionnaireId">questionnaireId.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="type">type.</param>
-        /// <param name="typeDescription">typeDescription.</param>
-        /// <param name="status">status.</param>
-        /// <param name="progressStatus">progressStatus.</param>
-        /// <param name="progressStatusDescription">progressStatusDescription.</param>
-        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = default(int?), int language = default(int), string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), bool isShownClassificationAndDesing = default(bool), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), string sensitivity = default(string), bool isShownHubsiteSettings = default(bool), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ServiceType? type = default(ServiceType?), string typeDescription = default(string), RequestStatus? status = default(RequestStatus?), int progressStatus = default(int), string progressStatusDescription = default(string))
+        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = default(int?), int language = default(int), string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SiteTitle = siteTitle;
             this.SiteDescription = siteDescription;
@@ -86,12 +97,9 @@ namespace Cloud.Governance.Client.Model
             this.AdditionalAdmins = additionalAdmins;
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;
-            this.IsShownClassificationAndDesing = isShownClassificationAndDesing;
             this.SiteDesign = siteDesign;
             this.TeamSiteDesign = teamSiteDesign;
             this.Classification = classification;
-            this.Sensitivity = sensitivity;
-            this.IsShownHubsiteSettings = isShownHubsiteSettings;
             this.HubSiteSettings = hubSiteSettings;
             this.UserPermissions = userPermissions;
             this.GroupPermissions = groupPermissions;
@@ -106,11 +114,6 @@ namespace Cloud.Governance.Client.Model
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
             this.Metadatas = metadatas;
-            this.Type = type;
-            this.TypeDescription = typeDescription;
-            this.Status = status;
-            this.ProgressStatus = progressStatus;
-            this.ProgressStatusDescription = progressStatusDescription;
         }
 
         /// <summary>
@@ -128,7 +131,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets SiteUrl
         /// </summary>
-        [DataMember(Name = "siteUrl", EmitDefaultValue = false)]
+        [DataMember(Name = "siteUrl", EmitDefaultValue = true)]
         public SiteUrl SiteUrl { get; set; }
 
         /// <summary>
@@ -164,7 +167,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PrimaryAdmin
         /// </summary>
-        [DataMember(Name = "primaryAdmin", EmitDefaultValue = false)]
+        [DataMember(Name = "primaryAdmin", EmitDefaultValue = true)]
         public ApiUser PrimaryAdmin { get; set; }
 
         /// <summary>
@@ -176,25 +179,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PrimaryContact
         /// </summary>
-        [DataMember(Name = "primaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets SecondaryContact
         /// </summary>
-        [DataMember(Name = "secondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
-
-        /// <summary>
-        /// Gets or Sets IsShownClassificationAndDesing
-        /// </summary>
-        [DataMember(Name = "isShownClassificationAndDesing", EmitDefaultValue = false)]
-        public bool IsShownClassificationAndDesing { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteDesign
         /// </summary>
-        [DataMember(Name = "siteDesign", EmitDefaultValue = false)]
+        [DataMember(Name = "siteDesign", EmitDefaultValue = true)]
         public StringModel SiteDesign { get; set; }
 
         /// <summary>
@@ -210,21 +207,9 @@ namespace Cloud.Governance.Client.Model
         public string Classification { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sensitivity
-        /// </summary>
-        [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
-        public string Sensitivity { get; set; }
-
-        /// <summary>
-        /// Gets or Sets IsShownHubsiteSettings
-        /// </summary>
-        [DataMember(Name = "isShownHubsiteSettings", EmitDefaultValue = false)]
-        public bool IsShownHubsiteSettings { get; set; }
-
-        /// <summary>
         /// Gets or Sets HubSiteSettings
         /// </summary>
-        [DataMember(Name = "hubSiteSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "hubSiteSettings", EmitDefaultValue = true)]
         public HubSiteSettings HubSiteSettings { get; set; }
 
         /// <summary>
@@ -242,19 +227,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets YammerGroupSettings
         /// </summary>
-        [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = true)]
         public YammerGroupRequestSettings YammerGroupSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets LeasePeriodSettings
         /// </summary>
-        [DataMember(Name = "leasePeriodSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "leasePeriodSettings", EmitDefaultValue = true)]
         public SiteLeasePeriodRequestSettings LeasePeriodSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets MultiGeoLocation
         /// </summary>
-        [DataMember(Name = "multiGeoLocation", EmitDefaultValue = false)]
+        [DataMember(Name = "multiGeoLocation", EmitDefaultValue = true)]
         public GeoLocationBase MultiGeoLocation { get; set; }
 
         /// <summary>
@@ -312,10 +297,28 @@ namespace Cloud.Governance.Client.Model
         public int? TicketNumber { get; private set; }
 
         /// <summary>
+        /// Returns false as TicketNumber should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTicketNumber()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets TypeDescription
         /// </summary>
         [DataMember(Name = "typeDescription", EmitDefaultValue = true)]
-        public string TypeDescription { get; set; }
+        public string TypeDescription { get; private set; }
+
+        /// <summary>
+        /// Returns false as TypeDescription should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTypeDescription()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets Requester
@@ -324,22 +327,58 @@ namespace Cloud.Governance.Client.Model
         public string Requester { get; private set; }
 
         /// <summary>
+        /// Returns false as Requester should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeRequester()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets RequesterLoginName
         /// </summary>
         [DataMember(Name = "requesterLoginName", EmitDefaultValue = true)]
         public string RequesterLoginName { get; private set; }
 
         /// <summary>
+        /// Returns false as RequesterLoginName should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeRequesterLoginName()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets ProgressStatus
         /// </summary>
         [DataMember(Name = "progressStatus", EmitDefaultValue = false)]
-        public int ProgressStatus { get; set; }
+        public int ProgressStatus { get; private set; }
+
+        /// <summary>
+        /// Returns false as ProgressStatus should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeProgressStatus()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets ProgressStatusDescription
         /// </summary>
         [DataMember(Name = "progressStatusDescription", EmitDefaultValue = true)]
-        public string ProgressStatusDescription { get; set; }
+        public string ProgressStatusDescription { get; private set; }
+
+        /// <summary>
+        /// Returns false as ProgressStatusDescription should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeProgressStatusDescription()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets SubmittedTime
@@ -348,10 +387,28 @@ namespace Cloud.Governance.Client.Model
         public DateTime? SubmittedTime { get; private set; }
 
         /// <summary>
+        /// Returns false as SubmittedTime should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeSubmittedTime()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets LastUpdated
         /// </summary>
         [DataMember(Name = "lastUpdated", EmitDefaultValue = true)]
         public DateTime? LastUpdated { get; private set; }
+
+        /// <summary>
+        /// Returns false as LastUpdated should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeLastUpdated()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets CreatedTime
@@ -360,16 +417,43 @@ namespace Cloud.Governance.Client.Model
         public DateTime? CreatedTime { get; private set; }
 
         /// <summary>
+        /// Returns false as CreatedTime should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeCreatedTime()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets AssignTo
         /// </summary>
         [DataMember(Name = "assignTo", EmitDefaultValue = true)]
         public string AssignTo { get; private set; }
 
         /// <summary>
+        /// Returns false as AssignTo should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeAssignTo()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets FullPath
         /// </summary>
         [DataMember(Name = "fullPath", EmitDefaultValue = true)]
         public string FullPath { get; private set; }
+
+        /// <summary>
+        /// Returns false as FullPath should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeFullPath()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -391,12 +475,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  AdditionalAdmins: ").Append(AdditionalAdmins).Append("\n");
             sb.Append("  PrimaryContact: ").Append(PrimaryContact).Append("\n");
             sb.Append("  SecondaryContact: ").Append(SecondaryContact).Append("\n");
-            sb.Append("  IsShownClassificationAndDesing: ").Append(IsShownClassificationAndDesing).Append("\n");
             sb.Append("  SiteDesign: ").Append(SiteDesign).Append("\n");
             sb.Append("  TeamSiteDesign: ").Append(TeamSiteDesign).Append("\n");
             sb.Append("  Classification: ").Append(Classification).Append("\n");
-            sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
-            sb.Append("  IsShownHubsiteSettings: ").Append(IsShownHubsiteSettings).Append("\n");
             sb.Append("  HubSiteSettings: ").Append(HubSiteSettings).Append("\n");
             sb.Append("  UserPermissions: ").Append(UserPermissions).Append("\n");
             sb.Append("  GroupPermissions: ").Append(GroupPermissions).Append("\n");
@@ -519,10 +600,6 @@ namespace Cloud.Governance.Client.Model
                     this.SecondaryContact.Equals(input.SecondaryContact))
                 ) && 
                 (
-                    this.IsShownClassificationAndDesing == input.IsShownClassificationAndDesing ||
-                    this.IsShownClassificationAndDesing.Equals(input.IsShownClassificationAndDesing)
-                ) && 
-                (
                     this.SiteDesign == input.SiteDesign ||
                     (this.SiteDesign != null &&
                     this.SiteDesign.Equals(input.SiteDesign))
@@ -536,15 +613,6 @@ namespace Cloud.Governance.Client.Model
                     this.Classification == input.Classification ||
                     (this.Classification != null &&
                     this.Classification.Equals(input.Classification))
-                ) && 
-                (
-                    this.Sensitivity == input.Sensitivity ||
-                    (this.Sensitivity != null &&
-                    this.Sensitivity.Equals(input.Sensitivity))
-                ) && 
-                (
-                    this.IsShownHubsiteSettings == input.IsShownHubsiteSettings ||
-                    this.IsShownHubsiteSettings.Equals(input.IsShownHubsiteSettings)
                 ) && 
                 (
                     this.HubSiteSettings == input.HubSiteSettings ||
@@ -715,16 +783,12 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.PrimaryContact.GetHashCode();
                 if (this.SecondaryContact != null)
                     hashCode = hashCode * 59 + this.SecondaryContact.GetHashCode();
-                hashCode = hashCode * 59 + this.IsShownClassificationAndDesing.GetHashCode();
                 if (this.SiteDesign != null)
                     hashCode = hashCode * 59 + this.SiteDesign.GetHashCode();
                 if (this.TeamSiteDesign != null)
                     hashCode = hashCode * 59 + this.TeamSiteDesign.GetHashCode();
                 if (this.Classification != null)
                     hashCode = hashCode * 59 + this.Classification.GetHashCode();
-                if (this.Sensitivity != null)
-                    hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
-                hashCode = hashCode * 59 + this.IsShownHubsiteSettings.GetHashCode();
                 if (this.HubSiteSettings != null)
                     hashCode = hashCode * 59 + this.HubSiteSettings.GetHashCode();
                 if (this.UserPermissions != null)

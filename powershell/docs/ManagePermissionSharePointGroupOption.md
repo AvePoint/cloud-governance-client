@@ -3,25 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnableCreateSPGroup** | **Boolean** |  | [optional] [default to null]
-**IsEnableDeleteSPGroup** | **Boolean** |  | [optional] [default to null]
-**IsEnableManageGroupSettings** | **Boolean** |  | [optional] [default to null]
-**IsEnableManageGroupMembers** | **Boolean** |  | [optional] [default to null]
-**GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**GroupOwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] [default to null]
-**SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] [default to null]
-**SpGroupOptionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] [default to null]
-**IsAutoAcceptRequest** | **Boolean** |  | [optional] [default to null]
-**SendMembershipRequestEmailAddress** | **String** |  | [optional] [default to null]
-**GroupRequestAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
+**IsEnableCreateSPGroup** | **Boolean** |  | [optional] 
+**IsEnableDeleteSPGroup** | **Boolean** |  | [optional] 
+**IsEnableManageGroupSettings** | **Boolean** |  | [optional] 
+**IsEnableManageGroupMembers** | **Boolean** |  | [optional] 
+**GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**GroupOwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] 
+**SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] 
+**SpGroupOptionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] 
+**IsAutoAcceptRequest** | **Boolean** |  | [optional] 
+**SendMembershipRequestEmailAddress** | **String** |  | [optional] 
+**GroupRequestAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientManagePermissionSharePointGroupOption  -IsEnableCreateSPGroup null `
+$ManagePermissionSharePointGroupOption = New-Cloud.Governance.ClientManagePermissionSharePointGroupOption  -IsEnableCreateSPGroup null `
  -IsEnableDeleteSPGroup null `
  -IsEnableManageGroupSettings null `
  -IsEnableManageGroupMembers null `
@@ -36,11 +36,10 @@ New-Cloud.Governance.ClientManagePermissionSharePointGroupOption  -IsEnableCreat
  -GroupRequestAssignBy null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ManagePermissionSharePointGroupOption | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

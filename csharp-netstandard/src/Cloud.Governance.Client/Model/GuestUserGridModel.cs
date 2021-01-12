@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -40,8 +41,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
         /// <param name="profileName">profileName.</param>
+        /// <param name="nextRenewalDate">nextRenewalDate.</param>
         /// <param name="metadata">metadata.</param>
-        public GuestUserGridModel(Guid id = default(Guid), string displayName = default(string), string mail = default(string), string primaryContact = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactDisplayName = default(string), GuestUserStatus? status = default(GuestUserStatus?), string statusDescription = default(string), string profileName = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
+        public GuestUserGridModel(Guid id = default(Guid), string displayName = default(string), string mail = default(string), string primaryContact = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactDisplayName = default(string), GuestUserStatus? status = default(GuestUserStatus?), string statusDescription = default(string), string profileName = default(string), DateTime? nextRenewalDate = default(DateTime?), List<ReportMetadata> metadata = default(List<ReportMetadata>))
         {
             this.Id = id;
             this.DisplayName = displayName;
@@ -53,6 +55,7 @@ namespace Cloud.Governance.Client.Model
             this.Status = status;
             this.StatusDescription = statusDescription;
             this.ProfileName = profileName;
+            this.NextRenewalDate = nextRenewalDate;
             this.Metadata = metadata;
         }
 
@@ -111,6 +114,12 @@ namespace Cloud.Governance.Client.Model
         public string ProfileName { get; set; }
 
         /// <summary>
+        /// Gets or Sets NextRenewalDate
+        /// </summary>
+        [DataMember(Name = "nextRenewalDate", EmitDefaultValue = true)]
+        public DateTime? NextRenewalDate { get; set; }
+
+        /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
@@ -134,6 +143,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StatusDescription: ").Append(StatusDescription).Append("\n");
             sb.Append("  ProfileName: ").Append(ProfileName).Append("\n");
+            sb.Append("  NextRenewalDate: ").Append(NextRenewalDate).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -219,6 +229,11 @@ namespace Cloud.Governance.Client.Model
                     this.ProfileName.Equals(input.ProfileName))
                 ) && 
                 (
+                    this.NextRenewalDate == input.NextRenewalDate ||
+                    (this.NextRenewalDate != null &&
+                    this.NextRenewalDate.Equals(input.NextRenewalDate))
+                ) && 
+                (
                     this.Metadata == input.Metadata ||
                     this.Metadata != null &&
                     input.Metadata != null &&
@@ -254,6 +269,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.StatusDescription.GetHashCode();
                 if (this.ProfileName != null)
                     hashCode = hashCode * 59 + this.ProfileName.GetHashCode();
+                if (this.NextRenewalDate != null)
+                    hashCode = hashCode * 59 + this.NextRenewalDate.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;

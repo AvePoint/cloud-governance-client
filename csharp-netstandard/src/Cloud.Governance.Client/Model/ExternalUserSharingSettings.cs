@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -49,7 +50,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets AnonymousLinkSettings
         /// </summary>
-        [DataMember(Name = "anonymousLinkSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "anonymousLinkSettings", EmitDefaultValue = true)]
         public AnonymousLinkSettings AnonymousLinkSettings { get; set; }
 
         /// <summary>

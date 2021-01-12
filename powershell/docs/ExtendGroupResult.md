@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtendType** | [**ExtendType**](ExtendType.md) |  | [optional] [default to null]
-**Duration** | **Int32** |  | [optional] [default to null]
-**DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
+**ExtendType** | [**ExtendType**](ExtendType.md) |  | [optional] 
+**Duration** | **Int32** |  | [optional] 
+**DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientExtendGroupResult  -ExtendType null `
+$ExtendGroupResult = New-Cloud.Governance.ClientExtendGroupResult  -ExtendType null `
  -Duration null `
  -DurationType null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ExtendGroupResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -5,6 +5,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -22,7 +23,7 @@ namespace Cloud.Governance.Client.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.7.3";
+        public const string Version = "4.1.11";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -52,7 +53,6 @@ namespace Cloud.Governance.Client.Client
                     string.Format("Error calling {0}: {1}", methodName, response.RawContent),
                     response.RawContent, response.Headers);
             }
-            
             return null;
         };
 
@@ -81,7 +81,6 @@ namespace Cloud.Governance.Client.Client
 
         private string _dateTimeFormat = ISO8601_DATETIME_FORMAT;
         private string _tempFolderPath = Path.GetTempPath();
-
         #endregion Private Members
 
         #region Constructors
@@ -92,7 +91,7 @@ namespace Cloud.Governance.Client.Client
         [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
         public Configuration()
         {
-            UserAgent = "sdk/csharp-netstandard/3.11.0";
+            UserAgent = "sdk/csharp-netstandard/4.1.11";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -177,6 +176,12 @@ namespace Cloud.Governance.Client.Client
         /// Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
         /// </summary>
         public virtual int Timeout { get; set; }
+
+        /// <summary>
+        /// Gets or sets the proxy
+        /// </summary>
+        /// <value>Proxy.</value>
+        public virtual WebProxy Proxy { get; set; }
 
         /// <summary>
         /// Gets or sets the HTTP user agent.
@@ -344,9 +349,10 @@ namespace Cloud.Governance.Client.Client
         public static String ToDebugReport()
         {
             String report = "C# SDK (Cloud.Governance.Client) Debug Report:\n";
-            report += "    OS: " + System.Runtime.InteropServices.RuntimeInformation.OSDescription + "\n";
+            report += "    OS: " + System.Environment.OSVersion + "\n";
+            report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 1.0\n";
-            report += "    SDK Package Version: 3.11.0\n";
+            report += "    SDK Package Version: 4.1.11\n";
 
             return report;
         }
@@ -400,6 +406,7 @@ namespace Cloud.Governance.Client.Client
                 DefaultHeaders = defaultHeaders,
                 BasePath = second.BasePath ?? first.BasePath,
                 Timeout = second.Timeout,
+                Proxy = second.Proxy ?? first.Proxy,
                 UserAgent = second.UserAgent ?? first.UserAgent,
                 Username = second.Username ?? first.Username,
                 Password = second.Password ?? first.Password,

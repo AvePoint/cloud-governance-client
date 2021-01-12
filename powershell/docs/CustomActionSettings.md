@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BeforeApprovalProcessExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] [default to null]
-**AfterApprovalProcessExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] [default to null]
-**PostExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] [default to null]
-**BeforeSubmission** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] [default to null]
-**WhenErrorTaskGenerated** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] [default to null]
+**BeforeApprovalProcessExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
+**AfterApprovalProcessExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
+**PostExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
+**BeforeSubmission** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
+**WhenErrorTaskGenerated** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCustomActionSettings  -BeforeApprovalProcessExecution null `
+$CustomActionSettings = New-Cloud.Governance.ClientCustomActionSettings  -BeforeApprovalProcessExecution null `
  -AfterApprovalProcessExecution null `
  -PostExecution null `
  -BeforeSubmission null `
  -WhenErrorTaskGenerated null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CustomActionSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

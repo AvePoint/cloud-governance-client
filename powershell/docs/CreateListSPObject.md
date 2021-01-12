@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ParentUrl** | **String** |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
+**ParentUrl** | **String** |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**SiteId** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateListSPObject  -ParentUrl null `
+$CreateListSPObject = New-Cloud.Governance.ClientCreateListSPObject  -ParentUrl null `
  -SiteUrl null `
  -SiteId null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateListSPObject | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

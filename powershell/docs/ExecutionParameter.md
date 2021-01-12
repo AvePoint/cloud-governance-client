@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **String** |  | [optional] [default to null]
-**Type** | **String** |  | [optional] [default to null]
-**Value** | **String** |  | [optional] [default to null]
+**Name** | **String** |  | [optional] 
+**Type** | **String** |  | [optional] 
+**Value** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientExecutionParameter  -Name null `
+$ExecutionParameter = New-Cloud.Governance.ClientExecutionParameter  -Name null `
  -Type null `
  -Value null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ExecutionParameter | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

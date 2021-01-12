@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -88,6 +89,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableChangeMembershipType">enableChangeMembershipType.</param>
         /// <param name="groupObjectType">groupObjectType.</param>
         /// <param name="enableChangeYammerGroupInfo">enableChangeYammerGroupInfo.</param>
+        /// <param name="scopePeoplePickerFilterProfileId">scopePeoplePickerFilterProfileId.</param>
+        /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -107,7 +111,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = default(bool), bool enableChangeDescription = default(bool), bool enableChangeMemberSubscription = default(bool), bool enableChangeOutsideSenders = default(bool), bool enableChangePrimaryContact = default(bool), bool enableChangeSecondaryContact = default(bool), bool enableAddOwners = default(bool), UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = default(bool), bool enableAddMembers = default(bool), UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = default(bool), bool enableChangeDynamicMembershipRules = default(bool), bool enableChangeTeamCollaboration = default(bool), bool enableChangeHubSite = default(bool), bool enableChangeClassification = default(bool), List<string> classificationList = default(List<string>), bool enableChangeSensitivity = default(bool), List<string> sensitivityList = default(List<string>), bool enableChangeMetadata = default(bool), bool enableAddOrDeleteMetadata = default(bool), List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = default(bool), GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = default(bool), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = default(bool), bool enableChangeDescription = default(bool), bool enableChangeMemberSubscription = default(bool), bool enableChangeOutsideSenders = default(bool), bool enableChangePrimaryContact = default(bool), bool enableChangeSecondaryContact = default(bool), bool enableAddOwners = default(bool), UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = default(bool), bool enableAddMembers = default(bool), UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = default(bool), bool enableChangeDynamicMembershipRules = default(bool), bool enableChangeTeamCollaboration = default(bool), bool enableChangeHubSite = default(bool), bool enableChangeClassification = default(bool), List<string> classificationList = default(List<string>), bool enableChangeSensitivity = default(bool), List<string> sensitivityList = default(List<string>), bool enableChangeMetadata = default(bool), bool enableAddOrDeleteMetadata = default(bool), List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = default(bool), GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = default(bool), Guid? scopePeoplePickerFilterProfileId = default(Guid?), Guid? peoplePickerFilterProfileId = default(Guid?), ChangeGroupSettingRequest requestTemplate = default(ChangeGroupSettingRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.TenantId = tenantId;
             this.NetworkId = networkId;
@@ -137,6 +142,9 @@ namespace Cloud.Governance.Client.Model
             this.EnableChangeMembershipType = enableChangeMembershipType;
             this.GroupObjectType = groupObjectType;
             this.EnableChangeYammerGroupInfo = enableChangeYammerGroupInfo;
+            this.ScopePeoplePickerFilterProfileId = scopePeoplePickerFilterProfileId;
+            this.PeoplePickerFilterProfileId = peoplePickerFilterProfileId;
+            this.RequestTemplate = requestTemplate;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -156,6 +164,7 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
@@ -303,6 +312,24 @@ namespace Cloud.Governance.Client.Model
         public bool EnableChangeYammerGroupInfo { get; set; }
 
         /// <summary>
+        /// Gets or Sets ScopePeoplePickerFilterProfileId
+        /// </summary>
+        [DataMember(Name = "scopePeoplePickerFilterProfileId", EmitDefaultValue = true)]
+        public Guid? ScopePeoplePickerFilterProfileId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PeoplePickerFilterProfileId
+        /// </summary>
+        [DataMember(Name = "peoplePickerFilterProfileId", EmitDefaultValue = true)]
+        public Guid? PeoplePickerFilterProfileId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public ChangeGroupSettingRequest RequestTemplate { get; set; }
+
+        /// <summary>
         /// Gets or Sets Metadatas
         /// </summary>
         [DataMember(Name = "metadatas", EmitDefaultValue = true)]
@@ -353,13 +380,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -377,7 +404,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -397,6 +424,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "categoryId", EmitDefaultValue = true)]
         public string CategoryId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -434,6 +467,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  EnableChangeMembershipType: ").Append(EnableChangeMembershipType).Append("\n");
             sb.Append("  GroupObjectType: ").Append(GroupObjectType).Append("\n");
             sb.Append("  EnableChangeYammerGroupInfo: ").Append(EnableChangeYammerGroupInfo).Append("\n");
+            sb.Append("  ScopePeoplePickerFilterProfileId: ").Append(ScopePeoplePickerFilterProfileId).Append("\n");
+            sb.Append("  PeoplePickerFilterProfileId: ").Append(PeoplePickerFilterProfileId).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -453,6 +489,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -608,6 +645,21 @@ namespace Cloud.Governance.Client.Model
                     this.EnableChangeYammerGroupInfo.Equals(input.EnableChangeYammerGroupInfo)
                 ) && 
                 (
+                    this.ScopePeoplePickerFilterProfileId == input.ScopePeoplePickerFilterProfileId ||
+                    (this.ScopePeoplePickerFilterProfileId != null &&
+                    this.ScopePeoplePickerFilterProfileId.Equals(input.ScopePeoplePickerFilterProfileId))
+                ) && 
+                (
+                    this.PeoplePickerFilterProfileId == input.PeoplePickerFilterProfileId ||
+                    (this.PeoplePickerFilterProfileId != null &&
+                    this.PeoplePickerFilterProfileId.Equals(input.PeoplePickerFilterProfileId))
+                ) && 
+                (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
+                ) && 
+                (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
                     this.DepartmentAssignBy.Equals(input.DepartmentAssignBy)
                 ) && 
@@ -695,6 +747,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -740,6 +797,12 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.EnableChangeMembershipType.GetHashCode();
                 hashCode = hashCode * 59 + this.GroupObjectType.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableChangeYammerGroupInfo.GetHashCode();
+                if (this.ScopePeoplePickerFilterProfileId != null)
+                    hashCode = hashCode * 59 + this.ScopePeoplePickerFilterProfileId.GetHashCode();
+                if (this.PeoplePickerFilterProfileId != null)
+                    hashCode = hashCode * 59 + this.PeoplePickerFilterProfileId.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -770,6 +833,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

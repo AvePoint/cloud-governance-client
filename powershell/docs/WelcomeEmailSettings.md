@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [default to null]
-**Subject** | **String** |  | [optional] [default to null]
-**PersonalMessage** | **String** |  | [optional] [default to null]
+**Enabled** | **Boolean** |  | [optional] 
+**Subject** | **String** |  | [optional] 
+**PersonalMessage** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientWelcomeEmailSettings  -Enabled null `
+$WelcomeEmailSettings = New-Cloud.Governance.ClientWelcomeEmailSettings  -Enabled null `
  -Subject null `
  -PersonalMessage null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WelcomeEmailSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,19 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleType** | [**GroupIdRuleType**](GroupIdRuleType.md) |  | [optional] [default to null]
-**EnableAutoSequenceNumber** | **Boolean** |  | [optional] [default to null]
-**AutoSequenceNumber** | **String** |  | [optional] [default to null]
-**Enabled** | **Boolean** |  | [optional] [default to null]
-**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Prefixs** | [**GroupConstructureRule[]**](GroupConstructureRule.md) |  | [optional] [default to null]
-**Suffixs** | [**GroupConstructureRule[]**](GroupConstructureRule.md) |  | [optional] [default to null]
+**RuleType** | [**GroupIdRuleType**](GroupIdRuleType.md) |  | [optional] 
+**EnableAutoSequenceNumber** | **Boolean** |  | [optional] 
+**AutoSequenceNumber** | **String** |  | [optional] 
+**Enabled** | **Boolean** |  | [optional] 
+**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Prefixs** | [**GroupConstructureRule[]**](GroupConstructureRule.md) |  | [optional] 
+**Suffixs** | [**GroupConstructureRule[]**](GroupConstructureRule.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGroupIdConstructureSettings  -RuleType null `
+$GroupIdConstructureSettings = New-Cloud.Governance.ClientGroupIdConstructureSettings  -RuleType null `
  -EnableAutoSequenceNumber null `
  -AutoSequenceNumber null `
  -Enabled null `
@@ -24,11 +24,10 @@ New-Cloud.Governance.ClientGroupIdConstructureSettings  -RuleType null `
  -Suffixs null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GroupIdConstructureSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

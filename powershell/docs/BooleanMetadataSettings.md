@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableTerms** | **Boolean** |  | [optional] [default to null]
-**Value** | **Boolean** |  | [optional] [default to null]
-**TermsAndConditions** | **String** |  | [optional] [default to null]
+**EnableTerms** | **Boolean** |  | [optional] 
+**Value** | **Boolean** |  | [optional] 
+**TermsAndConditions** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientBooleanMetadataSettings  -EnableTerms null `
+$BooleanMetadataSettings = New-Cloud.Governance.ClientBooleanMetadataSettings  -EnableTerms null `
  -Value null `
  -TermsAndConditions null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$BooleanMetadataSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

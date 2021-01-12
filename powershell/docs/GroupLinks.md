@@ -3,28 +3,29 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupSiteLink** | **String** |  | [optional] [default to null]
-**GroupPlannerLink** | **String** |  | [optional] [default to null]
-**GroupFilesLink** | **String** |  | [optional] [default to null]
-**GroupConversationsLink** | **String** |  | [optional] [default to null]
-**GroupNotebookLink** | **String** |  | [optional] [default to null]
+**GroupSiteLink** | **String** |  | [optional] 
+**GroupPlannerLink** | **String** |  | [optional] 
+**GroupFilesLink** | **String** |  | [optional] 
+**GroupConversationsLink** | **String** |  | [optional] 
+**GroupNotebookLink** | **String** |  | [optional] 
+**YammerGroupLink** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGroupLinks  -GroupSiteLink null `
+$GroupLinks = New-Cloud.Governance.ClientGroupLinks  -GroupSiteLink null `
  -GroupPlannerLink null `
  -GroupFilesLink null `
  -GroupConversationsLink null `
- -GroupNotebookLink null
+ -GroupNotebookLink null `
+ -YammerGroupLink null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GroupLinks | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

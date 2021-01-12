@@ -3,20 +3,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ListType** | [**ListType**](ListType.md) |  | [optional] [default to null]
-**EnableMajorVersions** | **Boolean** |  | [optional] [default to null]
-**EnableMajorAndMinorVersions** | **Boolean** |  | [optional] [default to null]
-**EnableMajorVersionLimit** | **Boolean** |  | [optional] [default to null]
-**MajorVersionLimit** | **Int32** |  | [optional] [default to null]
-**EnableMinorVersionLimit** | **Boolean** |  | [optional] [default to null]
-**MinorVersionsLimit** | **Int32** |  | [optional] [default to null]
-**RequireContentApproval** | **Boolean** |  | [optional] [default to null]
+**ListType** | [**ListType**](ListType.md) |  | [optional] 
+**EnableMajorVersions** | **Boolean** |  | [optional] 
+**EnableMajorAndMinorVersions** | **Boolean** |  | [optional] 
+**EnableMajorVersionLimit** | **Boolean** |  | [optional] 
+**MajorVersionLimit** | **Int32** |  | [optional] 
+**EnableMinorVersionLimit** | **Boolean** |  | [optional] 
+**MinorVersionsLimit** | **Int32** |  | [optional] 
+**RequireContentApproval** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientListVersionSettings  -ListType null `
+$ListVersionSettings = New-Cloud.Governance.ClientListVersionSettings  -ListType null `
  -EnableMajorVersions null `
  -EnableMajorAndMinorVersions null `
  -EnableMajorVersionLimit null `
@@ -26,11 +26,10 @@ New-Cloud.Governance.ClientListVersionSettings  -ListType null `
  -RequireContentApproval null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ListVersionSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -27,25 +28,28 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "progressStatus", EmitDefaultValue = false)]
         public ApiRequestProgressStatus? ProgressStatus { get; set; }
+
+        /// <summary>
+        /// Returns false as ProgressStatus should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeProgressStatus()
+        {
+            return false;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeSiteContactSubRequest" /> class.
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="assignTo">assignTo.</param>
         /// <param name="reason">reason.</param>
-        /// <param name="status">status.</param>
-        /// <param name="statusDescription">statusDescription.</param>
         /// <param name="adminContactSettings">adminContactSettings.</param>
-        /// <param name="progressStatus">progressStatus.</param>
-        public ChangeSiteContactSubRequest(Guid id = default(Guid), List<ApiUser> assignTo = default(List<ApiUser>), string reason = default(string), int status = default(int), string statusDescription = default(string), ChangeContactByUrlSetting adminContactSettings = default(ChangeContactByUrlSetting), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?))
+        public ChangeSiteContactSubRequest(Guid id = default(Guid), List<ApiUser> assignTo = default(List<ApiUser>), string reason = default(string), ChangeContactByUrlSetting adminContactSettings = default(ChangeContactByUrlSetting))
         {
             this.Id = id;
             this.AssignTo = assignTo;
             this.Reason = reason;
-            this.Status = status;
-            this.StatusDescription = statusDescription;
             this.AdminContactSettings = adminContactSettings;
-            this.ProgressStatus = progressStatus;
         }
 
         /// <summary>
@@ -70,18 +74,36 @@ namespace Cloud.Governance.Client.Model
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
-        public int Status { get; set; }
+        public int Status { get; private set; }
+
+        /// <summary>
+        /// Returns false as Status should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeStatus()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets StatusDescription
         /// </summary>
         [DataMember(Name = "statusDescription", EmitDefaultValue = true)]
-        public string StatusDescription { get; set; }
+        public string StatusDescription { get; private set; }
+
+        /// <summary>
+        /// Returns false as StatusDescription should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeStatusDescription()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets AdminContactSettings
         /// </summary>
-        [DataMember(Name = "adminContactSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "adminContactSettings", EmitDefaultValue = true)]
         public ChangeContactByUrlSetting AdminContactSettings { get; set; }
 
         /// <summary>

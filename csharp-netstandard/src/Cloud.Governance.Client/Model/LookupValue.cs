@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -42,15 +43,33 @@ namespace Cloud.Governance.Client.Model
         public string Tenant { get; private set; }
 
         /// <summary>
+        /// Returns false as Tenant should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTenant()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets Property
         /// </summary>
         [DataMember(Name = "property", EmitDefaultValue = true)]
         public string Property { get; private set; }
 
         /// <summary>
+        /// Returns false as Property should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeProperty()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets TargetUser
         /// </summary>
-        [DataMember(Name = "targetUser", EmitDefaultValue = false)]
+        [DataMember(Name = "targetUser", EmitDefaultValue = true)]
         public ApiUser TargetUser { get; set; }
 
         /// <summary>

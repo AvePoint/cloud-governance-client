@@ -3,28 +3,33 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtendSetting** | [**ExtendGroupResult**](ExtendGroupResult.md) |  | [optional] [default to null]
-**ChangePolicySetting** | [**ChangeGroupPolicyResult**](ChangeGroupPolicyResult.md) |  | [optional] [default to null]
-**ChangeQuotaSetting** | [**ChangeGroupQuotaResult**](ChangeGroupQuotaResult.md) |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**ExtendSetting** | [**ExtendGroupResult**](ExtendGroupResult.md) |  | [optional] 
+**ChangePolicySetting** | [**ChangeGroupPolicyResult**](ChangeGroupPolicyResult.md) |  | [optional] 
+**ChangeQuotaSetting** | [**ChangeGroupQuotaResult**](ChangeGroupQuotaResult.md) |  | [optional] 
+**EnableTeamCollaboration** | **Boolean** |  | [optional] 
+**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGroupLifecycleValidateResult  -ExtendSetting null `
+$GroupLifecycleValidateResult = New-Cloud.Governance.ClientGroupLifecycleValidateResult  -ExtendSetting null `
  -ChangePolicySetting null `
  -ChangeQuotaSetting null `
+ -EnableTeamCollaboration null `
+ -GroupObjectType null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GroupLifecycleValidateResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

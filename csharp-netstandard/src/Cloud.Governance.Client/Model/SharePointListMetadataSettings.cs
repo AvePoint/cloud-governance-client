@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -124,7 +125,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "value", EmitDefaultValue = false)]
+        [DataMember(Name = "value", EmitDefaultValue = true)]
         public LookupListValue Value { get; set; }
 
         /// <summary>

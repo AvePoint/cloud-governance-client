@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangeValue** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] [default to null]
-**OriginalValue** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] [default to null]
+**ChangeValue** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**OriginalValue** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientRequestMetadataListChangedProperty  -ChangeValue null `
+$RequestMetadataListChangedProperty = New-Cloud.Governance.ClientRequestMetadataListChangedProperty  -ChangeValue null `
  -OriginalValue null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$RequestMetadataListChangedProperty | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

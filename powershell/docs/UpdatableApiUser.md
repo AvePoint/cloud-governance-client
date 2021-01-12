@@ -3,34 +3,45 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **String** |  | [optional] [default to null]
-**JobTitle** | **String** |  | [optional] [default to null]
-**Id** | **String** |  | [optional] [default to null]
-**LoginName** | **String** |  | [optional] [default to null]
-**DisplayName** | **String** |  | [optional] [default to null]
-**IsGroup** | **Boolean** |  | [optional] [default to null]
-**PhysicalDeliveryOfficeName** | **String** |  | [optional] [readonly] [default to null]
-**IsOtherTenantUser** | **Boolean** |  | [optional] [readonly] [default to null]
+**Email** | **String** |  | [optional] 
+**JobTitle** | **String** |  | [optional] 
+**TenantId** | **String** |  | [optional] 
+**PeopleFilterProfileId** | **String** |  | [optional] 
+**UserType** | [**UserType**](UserType.md) |  | [optional] 
+**Id** | **String** |  | [optional] 
+**LoginName** | **String** |  | [optional] 
+**IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
+**IsGroup** | **Boolean** |  | [optional] 
+**IsLocalUser** | **Boolean** |  | [optional] [readonly] 
+**PhysicalDeliveryOfficeName** | **String** |  | [optional] [readonly] 
+**IsValid** | **Boolean** |  | [optional] [readonly] 
+**AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) |  | [optional] [readonly] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUpdatableApiUser  -Email null `
+$UpdatableApiUser = New-Cloud.Governance.ClientUpdatableApiUser  -Email null `
  -JobTitle null `
+ -TenantId null `
+ -PeopleFilterProfileId null `
+ -UserType null `
  -Id null `
  -LoginName null `
+ -IsExternalUser null `
  -DisplayName null `
  -IsGroup null `
+ -IsLocalUser null `
  -PhysicalDeliveryOfficeName null `
- -IsOtherTenantUser null
+ -IsValid null `
+ -AdditionalData null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UpdatableApiUser | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

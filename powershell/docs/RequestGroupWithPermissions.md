@@ -3,19 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [readonly] [default to null]
-**Users** | [**GroupUser[]**](GroupUser.md) |  | [optional] [default to null]
-**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] [default to null]
-**GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**GroupOwnerType** | [**GroupOwnerType**](GroupOwnerType.md) |  | [optional] [default to null]
-**BuildInGroupType** | [**SharePointBuildInGroupType**](SharePointBuildInGroupType.md) |  | [optional] [default to null]
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Users** | [**GroupUser[]**](GroupUser.md) |  | [optional] 
+**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
+**GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**GroupOwnerType** | [**GroupOwnerType**](GroupOwnerType.md) |  | [optional] 
+**BuildInGroupType** | [**SharePointBuildInGroupType**](SharePointBuildInGroupType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientRequestGroupWithPermissions  -Name null `
+$RequestGroupWithPermissions = New-Cloud.Governance.ClientRequestGroupWithPermissions  -Name null `
  -Description null `
  -Users null `
  -PermissionLevels null `
@@ -24,11 +24,10 @@ New-Cloud.Governance.ClientRequestGroupWithPermissions  -Name null `
  -BuildInGroupType null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$RequestGroupWithPermissions | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -55,7 +56,24 @@ namespace Cloud.Governance.Client.Model
         /// <param name="status">status.</param>
         /// <param name="autoImportProfileId">autoImportProfileId.</param>
         /// <param name="pendingAction">pendingAction.</param>
-        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = default(bool), DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = default(int))
+        /// <param name="secondaryContact">secondaryContact.</param>
+        /// <param name="secondaryContactEmail">secondaryContactEmail.</param>
+        /// <param name="policy">policy.</param>
+        /// <param name="policyId">policyId.</param>
+        /// <param name="description">description.</param>
+        /// <param name="primaryAdmin">primaryAdmin.</param>
+        /// <param name="primaryAdminEmail">primaryAdminEmail.</param>
+        /// <param name="additionalAdmin">additionalAdmin.</param>
+        /// <param name="additionalAdminEmail">additionalAdminEmail.</param>
+        /// <param name="geoLocation">geoLocation.</param>
+        /// <param name="geoLocationDescription">geoLocationDescription.</param>
+        /// <param name="storageLimit">storageLimit.</param>
+        /// <param name="storageUsage">storageUsage.</param>
+        /// <param name="classification">classification.</param>
+        /// <param name="privacy">privacy.</param>
+        /// <param name="privacyDescription">privacyDescription.</param>
+        /// <param name="metadata">metadata.</param>
+        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = default(bool), DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = default(int), string secondaryContact = default(string), string secondaryContactEmail = default(string), string policy = default(string), Guid policyId = default(Guid), string description = default(string), string primaryAdmin = default(string), string primaryAdminEmail = default(string), string additionalAdmin = default(string), string additionalAdminEmail = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), string storageLimit = default(string), string storageUsage = default(string), string classification = default(string), bool? privacy = default(bool?), string privacyDescription = default(string), List<EndUserReportMetadata> metadata = default(List<EndUserReportMetadata>))
         {
             this.Id = id;
             this.Name = name;
@@ -72,6 +90,23 @@ namespace Cloud.Governance.Client.Model
             this.Status = status;
             this.AutoImportProfileId = autoImportProfileId;
             this.PendingAction = pendingAction;
+            this.SecondaryContact = secondaryContact;
+            this.SecondaryContactEmail = secondaryContactEmail;
+            this.Policy = policy;
+            this.PolicyId = policyId;
+            this.Description = description;
+            this.PrimaryAdmin = primaryAdmin;
+            this.PrimaryAdminEmail = primaryAdminEmail;
+            this.AdditionalAdmin = additionalAdmin;
+            this.AdditionalAdminEmail = additionalAdminEmail;
+            this.GeoLocation = geoLocation;
+            this.GeoLocationDescription = geoLocationDescription;
+            this.StorageLimit = storageLimit;
+            this.StorageUsage = storageUsage;
+            this.Classification = classification;
+            this.Privacy = privacy;
+            this.PrivacyDescription = privacyDescription;
+            this.Metadata = metadata;
         }
 
         /// <summary>
@@ -147,6 +182,108 @@ namespace Cloud.Governance.Client.Model
         public int PendingAction { get; set; }
 
         /// <summary>
+        /// Gets or Sets SecondaryContact
+        /// </summary>
+        [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
+        public string SecondaryContact { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SecondaryContactEmail
+        /// </summary>
+        [DataMember(Name = "secondaryContactEmail", EmitDefaultValue = true)]
+        public string SecondaryContactEmail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Policy
+        /// </summary>
+        [DataMember(Name = "policy", EmitDefaultValue = true)]
+        public string Policy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PolicyId
+        /// </summary>
+        [DataMember(Name = "policyId", EmitDefaultValue = false)]
+        public Guid PolicyId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Description
+        /// </summary>
+        [DataMember(Name = "description", EmitDefaultValue = true)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PrimaryAdmin
+        /// </summary>
+        [DataMember(Name = "primaryAdmin", EmitDefaultValue = true)]
+        public string PrimaryAdmin { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PrimaryAdminEmail
+        /// </summary>
+        [DataMember(Name = "primaryAdminEmail", EmitDefaultValue = true)]
+        public string PrimaryAdminEmail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AdditionalAdmin
+        /// </summary>
+        [DataMember(Name = "additionalAdmin", EmitDefaultValue = true)]
+        public string AdditionalAdmin { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AdditionalAdminEmail
+        /// </summary>
+        [DataMember(Name = "additionalAdminEmail", EmitDefaultValue = true)]
+        public string AdditionalAdminEmail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GeoLocation
+        /// </summary>
+        [DataMember(Name = "geoLocation", EmitDefaultValue = true)]
+        public string GeoLocation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GeoLocationDescription
+        /// </summary>
+        [DataMember(Name = "geoLocationDescription", EmitDefaultValue = true)]
+        public string GeoLocationDescription { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StorageLimit
+        /// </summary>
+        [DataMember(Name = "storageLimit", EmitDefaultValue = true)]
+        public string StorageLimit { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StorageUsage
+        /// </summary>
+        [DataMember(Name = "storageUsage", EmitDefaultValue = true)]
+        public string StorageUsage { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Classification
+        /// </summary>
+        [DataMember(Name = "classification", EmitDefaultValue = true)]
+        public string Classification { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Privacy
+        /// </summary>
+        [DataMember(Name = "privacy", EmitDefaultValue = true)]
+        public bool? Privacy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PrivacyDescription
+        /// </summary>
+        [DataMember(Name = "privacyDescription", EmitDefaultValue = true)]
+        public string PrivacyDescription { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Metadata
+        /// </summary>
+        [DataMember(Name = "metadata", EmitDefaultValue = true)]
+        public List<EndUserReportMetadata> Metadata { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -169,6 +306,23 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  AutoImportProfileId: ").Append(AutoImportProfileId).Append("\n");
             sb.Append("  PendingAction: ").Append(PendingAction).Append("\n");
+            sb.Append("  SecondaryContact: ").Append(SecondaryContact).Append("\n");
+            sb.Append("  SecondaryContactEmail: ").Append(SecondaryContactEmail).Append("\n");
+            sb.Append("  Policy: ").Append(Policy).Append("\n");
+            sb.Append("  PolicyId: ").Append(PolicyId).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  PrimaryAdmin: ").Append(PrimaryAdmin).Append("\n");
+            sb.Append("  PrimaryAdminEmail: ").Append(PrimaryAdminEmail).Append("\n");
+            sb.Append("  AdditionalAdmin: ").Append(AdditionalAdmin).Append("\n");
+            sb.Append("  AdditionalAdminEmail: ").Append(AdditionalAdminEmail).Append("\n");
+            sb.Append("  GeoLocation: ").Append(GeoLocation).Append("\n");
+            sb.Append("  GeoLocationDescription: ").Append(GeoLocationDescription).Append("\n");
+            sb.Append("  StorageLimit: ").Append(StorageLimit).Append("\n");
+            sb.Append("  StorageUsage: ").Append(StorageUsage).Append("\n");
+            sb.Append("  Classification: ").Append(Classification).Append("\n");
+            sb.Append("  Privacy: ").Append(Privacy).Append("\n");
+            sb.Append("  PrivacyDescription: ").Append(PrivacyDescription).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -272,6 +426,92 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.PendingAction == input.PendingAction ||
                     this.PendingAction.Equals(input.PendingAction)
+                ) && 
+                (
+                    this.SecondaryContact == input.SecondaryContact ||
+                    (this.SecondaryContact != null &&
+                    this.SecondaryContact.Equals(input.SecondaryContact))
+                ) && 
+                (
+                    this.SecondaryContactEmail == input.SecondaryContactEmail ||
+                    (this.SecondaryContactEmail != null &&
+                    this.SecondaryContactEmail.Equals(input.SecondaryContactEmail))
+                ) && 
+                (
+                    this.Policy == input.Policy ||
+                    (this.Policy != null &&
+                    this.Policy.Equals(input.Policy))
+                ) && 
+                (
+                    this.PolicyId == input.PolicyId ||
+                    (this.PolicyId != null &&
+                    this.PolicyId.Equals(input.PolicyId))
+                ) && 
+                (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.PrimaryAdmin == input.PrimaryAdmin ||
+                    (this.PrimaryAdmin != null &&
+                    this.PrimaryAdmin.Equals(input.PrimaryAdmin))
+                ) && 
+                (
+                    this.PrimaryAdminEmail == input.PrimaryAdminEmail ||
+                    (this.PrimaryAdminEmail != null &&
+                    this.PrimaryAdminEmail.Equals(input.PrimaryAdminEmail))
+                ) && 
+                (
+                    this.AdditionalAdmin == input.AdditionalAdmin ||
+                    (this.AdditionalAdmin != null &&
+                    this.AdditionalAdmin.Equals(input.AdditionalAdmin))
+                ) && 
+                (
+                    this.AdditionalAdminEmail == input.AdditionalAdminEmail ||
+                    (this.AdditionalAdminEmail != null &&
+                    this.AdditionalAdminEmail.Equals(input.AdditionalAdminEmail))
+                ) && 
+                (
+                    this.GeoLocation == input.GeoLocation ||
+                    (this.GeoLocation != null &&
+                    this.GeoLocation.Equals(input.GeoLocation))
+                ) && 
+                (
+                    this.GeoLocationDescription == input.GeoLocationDescription ||
+                    (this.GeoLocationDescription != null &&
+                    this.GeoLocationDescription.Equals(input.GeoLocationDescription))
+                ) && 
+                (
+                    this.StorageLimit == input.StorageLimit ||
+                    (this.StorageLimit != null &&
+                    this.StorageLimit.Equals(input.StorageLimit))
+                ) && 
+                (
+                    this.StorageUsage == input.StorageUsage ||
+                    (this.StorageUsage != null &&
+                    this.StorageUsage.Equals(input.StorageUsage))
+                ) && 
+                (
+                    this.Classification == input.Classification ||
+                    (this.Classification != null &&
+                    this.Classification.Equals(input.Classification))
+                ) && 
+                (
+                    this.Privacy == input.Privacy ||
+                    (this.Privacy != null &&
+                    this.Privacy.Equals(input.Privacy))
+                ) && 
+                (
+                    this.PrivacyDescription == input.PrivacyDescription ||
+                    (this.PrivacyDescription != null &&
+                    this.PrivacyDescription.Equals(input.PrivacyDescription))
+                ) && 
+                (
+                    this.Metadata == input.Metadata ||
+                    this.Metadata != null &&
+                    input.Metadata != null &&
+                    this.Metadata.SequenceEqual(input.Metadata)
                 );
         }
 
@@ -309,6 +549,40 @@ namespace Cloud.Governance.Client.Model
                 if (this.AutoImportProfileId != null)
                     hashCode = hashCode * 59 + this.AutoImportProfileId.GetHashCode();
                 hashCode = hashCode * 59 + this.PendingAction.GetHashCode();
+                if (this.SecondaryContact != null)
+                    hashCode = hashCode * 59 + this.SecondaryContact.GetHashCode();
+                if (this.SecondaryContactEmail != null)
+                    hashCode = hashCode * 59 + this.SecondaryContactEmail.GetHashCode();
+                if (this.Policy != null)
+                    hashCode = hashCode * 59 + this.Policy.GetHashCode();
+                if (this.PolicyId != null)
+                    hashCode = hashCode * 59 + this.PolicyId.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.PrimaryAdmin != null)
+                    hashCode = hashCode * 59 + this.PrimaryAdmin.GetHashCode();
+                if (this.PrimaryAdminEmail != null)
+                    hashCode = hashCode * 59 + this.PrimaryAdminEmail.GetHashCode();
+                if (this.AdditionalAdmin != null)
+                    hashCode = hashCode * 59 + this.AdditionalAdmin.GetHashCode();
+                if (this.AdditionalAdminEmail != null)
+                    hashCode = hashCode * 59 + this.AdditionalAdminEmail.GetHashCode();
+                if (this.GeoLocation != null)
+                    hashCode = hashCode * 59 + this.GeoLocation.GetHashCode();
+                if (this.GeoLocationDescription != null)
+                    hashCode = hashCode * 59 + this.GeoLocationDescription.GetHashCode();
+                if (this.StorageLimit != null)
+                    hashCode = hashCode * 59 + this.StorageLimit.GetHashCode();
+                if (this.StorageUsage != null)
+                    hashCode = hashCode * 59 + this.StorageUsage.GetHashCode();
+                if (this.Classification != null)
+                    hashCode = hashCode * 59 + this.Classification.GetHashCode();
+                if (this.Privacy != null)
+                    hashCode = hashCode * 59 + this.Privacy.GetHashCode();
+                if (this.PrivacyDescription != null)
+                    hashCode = hashCode * 59 + this.PrivacyDescription.GetHashCode();
+                if (this.Metadata != null)
+                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;
             }
         }

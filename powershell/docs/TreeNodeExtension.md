@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **Int32** |  | [optional] [default to null]
-**UserName** | **String** |  | [optional] [default to null]
-**Password** | **String** |  | [optional] [default to null]
+**Size** | **Int32** |  | [optional] 
+**UserName** | **String** |  | [optional] 
+**Password** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTreeNodeExtension  -Size null `
+$TreeNodeExtension = New-Cloud.Governance.ClientTreeNodeExtension  -Size null `
  -UserName null `
  -Password null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TreeNodeExtension | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

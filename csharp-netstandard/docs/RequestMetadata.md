@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **LinkValue** | [**LinkValue**](LinkValue.md) |  | [optional] 
 **ChoiceValue** | **List&lt;string&gt;** |  | [optional] 
 **LookupListValue** | [**LookupListValue**](LookupListValue.md) |  | [optional] 
-**Type** | **MetadataFieldType** |  | [optional] 
+**Type** | **MetadataFieldType** |  | [optional] [readonly] 
 **ValueString** | **string** |  | [optional] [readonly] 
 **Value** | **string** |  | [optional] 
 **Action** | **MetadataActionType** |  | [optional] 

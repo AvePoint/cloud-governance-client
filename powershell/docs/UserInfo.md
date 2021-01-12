@@ -3,43 +3,47 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdentityName** | **String** |  | [optional] [default to null]
-**UserDisplayName** | **String** |  | [optional] [default to null]
-**DomainGroup** | **Boolean** |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**MobilePhone** | **String** |  | [optional] [default to null]
-**Manager** | **String** |  | [optional] [default to null]
-**Permission** | **String** |  | [optional] [default to null]
-**IsDeleted** | **Boolean** |  | [optional] [default to null]
-**SecurityToken** | **String** |  | [optional] [default to null]
-**UserType** | **Int32** |  | [optional] [default to null]
-**LegalPerson** | **Boolean** |  | [optional] [default to null]
-**AuthenticationType** | [**AuthenticationType**](AuthenticationType.md) |  | [optional] [default to null]
-**AdminCenterUrl** | **String** |  | [optional] [default to null]
-**InviteType** | [**InviteType**](InviteType.md) |  | [optional] [default to null]
-**Type** | **String** |  | [optional] [default to null]
-**IsRegisteredAosGroup** | **Boolean** |  | [optional] [default to null]
-**IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] [default to null]
-**IsAPIExceptional** | **Boolean** |  | [optional] [default to null]
-**TenantId** | **String** |  | [optional] [default to null]
-**ObjectId** | **String** |  | [optional] [default to null]
-**Version** | **Int32** |  | [optional] [default to null]
-**JobTitle** | **String** |  | [optional] [default to null]
-**UsageLocation** | **String** |  | [optional] [default to null]
-**PhysicalDeliveryOfficeName** | **String** |  | [optional] [default to null]
-**IsOtherTenantUser** | **Boolean** |  | [optional] [default to null]
-**Id** | **Int32** |  | [optional] [default to null]
-**DisplayName** | **String** |  | [optional] [default to null]
-**Title** | **String** |  | [optional] [default to null]
-**Email** | **String** |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [default to null]
-**ExistInAOS** | **Boolean** |  | [optional] [default to null]
+**IdentityName** | **String** |  | [optional] 
+**UserDisplayName** | **String** |  | [optional] 
+**DomainGroup** | **Boolean** |  | [optional] 
+**Department** | **String** |  | [optional] 
+**MobilePhone** | **String** |  | [optional] 
+**Manager** | **String** |  | [optional] 
+**Permission** | **String** |  | [optional] 
+**IsDeleted** | **Boolean** |  | [optional] 
+**SecurityToken** | **String** |  | [optional] 
+**UserType** | **Int32** |  | [optional] 
+**AzureUserType** | **String** |  | [optional] 
+**LegalPerson** | **Boolean** |  | [optional] 
+**AuthenticationType** | [**AuthenticationType**](AuthenticationType.md) |  | [optional] 
+**AdminCenterUrl** | **String** |  | [optional] 
+**InviteType** | [**InviteType**](InviteType.md) |  | [optional] 
+**Type** | **String** |  | [optional] 
+**IsRegisteredAosGroup** | **Boolean** |  | [optional] 
+**IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
+**IsAPIExceptional** | **Boolean** |  | [optional] 
+**TenantId** | **String** |  | [optional] 
+**ObjectId** | **String** |  | [optional] 
+**Version** | **Int32** |  | [optional] 
+**JobTitle** | **String** |  | [optional] 
+**UsageLocation** | **String** |  | [optional] 
+**PhysicalDeliveryOfficeName** | **String** |  | [optional] 
+**IsOtherTenantUser** | **Boolean** |  | [optional] 
+**NetworkId** | **String** |  | [optional] 
+**IsValidateByProfile** | **Boolean** |  | [optional] 
+**ProxyAddresses** | **String[]** |  | [optional] 
+**Id** | **Int32** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**Email** | **String** |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ExistInAOS** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUserInfo  -IdentityName null `
+$UserInfo = New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -UserDisplayName null `
  -DomainGroup null `
  -Department null `
@@ -49,6 +53,7 @@ New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -IsDeleted null `
  -SecurityToken null `
  -UserType null `
+ -AzureUserType null `
  -LegalPerson null `
  -AuthenticationType null `
  -AdminCenterUrl null `
@@ -64,6 +69,9 @@ New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -UsageLocation null `
  -PhysicalDeliveryOfficeName null `
  -IsOtherTenantUser null `
+ -NetworkId null `
+ -IsValidateByProfile null `
+ -ProxyAddresses null `
  -Id null `
  -DisplayName null `
  -Title null `
@@ -72,11 +80,10 @@ New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -ExistInAOS null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UserInfo | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

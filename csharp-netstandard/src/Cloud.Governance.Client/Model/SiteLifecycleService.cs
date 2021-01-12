@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -48,6 +49,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="action">action.</param>
         /// <param name="displayMetadataInAutoLifecycleTask">displayMetadataInAutoLifecycleTask.</param>
         /// <param name="scopeSettings">scopeSettings.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
+        /// <param name="changePolicySetting">changePolicySetting.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -67,11 +70,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public SiteLifecycleService(SiteLifecycleActionType? action = default(SiteLifecycleActionType?), bool displayMetadataInAutoLifecycleTask = default(bool), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public SiteLifecycleService(SiteLifecycleActionType? action = default(SiteLifecycleActionType?), bool displayMetadataInAutoLifecycleTask = default(bool), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), SiteLifecycleRequest requestTemplate = default(SiteLifecycleRequest), ChangePolicyActionSetting changePolicySetting = default(ChangePolicyActionSetting), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.Action = action;
             this.DisplayMetadataInAutoLifecycleTask = displayMetadataInAutoLifecycleTask;
             this.ScopeSettings = scopeSettings;
+            this.RequestTemplate = requestTemplate;
+            this.ChangePolicySetting = changePolicySetting;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -91,6 +97,7 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
@@ -102,8 +109,20 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ScopeSettings
         /// </summary>
-        [DataMember(Name = "scopeSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "scopeSettings", EmitDefaultValue = true)]
         public ServiceScopeSettings ScopeSettings { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public SiteLifecycleRequest RequestTemplate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ChangePolicySetting
+        /// </summary>
+        [DataMember(Name = "changePolicySetting", EmitDefaultValue = true)]
+        public ChangePolicyActionSetting ChangePolicySetting { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadatas
@@ -156,13 +175,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -180,7 +199,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -202,6 +221,12 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -212,6 +237,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  DisplayMetadataInAutoLifecycleTask: ").Append(DisplayMetadataInAutoLifecycleTask).Append("\n");
             sb.Append("  ScopeSettings: ").Append(ScopeSettings).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
+            sb.Append("  ChangePolicySetting: ").Append(ChangePolicySetting).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -231,6 +258,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -277,6 +305,16 @@ namespace Cloud.Governance.Client.Model
                     this.ScopeSettings == input.ScopeSettings ||
                     (this.ScopeSettings != null &&
                     this.ScopeSettings.Equals(input.ScopeSettings))
+                ) && 
+                (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
+                ) && 
+                (
+                    this.ChangePolicySetting == input.ChangePolicySetting ||
+                    (this.ChangePolicySetting != null &&
+                    this.ChangePolicySetting.Equals(input.ChangePolicySetting))
                 ) && 
                 (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
@@ -366,6 +404,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -382,6 +425,10 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.DisplayMetadataInAutoLifecycleTask.GetHashCode();
                 if (this.ScopeSettings != null)
                     hashCode = hashCode * 59 + this.ScopeSettings.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
+                if (this.ChangePolicySetting != null)
+                    hashCode = hashCode * 59 + this.ChangePolicySetting.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -412,6 +459,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [default to null]
-**WebServiceAddress** | **String** |  | [optional] [default to null]
-**WebServiceAuthenticationType** | [**WebServiceAuthenticationType**](WebServiceAuthenticationType.md) |  | [optional] [default to null]
-**WebServiceAppClientId** | **String** |  | [optional] [default to null]
-**MethodName** | **String** |  | [optional] [default to null]
-**Arguments** | [**ExecutionParameter[]**](ExecutionParameter.md) |  | [optional] [default to null]
+**Enabled** | **Boolean** |  | [optional] 
+**WebServiceAddress** | **String** |  | [optional] 
+**WebServiceAuthenticationType** | [**WebServiceAuthenticationType**](WebServiceAuthenticationType.md) |  | [optional] 
+**WebServiceAppClientId** | **String** |  | [optional] 
+**MethodName** | **String** |  | [optional] 
+**Arguments** | [**ExecutionParameter[]**](ExecutionParameter.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientExecutionModel  -Enabled null `
+$ExecutionModel = New-Cloud.Governance.ClientExecutionModel  -Enabled null `
  -WebServiceAddress null `
  -WebServiceAuthenticationType null `
  -WebServiceAppClientId null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientExecutionModel  -Enabled null `
  -Arguments null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ExecutionModel | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

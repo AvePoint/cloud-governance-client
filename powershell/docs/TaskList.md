@@ -3,25 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Title** | **String** |  | [optional] [default to null]
-**Requester** | **String** |  | [optional] [default to null]
-**RequestTicketNumber** | **Int32** |  | [optional] [default to null]
-**RequesterDisplayName** | **String** |  | [optional] [default to null]
-**DueDate** | **System.DateTime** |  | [optional] [default to null]
-**DueDateType** | [**DueDateType**](DueDateType.md) |  | [optional] [default to null]
-**ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**ServiceTypeDescription** | **String** |  | [optional] [readonly] [default to null]
-**CreatedTime** | **System.DateTime** |  | [optional] [default to null]
-**TaskType** | [**TaskType**](TaskType.md) |  | [optional] [default to null]
-**Status** | [**TaskResult**](TaskResult.md) |  | [optional] [default to null]
-**StatusDescription** | **String** |  | [optional] [readonly] [default to null]
+**Id** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**Requester** | **String** |  | [optional] 
+**RequestTicketNumber** | **Int32** |  | [optional] 
+**RequesterDisplayName** | **String** |  | [optional] 
+**DueDate** | **System.DateTime** |  | [optional] 
+**DueDateType** | [**DueDateType**](DueDateType.md) |  | [optional] 
+**ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**ServiceTypeDescription** | **String** |  | [optional] 
+**CreatedTime** | **System.DateTime** |  | [optional] 
+**TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
+**Status** | [**TaskResult**](TaskResult.md) |  | [optional] 
+**StatusDescription** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTaskList  -Id null `
+$TaskList = New-Cloud.Governance.ClientTaskList  -Id null `
  -Title null `
  -Requester null `
  -RequestTicketNumber null `
@@ -36,11 +36,10 @@ New-Cloud.Governance.ClientTaskList  -Id null `
  -StatusDescription null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TaskList | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

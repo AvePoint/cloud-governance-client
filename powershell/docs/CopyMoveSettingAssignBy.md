@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigurationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**SecurityAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**ContentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
+**ConfigurationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SecurityAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**ContentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCopyMoveSettingAssignBy  -ConfigurationAssignBy null `
+$CopyMoveSettingAssignBy = New-Cloud.Governance.ClientCopyMoveSettingAssignBy  -ConfigurationAssignBy null `
  -SecurityAssignBy null `
  -ContentAssignBy null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CopyMoveSettingAssignBy | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

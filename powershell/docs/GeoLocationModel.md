@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RootSiteUrl** | **String** |  | [optional] [default to null]
-**TenantAdminUrl** | **String** |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**DisplayName** | **String** |  | [optional] [default to null]
+**RootSiteUrl** | **String** |  | [optional] 
+**TenantAdminUrl** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGeoLocationModel  -RootSiteUrl null `
+$GeoLocationModel = New-Cloud.Governance.ClientGeoLocationModel  -RootSiteUrl null `
  -TenantAdminUrl null `
  -Name null `
  -DisplayName null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GeoLocationModel | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

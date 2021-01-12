@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Choices** | **String[]** |  | [optional] [default to null]
-**Value** | **String[]** |  | [optional] [default to null]
-**ChoiceType** | [**ChoiceType**](ChoiceType.md) |  | [optional] [default to null]
+**Choices** | **String[]** |  | [optional] 
+**Value** | **String[]** |  | [optional] 
+**ChoiceType** | [**ChoiceType**](ChoiceType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChoiceMetadataSettings  -Choices null `
+$ChoiceMetadataSettings = New-Cloud.Governance.ClientChoiceMetadataSettings  -Choices null `
  -Value null `
  -ChoiceType null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChoiceMetadataSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -43,13 +44,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets SequentialNumberingSettings
         /// </summary>
-        [DataMember(Name = "sequentialNumberingSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "sequentialNumberingSettings", EmitDefaultValue = true)]
         public UrlSequentialNumberingSettings SequentialNumberingSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets RandomStringSettings
         /// </summary>
-        [DataMember(Name = "randomStringSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "randomStringSettings", EmitDefaultValue = true)]
         public UrlRandomStringSettings RandomStringSettings { get; set; }
 
         /// <summary>

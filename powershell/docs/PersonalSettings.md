@@ -3,28 +3,29 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**UserID** | **Int32** |  | [optional] [default to null]
-**LanguageID** | **Int32** |  | [optional] [default to null]
-**TimeZoneID** | **Int32** |  | [optional] [default to null]
-**Properties** | [**PersonalSettingsPropertyInfo**](PersonalSettingsPropertyInfo.md) |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**UserID** | **Int32** |  | [optional] 
+**LanguageID** | **Int32** |  | [optional] 
+**TimeZoneID** | **Int32** |  | [optional] 
+**IsAdjustDaylight** | **Boolean** |  | [optional] 
+**Properties** | [**PersonalSettingsPropertyInfo**](PersonalSettingsPropertyInfo.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientPersonalSettings  -Id null `
+$PersonalSettings = New-Cloud.Governance.ClientPersonalSettings  -Id null `
  -UserID null `
  -LanguageID null `
  -TimeZoneID null `
+ -IsAdjustDaylight null `
  -Properties null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PersonalSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

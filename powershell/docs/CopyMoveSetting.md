@@ -3,19 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsMigrateConfiguration** | **Boolean** |  | [optional] [default to null]
-**IsKeepLookAndFeel** | **Boolean** |  | [optional] [default to null]
-**ColumnsAndContentConflictResolution** | [**ItemConflictResolutionType**](ItemConflictResolutionType.md) |  | [optional] [default to null]
-**IsMigrateSecurity** | **Boolean** |  | [optional] [default to null]
-**IsMigrateColumnsAndContentTypes** | **Boolean** |  | [optional] [default to null]
-**IsMigrateContent** | **Boolean** |  | [optional] [default to null]
-**IsMigrateContentIncludeListAttachment** | **Boolean** |  | [optional] [default to null]
+**IsMigrateConfiguration** | **Boolean** |  | [optional] 
+**IsKeepLookAndFeel** | **Boolean** |  | [optional] 
+**ColumnsAndContentConflictResolution** | [**ItemConflictResolutionType**](ItemConflictResolutionType.md) |  | [optional] 
+**IsMigrateSecurity** | **Boolean** |  | [optional] 
+**IsMigrateColumnsAndContentTypes** | **Boolean** |  | [optional] 
+**IsMigrateContent** | **Boolean** |  | [optional] 
+**IsMigrateContentIncludeListAttachment** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCopyMoveSetting  -IsMigrateConfiguration null `
+$CopyMoveSetting = New-Cloud.Governance.ClientCopyMoveSetting  -IsMigrateConfiguration null `
  -IsKeepLookAndFeel null `
  -ColumnsAndContentConflictResolution null `
  -IsMigrateSecurity null `
@@ -24,11 +24,10 @@ New-Cloud.Governance.ClientCopyMoveSetting  -IsMigrateConfiguration null `
  -IsMigrateContentIncludeListAttachment null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CopyMoveSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

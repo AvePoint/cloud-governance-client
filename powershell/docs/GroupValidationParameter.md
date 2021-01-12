@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**IsEditTask** | **Boolean** |  | [optional] [default to null]
-**IsFromQuestionnaire** | **Boolean** |  | [optional] [default to null]
+**GroupId** | **String** |  | [optional] 
+**IsEditTask** | **Boolean** |  | [optional] 
+**IsFromQuestionnaire** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGroupValidationParameter  -GroupId null `
+$GroupValidationParameter = New-Cloud.Governance.ClientGroupValidationParameter  -GroupId null `
  -IsEditTask null `
  -IsFromQuestionnaire null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GroupValidationParameter | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

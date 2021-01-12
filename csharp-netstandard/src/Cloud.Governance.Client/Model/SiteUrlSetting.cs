@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -43,13 +44,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ManuallyInputSetting
         /// </summary>
-        [DataMember(Name = "manuallyInputSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "manuallyInputSetting", EmitDefaultValue = true)]
         public ManuallyInputUrlSetting ManuallyInputSetting { get; set; }
 
         /// <summary>
         /// Gets or Sets AutoGenerateUrlSetting
         /// </summary>
-        [DataMember(Name = "autoGenerateUrlSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "autoGenerateUrlSetting", EmitDefaultValue = true)]
         public AutoGenerateUrlSetting AutoGenerateUrlSetting { get; set; }
 
         /// <summary>

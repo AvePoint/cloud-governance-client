@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -48,7 +49,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets GrantPermissionSetting
         /// </summary>
-        [DataMember(Name = "grantPermissionSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "grantPermissionSetting", EmitDefaultValue = true)]
         public ManagePermissionGrantSetting GrantPermissionSetting { get; set; }
 
         /// <summary>

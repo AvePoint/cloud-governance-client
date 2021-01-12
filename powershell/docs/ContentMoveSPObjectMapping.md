@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Source** | [**ContentMoveSPObject**](ContentMoveSPObject.md) |  | [optional] [default to null]
-**Destination** | [**ContentMoveSPObject**](ContentMoveSPObject.md) |  | [optional] [default to null]
-**Action** | [**ContentMoveAction**](ContentMoveAction.md) |  | [optional] [default to null]
+**Source** | [**ContentMoveSPObject**](ContentMoveSPObject.md) |  | [optional] 
+**Destination** | [**ContentMoveSPObject**](ContentMoveSPObject.md) |  | [optional] 
+**Action** | [**ContentMoveAction**](ContentMoveAction.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientContentMoveSPObjectMapping  -Source null `
+$ContentMoveSPObjectMapping = New-Cloud.Governance.ClientContentMoveSPObjectMapping  -Source null `
  -Destination null `
  -Action null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ContentMoveSPObjectMapping | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

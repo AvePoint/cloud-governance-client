@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -105,61 +106,61 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets TextValidationRule
         /// </summary>
-        [DataMember(Name = "textValidationRule", EmitDefaultValue = false)]
+        [DataMember(Name = "textValidationRule", EmitDefaultValue = true)]
         public TextValidationRuleRef TextValidationRule { get; set; }
 
         /// <summary>
         /// Gets or Sets BooleanMetadataSettings
         /// </summary>
-        [DataMember(Name = "booleanMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "booleanMetadataSettings", EmitDefaultValue = true)]
         public BooleanMetadataSettings BooleanMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets TermsMetadataSettings
         /// </summary>
-        [DataMember(Name = "termsMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "termsMetadataSettings", EmitDefaultValue = true)]
         public TermsMetadataSettings TermsMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets UserMetadataSettings
         /// </summary>
-        [DataMember(Name = "userMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "userMetadataSettings", EmitDefaultValue = true)]
         public UserMetadataSettings UserMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets UserProfileMetadataSettings
         /// </summary>
-        [DataMember(Name = "userProfileMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "userProfileMetadataSettings", EmitDefaultValue = true)]
         public UserProfileMetadataSettings UserProfileMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets AzureAdMetadataSettings
         /// </summary>
-        [DataMember(Name = "azureAdMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "azureAdMetadataSettings", EmitDefaultValue = true)]
         public AzureAdMetadataSettings AzureAdMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets ChoiceMetadataSettings
         /// </summary>
-        [DataMember(Name = "choiceMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "choiceMetadataSettings", EmitDefaultValue = true)]
         public ChoiceMetadataSettings ChoiceMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets LinkMetadataSettings
         /// </summary>
-        [DataMember(Name = "linkMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "linkMetadataSettings", EmitDefaultValue = true)]
         public LinkMetadataSettings LinkMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets SingleLineOrMultipleLineMetadataSettings
         /// </summary>
-        [DataMember(Name = "singleLineOrMultipleLineMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "singleLineOrMultipleLineMetadataSettings", EmitDefaultValue = true)]
         public SingleLineOrMultipleLineMetadataSettings SingleLineOrMultipleLineMetadataSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets SharePointListMetadataSettings
         /// </summary>
-        [DataMember(Name = "sharePointListMetadataSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "sharePointListMetadataSettings", EmitDefaultValue = true)]
         public SharePointListMetadataSettings SharePointListMetadataSettings { get; set; }
 
         /// <summary>

@@ -3,32 +3,32 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MemberPermissionsAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**GuestPermissionsAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**MentionsAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**FunStuffAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**AllowMembersCreateUpdateChannels** | **Boolean** |  | [optional] [default to null]
-**AllowMembersCreatePrivateChannels** | **Boolean** |  | [optional] [default to null]
-**AllowMemberDeleteRestoreChannels** | **Boolean** |  | [optional] [default to null]
-**AllowMembersAddRemoveApps** | **Boolean** |  | [optional] [default to null]
-**AllowMembersCreateUpdateRemoveTabs** | **Boolean** |  | [optional] [default to null]
-**AllowMembersCreateUpdateRemoveConnections** | **Boolean** |  | [optional] [default to null]
-**AllowMembersDeleteMessages** | **Boolean** |  | [optional] [default to null]
-**AllowMembersEditMessages** | **Boolean** |  | [optional] [default to null]
-**AllowGuestsCreateUpdateChannels** | **Boolean** |  | [optional] [default to null]
-**AllowGuestsDeleteChannels** | **Boolean** |  | [optional] [default to null]
-**AllowMentionsTeam** | **Boolean** |  | [optional] [default to null]
-**AllowMentionsChannel** | **Boolean** |  | [optional] [default to null]
-**EnableGiphy** | **Boolean** |  | [optional] [default to null]
-**EnableStickersAndMemes** | **Boolean** |  | [optional] [default to null]
-**EnableCustomMemes** | **Boolean** |  | [optional] [default to null]
-**GiphyRatingType** | [**GiphyRatingType**](GiphyRatingType.md) |  | [optional] [default to null]
+**MemberPermissionsAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**GuestPermissionsAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**MentionsAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**FunStuffAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**AllowMembersCreateUpdateChannels** | **Boolean** |  | [optional] 
+**AllowMembersCreatePrivateChannels** | **Boolean** |  | [optional] 
+**AllowMemberDeleteRestoreChannels** | **Boolean** |  | [optional] 
+**AllowMembersAddRemoveApps** | **Boolean** |  | [optional] 
+**AllowMembersCreateUpdateRemoveTabs** | **Boolean** |  | [optional] 
+**AllowMembersCreateUpdateRemoveConnections** | **Boolean** |  | [optional] 
+**AllowMembersDeleteMessages** | **Boolean** |  | [optional] 
+**AllowMembersEditMessages** | **Boolean** |  | [optional] 
+**AllowGuestsCreateUpdateChannels** | **Boolean** |  | [optional] 
+**AllowGuestsDeleteChannels** | **Boolean** |  | [optional] 
+**AllowMentionsTeam** | **Boolean** |  | [optional] 
+**AllowMentionsChannel** | **Boolean** |  | [optional] 
+**EnableGiphy** | **Boolean** |  | [optional] 
+**EnableStickersAndMemes** | **Boolean** |  | [optional] 
+**EnableCustomMemes** | **Boolean** |  | [optional] 
+**GiphyRatingType** | [**GiphyRatingType**](GiphyRatingType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientServiceTeamsSettings  -MemberPermissionsAssignBy null `
+$ServiceTeamsSettings = New-Cloud.Governance.ClientServiceTeamsSettings  -MemberPermissionsAssignBy null `
  -GuestPermissionsAssignBy null `
  -MentionsAssignBy null `
  -FunStuffAssignBy null `
@@ -50,11 +50,10 @@ New-Cloud.Governance.ClientServiceTeamsSettings  -MemberPermissionsAssignBy null
  -GiphyRatingType null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ServiceTeamsSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

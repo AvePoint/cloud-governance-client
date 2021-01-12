@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -216,6 +217,12 @@ namespace Cloud.Governance.Client.Model
         [EnumMember(Value = "72")]
         UpdateSiteLockStatus = 72,
 
+        [EnumMember(Value = "73")]
+        ApplySitePolicyPartSetting = 73,
+
+        [EnumMember(Value = "74")]
+        ApplyGroupPolicyPartSetting = 74,
+
         [EnumMember(Value = "110")]
         CreateUser = 110,
 
@@ -370,7 +377,31 @@ namespace Cloud.Governance.Client.Model
         BulkDeleteWorkspace = 532,
 
         [EnumMember(Value = "533")]
-        BulkManageWorkspaceLockState = 533
+        BulkManageWorkspaceLockState = 533,
+
+        [EnumMember(Value = "534")]
+        BulkArchiveSite = 534,
+
+        [EnumMember(Value = "535")]
+        BulkArchiveTeams = 535,
+
+        [EnumMember(Value = "536")]
+        BulkRestoreTeams = 536,
+
+        [EnumMember(Value = "540")]
+        RemoveSite = 540,
+
+        [EnumMember(Value = "541")]
+        RemoveGroup = 541,
+
+        [EnumMember(Value = "542")]
+        RemoveWeb = 542,
+
+        [EnumMember(Value = "543")]
+        AutoImportGroupEscalation = 543,
+
+        [EnumMember(Value = "544")]
+        AutoImportSiteEscalation = 544
 
     }
 

@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Title** | **String** |  | [optional] [default to null]
-**FullUrl** | **String** |  | [optional] [default to null]
-**Type** | [**NodeType**](NodeType.md) |  | [optional] [default to null]
+**SiteId** | **String** |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**FullUrl** | **String** |  | [optional] 
+**Type** | [**NodeType**](NodeType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientContentMoveSPObject  -SiteId null `
+$ContentMoveSPObject = New-Cloud.Governance.ClientContentMoveSPObject  -SiteId null `
  -SiteUrl null `
  -Id null `
  -Title null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientContentMoveSPObject  -SiteId null `
  -Type null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ContentMoveSPObject | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

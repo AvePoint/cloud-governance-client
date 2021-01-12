@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ParentUrl** | [**URI**](URI.md) |  | [optional] [default to null]
-**Uri** | [**URI**](URI.md) |  | [optional] [default to null]
-**IgnoreLock** | **Boolean** |  | [optional] [default to null]
-**IsEditTask** | **Boolean** |  | [optional] [default to null]
-**IsFromQuestionnaire** | **Boolean** |  | [optional] [default to null]
+**ParentUrl** | **String** |  | [optional] 
+**Uri** | **String** |  | [optional] 
+**IgnoreLock** | **Boolean** |  | [optional] 
+**IsEditTask** | **Boolean** |  | [optional] 
+**IsFromQuestionnaire** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateWebValidationParameter  -ParentUrl null `
+$CreateWebValidationParameter = New-Cloud.Governance.ClientCreateWebValidationParameter  -ParentUrl null `
  -Uri null `
  -IgnoreLock null `
  -IsEditTask null `
  -IsFromQuestionnaire null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateWebValidationParameter | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

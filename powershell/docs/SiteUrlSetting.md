@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | [**SiteConstructUrlType**](SiteConstructUrlType.md) |  | [optional] [default to null]
-**ManuallyInputSetting** | [**ManuallyInputUrlSetting**](ManuallyInputUrlSetting.md) |  | [optional] [default to null]
-**AutoGenerateUrlSetting** | [**AutoGenerateUrlSetting**](AutoGenerateUrlSetting.md) |  | [optional] [default to null]
+**Type** | [**SiteConstructUrlType**](SiteConstructUrlType.md) |  | [optional] 
+**ManuallyInputSetting** | [**ManuallyInputUrlSetting**](ManuallyInputUrlSetting.md) |  | [optional] 
+**AutoGenerateUrlSetting** | [**AutoGenerateUrlSetting**](AutoGenerateUrlSetting.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientSiteUrlSetting  -Type null `
+$SiteUrlSetting = New-Cloud.Governance.ClientSiteUrlSetting  -Type null `
  -ManuallyInputSetting null `
  -AutoGenerateUrlSetting null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$SiteUrlSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

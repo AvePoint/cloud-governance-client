@@ -3,24 +3,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [readonly] [default to null]
-**BooleanValue** | **Boolean** |  | [optional] [default to null]
-**SingleLineOrMultipleLineValue** | **String** |  | [optional] [default to null]
-**UpsOrAzureAdValue** | [**LookupValue**](LookupValue.md) |  | [optional] [default to null]
-**TermsValue** | [**TermsValue**](TermsValue.md) |  | [optional] [default to null]
-**UserValue** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**LinkValue** | [**LinkValue**](LinkValue.md) |  | [optional] [default to null]
-**ChoiceValue** | **String[]** |  | [optional] [default to null]
-**Type** | [**MetadataFieldTypeNullable**](MetadataFieldTypeNullable.md) |  | [optional] [readonly] [default to null]
-**ValueString** | **String** |  | [optional] [readonly] [default to null]
-**Action** | [**MetadataActionType**](MetadataActionType.md) |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**BooleanValue** | **Boolean** |  | [optional] 
+**SingleLineOrMultipleLineValue** | **String** |  | [optional] 
+**UpsOrAzureAdValue** | [**LookupValue**](LookupValue.md) |  | [optional] 
+**TermsValue** | [**TermsValue**](TermsValue.md) |  | [optional] 
+**UserValue** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**LinkValue** | [**LinkValue**](LinkValue.md) |  | [optional] 
+**ChoiceValue** | **String[]** |  | [optional] 
+**LookupListValue** | [**LookupListValue**](LookupListValue.md) |  | [optional] 
+**Type** | [**MetadataFieldType**](MetadataFieldType.md) |  | [optional] [readonly] 
+**ValueString** | **String** |  | [optional] [readonly] 
+**Value** | **String** |  | [optional] 
+**Action** | [**MetadataActionType**](MetadataActionType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientRequestMetadata  -Id null `
+$RequestMetadata = New-Cloud.Governance.ClientRequestMetadata  -Id null `
  -Name null `
  -BooleanValue null `
  -SingleLineOrMultipleLineValue null `
@@ -29,16 +31,17 @@ New-Cloud.Governance.ClientRequestMetadata  -Id null `
  -UserValue null `
  -LinkValue null `
  -ChoiceValue null `
+ -LookupListValue null `
  -Type null `
  -ValueString null `
+ -Value null `
  -Action null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$RequestMetadata | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableContructUrl** | **Boolean** |  | [optional] [default to null]
-**ContructUrlSetting** | [**ContructUrlSetting**](ContructUrlSetting.md) |  | [optional] [default to null]
-**EnableUrlValidation** | **Boolean** |  | [optional] [default to null]
-**TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] [default to null]
+**EnableContructUrl** | **Boolean** |  | [optional] 
+**ContructUrlSetting** | [**ContructUrlSetting**](ContructUrlSetting.md) |  | [optional] 
+**EnableUrlValidation** | **Boolean** |  | [optional] 
+**TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateListUrlSettings  -EnableContructUrl null `
+$CreateListUrlSettings = New-Cloud.Governance.ClientCreateListUrlSettings  -EnableContructUrl null `
  -ContructUrlSetting null `
  -EnableUrlValidation null `
  -TextValidationRule null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateListUrlSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

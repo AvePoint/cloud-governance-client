@@ -3,34 +3,35 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**AdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**SiteId** | **String** |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**AdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeSiteContactValidateResult  -SiteId null `
+$ChangeSiteContactValidateResult = New-Cloud.Governance.ClientChangeSiteContactValidateResult  -SiteId null `
  -SiteUrl null `
  -PrimaryContact null `
  -SecondaryContact null `
  -PrimaryAdministrator null `
  -AdditionalAdministrators null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeSiteContactValidateResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

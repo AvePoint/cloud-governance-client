@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -106,7 +107,16 @@ namespace Cloud.Governance.Client.Model
         GroupNotAllowAddGuestUser = 414,
 
         [EnumMember(Value = "415")]
-        YammerNotInScope = 415
+        YammerNotInScope = 415,
+
+        [EnumMember(Value = "416")]
+        YammerNotSupportedArchive = 416,
+
+        [EnumMember(Value = "500")]
+        CreateGuestUserEmailExist = 500,
+
+        [EnumMember(Value = "501")]
+        CreateGuestUserEmailVerified = 501
 
     }
 

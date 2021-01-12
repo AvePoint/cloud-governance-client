@@ -1,10 +1,9 @@
-# Cloud.Governance.Client.Cloud.Governance.Client\Api.ServicesApi
+# ServicesApi
 
-All URIs are relative to *https://API_BASE_URL*
+All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Add-CreateListService**](ServicesApi.md#Add-CreateListService) | **POST** /services/createsite | Add create site service
 [**Get-ChangeGroupSettingService**](ServicesApi.md#Get-ChangeGroupSettingService) | **GET** /services/changegroupsetting/{id} | get change group setting service
 [**Get-ChangeListSettingService**](ServicesApi.md#Get-ChangeListSettingService) | **GET** /services/changelistsetting/{id} | get change list setting service
 [**Get-ChangePermissionService**](ServicesApi.md#Get-ChangePermissionService) | **GET** /services/changepermission/{id} | get change permission service
@@ -16,98 +15,37 @@ Method | HTTP request | Description
 [**Get-ContentMoveProfiles**](ServicesApi.md#Get-ContentMoveProfiles) | **GET** /services/contentmove/profiles | get content move profiles from cloud management
 [**Get-ContentMoveService**](ServicesApi.md#Get-ContentMoveService) | **GET** /services/contentmove/{id} | get content move service
 [**Get-CreateGroupService**](ServicesApi.md#Get-CreateGroupService) | **GET** /services/creategroup/{id} | get create group service
+[**Get-CreateGuestUserService**](ServicesApi.md#Get-CreateGuestUserService) | **GET** /services/createguestuser/{id} | get create group service
 [**Get-CreateListService**](ServicesApi.md#Get-CreateListService) | **GET** /services/createlist/{id} | get create list service
 [**Get-CreateSiteService**](ServicesApi.md#Get-CreateSiteService) | **GET** /services/createsite/{id} | get create site service
 [**Get-CreateWebService**](ServicesApi.md#Get-CreateWebService) | **GET** /services/createweb/{id} | get create web service
 [**Get-CustomService**](ServicesApi.md#Get-CustomService) | **GET** /services/custom/{id} | get custom service
 [**Get-GrantPermissionService**](ServicesApi.md#Get-GrantPermissionService) | **GET** /services/grantpermission/{id} | get grant permission service
 [**Get-GroupLifecycleService**](ServicesApi.md#Get-GroupLifecycleService) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
-[**Get-GroupPolicyExpirationSetting**](ServicesApi.md#Get-GroupPolicyExpirationSetting) | **GET** /services/grouplifecycle/{id}/policyexpirationsetting | get the group policy expiration setting
 [**Get-ManagePermissionService**](ServicesApi.md#Get-ManagePermissionService) | **GET** /services/managepermission/{id} | get manage permission service
-[**Get-MyQuickServices**](ServicesApi.md#Get-MyQuickServices) | **GET** /services/my/quick | get configued quick services that can be used to start a request
 [**Get-MyServices**](ServicesApi.md#Get-MyServices) | **GET** /services/my | get services that can be used to start a request
-[**Get-MyServicesWithContext**](ServicesApi.md#Get-MyServicesWithContext) | **GET** /services/my/workspace/{objecttype}/{objectid} | get services that can be used to start a request within context
+[**Get-ServiceId**](ServicesApi.md#Get-ServiceId) | **GET** /services/id | get service id by service name
 [**Get-SiteLifecycleService**](ServicesApi.md#Get-SiteLifecycleService) | **GET** /services/sitelifecycle/{id} | get site lifecycle service
-[**Get-SitePolicyExpirationSetting**](ServicesApi.md#Get-SitePolicyExpirationSetting) | **GET** /services/sitelifecycle/{id}/policyexpirationsetting | get the site collection policy expiration setting
 [**Get-WebLifecycleService**](ServicesApi.md#Get-WebLifecycleService) | **GET** /services/weblifecycle/{id} | get web lifecycle service
-[**Invoke-ValidateForChangeGroupSettingService**](ServicesApi.md#Invoke-ValidateForChangeGroupSettingService) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
-[**Invoke-ValidateForChangeListSettingService**](ServicesApi.md#Invoke-ValidateForChangeListSettingService) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
-[**Invoke-ValidateForChangePermissionService**](ServicesApi.md#Invoke-ValidateForChangePermissionService) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
-[**Invoke-ValidateForChangeSiteContactService**](ServicesApi.md#Invoke-ValidateForChangeSiteContactService) | **POST** /services/changesitecontact/{id}/url/validation | validate permissions, scope for change site contact service
-[**Invoke-ValidateForChangeSiteSettingService**](ServicesApi.md#Invoke-ValidateForChangeSiteSettingService) | **POST** /services/changesitesetting/{id}/url/validation | validate permissions, scope for change site setting service
-[**Invoke-ValidateForChangeWebContactService**](ServicesApi.md#Invoke-ValidateForChangeWebContactService) | **POST** /services/changewebcontact/{id}/url/validation | validate permissions, scope for change web contact service
-[**Invoke-ValidateForChangeWebSettingService**](ServicesApi.md#Invoke-ValidateForChangeWebSettingService) | **POST** /services/changewebsettings/{id}/url/validation | validate permissions, scope for change web setting service
-[**Invoke-ValidateForClonePermissionService**](ServicesApi.md#Invoke-ValidateForClonePermissionService) | **POST** /services/clonepermission/{id}/url/validation | validate permissions, scope for clone permission service
-[**Invoke-ValidateForContentMoveService**](ServicesApi.md#Invoke-ValidateForContentMoveService) | **POST** /services/contentmove/{id}/url/validation | validate permissions, scope for content move service
-[**Invoke-ValidateForCreateListService**](ServicesApi.md#Invoke-ValidateForCreateListService) | **POST** /services/createlist/{id}/url/validation | validate permissions, scope for create list service
-[**Invoke-ValidateForCreateWebService**](ServicesApi.md#Invoke-ValidateForCreateWebService) | **POST** /services/createweb/{id}/url/validation | validate permissions, scope for create web service
-[**Invoke-ValidateForGrantPermissionService**](ServicesApi.md#Invoke-ValidateForGrantPermissionService) | **POST** /services/grantpermission/{id}/url/validation | validate permissions, scope for grant permission service
-[**Invoke-ValidateForGroupLifecycleService**](ServicesApi.md#Invoke-ValidateForGroupLifecycleService) | **POST** /services/grouplifecycle/{id}/group/validation | validate permissions, scope for group lifecycle service
-[**Invoke-ValidateForManagePermissionService**](ServicesApi.md#Invoke-ValidateForManagePermissionService) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
-[**Invoke-ValidateForSiteLifecycleService**](ServicesApi.md#Invoke-ValidateForSiteLifecycleService) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
-[**Invoke-ValidateForWebLifecycleService**](ServicesApi.md#Invoke-ValidateForWebLifecycleService) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+[**Resolve-EmailForCreateGuestUserService**](ServicesApi.md#Resolve-EmailForCreateGuestUserService) | **GET** /services/createguestuser/{id}/email/validate | validate guest user email
+[**Resolve-ForChangeGroupSettingService**](ServicesApi.md#Resolve-ForChangeGroupSettingService) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
+[**Resolve-ForChangeListSettingService**](ServicesApi.md#Resolve-ForChangeListSettingService) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
+[**Resolve-ForChangePermissionService**](ServicesApi.md#Resolve-ForChangePermissionService) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
+[**Resolve-ForChangeSiteContactService**](ServicesApi.md#Resolve-ForChangeSiteContactService) | **POST** /services/changesitecontact/{id}/url/validation | validate permissions, scope for change site contact service
+[**Resolve-ForChangeSiteSettingService**](ServicesApi.md#Resolve-ForChangeSiteSettingService) | **POST** /services/changesitesetting/{id}/url/validation | validate permissions, scope for change site setting service
+[**Resolve-ForChangeWebContactService**](ServicesApi.md#Resolve-ForChangeWebContactService) | **POST** /services/changewebcontact/{id}/url/validation | validate permissions, scope for change web contact service
+[**Resolve-ForChangeWebSettingService**](ServicesApi.md#Resolve-ForChangeWebSettingService) | **POST** /services/changewebsettings/{id}/url/validation | validate permissions, scope for change web setting service
+[**Resolve-ForClonePermissionService**](ServicesApi.md#Resolve-ForClonePermissionService) | **POST** /services/clonepermission/{id}/url/validation | validate permissions, scope for clone permission service
+[**Resolve-ForContentMoveService**](ServicesApi.md#Resolve-ForContentMoveService) | **POST** /services/contentmove/{id}/url/validation | validate permissions, scope for content move service
+[**Resolve-ForCreateGuestUserService**](ServicesApi.md#Resolve-ForCreateGuestUserService) | **POST** /services/createguestuser/{id}/group/validate | validate groups can invite
+[**Resolve-ForCreateListService**](ServicesApi.md#Resolve-ForCreateListService) | **POST** /services/createlist/{id}/url/validation | validate permissions, scope for create list service
+[**Resolve-ForCreateWebService**](ServicesApi.md#Resolve-ForCreateWebService) | **POST** /services/createweb/{id}/url/validation | validate permissions, scope for create web service
+[**Resolve-ForGrantPermissionService**](ServicesApi.md#Resolve-ForGrantPermissionService) | **POST** /services/grantpermission/{id}/url/validation | validate permissions, scope for grant permission service
+[**Resolve-ForGroupLifecycleService**](ServicesApi.md#Resolve-ForGroupLifecycleService) | **POST** /services/grouplifecycle/{id}/group/validation | validate permissions, scope for group lifecycle service
+[**Resolve-ForManagePermissionService**](ServicesApi.md#Resolve-ForManagePermissionService) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
+[**Resolve-ForSiteLifecycleService**](ServicesApi.md#Resolve-ForSiteLifecycleService) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
+[**Resolve-ForWebLifecycleService**](ServicesApi.md#Resolve-ForWebLifecycleService) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
 
-
-<a name="Add-CreateListService"></a>
-# **Add-CreateListService**
-> UUID Add-CreateListService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CreateSiteService] <PSCustomObject><br>
-
-Add create site service
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$CreateSiteService = (New-CreateSiteService -ScopeSettings (New-ServiceScopeSettings -SelectedNodes @((New-SPNode -Id "TODO"  -FullUrl "FullUrl_example"  -Type (New-NodeType)  -Name "Name_example"  -Title "Title_example"  -IsSelected $false))  -AutoPopulateUrlWithSPContext $false  -AutoPopulateUrlWithSPContextAssignBy (New-AssignBy))  -AdminCenterUrl "AdminCenterUrl_example"  -SiteLanguages @((New-IntModel -Id 123  -Name "Name_example"  -Description "Description_example"))  -RootSiteAndManagedPaths @((New-RootSiteWithManagedPaths -RootSite "RootSite_example"  -ManagedPaths @("ManagedPaths_example")))  -SiteUrlSetting (New-SiteUrlSetting -Type (New-SiteConstructUrlType)  -ManuallyInputSetting (New-ManuallyInputUrlSetting -EnableConstructUrl $false  -EnableUrlValidation $false  -ConstructUrlAssignBy (New-AssignBy)  -ValidationRule (New-TextValidationRuleRef -Id "TODO"  -Name "Name_example"  -Expression "Expression_example"  -ErrorMessage "ErrorMessage_example")  -Rules @("Rules_example")  -Suffix "Suffix_example"  -Connection "Connection_example"  -ContructUrlAssignBy )  -AutoGenerateUrlSetting (New-AutoGenerateUrlSetting -GenerateUrlType (New-AutoGenerateUrlType)  -SequentialNumberingSettings (New-UrlSequentialNumberingSettings -Prefix "Prefix_example"  -Delimiter "Delimiter_example"  -SequenceNumber "SequenceNumber_example")  -RandomStringSettings (New-UrlRandomStringSettings -Prefix "Prefix_example"  -MaxLength 123  -MinLength 123)))  -MultiGeoSetting (New-MultiGeoSerivceSetting -IsMultiGeoTenant $false  -AllLocations @((New-GeoLocationModel -RootSiteUrl "RootSiteUrl_example"  -TenantAdminUrl "TenantAdminUrl_example"  -Name "Name_example"  -DisplayName "DisplayName_example"))  -IsEnabled $false  -ControlMode (New-MultiGeoControlMode)  -DefaultLocation (New-GeoLocationBase -Name "Name_example"  -DisplayName "DisplayName_example")  -SelectedLocations @((New-GeoLocationBase -Name "Name_example"  -DisplayName "DisplayName_example"))  -LocationAssignBy   -UserRoleForLocation "UserRoleForLocation_example")  -SiteTitleSetting (New-SiteTitleSetting -TitleAssignBy 123  -EnableTitleConstructure $false  -TitlePrefixes @((New-SiteTitleConstructureRule -Type (New-SiteConstructTitleType)  -Value "Value_example"))  -TitleSuffixes @((New-SiteTitleConstructureRule -Type (New-SiteConstructTitleType)  -Value "Value_example")))  -Policies @((New-PolicyRef -Id "TODO"  -Name "Name_example"  -Description "Description_example"  -Category "Category_example"  -TenantId "TODO"  -Status (New-CommonStatus)))  -DeploymentManagerPlanSettings (New-DeploymentManagerPlanSettings -Enabled $false  -Plans @("Plans_example")  -AssignBy   -Default "Default_example")  -PolicyIdsAndTemplates @((New-PolicyWithTemplates -PolicyId "TODO"  -DefaultTemplate "DefaultTemplate_example"  -Templates @((New-SiteTemplate -Id "Id_example"  -Title "Title_example"  -Category "Category_example"))))  -TemplateIdsAndPermissions @((New-TemplateWithPermissions -TemplateId "TemplateId_example"  -IsUseCommon $false  -UserPermissions @((New-ServiceUserWithPermissions -UserAssignBy   -User (New-ApiUser -Id "Id_example"  -LoginName "LoginName_example"  -DisplayName "DisplayName_example"  -IsGroup $false  -Email "Email_example"  -JobTitle "JobTitle_example"  -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example"  -IsOtherTenantUser $false)  -PermissionLevels @((New-PermissionLevel -Id "TODO"  -IdInSharePoint 123  -Name "Name_example"  -Description "Description_example"  -IsExcluded $false))))  -GroupPermissions @((New-ServiceGroupWithPermissions -UsersAssignBy   -GroupOwnerAssignBy   -AllowChangePermissionLevel $false  -Removable $false  -Name "Name_example"  -Description "Description_example"  -Users @((New-GroupUser -IsEnforce $false  -IsHide $false  -Id "Id_example"  -LoginName "LoginName_example"  -DisplayName "DisplayName_example"  -IsGroup $false  -Email "Email_example"  -JobTitle "JobTitle_example"  -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example"  -IsOtherTenantUser $false))  -PermissionLevels @((New-PermissionLevel -Id "TODO"  -IdInSharePoint 123  -Name "Name_example"  -Description "Description_example"  -IsExcluded $false))  -GroupOwner (New-ApiUser -Id "Id_example"  -LoginName "LoginName_example"  -DisplayName "DisplayName_example"  -IsGroup $false  -Email "Email_example"  -JobTitle "JobTitle_example"  -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example"  -IsOtherTenantUser $false)  -GroupOwnerType (New-GroupOwnerType)  -BuildInGroupType (New-SharePointBuildInGroupType)))))  -PermissionSettings (New-PermissionSettings -AllowGrantUserPermission $false  -PreventGrantSpecificPermissionLevels $false  -PreventPermissionLevles @())  -LeasePeriodSettings (New-SiteLeasePeriodServiceSettings -LeasePeriodAssignBy   -LeaseWarningAssignBy   -LeaseEnabled $false  -LeaseWarningEnabled $false  -ApprovalProcessId "TODO"  -LeaseInterval 123  -LeaseDurationType (New-ApiDurationType)  -LeaseWarningInterval 123  -LeaseWarningDurationType (New-ApiDurationType))  -TimeZones @((New-IntModel -Id 123  -Name "Name_example"  -Description "Description_example"))  -YammerGroupSettings (New-YammerGroupServiceSettings -NetworkId "NetworkId_example"  -AllowCreate $false  -AllowReuseExisting $false  -Enabled $false  -CreateNewGroupAssignBy   -NameOrId "NameOrId_example"  -Description "Description_example"  -Type (New-YammerGroupType)  -JoinType (New-YammerGroupJoinType)  -IsListInDirectory $false  -IsGroupAlreadyExisted $false)  -Classifications @("Classifications_example")  -HubSiteSettings (New-HubSiteSettings -Enabled $false  -Action (New-ConvertHubSiteActionType)  -AssociatedHubSiteId "TODO"  -AssociatedHubSiteTitle "AssociatedHubSiteTitle_example")  -EnabledCustomTemplate $false  -CustomSiteTemplateListURL "CustomSiteTemplateListURL_example"  -DefaultPrimaryAdmin   -DefaultAdditionalAdmins @()  -DefaultPrimaryAdminReal   -DefaultAdditionalAdminsReal @()  -DefaultPrimaryContact   -DefaultSecondaryContact   -DefaultSiteLanguage 123  -DefaultRootSite "DefaultRootSite_example"  -DefaultManagedPath "DefaultManagedPath_example"  -DefaultPolicy "TODO"  -DefaultTemplate "DefaultTemplate_example"  -DefaultTimeZone 123  -DefaultClassification "DefaultClassification_example"  -DefaultDesignType "DefaultDesignType_example"  -SiteLanguageAssignBy   -TemplateAssignBy   -PolicyAssignBy   -PermissionAssignBy   -RootSiteAndManagedPathAssignBy   -TimeZoneAssignBy   -PrimaryAdminAssignBy   -AdditionalAdminAssignBy   -PrimaryContactAssignBy   -SecondaryContactAssignBy   -DesignTypeAssignBy   -ClassificationAssignBy   -HubSiteAssignBy   -DepartmentAssignBy   -Metadatas @((New-CustomMetadata -Id "TODO"  -Name "Name_example"  -Description "Description_example"  -Type (New-MetadataFieldType)  -DisplayType (New-DisplayInReportType)  -AssignBy   -EnableTextValidation $false  -TextValidationRule (New-TextValidationRuleRef -Id "TODO"  -Name "Name_example"  -Expression "Expression_example"  -ErrorMessage "ErrorMessage_example")  -BooleanMetadataSettings (New-BooleanMetadataSettings -EnableTerms $false  -Value $false  -TermsAndConditions "TermsAndConditions_example")  -TermsMetadataSettings (New-TermsMetadataSettings -AllowMultiple $false  -AdminCenter "AdminCenter_example"  -Value @((New-GuidModel -Id "TODO"  -Name "Name_example"  -Description "Description_example"))  -TermStore (New-GuidModel -Id "TODO"  -Name "Name_example"  -Description "Description_example")  -TermGroup   -TermSet   -Scope )  -UserMetadataSettings (New-UserMetadataSettings -Value @()  -AllowReferenceAsRoleInApprovalProcess $false)  -UserProfileMetadataSettings (New-UserProfileMetadataSettings -AdminCenter "AdminCenter_example"  -EnableValueSync $false  -EnableRoleValueSync $false  -Value (New-LookupValue -Tenant "Tenant_example"  -Property "Property_example"  -TargetUser   -UserPropertyValue "UserPropertyValue_example"  -UserPropertyDisplayValue "UserPropertyDisplayValue_example")  -Property "Property_example"  -AllowReferenceAsRoleInApprovalProcess $false)  -AzureAdMetadataSettings (New-AzureAdMetadataSettings -Office365Tenant   -UseBuiltInProperty $false  -Value (New-LookupValue -Tenant "Tenant_example"  -Property "Property_example"  -TargetUser   -UserPropertyValue "UserPropertyValue_example"  -UserPropertyDisplayValue "UserPropertyDisplayValue_example")  -Property "Property_example"  -AllowReferenceAsRoleInApprovalProcess $false)  -ChoiceMetadataSettings (New-ChoiceMetadataSettings -Choices @("Choices_example")  -Value @("Value_example")  -ChoiceType (New-ChoiceType))  -LinkMetadataSettings (New-LinkMetadataSettings -Title "Title_example"  -Address "Address_example")  -SingleLineOrMultipleLineMetadataSettings (New-SingleLineOrMultipleLineMetadataSettings -Value "Value_example")))  -HideRequestSummary $false  -Id "TODO"  -Name "Name_example"  -Description "Description_example"  -Type (New-ServiceType)  -Department "Department_example"  -LoadDepartmentFromUps $false  -Departments @("Departments_example")  -ServiceContact   -ServiceAdminContact   -ApproversContainManagerRole $false  -Status (New-CommonStatus)  -ShowServiceInCatalog $false  -CustomActions (New-CustomActionSettings -BeforeApprovalProcessExecution (New-ExecutionModel -Enabled $false  -WebServiceAddress "WebServiceAddress_example"  -WebServiceAuthenticationType (New-WebServiceAuthenticationType)  -WebServiceAppClientId "WebServiceAppClientId_example"  -MethodName "MethodName_example"  -Arguments @((New-ExecutionParameter -Name "Name_example"  -Type "Type_example"  -Value "Value_example")))  -AfterApprovalProcessExecution (New-ExecutionModel -Enabled $false  -WebServiceAddress "WebServiceAddress_example"  -WebServiceAuthenticationType (New-WebServiceAuthenticationType)  -WebServiceAppClientId "WebServiceAppClientId_example"  -MethodName "MethodName_example"  -Arguments @((New-ExecutionParameter -Name "Name_example"  -Type "Type_example"  -Value "Value_example")))  -PostExecution   -BeforeSubmission   -WhenErrorTaskGenerated )  -ApprovalProcessId "TODO"  -LanguageId 123  -CategoryId "CategoryId_example") # CreateSiteService |  (optional)
-
-# Add create site service
-try {
-    $Result = Add-CreateListService -CreateSiteService $CreateSiteService
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **CreateSiteService** | [**CreateSiteService**](CreateSiteService.md)|  | [optional] 
-
-### Return type
-
-[**UUID**](UUID.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Get-ChangeGroupSettingService"></a>
 # **Get-ChangeGroupSettingService**
@@ -123,31 +61,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get change group setting service
 try {
-    $Result = Get-ChangeGroupSettingService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeGroupSettingService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ChangeGroupSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -155,21 +90,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeGroupSettingService**](ChangeGroupSettingService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -187,31 +122,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get change list setting service
 try {
-    $Result = Get-ChangeListSettingService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeListSettingService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ChangeListSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -219,21 +151,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeListSettingService**](ChangeListSettingService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -251,31 +183,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get change permission service
 try {
-    $Result = Get-ChangePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ChangePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -283,21 +212,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangePermissionService**](ChangePermissionService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -315,31 +244,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get change site contact service
 try {
-    $Result = Get-ChangeSiteContactService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeSiteContactService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ChangeSiteContactService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -347,21 +273,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeSiteContactService**](ChangeSiteContactService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -379,31 +305,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get change site setting service
 try {
-    $Result = Get-ChangeSiteSettingService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeSiteSettingService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ChangeSiteSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -411,21 +334,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeSiteSettingService**](ChangeSiteSettingService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -443,31 +366,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # validate permissions, scope for change web contact service
 try {
-    $Result = Get-ChangeWebContactService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeWebContactService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ChangeWebContactService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -475,21 +395,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeWebContactService**](ChangeWebContactService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -507,31 +427,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get change web setting service
 try {
-    $Result = Get-ChangeWebSettingsService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeWebSettingsService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ChangeWebSettingsService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -539,21 +456,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeWebSettingService**](ChangeWebSettingService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -571,31 +488,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get clone permission service
 try {
-    $Result = Get-ClonePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ClonePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ClonePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -603,21 +517,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ClonePermissionService**](ClonePermissionService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -633,29 +547,26 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
 
 # get content move profiles from cloud management
 try {
-    $Result = Get-ContentMoveProfiles
+     $Result = Get-ContentMoveProfiles
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ContentMoveProfiles: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -663,17 +574,17 @@ try {
 This endpoint does not need any parameter.
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ContentMoveProfiles**](ContentMoveProfiles.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -691,31 +602,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get content move service
 try {
-    $Result = Get-ContentMoveService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ContentMoveService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ContentMoveService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -723,21 +631,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ContentMoveService**](ContentMoveService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -755,31 +663,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get create group service
 try {
-    $Result = Get-CreateGroupService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateGroupService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-CreateGroupService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -787,21 +692,82 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateGroupService**](CreateGroupService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-CreateGuestUserService"></a>
+# **Get-CreateGuestUserService**
+> CreateGuestUserService Get-CreateGuestUserService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+
+get create group service
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Cloud.Governance.ClientConfiguration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+
+# get create group service
+try {
+     $Result = Get-CreateGuestUserService -Id $Id -QuestionnaireId $QuestionnaireId
+} catch {
+    Write-Host ("Exception occured when calling Get-CreateGuestUserService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreateGuestUserService**](CreateGuestUserService.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -819,31 +785,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get create list service
 try {
-    $Result = Get-CreateListService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateListService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-CreateListService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -851,21 +814,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateListService**](CreateListService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -883,31 +846,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get create site service
 try {
-    $Result = Get-CreateSiteService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateSiteService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-CreateSiteService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -915,21 +875,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateSiteService**](CreateSiteService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -947,31 +907,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get create web service
 try {
-    $Result = Get-CreateWebService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateWebService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-CreateWebService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -979,21 +936,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateWebService**](CreateWebService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1011,31 +968,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get custom service
 try {
-    $Result = Get-CustomService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CustomService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-CustomService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1043,21 +997,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ServiceForRequest**](ServiceForRequest.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1075,31 +1029,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get grant permission service
 try {
-    $Result = Get-GrantPermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-GrantPermissionService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-GrantPermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1107,21 +1058,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**GrantPermissionService**](GrantPermissionService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1139,31 +1090,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get group lifecycle service
 try {
-    $Result = Get-GroupLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-GroupLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-GroupLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1171,82 +1119,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**GroupLifecycleService**](GroupLifecycleService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-GroupPolicyExpirationSetting"></a>
-# **Get-GroupPolicyExpirationSetting**
-> PolicyExpirationSettingModel Get-GroupPolicyExpirationSetting<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-
-get the group policy expiration setting
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Id = TODO # UUID |  (default to null)
-
-# get the group policy expiration setting
-try {
-    $Result = Get-GroupPolicyExpirationSetting -Id $Id
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
-
-### Return type
-
-[**PolicyExpirationSettingModel**](PolicyExpirationSettingModel.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1264,31 +1151,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get manage permission service
 try {
-    $Result = Get-ManagePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ManagePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ManagePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1296,77 +1180,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ManagePermissionService**](ManagePermissionService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-MyQuickServices"></a>
-# **Get-MyQuickServices**
-> ServiceList[] Get-MyQuickServices<br>
-
-get configued quick services that can be used to start a request
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-
-# get configued quick services that can be used to start a request
-try {
-    $Result = Get-MyQuickServices
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ServiceList[]**](ServiceList.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1383,30 +1211,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Search = "Search_example" # String |  (optional) (default to null)
+$Search = "Search_example" # String |  (optional)
 
 # get services that can be used to start a request
 try {
-    $Result = Get-MyServices -Search $Search
+     $Result = Get-MyServices -Search $Search
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-MyServices: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1414,31 +1239,29 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Search** | **String**|  | [optional] [default to null]
+ **Search** | **String**|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ServiceListPageResult**](ServiceListPageResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-MyServicesWithContext"></a>
-# **Get-MyServicesWithContext**
-> ServiceListPageResult Get-MyServicesWithContext<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Objecttype] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Objectid] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
+<a name="Get-ServiceId"></a>
+# **Get-ServiceId**
+> String Get-ServiceId<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Name] <String><br>
 
-get services that can be used to start a request within context
+get service id by service name
 
 ### Example
 ```powershell
@@ -1446,32 +1269,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Objecttype = (New-WorkspaceType) # WorkspaceType |  (default to null)
-$Objectid = "Objectid_example" # String |  (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
+$Name = "Name_example" # String | service name, case insensitive (optional)
 
-# get services that can be used to start a request within context
+# get service id by service name
 try {
-    $Result = Get-MyServicesWithContext -Objecttype $Objecttype -Objectid $Objectid -Search $Search
+     $Result = Get-ServiceId -Name $Name
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ServiceId: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1479,22 +1297,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Objecttype** | [**WorkspaceType**](WorkspaceType.md)|  | [default to null]
- **Objectid** | **String**|  | [default to null]
- **Search** | **String**|  | [optional] [default to null]
+ **Name** | **String**| service name, case insensitive | [optional] 
 
 ### Return type
-
-[**ServiceListPageResult**](ServiceListPageResult.md)
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+**String**
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1512,31 +1328,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get site lifecycle service
 try {
-    $Result = Get-SiteLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-SiteLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-SiteLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1544,82 +1357,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SiteLifecycleService**](SiteLifecycleService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-SitePolicyExpirationSetting"></a>
-# **Get-SitePolicyExpirationSetting**
-> PolicyExpirationSettingModel Get-SitePolicyExpirationSetting<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-
-get the site collection policy expiration setting
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Id = TODO # UUID |  (default to null)
-
-# get the site collection policy expiration setting
-try {
-    $Result = Get-SitePolicyExpirationSetting -Id $Id
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
-
-### Return type
-
-[**PolicyExpirationSettingModel**](PolicyExpirationSettingModel.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1637,31 +1389,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$QuestionnaireId = TODO # UUID |  (optional) (default to null)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 
 # get web lifecycle service
 try {
-    $Result = Get-WebLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-WebLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-WebLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1669,27 +1418,88 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
- **QuestionnaireId** | [**UUID**](UUID.md)|  | [optional] [default to null]
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**WebLifecycleService**](WebLifecycleService.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForChangeGroupSettingService"></a>
-# **Invoke-ValidateForChangeGroupSettingService**
-> ChangeGroupSettingCheckResult Invoke-ValidateForChangeGroupSettingService<br>
+<a name="Resolve-EmailForCreateGuestUserService"></a>
+# **Resolve-EmailForCreateGuestUserService**
+> ObjectValidateResult Resolve-EmailForCreateGuestUserService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Email] <String><br>
+
+validate guest user email
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Cloud.Governance.ClientConfiguration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "Id_example" # String | 
+$Email = "Email_example" # String |  (optional)
+
+# validate guest user email
+try {
+     $Result = Resolve-EmailForCreateGuestUserService -Id $Id -Email $Email
+} catch {
+    Write-Host ("Exception occured when calling Resolve-EmailForCreateGuestUserService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **Email** | **String**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ObjectValidateResult**](ObjectValidateResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Resolve-ForChangeGroupSettingService"></a>
+# **Resolve-ForChangeGroupSettingService**
+> ChangeGroupSettingCheckResult Resolve-ForChangeGroupSettingService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChangeGroupSettingValidationParameter] <PSCustomObject><br>
 
@@ -1701,31 +1511,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$ChangeGroupSettingValidationParameter = (New-ChangeGroupSettingValidationParameter -GroupEmail "GroupEmail_example"  -GroupId "TODO"  -IsEditTask $false  -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$ChangeGroupSettingValidationParameter = (Initialize-ChangeGroupSettingValidationParameter-GroupEmail "GroupEmail_example" -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
 
 # validate permissions, scope for change group setting service
 try {
-    $Result = Invoke-ValidateForChangeGroupSettingService -Id $Id -ChangeGroupSettingValidationParameter $ChangeGroupSettingValidationParameter
+     $Result = Resolve-ForChangeGroupSettingService -Id $Id -ChangeGroupSettingValidationParameter $ChangeGroupSettingValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForChangeGroupSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1733,27 +1540,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **ChangeGroupSettingValidationParameter** | [**ChangeGroupSettingValidationParameter**](ChangeGroupSettingValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeGroupSettingCheckResult**](ChangeGroupSettingCheckResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForChangeListSettingService"></a>
-# **Invoke-ValidateForChangeListSettingService**
-> ChangeListSettingValidateResult Invoke-ValidateForChangeListSettingService<br>
+<a name="Resolve-ForChangeListSettingService"></a>
+# **Resolve-ForChangeListSettingService**
+> ChangeListSettingValidateResult Resolve-ForChangeListSettingService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -1765,31 +1572,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$SiteValidationParameter = (New-SiteValidationParameter -Uri "TODO"  -IgnoreLock $false  -IsEditTask $false  -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter = (Initialize-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change list setting service
 try {
-    $Result = Invoke-ValidateForChangeListSettingService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForChangeListSettingService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForChangeListSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1797,27 +1601,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeListSettingValidateResult**](ChangeListSettingValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForChangePermissionService"></a>
-# **Invoke-ValidateForChangePermissionService**
-> ChangePermissionValidateResult Invoke-ValidateForChangePermissionService<br>
+<a name="Resolve-ForChangePermissionService"></a>
+# **Resolve-ForChangePermissionService**
+> ChangePermissionValidateResult Resolve-ForChangePermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -1829,31 +1633,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$SiteValidationParameter = (New-SiteValidationParameter -Uri "TODO"  -IgnoreLock $false  -IsEditTask $false  -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter = (Initialize-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change permission service
 try {
-    $Result = Invoke-ValidateForChangePermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForChangePermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForChangePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1861,27 +1662,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangePermissionValidateResult**](ChangePermissionValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForChangeSiteContactService"></a>
-# **Invoke-ValidateForChangeSiteContactService**
-> ChangeSiteContactValidateResult Invoke-ValidateForChangeSiteContactService<br>
+<a name="Resolve-ForChangeSiteContactService"></a>
+# **Resolve-ForChangeSiteContactService**
+> ChangeSiteContactValidateResult Resolve-ForChangeSiteContactService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -1893,31 +1694,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site contact service
 try {
-    $Result = Invoke-ValidateForChangeSiteContactService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForChangeSiteContactService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForChangeSiteContactService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1925,27 +1723,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeSiteContactValidateResult**](ChangeSiteContactValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForChangeSiteSettingService"></a>
-# **Invoke-ValidateForChangeSiteSettingService**
-> ChangeSiteSettingValidateResult Invoke-ValidateForChangeSiteSettingService<br>
+<a name="Resolve-ForChangeSiteSettingService"></a>
+# **Resolve-ForChangeSiteSettingService**
+> ChangeSiteSettingValidateResult Resolve-ForChangeSiteSettingService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -1957,31 +1755,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site setting service
 try {
-    $Result = Invoke-ValidateForChangeSiteSettingService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForChangeSiteSettingService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForChangeSiteSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -1989,27 +1784,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeSiteSettingValidateResult**](ChangeSiteSettingValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForChangeWebContactService"></a>
-# **Invoke-ValidateForChangeWebContactService**
-> ChangeWebContactValidateResult Invoke-ValidateForChangeWebContactService<br>
+<a name="Resolve-ForChangeWebContactService"></a>
+# **Resolve-ForChangeWebContactService**
+> ChangeWebContactValidateResult Resolve-ForChangeWebContactService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2021,31 +1816,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web contact service
 try {
-    $Result = Invoke-ValidateForChangeWebContactService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForChangeWebContactService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForChangeWebContactService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2053,27 +1845,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeWebContactValidateResult**](ChangeWebContactValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForChangeWebSettingService"></a>
-# **Invoke-ValidateForChangeWebSettingService**
-> ChangeWebUrlValidateResult Invoke-ValidateForChangeWebSettingService<br>
+<a name="Resolve-ForChangeWebSettingService"></a>
+# **Resolve-ForChangeWebSettingService**
+> ChangeWebUrlValidateResult Resolve-ForChangeWebSettingService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2085,31 +1877,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web setting service
 try {
-    $Result = Invoke-ValidateForChangeWebSettingService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForChangeWebSettingService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForChangeWebSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2117,27 +1906,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeWebUrlValidateResult**](ChangeWebUrlValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForClonePermissionService"></a>
-# **Invoke-ValidateForClonePermissionService**
-> ClonePermissionValidateResult Invoke-ValidateForClonePermissionService<br>
+<a name="Resolve-ForClonePermissionService"></a>
+# **Resolve-ForClonePermissionService**
+> ClonePermissionValidateResult Resolve-ForClonePermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2149,31 +1938,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for clone permission service
 try {
-    $Result = Invoke-ValidateForClonePermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForClonePermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForClonePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2181,27 +1967,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ClonePermissionValidateResult**](ClonePermissionValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForContentMoveService"></a>
-# **Invoke-ValidateForContentMoveService**
-> ContentMoveUrlValidationResult Invoke-ValidateForContentMoveService<br>
+<a name="Resolve-ForContentMoveService"></a>
+# **Resolve-ForContentMoveService**
+> ContentMoveUrlValidationResult Resolve-ForContentMoveService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2213,31 +1999,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for content move service
 try {
-    $Result = Invoke-ValidateForContentMoveService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForContentMoveService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForContentMoveService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2245,27 +2028,91 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ContentMoveUrlValidationResult**](ContentMoveUrlValidationResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForCreateListService"></a>
-# **Invoke-ValidateForCreateListService**
-> CreateListUrlValidationResult Invoke-ValidateForCreateListService<br>
+<a name="Resolve-ForCreateGuestUserService"></a>
+# **Resolve-ForCreateGuestUserService**
+> CreateGuestUserValidationResult[] Resolve-ForCreateGuestUserService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApiUser] <PSCustomObject[]><br>
+
+validate groups can invite
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Cloud.Governance.ClientConfiguration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "Id_example" # String | 
+$RequestId = "RequestId_example" # String |  (optional)
+$ApiUser = @((Initialize-ApiUser-Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType) -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO")) # ApiUser[] |  (optional)
+
+# validate groups can invite
+try {
+     $Result = Resolve-ForCreateGuestUserService -Id $Id -RequestId $RequestId -ApiUser $ApiUser
+} catch {
+    Write-Host ("Exception occured when calling Resolve-ForCreateGuestUserService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **RequestId** | [**String**](String.md)|  | [optional] 
+ **ApiUser** | [**ApiUser[]**](ApiUser.md)|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreateGuestUserValidationResult[]**](CreateGuestUserValidationResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Resolve-ForCreateListService"></a>
+# **Resolve-ForCreateListService**
+> CreateListUrlValidationResult Resolve-ForCreateListService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ListValidationParameter] <PSCustomObject><br>
 
@@ -2277,31 +2124,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$ListValidationParameter = (New-ListValidationParameter -ListUrl "ListUrl_example"  -ParentUrl "ParentUrl_example"  -ListTitle "ListTitle_example"  -IsDocumentLibrary $false  -IsEditTask $false  -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$ListValidationParameter = (Initialize-ListValidationParameter-ListUrl "ListUrl_example" -ParentUrl "ParentUrl_example" -ListTitle "ListTitle_example" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
 
 # validate permissions, scope for create list service
 try {
-    $Result = Invoke-ValidateForCreateListService -Id $Id -ListValidationParameter $ListValidationParameter
+     $Result = Resolve-ForCreateListService -Id $Id -ListValidationParameter $ListValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForCreateListService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2309,27 +2153,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **ListValidationParameter** | [**ListValidationParameter**](ListValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateListUrlValidationResult**](CreateListUrlValidationResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForCreateWebService"></a>
-# **Invoke-ValidateForCreateWebService**
-> CreateWebUrlValidationResult Invoke-ValidateForCreateWebService<br>
+<a name="Resolve-ForCreateWebService"></a>
+# **Resolve-ForCreateWebService**
+> CreateWebUrlValidationResult Resolve-ForCreateWebService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CreateWebValidationParameter] <PSCustomObject><br>
 
@@ -2341,31 +2185,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$CreateWebValidationParameter = (New-CreateWebValidationParameter -ParentUrl "TODO"  -Uri "TODO"  -IgnoreLock $false  -IsEditTask $false  -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$CreateWebValidationParameter = (Initialize-CreateWebValidationParameter-ParentUrl "ParentUrl_example" -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
 
 # validate permissions, scope for create web service
 try {
-    $Result = Invoke-ValidateForCreateWebService -Id $Id -CreateWebValidationParameter $CreateWebValidationParameter
+     $Result = Resolve-ForCreateWebService -Id $Id -CreateWebValidationParameter $CreateWebValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForCreateWebService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2373,27 +2214,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **CreateWebValidationParameter** | [**CreateWebValidationParameter**](CreateWebValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateWebUrlValidationResult**](CreateWebUrlValidationResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForGrantPermissionService"></a>
-# **Invoke-ValidateForGrantPermissionService**
-> GrantPermissionUrlValidationResult Invoke-ValidateForGrantPermissionService<br>
+<a name="Resolve-ForGrantPermissionService"></a>
+# **Resolve-ForGrantPermissionService**
+> GrantPermissionUrlValidationResult Resolve-ForGrantPermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2405,31 +2246,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for grant permission service
 try {
-    $Result = Invoke-ValidateForGrantPermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForGrantPermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForGrantPermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2437,27 +2275,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**GrantPermissionUrlValidationResult**](GrantPermissionUrlValidationResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForGroupLifecycleService"></a>
-# **Invoke-ValidateForGroupLifecycleService**
-> GroupLifecycleValidateResult Invoke-ValidateForGroupLifecycleService<br>
+<a name="Resolve-ForGroupLifecycleService"></a>
+# **Resolve-ForGroupLifecycleService**
+> GroupLifecycleValidateResult Resolve-ForGroupLifecycleService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupValidationParameter] <PSCustomObject><br>
 
@@ -2469,31 +2307,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
-$GroupValidationParameter = (New-GroupValidationParameter -GroupId "TODO"  -IsEditTask $false  -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$GroupValidationParameter = (Initialize-GroupValidationParameter-GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
 
 # validate permissions, scope for group lifecycle service
 try {
-    $Result = Invoke-ValidateForGroupLifecycleService -Id $Id -GroupValidationParameter $GroupValidationParameter
+     $Result = Resolve-ForGroupLifecycleService -Id $Id -GroupValidationParameter $GroupValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForGroupLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2501,27 +2336,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **GroupValidationParameter** | [**GroupValidationParameter**](GroupValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**GroupLifecycleValidateResult**](GroupLifecycleValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForManagePermissionService"></a>
-# **Invoke-ValidateForManagePermissionService**
-> ManagePermissionValidateResult Invoke-ValidateForManagePermissionService<br>
+<a name="Resolve-ForManagePermissionService"></a>
+# **Resolve-ForManagePermissionService**
+> ManagePermissionValidateResult Resolve-ForManagePermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2533,31 +2368,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for manage permission service
 try {
-    $Result = Invoke-ValidateForManagePermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForManagePermissionService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForManagePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2565,27 +2397,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ManagePermissionValidateResult**](ManagePermissionValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForSiteLifecycleService"></a>
-# **Invoke-ValidateForSiteLifecycleService**
-> SiteLifecycleValidateResult Invoke-ValidateForSiteLifecycleService<br>
+<a name="Resolve-ForSiteLifecycleService"></a>
+# **Resolve-ForSiteLifecycleService**
+> SiteLifecycleValidateResult Resolve-ForSiteLifecycleService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2597,31 +2429,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for site lifecycle service
 try {
-    $Result = Invoke-ValidateForSiteLifecycleService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForSiteLifecycleService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForSiteLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2629,27 +2458,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SiteLifecycleValidateResult**](SiteLifecycleValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-ValidateForWebLifecycleService"></a>
-# **Invoke-ValidateForWebLifecycleService**
-> WebLifecycleValidateResult Invoke-ValidateForWebLifecycleService<br>
+<a name="Resolve-ForWebLifecycleService"></a>
+# **Resolve-ForWebLifecycleService**
+> WebLifecycleValidateResult Resolve-ForWebLifecycleService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
@@ -2661,31 +2490,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = TODO # UUID |  (default to null)
+$Id = "Id_example" # String | 
 $SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for web lifecycle service
 try {
-    $Result = Invoke-ValidateForWebLifecycleService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForWebLifecycleService -Id $Id -SiteValidationParameter $SiteValidationParameter
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Resolve-ForWebLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -2693,21 +2519,21 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**UUID**](UUID.md)|  | [default to null]
+ **Id** | [**String**](String.md)|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**WebLifecycleValidateResult**](WebLifecycleValidateResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

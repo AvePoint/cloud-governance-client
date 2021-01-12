@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to null]
+**Value** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUserMetadataSettings  -Value null `
+$UserMetadataSettings = New-Cloud.Governance.ClientUserMetadataSettings  -Value null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UserMetadataSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

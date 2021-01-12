@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | **String** |  | [optional] [default to null]
-**Delimiter** | **String** |  | [optional] [default to null]
-**SequenceNumber** | **String** |  | [optional] [default to null]
+**Prefix** | **String** |  | [optional] 
+**Delimiter** | **String** |  | [optional] 
+**SequenceNumber** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientUrlSequentialNumberingSettings  -Prefix null `
+$UrlSequentialNumberingSettings = New-Cloud.Governance.ClientUrlSequentialNumberingSettings  -Prefix null `
  -Delimiter null `
  -SequenceNumber null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$UrlSequentialNumberingSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

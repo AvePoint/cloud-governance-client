@@ -413,6 +413,24 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ServiceListPageResult</returns>
         ApiResponse<ServiceListPageResult> GetMyServicesWithHttpInfo(string search = default(string));
         /// <summary>
+        /// get service id by service name
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <returns>Guid</returns>
+        Guid GetServiceId(string name = default(string));
+
+        /// <summary>
+        /// get service id by service name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <returns>ApiResponse of Guid</returns>
+        ApiResponse<Guid> GetServiceIdWithHttpInfo(string name = default(string));
+        /// <summary>
         /// get site lifecycle service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -452,6 +470,26 @@ namespace Cloud.Governance.Client.Api
         /// <param name="questionnaireId"> (optional)</param>
         /// <returns>ApiResponse of WebLifecycleService</returns>
         ApiResponse<WebLifecycleService> GetWebLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        /// <summary>
+        /// validate guest user email
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>ObjectValidateResult</returns>
+        ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email = default(string));
+
+        /// <summary>
+        /// validate guest user email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>ApiResponse of ObjectValidateResult</returns>
+        ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email = default(string));
         /// <summary>
         /// validate permissions, scope for change group setting service
         /// </summary>
@@ -636,11 +674,11 @@ namespace Cloud.Governance.Client.Api
         /// validate groups can invite
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <returns>List&lt;CreateGuestUserValidationResult&gt;</returns>
-        List<CreateGuestUserValidationResult> ValidateForCreateGuestUserService(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>));
+        List<CreateGuestUserValidationResult> ValidateForCreateGuestUserService(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>));
 
         /// <summary>
         /// validate groups can invite
@@ -649,11 +687,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <returns>ApiResponse of List&lt;CreateGuestUserValidationResult&gt;</returns>
-        ApiResponse<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceWithHttpInfo(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>));
+        ApiResponse<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceWithHttpInfo(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>));
         /// <summary>
         /// validate permissions, scope for create list service
         /// </summary>
@@ -1298,6 +1336,29 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ServiceListPageResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<ServiceListPageResult>> GetMyServicesWithHttpInfoAsync(string search = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// get service id by service name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Guid</returns>
+        System.Threading.Tasks.Task<Guid> GetServiceIdAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get service id by service name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Guid)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Guid>> GetServiceIdWithHttpInfoAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// get site lifecycle service
         /// </summary>
         /// <remarks>
@@ -1347,6 +1408,31 @@ namespace Cloud.Governance.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebLifecycleService)</returns>
         System.Threading.Tasks.Task<ApiResponse<WebLifecycleService>> GetWebLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// validate guest user email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ObjectValidateResult</returns>
+        System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// validate guest user email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ObjectValidateResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// validate permissions, scope for change group setting service
         /// </summary>
@@ -1579,12 +1665,12 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CreateGuestUserValidationResult&gt;</returns>
-        System.Threading.Tasks.Task<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceAsync(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceAsync(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// validate groups can invite
@@ -1593,12 +1679,12 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CreateGuestUserValidationResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CreateGuestUserValidationResult>>> ValidateForCreateGuestUserServiceWithHttpInfoAsync(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<CreateGuestUserValidationResult>>> ValidateForCreateGuestUserServiceWithHttpInfoAsync(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// validate permissions, scope for create list service
         /// </summary>
@@ -1924,8 +2010,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1996,8 +2081,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2067,8 +2151,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2139,8 +2222,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2210,8 +2292,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2282,8 +2363,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2353,8 +2433,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2425,8 +2504,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2496,8 +2574,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2568,8 +2645,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2639,8 +2715,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2711,8 +2786,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2782,8 +2856,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2854,8 +2927,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2925,8 +2997,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2997,8 +3068,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -3064,8 +3134,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3127,8 +3196,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -3193,8 +3261,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3265,8 +3332,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -3336,8 +3402,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3408,8 +3473,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -3479,8 +3543,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3551,8 +3614,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -3622,8 +3684,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3694,8 +3755,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -3765,8 +3825,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3837,8 +3896,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -3908,8 +3966,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -3980,8 +4037,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -4051,8 +4107,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4123,8 +4178,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -4194,8 +4248,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4266,8 +4319,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -4337,8 +4389,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4409,8 +4460,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -4480,8 +4530,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4552,8 +4601,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -4621,8 +4669,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4690,8 +4737,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -4731,6 +4777,141 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// get service id by service name 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <returns>Guid</returns>
+        public Guid GetServiceId(string name = default(string))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<Guid> localVarResponse = GetServiceIdWithHttpInfo(name);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get service id by service name 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <returns>ApiResponse of Guid</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Guid> GetServiceIdWithHttpInfo(string name = default(string))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (name != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<Guid>("/services/id", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetServiceId", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get service id by service name 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Guid</returns>
+        public async System.Threading.Tasks.Task<Guid> GetServiceIdAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<Guid> localVarResponse = await GetServiceIdWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get service id by service name 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Guid)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Guid>> GetServiceIdWithHttpInfoAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (name != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "name", name));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<Guid>("/services/id", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetServiceId", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// get site lifecycle service 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4760,8 +4941,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4832,8 +5012,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -4903,8 +5082,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -4975,8 +5153,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -5017,6 +5194,147 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// validate guest user email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>ObjectValidateResult</returns>
+        public ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email = default(string))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = ValidateEmailForCreateGuestUserServiceWithHttpInfo(id, email);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// validate guest user email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <returns>ApiResponse of ObjectValidateResult</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email = default(string))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (email != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ObjectValidateResult>("/services/createguestuser/{id}/email/validate", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateEmailForCreateGuestUserService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// validate guest user email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ObjectValidateResult</returns>
+        public async System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = await ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(id, email, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// validate guest user email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="email"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ObjectValidateResult)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (email != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ObjectValidateResult>("/services/createguestuser/{id}/email/validate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateEmailForCreateGuestUserService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// validate permissions, scope for change group setting service 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5041,17 +5359,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -5114,17 +5428,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -5186,17 +5496,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -5259,17 +5565,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -5331,17 +5633,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -5404,17 +5702,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -5476,17 +5770,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -5549,17 +5839,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -5621,17 +5907,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -5694,17 +5976,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -5766,17 +6044,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -5839,17 +6113,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -5911,17 +6181,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -5984,17 +6250,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -6056,17 +6318,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6129,17 +6387,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -6201,17 +6455,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6274,17 +6524,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -6325,13 +6571,13 @@ namespace Cloud.Governance.Client.Api
         /// validate groups can invite 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <returns>List&lt;CreateGuestUserValidationResult&gt;</returns>
-        public List<CreateGuestUserValidationResult> ValidateForCreateGuestUserService(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>))
+        public List<CreateGuestUserValidationResult> ValidateForCreateGuestUserService(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>> localVarResponse = ValidateForCreateGuestUserServiceWithHttpInfo(serviceid, requestId, apiUser);
+            Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>> localVarResponse = ValidateForCreateGuestUserServiceWithHttpInfo(id, requestId, apiUser);
             return localVarResponse.Data;
         }
 
@@ -6339,26 +6585,22 @@ namespace Cloud.Governance.Client.Api
         /// validate groups can invite 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <returns>ApiResponse of List&lt;CreateGuestUserValidationResult&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceWithHttpInfo(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>))
+        public Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceWithHttpInfo(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6367,7 +6609,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("serviceid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (requestId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "requestId", requestId));
@@ -6386,7 +6628,7 @@ namespace Cloud.Governance.Client.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<List<CreateGuestUserValidationResult>>("/services/createguestuser/{serviceid}/group/validate", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<List<CreateGuestUserValidationResult>>("/services/createguestuser/{id}/group/validate", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6401,14 +6643,14 @@ namespace Cloud.Governance.Client.Api
         /// validate groups can invite 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CreateGuestUserValidationResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceAsync(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<CreateGuestUserValidationResult>> ValidateForCreateGuestUserServiceAsync(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>> localVarResponse = await ValidateForCreateGuestUserServiceWithHttpInfoAsync(serviceid, requestId, apiUser, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>> localVarResponse = await ValidateForCreateGuestUserServiceWithHttpInfoAsync(id, requestId, apiUser, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6416,28 +6658,24 @@ namespace Cloud.Governance.Client.Api
         /// validate groups can invite 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serviceid"></param>
+        /// <param name="id"></param>
         /// <param name="requestId"> (optional)</param>
         /// <param name="apiUser"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CreateGuestUserValidationResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>>> ValidateForCreateGuestUserServiceWithHttpInfoAsync(Guid serviceid, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<CreateGuestUserValidationResult>>> ValidateForCreateGuestUserServiceWithHttpInfoAsync(Guid id, Guid? requestId = default(Guid?), List<ApiUser> apiUser = default(List<ApiUser>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -6447,7 +6685,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.PathParameters.Add("serviceid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceid)); // path parameter
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             if (requestId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "requestId", requestId));
@@ -6467,7 +6705,7 @@ namespace Cloud.Governance.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<List<CreateGuestUserValidationResult>>("/services/createguestuser/{serviceid}/group/validate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<List<CreateGuestUserValidationResult>>("/services/createguestuser/{id}/group/validate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6503,17 +6741,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6576,17 +6810,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -6648,17 +6878,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6721,17 +6947,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -6793,17 +7015,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -6866,17 +7084,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -6938,17 +7152,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7011,17 +7221,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -7083,17 +7289,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7156,17 +7358,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -7228,17 +7426,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7301,17 +7495,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -7373,17 +7563,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -7446,17 +7632,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 

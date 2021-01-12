@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -40,25 +41,25 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ColumnMapping
         /// </summary>
-        [DataMember(Name = "columnMapping", EmitDefaultValue = false)]
+        [DataMember(Name = "columnMapping", EmitDefaultValue = true)]
         public GuidModel ColumnMapping { get; set; }
 
         /// <summary>
         /// Gets or Sets ContentTypeMapping
         /// </summary>
-        [DataMember(Name = "contentTypeMapping", EmitDefaultValue = false)]
+        [DataMember(Name = "contentTypeMapping", EmitDefaultValue = true)]
         public GuidModel ContentTypeMapping { get; set; }
 
         /// <summary>
         /// Gets or Sets UserMapping
         /// </summary>
-        [DataMember(Name = "userMapping", EmitDefaultValue = false)]
+        [DataMember(Name = "userMapping", EmitDefaultValue = true)]
         public GuidModel UserMapping { get; set; }
 
         /// <summary>
         /// Gets or Sets LanguageMapping
         /// </summary>
-        [DataMember(Name = "languageMapping", EmitDefaultValue = false)]
+        [DataMember(Name = "languageMapping", EmitDefaultValue = true)]
         public GuidModel LanguageMapping { get; set; }
 
         /// <summary>

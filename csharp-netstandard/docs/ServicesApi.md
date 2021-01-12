@@ -1,6 +1,6 @@
 # Cloud.Governance.Client.Api.ServicesApi
 
-All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*
+All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,8 +24,10 @@ Method | HTTP request | Description
 [**GetGroupLifecycleService**](ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 [**GetManagePermissionService**](ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
 [**GetMyServices**](ServicesApi.md#getmyservices) | **GET** /services/my | get services that can be used to start a request
+[**GetServiceId**](ServicesApi.md#getserviceid) | **GET** /services/id | get service id by service name
 [**GetSiteLifecycleService**](ServicesApi.md#getsitelifecycleservice) | **GET** /services/sitelifecycle/{id} | get site lifecycle service
 [**GetWebLifecycleService**](ServicesApi.md#getweblifecycleservice) | **GET** /services/weblifecycle/{id} | get web lifecycle service
+[**ValidateEmailForCreateGuestUserService**](ServicesApi.md#validateemailforcreateguestuserservice) | **GET** /services/createguestuser/{id}/email/validate | validate guest user email
 [**ValidateForChangeGroupSettingService**](ServicesApi.md#validateforchangegroupsettingservice) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
 [**ValidateForChangeListSettingService**](ServicesApi.md#validateforchangelistsettingservice) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
 [**ValidateForChangePermissionService**](ServicesApi.md#validateforchangepermissionservice) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
@@ -35,7 +37,7 @@ Method | HTTP request | Description
 [**ValidateForChangeWebSettingService**](ServicesApi.md#validateforchangewebsettingservice) | **POST** /services/changewebsettings/{id}/url/validation | validate permissions, scope for change web setting service
 [**ValidateForClonePermissionService**](ServicesApi.md#validateforclonepermissionservice) | **POST** /services/clonepermission/{id}/url/validation | validate permissions, scope for clone permission service
 [**ValidateForContentMoveService**](ServicesApi.md#validateforcontentmoveservice) | **POST** /services/contentmove/{id}/url/validation | validate permissions, scope for content move service
-[**ValidateForCreateGuestUserService**](ServicesApi.md#validateforcreateguestuserservice) | **POST** /services/createguestuser/{serviceid}/group/validate | validate groups can invite
+[**ValidateForCreateGuestUserService**](ServicesApi.md#validateforcreateguestuserservice) | **POST** /services/createguestuser/{id}/group/validate | validate groups can invite
 [**ValidateForCreateListService**](ServicesApi.md#validateforcreatelistservice) | **POST** /services/createlist/{id}/url/validation | validate permissions, scope for create list service
 [**ValidateForCreateWebService**](ServicesApi.md#validateforcreatewebservice) | **POST** /services/createweb/{id}/url/validation | validate permissions, scope for create web service
 [**ValidateForGrantPermissionService**](ServicesApi.md#validateforgrantpermissionservice) | **POST** /services/grantpermission/{id}/url/validation | validate permissions, scope for grant permission service
@@ -68,13 +70,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -118,7 +120,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -153,13 +155,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -203,7 +205,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -238,13 +240,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -288,7 +290,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -323,13 +325,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -373,7 +375,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -408,13 +410,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -458,7 +460,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -493,13 +495,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -543,7 +545,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -578,13 +580,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -628,7 +630,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -663,13 +665,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -713,7 +715,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -748,13 +750,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -792,7 +794,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -827,13 +829,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -877,7 +879,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -912,13 +914,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -962,7 +964,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -997,13 +999,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1047,7 +1049,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1082,13 +1084,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1132,7 +1134,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1167,13 +1169,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1217,7 +1219,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1252,13 +1254,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1302,7 +1304,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1337,13 +1339,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1387,7 +1389,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1422,13 +1424,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1472,7 +1474,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1507,13 +1509,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1557,7 +1559,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1592,13 +1594,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1642,7 +1644,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1677,13 +1679,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1725,12 +1727,95 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getserviceid"></a>
+# **GetServiceId**
+> Guid GetServiceId (string name = null)
+
+get service id by service name
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetServiceIdExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var name = name_example;  // string | service name, case insensitive (optional) 
+
+            try
+            {
+                // get service id by service name
+                Guid result = apiInstance.GetServiceId(name);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.GetServiceId: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| service name, case insensitive | [optional] 
+
+### Return type
+
+**Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | service id |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |
@@ -1760,13 +1845,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1810,7 +1895,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1845,13 +1930,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1895,7 +1980,92 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateemailforcreateguestuserservice"></a>
+# **ValidateEmailForCreateGuestUserService**
+> ObjectValidateResult ValidateEmailForCreateGuestUserService (Guid id, string email = null)
+
+validate guest user email
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateEmailForCreateGuestUserServiceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var id = new Guid(); // Guid | 
+            var email = email_example;  // string |  (optional) 
+
+            try
+            {
+                // validate guest user email
+                ObjectValidateResult result = apiInstance.ValidateEmailForCreateGuestUserService(id, email);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateEmailForCreateGuestUserService: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **email** | **string**|  | [optional] 
+
+### Return type
+
+[**ObjectValidateResult**](ObjectValidateResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1930,13 +2100,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -1979,8 +2149,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2015,13 +2185,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2064,8 +2234,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2100,13 +2270,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2149,8 +2319,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2185,13 +2355,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2234,8 +2404,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2270,13 +2440,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2319,8 +2489,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2355,13 +2525,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2404,8 +2574,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2440,13 +2610,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2489,8 +2659,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2525,13 +2695,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2574,8 +2744,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2610,13 +2780,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2659,8 +2829,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2674,7 +2844,7 @@ Name | Type | Description  | Notes
 
 <a name="validateforcreateguestuserservice"></a>
 # **ValidateForCreateGuestUserService**
-> List&lt;CreateGuestUserValidationResult&gt; ValidateForCreateGuestUserService (Guid serviceid, Guid? requestId = null, List<ApiUser> apiUser = null)
+> List&lt;CreateGuestUserValidationResult&gt; ValidateForCreateGuestUserService (Guid id, Guid? requestId = null, List<ApiUser> apiUser = null)
 
 validate groups can invite
 
@@ -2695,26 +2865,26 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new ServicesApi(config);
 
-            var serviceid = new Guid(); // Guid | 
+            var id = new Guid(); // Guid | 
             var requestId = new Guid?(); // Guid? |  (optional) 
             var apiUser = new List<ApiUser>(); // List<ApiUser> |  (optional) 
 
             try
             {
                 // validate groups can invite
-                List<CreateGuestUserValidationResult> result = apiInstance.ValidateForCreateGuestUserService(serviceid, requestId, apiUser);
+                List<CreateGuestUserValidationResult> result = apiInstance.ValidateForCreateGuestUserService(id, requestId, apiUser);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2732,7 +2902,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **serviceid** | [**Guid**](Guid.md)|  | 
+ **id** | [**Guid**](Guid.md)|  | 
  **requestId** | [**Guid?**](Guid?.md)|  | [optional] 
  **apiUser** | [**List&lt;ApiUser&gt;**](ApiUser.md)|  | [optional] 
 
@@ -2746,8 +2916,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2782,13 +2952,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2831,8 +3001,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2867,13 +3037,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -2916,8 +3086,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2952,13 +3122,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -3001,8 +3171,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3037,13 +3207,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -3086,8 +3256,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3122,13 +3292,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -3171,8 +3341,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3207,13 +3377,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -3256,8 +3426,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3292,13 +3462,13 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
@@ -3341,8 +3511,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

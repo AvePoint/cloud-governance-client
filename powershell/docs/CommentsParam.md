@@ -3,20 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Comments** | **String** |  | [optional] [default to null]
+**Comments** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCommentsParam  -Comments null
+$CommentsParam = New-Cloud.Governance.ClientCommentsParam  -Comments null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CommentsParam | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

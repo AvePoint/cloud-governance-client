@@ -3,30 +3,31 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ParentWebUrl** | **String** |  | [optional] [default to null]
-**ParentSiteUrl** | **String** |  | [optional] [default to null]
-**SitePrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**SiteSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**ParentWebUrl** | **String** |  | [optional] 
+**ParentSiteUrl** | **String** |  | [optional] 
+**SitePrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SiteSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateWebUrlValidationResult  -ParentWebUrl null `
+$CreateWebUrlValidationResult = New-Cloud.Governance.ClientCreateWebUrlValidationResult  -ParentWebUrl null `
  -ParentSiteUrl null `
  -SitePrimaryContact null `
  -SiteSecondaryContact null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateWebUrlValidationResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

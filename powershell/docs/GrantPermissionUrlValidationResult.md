@@ -3,34 +3,37 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] [default to null]
-**EnableShareAnnoymousLink** | **Boolean** |  | [optional] [default to null]
-**Object** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] [default to null]
-**SpPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] [default to null]
-**SpGroups** | [**GrantPermissionGroup[]**](GrantPermissionGroup.md) |  | [optional] [default to null]
-**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] 
+**EnableShareAnnoymousLink** | **Boolean** |  | [optional] 
+**Object** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] 
+**SpPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] 
+**SpGroups** | [**GrantPermissionGroup[]**](GrantPermissionGroup.md) |  | [optional] 
+**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] 
+**UserMetadata** | [**System.Collections.Hashtable**](UserInfo.md) |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGrantPermissionUrlValidationResult  -ExternalSharingOptions null `
+$GrantPermissionUrlValidationResult = New-Cloud.Governance.ClientGrantPermissionUrlValidationResult  -ExternalSharingOptions null `
  -EnableShareAnnoymousLink null `
  -Object null `
  -SpPermissionLevels null `
  -SpGroups null `
  -AllowBreakPermissionInheritance null `
+ -UserMetadata null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GrantPermissionUrlValidationResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **PrimaryContactAssignBy** | **AssignBy** |  | [optional] 
 **SecondaryContactAssignBy** | **AssignBy** |  | [optional] 
 **PermissionAssignBy** | **AssignBy** |  | [optional] 
+**RequestTemplate** | [**CreateWebRequest**](CreateWebRequest.md) |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 
@@ -48,6 +49,7 @@ Name | Type | Description | Notes
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 
+**Details** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

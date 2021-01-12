@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
 
 namespace Cloud.Governance.Client.Api
 {
@@ -22,8 +23,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> GetAzureAdCustomPropertyNames(Guid tenantId);
+        List<string> GetAzureAdCustomPropertyNames(Guid tenantId, bool? isSearchUserProperty = default(bool?));
 
         /// <summary>
         /// get azure ad custom property names
@@ -33,8 +35,9 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> GetAzureAdCustomPropertyNamesWithHttpInfo(Guid tenantId);
+        ApiResponse<List<string>> GetAzureAdCustomPropertyNamesWithHttpInfo(Guid tenantId, bool? isSearchUserProperty = default(bool?));
         /// <summary>
         /// get tenant ids by url
         /// </summary>
@@ -70,9 +73,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> GetAzureAdCustomPropertyNamesAsync(Guid tenantId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<string>> GetAzureAdCustomPropertyNamesAsync(Guid tenantId, bool? isSearchUserProperty = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get azure ad custom property names
@@ -82,9 +86,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAzureAdCustomPropertyNamesWithHttpInfoAsync(Guid tenantId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> GetAzureAdCustomPropertyNamesWithHttpInfoAsync(Guid tenantId, bool? isSearchUserProperty = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get tenant ids by url
         /// </summary>
@@ -233,10 +238,11 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> GetAzureAdCustomPropertyNames(Guid tenantId)
+        public List<string> GetAzureAdCustomPropertyNames(Guid tenantId, bool? isSearchUserProperty = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<string>> localVarResponse = GetAzureAdCustomPropertyNamesWithHttpInfo(tenantId);
+            Cloud.Governance.Client.Client.ApiResponse<List<string>> localVarResponse = GetAzureAdCustomPropertyNamesWithHttpInfo(tenantId, isSearchUserProperty);
             return localVarResponse.Data;
         }
 
@@ -245,8 +251,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<string>> GetAzureAdCustomPropertyNamesWithHttpInfo(Guid tenantId)
+        public Cloud.Governance.Client.Client.ApiResponse<List<string>> GetAzureAdCustomPropertyNamesWithHttpInfo(Guid tenantId, bool? isSearchUserProperty = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -256,8 +263,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -267,6 +273,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("tenantId", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantId)); // path parameter
+            if (isSearchUserProperty != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isSearchUserProperty", isSearchUserProperty));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -296,11 +306,12 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> GetAzureAdCustomPropertyNamesAsync(Guid tenantId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<string>> GetAzureAdCustomPropertyNamesAsync(Guid tenantId, bool? isSearchUserProperty = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<string>> localVarResponse = await GetAzureAdCustomPropertyNamesWithHttpInfoAsync(tenantId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<string>> localVarResponse = await GetAzureAdCustomPropertyNamesWithHttpInfoAsync(tenantId, isSearchUserProperty, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -309,9 +320,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tenantId"></param>
+        /// <param name="isSearchUserProperty"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<string>>> GetAzureAdCustomPropertyNamesWithHttpInfoAsync(Guid tenantId, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<string>>> GetAzureAdCustomPropertyNamesWithHttpInfoAsync(Guid tenantId, bool? isSearchUserProperty = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -322,8 +334,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -334,6 +345,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("tenantId", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(tenantId)); // path parameter
+            if (isSearchUserProperty != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isSearchUserProperty", isSearchUserProperty));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -389,6 +404,7 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -455,6 +471,7 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 

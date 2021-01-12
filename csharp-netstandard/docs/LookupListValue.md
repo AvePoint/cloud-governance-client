@@ -3,6 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ColumnType** | **string** |  | [optional] 
+**ColumnName** | **string** |  | [optional] 
 **Value** | **string** |  | [optional] 
 **DisplayValue** | **string** |  | [optional] 
 

@@ -1,40 +1,32 @@
-# Cloud.Governance.Client.Cloud.Governance.Client\Api.Office365Api
+# Office365Api
 
-All URIs are relative to *https://API_BASE_URL*
+All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Get-GroupInfo**](Office365Api.md#Get-GroupInfo) | **GET** /office365/groups/{tenantid}/{id} | get group information
-[**Get-GroupMembers**](Office365Api.md#Get-GroupMembers) | **GET** /office365/groups/{email}/members | get group members by group email
-[**Get-GroupMembersByGroupName**](Office365Api.md#Get-GroupMembersByGroupName) | **GET** /office365/groups/members | get group members by group name
-[**Get-GroupOwners**](Office365Api.md#Get-GroupOwners) | **GET** /office365/groups/{email}/owners | get group owners by group email
-[**Get-HubSites**](Office365Api.md#Get-HubSites) | **GET** /office365/hubsites/{tenantid} | get all hubsites from a specific tenant
-[**Get-HubSitesFromTenantOfSite**](Office365Api.md#Get-HubSitesFromTenantOfSite) | **GET** /office365/hubsites | get all hubsites from site&#39;s tenant
+[**New-ACGSecurityGroup**](Office365Api.md#new-acgsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
+[**Get-GroupAllMembersByGroupValue**](Office365Api.md#Get-GroupAllMembersByGroupValue) | **GET** /office365/groups/allmembers | get group members by group email
+[**Get-ACGGroupMembers**](Office365Api.md#get-acggroupmembers) | **GET** /office365/groups/{email}/members | get group members by group email
+[**Get-ACGGroupOwners**](Office365Api.md#get-acggroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
+[**Get-HubSitesByUrl**](Office365Api.md#Get-HubSitesByUrl) | **GET** /office365/hubsites | get all hubsites from site&#39;s tenant
 [**Get-OwnedTeams**](Office365Api.md#Get-OwnedTeams) | **GET** /office365/teams/my | get all teams that owner is curernt user
-[**Get-Permissions**](Office365Api.md#Get-Permissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
-[**Get-RoleAssignment**](Office365Api.md#Get-RoleAssignment) | **GET** /office365/roleassignment | get site permimssion role assignment
-[**Get-SiteDesigns**](Office365Api.md#Get-SiteDesigns) | **GET** /office365/sitedesigns | get site designs by site url
-[**Get-SiteInfo**](Office365Api.md#Get-SiteInfo) | **GET** /office365/sites | get site collection information with url
+[**Get-ACGPermissions**](Office365Api.md#get-acgpermissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
+[**Get-ACGRoleAssignment**](Office365Api.md#get-acgroleassignment) | **GET** /office365/roleassignment | get site permimssion role assignment
+[**Get-ACGSiteDesigns**](Office365Api.md#get-acgsitedesigns) | **GET** /office365/sitedesigns | get site designs by site url
 [**Get-SitePermissionLevels**](Office365Api.md#Get-SitePermissionLevels) | **GET** /office365/sites/permissionlevels | get site permission levels
 [**Get-SiteSharePointGroups**](Office365Api.md#Get-SiteSharePointGroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
-[**Get-SiteTemplates**](Office365Api.md#Get-SiteTemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
-[**Get-YammerGroup**](Office365Api.md#Get-YammerGroup) | **GET** /office365/yammergroup/{networkid}/{name} | get yammer group
-[**Invoke-LoadContainers**](Office365Api.md#Invoke-LoadContainers) | **GET** /office365/containers/{serviceid} | load the containers from cloud management
-[**Invoke-LoadFolders**](Office365Api.md#Invoke-LoadFolders) | **GET** /office365/folders/{listid} | load sharepoint folders
-[**Invoke-LoadItems**](Office365Api.md#Invoke-LoadItems) | **GET** /office365/items/{listid} | load sharepoint items
-[**Invoke-LoadLists**](Office365Api.md#Invoke-LoadLists) | **GET** /office365/lists | load sharepoint lists
-[**Invoke-LoadManagedMetadata**](Office365Api.md#Invoke-LoadManagedMetadata) | **GET** /office365/managedmetadata/{termStoreid}/{groupid}/{termsetid}/{parentid} | load managed metadata terms
-[**Invoke-LoadManagedSites**](Office365Api.md#Invoke-LoadManagedSites) | **GET** /office365/managedsites/{serviceid}/{containerid}/{isselected} | load sharepoint sites
-[**Invoke-LoadWebs**](Office365Api.md#Invoke-LoadWebs) | **GET** /office365/webs/{serviceid}/{siteorwebid}/{isselected}/{issite} | load sharepoint webs
+[**Get-ACGSiteStatus**](Office365Api.md#get-acgsitestatus) | **GET** /office365/sites/status | check site collection status by full url
+[**Get-ACGSiteTemplates**](Office365Api.md#get-acgsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
+[**Invoke-HasPermission**](Office365Api.md#Invoke-HasPermission) | **GET** /office365/sites/haspermission | whether user has permission on the site
+[**Remove-ACGSecurityGroup**](Office365Api.md#remove-acgsecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 
 
-<a name="Get-GroupInfo"></a>
-# **Get-GroupInfo**
-> AzureADGroup Get-GroupInfo<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tenantid] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+<a name="new-acgsecuritygroup"></a>
+# **New-ACGSecurityGroup**
+> void New-ACGSecurityGroup<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupSettingModel] <PSCustomObject><br>
 
-get group information
+Create mail-enabled security group
 
 ### Example
 ```powershell
@@ -42,31 +34,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Tenantid = "Tenantid_example" # String |  (default to null)
-$Id = "Id_example" # String |  (default to null)
+$GroupSettingModel = (Initialize-GroupSettingModel-GroupName "GroupName_example" -GroupDescription "GroupDescription_example" -GroupEmailAddress "GroupEmailAddress_example" -Owners "Owners_example" -Members "Members_example" -GroupDuration 123 -EmailSubject "EmailSubject_example" -EmailBody "EmailBody_example") # GroupSettingModel |  (optional)
 
-# get group information
+# Create mail-enabled security group
 try {
-    $Result = Get-GroupInfo -Tenantid $Tenantid -Id $Id
+     $Result = New-ACGSecurityGroup -GroupSettingModel $GroupSettingModel
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling New-ACGSecurityGroup: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -74,27 +62,96 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Tenantid** | **String**|  | [default to null]
- **Id** | **String**|  | [default to null]
+ **GroupSettingModel** | [**GroupSettingModel**](GroupSettingModel.md)|  | [optional] 
 
 ### Return type
-
-[**AzureADGroup**](AzureADGroup.md)
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupAllMembersByGroupValue"></a>
+# **Get-GroupAllMembersByGroupValue**
+> ApiUserPageResult Get-GroupAllMembersByGroupValue<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ObjectIdOrNameOrEmail] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
+
+get group members by group email
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Cloud.Governance.ClientConfiguration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$ObjectIdOrNameOrEmail = "ObjectIdOrNameOrEmail_example" # String | 
+$TenantId = "TenantId_example" # String | 
+$Top = 987 # Int32 |  (optional)
+$Skip = 987 # Int32 |  (optional)
+$Search = "Search_example" # String |  (optional)
+
+# get group members by group email
+try {
+     $Result = Get-GroupAllMembersByGroupValue -ObjectIdOrNameOrEmail $ObjectIdOrNameOrEmail -TenantId $TenantId -Top $Top -Skip $Skip -Search $Search
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupAllMembersByGroupValue: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ObjectIdOrNameOrEmail** | **String**|  | 
+ **TenantId** | **String**|  | 
+ **Top** | **Int32**|  | [optional] 
+ **Skip** | **Int32**|  | [optional] 
+ **Search** | **String**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApiUserPageResult**](ApiUserPageResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-GroupMembers"></a>
-# **Get-GroupMembers**
-> ApiUserPageResult Get-GroupMembers<br>
+<a name="get-acggroupmembers"></a>
+# **Get-ACGGroupMembers**
+> ApiUserPageResult Get-ACGGroupMembers<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Email] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
@@ -108,33 +165,30 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Email = "Email_example" # String |  (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
+$Email = "Email_example" # String | 
+$Top = 987 # Int32 |  (optional)
+$Skip = 987 # Int32 |  (optional)
+$Search = "Search_example" # String |  (optional)
 
 # get group members by group email
 try {
-    $Result = Get-GroupMembers -Email $Email -Top $Top -Skip $Skip -Search $Search
+     $Result = Get-ACGGroupMembers -Email $Email -Top $Top -Skip $Skip -Search $Search
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ACGGroupMembers: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -142,102 +196,29 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Email** | **String**|  | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
+ **Email** | **String**|  | 
+ **Top** | **Int32**|  | [optional] 
+ **Skip** | **Int32**|  | [optional] 
+ **Search** | **String**|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApiUserPageResult**](ApiUserPageResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-GroupMembersByGroupName"></a>
-# **Get-GroupMembersByGroupName**
-> ApiUserPageResult Get-GroupMembersByGroupName<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Url] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Name] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-get group members by group name
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Url = "Url_example" # String |  (default to null)
-$Name = "Name_example" # String |  (optional) (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# get group members by group name
-try {
-    $Result = Get-GroupMembersByGroupName -Url $Url -Name $Name -Top $Top -Skip $Skip -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Url** | **String**|  | [default to null]
- **Name** | **String**|  | [optional] [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**ApiUserPageResult**](ApiUserPageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-GroupOwners"></a>
-# **Get-GroupOwners**
-> ApiUserPageResult Get-GroupOwners<br>
+<a name="get-acggroupowners"></a>
+# **Get-ACGGroupOwners**
+> ApiUserPageResult Get-ACGGroupOwners<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Email] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
@@ -251,33 +232,30 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Email = "Email_example" # String |  (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
+$Email = "Email_example" # String | 
+$Top = 987 # Int32 |  (optional)
+$Skip = 987 # Int32 |  (optional)
+$Search = "Search_example" # String |  (optional)
 
 # get group owners by group email
 try {
-    $Result = Get-GroupOwners -Email $Email -Top $Top -Skip $Skip -Search $Search
+     $Result = Get-ACGGroupOwners -Email $Email -Top $Top -Skip $Skip -Search $Search
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ACGGroupOwners: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -285,91 +263,30 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Email** | **String**|  | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
+ **Email** | **String**|  | 
+ **Top** | **Int32**|  | [optional] 
+ **Skip** | **Int32**|  | [optional] 
+ **Search** | **String**|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApiUserPageResult**](ApiUserPageResult.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-HubSites"></a>
-# **Get-HubSites**
-> GuidModel[] Get-HubSites<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tenantid] <PSCustomObject><br>
-
-get all hubsites from a specific tenant
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Tenantid = TODO # UUID |  (default to null)
-
-# get all hubsites from a specific tenant
-try {
-    $Result = Get-HubSites -Tenantid $Tenantid
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Tenantid** | [**UUID**](UUID.md)|  | [default to null]
-
-### Return type
-
-[**GuidModel[]**](GuidModel.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-HubSitesFromTenantOfSite"></a>
-# **Get-HubSitesFromTenantOfSite**
-> GuidModel[] Get-HubSitesFromTenantOfSite<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrl] <URI><br>
+<a name="Get-HubSitesByUrl"></a>
+# **Get-HubSitesByUrl**
+> GuidModel[] Get-HubSitesByUrl<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrl] <String><br>
 
 get all hubsites from site's tenant
 
@@ -379,30 +296,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$SiteUrl = TODO # URI | any site url in your tenant (optional) (default to null)
+$SiteUrl = "SiteUrl_example" # String | any site url in your tenant (optional)
 
 # get all hubsites from site's tenant
 try {
-    $Result = Get-HubSitesFromTenantOfSite -SiteUrl $SiteUrl
+     $Result = Get-HubSitesByUrl -SiteUrl $SiteUrl
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-HubSitesByUrl: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -410,20 +324,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **SiteUrl** | **URI**| any site url in your tenant | [optional] [default to null]
+ **SiteUrl** | **String**| any site url in your tenant | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**GuidModel[]**](GuidModel.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -439,29 +353,26 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
 
 # get all teams that owner is curernt user
 try {
-    $Result = Get-OwnedTeams
+     $Result = Get-OwnedTeams
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-OwnedTeams: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -469,23 +380,23 @@ try {
 This endpoint does not need any parameter.
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**GuidModel[]**](GuidModel.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-Permissions"></a>
-# **Get-Permissions**
-> UserGroupPermissions Get-Permissions<br>
+<a name="get-acgpermissions"></a>
+# **Get-ACGPermissions**
+> UserGroupPermissions Get-ACGPermissions<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WebUrl] <String><br>
 
 get web permissions for creating list request by web url
@@ -496,30 +407,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WebUrl = "WebUrl_example" # String |  (default to null)
+$WebUrl = "WebUrl_example" # String | 
 
 # get web permissions for creating list request by web url
 try {
-    $Result = Get-Permissions -WebUrl $WebUrl
+     $Result = Get-ACGPermissions -WebUrl $WebUrl
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ACGPermissions: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -527,27 +435,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **WebUrl** | **String**|  | [default to null]
+ **WebUrl** | **String**|  | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**UserGroupPermissions**](UserGroupPermissions.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-RoleAssignment"></a>
-# **Get-RoleAssignment**
-> SPRoleAssignment[] Get-RoleAssignment<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Url] <URI><br>
+<a name="get-acgroleassignment"></a>
+# **Get-ACGRoleAssignment**
+> SPRoleAssignment[] Get-ACGRoleAssignment<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Url] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
 
 get site permimssion role assignment
@@ -558,31 +466,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Url = TODO # URI |  (default to null)
-$Type = (New-NodeType) # NodeType |  (default to null)
+$Url = "Url_example" # String | 
+$Type = (Initialize-NodeType) # NodeType | 
 
 # get site permimssion role assignment
 try {
-    $Result = Get-RoleAssignment -Url $Url -Type $Type
+     $Result = Get-ACGRoleAssignment -Url $Url -Type $Type
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ACGRoleAssignment: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -590,28 +495,28 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Url** | **URI**|  | [default to null]
- **Type** | [**NodeType**](NodeType.md)|  | [default to null]
+ **Url** | **String**|  | 
+ **Type** | [**NodeType**](NodeType.md)|  | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SPRoleAssignment[]**](SPRoleAssignment.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-SiteDesigns"></a>
-# **Get-SiteDesigns**
-> StringModel[] Get-SiteDesigns<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrl] <URI><br>
+<a name="get-acgsitedesigns"></a>
+# **Get-ACGSiteDesigns**
+> StringModel[] Get-ACGSiteDesigns<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrl] <String><br>
 
 get site designs by site url
 
@@ -621,30 +526,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$SiteUrl = TODO # URI |  (optional) (default to null)
+$SiteUrl = "SiteUrl_example" # String |  (optional)
 
 # get site designs by site url
 try {
-    $Result = Get-SiteDesigns -SiteUrl $SiteUrl
+     $Result = Get-ACGSiteDesigns -SiteUrl $SiteUrl
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ACGSiteDesigns: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -652,88 +554,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **SiteUrl** | **URI**|  | [optional] [default to null]
+ **SiteUrl** | **String**|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**StringModel[]**](StringModel.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Get-SiteInfo"></a>
-# **Get-SiteInfo**
-> SiteInfo Get-SiteInfo<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FullUrl] <URI><br>
-
-get site collection information with url
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$FullUrl = TODO # URI |  (default to null)
-
-# get site collection information with url
-try {
-    $Result = Get-SiteInfo -FullUrl $FullUrl
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **FullUrl** | **URI**|  | [default to null]
-
-### Return type
-
-[**SiteInfo**](SiteInfo.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Get-SitePermissionLevels"></a>
 # **Get-SitePermissionLevels**
 > PermissionLevel[] Get-SitePermissionLevels<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Uri] <URI><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Uri] <String><br>
 
 get site permission levels
 
@@ -743,30 +584,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Uri = TODO # URI |  (default to null)
+$Uri = "Uri_example" # String | 
 
 # get site permission levels
 try {
-    $Result = Get-SitePermissionLevels -Uri $Uri
+     $Result = Get-SitePermissionLevels -Uri $Uri
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-SitePermissionLevels: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -774,27 +612,27 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Uri** | **URI**|  | [default to null]
+ **Uri** | **String**|  | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**PermissionLevel[]**](PermissionLevel.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Get-SiteSharePointGroups"></a>
 # **Get-SiteSharePointGroups**
 > SPGroup[] Get-SiteSharePointGroups<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Uri] <URI><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Uri] <String><br>
 
 get site sharePoint groups
 
@@ -804,30 +642,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Uri = TODO # URI |  (default to null)
+$Uri = "Uri_example" # String | 
 
 # get site sharePoint groups
 try {
-    $Result = Get-SiteSharePointGroups -Uri $Uri
+     $Result = Get-SiteSharePointGroups -Uri $Uri
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-SiteSharePointGroups: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -835,28 +670,86 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Uri** | **URI**|  | [default to null]
+ **Uri** | **String**|  | 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SPGroup[]**](SPGroup.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-SiteTemplates"></a>
-# **Get-SiteTemplates**
-> SiteTemplate[] Get-SiteTemplates<br>
+<a name="get-acgsitestatus"></a>
+# **Get-ACGSiteStatus**
+> ApiSiteStatus Get-ACGSiteStatus<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FullUrl] <String><br>
+
+check site collection status by full url
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Cloud.Governance.ClientConfiguration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$FullUrl = "FullUrl_example" # String | 
+
+# check site collection status by full url
+try {
+     $Result = Get-ACGSiteStatus -FullUrl $FullUrl
+} catch {
+    Write-Host ("Exception occured when calling Get-ACGSiteStatus: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **FullUrl** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ApiSiteStatus**](ApiSiteStatus.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="get-acgsitetemplates"></a>
+# **Get-ACGSiteTemplates**
+> SiteTemplate[] Get-ACGSiteTemplates<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Languageid] <Int32><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Url] <URI><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Url] <String><br>
 
 get site templates with language code identifier
 
@@ -866,31 +759,28 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Languageid = 987 # Int32 |  (default to null)
-$Url = TODO # URI |  (optional) (default to null)
+$Languageid = 987 # Int32 | 
+$Url = "Url_example" # String |  (optional)
 
 # get site templates with language code identifier
 try {
-    $Result = Get-SiteTemplates -Languageid $Languageid -Url $Url
+     $Result = Get-ACGSiteTemplates -Languageid $Languageid -Url $Url
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Get-ACGSiteTemplates: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -898,31 +788,91 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Languageid** | **Int32**|  | [default to null]
- **Url** | **URI**|  | [optional] [default to null]
+ **Languageid** | **Int32**|  | 
+ **Url** | **String**|  | [optional] 
 
 ### Return type
-
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SiteTemplate[]**](SiteTemplate.md)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Get-YammerGroup"></a>
-# **Get-YammerGroup**
-> YammerGroup Get-YammerGroup<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Networkid] <String><br>
+<a name="Invoke-HasPermission"></a>
+# **Invoke-HasPermission**
+> Boolean Invoke-HasPermission<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Siteurl] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Currentuser] <String><br>
+
+whether user has permission on the site
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Cloud.Governance.ClientConfiguration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Siteurl = "Siteurl_example" # String |  (optional)
+$Currentuser = "Currentuser_example" # String |  (optional)
+
+# whether user has permission on the site
+try {
+     $Result = Invoke-HasPermission -Siteurl $Siteurl -Currentuser $Currentuser
+} catch {
+    Write-Host ("Exception occured when calling Invoke-HasPermission: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Siteurl** | **String**|  | [optional] 
+ **Currentuser** | **String**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+**Boolean**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="remove-acgsecuritygroup"></a>
+# **Remove-ACGSecurityGroup**
+> void Remove-ACGSecurityGroup<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Name] <String><br>
 
-get yammer group
+Remove mail-enabled security group by group name
 
 ### Example
 ```powershell
@@ -930,31 +880,27 @@ Import-Module -Name Cloud.Governance.Client
 
 $Configuration = Get-Cloud.Governance.ClientConfiguration
 
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
 
-# Configure API key authorization: ClientId
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Networkid = "Networkid_example" # String |  (default to null)
-$Name = "Name_example" # String |  (default to null)
+$Name = "Name_example" # String | group email address
 
-# get yammer group
+# Remove mail-enabled security group by group name
 try {
-    $Result = Get-YammerGroup -Networkid $Networkid -Name $Name
+     $Result = Remove-ACGSecurityGroup -Name $Name
 } catch {
-    
-    Write-Host ($_.Exception)
+    Write-Host ("Exception occured when calling Remove-ACGSecurityGroup: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
 
@@ -962,547 +908,20 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Networkid** | **String**|  | [default to null]
- **Name** | **String**|  | [default to null]
+ **Name** | **String**| group email address | 
 
 ### Return type
-
-[**YammerGroup**](YammerGroup.md)
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
 
 ### Authorization
 
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-LoadContainers"></a>
-# **Invoke-LoadContainers**
-> SPNodePageResult Invoke-LoadContainers<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Serviceid] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-load the containers from cloud management
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Serviceid = "Serviceid_example" # String | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# load the containers from cloud management
-try {
-    $Result = Invoke-LoadContainers -Serviceid $Serviceid -Top $Top -Skip $Skip -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Serviceid** | **String**| If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-LoadFolders"></a>
-# **Invoke-LoadFolders**
-> SPNodePageResult Invoke-LoadFolders<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Listid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Folderorlisturl] <URI><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-load sharepoint folders
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Listid = TODO # UUID |  (default to null)
-$Folderorlisturl = TODO # URI |  (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# load sharepoint folders
-try {
-    $Result = Invoke-LoadFolders -Listid $Listid -Folderorlisturl $Folderorlisturl -Top $Top -Skip $Skip -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Listid** | [**UUID**](UUID.md)|  | [default to null]
- **Folderorlisturl** | **URI**|  | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-LoadItems"></a>
-# **Invoke-LoadItems**
-> SPNodePageResult Invoke-LoadItems<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Listid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Folderorlisturl] <URI><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-load sharepoint items
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Listid = TODO # UUID |  (default to null)
-$Folderorlisturl = TODO # URI |  (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# load sharepoint items
-try {
-    $Result = Invoke-LoadItems -Listid $Listid -Folderorlisturl $Folderorlisturl -Top $Top -Skip $Skip -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Listid** | [**UUID**](UUID.md)|  | [default to null]
- **Folderorlisturl** | **URI**|  | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-LoadLists"></a>
-# **Invoke-LoadLists**
-> SPNodePageResult Invoke-LoadLists<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Siteorweburl] <URI><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-load sharepoint lists
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Siteorweburl = TODO # URI |  (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# load sharepoint lists
-try {
-    $Result = Invoke-LoadLists -Siteorweburl $Siteorweburl -Top $Top -Skip $Skip -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Siteorweburl** | **URI**|  | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-LoadManagedMetadata"></a>
-# **Invoke-LoadManagedMetadata**
-> ApiTermInfoPageResult Invoke-LoadManagedMetadata<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TermStoreid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Groupid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Termsetid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Parentid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Admincenterurl] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-load managed metadata terms
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$TermStoreid = TODO # UUID |  (default to null)
-$Groupid = TODO # UUID |  (default to null)
-$Termsetid = TODO # UUID |  (default to null)
-$Parentid = TODO # UUID |  (default to null)
-$Admincenterurl = "Admincenterurl_example" # String |  (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# load managed metadata terms
-try {
-    $Result = Invoke-LoadManagedMetadata -TermStoreid $TermStoreid -Groupid $Groupid -Termsetid $Termsetid -Parentid $Parentid -Admincenterurl $Admincenterurl -Skip $Skip -Top $Top -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **TermStoreid** | [**UUID**](UUID.md)|  | [default to null]
- **Groupid** | [**UUID**](UUID.md)|  | [default to null]
- **Termsetid** | [**UUID**](UUID.md)|  | [default to null]
- **Parentid** | [**UUID**](UUID.md)|  | [default to null]
- **Admincenterurl** | **String**|  | [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**ApiTermInfoPageResult**](ApiTermInfoPageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-LoadManagedSites"></a>
-# **Invoke-LoadManagedSites**
-> SPNodePageResult Invoke-LoadManagedSites<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Serviceid] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Containerid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Isselected] <Boolean><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-load sharepoint sites
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Serviceid = "Serviceid_example" # String | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree (default to null)
-$Containerid = TODO # UUID |  (default to null)
-$Isselected = true # Boolean |  (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# load sharepoint sites
-try {
-    $Result = Invoke-LoadManagedSites -Serviceid $Serviceid -Containerid $Containerid -Isselected $Isselected -Top $Top -Skip $Skip -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Serviceid** | **String**| If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree | [default to null]
- **Containerid** | [**UUID**](UUID.md)|  | [default to null]
- **Isselected** | **Boolean**|  | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="Invoke-LoadWebs"></a>
-# **Invoke-LoadWebs**
-> SPNodePageResult Invoke-LoadWebs<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Serviceid] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Siteorwebid] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Isselected] <Boolean><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Issite] <Boolean><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteOrWebUrl] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-
-load sharepoint webs
-
-### Example
-```powershell
-Import-Module -Name Cloud.Governance.Client
-
-$Configuration = Get-Cloud.Governance.ClientConfiguration
-
-$Configuration["BaseUrl"] = "https://API_BASE_URL"
-
-# Configure API key authorization: ClientId
-
-$Configuration["ApiKey"]["clientId"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: ClientSecret
-$Configuration["ApiKey"]["clientSecret"] = "YOUR_API_KEY"
-
-
-# Configure API key authorization: UserPrincipalName
-$Configuration["ApiKey"]["userPrincipalName"] = "YOUR_API_KEY"
-
-
-
-$Serviceid = "Serviceid_example" # String | If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree (default to null)
-$Siteorwebid = TODO # UUID |  (default to null)
-$Isselected = true # Boolean |  (default to null)
-$Issite = true # Boolean |  (default to null)
-$SiteOrWebUrl = "SiteOrWebUrl_example" # String |  (default to null)
-$Top = 987 # Int32 |  (optional) (default to null)
-$Skip = 987 # Int32 |  (optional) (default to null)
-$Search = "Search_example" # String |  (optional) (default to null)
-
-# load sharepoint webs
-try {
-    $Result = Invoke-LoadWebs -Serviceid $Serviceid -Siteorwebid $Siteorwebid -Isselected $Isselected -Issite $Issite -SiteOrWebUrl $SiteOrWebUrl -Top $Top -Skip $Skip -Search $Search
-} catch {
-    
-    Write-Host ($_.Exception)
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Serviceid** | **String**| If the service is content manager, you need use Serviceid_Source or Serviceid_Destination to load the source or destination tree | [default to null]
- **Siteorwebid** | [**UUID**](UUID.md)|  | [default to null]
- **Isselected** | **Boolean**|  | [default to null]
- **Issite** | **Boolean**|  | [default to null]
- **SiteOrWebUrl** | **String**|  | [default to null]
- **Top** | **Int32**|  | [optional] [default to null]
- **Skip** | **Int32**|  | [optional] [default to null]
- **Search** | **String**|  | [optional] [default to null]
-
-### Return type
-
-[**SPNodePageResult**](SPNodePageResult.md)
-
-### Authorization
-
-[ClientId](../README.md#ClientId), [ClientSecret](../README.md#ClientSecret), [UserPrincipalName](../README.md#UserPrincipalName)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

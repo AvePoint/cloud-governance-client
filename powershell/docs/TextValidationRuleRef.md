@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Expression** | **String** |  | [optional] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Expression** | **String** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTextValidationRuleRef  -Id null `
+$TextValidationRuleRef = New-Cloud.Governance.ClientTextValidationRuleRef  -Id null `
  -Name null `
  -Expression null `
  -ErrorMessage null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TextValidationRuleRef | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

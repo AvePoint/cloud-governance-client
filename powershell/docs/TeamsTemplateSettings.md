@@ -3,22 +3,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableCreateTeamFromScratch** | **Boolean** |  | [optional] [default to null]
-**EnableCreateTeamFromExistTeam** | **Boolean** |  | [optional] [default to null]
-**SelectedTemplate** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
-**EnableCloneChannels** | **Boolean** |  | [optional] [default to null]
-**EnableCloneApps** | **Boolean** |  | [optional] [default to null]
-**EnableCloneTabs** | **Boolean** |  | [optional] [default to null]
-**EnableCloneMembers** | **Boolean** |  | [optional] [default to null]
-**EnableCloneTeamSetting** | **Boolean** |  | [optional] [default to null]
-**EnableCloneTeamPrivacy** | **Boolean** |  | [optional] [default to null]
-**EnableCloneTeamClassification** | **Boolean** |  | [optional] [default to null]
+**EnableCreateTeamFromScratch** | **Boolean** |  | [optional] 
+**EnableCreateTeamFromExistTeam** | **Boolean** |  | [optional] 
+**SelectedTemplate** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**EnableCloneChannels** | **Boolean** |  | [optional] 
+**EnableCloneApps** | **Boolean** |  | [optional] 
+**EnableCloneTabs** | **Boolean** |  | [optional] 
+**EnableCloneMembers** | **Boolean** |  | [optional] 
+**EnableCloneTeamSetting** | **Boolean** |  | [optional] 
+**EnableCloneTeamPrivacy** | **Boolean** |  | [optional] 
+**EnableCloneTeamClassification** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTeamsTemplateSettings  -EnableCreateTeamFromScratch null `
+$TeamsTemplateSettings = New-Cloud.Governance.ClientTeamsTemplateSettings  -EnableCreateTeamFromScratch null `
  -EnableCreateTeamFromExistTeam null `
  -SelectedTemplate null `
  -EnableCloneChannels null `
@@ -30,11 +30,10 @@ New-Cloud.Governance.ClientTeamsTemplateSettings  -EnableCreateTeamFromScratch n
  -EnableCloneTeamClassification null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TeamsTemplateSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

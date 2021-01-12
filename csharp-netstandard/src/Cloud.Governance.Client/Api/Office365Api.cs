@@ -40,6 +40,32 @@ namespace Cloud.Governance.Client.Api
         /// get group members by group email
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <returns>ApiUserPageResult</returns>
+        ApiUserPageResult GetGroupAllMembersByGroupValue(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string));
+
+        /// <summary>
+        /// get group members by group email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <returns>ApiResponse of ApiUserPageResult</returns>
+        ApiResponse<ApiUserPageResult> GetGroupAllMembersByGroupValueWithHttpInfo(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string));
+        /// <summary>
+        /// get group members by group email
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
         /// <param name="top"> (optional)</param>
         /// <param name="skip"> (optional)</param>
@@ -90,7 +116,7 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <returns>List&lt;GuidModel&gt;</returns>
-        List<GuidModel> GetHubSitesFromTenantOfSite(string siteUrl = default(string));
+        List<GuidModel> GetHubSitesByUrl(string siteUrl = default(string));
 
         /// <summary>
         /// get all hubsites from site&#39;s tenant
@@ -101,7 +127,7 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <returns>ApiResponse of List&lt;GuidModel&gt;</returns>
-        ApiResponse<List<GuidModel>> GetHubSitesFromTenantOfSiteWithHttpInfo(string siteUrl = default(string));
+        ApiResponse<List<GuidModel>> GetHubSitesByUrlWithHttpInfo(string siteUrl = default(string));
         /// <summary>
         /// get all teams that owner is curernt user
         /// </summary>
@@ -249,6 +275,26 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;SiteTemplate&gt;</returns>
         ApiResponse<List<SiteTemplate>> GetSiteTemplatesWithHttpInfo(int languageid, string url = default(string));
         /// <summary>
+        /// whether user has permission on the site
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <returns>bool</returns>
+        bool HasPermission(string siteurl = default(string), string currentuser = default(string));
+
+        /// <summary>
+        /// whether user has permission on the site
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <returns>ApiResponse of bool</returns>
+        ApiResponse<bool> HasPermissionWithHttpInfo(string siteurl = default(string), string currentuser = default(string));
+        /// <summary>
         /// Remove mail-enabled security group by group name
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -298,6 +344,37 @@ namespace Cloud.Governance.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateSecurityGroupWithHttpInfoAsync(GroupSettingModel groupSettingModel = default(GroupSettingModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// get group members by group email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiUserPageResult</returns>
+        System.Threading.Tasks.Task<ApiUserPageResult> GetGroupAllMembersByGroupValueAsync(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get group members by group email
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiUserPageResult>> GetGroupAllMembersByGroupValueWithHttpInfoAsync(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get group members by group email
         /// </summary>
@@ -366,7 +443,7 @@ namespace Cloud.Governance.Client.Api
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GuidModel&gt;</returns>
-        System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesFromTenantOfSiteAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesByUrlAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get all hubsites from site&#39;s tenant
@@ -378,7 +455,7 @@ namespace Cloud.Governance.Client.Api
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GuidModel&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<GuidModel>>> GetHubSitesFromTenantOfSiteWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<GuidModel>>> GetHubSitesByUrlWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get all teams that owner is curernt user
         /// </summary>
@@ -566,6 +643,31 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;SiteTemplate&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<SiteTemplate>>> GetSiteTemplatesWithHttpInfoAsync(int languageid, string url = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// whether user has permission on the site
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of bool</returns>
+        System.Threading.Tasks.Task<bool> HasPermissionAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// whether user has permission on the site
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (bool)</returns>
+        System.Threading.Tasks.Task<ApiResponse<bool>> HasPermissionWithHttpInfoAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// Remove mail-enabled security group by group name
         /// </summary>
         /// <remarks>
@@ -730,14 +832,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -796,14 +896,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 
@@ -833,6 +931,193 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateSecurityGroup", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get group members by group email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <returns>ApiUserPageResult</returns>
+        public ApiUserPageResult GetGroupAllMembersByGroupValue(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult> localVarResponse = GetGroupAllMembersByGroupValueWithHttpInfo(objectIdOrNameOrEmail, tenantId, top, skip, search);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get group members by group email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <returns>ApiResponse of ApiUserPageResult</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult> GetGroupAllMembersByGroupValueWithHttpInfo(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string))
+        {
+            // verify the required parameter 'objectIdOrNameOrEmail' is set
+            if (objectIdOrNameOrEmail == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'objectIdOrNameOrEmail' when calling Office365Api->GetGroupAllMembersByGroupValue");
+
+            // verify the required parameter 'tenantId' is set
+            if (tenantId == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantId' when calling Office365Api->GetGroupAllMembersByGroupValue");
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "objectIdOrNameOrEmail", objectIdOrNameOrEmail));
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "tenantId", tenantId));
+            if (top != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "top", top));
+            }
+            if (skip != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "skip", skip));
+            }
+            if (search != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "search", search));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ApiUserPageResult>("/office365/groups/allmembers", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetGroupAllMembersByGroupValue", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get group members by group email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiUserPageResult</returns>
+        public async System.Threading.Tasks.Task<ApiUserPageResult> GetGroupAllMembersByGroupValueAsync(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult> localVarResponse = await GetGroupAllMembersByGroupValueWithHttpInfoAsync(objectIdOrNameOrEmail, tenantId, top, skip, search, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get group members by group email 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="objectIdOrNameOrEmail"></param>
+        /// <param name="tenantId"></param>
+        /// <param name="top"> (optional)</param>
+        /// <param name="skip"> (optional)</param>
+        /// <param name="search"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult>> GetGroupAllMembersByGroupValueWithHttpInfoAsync(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'objectIdOrNameOrEmail' is set
+            if (objectIdOrNameOrEmail == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'objectIdOrNameOrEmail' when calling Office365Api->GetGroupAllMembersByGroupValue");
+
+            // verify the required parameter 'tenantId' is set
+            if (tenantId == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'tenantId' when calling Office365Api->GetGroupAllMembersByGroupValue");
+
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "objectIdOrNameOrEmail", objectIdOrNameOrEmail));
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "tenantId", tenantId));
+            if (top != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "top", top));
+            }
+            if (skip != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "skip", skip));
+            }
+            if (search != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "search", search));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ApiUserPageResult>("/office365/groups/allmembers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetGroupAllMembersByGroupValue", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -877,8 +1162,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -965,8 +1249,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1052,8 +1335,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1140,8 +1422,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1195,9 +1476,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <returns>List&lt;GuidModel&gt;</returns>
-        public List<GuidModel> GetHubSitesFromTenantOfSite(string siteUrl = default(string))
+        public List<GuidModel> GetHubSitesByUrl(string siteUrl = default(string))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> localVarResponse = GetHubSitesFromTenantOfSiteWithHttpInfo(siteUrl);
+            Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> localVarResponse = GetHubSitesByUrlWithHttpInfo(siteUrl);
             return localVarResponse.Data;
         }
 
@@ -1207,7 +1488,7 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <returns>ApiResponse of List&lt;GuidModel&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> GetHubSitesFromTenantOfSiteWithHttpInfo(string siteUrl = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> GetHubSitesByUrlWithHttpInfo(string siteUrl = default(string))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1217,8 +1498,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1248,7 +1528,7 @@ namespace Cloud.Governance.Client.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetHubSitesFromTenantOfSite", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetHubSitesByUrl", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -1262,9 +1542,9 @@ namespace Cloud.Governance.Client.Api
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GuidModel&gt;</returns>
-        public async System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesFromTenantOfSiteAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesByUrlAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> localVarResponse = await GetHubSitesFromTenantOfSiteWithHttpInfoAsync(siteUrl, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> localVarResponse = await GetHubSitesByUrlWithHttpInfoAsync(siteUrl, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1275,7 +1555,7 @@ namespace Cloud.Governance.Client.Api
         /// <param name="siteUrl">any site url in your tenant (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GuidModel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>>> GetHubSitesFromTenantOfSiteWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>>> GetHubSitesByUrlWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1286,8 +1566,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1319,7 +1598,7 @@ namespace Cloud.Governance.Client.Api
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("GetHubSitesFromTenantOfSite", localVarResponse);
+                Exception _exception = this.ExceptionFactory("GetHubSitesByUrl", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -1352,8 +1631,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1415,8 +1693,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1483,8 +1760,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1553,8 +1829,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1624,8 +1899,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1697,8 +1971,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1763,8 +2036,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1832,8 +2104,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1904,8 +2175,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1974,8 +2244,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2043,8 +2312,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2113,8 +2381,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2182,8 +2449,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2252,8 +2518,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2319,8 +2584,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2391,8 +2655,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -2433,6 +2696,153 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// whether user has permission on the site 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <returns>bool</returns>
+        public bool HasPermission(string siteurl = default(string), string currentuser = default(string))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<bool> localVarResponse = HasPermissionWithHttpInfo(siteurl, currentuser);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// whether user has permission on the site 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <returns>ApiResponse of bool</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<bool> HasPermissionWithHttpInfo(string siteurl = default(string), string currentuser = default(string))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (siteurl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteurl", siteurl));
+            }
+            if (currentuser != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "currentuser", currentuser));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<bool>("/office365/sites/haspermission", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("HasPermission", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// whether user has permission on the site 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of bool</returns>
+        public async System.Threading.Tasks.Task<bool> HasPermissionAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<bool> localVarResponse = await HasPermissionWithHttpInfoAsync(siteurl, currentuser, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// whether user has permission on the site 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="siteurl"> (optional)</param>
+        /// <param name="currentuser"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (bool)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<bool>> HasPermissionWithHttpInfoAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (siteurl != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteurl", siteurl));
+            }
+            if (currentuser != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "currentuser", currentuser));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<bool>("/office365/sites/haspermission", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("HasPermission", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// Remove mail-enabled security group by group name 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2462,6 +2872,7 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -2528,6 +2939,7 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 

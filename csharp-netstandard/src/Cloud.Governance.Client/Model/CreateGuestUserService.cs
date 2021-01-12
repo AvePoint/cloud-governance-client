@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -65,6 +66,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableOnTimeRenewal">enableOnTimeRenewal.</param>
         /// <param name="oneTimeDuration">oneTimeDuration.</param>
         /// <param name="oneTimeDurationType">oneTimeDurationType.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -84,7 +86,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateGuestUserService(Guid tenantId = default(Guid), bool enableInviteOwnersGroup = default(bool), bool enableInviteContactGroup = default(bool), ApiUser primaryContact = default(ApiUser), AssignBy? primaryContactAssignBy = default(AssignBy?), ApiUser secondaryContact = default(ApiUser), AssignBy? secondaryContactAssignBy = default(AssignBy?), bool enableOnTimeRenewal = default(bool), int oneTimeDuration = default(int), ApiDurationType? oneTimeDurationType = default(ApiDurationType?), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public CreateGuestUserService(Guid tenantId = default(Guid), bool enableInviteOwnersGroup = default(bool), bool enableInviteContactGroup = default(bool), ApiUser primaryContact = default(ApiUser), AssignBy? primaryContactAssignBy = default(AssignBy?), ApiUser secondaryContact = default(ApiUser), AssignBy? secondaryContactAssignBy = default(AssignBy?), bool enableOnTimeRenewal = default(bool), int oneTimeDuration = default(int), ApiDurationType? oneTimeDurationType = default(ApiDurationType?), CreateGuestUserRequest requestTemplate = default(CreateGuestUserRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.TenantId = tenantId;
             this.EnableInviteOwnersGroup = enableInviteOwnersGroup;
@@ -96,6 +99,7 @@ namespace Cloud.Governance.Client.Model
             this.EnableOnTimeRenewal = enableOnTimeRenewal;
             this.OneTimeDuration = oneTimeDuration;
             this.OneTimeDurationType = oneTimeDurationType;
+            this.RequestTemplate = requestTemplate;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -115,6 +119,7 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
@@ -138,13 +143,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PrimaryContact
         /// </summary>
-        [DataMember(Name = "primaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets SecondaryContact
         /// </summary>
-        [DataMember(Name = "secondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
@@ -158,6 +163,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "oneTimeDuration", EmitDefaultValue = false)]
         public int OneTimeDuration { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public CreateGuestUserRequest RequestTemplate { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadatas
@@ -210,13 +221,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -234,7 +245,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -256,6 +267,12 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -273,6 +290,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  EnableOnTimeRenewal: ").Append(EnableOnTimeRenewal).Append("\n");
             sb.Append("  OneTimeDuration: ").Append(OneTimeDuration).Append("\n");
             sb.Append("  OneTimeDurationType: ").Append(OneTimeDurationType).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -292,6 +310,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -368,6 +387,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.OneTimeDurationType == input.OneTimeDurationType ||
                     this.OneTimeDurationType.Equals(input.OneTimeDurationType)
+                ) && 
+                (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
                 ) && 
                 (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
@@ -457,6 +481,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -482,6 +511,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.EnableOnTimeRenewal.GetHashCode();
                 hashCode = hashCode * 59 + this.OneTimeDuration.GetHashCode();
                 hashCode = hashCode * 59 + this.OneTimeDurationType.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -512,6 +543,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 
+**Details** | **string** |  | [optional] 
+**RequestTemplate** | [**ApiRequest**](ApiRequest.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

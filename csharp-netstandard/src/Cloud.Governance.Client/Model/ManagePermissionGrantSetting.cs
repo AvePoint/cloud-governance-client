@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -59,6 +60,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="temporaryPermissionMaxDuration">temporaryPermissionMaxDuration.</param>
         /// <param name="temporaryPermissionMaxDurationType">temporaryPermissionMaxDurationType.</param>
         /// <param name="isEnableExpireNotify">isEnableExpireNotify.</param>
+        /// <param name="isAllowSelectAdmin">isAllowSelectAdmin.</param>
         /// <param name="expireNotifyDuration">expireNotifyDuration.</param>
         /// <param name="expireNotifyDurationType">expireNotifyDurationType.</param>
         /// <param name="expireNotifyEmailTemplate">expireNotifyEmailTemplate.</param>
@@ -67,7 +69,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="welcomeEmailBody">welcomeEmailBody.</param>
         /// <param name="welcomeEmailAssignBy">welcomeEmailAssignBy.</param>
         /// <param name="allowSpecifyTemporayPermissionDuration">allowSpecifyTemporayPermissionDuration.</param>
-        public ManagePermissionGrantSetting(bool isEnableGrantPermission = default(bool), bool isGrantTemporaryPermission = default(bool), AssignBy? grantPermissionAssignBy = default(AssignBy?), int temporaryPermissionDuration = default(int), ApiDurationType? temporaryDurationType = default(ApiDurationType?), bool isMaxTemporaryDurationSetted = default(bool), int temporaryPermissionMaxDuration = default(int), ApiDurationType? temporaryPermissionMaxDurationType = default(ApiDurationType?), bool isEnableExpireNotify = default(bool), int expireNotifyDuration = default(int), ApiDurationType? expireNotifyDurationType = default(ApiDurationType?), Guid? expireNotifyEmailTemplate = default(Guid?), bool isEnableWelcomeNotify = default(bool), string welcomeEmailSubject = default(string), string welcomeEmailBody = default(string), AssignBy? welcomeEmailAssignBy = default(AssignBy?), bool allowSpecifyTemporayPermissionDuration = default(bool))
+        public ManagePermissionGrantSetting(bool isEnableGrantPermission = default(bool), bool isGrantTemporaryPermission = default(bool), AssignBy? grantPermissionAssignBy = default(AssignBy?), int temporaryPermissionDuration = default(int), ApiDurationType? temporaryDurationType = default(ApiDurationType?), bool isMaxTemporaryDurationSetted = default(bool), int temporaryPermissionMaxDuration = default(int), ApiDurationType? temporaryPermissionMaxDurationType = default(ApiDurationType?), bool isEnableExpireNotify = default(bool), bool isAllowSelectAdmin = default(bool), int expireNotifyDuration = default(int), ApiDurationType? expireNotifyDurationType = default(ApiDurationType?), Guid? expireNotifyEmailTemplate = default(Guid?), bool isEnableWelcomeNotify = default(bool), string welcomeEmailSubject = default(string), string welcomeEmailBody = default(string), AssignBy? welcomeEmailAssignBy = default(AssignBy?), bool allowSpecifyTemporayPermissionDuration = default(bool))
         {
             this.IsEnableGrantPermission = isEnableGrantPermission;
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
@@ -78,6 +80,7 @@ namespace Cloud.Governance.Client.Model
             this.TemporaryPermissionMaxDuration = temporaryPermissionMaxDuration;
             this.TemporaryPermissionMaxDurationType = temporaryPermissionMaxDurationType;
             this.IsEnableExpireNotify = isEnableExpireNotify;
+            this.IsAllowSelectAdmin = isAllowSelectAdmin;
             this.ExpireNotifyDuration = expireNotifyDuration;
             this.ExpireNotifyDurationType = expireNotifyDurationType;
             this.ExpireNotifyEmailTemplate = expireNotifyEmailTemplate;
@@ -123,6 +126,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "isEnableExpireNotify", EmitDefaultValue = false)]
         public bool IsEnableExpireNotify { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsAllowSelectAdmin
+        /// </summary>
+        [DataMember(Name = "isAllowSelectAdmin", EmitDefaultValue = false)]
+        public bool IsAllowSelectAdmin { get; set; }
 
         /// <summary>
         /// Gets or Sets ExpireNotifyDuration
@@ -177,6 +186,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  TemporaryPermissionMaxDuration: ").Append(TemporaryPermissionMaxDuration).Append("\n");
             sb.Append("  TemporaryPermissionMaxDurationType: ").Append(TemporaryPermissionMaxDurationType).Append("\n");
             sb.Append("  IsEnableExpireNotify: ").Append(IsEnableExpireNotify).Append("\n");
+            sb.Append("  IsAllowSelectAdmin: ").Append(IsAllowSelectAdmin).Append("\n");
             sb.Append("  ExpireNotifyDuration: ").Append(ExpireNotifyDuration).Append("\n");
             sb.Append("  ExpireNotifyDurationType: ").Append(ExpireNotifyDurationType).Append("\n");
             sb.Append("  ExpireNotifyEmailTemplate: ").Append(ExpireNotifyEmailTemplate).Append("\n");
@@ -256,6 +266,10 @@ namespace Cloud.Governance.Client.Model
                     this.IsEnableExpireNotify.Equals(input.IsEnableExpireNotify)
                 ) && 
                 (
+                    this.IsAllowSelectAdmin == input.IsAllowSelectAdmin ||
+                    this.IsAllowSelectAdmin.Equals(input.IsAllowSelectAdmin)
+                ) && 
+                (
                     this.ExpireNotifyDuration == input.ExpireNotifyDuration ||
                     this.ExpireNotifyDuration.Equals(input.ExpireNotifyDuration)
                 ) && 
@@ -310,6 +324,7 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.TemporaryPermissionMaxDuration.GetHashCode();
                 hashCode = hashCode * 59 + this.TemporaryPermissionMaxDurationType.GetHashCode();
                 hashCode = hashCode * 59 + this.IsEnableExpireNotify.GetHashCode();
+                hashCode = hashCode * 59 + this.IsAllowSelectAdmin.GetHashCode();
                 hashCode = hashCode * 59 + this.ExpireNotifyDuration.GetHashCode();
                 hashCode = hashCode * 59 + this.ExpireNotifyDurationType.GetHashCode();
                 if (this.ExpireNotifyEmailTemplate != null)

@@ -3,32 +3,33 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteUrl** | **String** |  | [optional] [default to null]
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**WebUrl** | **String** |  | [optional] [default to null]
-**WebId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Lists** | [**SPList[]**](SPList.md) |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**SiteUrl** | **String** |  | [optional] 
+**SiteId** | **String** |  | [optional] 
+**WebUrl** | **String** |  | [optional] 
+**WebId** | **String** |  | [optional] 
+**Lists** | [**SPList[]**](SPList.md) |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeListSettingValidateResult  -SiteUrl null `
+$ChangeListSettingValidateResult = New-Cloud.Governance.ClientChangeListSettingValidateResult  -SiteUrl null `
  -SiteId null `
  -WebUrl null `
  -WebId null `
  -Lists null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeListSettingValidateResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

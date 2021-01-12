@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -63,13 +64,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets SitePrimaryContact
         /// </summary>
-        [DataMember(Name = "sitePrimaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "sitePrimaryContact", EmitDefaultValue = true)]
         public ApiUser SitePrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteSecondaryContact
         /// </summary>
-        [DataMember(Name = "siteSecondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "siteSecondaryContact", EmitDefaultValue = true)]
         public ApiUser SiteSecondaryContact { get; set; }
 
         /// <summary>

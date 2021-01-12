@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **ChangePolicySetting** | [**ChangeGroupPolicyResult**](ChangeGroupPolicyResult.md) |  | [optional] 
 **ChangeQuotaSetting** | [**ChangeGroupQuotaResult**](ChangeGroupQuotaResult.md) |  | [optional] 
 **EnableTeamCollaboration** | **bool** |  | [optional] 
+**GroupObjectType** | **GroupObjectType** |  | [optional] 
 **IsValid** | **bool** |  | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 

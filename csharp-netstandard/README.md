@@ -76,14 +76,14 @@ Class | Method | HTTP request | Description
 *AuthApi* | [**GetDelegateAccessToken**](docs/AuthApi.md#getdelegateaccesstoken) | **POST** /auth/token/delegate | get delegate access token by client id and client secret which created in cloud governance Api Authentication Management
 *AuthApi* | [**RefreshUserAccessToken**](docs/AuthApi.md#refreshuseraccesstoken) | **POST** /auth/token/refresh | refresh user access token
 *AuthAdminApi* | [**DeleteTokenCache**](docs/AuthAdminApi.md#deletetokencache) | **DELETE** /admin/auth/token/cache | delete token cache
-*AuthAdminApi* | [**UpdateTokenCache**](docs/AuthAdminApi.md#updatetokencache) | **PUT** /admin/auth/token/cache | update token cache
 *GuestUsersAdminApi* | [**GetManagedGuestUsers**](docs/GuestUsersAdminApi.md#getmanagedguestusers) | **GET** /admin/directory/guestusers | get all managed guest users
 *MetadataAdminApi* | [**GetAllMetadata**](docs/MetadataAdminApi.md#getallmetadata) | **GET** /admin/metadata | get all metadata
 *MetadataAdminApi* | [**GetSingleMetadataById**](docs/MetadataAdminApi.md#getsinglemetadatabyid) | **GET** /admin/metadata/{id} | Get metadata by id
 *Office365Api* | [**CreateSecurityGroup**](docs/Office365Api.md#createsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
+*Office365Api* | [**GetGroupAllMembersByGroupValue**](docs/Office365Api.md#getgroupallmembersbygroupvalue) | **GET** /office365/groups/allmembers | get group members by group email
 *Office365Api* | [**GetGroupMembers**](docs/Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/members | get group members by group email
 *Office365Api* | [**GetGroupOwners**](docs/Office365Api.md#getgroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
-*Office365Api* | [**GetHubSitesFromTenantOfSite**](docs/Office365Api.md#gethubsitesfromtenantofsite) | **GET** /office365/hubsites | get all hubsites from site's tenant
+*Office365Api* | [**GetHubSitesByUrl**](docs/Office365Api.md#gethubsitesbyurl) | **GET** /office365/hubsites | get all hubsites from site's tenant
 *Office365Api* | [**GetOwnedTeams**](docs/Office365Api.md#getownedteams) | **GET** /office365/teams/my | get all teams that owner is curernt user
 *Office365Api* | [**GetPermissions**](docs/Office365Api.md#getpermissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
 *Office365Api* | [**GetRoleAssignment**](docs/Office365Api.md#getroleassignment) | **GET** /office365/roleassignment | get site permimssion role assignment
@@ -92,6 +92,7 @@ Class | Method | HTTP request | Description
 *Office365Api* | [**GetSiteSharePointGroups**](docs/Office365Api.md#getsitesharepointgroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 *Office365Api* | [**GetSiteStatus**](docs/Office365Api.md#getsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 *Office365Api* | [**GetSiteTemplates**](docs/Office365Api.md#getsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
+*Office365Api* | [**HasPermission**](docs/Office365Api.md#haspermission) | **GET** /office365/sites/haspermission | whether user has permission on the site
 *Office365Api* | [**RemoveSecurityGroup**](docs/Office365Api.md#removesecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 *Office365AdminApi* | [**GetAzureAdCustomPropertyNames**](docs/Office365AdminApi.md#getazureadcustompropertynames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
 *Office365AdminApi* | [**GetTenantIdByUrl**](docs/Office365AdminApi.md#gettenantidbyurl) | **GET** /admin/office365/tenantid | get tenant ids by url
@@ -153,7 +154,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**SubmitCreateGroupRequest**](docs/RequestsApi.md#submitcreategrouprequest) | **POST** /requests/creategroup | submit create group request
 *RequestsApi* | [**SubmitCreateGuestUserRequest**](docs/RequestsApi.md#submitcreateguestuserrequest) | **POST** /requests/createguestuser | submit create guest user request
 *RequestsApi* | [**SubmitCreateListRequest**](docs/RequestsApi.md#submitcreatelistrequest) | **POST** /requests/createlist | submit create list request
-*RequestsApi* | [**SubmitCreateSiteRequest**](docs/RequestsApi.md#submitcreatesiterequest) | **POST** /requests/createsite | submit create site request
+*RequestsApi* | [**SubmitCreateSiteRequest**](docs/RequestsApi.md#submitcreatesiterequest) | **POST** /requests/createsite | submit create site collection request
 *RequestsApi* | [**SubmitCreateWebRequest**](docs/RequestsApi.md#submitcreatewebrequest) | **POST** /requests/createweb | submit create web request
 *RequestsApi* | [**SubmitCustomRequest**](docs/RequestsApi.md#submitcustomrequest) | **POST** /requests/custom | submit custom service request
 *RequestsApi* | [**SubmitDeleteGroupRequest**](docs/RequestsApi.md#submitdeletegrouprequest) | **POST** /requests/deletegroup | submit delete group request
@@ -187,8 +188,10 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**GetGroupLifecycleService**](docs/ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 *ServicesApi* | [**GetManagePermissionService**](docs/ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
 *ServicesApi* | [**GetMyServices**](docs/ServicesApi.md#getmyservices) | **GET** /services/my | get services that can be used to start a request
+*ServicesApi* | [**GetServiceId**](docs/ServicesApi.md#getserviceid) | **GET** /services/id | get service id by service name
 *ServicesApi* | [**GetSiteLifecycleService**](docs/ServicesApi.md#getsitelifecycleservice) | **GET** /services/sitelifecycle/{id} | get site lifecycle service
 *ServicesApi* | [**GetWebLifecycleService**](docs/ServicesApi.md#getweblifecycleservice) | **GET** /services/weblifecycle/{id} | get web lifecycle service
+*ServicesApi* | [**ValidateEmailForCreateGuestUserService**](docs/ServicesApi.md#validateemailforcreateguestuserservice) | **GET** /services/createguestuser/{id}/email/validate | validate guest user email
 *ServicesApi* | [**ValidateForChangeGroupSettingService**](docs/ServicesApi.md#validateforchangegroupsettingservice) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
 *ServicesApi* | [**ValidateForChangeListSettingService**](docs/ServicesApi.md#validateforchangelistsettingservice) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
 *ServicesApi* | [**ValidateForChangePermissionService**](docs/ServicesApi.md#validateforchangepermissionservice) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
@@ -198,7 +201,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**ValidateForChangeWebSettingService**](docs/ServicesApi.md#validateforchangewebsettingservice) | **POST** /services/changewebsettings/{id}/url/validation | validate permissions, scope for change web setting service
 *ServicesApi* | [**ValidateForClonePermissionService**](docs/ServicesApi.md#validateforclonepermissionservice) | **POST** /services/clonepermission/{id}/url/validation | validate permissions, scope for clone permission service
 *ServicesApi* | [**ValidateForContentMoveService**](docs/ServicesApi.md#validateforcontentmoveservice) | **POST** /services/contentmove/{id}/url/validation | validate permissions, scope for content move service
-*ServicesApi* | [**ValidateForCreateGuestUserService**](docs/ServicesApi.md#validateforcreateguestuserservice) | **POST** /services/createguestuser/{serviceid}/group/validate | validate groups can invite
+*ServicesApi* | [**ValidateForCreateGuestUserService**](docs/ServicesApi.md#validateforcreateguestuserservice) | **POST** /services/createguestuser/{id}/group/validate | validate groups can invite
 *ServicesApi* | [**ValidateForCreateListService**](docs/ServicesApi.md#validateforcreatelistservice) | **POST** /services/createlist/{id}/url/validation | validate permissions, scope for create list service
 *ServicesApi* | [**ValidateForCreateWebService**](docs/ServicesApi.md#validateforcreatewebservice) | **POST** /services/createweb/{id}/url/validation | validate permissions, scope for create web service
 *ServicesApi* | [**ValidateForGrantPermissionService**](docs/ServicesApi.md#validateforgrantpermissionservice) | **POST** /services/grantpermission/{id}/url/validation | validate permissions, scope for grant permission service
@@ -258,11 +261,17 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**ResolveUsers**](docs/UsersApi.md#resolveusers) | **GET** /users/resolve | resolve users
 *UsersApi* | [**SearchUsers**](docs/UsersApi.md#searchusers) | **GET** /users/search | search users
 *UsersApi* | [**UpdateUserInfo**](docs/UsersApi.md#updateuserinfo) | **POST** /users | 
+*WorkspaceApi* | [**GetGroupMetadata**](docs/WorkspaceApi.md#getgroupmetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
 *WorkspaceApi* | [**GetMyGroupInformation**](docs/WorkspaceApi.md#getmygroupinformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
 *WorkspaceApi* | [**GetMySiteInformation**](docs/WorkspaceApi.md#getmysiteinformation) | **GET** /workspace/sites/{id} | get site information
+*WorkspaceApi* | [**GetSiteMetadata**](docs/WorkspaceApi.md#getsitemetadata) | **GET** /workspace/sites/metadata | get site metadata
 *WorkspaceApi* | [**GetWorkspaceItems**](docs/WorkspaceApi.md#getworkspaceitems) | **GET** /workspace/my | get my workspace items
+*WorkspacesAdminApi* | [**ApplyGroupsPolicy**](docs/WorkspacesAdminApi.md#applygroupspolicy) | **POST** /admin/directory/workspace/groups/policy | apply groups policy
+*WorkspacesAdminApi* | [**ApplySitesPolicy**](docs/WorkspacesAdminApi.md#applysitespolicy) | **POST** /admin/directory/workspace/sites/policy | apply site policy
+*WorkspacesAdminApi* | [**ArchiveWorkspace**](docs/WorkspacesAdminApi.md#archiveworkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 *WorkspacesAdminApi* | [**CompleteWorkspaceRenewalTask**](docs/WorkspacesAdminApi.md#completeworkspacerenewaltask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 *WorkspacesAdminApi* | [**DeleteWorkspaces**](docs/WorkspacesAdminApi.md#deleteworkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
+*WorkspacesAdminApi* | [**GetOngoingTasks**](docs/WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
 *WorkspacesAdminApi* | [**GetWorkspaces**](docs/WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**LockWorkspaces**](docs/WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 *WorkspacesAdminApi* | [**TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#triggerworkspacerenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
@@ -281,6 +290,7 @@ Class | Method | HTTP request | Description
  - [Model.AnonymousLinkSettings](docs/AnonymousLinkSettings.md)
  - [Model.ApiCredential](docs/ApiCredential.md)
  - [Model.ApiDurationType](docs/ApiDurationType.md)
+ - [Model.ApiError](docs/ApiError.md)
  - [Model.ApiMyGroup](docs/ApiMyGroup.md)
  - [Model.ApiRequest](docs/ApiRequest.md)
  - [Model.ApiRequestProgressStatus](docs/ApiRequestProgressStatus.md)
@@ -291,9 +301,13 @@ Class | Method | HTTP request | Description
  - [Model.ApiUserChangedProperty](docs/ApiUserChangedProperty.md)
  - [Model.ApiUserPageResult](docs/ApiUserPageResult.md)
  - [Model.AppSettings](docs/AppSettings.md)
+ - [Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
+ - [Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
+ - [Model.ApplySitePolicyModel](docs/ApplySitePolicyModel.md)
  - [Model.ArchiveGroupRequest](docs/ArchiveGroupRequest.md)
  - [Model.ArchiveSiteRequest](docs/ArchiveSiteRequest.md)
  - [Model.ArchiveWebLifecycleRequest](docs/ArchiveWebLifecycleRequest.md)
+ - [Model.ArchiveWorkspaceParameter](docs/ArchiveWorkspaceParameter.md)
  - [Model.AssignBy](docs/AssignBy.md)
  - [Model.AuthenticationType](docs/AuthenticationType.md)
  - [Model.AutoGenerateUrlSetting](docs/AutoGenerateUrlSetting.md)
@@ -325,6 +339,7 @@ Class | Method | HTTP request | Description
  - [Model.ChangePermissionRequest](docs/ChangePermissionRequest.md)
  - [Model.ChangePermissionService](docs/ChangePermissionService.md)
  - [Model.ChangePermissionValidateResult](docs/ChangePermissionValidateResult.md)
+ - [Model.ChangePolicyActionSetting](docs/ChangePolicyActionSetting.md)
  - [Model.ChangeSiteContactRequest](docs/ChangeSiteContactRequest.md)
  - [Model.ChangeSiteContactService](docs/ChangeSiteContactService.md)
  - [Model.ChangeSiteContactSubRequest](docs/ChangeSiteContactSubRequest.md)
@@ -406,6 +421,7 @@ Class | Method | HTTP request | Description
  - [Model.DynamicGroupRuleInfo](docs/DynamicGroupRuleInfo.md)
  - [Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Model.DynamicRuleElement](docs/DynamicRuleElement.md)
+ - [Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
  - [Model.ExecutionModel](docs/ExecutionModel.md)
  - [Model.ExecutionParameter](docs/ExecutionParameter.md)
  - [Model.ExpirationType](docs/ExpirationType.md)
@@ -438,6 +454,7 @@ Class | Method | HTTP request | Description
  - [Model.GroupLeasePeriodSettings](docs/GroupLeasePeriodSettings.md)
  - [Model.GroupLeasePeriodType](docs/GroupLeasePeriodType.md)
  - [Model.GroupLifecycleActionType](docs/GroupLifecycleActionType.md)
+ - [Model.GroupLifecycleRequest](docs/GroupLifecycleRequest.md)
  - [Model.GroupLifecycleService](docs/GroupLifecycleService.md)
  - [Model.GroupLifecycleValidateResult](docs/GroupLifecycleValidateResult.md)
  - [Model.GroupLinks](docs/GroupLinks.md)
@@ -446,6 +463,7 @@ Class | Method | HTTP request | Description
  - [Model.GroupNameConstructureSettings](docs/GroupNameConstructureSettings.md)
  - [Model.GroupObjectType](docs/GroupObjectType.md)
  - [Model.GroupOwnerType](docs/GroupOwnerType.md)
+ - [Model.GroupPolicySubType](docs/GroupPolicySubType.md)
  - [Model.GroupRestrictionType](docs/GroupRestrictionType.md)
  - [Model.GroupSettingModel](docs/GroupSettingModel.md)
  - [Model.GroupUser](docs/GroupUser.md)
@@ -457,6 +475,7 @@ Class | Method | HTTP request | Description
  - [Model.GuestUserStatus](docs/GuestUserStatus.md)
  - [Model.GuidBooleanModel](docs/GuidBooleanModel.md)
  - [Model.GuidModel](docs/GuidModel.md)
+ - [Model.HandleOngoingType](docs/HandleOngoingType.md)
  - [Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
  - [Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Model.HubSiteType](docs/HubSiteType.md)
@@ -465,6 +484,9 @@ Class | Method | HTTP request | Description
  - [Model.InviteType](docs/InviteType.md)
  - [Model.ItemConflictResolutionType](docs/ItemConflictResolutionType.md)
  - [Model.LanguageWithTemplates](docs/LanguageWithTemplates.md)
+ - [Model.LeaseDateType](docs/LeaseDateType.md)
+ - [Model.LeaseStartDateType](docs/LeaseStartDateType.md)
+ - [Model.LifecycleRenewalSetting](docs/LifecycleRenewalSetting.md)
  - [Model.LinkMetadataSettings](docs/LinkMetadataSettings.md)
  - [Model.LinkValue](docs/LinkValue.md)
  - [Model.ListPermissionSettings](docs/ListPermissionSettings.md)
@@ -504,6 +526,7 @@ Class | Method | HTTP request | Description
  - [Model.MySiteType](docs/MySiteType.md)
  - [Model.NodeType](docs/NodeType.md)
  - [Model.ObjectPermissionManagementModel](docs/ObjectPermissionManagementModel.md)
+ - [Model.ObjectValidateResult](docs/ObjectValidateResult.md)
  - [Model.OneTimeRenewalOption](docs/OneTimeRenewalOption.md)
  - [Model.PermissionChangedType](docs/PermissionChangedType.md)
  - [Model.PermissionLevel](docs/PermissionLevel.md)
@@ -578,6 +601,8 @@ Class | Method | HTTP request | Description
  - [Model.TaskDynamicActions](docs/TaskDynamicActions.md)
  - [Model.TaskList](docs/TaskList.md)
  - [Model.TaskListPageResult](docs/TaskListPageResult.md)
+ - [Model.TaskReport](docs/TaskReport.md)
+ - [Model.TaskReportPageResult](docs/TaskReportPageResult.md)
  - [Model.TaskResult](docs/TaskResult.md)
  - [Model.TaskType](docs/TaskType.md)
  - [Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)
@@ -608,10 +633,13 @@ Class | Method | HTTP request | Description
  - [Model.UserSource](docs/UserSource.md)
  - [Model.UserType](docs/UserType.md)
  - [Model.WebLifecycleActionType](docs/WebLifecycleActionType.md)
+ - [Model.WebLifecycleRequest](docs/WebLifecycleRequest.md)
  - [Model.WebLifecycleService](docs/WebLifecycleService.md)
  - [Model.WebLifecycleValidateResult](docs/WebLifecycleValidateResult.md)
  - [Model.WebServiceAuthenticationType](docs/WebServiceAuthenticationType.md)
  - [Model.WelcomeEmailSettings](docs/WelcomeEmailSettings.md)
+ - [Model.WorksapceOngoingTasksModel](docs/WorksapceOngoingTasksModel.md)
+ - [Model.WorkspaceArchivedType](docs/WorkspaceArchivedType.md)
  - [Model.WorkspaceGridModel](docs/WorkspaceGridModel.md)
  - [Model.WorkspaceGridModelPageResult](docs/WorkspaceGridModelPageResult.md)
  - [Model.WorkspaceIdTypeModel](docs/WorkspaceIdTypeModel.md)

@@ -103,12 +103,13 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        List<ApiUser> ResolveUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string));
+        List<ApiUser> ResolveUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
 
         /// <summary>
         /// resolve users
@@ -118,23 +119,25 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string));
+        ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
         /// <summary>
         /// search users
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        List<ApiUser> SearchUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string));
+        List<ApiUser> SearchUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
 
         /// <summary>
         /// search users
@@ -144,12 +147,13 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string));
+        ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
         /// <summary>
         /// 
         /// </summary>
@@ -285,13 +289,14 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// resolve users
@@ -301,13 +306,14 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// search users
         /// </summary>
@@ -316,13 +322,14 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// search users
@@ -332,13 +339,14 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -522,8 +530,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -605,8 +612,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -685,8 +691,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -762,8 +767,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -832,8 +836,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -902,8 +905,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -977,8 +979,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1054,8 +1055,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1097,14 +1097,15 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        public List<ApiUser> ResolveUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
+        public List<ApiUser> ResolveUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = ResolveUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = ResolveUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId);
             return localVarResponse.Data;
         }
 
@@ -1113,12 +1114,13 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1132,8 +1134,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1149,6 +1150,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (peopleFilterProfileId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "peopleFilterProfileId", peopleFilterProfileId));
             }
 
             // authentication (clientSecret) required
@@ -1179,15 +1184,16 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await ResolveUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await ResolveUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1196,13 +1202,14 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1217,8 +1224,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1235,6 +1241,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (peopleFilterProfileId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "peopleFilterProfileId", peopleFilterProfileId));
             }
 
             // authentication (clientSecret) required
@@ -1266,14 +1276,15 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        public List<ApiUser> SearchUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
+        public List<ApiUser> SearchUsers(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = SearchUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = SearchUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId);
             return localVarResponse.Data;
         }
 
@@ -1282,12 +1293,13 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1301,8 +1313,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1318,6 +1329,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (peopleFilterProfileId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "peopleFilterProfileId", peopleFilterProfileId));
             }
 
             // authentication (clientSecret) required
@@ -1348,15 +1363,16 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await SearchUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await SearchUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1365,13 +1381,14 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="keyword"></param>
-        /// <param name="userType">All&#x3D;0, User&#x3D;1, Group&#x3D;2, DistributionList&#x3D;3, UserAndGroup&#x3D;4, SecurityGroupOnly&#x3D;100</param>
-        /// <param name="userSource">All&#x3D;0, Local&#x3D;1, Azure&#x3D;2, SharePoint&#x3D;3, Yammer&#x3D;4</param>
-        /// <param name="sharingOptions">Disabled&#x3D;0, VerifiedGuestUser&#x3D;1, Anyone&#x3D;2, ExistingGuestUser&#x3D;3</param>
+        /// <param name="userType"></param>
+        /// <param name="userSource"></param>
+        /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1386,8 +1403,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1404,6 +1420,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (peopleFilterProfileId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "peopleFilterProfileId", peopleFilterProfileId));
             }
 
             // authentication (clientSecret) required
@@ -1452,14 +1472,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1518,14 +1536,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 

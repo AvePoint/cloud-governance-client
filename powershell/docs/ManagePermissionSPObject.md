@@ -3,31 +3,31 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ParentUrl** | **String** |  | [optional] [default to null]
-**ParentNodeType** | [**NodeType**](NodeType.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**WebUrl** | **String** |  | [optional] [default to null]
-**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**TemporaryGroupTitle** | **String** |  | [optional] [default to null]
-**WebId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**WebServerRelativeUrl** | **String** |  | [optional] [default to null]
-**ListTitle** | **String** |  | [optional] [default to null]
-**TopInheritUrl** | **String** |  | [optional] [default to null]
-**InheritNodeType** | [**NodeType**](NodeType.md) |  | [optional] [default to null]
-**IsInheritedPermission** | **Boolean** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Title** | **String** |  | [optional] [default to null]
-**FullUrl** | **String** |  | [optional] [default to null]
-**Type** | [**NodeType**](NodeType.md) |  | [optional] [default to null]
+**ParentUrl** | **String** |  | [optional] 
+**ParentNodeType** | [**NodeType**](NodeType.md) |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**WebUrl** | **String** |  | [optional] 
+**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**TemporaryGroupTitle** | **String** |  | [optional] 
+**WebId** | **String** |  | [optional] 
+**SiteId** | **String** |  | [optional] 
+**WebServerRelativeUrl** | **String** |  | [optional] 
+**ListTitle** | **String** |  | [optional] 
+**TopInheritUrl** | **String** |  | [optional] 
+**InheritNodeType** | [**NodeType**](NodeType.md) |  | [optional] 
+**IsInheritedPermission** | **Boolean** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**FullUrl** | **String** |  | [optional] 
+**Type** | [**NodeType**](NodeType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientManagePermissionSPObject  -ParentUrl null `
+$ManagePermissionSPObject = New-Cloud.Governance.ClientManagePermissionSPObject  -ParentUrl null `
  -ParentNodeType null `
  -SiteUrl null `
  -WebUrl null `
@@ -48,11 +48,10 @@ New-Cloud.Governance.ClientManagePermissionSPObject  -ParentUrl null `
  -Type null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ManagePermissionSPObject | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

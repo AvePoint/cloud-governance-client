@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Category** | **String** |  | [optional] [default to null]
-**TenantId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Category** | **String** |  | [optional] 
+**TenantId** | **String** |  | [optional] 
+**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientPolicyRef  -Id null `
+$PolicyRef = New-Cloud.Governance.ClientPolicyRef  -Id null `
  -Name null `
  -Description null `
  -Category null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientPolicyRef  -Id null `
  -Status null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PolicyRef | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

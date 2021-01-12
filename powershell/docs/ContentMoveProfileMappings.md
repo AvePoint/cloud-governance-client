@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ColumnMapping** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
-**ContentTypeMapping** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
-**UserMapping** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
-**LanguageMapping** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
+**ColumnMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**ContentTypeMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**UserMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**LanguageMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientContentMoveProfileMappings  -ColumnMapping null `
+$ContentMoveProfileMappings = New-Cloud.Governance.ClientContentMoveProfileMappings  -ColumnMapping null `
  -ContentTypeMapping null `
  -UserMapping null `
  -LanguageMapping null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ContentMoveProfileMappings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

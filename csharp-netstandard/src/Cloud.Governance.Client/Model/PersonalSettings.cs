@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -74,7 +75,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
-        [DataMember(Name = "properties", EmitDefaultValue = false)]
+        [DataMember(Name = "properties", EmitDefaultValue = true)]
         public PersonalSettingsPropertyInfo Properties { get; set; }
 
         /// <summary>

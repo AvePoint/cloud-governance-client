@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsBackupSource** | **Boolean** |  | [optional] [default to null]
-**IsBackupDestination** | **Boolean** |  | [optional] [default to null]
-**StoragePolicy** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
+**IsBackupSource** | **Boolean** |  | [optional] 
+**IsBackupDestination** | **Boolean** |  | [optional] 
+**StoragePolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientBackupEnvironmentSetting  -IsBackupSource null `
+$BackupEnvironmentSetting = New-Cloud.Governance.ClientBackupEnvironmentSetting  -IsBackupSource null `
  -IsBackupDestination null `
  -StoragePolicy null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$BackupEnvironmentSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

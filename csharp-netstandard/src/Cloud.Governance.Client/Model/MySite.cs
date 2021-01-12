@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -40,6 +41,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="department">department.</param>
         /// <param name="description">description.</param>
         /// <param name="size">size.</param>
+        /// <param name="quotaSize">quotaSize.</param>
         /// <param name="type">type.</param>
         /// <param name="mySiteType">mySiteType.</param>
         /// <param name="classification">classification.</param>
@@ -66,13 +68,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContact">primaryContact.</param>
         /// <param name="secondaryContact">secondaryContact.</param>
         /// <param name="errorMessage">errorMessage.</param>
-        public MySite(string fullUrl = default(string), string title = default(string), string department = default(string), string description = default(string), long? size = default(long?), MySiteType? type = default(MySiteType?), string mySiteType = default(string), string classification = default(string), string sensitivity = default(string), bool isCommunicationSite = default(bool), DateTime createdTime = default(DateTime), string storageUsed = default(string), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrator = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = default(bool), List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
+        public MySite(string fullUrl = default(string), string title = default(string), string department = default(string), string description = default(string), long? size = default(long?), long quotaSize = default(long), MySiteType? type = default(MySiteType?), string mySiteType = default(string), string classification = default(string), string sensitivity = default(string), bool isCommunicationSite = default(bool), DateTime createdTime = default(DateTime), string storageUsed = default(string), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrator = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = default(bool), List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
             this.FullUrl = fullUrl;
             this.Title = title;
             this.Department = department;
             this.Description = description;
             this.Size = size;
+            this.QuotaSize = quotaSize;
             this.Type = type;
             this.MySiteType = mySiteType;
             this.Classification = classification;
@@ -132,6 +135,12 @@ namespace Cloud.Governance.Client.Model
         public long? Size { get; set; }
 
         /// <summary>
+        /// Gets or Sets QuotaSize
+        /// </summary>
+        [DataMember(Name = "quotaSize", EmitDefaultValue = false)]
+        public long QuotaSize { get; set; }
+
+        /// <summary>
         /// Gets or Sets MySiteType
         /// </summary>
         [DataMember(Name = "mySiteType", EmitDefaultValue = true)]
@@ -170,7 +179,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PrimaryAdministrator
         /// </summary>
-        [DataMember(Name = "primaryAdministrator", EmitDefaultValue = false)]
+        [DataMember(Name = "primaryAdministrator", EmitDefaultValue = true)]
         public ApiUser PrimaryAdministrator { get; set; }
 
         /// <summary>
@@ -260,13 +269,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PrimaryContact
         /// </summary>
-        [DataMember(Name = "primaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets SecondaryContact
         /// </summary>
-        [DataMember(Name = "secondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
@@ -288,6 +297,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  QuotaSize: ").Append(QuotaSize).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  MySiteType: ").Append(MySiteType).Append("\n");
             sb.Append("  Classification: ").Append(Classification).Append("\n");
@@ -372,6 +382,10 @@ namespace Cloud.Governance.Client.Model
                     this.Size == input.Size ||
                     (this.Size != null &&
                     this.Size.Equals(input.Size))
+                ) && 
+                (
+                    this.QuotaSize == input.QuotaSize ||
+                    this.QuotaSize.Equals(input.QuotaSize)
                 ) && 
                 (
                     this.Type == input.Type ||
@@ -523,6 +537,7 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Size != null)
                     hashCode = hashCode * 59 + this.Size.GetHashCode();
+                hashCode = hashCode * 59 + this.QuotaSize.GetHashCode();
                 hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.MySiteType != null)
                     hashCode = hashCode * 59 + this.MySiteType.GetHashCode();

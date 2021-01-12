@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [default to null]
-**SeletedItem** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**AllItems** | [**UUID[]**](UUID.md) |  | [optional] [default to null]
+**Enabled** | **Boolean** |  | [optional] 
+**SeletedItem** | **String** |  | [optional] 
+**AllItems** | **String[]** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGuidBooleanModel  -Enabled null `
+$GuidBooleanModel = New-Cloud.Governance.ClientGuidBooleanModel  -Enabled null `
  -SeletedItem null `
  -AllItems null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GuidBooleanModel | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

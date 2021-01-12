@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [default to null]
-**Action** | [**ConvertHubSiteActionType**](ConvertHubSiteActionType.md) |  | [optional] [default to null]
-**AssociatedHubSiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**AssociatedHubSiteTitle** | **String** |  | [optional] [readonly] [default to null]
+**Enabled** | **Boolean** |  | [optional] 
+**Action** | [**ConvertHubSiteActionType**](ConvertHubSiteActionType.md) |  | [optional] 
+**AssociatedHubSiteId** | **String** |  | [optional] 
+**AssociatedHubSiteTitle** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientHubSiteSettings  -Enabled null `
+$HubSiteSettings = New-Cloud.Governance.ClientHubSiteSettings  -Enabled null `
  -Action null `
  -AssociatedHubSiteId null `
  -AssociatedHubSiteTitle null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$HubSiteSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

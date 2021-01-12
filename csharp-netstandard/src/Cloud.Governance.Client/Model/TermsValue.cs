@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -25,35 +26,56 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TermsValue" /> class.
         /// </summary>
-        /// <param name="termStore">termStore.</param>
-        /// <param name="termGroup">termGroup.</param>
-        /// <param name="termSet">termSet.</param>
         /// <param name="value">value.</param>
-        public TermsValue(GuidModel termStore = default(GuidModel), GuidModel termGroup = default(GuidModel), GuidModel termSet = default(GuidModel), List<GuidModel> value = default(List<GuidModel>))
+        public TermsValue(List<GuidModel> value = default(List<GuidModel>))
         {
-            this.TermStore = termStore;
-            this.TermGroup = termGroup;
-            this.TermSet = termSet;
             this.Value = value;
         }
 
         /// <summary>
         /// Gets or Sets TermStore
         /// </summary>
-        [DataMember(Name = "termStore", EmitDefaultValue = false)]
-        public GuidModel TermStore { get; set; }
+        [DataMember(Name = "termStore", EmitDefaultValue = true)]
+        public GuidModel TermStore { get; private set; }
+
+        /// <summary>
+        /// Returns false as TermStore should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTermStore()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets TermGroup
         /// </summary>
-        [DataMember(Name = "termGroup", EmitDefaultValue = false)]
-        public GuidModel TermGroup { get; set; }
+        [DataMember(Name = "termGroup", EmitDefaultValue = true)]
+        public GuidModel TermGroup { get; private set; }
+
+        /// <summary>
+        /// Returns false as TermGroup should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTermGroup()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets TermSet
         /// </summary>
-        [DataMember(Name = "termSet", EmitDefaultValue = false)]
-        public GuidModel TermSet { get; set; }
+        [DataMember(Name = "termSet", EmitDefaultValue = true)]
+        public GuidModel TermSet { get; private set; }
+
+        /// <summary>
+        /// Returns false as TermSet should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTermSet()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets Value

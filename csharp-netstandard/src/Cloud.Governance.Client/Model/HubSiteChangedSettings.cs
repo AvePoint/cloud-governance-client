@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -47,6 +48,15 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "enabled", EmitDefaultValue = false)]
         public bool Enabled { get; private set; }
+
+        /// <summary>
+        /// Returns false as Enabled should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeEnabled()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets IsModernSite

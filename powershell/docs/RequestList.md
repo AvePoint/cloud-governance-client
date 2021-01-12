@@ -3,28 +3,28 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ServiceId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ServiceName** | **String** |  | [optional] [default to null]
-**ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**ServiceTypeDescription** | **String** |  | [optional] [readonly] [default to null]
-**TicketNumber** | **Int32** |  | [optional] [default to null]
-**Summary** | **String** |  | [optional] [default to null]
-**Status** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] [default to null]
-**ProcessStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [default to null]
-**StatusDescription** | **String** |  | [optional] [readonly] [default to null]
-**Modified** | **System.DateTime** |  | [optional] [default to null]
-**SubmitStatus** | **Int32** |  | [optional] [default to null]
-**Assigned** | **String** |  | [optional] [default to null]
-**ServiceAdmin** | **String** |  | [optional] [default to null]
-**EnabledCopy** | **Boolean** |  | [optional] [default to null]
-**QuestionnaireId** | [**UUID**](UUID.md) |  | [optional] [readonly] [default to null]
+**Id** | **String** |  | [optional] 
+**ServiceId** | **String** |  | [optional] 
+**ServiceName** | **String** |  | [optional] 
+**ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**ServiceTypeDescription** | **String** |  | [optional] 
+**TicketNumber** | **Int32** |  | [optional] 
+**Summary** | **String** |  | [optional] 
+**Status** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] 
+**ProcessStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] 
+**StatusDescription** | **String** |  | [optional] 
+**Modified** | **System.DateTime** |  | [optional] 
+**SubmitStatus** | **Int32** |  | [optional] 
+**Assigned** | **String** |  | [optional] 
+**ServiceAdmin** | **String** |  | [optional] 
+**EnabledCopy** | **Boolean** |  | [optional] 
+**QuestionnaireId** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientRequestList  -Id null `
+$RequestList = New-Cloud.Governance.ClientRequestList  -Id null `
  -ServiceId null `
  -ServiceName null `
  -ServiceType null `
@@ -42,11 +42,10 @@ New-Cloud.Governance.ClientRequestList  -Id null `
  -QuestionnaireId null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$RequestList | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

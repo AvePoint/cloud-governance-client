@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -33,12 +34,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="value">value.</param>
+        /// <param name="displayValue">displayValue.</param>
         /// <param name="type">type.</param>
-        public ReportMetadata(string id = default(string), string name = default(string), string value = default(string), MetadataFieldType? type = default(MetadataFieldType?))
+        public ReportMetadata(string id = default(string), string name = default(string), string value = default(string), string displayValue = default(string), MetadataFieldType? type = default(MetadataFieldType?))
         {
             this.Id = id;
             this.Name = name;
             this.Value = value;
+            this.DisplayValue = displayValue;
             this.Type = type;
         }
 
@@ -61,6 +64,12 @@ namespace Cloud.Governance.Client.Model
         public string Value { get; set; }
 
         /// <summary>
+        /// Gets or Sets DisplayValue
+        /// </summary>
+        [DataMember(Name = "displayValue", EmitDefaultValue = true)]
+        public string DisplayValue { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -71,6 +80,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  DisplayValue: ").Append(DisplayValue).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -122,6 +132,11 @@ namespace Cloud.Governance.Client.Model
                     this.Value.Equals(input.Value))
                 ) && 
                 (
+                    this.DisplayValue == input.DisplayValue ||
+                    (this.DisplayValue != null &&
+                    this.DisplayValue.Equals(input.DisplayValue))
+                ) && 
+                (
                     this.Type == input.Type ||
                     this.Type.Equals(input.Type)
                 );
@@ -142,6 +157,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
+                if (this.DisplayValue != null)
+                    hashCode = hashCode * 59 + this.DisplayValue.GetHashCode();
                 hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }

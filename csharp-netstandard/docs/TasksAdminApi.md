@@ -1,6 +1,6 @@
 # Cloud.Governance.Client.Api.TasksAdminApi
 
-All URIs are relative to *Cloud_Governance_Modern_API_Endpoint*
+All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -30,20 +30,20 @@ namespace Example
             Configuration config = new Configuration();
 
             //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
-            config.BasePath = "Cloud_Governance_Modern_API_Endpoint";
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
 
             // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
             config.AddApiKey("clientSecret", "eyJ...");
 
             // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
-            // Make sure the user’s account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
             // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
             config.AddApiKey("userPrincipalName", "someone@example.com");
 
             var apiInstance = new TasksAdminApi(config);
 
-            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee (optional) 
-            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, title, requester, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee (optional) 
+            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName (optional) 
+            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName (optional) 
             var search = search_example;  // string | Search for title (optional) 
             var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
             var skip = skip_example;  // string |  Define the number of records you want to skip, default value is 0 (optional) 
@@ -70,8 +70,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee | [optional] 
- **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee | [optional] 
+ **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName | [optional] 
+ **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName | [optional] 
  **search** | **string**| Search for title | [optional] 
  **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **skip** | **string**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

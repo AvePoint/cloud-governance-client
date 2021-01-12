@@ -3,20 +3,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GrantPermissionSetting** | [**ManagePermissionGrantSetting**](ManagePermissionGrantSetting.md) |  | [optional] [default to null]
-**IsEnableEditPermission** | **Boolean** |  | [optional] [default to null]
-**IsEnableRemovePermission** | **Boolean** |  | [optional] [default to null]
-**IsEnableStopInheritPermission** | **Boolean** |  | [optional] [default to null]
-**IsEnableDeleteUniquePermission** | **Boolean** |  | [optional] [default to null]
-**IsEnableExcludePermissionLevel** | **Boolean** |  | [optional] [default to null]
-**IsHideExcludePermissionItem** | **Boolean** |  | [optional] [default to null]
-**ExcludedPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] [default to null]
+**GrantPermissionSetting** | [**ManagePermissionGrantSetting**](ManagePermissionGrantSetting.md) |  | [optional] 
+**IsEnableEditPermission** | **Boolean** |  | [optional] 
+**IsEnableRemovePermission** | **Boolean** |  | [optional] 
+**IsEnableStopInheritPermission** | **Boolean** |  | [optional] 
+**IsEnableDeleteUniquePermission** | **Boolean** |  | [optional] 
+**IsEnableExcludePermissionLevel** | **Boolean** |  | [optional] 
+**IsHideExcludePermissionItem** | **Boolean** |  | [optional] 
+**ExcludedPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientManagePermissionOption  -GrantPermissionSetting null `
+$ManagePermissionOption = New-Cloud.Governance.ClientManagePermissionOption  -GrantPermissionSetting null `
  -IsEnableEditPermission null `
  -IsEnableRemovePermission null `
  -IsEnableStopInheritPermission null `
@@ -26,11 +26,10 @@ New-Cloud.Governance.ClientManagePermissionOption  -GrantPermissionSetting null 
  -ExcludedPermissionLevles null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ManagePermissionOption | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

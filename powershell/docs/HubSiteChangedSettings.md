@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [readonly] [default to null]
-**IsModernSite** | **Boolean** |  | [optional] [default to null]
-**Action** | [**ChangeHubsiteActionType**](ChangeHubsiteActionType.md) |  | [optional] [default to null]
-**AssociatedHubSiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**AssociatedHubSiteTitle** | **String** |  | [optional] [default to null]
+**Enabled** | **Boolean** |  | [optional] [readonly] 
+**IsModernSite** | **Boolean** |  | [optional] 
+**Action** | [**ChangeHubsiteActionType**](ChangeHubsiteActionType.md) |  | [optional] 
+**AssociatedHubSiteId** | **String** |  | [optional] 
+**AssociatedHubSiteTitle** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientHubSiteChangedSettings  -Enabled null `
+$HubSiteChangedSettings = New-Cloud.Governance.ClientHubSiteChangedSettings  -Enabled null `
  -IsModernSite null `
  -Action null `
  -AssociatedHubSiteId null `
  -AssociatedHubSiteTitle null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$HubSiteChangedSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

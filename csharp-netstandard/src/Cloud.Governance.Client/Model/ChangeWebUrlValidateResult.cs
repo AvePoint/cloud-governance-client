@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -51,7 +52,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
-        [DataMember(Name = "url", EmitDefaultValue = false)]
+        [DataMember(Name = "url", EmitDefaultValue = true)]
         public ChangeWebSPObject Url { get; set; }
 
         /// <summary>

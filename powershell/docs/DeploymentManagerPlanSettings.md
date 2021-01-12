@@ -3,26 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [default to null]
-**Plans** | **String[]** |  | [optional] [default to null]
-**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Default** | **String** |  | [optional] [default to null]
+**Enabled** | **Boolean** |  | [optional] 
+**Plans** | **String[]** |  | [optional] 
+**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Default** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientDeploymentManagerPlanSettings  -Enabled null `
+$DeploymentManagerPlanSettings = New-Cloud.Governance.ClientDeploymentManagerPlanSettings  -Enabled null `
  -Plans null `
  -AssignBy null `
  -Default null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$DeploymentManagerPlanSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -19,6 +19,60 @@ namespace Cloud.Governance.Client.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// apply groups policy
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <returns></returns>
+        void ApplyGroupsPolicy(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel));
+
+        /// <summary>
+        /// apply groups policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ApplyGroupsPolicyWithHttpInfo(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel));
+        /// <summary>
+        /// apply site policy
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <returns></returns>
+        void ApplySitesPolicy(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel));
+
+        /// <summary>
+        /// apply site policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ApplySitesPolicyWithHttpInfo(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel));
+        /// <summary>
+        /// archive workspace
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <returns></returns>
+        void ArchiveWorkspace(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter));
+
+        /// <summary>
+        /// archive workspace
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ArchiveWorkspaceWithHttpInfo(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter));
+        /// <summary>
         /// completed renewal task
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -55,11 +109,31 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteWorkspacesWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
         /// <summary>
+        /// get workspace ongoing tasks
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <returns>List&lt;WorksapceOngoingTasksModel&gt;</returns>
+        List<WorksapceOngoingTasksModel> GetOngoingTasks(WorkspaceType type, string groupNameOrUrl);
+
+        /// <summary>
+        /// get workspace ongoing tasks
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <returns>ApiResponse of List&lt;WorksapceOngoingTasksModel&gt;</returns>
+        ApiResponse<List<WorksapceOngoingTasksModel>> GetOngoingTasksWithHttpInfo(WorkspaceType type, string groupNameOrUrl);
+        /// <summary>
         /// get managed workspaces
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -74,8 +148,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -146,6 +220,75 @@ namespace Cloud.Governance.Client.Api
     {
         #region Asynchronous Operations
         /// <summary>
+        /// apply groups policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ApplyGroupsPolicyAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// apply groups policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ApplyGroupsPolicyWithHttpInfoAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// apply site policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ApplySitesPolicyAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// apply site policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ApplySitesPolicyWithHttpInfoAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// archive workspace
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ArchiveWorkspaceAsync(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// archive workspace
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ArchiveWorkspaceWithHttpInfoAsync(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// completed renewal task
         /// </summary>
         /// <remarks>
@@ -192,14 +335,39 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// get workspace ongoing tasks
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;WorksapceOngoingTasksModel&gt;</returns>
+        System.Threading.Tasks.Task<List<WorksapceOngoingTasksModel>> GetOngoingTasksAsync(WorkspaceType type, string groupNameOrUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get workspace ongoing tasks
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;WorksapceOngoingTasksModel&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<WorksapceOngoingTasksModel>>> GetOngoingTasksWithHttpInfoAsync(WorkspaceType type, string groupNameOrUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// get managed workspaces
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -215,8 +383,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -414,6 +582,387 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// apply groups policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <returns></returns>
+        public void ApplyGroupsPolicy(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel))
+        {
+            ApplyGroupsPolicyWithHttpInfo(applyGroupPolicyModel);
+        }
+
+        /// <summary>
+        /// apply groups policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> ApplyGroupsPolicyWithHttpInfo(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = applyGroupPolicyModel;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/admin/directory/workspace/groups/policy", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApplyGroupsPolicy", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// apply groups policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ApplyGroupsPolicyAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await ApplyGroupsPolicyWithHttpInfoAsync(applyGroupPolicyModel, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// apply groups policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ApplyGroupsPolicyWithHttpInfoAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = applyGroupPolicyModel;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/admin/directory/workspace/groups/policy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApplyGroupsPolicy", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// apply site policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <returns></returns>
+        public void ApplySitesPolicy(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel))
+        {
+            ApplySitesPolicyWithHttpInfo(applySitePolicyModel);
+        }
+
+        /// <summary>
+        /// apply site policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> ApplySitesPolicyWithHttpInfo(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = applySitePolicyModel;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/admin/directory/workspace/sites/policy", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApplySitesPolicy", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// apply site policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ApplySitesPolicyAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await ApplySitesPolicyWithHttpInfoAsync(applySitePolicyModel, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// apply site policy 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ApplySitesPolicyWithHttpInfoAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = applySitePolicyModel;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/admin/directory/workspace/sites/policy", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ApplySitesPolicy", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// archive workspace 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <returns></returns>
+        public void ArchiveWorkspace(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter))
+        {
+            ArchiveWorkspaceWithHttpInfo(archiveWorkspaceParameter);
+        }
+
+        /// <summary>
+        /// archive workspace 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> ArchiveWorkspaceWithHttpInfo(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = archiveWorkspaceParameter;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/admin/directory/workspace/archive", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ArchiveWorkspace", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// archive workspace 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ArchiveWorkspaceAsync(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await ArchiveWorkspaceWithHttpInfoAsync(archiveWorkspaceParameter, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// archive workspace 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="archiveWorkspaceParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ArchiveWorkspaceWithHttpInfoAsync(ArchiveWorkspaceParameter archiveWorkspaceParameter = default(ArchiveWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = archiveWorkspaceParameter;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/admin/directory/workspace/archive", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ArchiveWorkspace", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -436,17 +985,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -506,17 +1051,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -574,14 +1115,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -640,14 +1179,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 
@@ -684,11 +1221,154 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// get workspace ongoing tasks 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <returns>List&lt;WorksapceOngoingTasksModel&gt;</returns>
+        public List<WorksapceOngoingTasksModel> GetOngoingTasks(WorkspaceType type, string groupNameOrUrl)
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<WorksapceOngoingTasksModel>> localVarResponse = GetOngoingTasksWithHttpInfo(type, groupNameOrUrl);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get workspace ongoing tasks 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <returns>ApiResponse of List&lt;WorksapceOngoingTasksModel&gt;</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<List<WorksapceOngoingTasksModel>> GetOngoingTasksWithHttpInfo(WorkspaceType type, string groupNameOrUrl)
+        {
+            // verify the required parameter 'groupNameOrUrl' is set
+            if (groupNameOrUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupNameOrUrl' when calling WorkspacesAdminApi->GetOngoingTasks");
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("type", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(type)); // path parameter
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "groupNameOrUrl", groupNameOrUrl));
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<WorksapceOngoingTasksModel>>("/admin/directory/workspace/{type}/ongoningtasks", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetOngoingTasks", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get workspace ongoing tasks 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;WorksapceOngoingTasksModel&gt;</returns>
+        public async System.Threading.Tasks.Task<List<WorksapceOngoingTasksModel>> GetOngoingTasksAsync(WorkspaceType type, string groupNameOrUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<WorksapceOngoingTasksModel>> localVarResponse = await GetOngoingTasksWithHttpInfoAsync(type, groupNameOrUrl, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get workspace ongoing tasks 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type"></param>
+        /// <param name="groupNameOrUrl"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;WorksapceOngoingTasksModel&gt;)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<WorksapceOngoingTasksModel>>> GetOngoingTasksWithHttpInfoAsync(WorkspaceType type, string groupNameOrUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            // verify the required parameter 'groupNameOrUrl' is set
+            if (groupNameOrUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'groupNameOrUrl' when calling WorkspacesAdminApi->GetOngoingTasks");
+
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("type", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(type)); // path parameter
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "groupNameOrUrl", groupNameOrUrl));
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<WorksapceOngoingTasksModel>>("/admin/directory/workspace/{type}/ongoningtasks", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetOngoingTasks", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -704,8 +1384,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -721,8 +1401,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -783,8 +1462,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -801,8 +1480,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -820,8 +1499,7 @@ namespace Cloud.Governance.Client.Api
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -902,14 +1580,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -968,14 +1644,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 
@@ -1034,17 +1708,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1104,17 +1774,13 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
                 "text/plain",
-                "application/json",
-                "text/json"
+                "application/json"
             };
 
 
@@ -1172,14 +1838,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json",
-                "application/json",
-                "text/json",
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
             var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
@@ -1238,14 +1902,12 @@ namespace Cloud.Governance.Client.Api
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
-                "application/json-patch+json", 
-                "application/json", 
-                "text/json", 
-                "application/_*+json"
+                "application/json"
             };
 
             // to determine the Accept header
             String[] _accepts = new String[] {
+                "application/json"
             };
 
 

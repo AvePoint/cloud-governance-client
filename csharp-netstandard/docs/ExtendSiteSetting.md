@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**IsEnabled** | **bool** |  | [optional] 
 **ExtendType** | **ExtendType** |  | [optional] 
 **Duration** | **int** |  | [optional] 
 **DurationType** | **ApiDurationType** |  | [optional] 

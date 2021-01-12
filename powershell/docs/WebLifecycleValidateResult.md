@@ -3,32 +3,33 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WebId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**WebUrl** | **String** |  | [optional] [default to null]
-**WebRelativeUrl** | **String** |  | [optional] [default to null]
-**SiteId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SiteUrl** | **String** |  | [optional] [default to null]
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to null]
-**ErrorMessage** | **String** |  | [optional] [default to null]
+**WebId** | **String** |  | [optional] 
+**WebUrl** | **String** |  | [optional] 
+**WebRelativeUrl** | **String** |  | [optional] 
+**SiteId** | **String** |  | [optional] 
+**SiteUrl** | **String** |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] 
+**ErrorMessage** | **String** |  | [optional] 
+**MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientWebLifecycleValidateResult  -WebId null `
+$WebLifecycleValidateResult = New-Cloud.Governance.ClientWebLifecycleValidateResult  -WebId null `
  -WebUrl null `
  -WebRelativeUrl null `
  -SiteId null `
  -SiteUrl null `
  -IsValid null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -MessageCode null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$WebLifecycleValidateResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,21 +3,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CurrentPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
-**AllPolicies** | [**GuidModel[]**](GuidModel.md) |  | [optional] [default to null]
-**ChangePolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**StartDateType** | [**StartDateType**](StartDateType.md) |  | [optional] [default to null]
-**ServiceSpecifyDate** | **System.DateTime** |  | [optional] [default to null]
-**IsEnableLeaseExpired** | **Boolean** |  | [optional] [default to null]
-**LeaseDuration** | **Int32** |  | [optional] [default to null]
-**LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] [default to null]
-**CurrentStartDate** | **System.DateTime** |  | [optional] [default to null]
+**CurrentPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**AllPolicies** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**ChangePolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**StartDateType** | [**StartDateType**](StartDateType.md) |  | [optional] 
+**ServiceSpecifyDate** | **System.DateTime** |  | [optional] 
+**IsEnableLeaseExpired** | **Boolean** |  | [optional] 
+**LeaseDuration** | **Int32** |  | [optional] 
+**LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
+**CurrentStartDate** | **System.DateTime** |  | [optional] 
+**IsAllowAutoCancel** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeSitePolicySetting  -CurrentPolicy null `
+$ChangeSitePolicySetting = New-Cloud.Governance.ClientChangeSitePolicySetting  -CurrentPolicy null `
  -AllPolicies null `
  -ChangePolicyAssignBy null `
  -StartDateType null `
@@ -25,14 +26,14 @@ New-Cloud.Governance.ClientChangeSitePolicySetting  -CurrentPolicy null `
  -IsEnableLeaseExpired null `
  -LeaseDuration null `
  -LeaseDurationType null `
- -CurrentStartDate null
+ -CurrentStartDate null `
+ -IsAllowAutoCancel null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeSitePolicySetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

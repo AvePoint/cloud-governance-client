@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -40,14 +41,16 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExtendSiteSetting" /> class.
         /// </summary>
+        /// <param name="isEnabled">isEnabled.</param>
         /// <param name="extendType">extendType.</param>
         /// <param name="duration">duration.</param>
         /// <param name="durationType">durationType.</param>
         /// <param name="constantDuration">constantDuration.</param>
         /// <param name="constantDurationType">constantDurationType.</param>
         /// <param name="extendBasedTime">extendBasedTime.</param>
-        public ExtendSiteSetting(ExtendType? extendType = default(ExtendType?), int duration = default(int), ApiDurationType? durationType = default(ApiDurationType?), int constantDuration = default(int), ApiDurationType? constantDurationType = default(ApiDurationType?), DateTime extendBasedTime = default(DateTime))
+        public ExtendSiteSetting(bool isEnabled = default(bool), ExtendType? extendType = default(ExtendType?), int duration = default(int), ApiDurationType? durationType = default(ApiDurationType?), int constantDuration = default(int), ApiDurationType? constantDurationType = default(ApiDurationType?), DateTime extendBasedTime = default(DateTime))
         {
+            this.IsEnabled = isEnabled;
             this.ExtendType = extendType;
             this.Duration = duration;
             this.DurationType = durationType;
@@ -55,6 +58,12 @@ namespace Cloud.Governance.Client.Model
             this.ConstantDurationType = constantDurationType;
             this.ExtendBasedTime = extendBasedTime;
         }
+
+        /// <summary>
+        /// Gets or Sets IsEnabled
+        /// </summary>
+        [DataMember(Name = "isEnabled", EmitDefaultValue = false)]
+        public bool IsEnabled { get; set; }
 
         /// <summary>
         /// Gets or Sets Duration
@@ -82,6 +91,7 @@ namespace Cloud.Governance.Client.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExtendSiteSetting {\n");
+            sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
             sb.Append("  ExtendType: ").Append(ExtendType).Append("\n");
             sb.Append("  Duration: ").Append(Duration).Append("\n");
             sb.Append("  DurationType: ").Append(DurationType).Append("\n");
@@ -123,6 +133,10 @@ namespace Cloud.Governance.Client.Model
 
             return 
                 (
+                    this.IsEnabled == input.IsEnabled ||
+                    this.IsEnabled.Equals(input.IsEnabled)
+                ) && 
+                (
                     this.ExtendType == input.ExtendType ||
                     this.ExtendType.Equals(input.ExtendType)
                 ) && 
@@ -158,6 +172,7 @@ namespace Cloud.Governance.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                hashCode = hashCode * 59 + this.IsEnabled.GetHashCode();
                 hashCode = hashCode * 59 + this.ExtendType.GetHashCode();
                 hashCode = hashCode * 59 + this.Duration.GetHashCode();
                 hashCode = hashCode * 59 + this.DurationType.GetHashCode();

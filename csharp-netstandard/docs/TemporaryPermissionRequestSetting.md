@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IsGrantTemporaryPermission** | **bool** |  | [optional] 
+**IsGrantAdminGroup** | **bool** |  | [optional] 
 **ExpirationType** | **ExpirationType** |  | [optional] 
 **DurationInterval** | **int?** |  | [optional] 
 **DurationDateType** | **ApiDurationType** |  | [optional] 

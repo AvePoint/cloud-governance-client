@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Office365Tenant** | [**GuidModel**](GuidModel.md) |  | [optional] [default to null]
-**UseBuiltInProperty** | **Boolean** |  | [optional] [default to null]
-**Value** | [**LookupValue**](LookupValue.md) |  | [optional] [default to null]
-**Property** | **String** |  | [optional] [default to null]
-**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to null]
+**Office365Tenant** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**UseBuiltInProperty** | **Boolean** |  | [optional] 
+**Value** | [**LookupValue**](LookupValue.md) |  | [optional] 
+**Property** | **String** |  | [optional] 
+**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientAzureAdMetadataSettings  -Office365Tenant null `
+$AzureAdMetadataSettings = New-Cloud.Governance.ClientAzureAdMetadataSettings  -Office365Tenant null `
  -UseBuiltInProperty null `
  -Value null `
  -Property null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AzureAdMetadataSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

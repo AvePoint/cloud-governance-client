@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -25,13 +26,31 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name = "type", EmitDefaultValue = false)]
+        [DataMember(Name = "type", EmitDefaultValue = true)]
         public ServiceType? Type { get; set; }
+
+        /// <summary>
+        /// Returns false as Type should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeType()
+        {
+            return false;
+        }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name = "status", EmitDefaultValue = false)]
+        [DataMember(Name = "status", EmitDefaultValue = true)]
         public RequestStatus? Status { get; set; }
+
+        /// <summary>
+        /// Returns false as Status should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeStatus()
+        {
+            return false;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeWebSettingRequest" /> class.
         /// </summary>
@@ -47,12 +66,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">notesToApprovers.</param>
         /// <param name="questionnaireId">questionnaireId.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="type">type.</param>
-        /// <param name="typeDescription">typeDescription.</param>
-        /// <param name="status">status.</param>
-        /// <param name="progressStatus">progressStatus.</param>
-        /// <param name="progressStatusDescription">progressStatusDescription.</param>
-        public ChangeWebSettingRequest(ChangeWebSPObject url = default(ChangeWebSPObject), StringChangedProperty changedTitle = default(StringChangedProperty), StringChangedProperty changedDescription = default(StringChangedProperty), RequestMetadataListChangedProperty changedMetadata = default(RequestMetadataListChangedProperty), string deploymentPlanName = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ServiceType? type = default(ServiceType?), string typeDescription = default(string), RequestStatus? status = default(RequestStatus?), int progressStatus = default(int), string progressStatusDescription = default(string))
+        public ChangeWebSettingRequest(ChangeWebSPObject url = default(ChangeWebSPObject), StringChangedProperty changedTitle = default(StringChangedProperty), StringChangedProperty changedDescription = default(StringChangedProperty), RequestMetadataListChangedProperty changedMetadata = default(RequestMetadataListChangedProperty), string deploymentPlanName = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.Url = url;
             this.ChangedTitle = changedTitle;
@@ -66,35 +80,30 @@ namespace Cloud.Governance.Client.Model
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
             this.Metadatas = metadatas;
-            this.Type = type;
-            this.TypeDescription = typeDescription;
-            this.Status = status;
-            this.ProgressStatus = progressStatus;
-            this.ProgressStatusDescription = progressStatusDescription;
         }
 
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
-        [DataMember(Name = "url", EmitDefaultValue = false)]
+        [DataMember(Name = "url", EmitDefaultValue = true)]
         public ChangeWebSPObject Url { get; set; }
 
         /// <summary>
         /// Gets or Sets ChangedTitle
         /// </summary>
-        [DataMember(Name = "changedTitle", EmitDefaultValue = false)]
+        [DataMember(Name = "changedTitle", EmitDefaultValue = true)]
         public StringChangedProperty ChangedTitle { get; set; }
 
         /// <summary>
         /// Gets or Sets ChangedDescription
         /// </summary>
-        [DataMember(Name = "changedDescription", EmitDefaultValue = false)]
+        [DataMember(Name = "changedDescription", EmitDefaultValue = true)]
         public StringChangedProperty ChangedDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets ChangedMetadata
         /// </summary>
-        [DataMember(Name = "changedMetadata", EmitDefaultValue = false)]
+        [DataMember(Name = "changedMetadata", EmitDefaultValue = true)]
         public RequestMetadataListChangedProperty ChangedMetadata { get; set; }
 
         /// <summary>
@@ -152,10 +161,28 @@ namespace Cloud.Governance.Client.Model
         public int? TicketNumber { get; private set; }
 
         /// <summary>
+        /// Returns false as TicketNumber should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTicketNumber()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets TypeDescription
         /// </summary>
         [DataMember(Name = "typeDescription", EmitDefaultValue = true)]
-        public string TypeDescription { get; set; }
+        public string TypeDescription { get; private set; }
+
+        /// <summary>
+        /// Returns false as TypeDescription should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeTypeDescription()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets Requester
@@ -164,22 +191,58 @@ namespace Cloud.Governance.Client.Model
         public string Requester { get; private set; }
 
         /// <summary>
+        /// Returns false as Requester should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeRequester()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets RequesterLoginName
         /// </summary>
         [DataMember(Name = "requesterLoginName", EmitDefaultValue = true)]
         public string RequesterLoginName { get; private set; }
 
         /// <summary>
+        /// Returns false as RequesterLoginName should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeRequesterLoginName()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets ProgressStatus
         /// </summary>
         [DataMember(Name = "progressStatus", EmitDefaultValue = false)]
-        public int ProgressStatus { get; set; }
+        public int ProgressStatus { get; private set; }
+
+        /// <summary>
+        /// Returns false as ProgressStatus should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeProgressStatus()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets ProgressStatusDescription
         /// </summary>
         [DataMember(Name = "progressStatusDescription", EmitDefaultValue = true)]
-        public string ProgressStatusDescription { get; set; }
+        public string ProgressStatusDescription { get; private set; }
+
+        /// <summary>
+        /// Returns false as ProgressStatusDescription should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeProgressStatusDescription()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets SubmittedTime
@@ -188,10 +251,28 @@ namespace Cloud.Governance.Client.Model
         public DateTime? SubmittedTime { get; private set; }
 
         /// <summary>
+        /// Returns false as SubmittedTime should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeSubmittedTime()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets LastUpdated
         /// </summary>
         [DataMember(Name = "lastUpdated", EmitDefaultValue = true)]
         public DateTime? LastUpdated { get; private set; }
+
+        /// <summary>
+        /// Returns false as LastUpdated should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeLastUpdated()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets CreatedTime
@@ -200,16 +281,43 @@ namespace Cloud.Governance.Client.Model
         public DateTime? CreatedTime { get; private set; }
 
         /// <summary>
+        /// Returns false as CreatedTime should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeCreatedTime()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets AssignTo
         /// </summary>
         [DataMember(Name = "assignTo", EmitDefaultValue = true)]
         public string AssignTo { get; private set; }
 
         /// <summary>
+        /// Returns false as AssignTo should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeAssignTo()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets FullPath
         /// </summary>
         [DataMember(Name = "fullPath", EmitDefaultValue = true)]
         public string FullPath { get; private set; }
+
+        /// <summary>
+        /// Returns false as FullPath should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeFullPath()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Returns the string presentation of the object

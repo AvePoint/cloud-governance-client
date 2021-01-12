@@ -3,24 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Type** | [**MetadataFieldType**](MetadataFieldType.md) |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Type** | [**MetadataFieldType**](MetadataFieldType.md) |  | [optional] 
+**ChoiceItems** | [**StringModel[]**](StringModel.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientDynamicRuleElement  -Id null `
+$DynamicRuleElement = New-Cloud.Governance.ClientDynamicRuleElement  -Id null `
  -Name null `
- -Type null
+ -Type null `
+ -ChoiceItems null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$DynamicRuleElement | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

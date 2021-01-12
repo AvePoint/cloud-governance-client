@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -23,6 +24,11 @@ namespace Cloud.Governance.Client.Model
     public partial class GroupLifecycleValidateResult : IEquatable<GroupLifecycleValidateResult>, IValidatableObject
     {
         /// <summary>
+        /// Gets or Sets GroupObjectType
+        /// </summary>
+        [DataMember(Name = "groupObjectType", EmitDefaultValue = false)]
+        public GroupObjectType? GroupObjectType { get; set; }
+        /// <summary>
         /// Gets or Sets MessageCode
         /// </summary>
         [DataMember(Name = "messageCode", EmitDefaultValue = false)]
@@ -34,15 +40,17 @@ namespace Cloud.Governance.Client.Model
         /// <param name="changePolicySetting">changePolicySetting.</param>
         /// <param name="changeQuotaSetting">changeQuotaSetting.</param>
         /// <param name="enableTeamCollaboration">enableTeamCollaboration.</param>
+        /// <param name="groupObjectType">groupObjectType.</param>
         /// <param name="isValid">isValid.</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public GroupLifecycleValidateResult(ExtendGroupResult extendSetting = default(ExtendGroupResult), ChangeGroupPolicyResult changePolicySetting = default(ChangeGroupPolicyResult), ChangeGroupQuotaResult changeQuotaSetting = default(ChangeGroupQuotaResult), bool enableTeamCollaboration = default(bool), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public GroupLifecycleValidateResult(ExtendGroupResult extendSetting = default(ExtendGroupResult), ChangeGroupPolicyResult changePolicySetting = default(ChangeGroupPolicyResult), ChangeGroupQuotaResult changeQuotaSetting = default(ChangeGroupQuotaResult), bool enableTeamCollaboration = default(bool), GroupObjectType? groupObjectType = default(GroupObjectType?), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.ExtendSetting = extendSetting;
             this.ChangePolicySetting = changePolicySetting;
             this.ChangeQuotaSetting = changeQuotaSetting;
             this.EnableTeamCollaboration = enableTeamCollaboration;
+            this.GroupObjectType = groupObjectType;
             this.IsValid = isValid;
             this.ErrorMessage = errorMessage;
             this.MessageCode = messageCode;
@@ -51,19 +59,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ExtendSetting
         /// </summary>
-        [DataMember(Name = "extendSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "extendSetting", EmitDefaultValue = true)]
         public ExtendGroupResult ExtendSetting { get; set; }
 
         /// <summary>
         /// Gets or Sets ChangePolicySetting
         /// </summary>
-        [DataMember(Name = "changePolicySetting", EmitDefaultValue = false)]
+        [DataMember(Name = "changePolicySetting", EmitDefaultValue = true)]
         public ChangeGroupPolicyResult ChangePolicySetting { get; set; }
 
         /// <summary>
         /// Gets or Sets ChangeQuotaSetting
         /// </summary>
-        [DataMember(Name = "changeQuotaSetting", EmitDefaultValue = false)]
+        [DataMember(Name = "changeQuotaSetting", EmitDefaultValue = true)]
         public ChangeGroupQuotaResult ChangeQuotaSetting { get; set; }
 
         /// <summary>
@@ -96,6 +104,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ChangePolicySetting: ").Append(ChangePolicySetting).Append("\n");
             sb.Append("  ChangeQuotaSetting: ").Append(ChangeQuotaSetting).Append("\n");
             sb.Append("  EnableTeamCollaboration: ").Append(EnableTeamCollaboration).Append("\n");
+            sb.Append("  GroupObjectType: ").Append(GroupObjectType).Append("\n");
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  MessageCode: ").Append(MessageCode).Append("\n");
@@ -153,6 +162,10 @@ namespace Cloud.Governance.Client.Model
                     this.EnableTeamCollaboration.Equals(input.EnableTeamCollaboration)
                 ) && 
                 (
+                    this.GroupObjectType == input.GroupObjectType ||
+                    this.GroupObjectType.Equals(input.GroupObjectType)
+                ) && 
+                (
                     this.IsValid == input.IsValid ||
                     this.IsValid.Equals(input.IsValid)
                 ) && 
@@ -183,6 +196,7 @@ namespace Cloud.Governance.Client.Model
                 if (this.ChangeQuotaSetting != null)
                     hashCode = hashCode * 59 + this.ChangeQuotaSetting.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableTeamCollaboration.GetHashCode();
+                hashCode = hashCode * 59 + this.GroupObjectType.GetHashCode();
                 hashCode = hashCode * 59 + this.IsValid.GetHashCode();
                 if (this.ErrorMessage != null)
                     hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();

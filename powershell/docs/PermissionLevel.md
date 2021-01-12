@@ -3,28 +3,29 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**IdInSharePoint** | **Int32** |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [readonly] [default to null]
-**IsExcluded** | **Boolean** |  | [optional] [readonly] [default to null]
+**Id** | **String** |  | [optional] 
+**IdInSharePoint** | **Int32** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] [readonly] 
+**IsExcluded** | **Boolean** |  | [optional] [readonly] 
+**Type** | **Int32** |  | [optional] [readonly] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientPermissionLevel  -Id null `
+$PermissionLevel = New-Cloud.Governance.ClientPermissionLevel  -Id null `
  -IdInSharePoint null `
  -Name null `
  -Description null `
- -IsExcluded null
+ -IsExcluded null `
+ -Type null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$PermissionLevel | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

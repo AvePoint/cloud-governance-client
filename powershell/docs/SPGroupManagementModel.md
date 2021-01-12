@@ -3,25 +3,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Int32** |  | [optional] [default to null]
-**Name** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Owner** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**Members** | [**SPUserManagementModel[]**](SPUserManagementModel.md) |  | [optional] [default to null]
-**SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] [default to null]
-**SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] [default to null]
-**Permissions** | **String[]** |  | [optional] [default to null]
-**Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] [default to null]
-**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] [default to null]
-**IsAutoAcceptRequest** | **Boolean** |  | [optional] [default to null]
-**SendMembershipRequestEmailAddress** | **String** |  | [optional] [default to null]
-**IsTemporaryGroup** | **Boolean** |  | [optional] [default to null]
+**Id** | **Int32** |  | [optional] 
+**Name** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Owner** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**Members** | [**SPUserManagementModel[]**](SPUserManagementModel.md) |  | [optional] 
+**SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] 
+**SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] 
+**Permissions** | **String[]** |  | [optional] 
+**Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] 
+**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] 
+**IsAutoAcceptRequest** | **Boolean** |  | [optional] 
+**SendMembershipRequestEmailAddress** | **String** |  | [optional] 
+**IsTemporaryGroup** | **Boolean** |  | [optional] 
+**RoleID** | **String[]** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientSPGroupManagementModel  -Id null `
+$SPGroupManagementModel = New-Cloud.Governance.ClientSPGroupManagementModel  -Id null `
  -Name null `
  -Description null `
  -Owner null `
@@ -33,14 +34,14 @@ New-Cloud.Governance.ClientSPGroupManagementModel  -Id null `
  -IsAllowJoinOrLeaveRequest null `
  -IsAutoAcceptRequest null `
  -SendMembershipRequestEmailAddress null `
- -IsTemporaryGroup null
+ -IsTemporaryGroup null `
+ -RoleID null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$SPGroupManagementModel | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

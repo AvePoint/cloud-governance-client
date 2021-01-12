@@ -3,23 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**IsGrantTemporaryPermission** | **Boolean** |  | [optional] [default to null]
-**DefaultDurationInterval** | **Int32** |  | [optional] [default to null]
-**DefaultDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] [default to null]
-**IsEnableMaxDuration** | **Boolean** |  | [optional] [default to null]
-**MaxDuration** | **Int32** |  | [optional] [default to null]
-**MaxDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] [default to null]
-**IsEnableExpirationNotify** | **Boolean** |  | [optional] [default to null]
-**ExpirationNotifyDurationInterval** | **Int32** |  | [optional] [default to null]
-**ExpirationNotifyDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] [default to null]
-**IsOnlyUseDefaultDuration** | **Boolean** |  | [optional] [default to null]
+**AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**IsGrantTemporaryPermission** | **Boolean** |  | [optional] 
+**DefaultDurationInterval** | **Int32** |  | [optional] 
+**DefaultDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] 
+**IsEnableMaxDuration** | **Boolean** |  | [optional] 
+**MaxDuration** | **Int32** |  | [optional] 
+**MaxDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] 
+**IsEnableExpirationNotify** | **Boolean** |  | [optional] 
+**ExpirationNotifyDurationInterval** | **Int32** |  | [optional] 
+**ExpirationNotifyDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] 
+**IsOnlyUseDefaultDuration** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGrantPermissionServiceDurationSettings  -AssignBy null `
+$GrantPermissionServiceDurationSettings = New-Cloud.Governance.ClientGrantPermissionServiceDurationSettings  -AssignBy null `
  -IsGrantTemporaryPermission null `
  -DefaultDurationInterval null `
  -DefaultDurationType null `
@@ -32,11 +32,10 @@ New-Cloud.Governance.ClientGrantPermissionServiceDurationSettings  -AssignBy nul
  -IsOnlyUseDefaultDuration null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GrantPermissionServiceDurationSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PermissionDurationSettings** | [**TemporaryPermissionRequestSetting**](TemporaryPermissionRequestSetting.md) |  | [optional] [default to null]
-**WelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] [default to null]
+**PermissionDurationSettings** | [**TemporaryPermissionRequestSetting**](TemporaryPermissionRequestSetting.md) |  | [optional] 
+**WelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGrantPermissionModel  -PermissionDurationSettings null `
+$GrantPermissionModel = New-Cloud.Governance.ClientGrantPermissionModel  -PermissionDurationSettings null `
  -WelcomeEmailSettings null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GrantPermissionModel | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

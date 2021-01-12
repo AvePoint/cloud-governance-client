@@ -3,77 +3,86 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] [default to null]
-**AdminCenterUrl** | **String** |  | [optional] [default to null]
-**SiteLanguages** | [**IntModel[]**](IntModel.md) |  | [optional] [default to null]
-**RootSiteAndManagedPaths** | [**RootSiteWithManagedPaths[]**](RootSiteWithManagedPaths.md) |  | [optional] [default to null]
-**SiteUrlSetting** | [**SiteUrlSetting**](SiteUrlSetting.md) |  | [optional] [default to null]
-**MultiGeoSetting** | [**MultiGeoSerivceSetting**](MultiGeoSerivceSetting.md) |  | [optional] [default to null]
-**SiteTitleSetting** | [**SiteTitleSetting**](SiteTitleSetting.md) |  | [optional] [default to null]
-**Policies** | [**PolicyRef[]**](PolicyRef.md) |  | [optional] [default to null]
-**DeploymentManagerPlanSettings** | [**DeploymentManagerPlanSettings**](DeploymentManagerPlanSettings.md) |  | [optional] [default to null]
-**PolicyIdsAndTemplates** | [**PolicyWithTemplates[]**](PolicyWithTemplates.md) |  | [optional] [default to null]
-**TemplateIdsAndPermissions** | [**TemplateWithPermissions[]**](TemplateWithPermissions.md) |  | [optional] [default to null]
-**PermissionSettings** | [**PermissionSettings**](PermissionSettings.md) |  | [optional] [default to null]
-**LeasePeriodSettings** | [**SiteLeasePeriodServiceSettings**](SiteLeasePeriodServiceSettings.md) |  | [optional] [default to null]
-**TimeZones** | [**IntModel[]**](IntModel.md) |  | [optional] [default to null]
-**YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] [default to null]
-**Classifications** | **String[]** |  | [optional] [default to null]
-**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] [default to null]
-**EnabledCustomTemplate** | **Boolean** |  | [optional] [default to null]
-**CustomSiteTemplateListURL** | **String** |  | [optional] [default to null]
-**DefaultPrimaryAdmin** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**DefaultAdditionalAdmins** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**DefaultPrimaryAdminReal** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**DefaultAdditionalAdminsReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**DefaultSiteLanguage** | **Int32** |  | [optional] [default to null]
-**DefaultRootSite** | **String** |  | [optional] [default to null]
-**DefaultManagedPath** | **String** |  | [optional] [default to null]
-**DefaultPolicy** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**DefaultTemplate** | **String** |  | [optional] [default to null]
-**DefaultTimeZone** | **Int32** |  | [optional] [default to null]
-**DefaultClassification** | **String** |  | [optional] [default to null]
-**DefaultDesignType** | **String** |  | [optional] [default to null]
-**SiteLanguageAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**TemplateAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**RootSiteAndManagedPathAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**TimeZoneAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PrimaryAdminAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**AdditionalAdminAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**PrimaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**DesignTypeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**ClassificationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] [default to null]
-**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
-**HideRequestSummary** | **Boolean** |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to null]
-**Departments** | **String[]** |  | [optional] [default to null]
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] [default to null]
-**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to null]
-**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] [default to null]
-**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to null]
-**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] [default to null]
-**ApprovalProcessId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LanguageId** | **Int32** |  | [optional] [default to null]
-**CategoryId** | **String** |  | [optional] [default to null]
+**ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
+**AdminCenterUrl** | **String** |  | [optional] 
+**SiteLanguages** | [**IntModel[]**](IntModel.md) |  | [optional] 
+**RootSiteAndManagedPaths** | [**RootSiteWithManagedPaths[]**](RootSiteWithManagedPaths.md) |  | [optional] 
+**SiteUrlSetting** | [**SiteUrlSetting**](SiteUrlSetting.md) |  | [optional] 
+**MultiGeoSetting** | [**MultiGeoSerivceSetting**](MultiGeoSerivceSetting.md) |  | [optional] 
+**SiteTitleSetting** | [**SiteTitleSetting**](SiteTitleSetting.md) |  | [optional] 
+**Policies** | [**PolicyRef[]**](PolicyRef.md) |  | [optional] 
+**DeploymentManagerPlanSettings** | [**DeploymentManagerPlanSettings**](DeploymentManagerPlanSettings.md) |  | [optional] 
+**PolicyIdsAndTemplates** | [**PolicyWithTemplates[]**](PolicyWithTemplates.md) |  | [optional] 
+**TemplateIdsAndPermissions** | [**TemplateWithPermissions[]**](TemplateWithPermissions.md) |  | [optional] 
+**PermissionSettings** | [**PermissionSettings**](PermissionSettings.md) |  | [optional] 
+**LeasePeriodSettings** | [**SiteLeasePeriodServiceSettings**](SiteLeasePeriodServiceSettings.md) |  | [optional] 
+**TimeZones** | [**IntModel[]**](IntModel.md) |  | [optional] 
+**SiteDesigns** | [**StringModel[]**](StringModel.md) |  | [optional] 
+**SiteDesign** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**DefaultTeamSiteDesignId** | **String** |  | [optional] 
+**SiteDesignAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] 
+**Classifications** | **String[]** |  | [optional] 
+**Sensitivities** | **String[]** |  | [optional] 
+**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] 
+**EnabledCustomTemplate** | **Boolean** |  | [optional] 
+**CustomSiteTemplateListURL** | **String** |  | [optional] 
+**DefaultPrimaryAdmin** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultAdditionalAdmins** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryAdminReal** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultAdditionalAdminsReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultSiteLanguage** | **Int32** |  | [optional] 
+**DefaultRootSite** | **String** |  | [optional] 
+**DefaultManagedPath** | **String** |  | [optional] 
+**DefaultPolicy** | **String** |  | [optional] 
+**DefaultTemplate** | **String** |  | [optional] 
+**DefaultTimeZone** | **Int32** |  | [optional] 
+**DefaultClassification** | **String** |  | [optional] 
+**DefaultSensitivity** | **String** |  | [optional] 
+**DefaultDesignType** | **String** |  | [optional] 
+**SiteLanguageAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**TemplateAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**RootSiteAndManagedPathAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**TimeZoneAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PrimaryAdminAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**AdditionalAdminAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**PrimaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**DesignTypeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**ClassificationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SensitivityAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**RequestTemplate** | [**CreateSiteRequest**](CreateSiteRequest.md) |  | [optional] 
+**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**Department** | **String** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**Departments** | **String[]** |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
+**ApprovalProcessId** | **String** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] 
+**CategoryId** | **String** |  | [optional] 
+**Details** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientCreateSiteService  -ScopeSettings null `
+$CreateSiteService = New-Cloud.Governance.ClientCreateSiteService  -ScopeSettings null `
  -AdminCenterUrl null `
  -SiteLanguages null `
  -RootSiteAndManagedPaths null `
@@ -87,8 +96,13 @@ New-Cloud.Governance.ClientCreateSiteService  -ScopeSettings null `
  -PermissionSettings null `
  -LeasePeriodSettings null `
  -TimeZones null `
+ -SiteDesigns null `
+ -SiteDesign null `
+ -DefaultTeamSiteDesignId null `
+ -SiteDesignAssignBy null `
  -YammerGroupSettings null `
  -Classifications null `
+ -Sensitivities null `
  -HubSiteSettings null `
  -EnabledCustomTemplate null `
  -CustomSiteTemplateListURL null `
@@ -105,6 +119,7 @@ New-Cloud.Governance.ClientCreateSiteService  -ScopeSettings null `
  -DefaultTemplate null `
  -DefaultTimeZone null `
  -DefaultClassification null `
+ -DefaultSensitivity null `
  -DefaultDesignType null `
  -SiteLanguageAssignBy null `
  -TemplateAssignBy null `
@@ -118,7 +133,9 @@ New-Cloud.Governance.ClientCreateSiteService  -ScopeSettings null `
  -SecondaryContactAssignBy null `
  -DesignTypeAssignBy null `
  -ClassificationAssignBy null `
+ -SensitivityAssignBy null `
  -HubSiteAssignBy null `
+ -RequestTemplate null `
  -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
@@ -137,14 +154,14 @@ New-Cloud.Governance.ClientCreateSiteService  -ScopeSettings null `
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null
+ -CategoryId null `
+ -Details null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$CreateSiteService | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

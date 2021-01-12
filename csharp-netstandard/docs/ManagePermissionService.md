@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **SharePointGroupOptions** | [**ManagePermissionSharePointGroupOption**](ManagePermissionSharePointGroupOption.md) |  | [optional] 
 **PermissionOptions** | [**ManagePermissionOption**](ManagePermissionOption.md) |  | [optional] 
 **ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
+**PeoplePickerFilterProfileId** | **Guid?** |  | [optional] 
+**RequestTemplate** | [**ManagePermissionRequest**](ManagePermissionRequest.md) |  | [optional] 
 **DepartmentAssignBy** | **AssignBy** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] 
@@ -26,6 +28,7 @@ Name | Type | Description | Notes
 **ApprovalProcessId** | **Guid** |  | [optional] 
 **LanguageId** | **int** |  | [optional] 
 **CategoryId** | **string** |  | [optional] 
+**Details** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

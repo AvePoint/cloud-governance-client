@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -27,24 +28,29 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "progressStatus", EmitDefaultValue = false)]
         public ApiRequestProgressStatus? ProgressStatus { get; set; }
+
+        /// <summary>
+        /// Returns false as ProgressStatus should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeProgressStatus()
+        {
+            return false;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeWebContactSubRequest" /> class.
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="assignTo">assignTo.</param>
         /// <param name="reason">reason.</param>
-        /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
-        /// <param name="progressStatus">progressStatus.</param>
         /// <param name="contactChangeSettings">contactChangeSettings.</param>
-        public ChangeWebContactSubRequest(Guid id = default(Guid), ApiUser assignTo = default(ApiUser), string reason = default(string), int status = default(int), string statusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), ChangeWebContactByUrlSetting contactChangeSettings = default(ChangeWebContactByUrlSetting))
+        public ChangeWebContactSubRequest(Guid id = default(Guid), ApiUser assignTo = default(ApiUser), string reason = default(string), string statusDescription = default(string), ChangeWebContactByUrlSetting contactChangeSettings = default(ChangeWebContactByUrlSetting))
         {
             this.Id = id;
             this.AssignTo = assignTo;
             this.Reason = reason;
-            this.Status = status;
             this.StatusDescription = statusDescription;
-            this.ProgressStatus = progressStatus;
             this.ContactChangeSettings = contactChangeSettings;
         }
 
@@ -57,7 +63,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets AssignTo
         /// </summary>
-        [DataMember(Name = "assignTo", EmitDefaultValue = false)]
+        [DataMember(Name = "assignTo", EmitDefaultValue = true)]
         public ApiUser AssignTo { get; set; }
 
         /// <summary>
@@ -70,7 +76,16 @@ namespace Cloud.Governance.Client.Model
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name = "status", EmitDefaultValue = false)]
-        public int Status { get; set; }
+        public int Status { get; private set; }
+
+        /// <summary>
+        /// Returns false as Status should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeStatus()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Gets or Sets StatusDescription
@@ -81,7 +96,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ContactChangeSettings
         /// </summary>
-        [DataMember(Name = "contactChangeSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "contactChangeSettings", EmitDefaultValue = true)]
         public ChangeWebContactByUrlSetting ContactChangeSettings { get; set; }
 
         /// <summary>

@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -33,11 +34,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enabled">enabled.</param>
         /// <param name="action">action.</param>
         /// <param name="associatedHubSiteId">associatedHubSiteId.</param>
-        public HubSiteSettings(bool enabled = default(bool), ConvertHubSiteActionType? action = default(ConvertHubSiteActionType?), Guid? associatedHubSiteId = default(Guid?))
+        /// <param name="associatedHubSiteTitle">associatedHubSiteTitle.</param>
+        public HubSiteSettings(bool enabled = default(bool), ConvertHubSiteActionType? action = default(ConvertHubSiteActionType?), Guid? associatedHubSiteId = default(Guid?), string associatedHubSiteTitle = default(string))
         {
             this.Enabled = enabled;
             this.Action = action;
             this.AssociatedHubSiteId = associatedHubSiteId;
+            this.AssociatedHubSiteTitle = associatedHubSiteTitle;
         }
 
         /// <summary>
@@ -56,7 +59,7 @@ namespace Cloud.Governance.Client.Model
         /// Gets or Sets AssociatedHubSiteTitle
         /// </summary>
         [DataMember(Name = "associatedHubSiteTitle", EmitDefaultValue = true)]
-        public string AssociatedHubSiteTitle { get; private set; }
+        public string AssociatedHubSiteTitle { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -3,19 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**AssignTo** | [**ApiUser[]**](ApiUser.md) |  | [optional] [default to null]
-**Reason** | **String** |  | [optional] [default to null]
-**Status** | **Int32** |  | [optional] [readonly] [default to null]
-**StatusDescription** | **String** |  | [optional] [readonly] [default to null]
-**AdminContactSettings** | [**ChangeContactByUrlSetting**](ChangeContactByUrlSetting.md) |  | [optional] [default to null]
-**ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [default to null]
+**Id** | **String** |  | [optional] 
+**AssignTo** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**Reason** | **String** |  | [optional] 
+**Status** | **Int32** |  | [optional] [readonly] 
+**StatusDescription** | **String** |  | [optional] [readonly] 
+**AdminContactSettings** | [**ChangeContactByUrlSetting**](ChangeContactByUrlSetting.md) |  | [optional] 
+**ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [readonly] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeSiteContactSubRequest  -Id null `
+$ChangeSiteContactSubRequest = New-Cloud.Governance.ClientChangeSiteContactSubRequest  -Id null `
  -AssignTo null `
  -Reason null `
  -Status null `
@@ -24,11 +24,10 @@ New-Cloud.Governance.ClientChangeSiteContactSubRequest  -Id null `
  -ProgressStatus null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeSiteContactSubRequest | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

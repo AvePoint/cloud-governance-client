@@ -3,37 +3,38 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] [default to null]
-**PermissionSettings** | [**GrantPermissionRequestPermissionSettings**](GrantPermissionRequestPermissionSettings.md) |  | [optional] [default to null]
-**PermissionDurationSettings** | [**GrantPermissionRequestDurationSettings**](GrantPermissionRequestDurationSettings.md) |  | [optional] [default to null]
-**SelectedUsers** | [**SharingEnabledUser[]**](SharingEnabledUser.md) |  | [optional] [default to null]
-**ExternalUserSharingSettings** | [**ExternalUserSharingSettings**](ExternalUserSharingSettings.md) |  | [optional] [default to null]
-**WelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ServiceId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Department** | **String** |  | [optional] [default to null]
-**Summary** | **String** |  | [optional] [default to null]
-**NotesToApprovers** | **String** |  | [optional] [default to null]
-**QuestionnaireId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] [default to null]
-**TicketNumber** | **Int32** |  | [optional] [readonly] [default to null]
-**Type** | [**ServiceTypeNullable**](ServiceTypeNullable.md) |  | [optional] [readonly] [default to null]
-**TypeDescription** | **String** |  | [optional] [readonly] [default to null]
-**Requester** | **String** |  | [optional] [readonly] [default to null]
-**Status** | [**RequestStatusNullable**](RequestStatusNullable.md) |  | [optional] [readonly] [default to null]
-**ProgressStatus** | **Int32** |  | [optional] [readonly] [default to null]
-**ProgressStatusDescription** | **String** |  | [optional] [readonly] [default to null]
-**SubmittedTime** | **System.DateTime** |  | [optional] [readonly] [default to null]
-**LastUpdated** | **System.DateTime** |  | [optional] [readonly] [default to null]
-**CreatedTime** | **System.DateTime** |  | [optional] [readonly] [default to null]
-**AssignTo** | **String** |  | [optional] [readonly] [default to null]
-**FullPath** | **String** |  | [optional] [readonly] [default to null]
+**Url** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] 
+**PermissionSettings** | [**GrantPermissionRequestPermissionSettings**](GrantPermissionRequestPermissionSettings.md) |  | [optional] 
+**PermissionDurationSettings** | [**GrantPermissionRequestDurationSettings**](GrantPermissionRequestDurationSettings.md) |  | [optional] 
+**SelectedUsers** | [**SharingEnabledUser[]**](SharingEnabledUser.md) |  | [optional] 
+**ExternalUserSharingSettings** | [**ExternalUserSharingSettings**](ExternalUserSharingSettings.md) |  | [optional] 
+**WelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] 
+**Id** | **String** |  | [optional] 
+**ServiceId** | **String** |  | [optional] 
+**Department** | **String** |  | [optional] 
+**Summary** | **String** |  | [optional] 
+**NotesToApprovers** | **String** |  | [optional] 
+**QuestionnaireId** | **String** |  | [optional] 
+**Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**TicketNumber** | **Int32** |  | [optional] [readonly] 
+**Type** | [**ServiceType**](ServiceType.md) |  | [optional] [readonly] 
+**TypeDescription** | **String** |  | [optional] [readonly] 
+**Requester** | **String** |  | [optional] [readonly] 
+**RequesterLoginName** | **String** |  | [optional] [readonly] 
+**Status** | [**RequestStatus**](RequestStatus.md) |  | [optional] [readonly] 
+**ProgressStatus** | **Int32** |  | [optional] [readonly] 
+**ProgressStatusDescription** | **String** |  | [optional] [readonly] 
+**SubmittedTime** | **System.DateTime** |  | [optional] [readonly] 
+**LastUpdated** | **System.DateTime** |  | [optional] [readonly] 
+**CreatedTime** | **System.DateTime** |  | [optional] [readonly] 
+**AssignTo** | **String** |  | [optional] [readonly] 
+**FullPath** | **String** |  | [optional] [readonly] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGrantPermissionRequest  -Url null `
+$GrantPermissionRequest = New-Cloud.Governance.ClientGrantPermissionRequest  -Url null `
  -PermissionSettings null `
  -PermissionDurationSettings null `
  -SelectedUsers null `
@@ -50,6 +51,7 @@ New-Cloud.Governance.ClientGrantPermissionRequest  -Url null `
  -Type null `
  -TypeDescription null `
  -Requester null `
+ -RequesterLoginName null `
  -Status null `
  -ProgressStatus null `
  -ProgressStatusDescription null `
@@ -60,11 +62,10 @@ New-Cloud.Governance.ClientGrantPermissionRequest  -Url null `
  -FullPath null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GrantPermissionRequest | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

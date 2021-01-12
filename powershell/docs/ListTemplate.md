@@ -3,18 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**Type** | [**SPListTemplateType**](SPListTemplateType.md) |  | [optional] [default to null]
-**BaseType** | [**SPBaseType**](SPBaseType.md) |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**IsCustomTemplate** | **Boolean** |  | [optional] [default to null]
+**Title** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Type** | [**SPListTemplateType**](SPListTemplateType.md) |  | [optional] 
+**BaseType** | [**SPBaseType**](SPBaseType.md) |  | [optional] 
+**Name** | **String** |  | [optional] 
+**IsCustomTemplate** | **Boolean** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientListTemplate  -Title null `
+$ListTemplate = New-Cloud.Governance.ClientListTemplate  -Title null `
  -Description null `
  -Type null `
  -BaseType null `
@@ -22,11 +22,10 @@ New-Cloud.Governance.ClientListTemplate  -Title null `
  -IsCustomTemplate null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ListTemplate | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

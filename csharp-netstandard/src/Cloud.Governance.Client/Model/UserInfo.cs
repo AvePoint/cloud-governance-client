@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -67,13 +68,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="physicalDeliveryOfficeName">physicalDeliveryOfficeName.</param>
         /// <param name="isOtherTenantUser">isOtherTenantUser.</param>
         /// <param name="networkId">networkId.</param>
+        /// <param name="isValidateByProfile">isValidateByProfile.</param>
+        /// <param name="proxyAddresses">proxyAddresses.</param>
         /// <param name="id">id.</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="title">title.</param>
         /// <param name="email">email.</param>
         /// <param name="isValid">isValid.</param>
         /// <param name="existInAOS">existInAOS.</param>
-        public UserInfo(string identityName = default(string), string userDisplayName = default(string), bool domainGroup = default(bool), string department = default(string), string mobilePhone = default(string), string manager = default(string), string permission = default(string), bool isDeleted = default(bool), string securityToken = default(string), int userType = default(int), string azureUserType = default(string), bool legalPerson = default(bool), AuthenticationType? authenticationType = default(AuthenticationType?), string adminCenterUrl = default(string), InviteType? inviteType = default(InviteType?), string type = default(string), bool isRegisteredAosGroup = default(bool), ExternalUserType? isExternalUser = default(ExternalUserType?), bool isAPIExceptional = default(bool), string tenantId = default(string), string objectId = default(string), int version = default(int), string jobTitle = default(string), string usageLocation = default(string), string physicalDeliveryOfficeName = default(string), bool isOtherTenantUser = default(bool), string networkId = default(string), int id = default(int), string displayName = default(string), string title = default(string), string email = default(string), bool isValid = default(bool), bool existInAOS = default(bool))
+        public UserInfo(string identityName = default(string), string userDisplayName = default(string), bool domainGroup = default(bool), string department = default(string), string mobilePhone = default(string), string manager = default(string), string permission = default(string), bool isDeleted = default(bool), string securityToken = default(string), int userType = default(int), string azureUserType = default(string), bool legalPerson = default(bool), AuthenticationType? authenticationType = default(AuthenticationType?), string adminCenterUrl = default(string), InviteType? inviteType = default(InviteType?), string type = default(string), bool isRegisteredAosGroup = default(bool), ExternalUserType? isExternalUser = default(ExternalUserType?), bool isAPIExceptional = default(bool), string tenantId = default(string), string objectId = default(string), int version = default(int), string jobTitle = default(string), string usageLocation = default(string), string physicalDeliveryOfficeName = default(string), bool isOtherTenantUser = default(bool), string networkId = default(string), bool isValidateByProfile = default(bool), List<string> proxyAddresses = default(List<string>), int id = default(int), string displayName = default(string), string title = default(string), string email = default(string), bool isValid = default(bool), bool existInAOS = default(bool))
         {
             this.IdentityName = identityName;
             this.UserDisplayName = userDisplayName;
@@ -102,6 +105,8 @@ namespace Cloud.Governance.Client.Model
             this.PhysicalDeliveryOfficeName = physicalDeliveryOfficeName;
             this.IsOtherTenantUser = isOtherTenantUser;
             this.NetworkId = networkId;
+            this.IsValidateByProfile = isValidateByProfile;
+            this.ProxyAddresses = proxyAddresses;
             this.Id = id;
             this.DisplayName = displayName;
             this.Title = title;
@@ -255,6 +260,18 @@ namespace Cloud.Governance.Client.Model
         public string NetworkId { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsValidateByProfile
+        /// </summary>
+        [DataMember(Name = "isValidateByProfile", EmitDefaultValue = false)]
+        public bool IsValidateByProfile { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ProxyAddresses
+        /// </summary>
+        [DataMember(Name = "proxyAddresses", EmitDefaultValue = true)]
+        public List<string> ProxyAddresses { get; set; }
+
+        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
@@ -325,6 +342,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PhysicalDeliveryOfficeName: ").Append(PhysicalDeliveryOfficeName).Append("\n");
             sb.Append("  IsOtherTenantUser: ").Append(IsOtherTenantUser).Append("\n");
             sb.Append("  NetworkId: ").Append(NetworkId).Append("\n");
+            sb.Append("  IsValidateByProfile: ").Append(IsValidateByProfile).Append("\n");
+            sb.Append("  ProxyAddresses: ").Append(ProxyAddresses).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -490,6 +509,16 @@ namespace Cloud.Governance.Client.Model
                     this.NetworkId.Equals(input.NetworkId))
                 ) && 
                 (
+                    this.IsValidateByProfile == input.IsValidateByProfile ||
+                    this.IsValidateByProfile.Equals(input.IsValidateByProfile)
+                ) && 
+                (
+                    this.ProxyAddresses == input.ProxyAddresses ||
+                    this.ProxyAddresses != null &&
+                    input.ProxyAddresses != null &&
+                    this.ProxyAddresses.SequenceEqual(input.ProxyAddresses)
+                ) && 
+                (
                     this.Id == input.Id ||
                     this.Id.Equals(input.Id)
                 ) && 
@@ -570,6 +599,9 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.IsOtherTenantUser.GetHashCode();
                 if (this.NetworkId != null)
                     hashCode = hashCode * 59 + this.NetworkId.GetHashCode();
+                hashCode = hashCode * 59 + this.IsValidateByProfile.GetHashCode();
+                if (this.ProxyAddresses != null)
+                    hashCode = hashCode * 59 + this.ProxyAddresses.GetHashCode();
                 hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();

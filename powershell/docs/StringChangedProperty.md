@@ -3,22 +3,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangeValue** | **String** |  | [optional] [default to null]
-**OriginalValue** | **String** |  | [optional] [default to null]
+**ChangeValue** | **String** |  | [optional] 
+**OriginalValue** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientStringChangedProperty  -ChangeValue null `
+$StringChangedProperty = New-Cloud.Governance.ClientStringChangedProperty  -ChangeValue null `
  -OriginalValue null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$StringChangedProperty | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

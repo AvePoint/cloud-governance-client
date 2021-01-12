@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -64,7 +65,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets SelectedTemplate
         /// </summary>
-        [DataMember(Name = "selectedTemplate", EmitDefaultValue = false)]
+        [DataMember(Name = "selectedTemplate", EmitDefaultValue = true)]
         public GuidModel SelectedTemplate { get; set; }
 
         /// <summary>

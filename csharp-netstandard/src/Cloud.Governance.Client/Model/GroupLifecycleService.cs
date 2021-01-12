@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -33,6 +34,11 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "groupObjectType", EmitDefaultValue = false)]
         public GroupObjectType? GroupObjectType { get; set; }
         /// <summary>
+        /// Gets or Sets ChangePolicyAssignBy
+        /// </summary>
+        [DataMember(Name = "changePolicyAssignBy", EmitDefaultValue = false)]
+        public AssignBy? ChangePolicyAssignBy { get; set; }
+        /// <summary>
         /// Gets or Sets DepartmentAssignBy
         /// </summary>
         [DataMember(Name = "departmentAssignBy", EmitDefaultValue = false)]
@@ -54,6 +60,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="action">action.</param>
         /// <param name="groupObjectType">groupObjectType.</param>
         /// <param name="networkId">networkId.</param>
+        /// <param name="scopePeoplePickerFilterProfileId">scopePeoplePickerFilterProfileId.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
+        /// <param name="changePolicyAssignBy">changePolicyAssignBy.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -73,12 +82,16 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public GroupLifecycleService(Guid tenantId = default(Guid), GroupLifecycleActionType? action = default(GroupLifecycleActionType?), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public GroupLifecycleService(Guid tenantId = default(Guid), GroupLifecycleActionType? action = default(GroupLifecycleActionType?), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), Guid? scopePeoplePickerFilterProfileId = default(Guid?), GroupLifecycleRequest requestTemplate = default(GroupLifecycleRequest), AssignBy? changePolicyAssignBy = default(AssignBy?), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.TenantId = tenantId;
             this.Action = action;
             this.GroupObjectType = groupObjectType;
             this.NetworkId = networkId;
+            this.ScopePeoplePickerFilterProfileId = scopePeoplePickerFilterProfileId;
+            this.RequestTemplate = requestTemplate;
+            this.ChangePolicyAssignBy = changePolicyAssignBy;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -98,6 +111,7 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
@@ -111,6 +125,18 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "networkId", EmitDefaultValue = true)]
         public string NetworkId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ScopePeoplePickerFilterProfileId
+        /// </summary>
+        [DataMember(Name = "scopePeoplePickerFilterProfileId", EmitDefaultValue = true)]
+        public Guid? ScopePeoplePickerFilterProfileId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public GroupLifecycleRequest RequestTemplate { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadatas
@@ -163,13 +189,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -187,7 +213,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -209,6 +235,12 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -220,6 +252,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  GroupObjectType: ").Append(GroupObjectType).Append("\n");
             sb.Append("  NetworkId: ").Append(NetworkId).Append("\n");
+            sb.Append("  ScopePeoplePickerFilterProfileId: ").Append(ScopePeoplePickerFilterProfileId).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
+            sb.Append("  ChangePolicyAssignBy: ").Append(ChangePolicyAssignBy).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -239,6 +274,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -290,6 +326,20 @@ namespace Cloud.Governance.Client.Model
                     this.NetworkId == input.NetworkId ||
                     (this.NetworkId != null &&
                     this.NetworkId.Equals(input.NetworkId))
+                ) && 
+                (
+                    this.ScopePeoplePickerFilterProfileId == input.ScopePeoplePickerFilterProfileId ||
+                    (this.ScopePeoplePickerFilterProfileId != null &&
+                    this.ScopePeoplePickerFilterProfileId.Equals(input.ScopePeoplePickerFilterProfileId))
+                ) && 
+                (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
+                ) && 
+                (
+                    this.ChangePolicyAssignBy == input.ChangePolicyAssignBy ||
+                    this.ChangePolicyAssignBy.Equals(input.ChangePolicyAssignBy)
                 ) && 
                 (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
@@ -379,6 +429,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -397,6 +452,11 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.GroupObjectType.GetHashCode();
                 if (this.NetworkId != null)
                     hashCode = hashCode * 59 + this.NetworkId.GetHashCode();
+                if (this.ScopePeoplePickerFilterProfileId != null)
+                    hashCode = hashCode * 59 + this.ScopePeoplePickerFilterProfileId.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
+                hashCode = hashCode * 59 + this.ChangePolicyAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -427,6 +487,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

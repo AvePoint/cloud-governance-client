@@ -3,53 +3,54 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WebApplicationId** | **String** |  | [optional] [default to null]
-**WebApplicationUri** | **String** |  | [optional] [default to null]
-**SiteCollectionId** | **String** |  | [optional] [default to null]
-**SiteCollectionUrl** | **String** |  | [optional] [default to null]
-**SiteId** | **String** |  | [optional] [default to null]
-**NodeId** | **String** |  | [optional] [default to null]
-**StartIndex** | **Int32** |  | [optional] [default to null]
-**PageSize** | **Int32** |  | [optional] [default to null]
-**PageIndex** | **Int32** |  | [optional] [default to null]
-**FullCount** | **Int32** |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
-**Title** | **String** |  | [optional] [default to null]
-**Description** | **String** |  | [optional] [default to null]
-**DisplayName** | **String** |  | [optional] [default to null]
-**ManagedPath** | **String** |  | [optional] [default to null]
-**AgentID** | **String** |  | [optional] [default to null]
-**FullPath** | **String** |  | [optional] [default to null]
-**FarmName** | **String** |  | [optional] [default to null]
-**HasNextPage** | **Boolean** |  | [optional] [default to null]
-**FarmID** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ParentID** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Extension** | [**TreeNodeExtension**](TreeNodeExtension.md) |  | [optional] [default to null]
-**Parent** | [**TreeNode**](TreeNode.md) |  | [optional] [default to null]
-**Type** | [**TreeNodeType**](TreeNodeType.md) |  | [optional] [default to null]
-**SpObjectID** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ParentSPObjectID** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**Id** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**LoadManagedPath** | **Boolean** |  | [optional] [default to null]
-**LoadChildrenFromDB** | **Boolean** |  | [optional] [default to null]
-**LoadedPageCount** | **Int32** |  | [optional] [default to null]
-**Children** | [**TreeNode[]**](TreeNode.md) |  | [optional] [default to null]
-**SelectedChildren** | [**TreeNode[]**](TreeNode.md) |  | [optional] [default to null]
-**FilterUrls** | **String** |  | [optional] [default to null]
-**FilterType** | **Int32** |  | [optional] [default to null]
-**CheckNumber** | **Int32** |  | [optional] [default to null]
-**SelectedWebAppIdSubSiteProvServ** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**SelectedSiteCollIdsSubSiteProvServ** | **String** |  | [optional] [default to null]
-**ChildrenType** | **Int32** |  | [optional] [default to null]
-**ListId** | [**UUID**](UUID.md) |  | [optional] [default to null]
-**ServerRelativeUrl** | **String** |  | [optional] [default to null]
-**UserName** | **String** |  | [optional] [default to null]
+**WebApplicationId** | **String** |  | [optional] 
+**WebApplicationUri** | **String** |  | [optional] 
+**SiteCollectionId** | **String** |  | [optional] 
+**SiteCollectionUrl** | **String** |  | [optional] 
+**SiteId** | **String** |  | [optional] 
+**NodeId** | **String** |  | [optional] 
+**StartIndex** | **Int32** |  | [optional] 
+**PageSize** | **Int32** |  | [optional] 
+**PageIndex** | **Int32** |  | [optional] 
+**FullCount** | **Int32** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
+**ManagedPath** | **String** |  | [optional] 
+**AgentID** | **String** |  | [optional] 
+**FullPath** | **String** |  | [optional] 
+**FarmName** | **String** |  | [optional] 
+**HasNextPage** | **Boolean** |  | [optional] 
+**FarmID** | **String** |  | [optional] 
+**ParentID** | **String** |  | [optional] 
+**Extension** | [**TreeNodeExtension**](TreeNodeExtension.md) |  | [optional] 
+**Parent** | [**TreeNode**](TreeNode.md) |  | [optional] 
+**Type** | [**TreeNodeType**](TreeNodeType.md) |  | [optional] 
+**SpObjectID** | **String** |  | [optional] 
+**NetworkId** | **String** |  | [optional] 
+**ParentSPObjectID** | **String** |  | [optional] 
+**Id** | **String** |  | [optional] 
+**LoadManagedPath** | **Boolean** |  | [optional] 
+**LoadChildrenFromDB** | **Boolean** |  | [optional] 
+**LoadedPageCount** | **Int32** |  | [optional] 
+**Children** | [**TreeNode[]**](TreeNode.md) |  | [optional] 
+**SelectedChildren** | [**TreeNode[]**](TreeNode.md) |  | [optional] 
+**FilterUrls** | **String** |  | [optional] 
+**FilterType** | **Int32** |  | [optional] 
+**CheckNumber** | **Int32** |  | [optional] 
+**SelectedWebAppIdSubSiteProvServ** | **String** |  | [optional] 
+**SelectedSiteCollIdsSubSiteProvServ** | **String** |  | [optional] 
+**ChildrenType** | **Int32** |  | [optional] 
+**ListId** | **String** |  | [optional] 
+**ServerRelativeUrl** | **String** |  | [optional] 
+**UserName** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientTreeNode  -WebApplicationId null `
+$TreeNode = New-Cloud.Governance.ClientTreeNode  -WebApplicationId null `
  -WebApplicationUri null `
  -SiteCollectionId null `
  -SiteCollectionUrl null `
@@ -74,6 +75,7 @@ New-Cloud.Governance.ClientTreeNode  -WebApplicationId null `
  -Parent null `
  -Type null `
  -SpObjectID null `
+ -NetworkId null `
  -ParentSPObjectID null `
  -Id null `
  -LoadManagedPath null `
@@ -92,11 +94,10 @@ New-Cloud.Governance.ClientTreeNode  -WebApplicationId null `
  -UserName null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$TreeNode | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

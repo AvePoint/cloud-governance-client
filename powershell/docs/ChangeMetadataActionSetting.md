@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] [default to null]
-**EnableAddOrDelete** | **Boolean** |  | [optional] [default to null]
-**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] [default to null]
+**IsEnabled** | **Boolean** |  | [optional] 
+**EnableAddOrDelete** | **Boolean** |  | [optional] 
+**Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientChangeMetadataActionSetting  -IsEnabled null `
+$ChangeMetadataActionSetting = New-Cloud.Governance.ClientChangeMetadataActionSetting  -IsEnabled null `
  -EnableAddOrDelete null `
  -Metadatas null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ChangeMetadataActionSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

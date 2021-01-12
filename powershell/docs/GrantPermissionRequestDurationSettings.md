@@ -3,18 +3,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsGrantTemporaryPermission** | **Boolean** |  | [optional] [default to null]
-**ExpirationType** | [**ExpirationType**](ExpirationType.md) |  | [optional] [default to null]
-**DurationInterval** | **Int32** |  | [optional] [default to null]
-**DurationDateType** | [**DurationDateTypeNullable**](DurationDateTypeNullable.md) |  | [optional] [default to null]
-**StartTime** | **System.DateTime** |  | [optional] [default to null]
-**EndTime** | **System.DateTime** |  | [optional] [default to null]
+**IsGrantTemporaryPermission** | **Boolean** |  | [optional] 
+**IsGrantPermissionLevel** | **Boolean** |  | [optional] 
+**ExpirationType** | [**ExpirationType**](ExpirationType.md) |  | [optional] 
+**DurationInterval** | **Int32** |  | [optional] 
+**DurationDateType** | [**DurationDateType**](DurationDateType.md) |  | [optional] 
+**StartTime** | **System.DateTime** |  | [optional] 
+**EndTime** | **System.DateTime** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientGrantPermissionRequestDurationSettings  -IsGrantTemporaryPermission null `
+$GrantPermissionRequestDurationSettings = New-Cloud.Governance.ClientGrantPermissionRequestDurationSettings  -IsGrantTemporaryPermission null `
+ -IsGrantPermissionLevel null `
  -ExpirationType null `
  -DurationInterval null `
  -DurationDateType null `
@@ -22,11 +24,10 @@ New-Cloud.Governance.ClientGrantPermissionRequestDurationSettings  -IsGrantTempo
  -EndTime null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$GrantPermissionRequestDurationSettings | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

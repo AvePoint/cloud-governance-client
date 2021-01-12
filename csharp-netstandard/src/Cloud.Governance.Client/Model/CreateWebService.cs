@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -106,6 +107,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContactAssignBy">primaryContactAssignBy.</param>
         /// <param name="secondaryContactAssignBy">secondaryContactAssignBy.</param>
         /// <param name="permissionAssignBy">permissionAssignBy.</param>
+        /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary.</param>
@@ -125,7 +127,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId.</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateWebService(CreateWebScopeSettings scopeSettings = default(CreateWebScopeSettings), List<IntModel> webLanguages = default(List<IntModel>), List<LanguageWithTemplates> languageIdsAndTemplates = default(List<LanguageWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), bool useUniquePermissions = default(bool), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), string templateStoreUrl = default(string), AppSettings appSettings = default(AppSettings), GuidBooleanModel notifyPrimaryContactSettings = default(GuidBooleanModel), GuidBooleanModel notifySecondaryContactSettings = default(GuidBooleanModel), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), bool isOnQuickLaunch = default(bool), bool isOnTopLinkBar = default(bool), bool isNavigationInheritance = default(bool), int defaultWebLanguage = default(int), AssignBy? scopeAssignBy = default(AssignBy?), AssignBy? webLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? navigationInheritanceAssignBy = default(AssignBy?), AssignBy? navigationAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string))
+        /// <param name="details">details.</param>
+        public CreateWebService(CreateWebScopeSettings scopeSettings = default(CreateWebScopeSettings), List<IntModel> webLanguages = default(List<IntModel>), List<LanguageWithTemplates> languageIdsAndTemplates = default(List<LanguageWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), bool useUniquePermissions = default(bool), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), string templateStoreUrl = default(string), AppSettings appSettings = default(AppSettings), GuidBooleanModel notifyPrimaryContactSettings = default(GuidBooleanModel), GuidBooleanModel notifySecondaryContactSettings = default(GuidBooleanModel), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), bool isOnQuickLaunch = default(bool), bool isOnTopLinkBar = default(bool), bool isNavigationInheritance = default(bool), int defaultWebLanguage = default(int), AssignBy? scopeAssignBy = default(AssignBy?), AssignBy? webLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? navigationInheritanceAssignBy = default(AssignBy?), AssignBy? navigationAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), CreateWebRequest requestTemplate = default(CreateWebRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
         {
             this.ScopeSettings = scopeSettings;
             this.WebLanguages = webLanguages;
@@ -153,6 +156,7 @@ namespace Cloud.Governance.Client.Model
             this.PrimaryContactAssignBy = primaryContactAssignBy;
             this.SecondaryContactAssignBy = secondaryContactAssignBy;
             this.PermissionAssignBy = permissionAssignBy;
+            this.RequestTemplate = requestTemplate;
             this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
@@ -172,12 +176,13 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
+            this.Details = details;
         }
 
         /// <summary>
         /// Gets or Sets ScopeSettings
         /// </summary>
-        [DataMember(Name = "scopeSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "scopeSettings", EmitDefaultValue = true)]
         public CreateWebScopeSettings ScopeSettings { get; set; }
 
         /// <summary>
@@ -201,7 +206,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets PermissionSettings
         /// </summary>
-        [DataMember(Name = "permissionSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "permissionSettings", EmitDefaultValue = true)]
         public PermissionSettings PermissionSettings { get; set; }
 
         /// <summary>
@@ -213,13 +218,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets DeploymentManagerPlanSettings
         /// </summary>
-        [DataMember(Name = "deploymentManagerPlanSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "deploymentManagerPlanSettings", EmitDefaultValue = true)]
         public DeploymentManagerPlanSettings DeploymentManagerPlanSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets YammerGroupSettings
         /// </summary>
-        [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = true)]
         public YammerGroupServiceSettings YammerGroupSettings { get; set; }
 
         /// <summary>
@@ -231,31 +236,31 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets AppSettings
         /// </summary>
-        [DataMember(Name = "appSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "appSettings", EmitDefaultValue = true)]
         public AppSettings AppSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets NotifyPrimaryContactSettings
         /// </summary>
-        [DataMember(Name = "notifyPrimaryContactSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "notifyPrimaryContactSettings", EmitDefaultValue = true)]
         public GuidBooleanModel NotifyPrimaryContactSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets NotifySecondaryContactSettings
         /// </summary>
-        [DataMember(Name = "notifySecondaryContactSettings", EmitDefaultValue = false)]
+        [DataMember(Name = "notifySecondaryContactSettings", EmitDefaultValue = true)]
         public GuidBooleanModel NotifySecondaryContactSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultPrimaryContact
         /// </summary>
-        [DataMember(Name = "defaultPrimaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultPrimaryContact", EmitDefaultValue = true)]
         public ApiUser DefaultPrimaryContact { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultSecondaryContact
         /// </summary>
-        [DataMember(Name = "defaultSecondaryContact", EmitDefaultValue = false)]
+        [DataMember(Name = "defaultSecondaryContact", EmitDefaultValue = true)]
         public ApiUser DefaultSecondaryContact { get; set; }
 
         /// <summary>
@@ -281,6 +286,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "defaultWebLanguage", EmitDefaultValue = false)]
         public int DefaultWebLanguage { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestTemplate
+        /// </summary>
+        [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
+        public CreateWebRequest RequestTemplate { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadatas
@@ -333,13 +344,13 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets ServiceContact
         /// </summary>
-        [DataMember(Name = "serviceContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceAdminContact
         /// </summary>
-        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = false)]
+        [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
         /// <summary>
@@ -357,7 +368,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CustomActions
         /// </summary>
-        [DataMember(Name = "customActions", EmitDefaultValue = false)]
+        [DataMember(Name = "customActions", EmitDefaultValue = true)]
         public CustomActionSettings CustomActions { get; set; }
 
         /// <summary>
@@ -377,6 +388,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "categoryId", EmitDefaultValue = true)]
         public string CategoryId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name = "details", EmitDefaultValue = true)]
+        public string Details { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -412,6 +429,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PrimaryContactAssignBy: ").Append(PrimaryContactAssignBy).Append("\n");
             sb.Append("  SecondaryContactAssignBy: ").Append(SecondaryContactAssignBy).Append("\n");
             sb.Append("  PermissionAssignBy: ").Append(PermissionAssignBy).Append("\n");
+            sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
@@ -431,6 +449,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -586,6 +605,11 @@ namespace Cloud.Governance.Client.Model
                     this.PermissionAssignBy.Equals(input.PermissionAssignBy)
                 ) && 
                 (
+                    this.RequestTemplate == input.RequestTemplate ||
+                    (this.RequestTemplate != null &&
+                    this.RequestTemplate.Equals(input.RequestTemplate))
+                ) && 
+                (
                     this.DepartmentAssignBy == input.DepartmentAssignBy ||
                     this.DepartmentAssignBy.Equals(input.DepartmentAssignBy)
                 ) && 
@@ -673,6 +697,11 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
+                ) && 
+                (
+                    this.Details == input.Details ||
+                    (this.Details != null &&
+                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -724,6 +753,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.PrimaryContactAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.SecondaryContactAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.PermissionAssignBy.GetHashCode();
+                if (this.RequestTemplate != null)
+                    hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
                 hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
@@ -754,6 +785,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
+                if (this.Details != null)
+                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

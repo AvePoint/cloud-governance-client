@@ -3,24 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | [**AllTaskList[]**](AllTaskList.md) |  | [optional] [default to null]
-**NextLink** | [**URI**](URI.md) |  | [optional] [default to null]
-**NextToken** | **String** |  | [optional] [readonly] [default to null]
+**Value** | [**AllTaskList[]**](AllTaskList.md) |  | [optional] 
+**NextLink** | **String** |  | [optional] 
+**NextToken** | **String** |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientAllTaskListPageResult  -Value null `
+$AllTaskListPageResult = New-Cloud.Governance.ClientAllTaskListPageResult  -Value null `
  -NextLink null `
  -NextToken null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$AllTaskListPageResult | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

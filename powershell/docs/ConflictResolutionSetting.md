@@ -3,28 +3,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ContainerConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] [default to null]
-**IsCheckLowerObject** | **Boolean** |  | [optional] [default to null]
-**IsEnableContentConflictResolution** | **Boolean** |  | [optional] [default to null]
-**ContentConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] [default to null]
-**AppConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] [default to null]
+**ContainerConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] 
+**IsCheckLowerObject** | **Boolean** |  | [optional] 
+**IsEnableContentConflictResolution** | **Boolean** |  | [optional] 
+**ContentConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] 
+**AppConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] 
 
 ## Examples
 
-- Create a new object
+- Prepare the resource
 ```powershell
-New-Cloud.Governance.ClientConflictResolutionSetting  -ContainerConflictSolution null `
+$ConflictResolutionSetting = New-Cloud.Governance.ClientConflictResolutionSetting  -ContainerConflictSolution null `
  -IsCheckLowerObject null `
  -IsEnableContentConflictResolution null `
  -ContentConflictSolution null `
  -AppConflictSolution null
 ```
 
-- Convert the object to JSON
+- Convert the resource to JSON
 ```powershell
-$ | Convert-ToJSON
+$ConflictResolutionSetting | ConvertTo-JSON
 ```
-
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

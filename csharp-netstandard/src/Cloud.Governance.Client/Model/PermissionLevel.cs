@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
 using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter;
 
@@ -60,10 +61,43 @@ namespace Cloud.Governance.Client.Model
         public string Description { get; private set; }
 
         /// <summary>
+        /// Returns false as Description should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeDescription()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Gets or Sets IsExcluded
         /// </summary>
         [DataMember(Name = "isExcluded", EmitDefaultValue = false)]
         public bool IsExcluded { get; private set; }
+
+        /// <summary>
+        /// Returns false as IsExcluded should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeIsExcluded()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name = "type", EmitDefaultValue = false)]
+        public int Type { get; private set; }
+
+        /// <summary>
+        /// Returns false as Type should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeType()
+        {
+            return false;
+        }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -78,6 +112,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  IsExcluded: ").Append(IsExcluded).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,6 +169,10 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.IsExcluded == input.IsExcluded ||
                     this.IsExcluded.Equals(input.IsExcluded)
+                ) && 
+                (
+                    this.Type == input.Type ||
+                    this.Type.Equals(input.Type)
                 );
         }
 
@@ -154,6 +193,7 @@ namespace Cloud.Governance.Client.Model
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 hashCode = hashCode * 59 + this.IsExcluded.GetHashCode();
+                hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }
         }
