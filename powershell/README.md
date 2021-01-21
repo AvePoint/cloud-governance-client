@@ -11,7 +11,7 @@
 
 To install from PowerShell Gallery (https://www.powershellgallery.com/packages/Cloud.Governance.Client)
 ```powershell
-Import-Module -Name Cloud.Governance.Client -Verbose
+Install-Module -Name Cloud.Governance.Client -Verbose
 ```
 
 ## Documentation for API Endpoints
