@@ -26,7 +26,7 @@ filter users by property value
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -89,7 +89,7 @@ get Azure Ad user's property value
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -149,7 +149,7 @@ get user's extension property value from azure ad
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -208,7 +208,7 @@ Is Member Of Group
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -273,7 +273,7 @@ resolve users
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -346,7 +346,7 @@ search users
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"

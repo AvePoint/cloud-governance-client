@@ -24,7 +24,7 @@ get all metadata
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -92,7 +92,7 @@ Get metadata by id
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"

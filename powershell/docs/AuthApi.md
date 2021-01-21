@@ -19,7 +19,7 @@ get delegate access token by client id and client secret which created in cloud 
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -77,7 +77,7 @@ refresh user access token
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"

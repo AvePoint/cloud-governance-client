@@ -59,7 +59,7 @@ get change group setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -120,7 +120,7 @@ get change list setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -181,7 +181,7 @@ get change permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -242,7 +242,7 @@ get change site contact service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -303,7 +303,7 @@ get change site setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -364,7 +364,7 @@ validate permissions, scope for change web contact service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -425,7 +425,7 @@ get change web setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -486,7 +486,7 @@ get clone permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -545,7 +545,7 @@ get content move profiles from cloud management
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -600,7 +600,7 @@ get content move service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -661,7 +661,7 @@ get create group service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -722,7 +722,7 @@ get create group service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -783,7 +783,7 @@ get create list service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -844,7 +844,7 @@ get create site service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -905,7 +905,7 @@ get create web service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -966,7 +966,7 @@ get custom service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1027,7 +1027,7 @@ get grant permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1088,7 +1088,7 @@ get group lifecycle service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1149,7 +1149,7 @@ get manage permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1209,7 +1209,7 @@ get services that can be used to start a request
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1267,7 +1267,7 @@ get service id by service name
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1326,7 +1326,7 @@ get site lifecycle service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1387,7 +1387,7 @@ get web lifecycle service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1448,7 +1448,7 @@ validate guest user email
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1509,7 +1509,7 @@ validate permissions, scope for change group setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1570,7 +1570,7 @@ validate permissions, scope for change list setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1631,7 +1631,7 @@ validate permissions, scope for change permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1692,7 +1692,7 @@ validate permissions, scope for change site contact service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1753,7 +1753,7 @@ validate permissions, scope for change site setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1814,7 +1814,7 @@ validate permissions, scope for change web contact service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1875,7 +1875,7 @@ validate permissions, scope for change web setting service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1936,7 +1936,7 @@ validate permissions, scope for clone permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -1997,7 +1997,7 @@ validate permissions, scope for content move service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2059,7 +2059,7 @@ validate groups can invite
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2122,7 +2122,7 @@ validate permissions, scope for create list service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2183,7 +2183,7 @@ validate permissions, scope for create web service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2244,7 +2244,7 @@ validate permissions, scope for grant permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2305,7 +2305,7 @@ validate permissions, scope for group lifecycle service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2366,7 +2366,7 @@ validate permissions, scope for manage permission service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2427,7 +2427,7 @@ validate permissions, scope for site lifecycle service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -2488,7 +2488,7 @@ validate permissions, scope for web lifecycle service
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"

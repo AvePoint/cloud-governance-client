@@ -27,7 +27,7 @@ apply groups policy
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -85,7 +85,7 @@ apply site policy
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -143,7 +143,7 @@ archive workspace
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -201,7 +201,7 @@ completed renewal task
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -259,7 +259,7 @@ delete workspaces
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -318,7 +318,7 @@ get workspace ongoing tasks
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -383,7 +383,7 @@ get managed workspaces
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -451,7 +451,7 @@ lock sites or Office365 group sites
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -509,7 +509,7 @@ trigger workspace renewal
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -567,7 +567,7 @@ unlock sites and Office365 group site
 ```powershell
 Import-Module -Name Cloud.Governance.Client
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"

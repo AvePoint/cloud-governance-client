@@ -3,7 +3,7 @@ $ModuleName="Cloud.Governance.Client"
 
 Import-Module -Name $ModuleName
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"

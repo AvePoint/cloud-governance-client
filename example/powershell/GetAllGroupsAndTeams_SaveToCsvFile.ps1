@@ -3,7 +3,7 @@ $ModuleName="Cloud.Governance.Client"
 
 Import-Module -Name $ModuleName
 
-$Configuration = Get-Cloud.Governance.ClientConfiguration
+$Configuration = Get-Configuration
 
 # You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
 $Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
@@ -15,8 +15,6 @@ $Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 # Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
 # If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
 $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
-
-
 
 try {
 
