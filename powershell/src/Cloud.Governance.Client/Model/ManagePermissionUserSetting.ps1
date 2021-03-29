@@ -12,13 +12,13 @@ function New-ManagePermissionUserSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${UserLevelRestrictionType},
+        ${UserLevelRestrictionType} = "AnyUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${UserManagementSourceType},
+        ${UserManagementSourceType} = "User",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableShowAADGroupMembers}
+        ${IsEnableShowAADGroupMembers} = $false
     )
 
     Process {

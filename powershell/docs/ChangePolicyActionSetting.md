@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartDateType** | **Int32** |  | [optional] 
-**SpecifyDateTicks** | **Int64** |  | [optional] 
-**ChangePolicyConfig** | **Int32** |  | [optional] 
-**IsAllowAutoCancel** | **Boolean** |  | [optional] 
+**StartDateType** | **Int32** |  | [optional] [default to 0]
+**SpecifyDateTicks** | **Int64** |  | [optional] [default to 0]
+**ChangePolicyConfig** | **Int32** |  | [optional] [default to 0]
+**IsAllowAutoCancel** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

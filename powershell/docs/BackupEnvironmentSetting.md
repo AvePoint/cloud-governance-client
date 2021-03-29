@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsBackupSource** | **Boolean** |  | [optional] 
-**IsBackupDestination** | **Boolean** |  | [optional] 
+**IsBackupSource** | **Boolean** |  | [optional] [default to $false]
+**IsBackupDestination** | **Boolean** |  | [optional] [default to $false]
 **StoragePolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
 
 ## Examples

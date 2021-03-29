@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WelcomeEmailSettings" /> class.
         /// </summary>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="subject">subject.</param>
         /// <param name="personalMessage">personalMessage.</param>
-        public WelcomeEmailSettings(bool enabled = default(bool), string subject = default(string), string personalMessage = default(string))
+        public WelcomeEmailSettings(bool enabled = false, string subject = default(string), string personalMessage = default(string))
         {
             this.Enabled = enabled;
             this.Subject = subject;

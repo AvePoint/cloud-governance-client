@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_GroupLifecycle_ChangeGroupQuota_Service",
+  "GroupEmail": "group@example.com",
+  "GroupQuotaSize": 2
+}

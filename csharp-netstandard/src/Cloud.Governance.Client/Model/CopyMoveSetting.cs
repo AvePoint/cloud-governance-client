@@ -31,14 +31,14 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CopyMoveSetting" /> class.
         /// </summary>
-        /// <param name="isMigrateConfiguration">isMigrateConfiguration.</param>
-        /// <param name="isKeepLookAndFeel">isKeepLookAndFeel.</param>
+        /// <param name="isMigrateConfiguration">isMigrateConfiguration (default to false).</param>
+        /// <param name="isKeepLookAndFeel">isKeepLookAndFeel (default to false).</param>
         /// <param name="columnsAndContentConflictResolution">columnsAndContentConflictResolution.</param>
-        /// <param name="isMigrateSecurity">isMigrateSecurity.</param>
-        /// <param name="isMigrateColumnsAndContentTypes">isMigrateColumnsAndContentTypes.</param>
-        /// <param name="isMigrateContent">isMigrateContent.</param>
-        /// <param name="isMigrateContentIncludeListAttachment">isMigrateContentIncludeListAttachment.</param>
-        public CopyMoveSetting(bool isMigrateConfiguration = default(bool), bool isKeepLookAndFeel = default(bool), ItemConflictResolutionType? columnsAndContentConflictResolution = default(ItemConflictResolutionType?), bool isMigrateSecurity = default(bool), bool isMigrateColumnsAndContentTypes = default(bool), bool isMigrateContent = default(bool), bool isMigrateContentIncludeListAttachment = default(bool))
+        /// <param name="isMigrateSecurity">isMigrateSecurity (default to false).</param>
+        /// <param name="isMigrateColumnsAndContentTypes">isMigrateColumnsAndContentTypes (default to false).</param>
+        /// <param name="isMigrateContent">isMigrateContent (default to false).</param>
+        /// <param name="isMigrateContentIncludeListAttachment">isMigrateContentIncludeListAttachment (default to false).</param>
+        public CopyMoveSetting(bool isMigrateConfiguration = false, bool isKeepLookAndFeel = false, ItemConflictResolutionType? columnsAndContentConflictResolution = default(ItemConflictResolutionType?), bool isMigrateSecurity = false, bool isMigrateColumnsAndContentTypes = false, bool isMigrateContent = false, bool isMigrateContentIncludeListAttachment = false)
         {
             this.IsMigrateConfiguration = isMigrateConfiguration;
             this.IsKeepLookAndFeel = isKeepLookAndFeel;

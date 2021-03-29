@@ -33,10 +33,10 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="_object">_object.</param>
         /// <param name="listBaseType">listBaseType.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ContentMoveUrlValidationResult(ContentMoveSPObject _object = default(ContentMoveSPObject), string listBaseType = default(string), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ContentMoveUrlValidationResult(ContentMoveSPObject _object = default(ContentMoveSPObject), string listBaseType = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.Object = _object;
             this.ListBaseType = listBaseType;

@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **Int32** |  | [optional] 
+**Size** | **Int32** |  | [optional] [default to 0]
 **UserName** | **String** |  | [optional] 
 **Password** | **String** |  | [optional] 
 

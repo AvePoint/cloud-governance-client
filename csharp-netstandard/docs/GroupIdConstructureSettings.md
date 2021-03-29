@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RuleType** | **GroupIdRuleType** |  | [optional] 
-**EnableAutoSequenceNumber** | **bool** |  | [optional] 
+**EnableAutoSequenceNumber** | **bool** |  | [optional] [default to false]
 **AutoSequenceNumber** | **string** |  | [optional] 
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool** |  | [optional] [default to false]
 **AssignBy** | **AssignBy** |  | [optional] 
 **Prefixs** | [**List&lt;GroupConstructureRule&gt;**](GroupConstructureRule.md) |  | [optional] 
 **Suffixs** | [**List&lt;GroupConstructureRule&gt;**](GroupConstructureRule.md) |  | [optional] 

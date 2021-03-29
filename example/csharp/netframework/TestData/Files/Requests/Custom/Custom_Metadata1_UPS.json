@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_Custom_Service",
+  "UpsMetadataName": "Api_Sample_UPS",
+  "UpsMetadataLookupUser": "user@example.com"
+}

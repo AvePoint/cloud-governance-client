@@ -15,16 +15,16 @@ function New-PersonalSettings {
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${UserID},
+        ${UserID} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageID},
+        ${LanguageID} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${TimeZoneID},
+        ${TimeZoneID} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAdjustDaylight},
+        ${IsAdjustDaylight} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Properties}

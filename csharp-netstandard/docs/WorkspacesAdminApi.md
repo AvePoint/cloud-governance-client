@@ -51,7 +51,7 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
-            var applyGroupPolicyModel = new ApplyGroupPolicyModel(); // ApplyGroupPolicyModel |  (optional) 
+            var applyGroupPolicyModel = new ApplyGroupPolicyModel(); // ApplyGroupPolicyModel | apply policy setting (optional) 
 
             try
             {
@@ -73,7 +73,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **applyGroupPolicyModel** | [**ApplyGroupPolicyModel**](ApplyGroupPolicyModel.md)|  | [optional] 
+ **applyGroupPolicyModel** | [**ApplyGroupPolicyModel**](ApplyGroupPolicyModel.md)| apply policy setting | [optional] 
 
 ### Return type
 
@@ -133,7 +133,7 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
-            var applySitePolicyModel = new ApplySitePolicyModel(); // ApplySitePolicyModel |  (optional) 
+            var applySitePolicyModel = new ApplySitePolicyModel(); // ApplySitePolicyModel | apply policy setting (optional) 
 
             try
             {
@@ -155,7 +155,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **applySitePolicyModel** | [**ApplySitePolicyModel**](ApplySitePolicyModel.md)|  | [optional] 
+ **applySitePolicyModel** | [**ApplySitePolicyModel**](ApplySitePolicyModel.md)| apply policy setting | [optional] 
 
 ### Return type
 
@@ -264,7 +264,7 @@ void (empty response body)
 
 <a name="completeworkspacerenewaltask"></a>
 # **CompleteWorkspaceRenewalTask**
-> List&lt;ReportActionResult&gt; CompleteWorkspaceRenewalTask (List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
+> void CompleteWorkspaceRenewalTask (bool? markAsCanceled = null, List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
 
 completed renewal task
 
@@ -297,13 +297,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
+            var markAsCanceled = true;  // bool? |  (optional)  (default to false)
             var workspaceIdTypeModel = new List<WorkspaceIdTypeModel>(); // List<WorkspaceIdTypeModel> |  (optional) 
 
             try
             {
                 // completed renewal task
-                List<ReportActionResult> result = apiInstance.CompleteWorkspaceRenewalTask(workspaceIdTypeModel);
-                Debug.WriteLine(result);
+                apiInstance.CompleteWorkspaceRenewalTask(markAsCanceled, workspaceIdTypeModel);
             }
             catch (ApiException  e)
             {
@@ -320,11 +320,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **markAsCanceled** | **bool?**|  | [optional] [default to false]
  **workspaceIdTypeModel** | [**List&lt;WorkspaceIdTypeModel&gt;**](WorkspaceIdTypeModel.md)|  | [optional] 
 
 ### Return type
 
-[**List&lt;ReportActionResult&gt;**](ReportActionResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -333,7 +334,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -689,7 +690,7 @@ void (empty response body)
 
 <a name="triggerworkspacerenewal"></a>
 # **TriggerWorkspaceRenewal**
-> List&lt;ReportActionResult&gt; TriggerWorkspaceRenewal (List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
+> void TriggerWorkspaceRenewal (List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
 
 trigger workspace renewal
 
@@ -727,8 +728,7 @@ namespace Example
             try
             {
                 // trigger workspace renewal
-                List<ReportActionResult> result = apiInstance.TriggerWorkspaceRenewal(workspaceIdTypeModel);
-                Debug.WriteLine(result);
+                apiInstance.TriggerWorkspaceRenewal(workspaceIdTypeModel);
             }
             catch (ApiException  e)
             {
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;ReportActionResult&gt;**](ReportActionResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -758,7 +758,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

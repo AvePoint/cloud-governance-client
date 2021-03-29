@@ -27,13 +27,13 @@ function New-WebLifecycleValidateResult {
         ${SiteUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMessage},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MessageCode}
+        ${MessageCode} = "None"
     )
 
     Process {

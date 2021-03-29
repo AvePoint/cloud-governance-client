@@ -1,0 +1,7 @@
+{
+  "ServiceName": "Api_Sample_ManagePermission_AddUserPermissionForSite_Service",
+  "Department": "IT",
+  "ObjectUrl": "https://contoso.sharepoint.com/sites/ApiSampleSite",
+  "UserLoginName": "user@example.com",
+  "PermissionLevels": "Full Control;Contribute"
+}

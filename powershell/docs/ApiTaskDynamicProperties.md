@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **SiteDescription** | [**AnyType**](.md) |  | [optional] 
 **Requester** | [**AnyType**](.md) |  | [optional] 
 **IsTeam** | [**AnyType**](.md) |  | [optional] 
+**IsYammer** | [**AnyType**](.md) |  | [optional] 
 **GroupOwnersStr** | [**AnyType**](.md) |  | [optional] 
 **TenantId** | [**AnyType**](.md) |  | [optional] 
 
@@ -48,6 +49,7 @@ $ApiTaskDynamicProperties = New-Cloud.Governance.ClientApiTaskDynamicProperties 
  -SiteDescription null `
  -Requester null `
  -IsTeam null `
+ -IsYammer null `
  -GroupOwnersStr null `
  -TenantId null
 ```

@@ -12,13 +12,13 @@ function New-ChangeGroupQuotaRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${GroupQuotaSize},
+        ${GroupQuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},

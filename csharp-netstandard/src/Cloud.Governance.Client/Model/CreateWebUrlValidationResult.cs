@@ -35,10 +35,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="parentSiteUrl">parentSiteUrl.</param>
         /// <param name="sitePrimaryContact">sitePrimaryContact.</param>
         /// <param name="siteSecondaryContact">siteSecondaryContact.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public CreateWebUrlValidationResult(string parentWebUrl = default(string), string parentSiteUrl = default(string), ApiUser sitePrimaryContact = default(ApiUser), ApiUser siteSecondaryContact = default(ApiUser), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public CreateWebUrlValidationResult(string parentWebUrl = default(string), string parentSiteUrl = default(string), ApiUser sitePrimaryContact = default(ApiUser), ApiUser siteSecondaryContact = default(ApiUser), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.ParentWebUrl = parentWebUrl;
             this.ParentSiteUrl = parentSiteUrl;

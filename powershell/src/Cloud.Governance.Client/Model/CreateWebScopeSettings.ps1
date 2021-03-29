@@ -15,13 +15,13 @@ function New-CreateWebScopeSettings {
         ${RestrictParentUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ScopeType},
+        ${ScopeType} = "ManuallyInput",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${UseTitleInUrl},
+        ${UseTitleInUrl} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableUrlValidation},
+        ${EnableUrlValidation} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${TextValidationRule},
@@ -30,10 +30,10 @@ function New-CreateWebScopeSettings {
         ${SelectedNodes},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AutoPopulateUrlWithSPContext},
+        ${AutoPopulateUrlWithSPContext} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AutoPopulateUrlWithSPContextAssignBy}
+        ${AutoPopulateUrlWithSPContextAssignBy} = "BusinessUser"
     )
 
     Process {

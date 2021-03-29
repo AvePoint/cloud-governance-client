@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ExtendType** | [**ExtendType**](ExtendType.md) |  | [optional] 
-**Duration** | **Int32** |  | [optional] 
+**Duration** | **Int32** |  | [optional] [default to 0]
 **DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 
 ## Examples

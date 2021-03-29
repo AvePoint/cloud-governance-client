@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_ChangeGroup_ChangeMembersAdd_Service",
+  "GroupEmail": "group@example.com",
+  "NewMembers": "user1@example.com;user2@example.com"
+}

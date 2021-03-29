@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] 
+**Enabled** | **Boolean** |  | [optional] [default to $false]
 **Plans** | **String[]** |  | [optional] 
 **AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Default** | **String** |  | [optional] 

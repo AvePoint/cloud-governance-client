@@ -32,9 +32,9 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ServiceScopeSettings" /> class.
         /// </summary>
         /// <param name="selectedNodes">selectedNodes.</param>
-        /// <param name="autoPopulateUrlWithSPContext">autoPopulateUrlWithSPContext.</param>
+        /// <param name="autoPopulateUrlWithSPContext">autoPopulateUrlWithSPContext (default to false).</param>
         /// <param name="autoPopulateUrlWithSPContextAssignBy">autoPopulateUrlWithSPContextAssignBy.</param>
-        public ServiceScopeSettings(List<SPNode> selectedNodes = default(List<SPNode>), bool autoPopulateUrlWithSPContext = default(bool), AssignBy? autoPopulateUrlWithSPContextAssignBy = default(AssignBy?))
+        public ServiceScopeSettings(List<SPNode> selectedNodes = default(List<SPNode>), bool autoPopulateUrlWithSPContext = false, AssignBy? autoPopulateUrlWithSPContextAssignBy = default(AssignBy?))
         {
             this.SelectedNodes = selectedNodes;
             this.AutoPopulateUrlWithSPContext = autoPopulateUrlWithSPContext;

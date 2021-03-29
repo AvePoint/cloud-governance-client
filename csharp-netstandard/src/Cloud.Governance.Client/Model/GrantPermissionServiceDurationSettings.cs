@@ -47,21 +47,22 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="GrantPermissionServiceDurationSettings" /> class.
         /// </summary>
         /// <param name="assignBy">assignBy.</param>
-        /// <param name="isGrantTemporaryPermission">isGrantTemporaryPermission.</param>
-        /// <param name="defaultDurationInterval">defaultDurationInterval.</param>
+        /// <param name="isGrantTemporaryPermission">isGrantTemporaryPermission (default to false).</param>
+        /// <param name="defaultDurationInterval">defaultDurationInterval (default to 0).</param>
         /// <param name="defaultDurationType">defaultDurationType.</param>
-        /// <param name="isEnableMaxDuration">isEnableMaxDuration.</param>
-        /// <param name="maxDuration">maxDuration.</param>
+        /// <param name="isEnableMaxDuration">isEnableMaxDuration (default to false).</param>
+        /// <param name="maxDuration">maxDuration (default to 0).</param>
         /// <param name="maxDurationType">maxDurationType.</param>
-        /// <param name="isEnableExpirationNotify">isEnableExpirationNotify.</param>
-        /// <param name="expirationNotifyDurationInterval">expirationNotifyDurationInterval.</param>
+        /// <param name="isEnableExpirationNotify">isEnableExpirationNotify (default to false).</param>
+        /// <param name="expirationNotifyDurationInterval">expirationNotifyDurationInterval (default to 0).</param>
         /// <param name="expirationNotifyDurationType">expirationNotifyDurationType.</param>
-        /// <param name="isOnlyUseDefaultDuration">isOnlyUseDefaultDuration.</param>
-        public GrantPermissionServiceDurationSettings(AssignBy? assignBy = default(AssignBy?), bool isGrantTemporaryPermission = default(bool), int? defaultDurationInterval = default(int?), DurationDateType? defaultDurationType = default(DurationDateType?), bool isEnableMaxDuration = default(bool), int maxDuration = default(int), DurationDateType? maxDurationType = default(DurationDateType?), bool isEnableExpirationNotify = default(bool), int expirationNotifyDurationInterval = default(int), DurationDateType? expirationNotifyDurationType = default(DurationDateType?), bool isOnlyUseDefaultDuration = default(bool))
+        /// <param name="isOnlyUseDefaultDuration">isOnlyUseDefaultDuration (default to false).</param>
+        public GrantPermissionServiceDurationSettings(AssignBy? assignBy = default(AssignBy?), bool isGrantTemporaryPermission = false, int? defaultDurationInterval = 0, DurationDateType? defaultDurationType = default(DurationDateType?), bool isEnableMaxDuration = false, int maxDuration = 0, DurationDateType? maxDurationType = default(DurationDateType?), bool isEnableExpirationNotify = false, int expirationNotifyDurationInterval = 0, DurationDateType? expirationNotifyDurationType = default(DurationDateType?), bool isOnlyUseDefaultDuration = false)
         {
             this.AssignBy = assignBy;
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
-            this.DefaultDurationInterval = defaultDurationInterval;
+            // use default value if no "defaultDurationInterval" provided
+            this.DefaultDurationInterval = defaultDurationInterval ?? 0;
             this.DefaultDurationType = defaultDurationType;
             this.IsEnableMaxDuration = isEnableMaxDuration;
             this.MaxDuration = maxDuration;

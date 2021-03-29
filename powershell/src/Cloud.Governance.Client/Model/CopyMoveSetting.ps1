@@ -12,25 +12,25 @@ function New-CopyMoveSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsMigrateConfiguration},
+        ${IsMigrateConfiguration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsKeepLookAndFeel},
+        ${IsKeepLookAndFeel} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ColumnsAndContentConflictResolution},
+        ${ColumnsAndContentConflictResolution} = "DoNotMigrateTheItems",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsMigrateSecurity},
+        ${IsMigrateSecurity} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsMigrateColumnsAndContentTypes},
+        ${IsMigrateColumnsAndContentTypes} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsMigrateContent},
+        ${IsMigrateContent} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsMigrateContentIncludeListAttachment}
+        ${IsMigrateContentIncludeListAttachment} = $false
     )
 
     Process {

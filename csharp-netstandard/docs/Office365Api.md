@@ -56,7 +56,7 @@ namespace Example
 
             var apiInstance = new Office365Api(config);
 
-            var groupSettingModel = new GroupSettingModel(); // GroupSettingModel |  (optional) 
+            var groupSettingModel = new GroupSettingModel(); // GroupSettingModel | GroupName,GroupEmailAddress,Owners,Members (optional) 
 
             try
             {
@@ -78,7 +78,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupSettingModel** | [**GroupSettingModel**](GroupSettingModel.md)|  | [optional] 
+ **groupSettingModel** | [**GroupSettingModel**](GroupSettingModel.md)| GroupName,GroupEmailAddress,Owners,Members | [optional] 
 
 ### Return type
 
@@ -140,8 +140,8 @@ namespace Example
 
             var objectIdOrNameOrEmail = objectIdOrNameOrEmail_example;  // string | 
             var tenantId = tenantId_example;  // string | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
+            var top = 56;  // int? |  (optional)  (default to 0)
+            var skip = 56;  // int? |  (optional)  (default to 0)
             var search = search_example;  // string |  (optional) 
 
             try
@@ -167,8 +167,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **objectIdOrNameOrEmail** | **string**|  | 
  **tenantId** | **string**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
+ **top** | **int?**|  | [optional] [default to 0]
+ **skip** | **int?**|  | [optional] [default to 0]
  **search** | **string**|  | [optional] 
 
 ### Return type
@@ -230,8 +230,8 @@ namespace Example
             var apiInstance = new Office365Api(config);
 
             var email = email_example;  // string | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
+            var top = 56;  // int? |  (optional)  (default to 0)
+            var skip = 56;  // int? |  (optional)  (default to 0)
             var search = search_example;  // string |  (optional) 
 
             try
@@ -256,8 +256,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **string**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
+ **top** | **int?**|  | [optional] [default to 0]
+ **skip** | **int?**|  | [optional] [default to 0]
  **search** | **string**|  | [optional] 
 
 ### Return type
@@ -319,8 +319,8 @@ namespace Example
             var apiInstance = new Office365Api(config);
 
             var email = email_example;  // string | 
-            var top = 56;  // int? |  (optional) 
-            var skip = 56;  // int? |  (optional) 
+            var top = 56;  // int? |  (optional)  (default to 0)
+            var skip = 56;  // int? |  (optional)  (default to 0)
             var search = search_example;  // string |  (optional) 
 
             try
@@ -345,8 +345,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **string**|  | 
- **top** | **int?**|  | [optional] 
- **skip** | **int?**|  | [optional] 
+ **top** | **int?**|  | [optional] [default to 0]
+ **skip** | **int?**|  | [optional] [default to 0]
  **search** | **string**|  | [optional] 
 
 ### Return type
@@ -1069,7 +1069,7 @@ namespace Example
 
             var apiInstance = new Office365Api(config);
 
-            var languageid = 56;  // int | 
+            var languageid = 56;  // int |  (default to 0)
             var url = url_example;  // string |  (optional) 
 
             try
@@ -1093,7 +1093,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **languageid** | **int**|  | 
+ **languageid** | **int**|  | [default to 0]
  **url** | **string**|  | [optional] 
 
 ### Return type

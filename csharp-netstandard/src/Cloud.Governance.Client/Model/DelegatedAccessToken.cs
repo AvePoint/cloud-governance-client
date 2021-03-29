@@ -28,8 +28,8 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="accessToken">accessToken.</param>
         /// <param name="refreshToken">refreshToken.</param>
-        /// <param name="duration">duration.</param>
-        public DelegatedAccessToken(string accessToken = default(string), string refreshToken = default(string), long duration = default(long))
+        /// <param name="duration">duration (default to 0).</param>
+        public DelegatedAccessToken(string accessToken = default(string), string refreshToken = default(string), long duration = 0)
         {
             this.AccessToken = accessToken;
             this.RefreshToken = refreshToken;

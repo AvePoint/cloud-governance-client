@@ -1525,7 +1525,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$ChangeGroupSettingValidationParameter = (Initialize-ChangeGroupSettingValidationParameter-GroupEmail "GroupEmail_example" -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
+$ChangeGroupSettingValidationParameter = (New-ChangeGroupSettingValidationParameter-GroupEmail "GroupEmail_example" -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
 
 # validate permissions, scope for change group setting service
 try {
@@ -1586,7 +1586,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$SiteValidationParameter = (Initialize-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$SiteValidationParameter = (New-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change list setting service
 try {
@@ -1647,7 +1647,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$SiteValidationParameter = (Initialize-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$SiteValidationParameter = (New-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change permission service
 try {
@@ -2076,7 +2076,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $Id = "Id_example" # String | 
 $RequestId = "RequestId_example" # String |  (optional)
-$ApiUser = @((Initialize-ApiUser-Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType) -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO")) # ApiUser[] |  (optional)
+$ApiUser = @((New-ApiUser-Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (New-ExternalUserType) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (New-ApiUserType))) # ApiUser[] |  (optional)
 
 # validate groups can invite
 try {
@@ -2138,7 +2138,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$ListValidationParameter = (Initialize-ListValidationParameter-ListUrl "ListUrl_example" -ParentUrl "ParentUrl_example" -ListTitle "ListTitle_example" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
+$ListValidationParameter = (New-ListValidationParameter-ListUrl "ListUrl_example" -ParentUrl "ParentUrl_example" -ListTitle "ListTitle_example" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
 
 # validate permissions, scope for create list service
 try {
@@ -2199,7 +2199,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$CreateWebValidationParameter = (Initialize-CreateWebValidationParameter-ParentUrl "ParentUrl_example" -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
+$CreateWebValidationParameter = (New-CreateWebValidationParameter-ParentUrl "ParentUrl_example" -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
 
 # validate permissions, scope for create web service
 try {
@@ -2321,7 +2321,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$GroupValidationParameter = (Initialize-GroupValidationParameter-GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
+$GroupValidationParameter = (New-GroupValidationParameter-GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
 
 # validate permissions, scope for group lifecycle service
 try {

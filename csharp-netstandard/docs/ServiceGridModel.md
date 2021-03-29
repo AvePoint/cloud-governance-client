@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **ServiceTypeDescription** | **string** |  | [optional] 
 **Status** | **CommonStatus** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 
-**Language** | **int** |  | [optional] 
+**Language** | **int** |  | [optional] [default to 0]
 **ModifiedTime** | **DateTime** |  | [optional] 
 **CreatedByDisplayName** | **string** |  | [optional] 
 **CreatedBy** | **string** |  | [optional] 

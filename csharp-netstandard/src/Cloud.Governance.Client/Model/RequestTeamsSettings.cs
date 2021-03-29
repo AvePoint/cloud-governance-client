@@ -31,23 +31,23 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestTeamsSettings" /> class.
         /// </summary>
-        /// <param name="allowMembersCreateUpdateChannels">allowMembersCreateUpdateChannels.</param>
-        /// <param name="allowMembersCreatePrivateChannels">allowMembersCreatePrivateChannels.</param>
-        /// <param name="allowMemberDeleteRestoreChannels">allowMemberDeleteRestoreChannels.</param>
-        /// <param name="allowMembersAddRemoveApps">allowMembersAddRemoveApps.</param>
-        /// <param name="allowMembersCreateUpdateRemoveTabs">allowMembersCreateUpdateRemoveTabs.</param>
-        /// <param name="allowMembersCreateUpdateRemoveConnections">allowMembersCreateUpdateRemoveConnections.</param>
-        /// <param name="allowMembersDeleteMessages">allowMembersDeleteMessages.</param>
-        /// <param name="allowMembersEditMessages">allowMembersEditMessages.</param>
-        /// <param name="allowGuestsCreateUpdateChannels">allowGuestsCreateUpdateChannels.</param>
-        /// <param name="allowGuestsDeleteChannels">allowGuestsDeleteChannels.</param>
-        /// <param name="allowMentionsTeam">allowMentionsTeam.</param>
-        /// <param name="allowMentionsChannel">allowMentionsChannel.</param>
-        /// <param name="enableGiphy">enableGiphy.</param>
-        /// <param name="enableStickersAndMemes">enableStickersAndMemes.</param>
-        /// <param name="enableCustomMemes">enableCustomMemes.</param>
+        /// <param name="allowMembersCreateUpdateChannels">allowMembersCreateUpdateChannels (default to false).</param>
+        /// <param name="allowMembersCreatePrivateChannels">allowMembersCreatePrivateChannels (default to false).</param>
+        /// <param name="allowMemberDeleteRestoreChannels">allowMemberDeleteRestoreChannels (default to false).</param>
+        /// <param name="allowMembersAddRemoveApps">allowMembersAddRemoveApps (default to false).</param>
+        /// <param name="allowMembersCreateUpdateRemoveTabs">allowMembersCreateUpdateRemoveTabs (default to false).</param>
+        /// <param name="allowMembersCreateUpdateRemoveConnections">allowMembersCreateUpdateRemoveConnections (default to false).</param>
+        /// <param name="allowMembersDeleteMessages">allowMembersDeleteMessages (default to false).</param>
+        /// <param name="allowMembersEditMessages">allowMembersEditMessages (default to false).</param>
+        /// <param name="allowGuestsCreateUpdateChannels">allowGuestsCreateUpdateChannels (default to false).</param>
+        /// <param name="allowGuestsDeleteChannels">allowGuestsDeleteChannels (default to false).</param>
+        /// <param name="allowMentionsTeam">allowMentionsTeam (default to false).</param>
+        /// <param name="allowMentionsChannel">allowMentionsChannel (default to false).</param>
+        /// <param name="enableGiphy">enableGiphy (default to false).</param>
+        /// <param name="enableStickersAndMemes">enableStickersAndMemes (default to false).</param>
+        /// <param name="enableCustomMemes">enableCustomMemes (default to false).</param>
         /// <param name="giphyRatingType">giphyRatingType.</param>
-        public RequestTeamsSettings(bool allowMembersCreateUpdateChannels = default(bool), bool allowMembersCreatePrivateChannels = default(bool), bool allowMemberDeleteRestoreChannels = default(bool), bool allowMembersAddRemoveApps = default(bool), bool allowMembersCreateUpdateRemoveTabs = default(bool), bool allowMembersCreateUpdateRemoveConnections = default(bool), bool allowMembersDeleteMessages = default(bool), bool allowMembersEditMessages = default(bool), bool allowGuestsCreateUpdateChannels = default(bool), bool allowGuestsDeleteChannels = default(bool), bool allowMentionsTeam = default(bool), bool allowMentionsChannel = default(bool), bool enableGiphy = default(bool), bool enableStickersAndMemes = default(bool), bool enableCustomMemes = default(bool), GiphyRatingType? giphyRatingType = default(GiphyRatingType?))
+        public RequestTeamsSettings(bool allowMembersCreateUpdateChannels = false, bool allowMembersCreatePrivateChannels = false, bool allowMemberDeleteRestoreChannels = false, bool allowMembersAddRemoveApps = false, bool allowMembersCreateUpdateRemoveTabs = false, bool allowMembersCreateUpdateRemoveConnections = false, bool allowMembersDeleteMessages = false, bool allowMembersEditMessages = false, bool allowGuestsCreateUpdateChannels = false, bool allowGuestsDeleteChannels = false, bool allowMentionsTeam = false, bool allowMentionsChannel = false, bool enableGiphy = false, bool enableStickersAndMemes = false, bool enableCustomMemes = false, GiphyRatingType? giphyRatingType = default(GiphyRatingType?))
         {
             this.AllowMembersCreateUpdateChannels = allowMembersCreateUpdateChannels;
             this.AllowMembersCreatePrivateChannels = allowMembersCreatePrivateChannels;

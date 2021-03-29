@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **Classifications** | **String[]** |  | [optional] 
 **Sensitivities** | **String[]** |  | [optional] 
 **HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] 
-**EnabledCustomTemplate** | **Boolean** |  | [optional] 
+**EnabledCustomTemplate** | **Boolean** |  | [optional] [default to $false]
 **CustomSiteTemplateListURL** | **String** |  | [optional] 
 **DefaultPrimaryAdmin** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultAdditionalAdmins** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
@@ -33,12 +33,12 @@ Name | Type | Description | Notes
 **DefaultAdditionalAdminsReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**DefaultSiteLanguage** | **Int32** |  | [optional] 
+**DefaultSiteLanguage** | **Int32** |  | [optional] [default to 0]
 **DefaultRootSite** | **String** |  | [optional] 
 **DefaultManagedPath** | **String** |  | [optional] 
 **DefaultPolicy** | **String** |  | [optional] 
 **DefaultTemplate** | **String** |  | [optional] 
-**DefaultTimeZone** | **Int32** |  | [optional] 
+**DefaultTimeZone** | **Int32** |  | [optional] [default to 0]
 **DefaultClassification** | **String** |  | [optional] 
 **DefaultSensitivity** | **String** |  | [optional] 
 **DefaultDesignType** | **String** |  | [optional] 
@@ -56,27 +56,26 @@ Name | Type | Description | Notes
 **ClassificationAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **SensitivityAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**RequestTemplate** | [**CreateSiteRequest**](CreateSiteRequest.md) |  | [optional] 
+**RequestTemplate** | [**CreateSiteRequest**](CreateSiteRequest.md) | Create collection requesst model | [optional] 
 **DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
-**HideRequestSummary** | **Boolean** |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
 **Departments** | **String[]** |  | [optional] 
 **ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
-**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
 **CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **String** |  | [optional] 
-**LanguageId** | **Int32** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] [default to 0]
 **CategoryId** | **String** |  | [optional] 
-**Details** | **String** |  | [optional] 
 
 ## Examples
 
@@ -154,8 +153,7 @@ $CreateSiteService = New-Cloud.Governance.ClientCreateSiteService  -ScopeSetting
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null `
- -Details null
+ -CategoryId null
 ```
 
 - Convert the resource to JSON

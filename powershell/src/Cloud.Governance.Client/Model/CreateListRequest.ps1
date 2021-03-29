@@ -27,10 +27,10 @@ function New-CreateListRequest {
         ${ListTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableNavigation},
+        ${EnableNavigation} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ListType},
+        ${ListType} = "Library",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${VersionSettings},

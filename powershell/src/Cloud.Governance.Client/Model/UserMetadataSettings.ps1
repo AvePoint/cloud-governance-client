@@ -15,7 +15,7 @@ function New-UserMetadataSettings {
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowReferenceAsRoleInApprovalProcess}
+        ${AllowReferenceAsRoleInApprovalProcess} = $false
     )
 
     Process {

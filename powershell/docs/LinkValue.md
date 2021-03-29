@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | **String** |  | [optional] 
-**Address** | **String** |  | [optional] 
+**Title** | **String** | Title of link metadata | [optional] 
+**Address** | **String** | Address of link metadata | [optional] 
 
 ## Examples
 

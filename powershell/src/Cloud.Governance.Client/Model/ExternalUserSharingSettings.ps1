@@ -12,10 +12,10 @@ function New-ExternalUserSharingSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Enabled},
+        ${Enabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SharingType},
+        ${SharingType} = "RequireSignIn",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${AnonymousLinkSettings}

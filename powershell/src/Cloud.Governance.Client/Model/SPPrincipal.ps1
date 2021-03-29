@@ -12,7 +12,7 @@ function New-SPPrincipal {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Id},
+        ${Id} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LoginName},
@@ -21,7 +21,10 @@ function New-SPPrincipal {
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrincipalType}
+        ${PrincipalType} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType}
     )
 
     Process {
@@ -34,6 +37,7 @@ function New-SPPrincipal {
             "LoginName" = ${LoginName}
             "Name" = ${Name}
             "PrincipalType" = ${PrincipalType}
+            "AzureUserType" = ${AzureUserType}
         }
 
         return $PSO
@@ -56,7 +60,7 @@ function ConvertFrom-JsonToSPPrincipal {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in SPPrincipal
-        $AllProperties = $("Id", "LoginName", "Name", "PrincipalType")
+        $AllProperties = $("Id", "LoginName", "Name", "PrincipalType", "AzureUserType")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -87,11 +91,18 @@ function ConvertFrom-JsonToSPPrincipal {
             $PrincipalType = $JsonParameters.PSobject.Properties["PrincipalType"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "Name" = ${Name}
             "PrincipalType" = ${PrincipalType}
+            "AzureUserType" = ${AzureUserType}
         }
 
         return $PSO

@@ -1,0 +1,5 @@
+{
+  "ServiceName": "S_ChangeSite_Policy",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/testlifecycle",
+  "ChangePolicyName": "S_Policy_Lifecycle"
+}

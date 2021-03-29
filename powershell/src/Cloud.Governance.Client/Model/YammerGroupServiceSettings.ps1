@@ -15,16 +15,16 @@ function New-YammerGroupServiceSettings {
         ${NetworkId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowCreate},
+        ${AllowCreate} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowReuseExisting},
+        ${AllowReuseExisting} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Enabled},
+        ${Enabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${CreateNewGroupAssignBy},
+        ${CreateNewGroupAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${NameOrId},
@@ -33,16 +33,16 @@ function New-YammerGroupServiceSettings {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Public",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${JoinType},
+        ${JoinType} = "Anyone",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsListInDirectory},
+        ${IsListInDirectory} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGroupAlreadyExisted}
+        ${IsGroupAlreadyExisted} = $false
     )
 
     Process {

@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="permissionLevels">permissionLevels.</param>
         /// <param name="externalSharingOptions">externalSharingOptions.</param>
-        /// <param name="enableShareAnonymousLink">enableShareAnonymousLink.</param>
+        /// <param name="enableShareAnonymousLink">enableShareAnonymousLink (default to false).</param>
         /// <param name="_object">_object.</param>
         /// <param name="userMetadata">userMetadata.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ManagePermissionValidateResult(List<PermissionLevel> permissionLevels = default(List<PermissionLevel>), ExternalSharingOptions? externalSharingOptions = default(ExternalSharingOptions?), bool enableShareAnonymousLink = default(bool), ManagePermissionSPObject _object = default(ManagePermissionSPObject), Dictionary<string, UserInfo> userMetadata = default(Dictionary<string, UserInfo>), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ManagePermissionValidateResult(List<PermissionLevel> permissionLevels = default(List<PermissionLevel>), ExternalSharingOptions? externalSharingOptions = default(ExternalSharingOptions?), bool enableShareAnonymousLink = false, ManagePermissionSPObject _object = default(ManagePermissionSPObject), Dictionary<string, UserInfo> userMetadata = default(Dictionary<string, UserInfo>), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.PermissionLevels = permissionLevels;
             this.ExternalSharingOptions = externalSharingOptions;

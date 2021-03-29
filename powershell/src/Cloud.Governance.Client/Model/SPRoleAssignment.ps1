@@ -12,7 +12,7 @@ function New-SPRoleAssignment {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Id},
+        ${Id} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name},
@@ -20,8 +20,11 @@ function New-SPRoleAssignment {
         [String]
         ${LoginName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrincipalType},
+        ${PrincipalType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PrincipalTypeDescription},
@@ -39,6 +42,7 @@ function New-SPRoleAssignment {
             "Id" = ${Id}
             "Name" = ${Name}
             "LoginName" = ${LoginName}
+            "AzureUserType" = ${AzureUserType}
             "PrincipalType" = ${PrincipalType}
             "PrincipalTypeDescription" = ${PrincipalTypeDescription}
             "PermissionLevels" = ${PermissionLevels}
@@ -64,7 +68,7 @@ function ConvertFrom-JsonToSPRoleAssignment {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in SPRoleAssignment
-        $AllProperties = $("Id", "Name", "LoginName", "PrincipalType", "PrincipalTypeDescription", "PermissionLevels")
+        $AllProperties = $("Id", "Name", "LoginName", "AzureUserType", "PrincipalType", "PrincipalTypeDescription", "PermissionLevels")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -89,6 +93,12 @@ function ConvertFrom-JsonToSPRoleAssignment {
             $LoginName = $JsonParameters.PSobject.Properties["LoginName"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "PrincipalType"))) { #optional property not found
             $PrincipalType = $null
         } else {
@@ -111,6 +121,7 @@ function ConvertFrom-JsonToSPRoleAssignment {
             "Id" = ${Id}
             "Name" = ${Name}
             "LoginName" = ${LoginName}
+            "AzureUserType" = ${AzureUserType}
             "PrincipalType" = ${PrincipalType}
             "PrincipalTypeDescription" = ${PrincipalTypeDescription}
             "PermissionLevels" = ${PermissionLevels}

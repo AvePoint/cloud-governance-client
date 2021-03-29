@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// LookupListValue
+    /// Value of Lookup User Profile or Azure Ad metadata.
     /// </summary>
     [DataContract(Name = "LookupListValue")]
     public partial class LookupListValue : IEquatable<LookupListValue>, IValidatableObject
@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LookupListValue" /> class.
         /// </summary>
-        /// <param name="columnType">columnType.</param>
-        /// <param name="columnName">columnName.</param>
-        /// <param name="value">value.</param>
-        /// <param name="displayValue">displayValue.</param>
+        /// <param name="columnType">type of lookup list column.</param>
+        /// <param name="columnName">name of lookup list column.</param>
+        /// <param name="value">Value of lookup list.</param>
+        /// <param name="displayValue">Display value of lookup list.</param>
         public LookupListValue(string columnType = default(string), string columnName = default(string), string value = default(string), string displayValue = default(string))
         {
             this.ColumnType = columnType;
@@ -39,26 +39,30 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ColumnType
+        /// type of lookup list column
         /// </summary>
+        /// <value>type of lookup list column</value>
         [DataMember(Name = "columnType", EmitDefaultValue = true)]
         public string ColumnType { get; set; }
 
         /// <summary>
-        /// Gets or Sets ColumnName
+        /// name of lookup list column
         /// </summary>
+        /// <value>name of lookup list column</value>
         [DataMember(Name = "columnName", EmitDefaultValue = true)]
         public string ColumnName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Value of lookup list
         /// </summary>
+        /// <value>Value of lookup list</value>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayValue
+        /// Display value of lookup list
         /// </summary>
+        /// <value>Display value of lookup list</value>
         [DataMember(Name = "displayValue", EmitDefaultValue = true)]
         public string DisplayValue { get; set; }
 

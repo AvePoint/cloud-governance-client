@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Type** | **MetadataFieldType** |  | [optional] 
 **DisplayType** | **DisplayInReportType** |  | [optional] 
 **AssignBy** | **AssignBy** |  | [optional] 
-**EnableTextValidation** | **bool** |  | [optional] 
+**EnableTextValidation** | **bool** |  | [optional] [default to false]
 **TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
 **BooleanMetadataSettings** | [**BooleanMetadataSettings**](BooleanMetadataSettings.md) |  | [optional] 
 **TermsMetadataSettings** | [**TermsMetadataSettings**](TermsMetadataSettings.md) |  | [optional] 

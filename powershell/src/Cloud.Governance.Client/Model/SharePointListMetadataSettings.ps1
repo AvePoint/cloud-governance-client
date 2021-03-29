@@ -27,7 +27,7 @@ function New-SharePointListMetadataSettings {
         ${PropertyName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAdditionalColumnEnabled},
+        ${IsAdditionalColumnEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${MatchedMetadataId},
@@ -48,7 +48,7 @@ function New-SharePointListMetadataSettings {
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowReferenceAsRoleInApprovalProcess}
+        ${AllowReferenceAsRoleInApprovalProcess} = $false
     )
 
     Process {

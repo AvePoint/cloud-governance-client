@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **Description** | **String** |  | [optional] 
 **Type** | [**YammerGroupType**](YammerGroupType.md) |  | [optional] 
 **JoinType** | [**YammerGroupJoinType**](YammerGroupJoinType.md) |  | [optional] 
-**IsListInDirectory** | **Boolean** |  | [optional] 
-**IsGroupAlreadyExisted** | **Boolean** |  | [optional] 
+**IsListInDirectory** | **Boolean** |  | [optional] [default to $false]
+**IsGroupAlreadyExisted** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

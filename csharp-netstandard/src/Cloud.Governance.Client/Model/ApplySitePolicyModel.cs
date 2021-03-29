@@ -26,22 +26,22 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplySitePolicyModel" /> class.
         /// </summary>
-        /// <param name="isApplyDesigner">isApplyDesigner.</param>
-        /// <param name="isApplySiteMaxDepth">isApplySiteMaxDepth.</param>
-        /// <param name="isApplyPolicyIcon">isApplyPolicyIcon.</param>
-        /// <param name="isApplyAosPlans">isApplyAosPlans.</param>
+        /// <param name="isApplyDesigner">isApplyDesigner (default to false).</param>
+        /// <param name="isApplySiteMaxDepth">isApplySiteMaxDepth (default to false).</param>
+        /// <param name="isApplyPolicyIcon">isApplyPolicyIcon (default to false).</param>
+        /// <param name="isApplyAosPlans">isApplyAosPlans (default to false).</param>
         /// <param name="policyId">policyId.</param>
-        /// <param name="isApplyAllSetting">isApplyAllSetting.</param>
-        /// <param name="isApplyQuota">isApplyQuota.</param>
-        /// <param name="isApplySharing">isApplySharing.</param>
-        /// <param name="isApplyQuotaThreshold">isApplyQuotaThreshold.</param>
-        /// <param name="isApplyDeactivatedElection">isApplyDeactivatedElection.</param>
-        /// <param name="isApplyLifecycle">isApplyLifecycle.</param>
+        /// <param name="isApplyAllSetting">isApplyAllSetting (default to false).</param>
+        /// <param name="isApplyQuota">isApplyQuota (default to false).</param>
+        /// <param name="isApplySharing">isApplySharing (default to false).</param>
+        /// <param name="isApplyQuotaThreshold">isApplyQuotaThreshold (default to false).</param>
+        /// <param name="isApplyDeactivatedElection">isApplyDeactivatedElection (default to false).</param>
+        /// <param name="isApplyLifecycle">isApplyLifecycle (default to false).</param>
         /// <param name="lifecycleRenewalSetting">lifecycleRenewalSetting.</param>
         /// <param name="filter">filter.</param>
         /// <param name="selectedObjects">selectedObjects.</param>
-        /// <param name="hasOngoingTasks">hasOngoingTasks.</param>
-        public ApplySitePolicyModel(bool isApplyDesigner = default(bool), bool isApplySiteMaxDepth = default(bool), bool isApplyPolicyIcon = default(bool), bool isApplyAosPlans = default(bool), Guid policyId = default(Guid), bool isApplyAllSetting = default(bool), bool isApplyQuota = default(bool), bool isApplySharing = default(bool), bool isApplyQuotaThreshold = default(bool), bool isApplyDeactivatedElection = default(bool), bool isApplyLifecycle = default(bool), LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = default(bool))
+        /// <param name="hasOngoingTasks">hasOngoingTasks (default to false).</param>
+        public ApplySitePolicyModel(bool isApplyDesigner = false, bool isApplySiteMaxDepth = false, bool isApplyPolicyIcon = false, bool isApplyAosPlans = false, Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false)
         {
             this.IsApplyDesigner = isApplyDesigner;
             this.IsApplySiteMaxDepth = isApplySiteMaxDepth;

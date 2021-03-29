@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsGrantTemporaryPermission** | **bool** |  | [optional] 
-**IsGrantAdminGroup** | **bool** |  | [optional] 
+**IsGrantTemporaryPermission** | **bool** |  | [optional] [default to false]
+**IsGrantAdminGroup** | **bool** |  | [optional] [default to false]
 **ExpirationType** | **ExpirationType** |  | [optional] 
-**DurationInterval** | **int?** |  | [optional] 
+**DurationInterval** | **int?** |  | [optional] [default to 0]
 **DurationDateType** | **ApiDurationType** |  | [optional] 
 **StartTime** | **DateTime?** |  | [optional] 
 **EndTime** | **DateTime?** |  | [optional] 

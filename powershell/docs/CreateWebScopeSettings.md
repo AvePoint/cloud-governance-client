@@ -5,11 +5,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RestrictParentUrl** | **String** |  | [optional] 
 **ScopeType** | [**ScopeType**](ScopeType.md) |  | [optional] 
-**UseTitleInUrl** | **Boolean** |  | [optional] 
-**EnableUrlValidation** | **Boolean** |  | [optional] 
+**UseTitleInUrl** | **Boolean** |  | [optional] [default to $false]
+**EnableUrlValidation** | **Boolean** |  | [optional] [default to $false]
 **TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
 **SelectedNodes** | [**SPNode[]**](SPNode.md) |  | [optional] 
-**AutoPopulateUrlWithSPContext** | **Boolean** |  | [optional] 
+**AutoPopulateUrlWithSPContext** | **Boolean** |  | [optional] [default to $false]
 **AutoPopulateUrlWithSPContextAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 
 ## Examples

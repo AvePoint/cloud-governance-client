@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableInstallApp** | **Boolean** |  | [optional] 
-**EnableAddSiteInfoCard** | **Boolean** |  | [optional] 
-**EnableAddTimeLine** | **Boolean** |  | [optional] 
-**EnableAddPanel** | **Boolean** |  | [optional] 
+**EnableInstallApp** | **Boolean** |  | [optional] [default to $false]
+**EnableAddSiteInfoCard** | **Boolean** |  | [optional] [default to $false]
+**EnableAddTimeLine** | **Boolean** |  | [optional] [default to $false]
+**EnableAddPanel** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

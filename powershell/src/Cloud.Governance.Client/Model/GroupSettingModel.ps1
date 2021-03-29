@@ -27,7 +27,7 @@ function New-GroupSettingModel {
         ${Members},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${GroupDuration},
+        ${GroupDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${EmailSubject},

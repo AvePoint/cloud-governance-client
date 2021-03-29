@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LoginName** | **String** |  | [optional] 
 **DisplayName** | **String** |  | [optional] 
+**AzureUserType** | **String** |  | [optional] 
+**IsGroup** | **Boolean** |  | [optional] [default to $false]
 **Action** | [**GroupMembershipAction**](GroupMembershipAction.md) |  | [optional] 
 
 ## Examples
@@ -13,6 +15,8 @@ Name | Type | Description | Notes
 ```powershell
 $GroupMembershipItem = New-Cloud.Governance.ClientGroupMembershipItem  -LoginName null `
  -DisplayName null `
+ -AzureUserType null `
+ -IsGroup null `
  -Action null
 ```
 

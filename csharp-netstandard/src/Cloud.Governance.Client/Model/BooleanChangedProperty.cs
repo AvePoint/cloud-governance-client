@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BooleanChangedProperty" /> class.
         /// </summary>
-        /// <param name="changeValue">changeValue.</param>
-        /// <param name="originalValue">originalValue.</param>
-        public BooleanChangedProperty(bool changeValue = default(bool), bool originalValue = default(bool))
+        /// <param name="changeValue">changeValue (default to false).</param>
+        /// <param name="originalValue">originalValue (default to false).</param>
+        public BooleanChangedProperty(bool changeValue = false, bool originalValue = false)
         {
             this.ChangeValue = changeValue;
             this.OriginalValue = originalValue;

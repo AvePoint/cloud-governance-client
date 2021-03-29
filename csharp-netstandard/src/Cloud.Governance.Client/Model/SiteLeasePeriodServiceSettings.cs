@@ -48,14 +48,14 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="leasePeriodAssignBy">leasePeriodAssignBy.</param>
         /// <param name="leaseWarningAssignBy">leaseWarningAssignBy.</param>
-        /// <param name="leaseEnabled">leaseEnabled.</param>
-        /// <param name="leaseWarningEnabled">leaseWarningEnabled.</param>
+        /// <param name="leaseEnabled">leaseEnabled (default to false).</param>
+        /// <param name="leaseWarningEnabled">leaseWarningEnabled (default to false).</param>
         /// <param name="approvalProcessId">approvalProcessId.</param>
-        /// <param name="leaseInterval">leaseInterval.</param>
+        /// <param name="leaseInterval">leaseInterval (default to 0).</param>
         /// <param name="leaseDurationType">leaseDurationType.</param>
-        /// <param name="leaseWarningInterval">leaseWarningInterval.</param>
+        /// <param name="leaseWarningInterval">leaseWarningInterval (default to 0).</param>
         /// <param name="leaseWarningDurationType">leaseWarningDurationType.</param>
-        public SiteLeasePeriodServiceSettings(AssignBy? leasePeriodAssignBy = default(AssignBy?), AssignBy? leaseWarningAssignBy = default(AssignBy?), bool leaseEnabled = default(bool), bool leaseWarningEnabled = default(bool), Guid? approvalProcessId = default(Guid?), int leaseInterval = default(int), ApiDurationType? leaseDurationType = default(ApiDurationType?), int leaseWarningInterval = default(int), ApiDurationType? leaseWarningDurationType = default(ApiDurationType?))
+        public SiteLeasePeriodServiceSettings(AssignBy? leasePeriodAssignBy = default(AssignBy?), AssignBy? leaseWarningAssignBy = default(AssignBy?), bool leaseEnabled = false, bool leaseWarningEnabled = false, Guid? approvalProcessId = default(Guid?), int leaseInterval = 0, ApiDurationType? leaseDurationType = default(ApiDurationType?), int leaseWarningInterval = 0, ApiDurationType? leaseWarningDurationType = default(ApiDurationType?))
         {
             this.LeasePeriodAssignBy = leasePeriodAssignBy;
             this.LeaseWarningAssignBy = leaseWarningAssignBy;

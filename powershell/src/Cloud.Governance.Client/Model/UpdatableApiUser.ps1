@@ -24,7 +24,7 @@ function New-UpdatableApiUser {
         ${PeopleFilterProfileId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${UserType},
+        ${ApiUserType} = "User",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -33,13 +33,16 @@ function New-UpdatableApiUser {
         ${LoginName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${IsExternalUser},
+        ${IsExternalUser} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGroup}
+        ${IsGroup} = $false
     )
 
     Process {
@@ -52,10 +55,11 @@ function New-UpdatableApiUser {
             "JobTitle" = ${JobTitle}
             "TenantId" = ${TenantId}
             "PeopleFilterProfileId" = ${PeopleFilterProfileId}
-            "UserType" = ${UserType}
+            "ApiUserType" = ${ApiUserType}
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
         }
@@ -80,7 +84,7 @@ function ConvertFrom-JsonToUpdatableApiUser {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UpdatableApiUser
-        $AllProperties = $("Email", "JobTitle", "TenantId", "PeopleFilterProfileId", "UserType", "Id", "LoginName", "IsExternalUser", "DisplayName", "IsGroup", "IsLocalUser", "PhysicalDeliveryOfficeName", "IsValid", "AdditionalData")
+        $AllProperties = $("Email", "JobTitle", "TenantId", "PeopleFilterProfileId", "ApiUserType", "Id", "LoginName", "IsExternalUser", "AzureUserType", "DisplayName", "IsGroup", "IsLocalUser", "PhysicalDeliveryOfficeName", "IsValid", "AdditionalData")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -111,10 +115,10 @@ function ConvertFrom-JsonToUpdatableApiUser {
             $PeopleFilterProfileId = $JsonParameters.PSobject.Properties["PeopleFilterProfileId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "UserType"))) { #optional property not found
-            $UserType = $null
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApiUserType"))) { #optional property not found
+            $ApiUserType = $null
         } else {
-            $UserType = $JsonParameters.PSobject.Properties["UserType"].value
+            $ApiUserType = $JsonParameters.PSobject.Properties["ApiUserType"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
@@ -133,6 +137,12 @@ function ConvertFrom-JsonToUpdatableApiUser {
             $IsExternalUser = $null
         } else {
             $IsExternalUser = $JsonParameters.PSobject.Properties["IsExternalUser"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayName"))) { #optional property not found
@@ -176,10 +186,11 @@ function ConvertFrom-JsonToUpdatableApiUser {
             "JobTitle" = ${JobTitle}
             "TenantId" = ${TenantId}
             "PeopleFilterProfileId" = ${PeopleFilterProfileId}
-            "UserType" = ${UserType}
+            "ApiUserType" = ${ApiUserType}
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
             "IsLocalUser" = ${IsLocalUser}

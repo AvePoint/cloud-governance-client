@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ChangeGroup_ChangeContact_Service",
+  "GroupEmail": "group@example.com",
+  "PrimaryContact": "user@example.com",
+  "SecondaryContact": "user@example.com"
+}

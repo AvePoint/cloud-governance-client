@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool** |  | [optional] [default to false]
 **Plans** | **List&lt;string&gt;** |  | [optional] 
 **AssignBy** | **AssignBy** |  | [optional] 
 **Default** | **string** |  | [optional] 

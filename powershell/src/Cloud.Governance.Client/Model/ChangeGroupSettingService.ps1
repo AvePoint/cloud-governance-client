@@ -18,82 +18,82 @@ function New-ChangeGroupSettingService {
         ${NetworkId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupRestriction},
+        ${GroupRestriction} = "AnyGroup",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeName},
+        ${EnableChangeName} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeDescription},
+        ${EnableChangeDescription} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeMemberSubscription},
+        ${EnableChangeMemberSubscription} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeOutsideSenders},
+        ${EnableChangeOutsideSenders} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangePrimaryContact},
+        ${EnableChangePrimaryContact} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeSecondaryContact},
+        ${EnableChangeSecondaryContact} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAddOwners},
+        ${EnableAddOwners} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AddOwnerRestriction},
+        ${AddOwnerRestriction} = "AnyUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableRemoveOwners},
+        ${EnableRemoveOwners} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAddMembers},
+        ${EnableAddMembers} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AddMemberRestriction},
+        ${AddMemberRestriction} = "AnyUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableRemoveMembers},
+        ${EnableRemoveMembers} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeDynamicMembershipRules},
+        ${EnableChangeDynamicMembershipRules} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeTeamCollaboration},
+        ${EnableChangeTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeHubSite},
+        ${EnableChangeHubSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeClassification},
+        ${EnableChangeClassification} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${ClassificationList},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeSensitivity},
+        ${EnableChangeSensitivity} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${SensitivityList},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeMetadata},
+        ${EnableChangeMetadata} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAddOrDeleteMetadata},
+        ${EnableAddOrDeleteMetadata} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${MetadataList},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeMembershipType},
+        ${EnableChangeMembershipType} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeYammerGroupInfo},
+        ${EnableChangeYammerGroupInfo} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ScopePeoplePickerFilterProfileId},
@@ -105,13 +105,13 @@ function New-ChangeGroupSettingService {
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DepartmentAssignBy},
+        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HideRequestSummary},
+        ${HideRequestSummary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -123,13 +123,13 @@ function New-ChangeGroupSettingService {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps},
+        ${LoadDepartmentFromUps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Departments},
@@ -141,13 +141,13 @@ function New-ChangeGroupSettingService {
         ${ServiceAdminContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ApproversContainManagerRole},
+        ${ApproversContainManagerRole} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowServiceInCatalog},
+        ${ShowServiceInCatalog} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CustomActions},
@@ -156,13 +156,10 @@ function New-ChangeGroupSettingService {
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CategoryId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Details}
+        ${CategoryId}
     )
 
     Process {
@@ -221,7 +218,6 @@ function New-ChangeGroupSettingService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO
@@ -244,7 +240,7 @@ function ConvertFrom-JsonToChangeGroupSettingService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupSettingService
-        $AllProperties = $("TenantId", "NetworkId", "GroupRestriction", "EnableChangeName", "EnableChangeDescription", "EnableChangeMemberSubscription", "EnableChangeOutsideSenders", "EnableChangePrimaryContact", "EnableChangeSecondaryContact", "EnableAddOwners", "AddOwnerRestriction", "EnableRemoveOwners", "EnableAddMembers", "AddMemberRestriction", "EnableRemoveMembers", "EnableChangeDynamicMembershipRules", "EnableChangeTeamCollaboration", "EnableChangeHubSite", "EnableChangeClassification", "ClassificationList", "EnableChangeSensitivity", "SensitivityList", "EnableChangeMetadata", "EnableAddOrDeleteMetadata", "MetadataList", "EnableChangeMembershipType", "GroupObjectType", "EnableChangeYammerGroupInfo", "ScopePeoplePickerFilterProfileId", "PeoplePickerFilterProfileId", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "Details")
+        $AllProperties = $("TenantId", "NetworkId", "GroupRestriction", "EnableChangeName", "EnableChangeDescription", "EnableChangeMemberSubscription", "EnableChangeOutsideSenders", "EnableChangePrimaryContact", "EnableChangeSecondaryContact", "EnableAddOwners", "AddOwnerRestriction", "EnableRemoveOwners", "EnableAddMembers", "AddMemberRestriction", "EnableRemoveMembers", "EnableChangeDynamicMembershipRules", "EnableChangeTeamCollaboration", "EnableChangeHubSite", "EnableChangeClassification", "ClassificationList", "EnableChangeSensitivity", "SensitivityList", "EnableChangeMetadata", "EnableAddOrDeleteMetadata", "MetadataList", "EnableChangeMembershipType", "GroupObjectType", "EnableChangeYammerGroupInfo", "ScopePeoplePickerFilterProfileId", "PeoplePickerFilterProfileId", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -551,12 +547,6 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             $CategoryId = $JsonParameters.PSobject.Properties["CategoryId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Details"))) { #optional property not found
-            $Details = $null
-        } else {
-            $Details = $JsonParameters.PSobject.Properties["Details"].value
-        }
-
         $PSO = [PSCustomObject]@{
             "TenantId" = ${TenantId}
             "NetworkId" = ${NetworkId}
@@ -608,7 +598,6 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO

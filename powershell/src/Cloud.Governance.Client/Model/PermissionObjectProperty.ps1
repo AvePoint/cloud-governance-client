@@ -30,16 +30,16 @@ function New-PermissionObjectProperty {
         ${ObjectUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsInherit},
+        ${IsInherit} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${InheritNodeType},
+        ${InheritNodeType} = "Root",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TopInheritUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${CheckType}
+        ${CheckType} = "Root"
     )
 
     Process {

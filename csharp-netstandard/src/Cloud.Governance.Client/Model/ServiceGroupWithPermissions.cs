@@ -48,8 +48,8 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="usersAssignBy">usersAssignBy.</param>
         /// <param name="groupOwnerAssignBy">groupOwnerAssignBy.</param>
-        /// <param name="allowChangePermissionLevel">allowChangePermissionLevel.</param>
-        /// <param name="removable">removable.</param>
+        /// <param name="allowChangePermissionLevel">allowChangePermissionLevel (default to false).</param>
+        /// <param name="removable">removable (default to false).</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="users">users.</param>
@@ -57,7 +57,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupOwner">groupOwner.</param>
         /// <param name="groupOwnerType">groupOwnerType.</param>
         /// <param name="buildInGroupType">buildInGroupType.</param>
-        public ServiceGroupWithPermissions(AssignBy? usersAssignBy = default(AssignBy?), AssignBy? groupOwnerAssignBy = default(AssignBy?), bool allowChangePermissionLevel = default(bool), bool removable = default(bool), string name = default(string), string description = default(string), List<GroupUser> users = default(List<GroupUser>), List<PermissionLevel> permissionLevels = default(List<PermissionLevel>), ApiUser groupOwner = default(ApiUser), GroupOwnerType? groupOwnerType = default(GroupOwnerType?), SharePointBuildInGroupType? buildInGroupType = default(SharePointBuildInGroupType?))
+        public ServiceGroupWithPermissions(AssignBy? usersAssignBy = default(AssignBy?), AssignBy? groupOwnerAssignBy = default(AssignBy?), bool allowChangePermissionLevel = false, bool removable = false, string name = default(string), string description = default(string), List<GroupUser> users = default(List<GroupUser>), List<PermissionLevel> permissionLevels = default(List<PermissionLevel>), ApiUser groupOwner = default(ApiUser), GroupOwnerType? groupOwnerType = default(GroupOwnerType?), SharePointBuildInGroupType? buildInGroupType = default(SharePointBuildInGroupType?))
         {
             this.UsersAssignBy = usersAssignBy;
             this.GroupOwnerAssignBy = groupOwnerAssignBy;

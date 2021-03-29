@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **Requester** | **String** |  | [optional] 
-**RequestTicketNumber** | **Int32** |  | [optional] 
+**RequestTicketNumber** | **Int32** |  | [optional] [default to 0]
 **RequesterDisplayName** | **String** |  | [optional] 
 **DueDate** | **System.DateTime** |  | [optional] 
 **DueDateType** | [**DueDateType**](DueDateType.md) |  | [optional] 

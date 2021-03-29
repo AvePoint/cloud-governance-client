@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 4.1.10
+- SDK version: 4.1.17
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -11,7 +11,7 @@
 
 To install from PowerShell Gallery (https://www.powershellgallery.com/packages/Cloud.Governance.Client)
 ```powershell
-Install-Module -Name Cloud.Governance.Client -Verbose
+Import-Module -Name Cloud.Governance.Client -Verbose
 ```
 
 ## Documentation for API Endpoints
@@ -24,6 +24,8 @@ Class | Method | HTTP request | Description
 *AuthApi* | [**Invoke-RefreshUserAccessToken**](docs/AuthApi.md#Invoke-RefreshUserAccessToken) | **POST** /auth/token/refresh | refresh user access token
 *AuthAdminApi* | [**Invoke-DeleteTokenCache**](docs/AuthAdminApi.md#Invoke-DeleteTokenCache) | **DELETE** /admin/auth/token/cache | delete token cache
 *GuestUsersAdminApi* | [**Get-ManagedGuestUsers**](docs/GuestUsersAdminApi.md#Get-ManagedGuestUsers) | **GET** /admin/directory/guestusers | get all managed guest users
+*JobsAdminApi* | [**Get-Jobs**](docs/JobsAdminApi.md#Get-Jobs) | **GET** /admin/jobs | Get worker jobs
+*JobsAdminApi* | [**Get-RelatedJobs**](docs/JobsAdminApi.md#Get-RelatedJobs) | **GET** /admin/jobs/relations | Get related worker job
 *MetadataAdminApi* | [**Get-AllMetadata**](docs/MetadataAdminApi.md#Get-AllMetadata) | **GET** /admin/metadata | get all metadata
 *MetadataAdminApi* | [**Get-SingleMetadataById**](docs/MetadataAdminApi.md#Get-SingleMetadataById) | **GET** /admin/metadata/{id} | Get metadata by id
 *Office365Api* | [**New-ACGSecurityGroup**](docs/Office365Api.md#new-acgsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
@@ -246,6 +248,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ApiUser](docs/ApiUser.md)
  - [Cloud.Governance.Client\Model.ApiUserChangedProperty](docs/ApiUserChangedProperty.md)
  - [Cloud.Governance.Client\Model.ApiUserPageResult](docs/ApiUserPageResult.md)
+ - [Cloud.Governance.Client\Model.ApiUserType](docs/ApiUserType.md)
  - [Cloud.Governance.Client\Model.AppSettings](docs/AppSettings.md)
  - [Cloud.Governance.Client\Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
  - [Cloud.Governance.Client\Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
@@ -483,7 +486,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.PersonalSettingsPropertyInfo](docs/PersonalSettingsPropertyInfo.md)
  - [Cloud.Governance.Client\Model.PolicyRef](docs/PolicyRef.md)
  - [Cloud.Governance.Client\Model.PolicyWithTemplates](docs/PolicyWithTemplates.md)
- - [Cloud.Governance.Client\Model.ReportActionResult](docs/ReportActionResult.md)
+ - [Cloud.Governance.Client\Model.PrincipalType](docs/PrincipalType.md)
  - [Cloud.Governance.Client\Model.ReportMetadata](docs/ReportMetadata.md)
  - [Cloud.Governance.Client\Model.RequestGroupWithPermissions](docs/RequestGroupWithPermissions.md)
  - [Cloud.Governance.Client\Model.RequestList](docs/RequestList.md)
@@ -547,9 +550,11 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TaskDynamicActions](docs/TaskDynamicActions.md)
  - [Cloud.Governance.Client\Model.TaskList](docs/TaskList.md)
  - [Cloud.Governance.Client\Model.TaskListPageResult](docs/TaskListPageResult.md)
+ - [Cloud.Governance.Client\Model.TaskPriority](docs/TaskPriority.md)
  - [Cloud.Governance.Client\Model.TaskReport](docs/TaskReport.md)
  - [Cloud.Governance.Client\Model.TaskReportPageResult](docs/TaskReportPageResult.md)
  - [Cloud.Governance.Client\Model.TaskResult](docs/TaskResult.md)
+ - [Cloud.Governance.Client\Model.TaskStatus](docs/TaskStatus.md)
  - [Cloud.Governance.Client\Model.TaskType](docs/TaskType.md)
  - [Cloud.Governance.Client\Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)
  - [Cloud.Governance.Client\Model.TeamsTemplateSettings](docs/TeamsTemplateSettings.md)
@@ -558,6 +563,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TermTreeModel](docs/TermTreeModel.md)
  - [Cloud.Governance.Client\Model.TermsMetadataSettings](docs/TermsMetadataSettings.md)
  - [Cloud.Governance.Client\Model.TermsValue](docs/TermsValue.md)
+ - [Cloud.Governance.Client\Model.TextModel](docs/TextModel.md)
  - [Cloud.Governance.Client\Model.TextValidationRuleRef](docs/TextValidationRuleRef.md)
  - [Cloud.Governance.Client\Model.ThemeType](docs/ThemeType.md)
  - [Cloud.Governance.Client\Model.TreeNode](docs/TreeNode.md)
@@ -577,13 +583,16 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.UserMetadataSettings](docs/UserMetadataSettings.md)
  - [Cloud.Governance.Client\Model.UserProfileMetadataSettings](docs/UserProfileMetadataSettings.md)
  - [Cloud.Governance.Client\Model.UserSource](docs/UserSource.md)
- - [Cloud.Governance.Client\Model.UserType](docs/UserType.md)
  - [Cloud.Governance.Client\Model.WebLifecycleActionType](docs/WebLifecycleActionType.md)
  - [Cloud.Governance.Client\Model.WebLifecycleRequest](docs/WebLifecycleRequest.md)
  - [Cloud.Governance.Client\Model.WebLifecycleService](docs/WebLifecycleService.md)
  - [Cloud.Governance.Client\Model.WebLifecycleValidateResult](docs/WebLifecycleValidateResult.md)
  - [Cloud.Governance.Client\Model.WebServiceAuthenticationType](docs/WebServiceAuthenticationType.md)
  - [Cloud.Governance.Client\Model.WelcomeEmailSettings](docs/WelcomeEmailSettings.md)
+ - [Cloud.Governance.Client\Model.WorkerJobGridModel](docs/WorkerJobGridModel.md)
+ - [Cloud.Governance.Client\Model.WorkerJobGridModelPageResult](docs/WorkerJobGridModelPageResult.md)
+ - [Cloud.Governance.Client\Model.WorkerJobModel](docs/WorkerJobModel.md)
+ - [Cloud.Governance.Client\Model.WorkerObjectType](docs/WorkerObjectType.md)
  - [Cloud.Governance.Client\Model.WorksapceOngoingTasksModel](docs/WorksapceOngoingTasksModel.md)
  - [Cloud.Governance.Client\Model.WorkspaceArchivedType](docs/WorkspaceArchivedType.md)
  - [Cloud.Governance.Client\Model.WorkspaceGridModel](docs/WorkspaceGridModel.md)

@@ -12,31 +12,31 @@ function New-SiteLeasePeriodServiceSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeasePeriodAssignBy},
+        ${LeasePeriodAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseWarningAssignBy},
+        ${LeaseWarningAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LeaseEnabled},
+        ${LeaseEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LeaseWarningEnabled},
+        ${LeaseWarningEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LeaseInterval},
+        ${LeaseInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseDurationType},
+        ${LeaseDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LeaseWarningInterval},
+        ${LeaseWarningInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseWarningDurationType}
+        ${LeaseWarningDurationType} = "Day"
     )
 
     Process {

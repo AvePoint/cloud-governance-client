@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowGrantUserPermission** | **Boolean** |  | [optional] 
-**PreventGrantSpecificPermissionLevels** | **Boolean** |  | [optional] 
+**AllowGrantUserPermission** | **Boolean** |  | [optional] [default to $false]
+**PreventGrantSpecificPermissionLevels** | **Boolean** |  | [optional] [default to $false]
 **PreventPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 
 ## Examples

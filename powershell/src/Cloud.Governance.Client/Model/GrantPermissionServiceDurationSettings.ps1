@@ -12,37 +12,37 @@ function New-GrantPermissionServiceDurationSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AssignBy},
+        ${AssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGrantTemporaryPermission},
+        ${IsGrantTemporaryPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${DefaultDurationInterval},
+        ${DefaultDurationInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DefaultDurationType},
+        ${DefaultDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableMaxDuration},
+        ${IsEnableMaxDuration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${MaxDuration},
+        ${MaxDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MaxDurationType},
+        ${MaxDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableExpirationNotify},
+        ${IsEnableExpirationNotify} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ExpirationNotifyDurationInterval},
+        ${ExpirationNotifyDurationInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExpirationNotifyDurationType},
+        ${ExpirationNotifyDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsOnlyUseDefaultDuration}
+        ${IsOnlyUseDefaultDuration} = $false
     )
 
     Process {

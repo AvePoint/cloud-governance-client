@@ -15,7 +15,7 @@ function New-RestoreGroupRequest {
         ${GroupId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},

@@ -12,7 +12,7 @@ function New-DeleteSiteRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SiteId},

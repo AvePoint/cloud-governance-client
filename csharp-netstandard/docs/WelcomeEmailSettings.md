@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool** |  | [optional] [default to false]
 **Subject** | **string** |  | [optional] 
 **PersonalMessage** | **string** |  | [optional] 
 

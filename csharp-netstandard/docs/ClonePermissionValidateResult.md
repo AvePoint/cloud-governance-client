@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteId** | **Guid** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 
 

@@ -12,7 +12,7 @@ function New-GroupConstructureRule {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Text",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Value}

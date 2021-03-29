@@ -1,0 +1,8 @@
+{
+  "ServiceName": "Api_Sample_CreateSC_Permission",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "Department": "IT",
+  "SharePointGroupMemberLoginNames": "group1@example.com;group2@example.com",
+  "SharePointGroupName": "SPGroup1"
+}

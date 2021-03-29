@@ -4,16 +4,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**IsGrantTemporaryPermission** | **Boolean** |  | [optional] 
-**DefaultDurationInterval** | **Int32** |  | [optional] 
+**IsGrantTemporaryPermission** | **Boolean** |  | [optional] [default to $false]
+**DefaultDurationInterval** | **Int32** |  | [optional] [default to 0]
 **DefaultDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] 
-**IsEnableMaxDuration** | **Boolean** |  | [optional] 
-**MaxDuration** | **Int32** |  | [optional] 
+**IsEnableMaxDuration** | **Boolean** |  | [optional] [default to $false]
+**MaxDuration** | **Int32** |  | [optional] [default to 0]
 **MaxDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] 
-**IsEnableExpirationNotify** | **Boolean** |  | [optional] 
-**ExpirationNotifyDurationInterval** | **Int32** |  | [optional] 
+**IsEnableExpirationNotify** | **Boolean** |  | [optional] [default to $false]
+**ExpirationNotifyDurationInterval** | **Int32** |  | [optional] [default to 0]
 **ExpirationNotifyDurationType** | [**DurationDateType**](DurationDateType.md) |  | [optional] 
-**IsOnlyUseDefaultDuration** | **Boolean** |  | [optional] 
+**IsOnlyUseDefaultDuration** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

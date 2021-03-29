@@ -12,7 +12,7 @@ function New-CreateGroupService {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupType},
+        ${GroupType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TenantId},
@@ -21,49 +21,49 @@ function New-CreateGroupService {
         ${NetworkId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTeams},
+        ${EnableTeams} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsPrivate},
+        ${IsPrivate} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableSubscribe},
+        ${EnableSubscribe} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableApplySiteDesign},
+        ${EnableApplySiteDesign} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableOutsideSender},
+        ${EnableOutsideSender} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableHideGroupMembership},
+        ${EnableHideGroupMembership} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableClassification},
+        ${EnableClassification} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableSensitivity},
+        ${EnableSensitivity} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowConfigureLeasePeriod},
+        ${AllowConfigureLeasePeriod} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowNotebookLink},
+        ${ShowNotebookLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowConversationsLink},
+        ${ShowConversationsLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowFilesLink},
+        ${ShowFilesLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowTeamSiteLink},
+        ${ShowTeamSiteLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowPlannerLink},
+        ${ShowPlannerLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowYammerGroupLink},
+        ${ShowYammerGroupLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Classifications},
@@ -75,7 +75,7 @@ function New-CreateGroupService {
         ${SiteDesigns},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AddGroupMemberType},
+        ${AddGroupMemberType} = "Manually",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${SelectedPolicies},
@@ -93,10 +93,10 @@ function New-CreateGroupService {
         ${GroupIdConstructureSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInstallApp},
+        ${EnableInstallApp} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInstallPanel},
+        ${EnableInstallPanel} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${TemplateSettings},
@@ -141,49 +141,49 @@ function New-CreateGroupService {
         ${DefaultSecondaryContactReal},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MemberAssignBy},
+        ${MemberAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${OwnerAssignBy},
+        ${OwnerAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrivacyAssignBy},
+        ${PrivacyAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SubscribeAssignBy},
+        ${SubscribeAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${OutsideSenderAssignBy},
+        ${OutsideSenderAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ClassificationAssignBy},
+        ${ClassificationAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SensitivityAssignBy},
+        ${SensitivityAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LanguageAssignBy},
+        ${LanguageAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SecondaryContactAssignBy},
+        ${SecondaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrimaryContactAssignBy},
+        ${PrimaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableDynamicMembership},
+        ${EnableDynamicMembership} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${HideGroupMembershipAssignBy},
+        ${HideGroupMembershipAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PolicyAssignBy},
+        ${PolicyAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SiteDesignAssignBy},
+        ${SiteDesignAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${HubSiteAssignBy},
+        ${HubSiteAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${MultiGeoSetting},
@@ -192,7 +192,7 @@ function New-CreateGroupService {
         ${HubSiteSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HasImpernastionUsers},
+        ${HasImpernastionUsers} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PeoplePickerFilterProfileId},
@@ -201,13 +201,13 @@ function New-CreateGroupService {
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DepartmentAssignBy},
+        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HideRequestSummary},
+        ${HideRequestSummary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -219,13 +219,13 @@ function New-CreateGroupService {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps},
+        ${LoadDepartmentFromUps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Departments},
@@ -237,13 +237,13 @@ function New-CreateGroupService {
         ${ServiceAdminContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ApproversContainManagerRole},
+        ${ApproversContainManagerRole} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowServiceInCatalog},
+        ${ShowServiceInCatalog} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CustomActions},
@@ -252,13 +252,10 @@ function New-CreateGroupService {
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CategoryId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Details}
+        ${CategoryId}
     )
 
     Process {
@@ -349,7 +346,6 @@ function New-CreateGroupService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO
@@ -372,7 +368,7 @@ function ConvertFrom-JsonToCreateGroupService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGroupService
-        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "EnableSensitivity", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "Details")
+        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "EnableSensitivity", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -877,12 +873,6 @@ function ConvertFrom-JsonToCreateGroupService {
             $CategoryId = $JsonParameters.PSobject.Properties["CategoryId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Details"))) { #optional property not found
-            $Details = $null
-        } else {
-            $Details = $JsonParameters.PSobject.Properties["Details"].value
-        }
-
         $PSO = [PSCustomObject]@{
             "GroupType" = ${GroupType}
             "TenantId" = ${TenantId}
@@ -967,7 +957,6 @@ function ConvertFrom-JsonToCreateGroupService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO

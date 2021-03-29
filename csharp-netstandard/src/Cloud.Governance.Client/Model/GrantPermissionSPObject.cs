@@ -42,12 +42,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="listTitle">listTitle.</param>
         /// <param name="topInheritUrl">topInheritUrl.</param>
         /// <param name="inheritNodeType">inheritNodeType.</param>
-        /// <param name="isInheritedPermission">isInheritedPermission.</param>
+        /// <param name="isInheritedPermission">isInheritedPermission (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="title">title.</param>
         /// <param name="fullUrl">fullUrl.</param>
         /// <param name="type">type.</param>
-        public GrantPermissionSPObject(Guid webId = default(Guid), Guid siteId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string topInheritUrl = default(string), NodeType? inheritNodeType = default(NodeType?), bool isInheritedPermission = default(bool), Guid id = default(Guid), string title = default(string), string fullUrl = default(string), NodeType? type = default(NodeType?))
+        public GrantPermissionSPObject(Guid webId = default(Guid), Guid siteId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string topInheritUrl = default(string), NodeType? inheritNodeType = default(NodeType?), bool isInheritedPermission = false, Guid id = default(Guid), string title = default(string), string fullUrl = default(string), NodeType? type = default(NodeType?))
         {
             this.WebId = webId;
             this.SiteId = siteId;

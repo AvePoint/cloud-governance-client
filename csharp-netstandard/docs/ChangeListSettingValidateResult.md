@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **WebUrl** | **string** |  | [optional] 
 **WebId** | **Guid** |  | [optional] 
 **Lists** | [**List&lt;SPList&gt;**](SPList.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 
 

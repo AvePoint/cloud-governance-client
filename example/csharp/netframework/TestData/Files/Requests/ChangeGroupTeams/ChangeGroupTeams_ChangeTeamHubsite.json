@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ChangeTeamHubsite_Service",
+  "GroupEmail": "group@example.com",
+  "AdminCenterUrl": "https://contoso-admin.sharepoint.com",
+  "AssociateHubSiteTitle": "0708a"
+}

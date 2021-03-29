@@ -31,16 +31,18 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SPPrincipal" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        /// <param name="id">id (default to 0).</param>
         /// <param name="loginName">loginName.</param>
         /// <param name="name">name.</param>
         /// <param name="principalType">principalType.</param>
-        public SPPrincipal(int id = default(int), string loginName = default(string), string name = default(string), SPPrincipalType? principalType = default(SPPrincipalType?))
+        /// <param name="azureUserType">azureUserType.</param>
+        public SPPrincipal(int id = 0, string loginName = default(string), string name = default(string), SPPrincipalType? principalType = default(SPPrincipalType?), string azureUserType = default(string))
         {
             this.Id = id;
             this.LoginName = loginName;
             this.Name = name;
             this.PrincipalType = principalType;
+            this.AzureUserType = azureUserType;
         }
 
         /// <summary>
@@ -62,6 +64,12 @@ namespace Cloud.Governance.Client.Model
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or Sets AzureUserType
+        /// </summary>
+        [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
+        public string AzureUserType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -73,6 +81,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LoginName: ").Append(LoginName).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PrincipalType: ").Append(PrincipalType).Append("\n");
+            sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +133,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.PrincipalType == input.PrincipalType ||
                     this.PrincipalType.Equals(input.PrincipalType)
+                ) && 
+                (
+                    this.AzureUserType == input.AzureUserType ||
+                    (this.AzureUserType != null &&
+                    this.AzureUserType.Equals(input.AzureUserType))
                 );
         }
 
@@ -142,6 +156,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 hashCode = hashCode * 59 + this.PrincipalType.GetHashCode();
+                if (this.AzureUserType != null)
+                    hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
                 return hashCode;
             }
         }

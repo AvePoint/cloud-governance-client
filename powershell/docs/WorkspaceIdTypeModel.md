@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectId** | **String** |  | [optional] 
-**WorkspaceType** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
+**ObjectId** | **String** | workspace id | [optional] 
+**WorkspaceType** | [**WorkspaceType**](WorkspaceType.md) | workspace type | [optional] 
 
 ## Examples
 

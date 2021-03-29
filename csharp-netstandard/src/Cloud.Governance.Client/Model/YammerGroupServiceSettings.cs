@@ -42,17 +42,17 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="YammerGroupServiceSettings" /> class.
         /// </summary>
         /// <param name="networkId">networkId.</param>
-        /// <param name="allowCreate">allowCreate.</param>
-        /// <param name="allowReuseExisting">allowReuseExisting.</param>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="allowCreate">allowCreate (default to false).</param>
+        /// <param name="allowReuseExisting">allowReuseExisting (default to false).</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="createNewGroupAssignBy">createNewGroupAssignBy.</param>
         /// <param name="nameOrId">nameOrId.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
         /// <param name="joinType">joinType.</param>
-        /// <param name="isListInDirectory">isListInDirectory.</param>
-        /// <param name="isGroupAlreadyExisted">isGroupAlreadyExisted.</param>
-        public YammerGroupServiceSettings(string networkId = default(string), bool allowCreate = default(bool), bool allowReuseExisting = default(bool), bool enabled = default(bool), AssignBy? createNewGroupAssignBy = default(AssignBy?), string nameOrId = default(string), string description = default(string), YammerGroupType? type = default(YammerGroupType?), YammerGroupJoinType? joinType = default(YammerGroupJoinType?), bool isListInDirectory = default(bool), bool isGroupAlreadyExisted = default(bool))
+        /// <param name="isListInDirectory">isListInDirectory (default to false).</param>
+        /// <param name="isGroupAlreadyExisted">isGroupAlreadyExisted (default to false).</param>
+        public YammerGroupServiceSettings(string networkId = default(string), bool allowCreate = false, bool allowReuseExisting = false, bool enabled = false, AssignBy? createNewGroupAssignBy = default(AssignBy?), string nameOrId = default(string), string description = default(string), YammerGroupType? type = default(YammerGroupType?), YammerGroupJoinType? joinType = default(YammerGroupJoinType?), bool isListInDirectory = false, bool isGroupAlreadyExisted = false)
         {
             this.NetworkId = networkId;
             this.AllowCreate = allowCreate;

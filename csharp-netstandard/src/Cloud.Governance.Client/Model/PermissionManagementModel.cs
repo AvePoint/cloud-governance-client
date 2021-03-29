@@ -26,12 +26,12 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionManagementModel" /> class.
         /// </summary>
-        /// <param name="isUniquePermission">isUniquePermission.</param>
-        /// <param name="isPermissionInheritanceChanged">isPermissionInheritanceChanged.</param>
-        /// <param name="isCopyPermissionsFromParent">isCopyPermissionsFromParent.</param>
+        /// <param name="isUniquePermission">isUniquePermission (default to false).</param>
+        /// <param name="isPermissionInheritanceChanged">isPermissionInheritanceChanged (default to false).</param>
+        /// <param name="isCopyPermissionsFromParent">isCopyPermissionsFromParent (default to false).</param>
         /// <param name="inheritedSiteUrl">inheritedSiteUrl.</param>
         /// <param name="permissionItems">permissionItems.</param>
-        public PermissionManagementModel(bool isUniquePermission = default(bool), bool isPermissionInheritanceChanged = default(bool), bool isCopyPermissionsFromParent = default(bool), string inheritedSiteUrl = default(string), List<ObjectPermissionManagementModel> permissionItems = default(List<ObjectPermissionManagementModel>))
+        public PermissionManagementModel(bool isUniquePermission = false, bool isPermissionInheritanceChanged = false, bool isCopyPermissionsFromParent = false, string inheritedSiteUrl = default(string), List<ObjectPermissionManagementModel> permissionItems = default(List<ObjectPermissionManagementModel>))
         {
             this.IsUniquePermission = isUniquePermission;
             this.IsPermissionInheritanceChanged = isPermissionInheritanceChanged;

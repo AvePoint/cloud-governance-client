@@ -7,15 +7,16 @@ Name | Type | Description | Notes
 **JobTitle** | **String** |  | [optional] 
 **TenantId** | **String** |  | [optional] 
 **PeopleFilterProfileId** | **String** |  | [optional] 
-**UserType** | [**UserType**](UserType.md) |  | [optional] 
+**ApiUserType** | [**ApiUserType**](ApiUserType.md) |  | [optional] 
 **Id** | **String** |  | [optional] 
 **LoginName** | **String** |  | [optional] 
 **IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
+**AzureUserType** | **String** |  | [optional] 
 **DisplayName** | **String** |  | [optional] 
-**IsGroup** | **Boolean** |  | [optional] 
-**IsLocalUser** | **Boolean** |  | [optional] [readonly] 
+**IsGroup** | **Boolean** |  | [optional] [default to $false]
+**IsLocalUser** | **Boolean** |  | [optional] [readonly] [default to $false]
 **PhysicalDeliveryOfficeName** | **String** |  | [optional] [readonly] 
-**IsValid** | **Boolean** |  | [optional] [readonly] 
+**IsValid** | **Boolean** |  | [optional] [readonly] [default to $false]
 **AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) |  | [optional] [readonly] 
 
 ## Examples
@@ -26,10 +27,11 @@ $UpdatableApiUser = New-Cloud.Governance.ClientUpdatableApiUser  -Email null `
  -JobTitle null `
  -TenantId null `
  -PeopleFilterProfileId null `
- -UserType null `
+ -ApiUserType null `
  -Id null `
  -LoginName null `
  -IsExternalUser null `
+ -AzureUserType null `
  -DisplayName null `
  -IsGroup null `
  -IsLocalUser null `

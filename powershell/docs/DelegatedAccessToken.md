@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AccessToken** | **String** |  | [optional] 
 **RefreshToken** | **String** |  | [optional] 
-**Duration** | **Int64** |  | [optional] 
+**Duration** | **Int64** |  | [optional] [default to 0]
 
 ## Examples
 

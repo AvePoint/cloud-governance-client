@@ -1,0 +1,7 @@
+{
+  "ServiceName": "Api_Sample_Custom_Service",
+  "LookupMetadataName": "Api_Sample_LookupWithCondition",
+  "LookupMetadataValue": "9",
+  "SingleLineMetadataName": "Api_Sample_SingleLine",
+  "SingleLineMetadataValue": " sun"
+}

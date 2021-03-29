@@ -38,14 +38,16 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="identityName">identityName.</param>
         /// <param name="displayName">displayName.</param>
-        /// <param name="isGroup">isGroup.</param>
+        /// <param name="isGroup">isGroup (default to false).</param>
+        /// <param name="azureUserType">azureUserType.</param>
         /// <param name="action">action.</param>
         /// <param name="externalUserType">externalUserType.</param>
-        public SPUserManagementModel(string identityName = default(string), string displayName = default(string), bool isGroup = default(bool), ManagePermissionAction? action = default(ManagePermissionAction?), ExternalUserType? externalUserType = default(ExternalUserType?))
+        public SPUserManagementModel(string identityName = default(string), string displayName = default(string), bool isGroup = false, string azureUserType = default(string), ManagePermissionAction? action = default(ManagePermissionAction?), ExternalUserType? externalUserType = default(ExternalUserType?))
         {
             this.IdentityName = identityName;
             this.DisplayName = displayName;
             this.IsGroup = isGroup;
+            this.AzureUserType = azureUserType;
             this.Action = action;
             this.ExternalUserType = externalUserType;
         }
@@ -69,6 +71,12 @@ namespace Cloud.Governance.Client.Model
         public bool IsGroup { get; set; }
 
         /// <summary>
+        /// Gets or Sets AzureUserType
+        /// </summary>
+        [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
+        public string AzureUserType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -79,6 +87,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IdentityName: ").Append(IdentityName).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  IsGroup: ").Append(IsGroup).Append("\n");
+            sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ExternalUserType: ").Append(ExternalUserType).Append("\n");
             sb.Append("}\n");
@@ -130,6 +139,11 @@ namespace Cloud.Governance.Client.Model
                     this.IsGroup.Equals(input.IsGroup)
                 ) && 
                 (
+                    this.AzureUserType == input.AzureUserType ||
+                    (this.AzureUserType != null &&
+                    this.AzureUserType.Equals(input.AzureUserType))
+                ) && 
+                (
                     this.Action == input.Action ||
                     this.Action.Equals(input.Action)
                 ) && 
@@ -153,6 +167,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 hashCode = hashCode * 59 + this.IsGroup.GetHashCode();
+                if (this.AzureUserType != null)
+                    hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
                 hashCode = hashCode * 59 + this.Action.GetHashCode();
                 hashCode = hashCode * 59 + this.ExternalUserType.GetHashCode();
                 return hashCode;

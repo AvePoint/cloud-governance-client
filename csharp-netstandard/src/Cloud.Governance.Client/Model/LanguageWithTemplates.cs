@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageWithTemplates" /> class.
         /// </summary>
-        /// <param name="languageId">languageId.</param>
+        /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="defaultTemplate">defaultTemplate.</param>
         /// <param name="templates">templates.</param>
-        public LanguageWithTemplates(int languageId = default(int), string defaultTemplate = default(string), List<SiteTemplate> templates = default(List<SiteTemplate>))
+        public LanguageWithTemplates(int languageId = 0, string defaultTemplate = default(string), List<SiteTemplate> templates = default(List<SiteTemplate>))
         {
             this.LanguageId = languageId;
             this.DefaultTemplate = defaultTemplate;

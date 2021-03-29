@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] 
+**IsEnabled** | **Boolean** |  | [optional] [default to $false]
 **LeaseType** | [**GroupLeasePeriodType**](GroupLeasePeriodType.md) |  | [optional] 
 **DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**DurationInterval** | **Int32** |  | [optional] 
+**DurationInterval** | **Int32** |  | [optional] [default to 0]
 **LeaseExpirationDate** | **System.DateTime** |  | [optional] 
 
 ## Examples

@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IntModel" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        /// <param name="id">id (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
-        public IntModel(int id = default(int), string name = default(string), string description = default(string))
+        public IntModel(int id = 0, string name = default(string), string description = default(string))
         {
             this.Id = id;
             this.Name = name;

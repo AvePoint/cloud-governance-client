@@ -4,13 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ListType** | [**ListType**](ListType.md) |  | [optional] 
-**EnableMajorVersions** | **Boolean** |  | [optional] 
-**EnableMajorAndMinorVersions** | **Boolean** |  | [optional] 
-**EnableMajorVersionLimit** | **Boolean** |  | [optional] 
-**MajorVersionLimit** | **Int32** |  | [optional] 
-**EnableMinorVersionLimit** | **Boolean** |  | [optional] 
-**MinorVersionsLimit** | **Int32** |  | [optional] 
-**RequireContentApproval** | **Boolean** |  | [optional] 
+**EnableMajorVersions** | **Boolean** |  | [optional] [default to $false]
+**EnableMajorAndMinorVersions** | **Boolean** |  | [optional] [default to $false]
+**EnableMajorVersionLimit** | **Boolean** |  | [optional] [default to $false]
+**MajorVersionLimit** | **Int32** |  | [optional] [default to 0]
+**EnableMinorVersionLimit** | **Boolean** |  | [optional] [default to $false]
+**MinorVersionsLimit** | **Int32** |  | [optional] [default to 0]
+**RequireContentApproval** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

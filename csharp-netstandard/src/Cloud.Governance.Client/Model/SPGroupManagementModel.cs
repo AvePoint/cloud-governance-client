@@ -41,7 +41,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SPGroupManagementModel" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        /// <param name="id">id (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="owner">owner.</param>
@@ -50,12 +50,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="spGroupEditType">spGroupEditType.</param>
         /// <param name="permissions">permissions.</param>
         /// <param name="action">action.</param>
-        /// <param name="isAllowJoinOrLeaveRequest">isAllowJoinOrLeaveRequest.</param>
-        /// <param name="isAutoAcceptRequest">isAutoAcceptRequest.</param>
+        /// <param name="isAllowJoinOrLeaveRequest">isAllowJoinOrLeaveRequest (default to false).</param>
+        /// <param name="isAutoAcceptRequest">isAutoAcceptRequest (default to false).</param>
         /// <param name="sendMembershipRequestEmailAddress">sendMembershipRequestEmailAddress.</param>
-        /// <param name="isTemporaryGroup">isTemporaryGroup.</param>
+        /// <param name="isTemporaryGroup">isTemporaryGroup (default to false).</param>
         /// <param name="roleID">roleID.</param>
-        public SPGroupManagementModel(int id = default(int), StringChangedProperty name = default(StringChangedProperty), string description = default(string), ApiUser owner = default(ApiUser), List<SPUserManagementModel> members = default(List<SPUserManagementModel>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), List<string> permissions = default(List<string>), ManagePermissionAction? action = default(ManagePermissionAction?), bool isAllowJoinOrLeaveRequest = default(bool), bool isAutoAcceptRequest = default(bool), string sendMembershipRequestEmailAddress = default(string), bool isTemporaryGroup = default(bool), List<string> roleID = default(List<string>))
+        public SPGroupManagementModel(int id = 0, StringChangedProperty name = default(StringChangedProperty), string description = default(string), ApiUser owner = default(ApiUser), List<SPUserManagementModel> members = default(List<SPUserManagementModel>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), List<string> permissions = default(List<string>), ManagePermissionAction? action = default(ManagePermissionAction?), bool isAllowJoinOrLeaveRequest = false, bool isAutoAcceptRequest = false, string sendMembershipRequestEmailAddress = default(string), bool isTemporaryGroup = false, List<string> roleID = default(List<string>))
         {
             this.Id = id;
             this.Name = name;

@@ -33,11 +33,15 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="loginName">loginName.</param>
         /// <param name="displayName">displayName.</param>
+        /// <param name="azureUserType">azureUserType.</param>
+        /// <param name="isGroup">isGroup (default to false).</param>
         /// <param name="action">action.</param>
-        public GroupMembershipItem(string loginName = default(string), string displayName = default(string), GroupMembershipAction? action = default(GroupMembershipAction?))
+        public GroupMembershipItem(string loginName = default(string), string displayName = default(string), string azureUserType = default(string), bool isGroup = false, GroupMembershipAction? action = default(GroupMembershipAction?))
         {
             this.LoginName = loginName;
             this.DisplayName = displayName;
+            this.AzureUserType = azureUserType;
+            this.IsGroup = isGroup;
             this.Action = action;
         }
 
@@ -54,6 +58,18 @@ namespace Cloud.Governance.Client.Model
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// Gets or Sets AzureUserType
+        /// </summary>
+        [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
+        public string AzureUserType { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsGroup
+        /// </summary>
+        [DataMember(Name = "isGroup", EmitDefaultValue = false)]
+        public bool IsGroup { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -63,6 +79,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class GroupMembershipItem {\n");
             sb.Append("  LoginName: ").Append(LoginName).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
+            sb.Append("  IsGroup: ").Append(IsGroup).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -109,6 +127,15 @@ namespace Cloud.Governance.Client.Model
                     this.DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
+                    this.AzureUserType == input.AzureUserType ||
+                    (this.AzureUserType != null &&
+                    this.AzureUserType.Equals(input.AzureUserType))
+                ) && 
+                (
+                    this.IsGroup == input.IsGroup ||
+                    this.IsGroup.Equals(input.IsGroup)
+                ) && 
+                (
                     this.Action == input.Action ||
                     this.Action.Equals(input.Action)
                 );
@@ -127,6 +154,9 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.LoginName.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
+                if (this.AzureUserType != null)
+                    hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
+                hashCode = hashCode * 59 + this.IsGroup.GetHashCode();
                 hashCode = hashCode * 59 + this.Action.GetHashCode();
                 return hashCode;
             }

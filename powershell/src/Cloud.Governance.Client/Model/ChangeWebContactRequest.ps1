@@ -12,7 +12,7 @@ function New-ChangeWebContactRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ChangedMethod},
+        ${ChangedMethod} = "ChangeByUrl",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ChangedByUserSetting},

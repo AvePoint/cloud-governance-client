@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Prefix** | **String** |  | [optional] 
-**MaxLength** | **Int32** |  | [optional] 
-**MinLength** | **Int32** |  | [optional] 
+**MaxLength** | **Int32** |  | [optional] [default to 0]
+**MinLength** | **Int32** |  | [optional] [default to 0]
 
 ## Examples
 

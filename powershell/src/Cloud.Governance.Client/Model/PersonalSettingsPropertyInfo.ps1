@@ -12,13 +12,13 @@ function New-PersonalSettingsPropertyInfo {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Theme},
+        ${Theme} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [Int32[]]
         ${SelectedLanguages},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsUsingBrowserLanguage}
+        ${IsUsingBrowserLanguage} = $false
     )
 
     Process {

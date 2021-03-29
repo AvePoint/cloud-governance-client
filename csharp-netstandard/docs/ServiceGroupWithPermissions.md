@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UsersAssignBy** | **AssignBy** |  | [optional] 
 **GroupOwnerAssignBy** | **AssignBy** |  | [optional] 
-**AllowChangePermissionLevel** | **bool** |  | [optional] 
-**Removable** | **bool** |  | [optional] 
+**AllowChangePermissionLevel** | **bool** |  | [optional] [default to false]
+**Removable** | **bool** |  | [optional] [default to false]
 **Name** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Users** | [**List&lt;GroupUser&gt;**](GroupUser.md) |  | [optional] 

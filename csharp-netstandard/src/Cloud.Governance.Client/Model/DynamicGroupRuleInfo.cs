@@ -42,15 +42,16 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="DynamicGroupRuleInfo" /> class.
         /// </summary>
         /// <param name="id">id.</param>
-        /// <param name="order">order.</param>
+        /// <param name="order">order (default to 0).</param>
         /// <param name="relation">relation.</param>
         /// <param name="category">category.</param>
         /// <param name="metadataId">metadataId.</param>
         /// <param name="metadataName">metadataName.</param>
         /// <param name="metadataValue">metadataValue.</param>
         /// <param name="metadataDisplayValue">metadataDisplayValue.</param>
+        /// <param name="metadataValueAzureUserType">metadataValueAzureUserType.</param>
         /// <param name="condition">condition.</param>
-        public DynamicGroupRuleInfo(Guid id = default(Guid), int order = default(int), LogicalOperator? relation = default(LogicalOperator?), CategoryType? category = default(CategoryType?), Guid metadataId = default(Guid), string metadataName = default(string), string metadataValue = default(string), string metadataDisplayValue = default(string), DynamicRuleCondition? condition = default(DynamicRuleCondition?))
+        public DynamicGroupRuleInfo(Guid id = default(Guid), int order = 0, LogicalOperator? relation = default(LogicalOperator?), CategoryType? category = default(CategoryType?), Guid metadataId = default(Guid), string metadataName = default(string), string metadataValue = default(string), string metadataDisplayValue = default(string), string metadataValueAzureUserType = default(string), DynamicRuleCondition? condition = default(DynamicRuleCondition?))
         {
             this.Id = id;
             this.Order = order;
@@ -60,6 +61,7 @@ namespace Cloud.Governance.Client.Model
             this.MetadataName = metadataName;
             this.MetadataValue = metadataValue;
             this.MetadataDisplayValue = metadataDisplayValue;
+            this.MetadataValueAzureUserType = metadataValueAzureUserType;
             this.Condition = condition;
         }
 
@@ -100,6 +102,12 @@ namespace Cloud.Governance.Client.Model
         public string MetadataDisplayValue { get; set; }
 
         /// <summary>
+        /// Gets or Sets MetadataValueAzureUserType
+        /// </summary>
+        [DataMember(Name = "metadataValueAzureUserType", EmitDefaultValue = true)]
+        public string MetadataValueAzureUserType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -115,6 +123,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  MetadataName: ").Append(MetadataName).Append("\n");
             sb.Append("  MetadataValue: ").Append(MetadataValue).Append("\n");
             sb.Append("  MetadataDisplayValue: ").Append(MetadataDisplayValue).Append("\n");
+            sb.Append("  MetadataValueAzureUserType: ").Append(MetadataValueAzureUserType).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -188,6 +197,11 @@ namespace Cloud.Governance.Client.Model
                     this.MetadataDisplayValue.Equals(input.MetadataDisplayValue))
                 ) && 
                 (
+                    this.MetadataValueAzureUserType == input.MetadataValueAzureUserType ||
+                    (this.MetadataValueAzureUserType != null &&
+                    this.MetadataValueAzureUserType.Equals(input.MetadataValueAzureUserType))
+                ) && 
+                (
                     this.Condition == input.Condition ||
                     this.Condition.Equals(input.Condition)
                 );
@@ -215,6 +229,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.MetadataValue.GetHashCode();
                 if (this.MetadataDisplayValue != null)
                     hashCode = hashCode * 59 + this.MetadataDisplayValue.GetHashCode();
+                if (this.MetadataValueAzureUserType != null)
+                    hashCode = hashCode * 59 + this.MetadataValueAzureUserType.GetHashCode();
                 hashCode = hashCode * 59 + this.Condition.GetHashCode();
                 return hashCode;
             }

@@ -30,16 +30,16 @@ function New-TreeNode {
         ${NodeId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${StartIndex},
+        ${StartIndex} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${PageSize},
+        ${PageSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${PageIndex},
+        ${PageIndex} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${FullCount},
+        ${FullCount} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name},
@@ -66,7 +66,7 @@ function New-TreeNode {
         ${FarmName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HasNextPage},
+        ${HasNextPage} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${FarmID},
@@ -81,7 +81,7 @@ function New-TreeNode {
         ${Parent},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Root",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SpObjectID},
@@ -96,13 +96,13 @@ function New-TreeNode {
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadManagedPath},
+        ${LoadManagedPath} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadChildrenFromDB},
+        ${LoadChildrenFromDB} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LoadedPageCount},
+        ${LoadedPageCount} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Children},
@@ -114,10 +114,10 @@ function New-TreeNode {
         ${FilterUrls},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${FilterType},
+        ${FilterType} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${CheckNumber},
+        ${CheckNumber} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SelectedWebAppIdSubSiteProvServ},
@@ -126,7 +126,7 @@ function New-TreeNode {
         ${SelectedSiteCollIdsSubSiteProvServ},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ChildrenType},
+        ${ChildrenType} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ListId},

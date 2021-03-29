@@ -12,22 +12,22 @@ function New-ExtendSiteSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnabled},
+        ${IsEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExtendType},
+        ${ExtendType} = "WithConstantValue",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Duration},
+        ${Duration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DurationType},
+        ${DurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ConstantDuration},
+        ${ConstantDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ConstantDurationType},
+        ${ConstantDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${ExtendBasedTime}

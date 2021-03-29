@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsMigrateConfiguration** | **Boolean** |  | [optional] 
-**IsKeepLookAndFeel** | **Boolean** |  | [optional] 
+**IsMigrateConfiguration** | **Boolean** |  | [optional] [default to $false]
+**IsKeepLookAndFeel** | **Boolean** |  | [optional] [default to $false]
 **ColumnsAndContentConflictResolution** | [**ItemConflictResolutionType**](ItemConflictResolutionType.md) |  | [optional] 
-**IsMigrateSecurity** | **Boolean** |  | [optional] 
-**IsMigrateColumnsAndContentTypes** | **Boolean** |  | [optional] 
-**IsMigrateContent** | **Boolean** |  | [optional] 
-**IsMigrateContentIncludeListAttachment** | **Boolean** |  | [optional] 
+**IsMigrateSecurity** | **Boolean** |  | [optional] [default to $false]
+**IsMigrateColumnsAndContentTypes** | **Boolean** |  | [optional] [default to $false]
+**IsMigrateContent** | **Boolean** |  | [optional] [default to $false]
+**IsMigrateContentIncludeListAttachment** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

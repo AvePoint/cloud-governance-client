@@ -15,7 +15,7 @@ function New-WorksapceOngoingTasksModel {
         ${TaskName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ServiceType},
+        ${ServiceType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ServiceTypeDescription},

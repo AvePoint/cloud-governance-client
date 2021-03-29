@@ -51,25 +51,25 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagePermissionGrantSetting" /> class.
         /// </summary>
-        /// <param name="isEnableGrantPermission">isEnableGrantPermission.</param>
-        /// <param name="isGrantTemporaryPermission">isGrantTemporaryPermission.</param>
+        /// <param name="isEnableGrantPermission">isEnableGrantPermission (default to false).</param>
+        /// <param name="isGrantTemporaryPermission">isGrantTemporaryPermission (default to false).</param>
         /// <param name="grantPermissionAssignBy">grantPermissionAssignBy.</param>
-        /// <param name="temporaryPermissionDuration">temporaryPermissionDuration.</param>
+        /// <param name="temporaryPermissionDuration">temporaryPermissionDuration (default to 0).</param>
         /// <param name="temporaryDurationType">temporaryDurationType.</param>
-        /// <param name="isMaxTemporaryDurationSetted">isMaxTemporaryDurationSetted.</param>
-        /// <param name="temporaryPermissionMaxDuration">temporaryPermissionMaxDuration.</param>
+        /// <param name="isMaxTemporaryDurationSetted">isMaxTemporaryDurationSetted (default to false).</param>
+        /// <param name="temporaryPermissionMaxDuration">temporaryPermissionMaxDuration (default to 0).</param>
         /// <param name="temporaryPermissionMaxDurationType">temporaryPermissionMaxDurationType.</param>
-        /// <param name="isEnableExpireNotify">isEnableExpireNotify.</param>
-        /// <param name="isAllowSelectAdmin">isAllowSelectAdmin.</param>
-        /// <param name="expireNotifyDuration">expireNotifyDuration.</param>
+        /// <param name="isEnableExpireNotify">isEnableExpireNotify (default to false).</param>
+        /// <param name="isAllowSelectAdmin">isAllowSelectAdmin (default to false).</param>
+        /// <param name="expireNotifyDuration">expireNotifyDuration (default to 0).</param>
         /// <param name="expireNotifyDurationType">expireNotifyDurationType.</param>
         /// <param name="expireNotifyEmailTemplate">expireNotifyEmailTemplate.</param>
-        /// <param name="isEnableWelcomeNotify">isEnableWelcomeNotify.</param>
+        /// <param name="isEnableWelcomeNotify">isEnableWelcomeNotify (default to false).</param>
         /// <param name="welcomeEmailSubject">welcomeEmailSubject.</param>
         /// <param name="welcomeEmailBody">welcomeEmailBody.</param>
         /// <param name="welcomeEmailAssignBy">welcomeEmailAssignBy.</param>
-        /// <param name="allowSpecifyTemporayPermissionDuration">allowSpecifyTemporayPermissionDuration.</param>
-        public ManagePermissionGrantSetting(bool isEnableGrantPermission = default(bool), bool isGrantTemporaryPermission = default(bool), AssignBy? grantPermissionAssignBy = default(AssignBy?), int temporaryPermissionDuration = default(int), ApiDurationType? temporaryDurationType = default(ApiDurationType?), bool isMaxTemporaryDurationSetted = default(bool), int temporaryPermissionMaxDuration = default(int), ApiDurationType? temporaryPermissionMaxDurationType = default(ApiDurationType?), bool isEnableExpireNotify = default(bool), bool isAllowSelectAdmin = default(bool), int expireNotifyDuration = default(int), ApiDurationType? expireNotifyDurationType = default(ApiDurationType?), Guid? expireNotifyEmailTemplate = default(Guid?), bool isEnableWelcomeNotify = default(bool), string welcomeEmailSubject = default(string), string welcomeEmailBody = default(string), AssignBy? welcomeEmailAssignBy = default(AssignBy?), bool allowSpecifyTemporayPermissionDuration = default(bool))
+        /// <param name="allowSpecifyTemporayPermissionDuration">allowSpecifyTemporayPermissionDuration (default to false).</param>
+        public ManagePermissionGrantSetting(bool isEnableGrantPermission = false, bool isGrantTemporaryPermission = false, AssignBy? grantPermissionAssignBy = default(AssignBy?), int temporaryPermissionDuration = 0, ApiDurationType? temporaryDurationType = default(ApiDurationType?), bool isMaxTemporaryDurationSetted = false, int temporaryPermissionMaxDuration = 0, ApiDurationType? temporaryPermissionMaxDurationType = default(ApiDurationType?), bool isEnableExpireNotify = false, bool isAllowSelectAdmin = false, int expireNotifyDuration = 0, ApiDurationType? expireNotifyDurationType = default(ApiDurationType?), Guid? expireNotifyEmailTemplate = default(Guid?), bool isEnableWelcomeNotify = false, string welcomeEmailSubject = default(string), string welcomeEmailBody = default(string), AssignBy? welcomeEmailAssignBy = default(AssignBy?), bool allowSpecifyTemporayPermissionDuration = false)
         {
             this.IsEnableGrantPermission = isEnableGrantPermission;
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;

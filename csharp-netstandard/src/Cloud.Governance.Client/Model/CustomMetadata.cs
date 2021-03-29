@@ -47,7 +47,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="type">type.</param>
         /// <param name="displayType">displayType.</param>
         /// <param name="assignBy">assignBy.</param>
-        /// <param name="enableTextValidation">enableTextValidation.</param>
+        /// <param name="enableTextValidation">enableTextValidation (default to false).</param>
         /// <param name="textValidationRule">textValidationRule.</param>
         /// <param name="booleanMetadataSettings">booleanMetadataSettings.</param>
         /// <param name="termsMetadataSettings">termsMetadataSettings.</param>
@@ -58,7 +58,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="linkMetadataSettings">linkMetadataSettings.</param>
         /// <param name="singleLineOrMultipleLineMetadataSettings">singleLineOrMultipleLineMetadataSettings.</param>
         /// <param name="sharePointListMetadataSettings">sharePointListMetadataSettings.</param>
-        public CustomMetadata(Guid id = default(Guid), string name = default(string), string description = default(string), MetadataFieldType? type = default(MetadataFieldType?), DisplayInReportType? displayType = default(DisplayInReportType?), AssignBy? assignBy = default(AssignBy?), bool enableTextValidation = default(bool), TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), BooleanMetadataSettings booleanMetadataSettings = default(BooleanMetadataSettings), TermsMetadataSettings termsMetadataSettings = default(TermsMetadataSettings), UserMetadataSettings userMetadataSettings = default(UserMetadataSettings), UserProfileMetadataSettings userProfileMetadataSettings = default(UserProfileMetadataSettings), AzureAdMetadataSettings azureAdMetadataSettings = default(AzureAdMetadataSettings), ChoiceMetadataSettings choiceMetadataSettings = default(ChoiceMetadataSettings), LinkMetadataSettings linkMetadataSettings = default(LinkMetadataSettings), SingleLineOrMultipleLineMetadataSettings singleLineOrMultipleLineMetadataSettings = default(SingleLineOrMultipleLineMetadataSettings), SharePointListMetadataSettings sharePointListMetadataSettings = default(SharePointListMetadataSettings))
+        public CustomMetadata(Guid id = default(Guid), string name = default(string), string description = default(string), MetadataFieldType? type = default(MetadataFieldType?), DisplayInReportType? displayType = default(DisplayInReportType?), AssignBy? assignBy = default(AssignBy?), bool enableTextValidation = false, TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), BooleanMetadataSettings booleanMetadataSettings = default(BooleanMetadataSettings), TermsMetadataSettings termsMetadataSettings = default(TermsMetadataSettings), UserMetadataSettings userMetadataSettings = default(UserMetadataSettings), UserProfileMetadataSettings userProfileMetadataSettings = default(UserProfileMetadataSettings), AzureAdMetadataSettings azureAdMetadataSettings = default(AzureAdMetadataSettings), ChoiceMetadataSettings choiceMetadataSettings = default(ChoiceMetadataSettings), LinkMetadataSettings linkMetadataSettings = default(LinkMetadataSettings), SingleLineOrMultipleLineMetadataSettings singleLineOrMultipleLineMetadataSettings = default(SingleLineOrMultipleLineMetadataSettings), SharePointListMetadataSettings sharePointListMetadataSettings = default(SharePointListMetadataSettings))
         {
             this.Id = id;
             this.Name = name;

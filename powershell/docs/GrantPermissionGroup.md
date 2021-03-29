@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Int32** |  | [optional] 
+**Id** | **Int32** |  | [optional] [default to 0]
 **Name** | **String** |  | [optional] 
 **DisplayName** | **String** |  | [optional] 
 **PermissionIds** | **String[]** |  | [optional] 

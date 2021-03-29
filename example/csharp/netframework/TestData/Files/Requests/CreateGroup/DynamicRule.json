@@ -1,0 +1,7 @@
+{
+  "ServiceName": "Api_Sample_CreateTeam_DynamicRule",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "OwnerList": "user@example.com",
+  "DynamicGroup": "group@example.com"
+}

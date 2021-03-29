@@ -70,6 +70,12 @@ namespace Cloud.Governance.Client.Model
         [EnumMember(Value = "501")]
         File = 501,
 
+        [EnumMember(Value = "598")]
+        Team = 598,
+
+        [EnumMember(Value = "599")]
+        Yammer = 599,
+
         [EnumMember(Value = "600")]
         Group = 600,
 

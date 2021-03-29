@@ -12,10 +12,10 @@ function New-UserLevelControlSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${UserLevelControlMode},
+        ${UserLevelControlMode} = "AnyUserOrGroup",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsSetRequesterAsDefaultEnabled}
+        ${IsSetRequesterAsDefaultEnabled} = $false
     )
 
     Process {

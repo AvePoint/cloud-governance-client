@@ -75,7 +75,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="typeDescription">typeDescription.</param>
         /// <param name="url">url.</param>
         /// <param name="email">email.</param>
-        /// <param name="privacy">privacy.</param>
+        /// <param name="privacy">privacy (default to false).</param>
         /// <param name="privacyDescription">privacyDescription.</param>
         /// <param name="policyName">policyName.</param>
         /// <param name="policyDisplay">policyDisplay.</param>
@@ -94,7 +94,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="associateHubTitle">associateHubTitle.</param>
         /// <param name="geoLocation">geoLocation.</param>
         /// <param name="geoLocationDescription">geoLocationDescription.</param>
-        /// <param name="storageLimit">storageLimit.</param>
+        /// <param name="storageLimit">storageLimit (default to 0).</param>
         /// <param name="storageUsed">storageUsed.</param>
         /// <param name="siteSharing">siteSharing.</param>
         /// <param name="siteSharingDescription">siteSharingDescription.</param>
@@ -108,7 +108,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="inactivityThresholdTime">inactivityThresholdTime.</param>
         /// <param name="lastRenewalTime">lastRenewalTime.</param>
         /// <param name="applyPolicyStatus">applyPolicyStatus.</param>
-        /// <param name="hasOngoingTasks">hasOngoingTasks.</param>
+        /// <param name="hasOngoingTasks">hasOngoingTasks (default to false).</param>
         /// <param name="hasOngoingTasksDescription">hasOngoingTasksDescription.</param>
         /// <param name="phaseAssigneeDisplayNames">phaseAssigneeDisplayNames.</param>
         /// <param name="phaseAssignees">phaseAssignees.</param>
@@ -120,7 +120,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="phase">phase.</param>
         /// <param name="phaseDescription">phaseDescription.</param>
         /// <param name="metadata">metadata.</param>
-        public WorkspaceGridModel(Guid id = default(Guid), string name = default(string), string description = default(string), WorkspaceStatus? status = default(WorkspaceStatus?), string statusDescription = default(string), WorkspaceType? type = default(WorkspaceType?), string typeDescription = default(string), string url = default(string), string email = default(string), bool? privacy = default(bool?), string privacyDescription = default(string), string policyName = default(string), string policyDisplay = default(string), Guid? policyId = default(Guid?), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), HubSiteType? hubType = default(HubSiteType?), string associateHubTitle = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), long? storageLimit = default(long?), double? storageUsed = default(double?), SiteSharingStatus? siteSharing = default(SiteSharingStatus?), string siteSharingDescription = default(string), GroupEnableSharingStatus? groupSharing = default(GroupEnableSharingStatus?), string groupSharingDescription = default(string), string classification = default(string), ClaimStatus? claimStatus = default(ClaimStatus?), string claimStatusDescription = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), ApplyPolicyStatus? applyPolicyStatus = default(ApplyPolicyStatus?), bool hasOngoingTasks = default(bool), string hasOngoingTasksDescription = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), Guid? phaseProfileId = default(Guid?), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
+        public WorkspaceGridModel(Guid id = default(Guid), string name = default(string), string description = default(string), WorkspaceStatus? status = default(WorkspaceStatus?), string statusDescription = default(string), WorkspaceType? type = default(WorkspaceType?), string typeDescription = default(string), string url = default(string), string email = default(string), bool? privacy = false, string privacyDescription = default(string), string policyName = default(string), string policyDisplay = default(string), Guid? policyId = default(Guid?), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), HubSiteType? hubType = default(HubSiteType?), string associateHubTitle = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), long? storageLimit = 0, double? storageUsed = default(double?), SiteSharingStatus? siteSharing = default(SiteSharingStatus?), string siteSharingDescription = default(string), GroupEnableSharingStatus? groupSharing = default(GroupEnableSharingStatus?), string groupSharingDescription = default(string), string classification = default(string), ClaimStatus? claimStatus = default(ClaimStatus?), string claimStatusDescription = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), ApplyPolicyStatus? applyPolicyStatus = default(ApplyPolicyStatus?), bool hasOngoingTasks = false, string hasOngoingTasksDescription = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), Guid? phaseProfileId = default(Guid?), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
         {
             this.Id = id;
             this.Name = name;
@@ -131,7 +131,8 @@ namespace Cloud.Governance.Client.Model
             this.TypeDescription = typeDescription;
             this.Url = url;
             this.Email = email;
-            this.Privacy = privacy;
+            // use default value if no "privacy" provided
+            this.Privacy = privacy ?? false;
             this.PrivacyDescription = privacyDescription;
             this.PolicyName = policyName;
             this.PolicyDisplay = policyDisplay;
@@ -150,7 +151,8 @@ namespace Cloud.Governance.Client.Model
             this.AssociateHubTitle = associateHubTitle;
             this.GeoLocation = geoLocation;
             this.GeoLocationDescription = geoLocationDescription;
-            this.StorageLimit = storageLimit;
+            // use default value if no "storageLimit" provided
+            this.StorageLimit = storageLimit ?? 0;
             this.StorageUsed = storageUsed;
             this.SiteSharing = siteSharing;
             this.SiteSharingDescription = siteSharingDescription;

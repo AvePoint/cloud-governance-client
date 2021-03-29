@@ -24,13 +24,13 @@ function New-ChangeSiteSettingValidateResult {
         ${SiteDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableChangeHubSite},
+        ${IsEnableChangeHubSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsModernSite},
+        ${IsModernSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsHubSite},
+        ${IsHubSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AssociatedHubSiteId},
@@ -48,13 +48,13 @@ function New-ChangeSiteSettingValidateResult {
         ${PrimaryAdministrator},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMessage},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MessageCode}
+        ${MessageCode} = "None"
     )
 
     Process {

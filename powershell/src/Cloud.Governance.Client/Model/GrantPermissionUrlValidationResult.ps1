@@ -12,10 +12,10 @@ function New-GrantPermissionUrlValidationResult {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExternalSharingOptions},
+        ${ExternalSharingOptions} = "Disabled",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableShareAnnoymousLink},
+        ${EnableShareAnnoymousLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Object},
@@ -27,19 +27,19 @@ function New-GrantPermissionUrlValidationResult {
         ${SpGroups},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowBreakPermissionInheritance},
+        ${AllowBreakPermissionInheritance} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Collections.Hashtable]
         ${UserMetadata},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMessage},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MessageCode}
+        ${MessageCode} = "None"
     )
 
     Process {

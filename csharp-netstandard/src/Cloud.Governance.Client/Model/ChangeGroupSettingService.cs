@@ -64,55 +64,54 @@ namespace Cloud.Governance.Client.Model
         /// <param name="tenantId">tenantId.</param>
         /// <param name="networkId">networkId.</param>
         /// <param name="groupRestriction">groupRestriction.</param>
-        /// <param name="enableChangeName">enableChangeName.</param>
-        /// <param name="enableChangeDescription">enableChangeDescription.</param>
-        /// <param name="enableChangeMemberSubscription">enableChangeMemberSubscription.</param>
-        /// <param name="enableChangeOutsideSenders">enableChangeOutsideSenders.</param>
-        /// <param name="enableChangePrimaryContact">enableChangePrimaryContact.</param>
-        /// <param name="enableChangeSecondaryContact">enableChangeSecondaryContact.</param>
-        /// <param name="enableAddOwners">enableAddOwners.</param>
+        /// <param name="enableChangeName">enableChangeName (default to false).</param>
+        /// <param name="enableChangeDescription">enableChangeDescription (default to false).</param>
+        /// <param name="enableChangeMemberSubscription">enableChangeMemberSubscription (default to false).</param>
+        /// <param name="enableChangeOutsideSenders">enableChangeOutsideSenders (default to false).</param>
+        /// <param name="enableChangePrimaryContact">enableChangePrimaryContact (default to false).</param>
+        /// <param name="enableChangeSecondaryContact">enableChangeSecondaryContact (default to false).</param>
+        /// <param name="enableAddOwners">enableAddOwners (default to false).</param>
         /// <param name="addOwnerRestriction">addOwnerRestriction.</param>
-        /// <param name="enableRemoveOwners">enableRemoveOwners.</param>
-        /// <param name="enableAddMembers">enableAddMembers.</param>
+        /// <param name="enableRemoveOwners">enableRemoveOwners (default to false).</param>
+        /// <param name="enableAddMembers">enableAddMembers (default to false).</param>
         /// <param name="addMemberRestriction">addMemberRestriction.</param>
-        /// <param name="enableRemoveMembers">enableRemoveMembers.</param>
-        /// <param name="enableChangeDynamicMembershipRules">enableChangeDynamicMembershipRules.</param>
-        /// <param name="enableChangeTeamCollaboration">enableChangeTeamCollaboration.</param>
-        /// <param name="enableChangeHubSite">enableChangeHubSite.</param>
-        /// <param name="enableChangeClassification">enableChangeClassification.</param>
+        /// <param name="enableRemoveMembers">enableRemoveMembers (default to false).</param>
+        /// <param name="enableChangeDynamicMembershipRules">enableChangeDynamicMembershipRules (default to false).</param>
+        /// <param name="enableChangeTeamCollaboration">enableChangeTeamCollaboration (default to false).</param>
+        /// <param name="enableChangeHubSite">enableChangeHubSite (default to false).</param>
+        /// <param name="enableChangeClassification">enableChangeClassification (default to false).</param>
         /// <param name="classificationList">classificationList.</param>
-        /// <param name="enableChangeSensitivity">enableChangeSensitivity.</param>
+        /// <param name="enableChangeSensitivity">enableChangeSensitivity (default to false).</param>
         /// <param name="sensitivityList">sensitivityList.</param>
-        /// <param name="enableChangeMetadata">enableChangeMetadata.</param>
-        /// <param name="enableAddOrDeleteMetadata">enableAddOrDeleteMetadata.</param>
+        /// <param name="enableChangeMetadata">enableChangeMetadata (default to false).</param>
+        /// <param name="enableAddOrDeleteMetadata">enableAddOrDeleteMetadata (default to false).</param>
         /// <param name="metadataList">metadataList.</param>
-        /// <param name="enableChangeMembershipType">enableChangeMembershipType.</param>
+        /// <param name="enableChangeMembershipType">enableChangeMembershipType (default to false).</param>
         /// <param name="groupObjectType">groupObjectType.</param>
-        /// <param name="enableChangeYammerGroupInfo">enableChangeYammerGroupInfo.</param>
+        /// <param name="enableChangeYammerGroupInfo">enableChangeYammerGroupInfo (default to false).</param>
         /// <param name="scopePeoplePickerFilterProfileId">scopePeoplePickerFilterProfileId.</param>
         /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
         /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="hideRequestSummary">hideRequestSummary.</param>
+        /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
         /// <param name="department">department.</param>
-        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps.</param>
+        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps (default to false).</param>
         /// <param name="departments">departments.</param>
         /// <param name="serviceContact">serviceContact.</param>
         /// <param name="serviceAdminContact">serviceAdminContact.</param>
-        /// <param name="approversContainManagerRole">approversContainManagerRole.</param>
+        /// <param name="approversContainManagerRole">approversContainManagerRole (default to false).</param>
         /// <param name="status">status.</param>
-        /// <param name="showServiceInCatalog">showServiceInCatalog.</param>
+        /// <param name="showServiceInCatalog">showServiceInCatalog (default to false).</param>
         /// <param name="customActions">customActions.</param>
         /// <param name="approvalProcessId">approvalProcessId.</param>
-        /// <param name="languageId">languageId.</param>
+        /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        /// <param name="details">details.</param>
-        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = default(bool), bool enableChangeDescription = default(bool), bool enableChangeMemberSubscription = default(bool), bool enableChangeOutsideSenders = default(bool), bool enableChangePrimaryContact = default(bool), bool enableChangeSecondaryContact = default(bool), bool enableAddOwners = default(bool), UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = default(bool), bool enableAddMembers = default(bool), UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = default(bool), bool enableChangeDynamicMembershipRules = default(bool), bool enableChangeTeamCollaboration = default(bool), bool enableChangeHubSite = default(bool), bool enableChangeClassification = default(bool), List<string> classificationList = default(List<string>), bool enableChangeSensitivity = default(bool), List<string> sensitivityList = default(List<string>), bool enableChangeMetadata = default(bool), bool enableAddOrDeleteMetadata = default(bool), List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = default(bool), GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = default(bool), Guid? scopePeoplePickerFilterProfileId = default(Guid?), Guid? peoplePickerFilterProfileId = default(Guid?), ChangeGroupSettingRequest requestTemplate = default(ChangeGroupSettingRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
+        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = false, bool enableChangeDescription = false, bool enableChangeMemberSubscription = false, bool enableChangeOutsideSenders = false, bool enableChangePrimaryContact = false, bool enableChangeSecondaryContact = false, bool enableAddOwners = false, UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = false, bool enableAddMembers = false, UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = false, bool enableChangeDynamicMembershipRules = false, bool enableChangeTeamCollaboration = false, bool enableChangeHubSite = false, bool enableChangeClassification = false, List<string> classificationList = default(List<string>), bool enableChangeSensitivity = false, List<string> sensitivityList = default(List<string>), bool enableChangeMetadata = false, bool enableAddOrDeleteMetadata = false, List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = false, GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = false, Guid? scopePeoplePickerFilterProfileId = default(Guid?), Guid? peoplePickerFilterProfileId = default(Guid?), ChangeGroupSettingRequest requestTemplate = default(ChangeGroupSettingRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = false, List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.TenantId = tenantId;
             this.NetworkId = networkId;
@@ -164,7 +163,6 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
-            this.Details = details;
         }
 
         /// <summary>
@@ -426,12 +424,6 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Details
-        /// </summary>
-        [DataMember(Name = "details", EmitDefaultValue = true)]
-        public string Details { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -489,7 +481,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
-            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -747,11 +738,6 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
-                ) && 
-                (
-                    this.Details == input.Details ||
-                    (this.Details != null &&
-                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -833,8 +819,6 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
-                if (this.Details != null)
-                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

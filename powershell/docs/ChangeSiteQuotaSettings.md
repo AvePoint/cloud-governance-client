@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedAnySize** | **Boolean** |  | [optional] 
-**MinQuotaSize** | **Int64** |  | [optional] 
-**MaxQuotaSize** | **Int64** |  | [optional] 
-**CurrentQuotaSize** | **Int64** |  | [optional] 
+**AllowedAnySize** | **Boolean** |  | [optional] [default to $false]
+**MinQuotaSize** | **Int64** |  | [optional] [default to 0]
+**MaxQuotaSize** | **Int64** |  | [optional] [default to 0]
+**CurrentQuotaSize** | **Int64** |  | [optional] [default to 0]
 
 ## Examples
 

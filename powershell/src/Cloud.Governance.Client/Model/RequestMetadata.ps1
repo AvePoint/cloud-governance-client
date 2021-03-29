@@ -18,7 +18,7 @@ function New-RequestMetadata {
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${BooleanValue},
+        ${BooleanValue} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SingleLineOrMultipleLineValue},
@@ -45,7 +45,7 @@ function New-RequestMetadata {
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action}
+        ${Action} = "NoChange"
     )
 
     Process {

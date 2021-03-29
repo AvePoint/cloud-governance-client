@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableLockAsNoAccess** | **Boolean** |  | [optional] 
-**EnableLockAsReadonly** | **Boolean** |  | [optional] 
+**EnableLockAsNoAccess** | **Boolean** |  | [optional] [default to $false]
+**EnableLockAsReadonly** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

@@ -27,16 +27,16 @@ function New-TaskReport {
         ${RequesterDisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${RequestTicketNumber},
+        ${RequestTicketNumber} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${DueDate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DueDateType},
+        ${DueDateType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ServiceType},
+        ${ServiceType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ServiceTypeDescription},
@@ -45,16 +45,16 @@ function New-TaskReport {
         ${CreatedTime},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TaskType},
+        ${TaskType} = "ApprovalTask",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Running",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${StatusDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApproveTask},
+        ${IsApproveTask} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Assignee},

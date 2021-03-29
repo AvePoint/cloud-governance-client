@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Option** | **OneTimeRenewalOption** |  | [optional] 
-**Duration** | **int** |  | [optional] 
+**Duration** | **int** |  | [optional] [default to 0]
 **DurationType** | **ApiDurationType** |  | [optional] 
 **StartTime** | **DateTime?** |  | [optional] 
 

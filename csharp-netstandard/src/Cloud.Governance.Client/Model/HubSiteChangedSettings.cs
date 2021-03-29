@@ -31,11 +31,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HubSiteChangedSettings" /> class.
         /// </summary>
-        /// <param name="isModernSite">isModernSite.</param>
+        /// <param name="isModernSite">isModernSite (default to false).</param>
         /// <param name="action">action.</param>
         /// <param name="associatedHubSiteId">associatedHubSiteId.</param>
         /// <param name="associatedHubSiteTitle">associatedHubSiteTitle.</param>
-        public HubSiteChangedSettings(bool isModernSite = default(bool), ChangeHubsiteActionType? action = default(ChangeHubsiteActionType?), Guid associatedHubSiteId = default(Guid), string associatedHubSiteTitle = default(string))
+        public HubSiteChangedSettings(bool isModernSite = false, ChangeHubsiteActionType? action = default(ChangeHubsiteActionType?), Guid associatedHubSiteId = default(Guid), string associatedHubSiteTitle = default(string))
         {
             this.IsModernSite = isModernSite;
             this.Action = action;

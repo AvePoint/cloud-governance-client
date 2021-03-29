@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArchiveProfile** | **String** |  | [optional] 
-**ObjectIds** | **String[]** |  | [optional] 
-**WorkspaceType** | [**WorkspaceArchivedType**](WorkspaceArchivedType.md) |  | [optional] 
+**ArchiveProfile** | **String** | WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id | [optional] 
+**ObjectIds** | **String[]** | workspace ids | [optional] 
+**WorkspaceType** | [**WorkspaceArchivedType**](WorkspaceArchivedType.md) | workspace type | [optional] 
 
 ## Examples
 

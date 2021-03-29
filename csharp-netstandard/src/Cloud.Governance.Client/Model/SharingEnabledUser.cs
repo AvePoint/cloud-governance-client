@@ -29,18 +29,33 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "isExternalUser", EmitDefaultValue = false)]
         public ExternalUserType? IsExternalUser { get; set; }
         /// <summary>
+        /// Gets or Sets ApiUserType
+        /// </summary>
+        [DataMember(Name = "apiUserType", EmitDefaultValue = false)]
+        public ApiUserType? ApiUserType { get; set; }
+
+        /// <summary>
+        /// Returns false as ApiUserType should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeApiUserType()
+        {
+            return false;
+        }
+        /// <summary>
         /// Initializes a new instance of the <see cref="SharingEnabledUser" /> class.
         /// </summary>
-        /// <param name="isSharePointGroup">isSharePointGroup.</param>
-        /// <param name="isGuestUser">isGuestUser.</param>
-        /// <param name="isGuestUserExistsInOrganization">isGuestUserExistsInOrganization.</param>
+        /// <param name="isSharePointGroup">isSharePointGroup (default to false).</param>
+        /// <param name="isGuestUser">isGuestUser (default to false).</param>
+        /// <param name="isGuestUserExistsInOrganization">isGuestUserExistsInOrganization (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="loginName">loginName.</param>
         /// <param name="isExternalUser">isExternalUser.</param>
+        /// <param name="azureUserType">azureUserType.</param>
         /// <param name="displayName">displayName.</param>
-        /// <param name="isGroup">isGroup.</param>
+        /// <param name="isGroup">isGroup (default to false).</param>
         /// <param name="email">email.</param>
-        public SharingEnabledUser(bool isSharePointGroup = default(bool), bool isGuestUser = default(bool), bool isGuestUserExistsInOrganization = default(bool), string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string displayName = default(string), bool isGroup = default(bool), string email = default(string))
+        public SharingEnabledUser(bool isSharePointGroup = false, bool isGuestUser = false, bool isGuestUserExistsInOrganization = false, string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string azureUserType = default(string), string displayName = default(string), bool isGroup = false, string email = default(string))
         {
             this.IsSharePointGroup = isSharePointGroup;
             this.IsGuestUser = isGuestUser;
@@ -48,6 +63,7 @@ namespace Cloud.Governance.Client.Model
             this.Id = id;
             this.LoginName = loginName;
             this.IsExternalUser = isExternalUser;
+            this.AzureUserType = azureUserType;
             this.DisplayName = displayName;
             this.IsGroup = isGroup;
             this.Email = email;
@@ -82,6 +98,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "loginName", EmitDefaultValue = true)]
         public string LoginName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AzureUserType
+        /// </summary>
+        [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
+        public string AzureUserType { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayName
@@ -205,6 +227,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  LoginName: ").Append(LoginName).Append("\n");
             sb.Append("  IsExternalUser: ").Append(IsExternalUser).Append("\n");
+            sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  IsGroup: ").Append(IsGroup).Append("\n");
             sb.Append("  IsLocalUser: ").Append(IsLocalUser).Append("\n");
@@ -214,6 +237,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  AdditionalData: ").Append(AdditionalData).Append("\n");
+            sb.Append("  ApiUserType: ").Append(ApiUserType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -275,6 +299,11 @@ namespace Cloud.Governance.Client.Model
                     this.IsExternalUser.Equals(input.IsExternalUser)
                 ) && 
                 (
+                    this.AzureUserType == input.AzureUserType ||
+                    (this.AzureUserType != null &&
+                    this.AzureUserType.Equals(input.AzureUserType))
+                ) && 
+                (
                     this.DisplayName == input.DisplayName ||
                     (this.DisplayName != null &&
                     this.DisplayName.Equals(input.DisplayName))
@@ -316,6 +345,10 @@ namespace Cloud.Governance.Client.Model
                     this.AdditionalData != null &&
                     input.AdditionalData != null &&
                     this.AdditionalData.SequenceEqual(input.AdditionalData)
+                ) && 
+                (
+                    this.ApiUserType == input.ApiUserType ||
+                    this.ApiUserType.Equals(input.ApiUserType)
                 );
         }
 
@@ -336,6 +369,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.LoginName != null)
                     hashCode = hashCode * 59 + this.LoginName.GetHashCode();
                 hashCode = hashCode * 59 + this.IsExternalUser.GetHashCode();
+                if (this.AzureUserType != null)
+                    hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 hashCode = hashCode * 59 + this.IsGroup.GetHashCode();
@@ -351,6 +386,7 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.TenantId.GetHashCode();
                 if (this.AdditionalData != null)
                     hashCode = hashCode * 59 + this.AdditionalData.GetHashCode();
+                hashCode = hashCode * 59 + this.ApiUserType.GetHashCode();
                 return hashCode;
             }
         }

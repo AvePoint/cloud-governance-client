@@ -37,16 +37,16 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="GrantPermissionUrlValidationResult" /> class.
         /// </summary>
         /// <param name="externalSharingOptions">externalSharingOptions.</param>
-        /// <param name="enableShareAnnoymousLink">enableShareAnnoymousLink.</param>
+        /// <param name="enableShareAnnoymousLink">enableShareAnnoymousLink (default to false).</param>
         /// <param name="_object">_object.</param>
         /// <param name="spPermissionLevels">spPermissionLevels.</param>
         /// <param name="spGroups">spGroups.</param>
-        /// <param name="allowBreakPermissionInheritance">allowBreakPermissionInheritance.</param>
+        /// <param name="allowBreakPermissionInheritance">allowBreakPermissionInheritance (default to false).</param>
         /// <param name="userMetadata">userMetadata.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public GrantPermissionUrlValidationResult(ExternalSharingOptions? externalSharingOptions = default(ExternalSharingOptions?), bool enableShareAnnoymousLink = default(bool), GrantPermissionSPObject _object = default(GrantPermissionSPObject), List<IntModel> spPermissionLevels = default(List<IntModel>), List<GrantPermissionGroup> spGroups = default(List<GrantPermissionGroup>), bool allowBreakPermissionInheritance = default(bool), Dictionary<string, UserInfo> userMetadata = default(Dictionary<string, UserInfo>), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public GrantPermissionUrlValidationResult(ExternalSharingOptions? externalSharingOptions = default(ExternalSharingOptions?), bool enableShareAnnoymousLink = false, GrantPermissionSPObject _object = default(GrantPermissionSPObject), List<IntModel> spPermissionLevels = default(List<IntModel>), List<GrantPermissionGroup> spGroups = default(List<GrantPermissionGroup>), bool allowBreakPermissionInheritance = false, Dictionary<string, UserInfo> userMetadata = default(Dictionary<string, UserInfo>), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.ExternalSharingOptions = externalSharingOptions;
             this.EnableShareAnnoymousLink = enableShareAnnoymousLink;

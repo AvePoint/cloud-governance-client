@@ -28,9 +28,9 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="groupEmail">groupEmail.</param>
         /// <param name="groupId">groupId.</param>
-        /// <param name="isEditTask">isEditTask.</param>
-        /// <param name="isFromQuestionnaire">isFromQuestionnaire.</param>
-        public ChangeGroupSettingValidationParameter(string groupEmail = default(string), Guid groupId = default(Guid), bool isEditTask = default(bool), bool isFromQuestionnaire = default(bool))
+        /// <param name="isEditTask">isEditTask (default to false).</param>
+        /// <param name="isFromQuestionnaire">isFromQuestionnaire (default to false).</param>
+        public ChangeGroupSettingValidationParameter(string groupEmail = default(string), Guid groupId = default(Guid), bool isEditTask = false, bool isFromQuestionnaire = false)
         {
             this.GroupEmail = groupEmail;
             this.GroupId = groupId;

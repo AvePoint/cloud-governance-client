@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StopInheritingPermissions** | **bool** |  | [optional] 
+**StopInheritingPermissions** | **bool** |  | [optional] [default to false]
 **UserPermissions** | [**List&lt;RequestUserWithPermissions&gt;**](RequestUserWithPermissions.md) |  | [optional] 
 **GroupPermissions** | [**List&lt;RequestGroupWithPermissions&gt;**](RequestGroupWithPermissions.md) |  | [optional] 
 

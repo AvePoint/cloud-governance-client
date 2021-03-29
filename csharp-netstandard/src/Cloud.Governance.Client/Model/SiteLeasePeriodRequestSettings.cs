@@ -36,11 +36,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SiteLeasePeriodRequestSettings" /> class.
         /// </summary>
-        /// <param name="leaseInterval">leaseInterval.</param>
+        /// <param name="leaseInterval">leaseInterval (default to 0).</param>
         /// <param name="leaseDurationType">leaseDurationType.</param>
-        /// <param name="leaseWarningInterval">leaseWarningInterval.</param>
+        /// <param name="leaseWarningInterval">leaseWarningInterval (default to 0).</param>
         /// <param name="leaseWarningDurationType">leaseWarningDurationType.</param>
-        public SiteLeasePeriodRequestSettings(int leaseInterval = default(int), ApiDurationType? leaseDurationType = default(ApiDurationType?), int leaseWarningInterval = default(int), ApiDurationType? leaseWarningDurationType = default(ApiDurationType?))
+        public SiteLeasePeriodRequestSettings(int leaseInterval = 0, ApiDurationType? leaseDurationType = default(ApiDurationType?), int leaseWarningInterval = 0, ApiDurationType? leaseWarningDurationType = default(ApiDurationType?))
         {
             this.LeaseInterval = leaseInterval;
             this.LeaseDurationType = leaseDurationType;

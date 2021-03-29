@@ -15,13 +15,13 @@ function New-SiteValidationParameter {
         ${Uri},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IgnoreLock},
+        ${IgnoreLock} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEditTask},
+        ${IsEditTask} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsFromQuestionnaire}
+        ${IsFromQuestionnaire} = $false
     )
 
     Process {

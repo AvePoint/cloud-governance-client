@@ -26,11 +26,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeSiteQuotaSettings" /> class.
         /// </summary>
-        /// <param name="allowedAnySize">allowedAnySize.</param>
-        /// <param name="minQuotaSize">minQuotaSize.</param>
-        /// <param name="maxQuotaSize">maxQuotaSize.</param>
-        /// <param name="currentQuotaSize">currentQuotaSize.</param>
-        public ChangeSiteQuotaSettings(bool allowedAnySize = default(bool), long minQuotaSize = default(long), long maxQuotaSize = default(long), long currentQuotaSize = default(long))
+        /// <param name="allowedAnySize">allowedAnySize (default to false).</param>
+        /// <param name="minQuotaSize">minQuotaSize (default to 0).</param>
+        /// <param name="maxQuotaSize">maxQuotaSize (default to 0).</param>
+        /// <param name="currentQuotaSize">currentQuotaSize (default to 0).</param>
+        public ChangeSiteQuotaSettings(bool allowedAnySize = false, long minQuotaSize = 0, long maxQuotaSize = 0, long currentQuotaSize = 0)
         {
             this.AllowedAnySize = allowedAnySize;
             this.MinQuotaSize = minQuotaSize;

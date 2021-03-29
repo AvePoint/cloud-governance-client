@@ -1,0 +1,6 @@
+{
+  "ServiceName": "ApiTest_Sample_ChangeListSettings_Service",
+  "Summary": "ApiTest_Sample_ChangeListName",
+  "Uri": "https://contoso.sharepoint.com/sites/FuSC1",
+  "ListName": "ApiTestListName"
+}

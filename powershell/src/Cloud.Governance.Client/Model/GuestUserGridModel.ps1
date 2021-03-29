@@ -33,7 +33,7 @@ function New-GuestUserGridModel {
         ${SecondaryContactDisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Active",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${StatusDescription},

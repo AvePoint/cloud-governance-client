@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **Description** | **string** |  | [optional] 
 **Category** | **string** |  | [optional] 
 **Contact** | **string** |  | [optional] 
-**LanguageId** | **int** |  | [optional] 
+**LanguageId** | **int** |  | [optional] [default to 0]
 **Type** | **ServiceType** |  | [optional] 
 **TypeDescription** | **string** |  | [optional] 
-**IsQuestionnaire** | **bool** |  | [optional] 
+**IsQuestionnaire** | **bool** |  | [optional] [default to false]
 **QuestionnaireId** | **Guid?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

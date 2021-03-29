@@ -49,7 +49,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="id">id.</param>
         /// <param name="title">title.</param>
         /// <param name="requester">requester.</param>
-        /// <param name="requestTicketNumber">requestTicketNumber.</param>
+        /// <param name="requestTicketNumber">requestTicketNumber (default to 0).</param>
         /// <param name="requesterDisplayName">requesterDisplayName.</param>
         /// <param name="dueDate">dueDate.</param>
         /// <param name="dueDateType">dueDateType.</param>
@@ -59,7 +59,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="taskType">taskType.</param>
         /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
-        public TaskList(Guid id = default(Guid), string title = default(string), string requester = default(string), int requestTicketNumber = default(int), string requesterDisplayName = default(string), DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string))
+        public TaskList(Guid id = default(Guid), string title = default(string), string requester = default(string), int requestTicketNumber = 0, string requesterDisplayName = default(string), DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string))
         {
             this.Id = id;
             this.Title = title;

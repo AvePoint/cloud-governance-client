@@ -3,9 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Int32** |  | [optional] 
+**Id** | **Int32** |  | [optional] [default to 0]
 **Name** | **String** |  | [optional] 
 **LoginName** | **String** |  | [optional] 
+**AzureUserType** | **String** |  | [optional] 
 **PrincipalType** | [**SPPrincipalType**](SPPrincipalType.md) |  | [optional] 
 **PrincipalTypeDescription** | **String** |  | [optional] 
 **PermissionLevels** | **String[]** |  | [optional] 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 $SPRoleAssignment = New-Cloud.Governance.ClientSPRoleAssignment  -Id null `
  -Name null `
  -LoginName null `
+ -AzureUserType null `
  -PrincipalType null `
  -PrincipalTypeDescription null `
  -PermissionLevels null

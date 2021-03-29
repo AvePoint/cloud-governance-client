@@ -28,10 +28,10 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="parentUrl">parentUrl.</param>
         /// <param name="uri">uri.</param>
-        /// <param name="ignoreLock">ignoreLock.</param>
-        /// <param name="isEditTask">isEditTask.</param>
-        /// <param name="isFromQuestionnaire">isFromQuestionnaire.</param>
-        public CreateWebValidationParameter(string parentUrl = default(string), string uri = default(string), bool ignoreLock = default(bool), bool isEditTask = default(bool), bool isFromQuestionnaire = default(bool))
+        /// <param name="ignoreLock">ignoreLock (default to false).</param>
+        /// <param name="isEditTask">isEditTask (default to false).</param>
+        /// <param name="isFromQuestionnaire">isFromQuestionnaire (default to false).</param>
+        public CreateWebValidationParameter(string parentUrl = default(string), string uri = default(string), bool ignoreLock = false, bool isEditTask = false, bool isFromQuestionnaire = false)
         {
             this.ParentUrl = parentUrl;
             this.Uri = uri;

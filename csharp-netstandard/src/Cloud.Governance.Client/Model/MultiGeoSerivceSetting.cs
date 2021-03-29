@@ -36,15 +36,15 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultiGeoSerivceSetting" /> class.
         /// </summary>
-        /// <param name="isMultiGeoTenant">isMultiGeoTenant.</param>
+        /// <param name="isMultiGeoTenant">isMultiGeoTenant (default to false).</param>
         /// <param name="allLocations">allLocations.</param>
-        /// <param name="isEnabled">isEnabled.</param>
+        /// <param name="isEnabled">isEnabled (default to false).</param>
         /// <param name="controlMode">controlMode.</param>
         /// <param name="defaultLocation">defaultLocation.</param>
         /// <param name="selectedLocations">selectedLocations.</param>
         /// <param name="locationAssignBy">locationAssignBy.</param>
         /// <param name="userRoleForLocation">userRoleForLocation.</param>
-        public MultiGeoSerivceSetting(bool isMultiGeoTenant = default(bool), List<GeoLocationModel> allLocations = default(List<GeoLocationModel>), bool isEnabled = default(bool), MultiGeoControlMode? controlMode = default(MultiGeoControlMode?), GeoLocationBase defaultLocation = default(GeoLocationBase), List<GeoLocationBase> selectedLocations = default(List<GeoLocationBase>), AssignBy? locationAssignBy = default(AssignBy?), string userRoleForLocation = default(string))
+        public MultiGeoSerivceSetting(bool isMultiGeoTenant = false, List<GeoLocationModel> allLocations = default(List<GeoLocationModel>), bool isEnabled = false, MultiGeoControlMode? controlMode = default(MultiGeoControlMode?), GeoLocationBase defaultLocation = default(GeoLocationBase), List<GeoLocationBase> selectedLocations = default(List<GeoLocationBase>), AssignBy? locationAssignBy = default(AssignBy?), string userRoleForLocation = default(string))
         {
             this.IsMultiGeoTenant = isMultiGeoTenant;
             this.AllLocations = allLocations;

@@ -3,17 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsIncludeVersions** | **Boolean** |  | [optional] 
-**IsIncludeWorkflowDefinition** | **Boolean** |  | [optional] 
-**IsDisableInformationRightsManagement** | **Boolean** |  | [optional] 
-**IsPreserveNullColumnValues** | **Boolean** |  | [optional] 
-**IsKeepModifiedByAndModifiedTime** | **Boolean** |  | [optional] 
+**IsIncludeVersions** | **Boolean** |  | [optional] [default to $false]
+**IsIncludeWorkflowDefinition** | **Boolean** |  | [optional] [default to $false]
+**IsDisableInformationRightsManagement** | **Boolean** |  | [optional] [default to $false]
+**IsPreserveNullColumnValues** | **Boolean** |  | [optional] [default to $false]
+**IsKeepModifiedByAndModifiedTime** | **Boolean** |  | [optional] [default to $false]
 **ProfileMappings** | [**ContentMoveProfileMappings**](ContentMoveProfileMappings.md) |  | [optional] 
 **BackupSettings** | [**BackupEnvironmentSetting**](BackupEnvironmentSetting.md) |  | [optional] 
 **ConflictResolutionSettings** | [**ConflictResolutionSetting**](ConflictResolutionSetting.md) |  | [optional] 
 **FilterPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **DeleteType** | [**DeleteType**](DeleteType.md) |  | [optional] 
-**IsDeleteCheckedFiles** | **Boolean** |  | [optional] 
+**IsDeleteCheckedFiles** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

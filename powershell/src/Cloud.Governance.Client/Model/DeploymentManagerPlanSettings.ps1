@@ -12,13 +12,13 @@ function New-DeploymentManagerPlanSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Enabled},
+        ${Enabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Plans},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AssignBy},
+        ${AssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Default}

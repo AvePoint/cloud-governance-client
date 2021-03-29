@@ -12,10 +12,10 @@ function New-BooleanMetadataSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTerms},
+        ${EnableTerms} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Value},
+        ${Value} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TermsAndConditions}

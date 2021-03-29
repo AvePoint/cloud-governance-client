@@ -26,21 +26,27 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamsTemplateSettings" /> class.
         /// </summary>
-        /// <param name="enableCreateTeamFromScratch">enableCreateTeamFromScratch.</param>
-        /// <param name="enableCreateTeamFromExistTeam">enableCreateTeamFromExistTeam.</param>
+        /// <param name="enableCreateTeamFromScratch">enableCreateTeamFromScratch (default to false).</param>
+        /// <param name="enableCreateTeamFromExistTeam">enableCreateTeamFromExistTeam (default to false).</param>
+        /// <param name="enableCreateTeamFromTeamTemplate">enableCreateTeamFromTeamTemplate (default to false).</param>
         /// <param name="selectedTemplate">selectedTemplate.</param>
-        /// <param name="enableCloneChannels">enableCloneChannels.</param>
-        /// <param name="enableCloneApps">enableCloneApps.</param>
-        /// <param name="enableCloneTabs">enableCloneTabs.</param>
-        /// <param name="enableCloneMembers">enableCloneMembers.</param>
-        /// <param name="enableCloneTeamSetting">enableCloneTeamSetting.</param>
-        /// <param name="enableCloneTeamPrivacy">enableCloneTeamPrivacy.</param>
-        /// <param name="enableCloneTeamClassification">enableCloneTeamClassification.</param>
-        public TeamsTemplateSettings(bool enableCreateTeamFromScratch = default(bool), bool enableCreateTeamFromExistTeam = default(bool), GuidModel selectedTemplate = default(GuidModel), bool enableCloneChannels = default(bool), bool enableCloneApps = default(bool), bool enableCloneTabs = default(bool), bool enableCloneMembers = default(bool), bool enableCloneTeamSetting = default(bool), bool enableCloneTeamPrivacy = default(bool), bool enableCloneTeamClassification = default(bool))
+        /// <param name="selectedMSTemplate">selectedMSTemplate.</param>
+        /// <param name="teamTemplates">teamTemplates.</param>
+        /// <param name="enableCloneChannels">enableCloneChannels (default to false).</param>
+        /// <param name="enableCloneApps">enableCloneApps (default to false).</param>
+        /// <param name="enableCloneTabs">enableCloneTabs (default to false).</param>
+        /// <param name="enableCloneMembers">enableCloneMembers (default to false).</param>
+        /// <param name="enableCloneTeamSetting">enableCloneTeamSetting (default to false).</param>
+        /// <param name="enableCloneTeamPrivacy">enableCloneTeamPrivacy (default to false).</param>
+        /// <param name="enableCloneTeamClassification">enableCloneTeamClassification (default to false).</param>
+        public TeamsTemplateSettings(bool enableCreateTeamFromScratch = false, bool enableCreateTeamFromExistTeam = false, bool enableCreateTeamFromTeamTemplate = false, GuidModel selectedTemplate = default(GuidModel), StringModel selectedMSTemplate = default(StringModel), List<TextModel> teamTemplates = default(List<TextModel>), bool enableCloneChannels = false, bool enableCloneApps = false, bool enableCloneTabs = false, bool enableCloneMembers = false, bool enableCloneTeamSetting = false, bool enableCloneTeamPrivacy = false, bool enableCloneTeamClassification = false)
         {
             this.EnableCreateTeamFromScratch = enableCreateTeamFromScratch;
             this.EnableCreateTeamFromExistTeam = enableCreateTeamFromExistTeam;
+            this.EnableCreateTeamFromTeamTemplate = enableCreateTeamFromTeamTemplate;
             this.SelectedTemplate = selectedTemplate;
+            this.SelectedMSTemplate = selectedMSTemplate;
+            this.TeamTemplates = teamTemplates;
             this.EnableCloneChannels = enableCloneChannels;
             this.EnableCloneApps = enableCloneApps;
             this.EnableCloneTabs = enableCloneTabs;
@@ -63,10 +69,28 @@ namespace Cloud.Governance.Client.Model
         public bool EnableCreateTeamFromExistTeam { get; set; }
 
         /// <summary>
+        /// Gets or Sets EnableCreateTeamFromTeamTemplate
+        /// </summary>
+        [DataMember(Name = "enableCreateTeamFromTeamTemplate", EmitDefaultValue = false)]
+        public bool EnableCreateTeamFromTeamTemplate { get; set; }
+
+        /// <summary>
         /// Gets or Sets SelectedTemplate
         /// </summary>
         [DataMember(Name = "selectedTemplate", EmitDefaultValue = true)]
         public GuidModel SelectedTemplate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SelectedMSTemplate
+        /// </summary>
+        [DataMember(Name = "selectedMSTemplate", EmitDefaultValue = true)]
+        public StringModel SelectedMSTemplate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TeamTemplates
+        /// </summary>
+        [DataMember(Name = "teamTemplates", EmitDefaultValue = true)]
+        public List<TextModel> TeamTemplates { get; set; }
 
         /// <summary>
         /// Gets or Sets EnableCloneChannels
@@ -120,7 +144,10 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class TeamsTemplateSettings {\n");
             sb.Append("  EnableCreateTeamFromScratch: ").Append(EnableCreateTeamFromScratch).Append("\n");
             sb.Append("  EnableCreateTeamFromExistTeam: ").Append(EnableCreateTeamFromExistTeam).Append("\n");
+            sb.Append("  EnableCreateTeamFromTeamTemplate: ").Append(EnableCreateTeamFromTeamTemplate).Append("\n");
             sb.Append("  SelectedTemplate: ").Append(SelectedTemplate).Append("\n");
+            sb.Append("  SelectedMSTemplate: ").Append(SelectedMSTemplate).Append("\n");
+            sb.Append("  TeamTemplates: ").Append(TeamTemplates).Append("\n");
             sb.Append("  EnableCloneChannels: ").Append(EnableCloneChannels).Append("\n");
             sb.Append("  EnableCloneApps: ").Append(EnableCloneApps).Append("\n");
             sb.Append("  EnableCloneTabs: ").Append(EnableCloneTabs).Append("\n");
@@ -171,9 +198,24 @@ namespace Cloud.Governance.Client.Model
                     this.EnableCreateTeamFromExistTeam.Equals(input.EnableCreateTeamFromExistTeam)
                 ) && 
                 (
+                    this.EnableCreateTeamFromTeamTemplate == input.EnableCreateTeamFromTeamTemplate ||
+                    this.EnableCreateTeamFromTeamTemplate.Equals(input.EnableCreateTeamFromTeamTemplate)
+                ) && 
+                (
                     this.SelectedTemplate == input.SelectedTemplate ||
                     (this.SelectedTemplate != null &&
                     this.SelectedTemplate.Equals(input.SelectedTemplate))
+                ) && 
+                (
+                    this.SelectedMSTemplate == input.SelectedMSTemplate ||
+                    (this.SelectedMSTemplate != null &&
+                    this.SelectedMSTemplate.Equals(input.SelectedMSTemplate))
+                ) && 
+                (
+                    this.TeamTemplates == input.TeamTemplates ||
+                    this.TeamTemplates != null &&
+                    input.TeamTemplates != null &&
+                    this.TeamTemplates.SequenceEqual(input.TeamTemplates)
                 ) && 
                 (
                     this.EnableCloneChannels == input.EnableCloneChannels ||
@@ -216,8 +258,13 @@ namespace Cloud.Governance.Client.Model
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.EnableCreateTeamFromScratch.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableCreateTeamFromExistTeam.GetHashCode();
+                hashCode = hashCode * 59 + this.EnableCreateTeamFromTeamTemplate.GetHashCode();
                 if (this.SelectedTemplate != null)
                     hashCode = hashCode * 59 + this.SelectedTemplate.GetHashCode();
+                if (this.SelectedMSTemplate != null)
+                    hashCode = hashCode * 59 + this.SelectedMSTemplate.GetHashCode();
+                if (this.TeamTemplates != null)
+                    hashCode = hashCode * 59 + this.TeamTemplates.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableCloneChannels.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableCloneApps.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableCloneTabs.GetHashCode();

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ServiceName** | **string** |  | [optional] 
 **ServiceType** | **ServiceType** |  | [optional] 
 **ServiceTypeDescription** | **string** |  | [optional] 
-**TicketNumber** | **int** |  | [optional] 
+**TicketNumber** | **int** |  | [optional] [default to 0]
 **Summary** | **string** |  | [optional] 
 **Requester** | **string** |  | [optional] 
 **RequesterDisplayName** | **string** |  | [optional] 

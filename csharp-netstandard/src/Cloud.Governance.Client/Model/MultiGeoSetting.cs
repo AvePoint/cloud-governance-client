@@ -36,14 +36,14 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MultiGeoSetting" /> class.
         /// </summary>
-        /// <param name="isEnabled">isEnabled.</param>
+        /// <param name="isEnabled">isEnabled (default to false).</param>
         /// <param name="controlMode">controlMode.</param>
         /// <param name="defaultLocation">defaultLocation.</param>
         /// <param name="selectedLocations">selectedLocations.</param>
         /// <param name="locationAssignBy">locationAssignBy.</param>
         /// <param name="userRoleForLocation">userRoleForLocation.</param>
         /// <param name="allLocations">allLocations.</param>
-        public MultiGeoSetting(bool isEnabled = default(bool), MultiGeoControlMode? controlMode = default(MultiGeoControlMode?), GeoLocationBase defaultLocation = default(GeoLocationBase), List<GeoLocationBase> selectedLocations = default(List<GeoLocationBase>), AssignBy? locationAssignBy = default(AssignBy?), string userRoleForLocation = default(string), List<GeoLocationBase> allLocations = default(List<GeoLocationBase>))
+        public MultiGeoSetting(bool isEnabled = false, MultiGeoControlMode? controlMode = default(MultiGeoControlMode?), GeoLocationBase defaultLocation = default(GeoLocationBase), List<GeoLocationBase> selectedLocations = default(List<GeoLocationBase>), AssignBy? locationAssignBy = default(AssignBy?), string userRoleForLocation = default(string), List<GeoLocationBase> allLocations = default(List<GeoLocationBase>))
         {
             this.IsEnabled = isEnabled;
             this.ControlMode = controlMode;

@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BooleanMetadataSettings" /> class.
         /// </summary>
-        /// <param name="enableTerms">enableTerms.</param>
-        /// <param name="value">value.</param>
+        /// <param name="enableTerms">enableTerms (default to false).</param>
+        /// <param name="value">value (default to false).</param>
         /// <param name="termsAndConditions">termsAndConditions.</param>
-        public BooleanMetadataSettings(bool enableTerms = default(bool), bool value = default(bool), string termsAndConditions = default(string))
+        public BooleanMetadataSettings(bool enableTerms = false, bool value = false, string termsAndConditions = default(string))
         {
             this.EnableTerms = enableTerms;
             this.Value = value;

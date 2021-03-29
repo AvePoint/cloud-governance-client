@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// TermsValue
+    /// Value of Managed metadata metadata.
     /// </summary>
     [DataContract(Name = "TermsValue")]
     public partial class TermsValue : IEquatable<TermsValue>, IValidatableObject
@@ -26,15 +26,16 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TermsValue" /> class.
         /// </summary>
-        /// <param name="value">value.</param>
+        /// <param name="value">Id and name collection of terms..</param>
         public TermsValue(List<GuidModel> value = default(List<GuidModel>))
         {
             this.Value = value;
         }
 
         /// <summary>
-        /// Gets or Sets TermStore
+        /// Id and name of term store.
         /// </summary>
+        /// <value>Id and name of term store.</value>
         [DataMember(Name = "termStore", EmitDefaultValue = true)]
         public GuidModel TermStore { get; private set; }
 
@@ -48,8 +49,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets TermGroup
+        /// Id and name of term group.
         /// </summary>
+        /// <value>Id and name of term group.</value>
         [DataMember(Name = "termGroup", EmitDefaultValue = true)]
         public GuidModel TermGroup { get; private set; }
 
@@ -63,8 +65,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets TermSet
+        /// Id and name of term set.
         /// </summary>
+        /// <value>Id and name of term set.</value>
         [DataMember(Name = "termSet", EmitDefaultValue = true)]
         public GuidModel TermSet { get; private set; }
 
@@ -78,8 +81,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Id and name collection of terms.
         /// </summary>
+        /// <value>Id and name collection of terms.</value>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public List<GuidModel> Value { get; set; }
 

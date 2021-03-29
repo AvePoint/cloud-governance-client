@@ -1,0 +1,5 @@
+{
+  "ServiceName": "S_ChangeSiteQuota",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/testlifecycle",
+  "ChangedQuotaSizeGB": 2
+}

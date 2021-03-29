@@ -12,52 +12,52 @@ function New-RequestTeamsSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMembersCreateUpdateChannels},
+        ${AllowMembersCreateUpdateChannels} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMembersCreatePrivateChannels},
+        ${AllowMembersCreatePrivateChannels} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMemberDeleteRestoreChannels},
+        ${AllowMemberDeleteRestoreChannels} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMembersAddRemoveApps},
+        ${AllowMembersAddRemoveApps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMembersCreateUpdateRemoveTabs},
+        ${AllowMembersCreateUpdateRemoveTabs} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMembersCreateUpdateRemoveConnections},
+        ${AllowMembersCreateUpdateRemoveConnections} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMembersDeleteMessages},
+        ${AllowMembersDeleteMessages} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMembersEditMessages},
+        ${AllowMembersEditMessages} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowGuestsCreateUpdateChannels},
+        ${AllowGuestsCreateUpdateChannels} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowGuestsDeleteChannels},
+        ${AllowGuestsDeleteChannels} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMentionsTeam},
+        ${AllowMentionsTeam} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMentionsChannel},
+        ${AllowMentionsChannel} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableGiphy},
+        ${EnableGiphy} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableStickersAndMemes},
+        ${EnableStickersAndMemes} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCustomMemes},
+        ${EnableCustomMemes} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GiphyRatingType}
+        ${GiphyRatingType} = "Moderate"
     )
 
     Process {

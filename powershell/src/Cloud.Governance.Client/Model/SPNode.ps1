@@ -18,7 +18,7 @@ function New-SPNode {
         ${FullUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Container",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name},
@@ -27,7 +27,7 @@ function New-SPNode {
         ${Title},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsSelected}
+        ${IsSelected} = $false
     )
 
     Process {

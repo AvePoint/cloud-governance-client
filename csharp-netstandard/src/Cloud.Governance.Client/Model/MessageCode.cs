@@ -116,7 +116,10 @@ namespace Cloud.Governance.Client.Model
         CreateGuestUserEmailExist = 500,
 
         [EnumMember(Value = "501")]
-        CreateGuestUserEmailVerified = 501
+        CreateGuestUserEmailVerified = 501,
+
+        [EnumMember(Value = "600")]
+        ListTitleExist = 600
 
     }
 

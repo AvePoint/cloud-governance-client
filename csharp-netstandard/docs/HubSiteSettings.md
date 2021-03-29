@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool** |  | [optional] [default to false]
 **Action** | **ConvertHubSiteActionType** |  | [optional] 
 **AssociatedHubSiteId** | **Guid?** |  | [optional] 
 **AssociatedHubSiteTitle** | **string** |  | [optional] 

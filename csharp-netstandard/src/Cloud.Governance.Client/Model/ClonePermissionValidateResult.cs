@@ -33,10 +33,10 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="siteId">siteId.</param>
         /// <param name="siteUrl">siteUrl.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ClonePermissionValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ClonePermissionValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;

@@ -12,13 +12,13 @@ function New-ExtendSiteRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ExtendDuration},
+        ${ExtendDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExtendDurationType},
+        ${ExtendDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SiteId},

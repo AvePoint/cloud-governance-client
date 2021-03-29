@@ -27,14 +27,14 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ManagePermissionOption" /> class.
         /// </summary>
         /// <param name="grantPermissionSetting">grantPermissionSetting.</param>
-        /// <param name="isEnableEditPermission">isEnableEditPermission.</param>
-        /// <param name="isEnableRemovePermission">isEnableRemovePermission.</param>
-        /// <param name="isEnableStopInheritPermission">isEnableStopInheritPermission.</param>
-        /// <param name="isEnableDeleteUniquePermission">isEnableDeleteUniquePermission.</param>
-        /// <param name="isEnableExcludePermissionLevel">isEnableExcludePermissionLevel.</param>
-        /// <param name="isHideExcludePermissionItem">isHideExcludePermissionItem.</param>
+        /// <param name="isEnableEditPermission">isEnableEditPermission (default to false).</param>
+        /// <param name="isEnableRemovePermission">isEnableRemovePermission (default to false).</param>
+        /// <param name="isEnableStopInheritPermission">isEnableStopInheritPermission (default to false).</param>
+        /// <param name="isEnableDeleteUniquePermission">isEnableDeleteUniquePermission (default to false).</param>
+        /// <param name="isEnableExcludePermissionLevel">isEnableExcludePermissionLevel (default to false).</param>
+        /// <param name="isHideExcludePermissionItem">isHideExcludePermissionItem (default to false).</param>
         /// <param name="excludedPermissionLevles">excludedPermissionLevles.</param>
-        public ManagePermissionOption(ManagePermissionGrantSetting grantPermissionSetting = default(ManagePermissionGrantSetting), bool isEnableEditPermission = default(bool), bool isEnableRemovePermission = default(bool), bool isEnableStopInheritPermission = default(bool), bool isEnableDeleteUniquePermission = default(bool), bool isEnableExcludePermissionLevel = default(bool), bool isHideExcludePermissionItem = default(bool), List<PermissionLevel> excludedPermissionLevles = default(List<PermissionLevel>))
+        public ManagePermissionOption(ManagePermissionGrantSetting grantPermissionSetting = default(ManagePermissionGrantSetting), bool isEnableEditPermission = false, bool isEnableRemovePermission = false, bool isEnableStopInheritPermission = false, bool isEnableDeleteUniquePermission = false, bool isEnableExcludePermissionLevel = false, bool isHideExcludePermissionItem = false, List<PermissionLevel> excludedPermissionLevles = default(List<PermissionLevel>))
         {
             this.GrantPermissionSetting = grantPermissionSetting;
             this.IsEnableEditPermission = isEnableEditPermission;

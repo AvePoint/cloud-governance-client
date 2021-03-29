@@ -1,0 +1,11 @@
+{
+  "ServiceName": "ApiTest_Sample_Create List/Libary_Service",
+  "Summary": "ApiTest_Sample_CreateListWithVersion",
+  "ListName": "ApiTest_Sample_CreateListWithVersion_ListName",
+  "ListTitle": "ApiTest_Sample",
+  "WebUrl": "https://contoso.sharepoint.com/sites/FuSC1",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/FuSC1",
+  "List": "List",
+  "ListTemplate": "discuss",
+  "MajorVersionLimit": 10
+}

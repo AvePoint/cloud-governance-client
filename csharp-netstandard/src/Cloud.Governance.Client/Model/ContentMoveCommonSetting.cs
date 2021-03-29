@@ -31,18 +31,18 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentMoveCommonSetting" /> class.
         /// </summary>
-        /// <param name="isIncludeVersions">isIncludeVersions.</param>
-        /// <param name="isIncludeWorkflowDefinition">isIncludeWorkflowDefinition.</param>
-        /// <param name="isDisableInformationRightsManagement">isDisableInformationRightsManagement.</param>
-        /// <param name="isPreserveNullColumnValues">isPreserveNullColumnValues.</param>
-        /// <param name="isKeepModifiedByAndModifiedTime">isKeepModifiedByAndModifiedTime.</param>
+        /// <param name="isIncludeVersions">isIncludeVersions (default to false).</param>
+        /// <param name="isIncludeWorkflowDefinition">isIncludeWorkflowDefinition (default to false).</param>
+        /// <param name="isDisableInformationRightsManagement">isDisableInformationRightsManagement (default to false).</param>
+        /// <param name="isPreserveNullColumnValues">isPreserveNullColumnValues (default to false).</param>
+        /// <param name="isKeepModifiedByAndModifiedTime">isKeepModifiedByAndModifiedTime (default to false).</param>
         /// <param name="profileMappings">profileMappings.</param>
         /// <param name="backupSettings">backupSettings.</param>
         /// <param name="conflictResolutionSettings">conflictResolutionSettings.</param>
         /// <param name="filterPolicy">filterPolicy.</param>
         /// <param name="deleteType">deleteType.</param>
-        /// <param name="isDeleteCheckedFiles">isDeleteCheckedFiles.</param>
-        public ContentMoveCommonSetting(bool isIncludeVersions = default(bool), bool isIncludeWorkflowDefinition = default(bool), bool isDisableInformationRightsManagement = default(bool), bool isPreserveNullColumnValues = default(bool), bool isKeepModifiedByAndModifiedTime = default(bool), ContentMoveProfileMappings profileMappings = default(ContentMoveProfileMappings), BackupEnvironmentSetting backupSettings = default(BackupEnvironmentSetting), ConflictResolutionSetting conflictResolutionSettings = default(ConflictResolutionSetting), GuidModel filterPolicy = default(GuidModel), DeleteType? deleteType = default(DeleteType?), bool isDeleteCheckedFiles = default(bool))
+        /// <param name="isDeleteCheckedFiles">isDeleteCheckedFiles (default to false).</param>
+        public ContentMoveCommonSetting(bool isIncludeVersions = false, bool isIncludeWorkflowDefinition = false, bool isDisableInformationRightsManagement = false, bool isPreserveNullColumnValues = false, bool isKeepModifiedByAndModifiedTime = false, ContentMoveProfileMappings profileMappings = default(ContentMoveProfileMappings), BackupEnvironmentSetting backupSettings = default(BackupEnvironmentSetting), ConflictResolutionSetting conflictResolutionSettings = default(ConflictResolutionSetting), GuidModel filterPolicy = default(GuidModel), DeleteType? deleteType = default(DeleteType?), bool isDeleteCheckedFiles = false)
         {
             this.IsIncludeVersions = isIncludeVersions;
             this.IsIncludeWorkflowDefinition = isIncludeWorkflowDefinition;

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **WebTitle** | **string** |  | [optional] 
 **WebDescription** | **string** |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 
 

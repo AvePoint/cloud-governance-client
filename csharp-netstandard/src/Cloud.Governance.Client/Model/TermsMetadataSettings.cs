@@ -26,7 +26,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TermsMetadataSettings" /> class.
         /// </summary>
-        /// <param name="allowMultiple">allowMultiple.</param>
+        /// <param name="allowMultiple">allowMultiple (default to false).</param>
         /// <param name="adminCenter">adminCenter.</param>
         /// <param name="value">value.</param>
         /// <param name="termStore">termStore.</param>
@@ -34,8 +34,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="termSet">termSet.</param>
         /// <param name="scope">scope.</param>
         /// <param name="tree">tree.</param>
-        /// <param name="isValid">isValid.</param>
-        public TermsMetadataSettings(bool allowMultiple = default(bool), string adminCenter = default(string), List<GuidModel> value = default(List<GuidModel>), GuidModel termStore = default(GuidModel), GuidModel termGroup = default(GuidModel), GuidModel termSet = default(GuidModel), GuidModel scope = default(GuidModel), TermTreeModel tree = default(TermTreeModel), bool isValid = default(bool))
+        /// <param name="isValid">isValid (default to false).</param>
+        public TermsMetadataSettings(bool allowMultiple = false, string adminCenter = default(string), List<GuidModel> value = default(List<GuidModel>), GuidModel termStore = default(GuidModel), GuidModel termGroup = default(GuidModel), GuidModel termSet = default(GuidModel), GuidModel scope = default(GuidModel), TermTreeModel tree = default(TermTreeModel), bool isValid = false)
         {
             this.AllowMultiple = allowMultiple;
             this.AdminCenter = adminCenter;

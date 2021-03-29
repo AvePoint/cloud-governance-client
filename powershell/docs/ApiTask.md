@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **ErrorMessage** | **String** |  | [optional] 
 **LastModifiedTime** | **System.DateTime** |  | [optional] 
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
-**AllowReassign** | **Boolean** |  | [optional] 
-**AllowEdit** | **Boolean** |  | [optional] 
+**AllowReassign** | **Boolean** |  | [optional] [default to $false]
+**AllowEdit** | **Boolean** |  | [optional] [default to $false]
 **DynamicActions** | [**TaskDynamicActions[]**](TaskDynamicActions.md) |  | [optional] 
 
 ## Examples

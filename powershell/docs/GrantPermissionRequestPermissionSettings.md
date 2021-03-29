@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsBreakInheritance** | **Boolean** |  | [optional] 
-**IsGrantPermissionDirectly** | **Boolean** |  | [optional] 
+**IsBreakInheritance** | **Boolean** |  | [optional] [default to $false]
+**IsGrantPermissionDirectly** | **Boolean** |  | [optional] [default to $false]
 **SelectedSPGroup** | [**GrantPermissionGroup**](GrantPermissionGroup.md) |  | [optional] 
 **SelectedPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] 
 

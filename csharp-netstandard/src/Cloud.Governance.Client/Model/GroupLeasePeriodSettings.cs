@@ -36,12 +36,12 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupLeasePeriodSettings" /> class.
         /// </summary>
-        /// <param name="isEnabled">isEnabled.</param>
+        /// <param name="isEnabled">isEnabled (default to false).</param>
         /// <param name="leaseType">leaseType.</param>
         /// <param name="durationType">durationType.</param>
-        /// <param name="durationInterval">durationInterval.</param>
+        /// <param name="durationInterval">durationInterval (default to 0).</param>
         /// <param name="leaseExpirationDate">leaseExpirationDate.</param>
-        public GroupLeasePeriodSettings(bool isEnabled = default(bool), GroupLeasePeriodType? leaseType = default(GroupLeasePeriodType?), ApiDurationType? durationType = default(ApiDurationType?), int durationInterval = default(int), DateTime? leaseExpirationDate = default(DateTime?))
+        public GroupLeasePeriodSettings(bool isEnabled = false, GroupLeasePeriodType? leaseType = default(GroupLeasePeriodType?), ApiDurationType? durationType = default(ApiDurationType?), int durationInterval = 0, DateTime? leaseExpirationDate = default(DateTime?))
         {
             this.IsEnabled = isEnabled;
             this.LeaseType = leaseType;

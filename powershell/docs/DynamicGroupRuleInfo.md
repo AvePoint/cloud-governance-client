@@ -4,13 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
-**Order** | **Int32** |  | [optional] 
+**Order** | **Int32** |  | [optional] [default to 0]
 **Relation** | [**LogicalOperator**](LogicalOperator.md) |  | [optional] 
 **Category** | [**CategoryType**](CategoryType.md) |  | [optional] 
 **MetadataId** | **String** |  | [optional] 
 **MetadataName** | **String** |  | [optional] 
 **MetadataValue** | **String** |  | [optional] 
 **MetadataDisplayValue** | **String** |  | [optional] 
+**MetadataValueAzureUserType** | **String** |  | [optional] 
 **Condition** | [**DynamicRuleCondition**](DynamicRuleCondition.md) |  | [optional] 
 
 ## Examples
@@ -25,6 +26,7 @@ $DynamicGroupRuleInfo = New-Cloud.Governance.ClientDynamicGroupRuleInfo  -Id nul
  -MetadataName null `
  -MetadataValue null `
  -MetadataDisplayValue null `
+ -MetadataValueAzureUserType null `
  -Condition null
 ```
 

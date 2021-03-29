@@ -39,12 +39,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="extendSetting">extendSetting.</param>
         /// <param name="changePolicySetting">changePolicySetting.</param>
         /// <param name="changeQuotaSetting">changeQuotaSetting.</param>
-        /// <param name="enableTeamCollaboration">enableTeamCollaboration.</param>
+        /// <param name="enableTeamCollaboration">enableTeamCollaboration (default to false).</param>
         /// <param name="groupObjectType">groupObjectType.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public GroupLifecycleValidateResult(ExtendGroupResult extendSetting = default(ExtendGroupResult), ChangeGroupPolicyResult changePolicySetting = default(ChangeGroupPolicyResult), ChangeGroupQuotaResult changeQuotaSetting = default(ChangeGroupQuotaResult), bool enableTeamCollaboration = default(bool), GroupObjectType? groupObjectType = default(GroupObjectType?), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public GroupLifecycleValidateResult(ExtendGroupResult extendSetting = default(ExtendGroupResult), ChangeGroupPolicyResult changePolicySetting = default(ChangeGroupPolicyResult), ChangeGroupQuotaResult changeQuotaSetting = default(ChangeGroupQuotaResult), bool enableTeamCollaboration = false, GroupObjectType? groupObjectType = default(GroupObjectType?), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.ExtendSetting = extendSetting;
             this.ChangePolicySetting = changePolicySetting;

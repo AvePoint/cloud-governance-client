@@ -12,13 +12,13 @@ function New-GuestUserRequestOneTimeRenewalSettingModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Option},
+        ${Option} = "NoMore",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Duration},
+        ${Duration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DurationType},
+        ${DurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${StartTime}

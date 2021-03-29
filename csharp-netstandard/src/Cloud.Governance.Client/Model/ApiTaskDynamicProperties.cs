@@ -45,9 +45,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="siteDescription">siteDescription.</param>
         /// <param name="requester">requester.</param>
         /// <param name="isTeam">isTeam.</param>
+        /// <param name="isYammer">isYammer.</param>
         /// <param name="groupOwnersStr">groupOwnersStr.</param>
         /// <param name="tenantId">tenantId.</param>
-        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object groupOwnersStr = default(Object), Object tenantId = default(Object))
+        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object isYammer = default(Object), Object groupOwnersStr = default(Object), Object tenantId = default(Object))
         {
             this.None = none;
             this.PrimaryContact = primaryContact;
@@ -68,6 +69,7 @@ namespace Cloud.Governance.Client.Model
             this.SiteDescription = siteDescription;
             this.Requester = requester;
             this.IsTeam = isTeam;
+            this.IsYammer = isYammer;
             this.GroupOwnersStr = groupOwnersStr;
             this.TenantId = tenantId;
         }
@@ -187,6 +189,12 @@ namespace Cloud.Governance.Client.Model
         public Object IsTeam { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsYammer
+        /// </summary>
+        [DataMember(Name = "IsYammer", EmitDefaultValue = true)]
+        public Object IsYammer { get; set; }
+
+        /// <summary>
         /// Gets or Sets GroupOwnersStr
         /// </summary>
         [DataMember(Name = "GroupOwnersStr", EmitDefaultValue = true)]
@@ -225,6 +233,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  SiteDescription: ").Append(SiteDescription).Append("\n");
             sb.Append("  Requester: ").Append(Requester).Append("\n");
             sb.Append("  IsTeam: ").Append(IsTeam).Append("\n");
+            sb.Append("  IsYammer: ").Append(IsYammer).Append("\n");
             sb.Append("  GroupOwnersStr: ").Append(GroupOwnersStr).Append("\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("}\n");
@@ -357,6 +366,11 @@ namespace Cloud.Governance.Client.Model
                     this.IsTeam.Equals(input.IsTeam))
                 ) && 
                 (
+                    this.IsYammer == input.IsYammer ||
+                    (this.IsYammer != null &&
+                    this.IsYammer.Equals(input.IsYammer))
+                ) && 
+                (
                     this.GroupOwnersStr == input.GroupOwnersStr ||
                     (this.GroupOwnersStr != null &&
                     this.GroupOwnersStr.Equals(input.GroupOwnersStr))
@@ -415,6 +429,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Requester.GetHashCode();
                 if (this.IsTeam != null)
                     hashCode = hashCode * 59 + this.IsTeam.GetHashCode();
+                if (this.IsYammer != null)
+                    hashCode = hashCode * 59 + this.IsYammer.GetHashCode();
                 if (this.GroupOwnersStr != null)
                     hashCode = hashCode * 59 + this.GroupOwnersStr.GetHashCode();
                 if (this.TenantId != null)

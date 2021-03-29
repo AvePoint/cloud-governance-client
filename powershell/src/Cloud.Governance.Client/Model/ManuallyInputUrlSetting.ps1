@@ -12,13 +12,13 @@ function New-ManuallyInputUrlSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableConstructUrl},
+        ${EnableConstructUrl} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableUrlValidation},
+        ${EnableUrlValidation} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ConstructUrlAssignBy},
+        ${ConstructUrlAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ValidationRule},
@@ -33,7 +33,7 @@ function New-ManuallyInputUrlSetting {
         ${Connection},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ContructUrlAssignBy}
+        ${ContructUrlAssignBy} = "BusinessUser"
     )
 
     Process {

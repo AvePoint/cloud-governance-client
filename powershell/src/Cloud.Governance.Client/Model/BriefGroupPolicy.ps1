@@ -21,22 +21,22 @@ function New-BriefGroupPolicy {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableLeaseExpiration},
+        ${EnableLeaseExpiration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LeaseExpiredInterval},
+        ${LeaseExpiredInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseExpiredIntervalType},
+        ${LeaseExpiredIntervalType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableManageGroupSharing},
+        ${EnableManageGroupSharing} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInviteAuthorizedGuestUser},
+        ${EnableInviteAuthorizedGuestUser} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInviteGuestUser}
+        ${EnableInviteGuestUser} = $false
     )
 
     Process {

@@ -35,18 +35,18 @@ namespace Cloud.Governance.Client.Model
         /// <param name="siteId">siteId.</param>
         /// <param name="siteTitle">siteTitle.</param>
         /// <param name="siteDescription">siteDescription.</param>
-        /// <param name="isEnableChangeHubSite">isEnableChangeHubSite.</param>
-        /// <param name="isModernSite">isModernSite.</param>
-        /// <param name="isHubSite">isHubSite.</param>
+        /// <param name="isEnableChangeHubSite">isEnableChangeHubSite (default to false).</param>
+        /// <param name="isModernSite">isModernSite (default to false).</param>
+        /// <param name="isHubSite">isHubSite (default to false).</param>
         /// <param name="associatedHubSiteId">associatedHubSiteId.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="primaryContact">primaryContact.</param>
         /// <param name="secondaryContact">secondaryContact.</param>
         /// <param name="primaryAdministrator">primaryAdministrator.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeSiteSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string siteTitle = default(string), string siteDescription = default(string), bool isEnableChangeHubSite = default(bool), bool isModernSite = default(bool), bool isHubSite = default(bool), Guid? associatedHubSiteId = default(Guid?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeSiteSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string siteTitle = default(string), string siteDescription = default(string), bool isEnableChangeHubSite = false, bool isModernSite = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.SiteUrl = siteUrl;
             this.SiteId = siteId;

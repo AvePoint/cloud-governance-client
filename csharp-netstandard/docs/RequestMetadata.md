@@ -1,22 +1,23 @@
 # Cloud.Governance.Client.Model.RequestMetadata
+Metadata model of request.
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Guid** |  | [optional] 
-**Name** | **string** |  | [optional] 
-**BooleanValue** | **bool?** |  | [optional] 
-**SingleLineOrMultipleLineValue** | **string** |  | [optional] 
-**UpsOrAzureAdValue** | [**LookupValue**](LookupValue.md) |  | [optional] 
-**TermsValue** | [**TermsValue**](TermsValue.md) |  | [optional] 
-**UserValue** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
-**LinkValue** | [**LinkValue**](LinkValue.md) |  | [optional] 
-**ChoiceValue** | **List&lt;string&gt;** |  | [optional] 
-**LookupListValue** | [**LookupListValue**](LookupListValue.md) |  | [optional] 
-**Type** | **MetadataFieldType** |  | [optional] [readonly] 
-**ValueString** | **string** |  | [optional] [readonly] 
-**Value** | **string** |  | [optional] 
-**Action** | **MetadataActionType** |  | [optional] 
+**Id** | **Guid** | Id of metadata. | [optional] 
+**Name** | **string** | Name of metadata. | [optional] 
+**BooleanValue** | **bool?** | Value of Yes/No metadata. | [optional] [default to false]
+**SingleLineOrMultipleLineValue** | **string** | Value of Single/Multiple line of text metadata. | [optional] 
+**UpsOrAzureAdValue** | [**LookupValue**](LookupValue.md) | Value of User Profile or Azure AD metadata. | [optional] 
+**TermsValue** | [**TermsValue**](TermsValue.md) | Value of Managed metadata metadata. | [optional] 
+**UserValue** | [**List&lt;ApiUser&gt;**](ApiUser.md) | Value of Person or Group metadata. | [optional] 
+**LinkValue** | [**LinkValue**](LinkValue.md) | Value of Hyperlink metadata. | [optional] 
+**ChoiceValue** | **List&lt;string&gt;** | Value of Choice metadata. | [optional] 
+**LookupListValue** | [**LookupListValue**](LookupListValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
+**Type** | **MetadataFieldType** | Type of metadata. | [optional] [readonly] 
+**ValueString** | **string** | Display value of metadata. | [optional] [readonly] 
+**Value** | **string** | Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot; | [optional] 
+**Action** | **MetadataActionType** | Action of metadata, used in change workspace metadata service. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

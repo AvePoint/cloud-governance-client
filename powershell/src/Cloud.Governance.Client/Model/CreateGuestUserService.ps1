@@ -15,43 +15,43 @@ function New-CreateGuestUserService {
         ${TenantId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInviteOwnersGroup},
+        ${EnableInviteOwnersGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInviteContactGroup},
+        ${EnableInviteContactGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${PrimaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrimaryContactAssignBy},
+        ${PrimaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${SecondaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SecondaryContactAssignBy},
+        ${SecondaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableOnTimeRenewal},
+        ${EnableOnTimeRenewal} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${OneTimeDuration},
+        ${OneTimeDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${OneTimeDurationType},
+        ${OneTimeDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DepartmentAssignBy},
+        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HideRequestSummary},
+        ${HideRequestSummary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -63,13 +63,13 @@ function New-CreateGuestUserService {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps},
+        ${LoadDepartmentFromUps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Departments},
@@ -81,13 +81,13 @@ function New-CreateGuestUserService {
         ${ServiceAdminContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ApproversContainManagerRole},
+        ${ApproversContainManagerRole} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowServiceInCatalog},
+        ${ShowServiceInCatalog} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CustomActions},
@@ -96,13 +96,10 @@ function New-CreateGuestUserService {
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CategoryId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Details}
+        ${CategoryId}
     )
 
     Process {
@@ -141,7 +138,6 @@ function New-CreateGuestUserService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO
@@ -164,7 +160,7 @@ function ConvertFrom-JsonToCreateGuestUserService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGuestUserService
-        $AllProperties = $("TenantId", "EnableInviteOwnersGroup", "EnableInviteContactGroup", "PrimaryContact", "PrimaryContactAssignBy", "SecondaryContact", "SecondaryContactAssignBy", "EnableOnTimeRenewal", "OneTimeDuration", "OneTimeDurationType", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "Details")
+        $AllProperties = $("TenantId", "EnableInviteOwnersGroup", "EnableInviteContactGroup", "PrimaryContact", "PrimaryContactAssignBy", "SecondaryContact", "SecondaryContactAssignBy", "EnableOnTimeRenewal", "OneTimeDuration", "OneTimeDurationType", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -351,12 +347,6 @@ function ConvertFrom-JsonToCreateGuestUserService {
             $CategoryId = $JsonParameters.PSobject.Properties["CategoryId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Details"))) { #optional property not found
-            $Details = $null
-        } else {
-            $Details = $JsonParameters.PSobject.Properties["Details"].value
-        }
-
         $PSO = [PSCustomObject]@{
             "TenantId" = ${TenantId}
             "EnableInviteOwnersGroup" = ${EnableInviteOwnersGroup}
@@ -388,7 +378,6 @@ function ConvertFrom-JsonToCreateGuestUserService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO

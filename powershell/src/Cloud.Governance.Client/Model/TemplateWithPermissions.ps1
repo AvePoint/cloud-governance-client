@@ -15,7 +15,7 @@ function New-TemplateWithPermissions {
         ${TemplateId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsUseCommon},
+        ${IsUseCommon} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${UserPermissions},

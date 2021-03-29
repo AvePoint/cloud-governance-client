@@ -26,11 +26,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SiteTitleSetting" /> class.
         /// </summary>
-        /// <param name="titleAssignBy">titleAssignBy.</param>
-        /// <param name="enableTitleConstructure">enableTitleConstructure.</param>
+        /// <param name="titleAssignBy">titleAssignBy (default to 0).</param>
+        /// <param name="enableTitleConstructure">enableTitleConstructure (default to false).</param>
         /// <param name="titlePrefixes">titlePrefixes.</param>
         /// <param name="titleSuffixes">titleSuffixes.</param>
-        public SiteTitleSetting(int titleAssignBy = default(int), bool enableTitleConstructure = default(bool), List<SiteTitleConstructureRule> titlePrefixes = default(List<SiteTitleConstructureRule>), List<SiteTitleConstructureRule> titleSuffixes = default(List<SiteTitleConstructureRule>))
+        public SiteTitleSetting(int titleAssignBy = 0, bool enableTitleConstructure = false, List<SiteTitleConstructureRule> titlePrefixes = default(List<SiteTitleConstructureRule>), List<SiteTitleConstructureRule> titleSuffixes = default(List<SiteTitleConstructureRule>))
         {
             this.TitleAssignBy = titleAssignBy;
             this.EnableTitleConstructure = enableTitleConstructure;

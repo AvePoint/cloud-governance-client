@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsGrantTemporaryPermission** | **Boolean** |  | [optional] 
-**IsGrantAdminGroup** | **Boolean** |  | [optional] 
+**IsGrantTemporaryPermission** | **Boolean** |  | [optional] [default to $false]
+**IsGrantAdminGroup** | **Boolean** |  | [optional] [default to $false]
 **ExpirationType** | [**ExpirationType**](ExpirationType.md) |  | [optional] 
-**DurationInterval** | **Int32** |  | [optional] 
+**DurationInterval** | **Int32** |  | [optional] [default to 0]
 **DurationDateType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **StartTime** | **System.DateTime** |  | [optional] 
 **EndTime** | **System.DateTime** |  | [optional] 

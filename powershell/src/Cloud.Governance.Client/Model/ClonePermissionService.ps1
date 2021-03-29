@@ -18,37 +18,37 @@ function New-ClonePermissionService {
         ${UncheckedNodes},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SourceUserRestrictionType},
+        ${SourceUserRestrictionType} = "AnyUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TargetUserRestrictionType},
+        ${TargetUserRestrictionType} = "AnyUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${CloneOption},
+        ${CloneOption} = "Append",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ClonePermissionAssignBy},
+        ${ClonePermissionAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AdditionalCloneOption},
+        ${AdditionalCloneOption} = "AddUserToTheSameGroup",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${CloneAdditionalOptionAssignBy},
+        ${CloneAdditionalOptionAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledRemoveExplicitPermission},
+        ${EnabledRemoveExplicitPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledRemoveUserFromSPGroup},
+        ${EnabledRemoveUserFromSPGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledDeleteUserPermission},
+        ${EnabledDeleteUserPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TransferOptionValueAssignBy},
+        ${TransferOptionValueAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsHideTree},
+        ${IsHideTree} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ScopeSettings},
@@ -57,13 +57,13 @@ function New-ClonePermissionService {
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DepartmentAssignBy},
+        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HideRequestSummary},
+        ${HideRequestSummary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -75,13 +75,13 @@ function New-ClonePermissionService {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps},
+        ${LoadDepartmentFromUps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Departments},
@@ -93,13 +93,13 @@ function New-ClonePermissionService {
         ${ServiceAdminContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ApproversContainManagerRole},
+        ${ApproversContainManagerRole} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowServiceInCatalog},
+        ${ShowServiceInCatalog} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CustomActions},
@@ -108,13 +108,10 @@ function New-ClonePermissionService {
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CategoryId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Details}
+        ${CategoryId}
     )
 
     Process {
@@ -157,7 +154,6 @@ function New-ClonePermissionService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO
@@ -180,7 +176,7 @@ function ConvertFrom-JsonToClonePermissionService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ClonePermissionService
-        $AllProperties = $("SelectedNodes", "UncheckedNodes", "SourceUserRestrictionType", "TargetUserRestrictionType", "CloneOption", "ClonePermissionAssignBy", "AdditionalCloneOption", "CloneAdditionalOptionAssignBy", "EnabledRemoveExplicitPermission", "EnabledRemoveUserFromSPGroup", "EnabledDeleteUserPermission", "TransferOptionValueAssignBy", "IsHideTree", "ScopeSettings", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "Details")
+        $AllProperties = $("SelectedNodes", "UncheckedNodes", "SourceUserRestrictionType", "TargetUserRestrictionType", "CloneOption", "ClonePermissionAssignBy", "AdditionalCloneOption", "CloneAdditionalOptionAssignBy", "EnabledRemoveExplicitPermission", "EnabledRemoveUserFromSPGroup", "EnabledDeleteUserPermission", "TransferOptionValueAssignBy", "IsHideTree", "ScopeSettings", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -391,12 +387,6 @@ function ConvertFrom-JsonToClonePermissionService {
             $CategoryId = $JsonParameters.PSobject.Properties["CategoryId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Details"))) { #optional property not found
-            $Details = $null
-        } else {
-            $Details = $JsonParameters.PSobject.Properties["Details"].value
-        }
-
         $PSO = [PSCustomObject]@{
             "SelectedNodes" = ${SelectedNodes}
             "UncheckedNodes" = ${UncheckedNodes}
@@ -432,7 +422,6 @@ function ConvertFrom-JsonToClonePermissionService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO

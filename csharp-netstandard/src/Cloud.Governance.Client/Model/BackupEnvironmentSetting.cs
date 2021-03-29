@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BackupEnvironmentSetting" /> class.
         /// </summary>
-        /// <param name="isBackupSource">isBackupSource.</param>
-        /// <param name="isBackupDestination">isBackupDestination.</param>
+        /// <param name="isBackupSource">isBackupSource (default to false).</param>
+        /// <param name="isBackupDestination">isBackupDestination (default to false).</param>
         /// <param name="storagePolicy">storagePolicy.</param>
-        public BackupEnvironmentSetting(bool isBackupSource = default(bool), bool isBackupDestination = default(bool), GuidModel storagePolicy = default(GuidModel))
+        public BackupEnvironmentSetting(bool isBackupSource = false, bool isBackupDestination = false, GuidModel storagePolicy = default(GuidModel))
         {
             this.IsBackupSource = isBackupSource;
             this.IsBackupDestination = isBackupDestination;

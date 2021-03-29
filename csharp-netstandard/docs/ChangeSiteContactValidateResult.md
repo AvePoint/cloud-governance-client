@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **AdditionalAdministrators** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 
 

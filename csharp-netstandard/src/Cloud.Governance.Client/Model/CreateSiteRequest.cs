@@ -18,14 +18,15 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// CreateSiteRequest
+    /// Create collection requesst model
     /// </summary>
     [DataContract(Name = "CreateSiteRequest")]
     public partial class CreateSiteRequest : IEquatable<CreateSiteRequest>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Service type of request.
         /// </summary>
+        /// <value>Service type of request.</value>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public ServiceType? Type { get; set; }
 
@@ -38,8 +39,9 @@ namespace Cloud.Governance.Client.Model
             return false;
         }
         /// <summary>
-        /// Gets or Sets Status
+        /// Status of request.
         /// </summary>
+        /// <value>Status of request.</value>
         [DataMember(Name = "status", EmitDefaultValue = true)]
         public RequestStatus? Status { get; set; }
 
@@ -54,42 +56,43 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSiteRequest" /> class.
         /// </summary>
-        /// <param name="siteTitle">siteTitle.</param>
-        /// <param name="siteDescription">siteDescription.</param>
-        /// <param name="siteUrl">siteUrl.</param>
-        /// <param name="policyId">policyId.</param>
-        /// <param name="timeZone">timeZone.</param>
-        /// <param name="language">language.</param>
-        /// <param name="template">template.</param>
-        /// <param name="deploymentManagerPlanName">deploymentManagerPlanName.</param>
-        /// <param name="primaryAdmin">primaryAdmin.</param>
-        /// <param name="additionalAdmins">additionalAdmins.</param>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
-        /// <param name="siteDesign">siteDesign.</param>
-        /// <param name="teamSiteDesign">teamSiteDesign.</param>
-        /// <param name="classification">classification.</param>
-        /// <param name="hubSiteSettings">hubSiteSettings.</param>
-        /// <param name="userPermissions">userPermissions.</param>
-        /// <param name="groupPermissions">groupPermissions.</param>
-        /// <param name="yammerGroupSettings">yammerGroupSettings.</param>
-        /// <param name="leasePeriodSettings">leasePeriodSettings.</param>
-        /// <param name="multiGeoLocation">multiGeoLocation.</param>
-        /// <param name="inputTitle">inputTitle.</param>
-        /// <param name="id">id.</param>
-        /// <param name="serviceId">serviceId.</param>
-        /// <param name="department">department.</param>
-        /// <param name="summary">summary.</param>
-        /// <param name="notesToApprovers">notesToApprovers.</param>
-        /// <param name="questionnaireId">questionnaireId.</param>
-        /// <param name="metadatas">metadatas.</param>
-        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = default(int?), int language = default(int), string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        /// <param name="siteTitle">Site collection title.</param>
+        /// <param name="siteDescription">Site collection description.</param>
+        /// <param name="siteUrl">Site collection url information.</param>
+        /// <param name="policyId">Site collection policy id, you can use GetCreateSiteService api to get all the available policy ids and names..</param>
+        /// <param name="timeZone">Site collection time zone id, you can use GetCreateSiteService api to get all the available time zone ids and names. (default to 0).</param>
+        /// <param name="language">Site collection language id, you can use GetCreateSiteService api to get all the available language ids and names. (default to 0).</param>
+        /// <param name="template">Site collection template id, you can use GetCreateSiteService api to get all the available template ids and names..</param>
+        /// <param name="deploymentManagerPlanName">Deployment manager plan name, you can use GetCreateSiteService api to get all the available deployment manager plan names..</param>
+        /// <param name="primaryAdmin">Primary site collection administrator.</param>
+        /// <param name="additionalAdmins">Additional site collection administrator.</param>
+        /// <param name="primaryContact">Primary site collection contact.</param>
+        /// <param name="secondaryContact">Secondary site collection contact.</param>
+        /// <param name="siteDesign">Communication site design.</param>
+        /// <param name="teamSiteDesign">Team site design.</param>
+        /// <param name="classification">Communication site Classification.</param>
+        /// <param name="hubSiteSettings">Hub site setting.</param>
+        /// <param name="userPermissions">Granted user/group permission setting.</param>
+        /// <param name="groupPermissions">Site collection SharePoint group setting.</param>
+        /// <param name="yammerGroupSettings">Yammer group setting.</param>
+        /// <param name="leasePeriodSettings">Lease period setting.</param>
+        /// <param name="multiGeoLocation">Multi-geo lication.</param>
+        /// <param name="inputTitle">Site collection title without prefix and sufix when service enables constructing title.</param>
+        /// <param name="id">Id of request..</param>
+        /// <param name="serviceId">Id of service..</param>
+        /// <param name="department">Department of requester..</param>
+        /// <param name="summary">Summary of request..</param>
+        /// <param name="notesToApprovers">Notes to approvers..</param>
+        /// <param name="questionnaireId">Id of questionnaire.</param>
+        /// <param name="metadatas">Metadata of request..</param>
+        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = 0, int language = 0, string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SiteTitle = siteTitle;
             this.SiteDescription = siteDescription;
             this.SiteUrl = siteUrl;
             this.PolicyId = policyId;
-            this.TimeZone = timeZone;
+            // use default value if no "timeZone" provided
+            this.TimeZone = timeZone ?? 0;
             this.Language = language;
             this.Template = template;
             this.DeploymentManagerPlanName = deploymentManagerPlanName;
@@ -117,182 +120,212 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets SiteTitle
+        /// Site collection title
         /// </summary>
+        /// <value>Site collection title</value>
         [DataMember(Name = "siteTitle", EmitDefaultValue = true)]
         public string SiteTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets SiteDescription
+        /// Site collection description
         /// </summary>
+        /// <value>Site collection description</value>
         [DataMember(Name = "siteDescription", EmitDefaultValue = true)]
         public string SiteDescription { get; set; }
 
         /// <summary>
-        /// Gets or Sets SiteUrl
+        /// Site collection url information
         /// </summary>
+        /// <value>Site collection url information</value>
         [DataMember(Name = "siteUrl", EmitDefaultValue = true)]
         public SiteUrl SiteUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets PolicyId
+        /// Site collection policy id, you can use GetCreateSiteService api to get all the available policy ids and names.
         /// </summary>
+        /// <value>Site collection policy id, you can use GetCreateSiteService api to get all the available policy ids and names.</value>
         [DataMember(Name = "policyId", EmitDefaultValue = true)]
         public Guid? PolicyId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimeZone
+        /// Site collection time zone id, you can use GetCreateSiteService api to get all the available time zone ids and names.
         /// </summary>
+        /// <value>Site collection time zone id, you can use GetCreateSiteService api to get all the available time zone ids and names.</value>
         [DataMember(Name = "timeZone", EmitDefaultValue = true)]
         public int? TimeZone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Language
+        /// Site collection language id, you can use GetCreateSiteService api to get all the available language ids and names.
         /// </summary>
+        /// <value>Site collection language id, you can use GetCreateSiteService api to get all the available language ids and names.</value>
         [DataMember(Name = "language", EmitDefaultValue = false)]
         public int Language { get; set; }
 
         /// <summary>
-        /// Gets or Sets Template
+        /// Site collection template id, you can use GetCreateSiteService api to get all the available template ids and names.
         /// </summary>
+        /// <value>Site collection template id, you can use GetCreateSiteService api to get all the available template ids and names.</value>
         [DataMember(Name = "template", EmitDefaultValue = true)]
         public string Template { get; set; }
 
         /// <summary>
-        /// Gets or Sets DeploymentManagerPlanName
+        /// Deployment manager plan name, you can use GetCreateSiteService api to get all the available deployment manager plan names.
         /// </summary>
+        /// <value>Deployment manager plan name, you can use GetCreateSiteService api to get all the available deployment manager plan names.</value>
         [DataMember(Name = "deploymentManagerPlanName", EmitDefaultValue = true)]
         public string DeploymentManagerPlanName { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryAdmin
+        /// Primary site collection administrator
         /// </summary>
+        /// <value>Primary site collection administrator</value>
         [DataMember(Name = "primaryAdmin", EmitDefaultValue = true)]
         public ApiUser PrimaryAdmin { get; set; }
 
         /// <summary>
-        /// Gets or Sets AdditionalAdmins
+        /// Additional site collection administrator
         /// </summary>
+        /// <value>Additional site collection administrator</value>
         [DataMember(Name = "additionalAdmins", EmitDefaultValue = true)]
         public List<ApiUser> AdditionalAdmins { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// Primary site collection contact
         /// </summary>
+        /// <value>Primary site collection contact</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// Secondary site collection contact
         /// </summary>
+        /// <value>Secondary site collection contact</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SiteDesign
+        /// Communication site design
         /// </summary>
+        /// <value>Communication site design</value>
         [DataMember(Name = "siteDesign", EmitDefaultValue = true)]
         public StringModel SiteDesign { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamSiteDesign
+        /// Team site design
         /// </summary>
+        /// <value>Team site design</value>
         [DataMember(Name = "teamSiteDesign", EmitDefaultValue = true)]
         public string TeamSiteDesign { get; set; }
 
         /// <summary>
-        /// Gets or Sets Classification
+        /// Communication site Classification
         /// </summary>
+        /// <value>Communication site Classification</value>
         [DataMember(Name = "classification", EmitDefaultValue = true)]
         public string Classification { get; set; }
 
         /// <summary>
-        /// Gets or Sets HubSiteSettings
+        /// Hub site setting
         /// </summary>
+        /// <value>Hub site setting</value>
         [DataMember(Name = "hubSiteSettings", EmitDefaultValue = true)]
         public HubSiteSettings HubSiteSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserPermissions
+        /// Granted user/group permission setting
         /// </summary>
+        /// <value>Granted user/group permission setting</value>
         [DataMember(Name = "userPermissions", EmitDefaultValue = true)]
         public List<RequestUserWithPermissions> UserPermissions { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupPermissions
+        /// Site collection SharePoint group setting
         /// </summary>
+        /// <value>Site collection SharePoint group setting</value>
         [DataMember(Name = "groupPermissions", EmitDefaultValue = true)]
         public List<RequestGroupWithPermissions> GroupPermissions { get; set; }
 
         /// <summary>
-        /// Gets or Sets YammerGroupSettings
+        /// Yammer group setting
         /// </summary>
+        /// <value>Yammer group setting</value>
         [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = true)]
         public YammerGroupRequestSettings YammerGroupSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeasePeriodSettings
+        /// Lease period setting
         /// </summary>
+        /// <value>Lease period setting</value>
         [DataMember(Name = "leasePeriodSettings", EmitDefaultValue = true)]
         public SiteLeasePeriodRequestSettings LeasePeriodSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets MultiGeoLocation
+        /// Multi-geo lication
         /// </summary>
+        /// <value>Multi-geo lication</value>
         [DataMember(Name = "multiGeoLocation", EmitDefaultValue = true)]
         public GeoLocationBase MultiGeoLocation { get; set; }
 
         /// <summary>
-        /// Gets or Sets InputTitle
+        /// Site collection title without prefix and sufix when service enables constructing title
         /// </summary>
+        /// <value>Site collection title without prefix and sufix when service enables constructing title</value>
         [DataMember(Name = "inputTitle", EmitDefaultValue = true)]
         public string InputTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of request.
         /// </summary>
+        /// <value>Id of request.</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public Guid? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServiceId
+        /// Id of service.
         /// </summary>
+        /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Department
+        /// Department of requester.
         /// </summary>
+        /// <value>Department of requester.</value>
         [DataMember(Name = "department", EmitDefaultValue = true)]
         public string Department { get; set; }
 
         /// <summary>
-        /// Gets or Sets Summary
+        /// Summary of request.
         /// </summary>
+        /// <value>Summary of request.</value>
         [DataMember(Name = "summary", EmitDefaultValue = true)]
         public string Summary { get; set; }
 
         /// <summary>
-        /// Gets or Sets NotesToApprovers
+        /// Notes to approvers.
         /// </summary>
+        /// <value>Notes to approvers.</value>
         [DataMember(Name = "notesToApprovers", EmitDefaultValue = true)]
         public string NotesToApprovers { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuestionnaireId
+        /// Id of questionnaire
         /// </summary>
+        /// <value>Id of questionnaire</value>
         [DataMember(Name = "questionnaireId", EmitDefaultValue = true)]
         public Guid? QuestionnaireId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Metadatas
+        /// Metadata of request.
         /// </summary>
+        /// <value>Metadata of request.</value>
         [DataMember(Name = "metadatas", EmitDefaultValue = true)]
         public List<RequestMetadata> Metadatas { get; set; }
 
         /// <summary>
-        /// Gets or Sets TicketNumber
+        /// Ticket number of request.
         /// </summary>
+        /// <value>Ticket number of request.</value>
         [DataMember(Name = "ticketNumber", EmitDefaultValue = true)]
         public int? TicketNumber { get; private set; }
 
@@ -306,8 +339,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets TypeDescription
+        /// Service type description of request.
         /// </summary>
+        /// <value>Service type description of request.</value>
         [DataMember(Name = "typeDescription", EmitDefaultValue = true)]
         public string TypeDescription { get; private set; }
 
@@ -321,8 +355,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Requester
+        /// Requester display name.
         /// </summary>
+        /// <value>Requester display name.</value>
         [DataMember(Name = "requester", EmitDefaultValue = true)]
         public string Requester { get; private set; }
 
@@ -336,8 +371,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets RequesterLoginName
+        /// Requester login name.
         /// </summary>
+        /// <value>Requester login name.</value>
         [DataMember(Name = "requesterLoginName", EmitDefaultValue = true)]
         public string RequesterLoginName { get; private set; }
 
@@ -351,8 +387,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ProgressStatus
+        /// Progress status of request.
         /// </summary>
+        /// <value>Progress status of request.</value>
         [DataMember(Name = "progressStatus", EmitDefaultValue = false)]
         public int ProgressStatus { get; private set; }
 
@@ -366,8 +403,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ProgressStatusDescription
+        /// Progress status description of request.
         /// </summary>
+        /// <value>Progress status description of request.</value>
         [DataMember(Name = "progressStatusDescription", EmitDefaultValue = true)]
         public string ProgressStatusDescription { get; private set; }
 
@@ -381,8 +419,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets SubmittedTime
+        /// Submitted time of request.
         /// </summary>
+        /// <value>Submitted time of request.</value>
         [DataMember(Name = "submittedTime", EmitDefaultValue = true)]
         public DateTime? SubmittedTime { get; private set; }
 
@@ -396,8 +435,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets LastUpdated
+        /// Last updated time of request.
         /// </summary>
+        /// <value>Last updated time of request.</value>
         [DataMember(Name = "lastUpdated", EmitDefaultValue = true)]
         public DateTime? LastUpdated { get; private set; }
 
@@ -411,8 +451,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets CreatedTime
+        /// Created time of request.
         /// </summary>
+        /// <value>Created time of request.</value>
         [DataMember(Name = "createdTime", EmitDefaultValue = true)]
         public DateTime? CreatedTime { get; private set; }
 
@@ -426,8 +467,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets AssignTo
+        /// Task assignee of request.
         /// </summary>
+        /// <value>Task assignee of request.</value>
         [DataMember(Name = "assignTo", EmitDefaultValue = true)]
         public string AssignTo { get; private set; }
 
@@ -441,8 +483,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets FullPath
+        /// Object full path of request.
         /// </summary>
+        /// <value>Object full path of request.</value>
         [DataMember(Name = "fullPath", EmitDefaultValue = true)]
         public string FullPath { get; private set; }
 

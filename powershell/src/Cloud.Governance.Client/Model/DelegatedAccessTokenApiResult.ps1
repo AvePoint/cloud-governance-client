@@ -15,7 +15,7 @@ function New-DelegatedAccessTokenApiResult {
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsSuccess},
+        ${IsSuccess} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMsg}

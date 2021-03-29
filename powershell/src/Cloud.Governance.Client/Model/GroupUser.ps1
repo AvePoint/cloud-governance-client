@@ -12,10 +12,10 @@ function New-GroupUser {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnforce},
+        ${IsEnforce} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsHide},
+        ${IsHide} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -24,13 +24,16 @@ function New-GroupUser {
         ${LoginName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${IsExternalUser},
+        ${IsExternalUser} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGroup},
+        ${IsGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Email}
@@ -47,6 +50,7 @@ function New-GroupUser {
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
             "Email" = ${Email}
@@ -72,7 +76,7 @@ function ConvertFrom-JsonToGroupUser {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in GroupUser
-        $AllProperties = $("IsEnforce", "IsHide", "Id", "LoginName", "IsExternalUser", "DisplayName", "IsGroup", "IsLocalUser", "Email", "JobTitle", "PhysicalDeliveryOfficeName", "IsValid", "TenantId", "AdditionalData")
+        $AllProperties = $("IsEnforce", "IsHide", "Id", "LoginName", "IsExternalUser", "AzureUserType", "DisplayName", "IsGroup", "IsLocalUser", "Email", "JobTitle", "PhysicalDeliveryOfficeName", "IsValid", "TenantId", "AdditionalData", "ApiUserType")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -107,6 +111,12 @@ function ConvertFrom-JsonToGroupUser {
             $IsExternalUser = $null
         } else {
             $IsExternalUser = $JsonParameters.PSobject.Properties["IsExternalUser"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayName"))) { #optional property not found
@@ -163,12 +173,19 @@ function ConvertFrom-JsonToGroupUser {
             $AdditionalData = $JsonParameters.PSobject.Properties["AdditionalData"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApiUserType"))) { #optional property not found
+            $ApiUserType = $null
+        } else {
+            $ApiUserType = $JsonParameters.PSobject.Properties["ApiUserType"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "IsEnforce" = ${IsEnforce}
             "IsHide" = ${IsHide}
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
             "IsLocalUser" = ${IsLocalUser}
@@ -178,6 +195,7 @@ function ConvertFrom-JsonToGroupUser {
             "IsValid" = ${IsValid}
             "TenantId" = ${TenantId}
             "AdditionalData" = ${AdditionalData}
+            "ApiUserType" = ${ApiUserType}
         }
 
         return $PSO

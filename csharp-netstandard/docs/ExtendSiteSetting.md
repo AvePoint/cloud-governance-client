@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **bool** |  | [optional] 
+**IsEnabled** | **bool** |  | [optional] [default to false]
 **ExtendType** | **ExtendType** |  | [optional] 
-**Duration** | **int** |  | [optional] 
+**Duration** | **int** |  | [optional] [default to 0]
 **DurationType** | **ApiDurationType** |  | [optional] 
-**ConstantDuration** | **int** |  | [optional] 
+**ConstantDuration** | **int** |  | [optional] [default to 0]
 **ConstantDurationType** | **ApiDurationType** |  | [optional] 
 **ExtendBasedTime** | **DateTime** |  | [optional] 
 

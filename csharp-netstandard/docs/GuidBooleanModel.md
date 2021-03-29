@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool** |  | [optional] [default to false]
 **SeletedItem** | **Guid** |  | [optional] 
 **AllItems** | **List&lt;Guid&gt;** |  | [optional] 
 

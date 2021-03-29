@@ -27,11 +27,11 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="AzureAdMetadataSettings" /> class.
         /// </summary>
         /// <param name="office365Tenant">office365Tenant.</param>
-        /// <param name="useBuiltInProperty">useBuiltInProperty.</param>
-        /// <param name="value">value.</param>
+        /// <param name="useBuiltInProperty">useBuiltInProperty (default to false).</param>
+        /// <param name="value">Value of Lookup to SharePoint library/list metadata..</param>
         /// <param name="property">property.</param>
-        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess.</param>
-        public AzureAdMetadataSettings(GuidModel office365Tenant = default(GuidModel), bool useBuiltInProperty = default(bool), LookupValue value = default(LookupValue), string property = default(string), bool allowReferenceAsRoleInApprovalProcess = default(bool))
+        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess (default to false).</param>
+        public AzureAdMetadataSettings(GuidModel office365Tenant = default(GuidModel), bool useBuiltInProperty = false, LookupValue value = default(LookupValue), string property = default(string), bool allowReferenceAsRoleInApprovalProcess = false)
         {
             this.Office365Tenant = office365Tenant;
             this.UseBuiltInProperty = useBuiltInProperty;
@@ -53,8 +53,9 @@ namespace Cloud.Governance.Client.Model
         public bool UseBuiltInProperty { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Value of Lookup to SharePoint library/list metadata.
         /// </summary>
+        /// <value>Value of Lookup to SharePoint library/list metadata.</value>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public LookupValue Value { get; set; }
 

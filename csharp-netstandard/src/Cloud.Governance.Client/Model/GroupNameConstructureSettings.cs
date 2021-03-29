@@ -31,11 +31,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupNameConstructureSettings" /> class.
         /// </summary>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="assignBy">assignBy.</param>
         /// <param name="prefixs">prefixs.</param>
         /// <param name="suffixs">suffixs.</param>
-        public GroupNameConstructureSettings(bool enabled = default(bool), AssignBy? assignBy = default(AssignBy?), List<GroupConstructureRule> prefixs = default(List<GroupConstructureRule>), List<GroupConstructureRule> suffixs = default(List<GroupConstructureRule>))
+        public GroupNameConstructureSettings(bool enabled = false, AssignBy? assignBy = default(AssignBy?), List<GroupConstructureRule> prefixs = default(List<GroupConstructureRule>), List<GroupConstructureRule> suffixs = default(List<GroupConstructureRule>))
         {
             this.Enabled = enabled;
             this.AssignBy = assignBy;

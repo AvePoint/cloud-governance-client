@@ -12,13 +12,13 @@ function New-SharingEnabledUser {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsSharePointGroup},
+        ${IsSharePointGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGuestUser},
+        ${IsGuestUser} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGuestUserExistsInOrganization},
+        ${IsGuestUserExistsInOrganization} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -27,13 +27,16 @@ function New-SharingEnabledUser {
         ${LoginName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${IsExternalUser},
+        ${IsExternalUser} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGroup},
+        ${IsGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Email}
@@ -51,6 +54,7 @@ function New-SharingEnabledUser {
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
             "Email" = ${Email}
@@ -76,7 +80,7 @@ function ConvertFrom-JsonToSharingEnabledUser {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in SharingEnabledUser
-        $AllProperties = $("IsSharePointGroup", "IsGuestUser", "IsGuestUserExistsInOrganization", "Id", "LoginName", "IsExternalUser", "DisplayName", "IsGroup", "IsLocalUser", "Email", "JobTitle", "PhysicalDeliveryOfficeName", "IsValid", "TenantId", "AdditionalData")
+        $AllProperties = $("IsSharePointGroup", "IsGuestUser", "IsGuestUserExistsInOrganization", "Id", "LoginName", "IsExternalUser", "AzureUserType", "DisplayName", "IsGroup", "IsLocalUser", "Email", "JobTitle", "PhysicalDeliveryOfficeName", "IsValid", "TenantId", "AdditionalData", "ApiUserType")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -117,6 +121,12 @@ function ConvertFrom-JsonToSharingEnabledUser {
             $IsExternalUser = $null
         } else {
             $IsExternalUser = $JsonParameters.PSobject.Properties["IsExternalUser"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayName"))) { #optional property not found
@@ -173,6 +183,12 @@ function ConvertFrom-JsonToSharingEnabledUser {
             $AdditionalData = $JsonParameters.PSobject.Properties["AdditionalData"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApiUserType"))) { #optional property not found
+            $ApiUserType = $null
+        } else {
+            $ApiUserType = $JsonParameters.PSobject.Properties["ApiUserType"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "IsSharePointGroup" = ${IsSharePointGroup}
             "IsGuestUser" = ${IsGuestUser}
@@ -180,6 +196,7 @@ function ConvertFrom-JsonToSharingEnabledUser {
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
             "IsLocalUser" = ${IsLocalUser}
@@ -189,6 +206,7 @@ function ConvertFrom-JsonToSharingEnabledUser {
             "IsValid" = ${IsValid}
             "TenantId" = ${TenantId}
             "AdditionalData" = ${AdditionalData}
+            "ApiUserType" = ${ApiUserType}
         }
 
         return $PSO

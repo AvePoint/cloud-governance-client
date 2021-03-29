@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Uri** | **String** |  | [optional] 
-**IgnoreLock** | **Boolean** |  | [optional] 
-**IsEditTask** | **Boolean** |  | [optional] 
-**IsFromQuestionnaire** | **Boolean** |  | [optional] 
+**IgnoreLock** | **Boolean** |  | [optional] [default to $false]
+**IsEditTask** | **Boolean** |  | [optional] [default to $false]
+**IsFromQuestionnaire** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

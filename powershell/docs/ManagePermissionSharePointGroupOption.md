@@ -3,17 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnableCreateSPGroup** | **Boolean** |  | [optional] 
-**IsEnableDeleteSPGroup** | **Boolean** |  | [optional] 
-**IsEnableManageGroupSettings** | **Boolean** |  | [optional] 
-**IsEnableManageGroupMembers** | **Boolean** |  | [optional] 
+**IsEnableCreateSPGroup** | **Boolean** |  | [optional] [default to $false]
+**IsEnableDeleteSPGroup** | **Boolean** |  | [optional] [default to $false]
+**IsEnableManageGroupSettings** | **Boolean** |  | [optional] [default to $false]
+**IsEnableManageGroupMembers** | **Boolean** |  | [optional] [default to $false]
 **GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **GroupOwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] 
 **SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] 
 **SpGroupOptionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] 
-**IsAutoAcceptRequest** | **Boolean** |  | [optional] 
+**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] [default to $false]
+**IsAutoAcceptRequest** | **Boolean** |  | [optional] [default to $false]
 **SendMembershipRequestEmailAddress** | **String** |  | [optional] 
 **GroupRequestAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 

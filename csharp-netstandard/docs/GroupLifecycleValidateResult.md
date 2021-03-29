@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 **ExtendSetting** | [**ExtendGroupResult**](ExtendGroupResult.md) |  | [optional] 
 **ChangePolicySetting** | [**ChangeGroupPolicyResult**](ChangeGroupPolicyResult.md) |  | [optional] 
 **ChangeQuotaSetting** | [**ChangeGroupQuotaResult**](ChangeGroupQuotaResult.md) |  | [optional] 
-**EnableTeamCollaboration** | **bool** |  | [optional] 
+**EnableTeamCollaboration** | **bool** |  | [optional] [default to false]
 **GroupObjectType** | **GroupObjectType** |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 
 

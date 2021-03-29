@@ -31,11 +31,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeploymentManagerPlanSettings" /> class.
         /// </summary>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="plans">plans.</param>
         /// <param name="assignBy">assignBy.</param>
         /// <param name="_default">_default.</param>
-        public DeploymentManagerPlanSettings(bool enabled = default(bool), List<string> plans = default(List<string>), AssignBy? assignBy = default(AssignBy?), string _default = default(string))
+        public DeploymentManagerPlanSettings(bool enabled = false, List<string> plans = default(List<string>), AssignBy? assignBy = default(AssignBy?), string _default = default(string))
         {
             this.Enabled = enabled;
             this.Plans = plans;

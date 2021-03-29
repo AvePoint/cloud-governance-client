@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **Privacy** | **string** |  | [optional] 
 **AssociateHubTitle** | **string** |  | [optional] 
 **GeoLocation** | **string** |  | [optional] 
-**StorageLimit** | **long?** |  | [optional] 
+**StorageLimit** | **long?** |  | [optional] [default to 0]
 **StorageUsed** | **double?** |  | [optional] 
 **SiteSharing** | **string** |  | [optional] 
 **GroupSharing** | **string** |  | [optional] 

@@ -3,17 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnableCreateSPGroup** | **bool** |  | [optional] 
-**IsEnableDeleteSPGroup** | **bool** |  | [optional] 
-**IsEnableManageGroupSettings** | **bool** |  | [optional] 
-**IsEnableManageGroupMembers** | **bool** |  | [optional] 
+**IsEnableCreateSPGroup** | **bool** |  | [optional] [default to false]
+**IsEnableDeleteSPGroup** | **bool** |  | [optional] [default to false]
+**IsEnableManageGroupSettings** | **bool** |  | [optional] [default to false]
+**IsEnableManageGroupMembers** | **bool** |  | [optional] [default to false]
 **GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **GroupOwnerAssignBy** | **AssignBy** |  | [optional] 
 **SpGroupViewType** | **SPGroupViewOption** |  | [optional] 
 **SpGroupEditType** | **SPGroupEditOption** |  | [optional] 
 **SpGroupOptionAssignBy** | **AssignBy** |  | [optional] 
-**IsAllowJoinOrLeaveRequest** | **bool** |  | [optional] 
-**IsAutoAcceptRequest** | **bool** |  | [optional] 
+**IsAllowJoinOrLeaveRequest** | **bool** |  | [optional] [default to false]
+**IsAutoAcceptRequest** | **bool** |  | [optional] [default to false]
 **SendMembershipRequestEmailAddress** | **string** |  | [optional] 
 **GroupRequestAssignBy** | **AssignBy** |  | [optional] 
 

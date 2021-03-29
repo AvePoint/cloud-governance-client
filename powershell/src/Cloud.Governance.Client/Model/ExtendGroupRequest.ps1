@@ -12,16 +12,16 @@ function New-ExtendGroupRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ExtendDuration},
+        ${ExtendDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExtendDurationType},
+        ${ExtendDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},

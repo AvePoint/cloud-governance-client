@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LockSiteSetting" /> class.
         /// </summary>
-        /// <param name="enableLockAsNoAccess">enableLockAsNoAccess.</param>
-        /// <param name="enableLockAsReadonly">enableLockAsReadonly.</param>
-        public LockSiteSetting(bool enableLockAsNoAccess = default(bool), bool enableLockAsReadonly = default(bool))
+        /// <param name="enableLockAsNoAccess">enableLockAsNoAccess (default to false).</param>
+        /// <param name="enableLockAsReadonly">enableLockAsReadonly (default to false).</param>
+        public LockSiteSetting(bool enableLockAsNoAccess = false, bool enableLockAsReadonly = false)
         {
             this.EnableLockAsNoAccess = enableLockAsNoAccess;
             this.EnableLockAsReadonly = enableLockAsReadonly;

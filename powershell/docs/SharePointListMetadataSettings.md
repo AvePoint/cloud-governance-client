@@ -8,14 +8,14 @@ Name | Type | Description | Notes
 **PropertyType** | **String** |  | [optional] 
 **Property** | **String** |  | [optional] 
 **PropertyName** | **String** |  | [optional] 
-**IsAdditionalColumnEnabled** | **Boolean** |  | [optional] 
+**IsAdditionalColumnEnabled** | **Boolean** |  | [optional] [default to $false]
 **MatchedMetadataId** | **String** |  | [optional] 
 **MatchedMetadataName** | **String** |  | [optional] 
 **AdditionalColumn** | **String** |  | [optional] 
 **AdditionalColumnType** | **String** |  | [optional] 
 **AdditionalColumnName** | **String** |  | [optional] 
-**Value** | [**LookupListValue**](LookupListValue.md) |  | [optional] 
-**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] 
+**Value** | [**LookupListValue**](LookupListValue.md) | Value of Lookup User Profile or Azure Ad metadata. | [optional] 
+**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

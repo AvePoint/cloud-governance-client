@@ -1,0 +1,6 @@
+{
+  "ServiceName": "S_MP",
+  "ObjectUrl": "https://contoso.sharepoint.com/sites/_pscrea 0/Shared Documents/customlock.sppkg",
+  "GrantUserLoginName": "user@example.com",
+  "PermissionLevels": "Design;Contribute"
+}

@@ -51,25 +51,25 @@ function New-ChangeGroupSettingRequest {
         ${GroupMembers},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsDynamicMembership},
+        ${IsDynamicMembership} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${DynamicMembershipRules},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledSubscribe},
+        ${EnabledSubscribe} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${OriginalEnabledSubscribe},
+        ${OriginalEnabledSubscribe} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledOutsideSender},
+        ${EnabledOutsideSender} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${OriginalEnabledOutsideSender},
+        ${OriginalEnabledOutsideSender} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${HubSiteActionType},
+        ${HubSiteActionType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AssociateHubSiteId},
@@ -90,10 +90,10 @@ function New-ChangeGroupSettingRequest {
         ${OriginalSensitivity},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTeams},
+        ${EnableTeams} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${OriginalEnableTeams},
+        ${OriginalEnableTeams} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${GroupMetadatas},
@@ -102,13 +102,13 @@ function New-ChangeGroupSettingRequest {
         ${OriginalGroupMetadata},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ChangedDynamicGroupType},
+        ${ChangedDynamicGroupType} = "Manually",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${YammerGroupInfo},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${NetworkId},
@@ -117,7 +117,7 @@ function New-ChangeGroupSettingRequest {
         ${GroupObjectId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTeamCollaboration},
+        ${EnableTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},

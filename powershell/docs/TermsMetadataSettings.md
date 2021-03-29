@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowMultiple** | **Boolean** |  | [optional] 
+**AllowMultiple** | **Boolean** |  | [optional] [default to $false]
 **AdminCenter** | **String** |  | [optional] 
 **Value** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
 **TermStore** | [**GuidModel**](GuidModel.md) |  | [optional] 
@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **TermSet** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **Scope** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **Tree** | [**TermTreeModel**](TermTreeModel.md) |  | [optional] 
-**IsValid** | **Boolean** |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

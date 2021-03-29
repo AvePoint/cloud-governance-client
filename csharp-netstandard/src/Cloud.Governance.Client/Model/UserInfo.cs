@@ -39,44 +39,50 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "isExternalUser", EmitDefaultValue = false)]
         public ExternalUserType? IsExternalUser { get; set; }
         /// <summary>
+        /// Gets or Sets PrincipalType
+        /// </summary>
+        [DataMember(Name = "principalType", EmitDefaultValue = false)]
+        public PrincipalType? PrincipalType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="UserInfo" /> class.
         /// </summary>
         /// <param name="identityName">identityName.</param>
         /// <param name="userDisplayName">userDisplayName.</param>
-        /// <param name="domainGroup">domainGroup.</param>
+        /// <param name="domainGroup">domainGroup (default to false).</param>
         /// <param name="department">department.</param>
         /// <param name="mobilePhone">mobilePhone.</param>
         /// <param name="manager">manager.</param>
         /// <param name="permission">permission.</param>
-        /// <param name="isDeleted">isDeleted.</param>
+        /// <param name="isDeleted">isDeleted (default to false).</param>
         /// <param name="securityToken">securityToken.</param>
-        /// <param name="userType">userType.</param>
+        /// <param name="userType">userType (default to 0).</param>
         /// <param name="azureUserType">azureUserType.</param>
-        /// <param name="legalPerson">legalPerson.</param>
+        /// <param name="legalPerson">legalPerson (default to false).</param>
         /// <param name="authenticationType">authenticationType.</param>
         /// <param name="adminCenterUrl">adminCenterUrl.</param>
         /// <param name="inviteType">inviteType.</param>
         /// <param name="type">type.</param>
-        /// <param name="isRegisteredAosGroup">isRegisteredAosGroup.</param>
+        /// <param name="isRegisteredAosGroup">isRegisteredAosGroup (default to false).</param>
         /// <param name="isExternalUser">isExternalUser.</param>
-        /// <param name="isAPIExceptional">isAPIExceptional.</param>
+        /// <param name="isAPIExceptional">isAPIExceptional (default to false).</param>
         /// <param name="tenantId">tenantId.</param>
         /// <param name="objectId">objectId.</param>
-        /// <param name="version">version.</param>
+        /// <param name="version">version (default to 0).</param>
         /// <param name="jobTitle">jobTitle.</param>
         /// <param name="usageLocation">usageLocation.</param>
         /// <param name="physicalDeliveryOfficeName">physicalDeliveryOfficeName.</param>
-        /// <param name="isOtherTenantUser">isOtherTenantUser.</param>
+        /// <param name="isOtherTenantUser">isOtherTenantUser (default to false).</param>
         /// <param name="networkId">networkId.</param>
-        /// <param name="isValidateByProfile">isValidateByProfile.</param>
+        /// <param name="isValidateByProfile">isValidateByProfile (default to false).</param>
         /// <param name="proxyAddresses">proxyAddresses.</param>
-        /// <param name="id">id.</param>
+        /// <param name="principalType">principalType.</param>
+        /// <param name="id">id (default to 0).</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="title">title.</param>
         /// <param name="email">email.</param>
-        /// <param name="isValid">isValid.</param>
-        /// <param name="existInAOS">existInAOS.</param>
-        public UserInfo(string identityName = default(string), string userDisplayName = default(string), bool domainGroup = default(bool), string department = default(string), string mobilePhone = default(string), string manager = default(string), string permission = default(string), bool isDeleted = default(bool), string securityToken = default(string), int userType = default(int), string azureUserType = default(string), bool legalPerson = default(bool), AuthenticationType? authenticationType = default(AuthenticationType?), string adminCenterUrl = default(string), InviteType? inviteType = default(InviteType?), string type = default(string), bool isRegisteredAosGroup = default(bool), ExternalUserType? isExternalUser = default(ExternalUserType?), bool isAPIExceptional = default(bool), string tenantId = default(string), string objectId = default(string), int version = default(int), string jobTitle = default(string), string usageLocation = default(string), string physicalDeliveryOfficeName = default(string), bool isOtherTenantUser = default(bool), string networkId = default(string), bool isValidateByProfile = default(bool), List<string> proxyAddresses = default(List<string>), int id = default(int), string displayName = default(string), string title = default(string), string email = default(string), bool isValid = default(bool), bool existInAOS = default(bool))
+        /// <param name="isValid">isValid (default to false).</param>
+        /// <param name="existInAOS">existInAOS (default to false).</param>
+        public UserInfo(string identityName = default(string), string userDisplayName = default(string), bool domainGroup = false, string department = default(string), string mobilePhone = default(string), string manager = default(string), string permission = default(string), bool isDeleted = false, string securityToken = default(string), int userType = 0, string azureUserType = default(string), bool legalPerson = false, AuthenticationType? authenticationType = default(AuthenticationType?), string adminCenterUrl = default(string), InviteType? inviteType = default(InviteType?), string type = default(string), bool isRegisteredAosGroup = false, ExternalUserType? isExternalUser = default(ExternalUserType?), bool isAPIExceptional = false, string tenantId = default(string), string objectId = default(string), int version = 0, string jobTitle = default(string), string usageLocation = default(string), string physicalDeliveryOfficeName = default(string), bool isOtherTenantUser = false, string networkId = default(string), bool isValidateByProfile = false, List<string> proxyAddresses = default(List<string>), PrincipalType? principalType = default(PrincipalType?), int id = 0, string displayName = default(string), string title = default(string), string email = default(string), bool isValid = false, bool existInAOS = false)
         {
             this.IdentityName = identityName;
             this.UserDisplayName = userDisplayName;
@@ -107,6 +113,7 @@ namespace Cloud.Governance.Client.Model
             this.NetworkId = networkId;
             this.IsValidateByProfile = isValidateByProfile;
             this.ProxyAddresses = proxyAddresses;
+            this.PrincipalType = principalType;
             this.Id = id;
             this.DisplayName = displayName;
             this.Title = title;
@@ -344,6 +351,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  NetworkId: ").Append(NetworkId).Append("\n");
             sb.Append("  IsValidateByProfile: ").Append(IsValidateByProfile).Append("\n");
             sb.Append("  ProxyAddresses: ").Append(ProxyAddresses).Append("\n");
+            sb.Append("  PrincipalType: ").Append(PrincipalType).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -519,6 +527,10 @@ namespace Cloud.Governance.Client.Model
                     this.ProxyAddresses.SequenceEqual(input.ProxyAddresses)
                 ) && 
                 (
+                    this.PrincipalType == input.PrincipalType ||
+                    this.PrincipalType.Equals(input.PrincipalType)
+                ) && 
+                (
                     this.Id == input.Id ||
                     this.Id.Equals(input.Id)
                 ) && 
@@ -602,6 +614,7 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.IsValidateByProfile.GetHashCode();
                 if (this.ProxyAddresses != null)
                     hashCode = hashCode * 59 + this.ProxyAddresses.GetHashCode();
+                hashCode = hashCode * 59 + this.PrincipalType.GetHashCode();
                 hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();

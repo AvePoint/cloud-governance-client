@@ -15,10 +15,10 @@ function New-GroupLifecycleService {
         ${TenantId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "Delete",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${NetworkId},
@@ -30,16 +30,16 @@ function New-GroupLifecycleService {
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ChangePolicyAssignBy},
+        ${ChangePolicyAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DepartmentAssignBy},
+        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HideRequestSummary},
+        ${HideRequestSummary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -51,13 +51,13 @@ function New-GroupLifecycleService {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps},
+        ${LoadDepartmentFromUps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Departments},
@@ -69,13 +69,13 @@ function New-GroupLifecycleService {
         ${ServiceAdminContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ApproversContainManagerRole},
+        ${ApproversContainManagerRole} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowServiceInCatalog},
+        ${ShowServiceInCatalog} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CustomActions},
@@ -84,13 +84,10 @@ function New-GroupLifecycleService {
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CategoryId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Details}
+        ${CategoryId}
     )
 
     Process {
@@ -125,7 +122,6 @@ function New-GroupLifecycleService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO
@@ -148,7 +144,7 @@ function ConvertFrom-JsonToGroupLifecycleService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in GroupLifecycleService
-        $AllProperties = $("TenantId", "Action", "GroupObjectType", "NetworkId", "ScopePeoplePickerFilterProfileId", "RequestTemplate", "ChangePolicyAssignBy", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "Details")
+        $AllProperties = $("TenantId", "Action", "GroupObjectType", "NetworkId", "ScopePeoplePickerFilterProfileId", "RequestTemplate", "ChangePolicyAssignBy", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -311,12 +307,6 @@ function ConvertFrom-JsonToGroupLifecycleService {
             $CategoryId = $JsonParameters.PSobject.Properties["CategoryId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Details"))) { #optional property not found
-            $Details = $null
-        } else {
-            $Details = $JsonParameters.PSobject.Properties["Details"].value
-        }
-
         $PSO = [PSCustomObject]@{
             "TenantId" = ${TenantId}
             "Action" = ${Action}
@@ -344,7 +334,6 @@ function ConvertFrom-JsonToGroupLifecycleService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO

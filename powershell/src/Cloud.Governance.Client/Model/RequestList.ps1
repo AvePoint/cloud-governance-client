@@ -21,22 +21,22 @@ function New-RequestList {
         ${ServiceName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ServiceType},
+        ${ServiceType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ServiceTypeDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${TicketNumber},
+        ${TicketNumber} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ProcessStatus},
+        ${ProcessStatus} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${StatusDescription},
@@ -45,7 +45,7 @@ function New-RequestList {
         ${Modified},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${SubmitStatus},
+        ${SubmitStatus} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Assigned},
@@ -54,7 +54,7 @@ function New-RequestList {
         ${ServiceAdmin},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledCopy},
+        ${EnabledCopy} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${QuestionnaireId}

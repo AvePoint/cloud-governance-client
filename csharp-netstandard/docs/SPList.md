@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **Title** | **string** |  | [optional] 
 **Url** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
-**IsLibrary** | **bool** |  | [optional] 
-**IsOnQuickLaunch** | **bool** |  | [optional] 
-**IsEnableModeration** | **bool** |  | [optional] 
-**IsEnableVersioning** | **bool** |  | [optional] 
-**IsEnableMinorVersion** | **bool** |  | [optional] 
-**MajorVersionLimit** | **int** |  | [optional] 
-**MajorWithMinorVersionsLimit** | **int** |  | [optional] 
+**IsLibrary** | **bool** |  | [optional] [default to false]
+**IsOnQuickLaunch** | **bool** |  | [optional] [default to false]
+**IsEnableModeration** | **bool** |  | [optional] [default to false]
+**IsEnableVersioning** | **bool** |  | [optional] [default to false]
+**IsEnableMinorVersion** | **bool** |  | [optional] [default to false]
+**MajorVersionLimit** | **int** |  | [optional] [default to 0]
+**MajorWithMinorVersionsLimit** | **int** |  | [optional] [default to 0]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

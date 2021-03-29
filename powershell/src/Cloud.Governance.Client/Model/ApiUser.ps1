@@ -18,13 +18,16 @@ function New-ApiUser {
         ${LoginName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${IsExternalUser},
+        ${IsExternalUser} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGroup},
+        ${IsGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Email}
@@ -39,6 +42,7 @@ function New-ApiUser {
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
             "Email" = ${Email}
@@ -64,7 +68,7 @@ function ConvertFrom-JsonToApiUser {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApiUser
-        $AllProperties = $("Id", "LoginName", "IsExternalUser", "DisplayName", "IsGroup", "IsLocalUser", "Email", "JobTitle", "PhysicalDeliveryOfficeName", "IsValid", "TenantId", "AdditionalData")
+        $AllProperties = $("Id", "LoginName", "IsExternalUser", "AzureUserType", "DisplayName", "IsGroup", "IsLocalUser", "Email", "JobTitle", "PhysicalDeliveryOfficeName", "IsValid", "TenantId", "AdditionalData", "ApiUserType")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -87,6 +91,12 @@ function ConvertFrom-JsonToApiUser {
             $IsExternalUser = $null
         } else {
             $IsExternalUser = $JsonParameters.PSobject.Properties["IsExternalUser"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayName"))) { #optional property not found
@@ -143,10 +153,17 @@ function ConvertFrom-JsonToApiUser {
             $AdditionalData = $JsonParameters.PSobject.Properties["AdditionalData"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApiUserType"))) { #optional property not found
+            $ApiUserType = $null
+        } else {
+            $ApiUserType = $JsonParameters.PSobject.Properties["ApiUserType"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
+            "AzureUserType" = ${AzureUserType}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
             "IsLocalUser" = ${IsLocalUser}
@@ -156,6 +173,7 @@ function ConvertFrom-JsonToApiUser {
             "IsValid" = ${IsValid}
             "TenantId" = ${TenantId}
             "AdditionalData" = ${AdditionalData}
+            "ApiUserType" = ${ApiUserType}
         }
 
         return $PSO

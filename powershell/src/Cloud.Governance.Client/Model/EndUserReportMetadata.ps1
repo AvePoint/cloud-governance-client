@@ -24,7 +24,7 @@ function New-EndUserReportMetadata {
         ${DisplayValue},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type}
+        ${Type} = "None"
     )
 
     Process {

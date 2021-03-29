@@ -27,8 +27,8 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="UserMetadataSettings" /> class.
         /// </summary>
         /// <param name="value">value.</param>
-        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess.</param>
-        public UserMetadataSettings(List<ApiUser> value = default(List<ApiUser>), bool allowReferenceAsRoleInApprovalProcess = default(bool))
+        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess (default to false).</param>
+        public UserMetadataSettings(List<ApiUser> value = default(List<ApiUser>), bool allowReferenceAsRoleInApprovalProcess = false)
         {
             this.Value = value;
             this.AllowReferenceAsRoleInApprovalProcess = allowReferenceAsRoleInApprovalProcess;

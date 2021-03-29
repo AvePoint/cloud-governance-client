@@ -21,19 +21,19 @@ function New-ServiceGridModel {
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ServiceType},
+        ${ServiceType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ServiceTypeDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${StatusDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Language},
+        ${Language} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${ModifiedTime},

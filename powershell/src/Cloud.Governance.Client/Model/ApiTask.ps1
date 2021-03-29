@@ -27,13 +27,13 @@ function New-ApiTask {
         ${RequestGuid},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Running",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${StatusDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ServiceType},
+        ${ServiceType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ServiceTypeDescription},
@@ -51,13 +51,13 @@ function New-ApiTask {
         ${LastModifiedTime},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TaskType},
+        ${TaskType} = "ApprovalTask",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowReassign},
+        ${AllowReassign} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowEdit},
+        ${AllowEdit} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${DynamicActions}

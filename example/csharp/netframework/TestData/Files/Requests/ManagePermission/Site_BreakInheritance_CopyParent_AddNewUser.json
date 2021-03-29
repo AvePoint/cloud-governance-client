@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ManagePermission_Service",
+  "ObjectUrl": "https://contoso.sharepoint.com/sites/ApiSampleSite/subSite",
+  "GrantUserLoginName": "user@example.com",
+  "PermissionLevels": "Design;Contribute"
+}

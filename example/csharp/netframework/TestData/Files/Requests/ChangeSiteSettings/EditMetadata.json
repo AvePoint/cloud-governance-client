@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ChangeSiteSettings_Metadata_Service",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/MetadataTest21",
+  "SingleLineMetadataName": "Api_Sample_SingleLine",
+  "SingleLineMetadataValue": "Single Line"
+}

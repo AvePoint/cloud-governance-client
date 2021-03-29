@@ -41,34 +41,33 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeSiteSettingService" /> class.
         /// </summary>
-        /// <param name="enableChangeTitle">enableChangeTitle.</param>
-        /// <param name="enableChangeDescription">enableChangeDescription.</param>
+        /// <param name="enableChangeTitle">enableChangeTitle (default to false).</param>
+        /// <param name="enableChangeDescription">enableChangeDescription (default to false).</param>
         /// <param name="changeMetadataSettings">changeMetadataSettings.</param>
         /// <param name="deploymentManagerPlanSettings">deploymentManagerPlanSettings.</param>
-        /// <param name="enableChangeHubSite">enableChangeHubSite.</param>
+        /// <param name="enableChangeHubSite">enableChangeHubSite (default to false).</param>
         /// <param name="scopeSettings">scopeSettings.</param>
         /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="hideRequestSummary">hideRequestSummary.</param>
+        /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
         /// <param name="department">department.</param>
-        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps.</param>
+        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps (default to false).</param>
         /// <param name="departments">departments.</param>
         /// <param name="serviceContact">serviceContact.</param>
         /// <param name="serviceAdminContact">serviceAdminContact.</param>
-        /// <param name="approversContainManagerRole">approversContainManagerRole.</param>
+        /// <param name="approversContainManagerRole">approversContainManagerRole (default to false).</param>
         /// <param name="status">status.</param>
-        /// <param name="showServiceInCatalog">showServiceInCatalog.</param>
+        /// <param name="showServiceInCatalog">showServiceInCatalog (default to false).</param>
         /// <param name="customActions">customActions.</param>
         /// <param name="approvalProcessId">approvalProcessId.</param>
-        /// <param name="languageId">languageId.</param>
+        /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        /// <param name="details">details.</param>
-        public ChangeSiteSettingService(bool enableChangeTitle = default(bool), bool enableChangeDescription = default(bool), ChangeMetadataActionSetting changeMetadataSettings = default(ChangeMetadataActionSetting), DpmServiceSetting deploymentManagerPlanSettings = default(DpmServiceSetting), bool enableChangeHubSite = default(bool), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), ChangeSiteSettingRequest requestTemplate = default(ChangeSiteSettingRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
+        public ChangeSiteSettingService(bool enableChangeTitle = false, bool enableChangeDescription = false, ChangeMetadataActionSetting changeMetadataSettings = default(ChangeMetadataActionSetting), DpmServiceSetting deploymentManagerPlanSettings = default(DpmServiceSetting), bool enableChangeHubSite = false, ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), ChangeSiteSettingRequest requestTemplate = default(ChangeSiteSettingRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = false, List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.EnableChangeTitle = enableChangeTitle;
             this.EnableChangeDescription = enableChangeDescription;
@@ -96,7 +95,6 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
-            this.Details = details;
         }
 
         /// <summary>
@@ -238,12 +236,6 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Details
-        /// </summary>
-        [DataMember(Name = "details", EmitDefaultValue = true)]
-        public string Details { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -277,7 +269,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
-            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -432,11 +423,6 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
-                ) && 
-                (
-                    this.Details == input.Details ||
-                    (this.Details != null &&
-                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -490,8 +476,6 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
-                if (this.Details != null)
-                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

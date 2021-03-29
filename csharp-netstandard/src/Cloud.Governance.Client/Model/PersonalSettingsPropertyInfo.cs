@@ -33,8 +33,8 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="theme">theme.</param>
         /// <param name="selectedLanguages">selectedLanguages.</param>
-        /// <param name="isUsingBrowserLanguage">isUsingBrowserLanguage.</param>
-        public PersonalSettingsPropertyInfo(ThemeType? theme = default(ThemeType?), List<int> selectedLanguages = default(List<int>), bool isUsingBrowserLanguage = default(bool))
+        /// <param name="isUsingBrowserLanguage">isUsingBrowserLanguage (default to false).</param>
+        public PersonalSettingsPropertyInfo(ThemeType? theme = default(ThemeType?), List<int> selectedLanguages = default(List<int>), bool isUsingBrowserLanguage = false)
         {
             this.Theme = theme;
             this.SelectedLanguages = selectedLanguages;

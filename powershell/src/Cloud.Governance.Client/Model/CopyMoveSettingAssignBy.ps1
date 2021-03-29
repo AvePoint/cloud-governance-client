@@ -12,13 +12,13 @@ function New-CopyMoveSettingAssignBy {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ConfigurationAssignBy},
+        ${ConfigurationAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SecurityAssignBy},
+        ${SecurityAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ContentAssignBy}
+        ${ContentAssignBy} = "BusinessUser"
     )
 
     Process {

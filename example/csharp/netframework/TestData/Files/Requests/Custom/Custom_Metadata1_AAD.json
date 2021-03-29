@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_CustomService",
+  "AzureAdMetadataName": "Api_Sample_AAD",
+  "AzureAdMetadataLookupUser": "user@example.com"
+}

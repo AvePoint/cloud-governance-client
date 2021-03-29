@@ -4,11 +4,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
-**IdInSharePoint** | **Int32** |  | [optional] 
+**IdInSharePoint** | **Int32** |  | [optional] [default to 0]
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] [readonly] 
-**IsExcluded** | **Boolean** |  | [optional] [readonly] 
-**Type** | **Int32** |  | [optional] [readonly] 
+**IsExcluded** | **Boolean** |  | [optional] [readonly] [default to $false]
+**Type** | **Int32** |  | [optional] [readonly] [default to 0]
 
 ## Examples
 

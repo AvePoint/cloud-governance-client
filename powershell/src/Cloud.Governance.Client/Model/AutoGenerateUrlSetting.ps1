@@ -12,7 +12,7 @@ function New-AutoGenerateUrlSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GenerateUrlType},
+        ${GenerateUrlType} = "SequentialNumber",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${SequentialNumberingSettings},

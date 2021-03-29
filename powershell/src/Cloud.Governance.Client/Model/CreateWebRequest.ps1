@@ -48,13 +48,13 @@ function New-CreateWebRequest {
         ${YammerGroupSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsOnQuickLaunch},
+        ${IsOnQuickLaunch} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsOnTopLinkBar},
+        ${IsOnTopLinkBar} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsInheritance},
+        ${IsInheritance} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DeploymentManagerPlanName},

@@ -21,19 +21,19 @@ function New-GroupLifecycleValidateResult {
         ${ChangeQuotaSetting},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTeamCollaboration},
+        ${EnableTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMessage},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MessageCode}
+        ${MessageCode} = "None"
     )
 
     Process {

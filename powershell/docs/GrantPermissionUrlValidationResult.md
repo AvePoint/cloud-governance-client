@@ -4,13 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] 
-**EnableShareAnnoymousLink** | **Boolean** |  | [optional] 
+**EnableShareAnnoymousLink** | **Boolean** |  | [optional] [default to $false]
 **Object** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] 
 **SpPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] 
 **SpGroups** | [**GrantPermissionGroup[]**](GrantPermissionGroup.md) |  | [optional] 
-**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] 
+**AllowBreakPermissionInheritance** | **Boolean** |  | [optional] [default to $false]
 **UserMetadata** | [**System.Collections.Hashtable**](UserInfo.md) |  | [optional] 
-**IsValid** | **Boolean** |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 

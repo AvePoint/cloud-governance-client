@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **SiteDescription** | **Object** |  | [optional] 
 **Requester** | **Object** |  | [optional] 
 **IsTeam** | **Object** |  | [optional] 
+**IsYammer** | **Object** |  | [optional] 
 **GroupOwnersStr** | **Object** |  | [optional] 
 **TenantId** | **Object** |  | [optional] 
 

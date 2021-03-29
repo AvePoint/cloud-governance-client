@@ -18,21 +18,22 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// WorkspaceIdTypeModel
+    /// id and type of workspace
     /// </summary>
     [DataContract(Name = "WorkspaceIdTypeModel")]
     public partial class WorkspaceIdTypeModel : IEquatable<WorkspaceIdTypeModel>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets WorkspaceType
+        /// workspace type
         /// </summary>
+        /// <value>workspace type</value>
         [DataMember(Name = "workspaceType", EmitDefaultValue = false)]
         public WorkspaceType? WorkspaceType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceIdTypeModel" /> class.
         /// </summary>
-        /// <param name="objectId">objectId.</param>
-        /// <param name="workspaceType">workspaceType.</param>
+        /// <param name="objectId">workspace id.</param>
+        /// <param name="workspaceType">workspace type.</param>
         public WorkspaceIdTypeModel(Guid objectId = default(Guid), WorkspaceType? workspaceType = default(WorkspaceType?))
         {
             this.ObjectId = objectId;
@@ -40,8 +41,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ObjectId
+        /// workspace id
         /// </summary>
+        /// <value>workspace id</value>
         [DataMember(Name = "objectId", EmitDefaultValue = false)]
         public Guid ObjectId { get; set; }
 

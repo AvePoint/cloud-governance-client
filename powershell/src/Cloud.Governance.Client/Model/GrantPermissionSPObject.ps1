@@ -27,10 +27,10 @@ function New-GrantPermissionSPObject {
         ${TopInheritUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${InheritNodeType},
+        ${InheritNodeType} = "Container",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsInheritedPermission},
+        ${IsInheritedPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -42,7 +42,7 @@ function New-GrantPermissionSPObject {
         ${FullUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type}
+        ${Type} = "Container"
     )
 
     Process {

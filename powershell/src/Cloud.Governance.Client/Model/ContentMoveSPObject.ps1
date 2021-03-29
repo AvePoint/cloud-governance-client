@@ -27,7 +27,7 @@ function New-ContentMoveSPObject {
         ${FullUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type}
+        ${Type} = "Container"
     )
 
     Process {

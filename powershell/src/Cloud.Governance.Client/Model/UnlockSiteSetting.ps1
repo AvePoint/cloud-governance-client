@@ -12,10 +12,10 @@ function New-UnlockSiteSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsExpired},
+        ${IsExpired} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsExtendEnabled}
+        ${IsExtendEnabled} = $false
     )
 
     Process {

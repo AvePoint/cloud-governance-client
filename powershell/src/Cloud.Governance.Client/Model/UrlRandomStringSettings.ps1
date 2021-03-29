@@ -15,10 +15,10 @@ function New-UrlRandomStringSettings {
         ${Prefix},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${MaxLength},
+        ${MaxLength} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${MinLength}
+        ${MinLength} = 0
     )
 
     Process {

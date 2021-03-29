@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **UnlockSetting** | [**UnlockSiteSetting**](UnlockSiteSetting.md) |  | [optional] 
 **ChangePolicySetting** | [**ChangeSitePolicySetting**](ChangeSitePolicySetting.md) |  | [optional] 
 **LockSetting** | [**LockSiteSetting**](LockSiteSetting.md) |  | [optional] 
-**IsValid** | **Boolean** |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 

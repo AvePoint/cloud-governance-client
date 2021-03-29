@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Tenant** | **String** |  | [optional] [readonly] 
-**Property** | **String** |  | [optional] [readonly] 
-**TargetUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**UserPropertyValue** | **String** |  | [optional] 
-**UserPropertyDisplayValue** | **String** |  | [optional] 
+**Tenant** | **String** | Id of Office365 tenant. | [optional] [readonly] 
+**Property** | **String** | Name of user property. | [optional] [readonly] 
+**TargetUser** | [**ApiUser**](ApiUser.md) | Lookup user | [optional] 
+**UserPropertyValue** | **String** | Property value of lookup user | [optional] 
+**UserPropertyDisplayValue** | **String** | Property display value of lookup user | [optional] 
 
 ## Examples
 

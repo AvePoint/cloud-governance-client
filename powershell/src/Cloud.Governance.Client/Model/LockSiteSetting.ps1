@@ -12,10 +12,10 @@ function New-LockSiteSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableLockAsNoAccess},
+        ${EnableLockAsNoAccess} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableLockAsReadonly}
+        ${EnableLockAsReadonly} = $false
     )
 
     Process {

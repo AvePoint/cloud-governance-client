@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LeaseInterval** | **Int32** |  | [optional] 
+**LeaseInterval** | **Int32** |  | [optional] [default to 0]
 **LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**LeaseWarningInterval** | **Int32** |  | [optional] 
+**LeaseWarningInterval** | **Int32** |  | [optional] [default to 0]
 **LeaseWarningDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 
 ## Examples

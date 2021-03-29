@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Value** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] 
+**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

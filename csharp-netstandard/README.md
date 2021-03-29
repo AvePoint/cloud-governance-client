@@ -77,6 +77,8 @@ Class | Method | HTTP request | Description
 *AuthApi* | [**RefreshUserAccessToken**](docs/AuthApi.md#refreshuseraccesstoken) | **POST** /auth/token/refresh | refresh user access token
 *AuthAdminApi* | [**DeleteTokenCache**](docs/AuthAdminApi.md#deletetokencache) | **DELETE** /admin/auth/token/cache | delete token cache
 *GuestUsersAdminApi* | [**GetManagedGuestUsers**](docs/GuestUsersAdminApi.md#getmanagedguestusers) | **GET** /admin/directory/guestusers | get all managed guest users
+*JobsAdminApi* | [**GetJobs**](docs/JobsAdminApi.md#getjobs) | **GET** /admin/jobs | Get worker jobs
+*JobsAdminApi* | [**GetRelatedJobs**](docs/JobsAdminApi.md#getrelatedjobs) | **GET** /admin/jobs/relations | Get related worker job
 *MetadataAdminApi* | [**GetAllMetadata**](docs/MetadataAdminApi.md#getallmetadata) | **GET** /admin/metadata | get all metadata
 *MetadataAdminApi* | [**GetSingleMetadataById**](docs/MetadataAdminApi.md#getsinglemetadatabyid) | **GET** /admin/metadata/{id} | Get metadata by id
 *Office365Api* | [**CreateSecurityGroup**](docs/Office365Api.md#createsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
@@ -300,6 +302,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiUser](docs/ApiUser.md)
  - [Model.ApiUserChangedProperty](docs/ApiUserChangedProperty.md)
  - [Model.ApiUserPageResult](docs/ApiUserPageResult.md)
+ - [Model.ApiUserType](docs/ApiUserType.md)
  - [Model.AppSettings](docs/AppSettings.md)
  - [Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
  - [Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
@@ -537,7 +540,7 @@ Class | Method | HTTP request | Description
  - [Model.PersonalSettingsPropertyInfo](docs/PersonalSettingsPropertyInfo.md)
  - [Model.PolicyRef](docs/PolicyRef.md)
  - [Model.PolicyWithTemplates](docs/PolicyWithTemplates.md)
- - [Model.ReportActionResult](docs/ReportActionResult.md)
+ - [Model.PrincipalType](docs/PrincipalType.md)
  - [Model.ReportMetadata](docs/ReportMetadata.md)
  - [Model.RequestGroupWithPermissions](docs/RequestGroupWithPermissions.md)
  - [Model.RequestList](docs/RequestList.md)
@@ -601,9 +604,11 @@ Class | Method | HTTP request | Description
  - [Model.TaskDynamicActions](docs/TaskDynamicActions.md)
  - [Model.TaskList](docs/TaskList.md)
  - [Model.TaskListPageResult](docs/TaskListPageResult.md)
+ - [Model.TaskPriority](docs/TaskPriority.md)
  - [Model.TaskReport](docs/TaskReport.md)
  - [Model.TaskReportPageResult](docs/TaskReportPageResult.md)
  - [Model.TaskResult](docs/TaskResult.md)
+ - [Model.TaskStatus](docs/TaskStatus.md)
  - [Model.TaskType](docs/TaskType.md)
  - [Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)
  - [Model.TeamsTemplateSettings](docs/TeamsTemplateSettings.md)
@@ -612,6 +617,7 @@ Class | Method | HTTP request | Description
  - [Model.TermTreeModel](docs/TermTreeModel.md)
  - [Model.TermsMetadataSettings](docs/TermsMetadataSettings.md)
  - [Model.TermsValue](docs/TermsValue.md)
+ - [Model.TextModel](docs/TextModel.md)
  - [Model.TextValidationRuleRef](docs/TextValidationRuleRef.md)
  - [Model.ThemeType](docs/ThemeType.md)
  - [Model.TreeNode](docs/TreeNode.md)
@@ -631,13 +637,16 @@ Class | Method | HTTP request | Description
  - [Model.UserMetadataSettings](docs/UserMetadataSettings.md)
  - [Model.UserProfileMetadataSettings](docs/UserProfileMetadataSettings.md)
  - [Model.UserSource](docs/UserSource.md)
- - [Model.UserType](docs/UserType.md)
  - [Model.WebLifecycleActionType](docs/WebLifecycleActionType.md)
  - [Model.WebLifecycleRequest](docs/WebLifecycleRequest.md)
  - [Model.WebLifecycleService](docs/WebLifecycleService.md)
  - [Model.WebLifecycleValidateResult](docs/WebLifecycleValidateResult.md)
  - [Model.WebServiceAuthenticationType](docs/WebServiceAuthenticationType.md)
  - [Model.WelcomeEmailSettings](docs/WelcomeEmailSettings.md)
+ - [Model.WorkerJobGridModel](docs/WorkerJobGridModel.md)
+ - [Model.WorkerJobGridModelPageResult](docs/WorkerJobGridModelPageResult.md)
+ - [Model.WorkerJobModel](docs/WorkerJobModel.md)
+ - [Model.WorkerObjectType](docs/WorkerObjectType.md)
  - [Model.WorksapceOngoingTasksModel](docs/WorksapceOngoingTasksModel.md)
  - [Model.WorkspaceArchivedType](docs/WorkspaceArchivedType.md)
  - [Model.WorkspaceGridModel](docs/WorkspaceGridModel.md)

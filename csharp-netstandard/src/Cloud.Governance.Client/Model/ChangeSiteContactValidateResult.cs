@@ -37,10 +37,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="secondaryContact">secondaryContact.</param>
         /// <param name="primaryAdministrator">primaryAdministrator.</param>
         /// <param name="additionalAdministrators">additionalAdministrators.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeSiteContactValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrators = default(List<ApiUser>), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeSiteContactValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrators = default(List<ApiUser>), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;

@@ -12,16 +12,16 @@ function New-ServiceGroupWithPermissions {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${UsersAssignBy},
+        ${UsersAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupOwnerAssignBy},
+        ${GroupOwnerAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowChangePermissionLevel},
+        ${AllowChangePermissionLevel} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Removable},
+        ${Removable} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name},
@@ -39,10 +39,10 @@ function New-ServiceGroupWithPermissions {
         ${GroupOwner},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupOwnerType},
+        ${GroupOwnerType} = "SpoGroup",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${BuildInGroupType}
+        ${BuildInGroupType} = "None"
     )
 
     Process {

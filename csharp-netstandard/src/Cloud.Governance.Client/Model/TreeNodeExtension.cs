@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TreeNodeExtension" /> class.
         /// </summary>
-        /// <param name="size">size.</param>
+        /// <param name="size">size (default to 0).</param>
         /// <param name="userName">userName.</param>
         /// <param name="password">password.</param>
-        public TreeNodeExtension(int size = default(int), string userName = default(string), string password = default(string))
+        public TreeNodeExtension(int size = 0, string userName = default(string), string password = default(string))
         {
             this.Size = size;
             this.UserName = userName;

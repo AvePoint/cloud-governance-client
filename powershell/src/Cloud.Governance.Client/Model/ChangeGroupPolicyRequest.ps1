@@ -15,13 +15,13 @@ function New-ChangeGroupPolicyRequest {
         ${Policy},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsLeaseEnabled},
+        ${IsLeaseEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ChangePolicyConfig},
+        ${ChangePolicyConfig} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${StartDateType},
+        ${StartDateType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${SpecifyStartDate},
@@ -30,7 +30,7 @@ function New-ChangeGroupPolicyRequest {
         ${GroupId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},

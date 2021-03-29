@@ -12,13 +12,13 @@ function New-PermissionManagementModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsUniquePermission},
+        ${IsUniquePermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsPermissionInheritanceChanged},
+        ${IsPermissionInheritanceChanged} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsCopyPermissionsFromParent},
+        ${IsCopyPermissionsFromParent} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${InheritedSiteUrl},

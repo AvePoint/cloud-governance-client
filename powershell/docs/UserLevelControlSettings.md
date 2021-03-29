@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UserLevelControlMode** | [**UserLevelControlMode**](UserLevelControlMode.md) |  | [optional] 
-**IsSetRequesterAsDefaultEnabled** | **Boolean** |  | [optional] 
+**IsSetRequesterAsDefaultEnabled** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

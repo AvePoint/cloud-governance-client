@@ -3,32 +3,31 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableChangeContact** | **Boolean** |  | [optional] 
-**EnableChangeAdmin** | **Boolean** |  | [optional] 
+**EnableChangeContact** | **Boolean** |  | [optional] [default to $false]
+**EnableChangeAdmin** | **Boolean** |  | [optional] [default to $false]
 **ChangedMethod** | [**ChangeContactMethod**](ChangeContactMethod.md) |  | [optional] 
 **ChangeModeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **RequestTemplate** | [**ChangeSiteContactRequest**](ChangeSiteContactRequest.md) |  | [optional] 
 **DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
-**HideRequestSummary** | **Boolean** |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
 **Departments** | **String[]** |  | [optional] 
 **ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
-**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
 **CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **String** |  | [optional] 
-**LanguageId** | **Int32** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] [default to 0]
 **CategoryId** | **String** |  | [optional] 
-**Details** | **String** |  | [optional] 
 
 ## Examples
 
@@ -58,8 +57,7 @@ $ChangeSiteContactService = New-Cloud.Governance.ClientChangeSiteContactService 
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null `
- -Details null
+ -CategoryId null
 ```
 
 - Convert the resource to JSON

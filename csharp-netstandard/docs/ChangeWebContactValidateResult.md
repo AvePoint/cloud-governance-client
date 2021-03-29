@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **WebUrl** | **string** |  | [optional] 
 **PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 
 

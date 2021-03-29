@@ -18,7 +18,7 @@ function New-DelegatedAccessToken {
         ${RefreshToken},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${Duration}
+        ${Duration} = 0
     )
 
     Process {

@@ -27,7 +27,7 @@ function New-PolicyRef {
         ${TenantId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status}
+        ${Status} = "Inactive"
     )
 
     Process {

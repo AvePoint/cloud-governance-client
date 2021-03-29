@@ -289,9 +289,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Keyword = "Keyword_example" # String | 
-$UserType = (Initialize-UserType) # UserType | 
-$UserSource = (Initialize-UserSource) # UserSource | 
-$SharingOptions = (Initialize-ExternalSharingOptions) # ExternalSharingOptions | 
+$UserType = (New-ApiUserType) # ApiUserType | 
+$UserSource = (New-UserSource) # UserSource | 
+$SharingOptions = (New-ExternalSharingOptions) # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
 $PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
@@ -309,7 +309,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Keyword** | **String**|  | 
- **UserType** | [**UserType**](UserType.md)|  | 
+ **UserType** | [**ApiUserType**](ApiUserType.md)|  | 
  **UserSource** | [**UserSource**](UserSource.md)|  | 
  **SharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
  **SiteUrlOrTenantId** | **String**|  | [optional] [default to &quot;&quot;]
@@ -362,9 +362,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Keyword = "Keyword_example" # String | 
-$UserType = (Initialize-UserType) # UserType | 
-$UserSource = (Initialize-UserSource) # UserSource | 
-$SharingOptions = (Initialize-ExternalSharingOptions) # ExternalSharingOptions | 
+$UserType = (New-ApiUserType) # ApiUserType | 
+$UserSource = (New-UserSource) # UserSource | 
+$SharingOptions = (New-ExternalSharingOptions) # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
 $PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
@@ -382,7 +382,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Keyword** | **String**|  | 
- **UserType** | [**UserType**](UserType.md)|  | 
+ **UserType** | [**ApiUserType**](ApiUserType.md)|  | 
  **UserSource** | [**UserSource**](UserSource.md)|  | 
  **SharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
  **SiteUrlOrTenantId** | **String**|  | [optional] [default to &quot;&quot;]
@@ -429,7 +429,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$UpdatableApiUser = (Initialize-UpdatableApiUser-Email "Email_example" -JobTitle "JobTitle_example" -TenantId "TenantId_example" -PeopleFilterProfileId "PeopleFilterProfileId_example" -UserType  -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType) -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -AdditionalData "TODO") # UpdatableApiUser |  (optional)
+$UpdatableApiUser = (New-UpdatableApiUser-Email "Email_example" -JobTitle "JobTitle_example" -TenantId "TenantId_example" -PeopleFilterProfileId "PeopleFilterProfileId_example" -ApiUserType  -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (New-ExternalUserType) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -AdditionalData "TODO") # UpdatableApiUser |  (optional)
 
 try {
      $Result = Update-UserInfo -UpdatableApiUser $UpdatableApiUser

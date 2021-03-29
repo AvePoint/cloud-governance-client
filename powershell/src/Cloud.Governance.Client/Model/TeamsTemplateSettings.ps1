@@ -12,34 +12,43 @@ function New-TeamsTemplateSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCreateTeamFromScratch},
+        ${EnableCreateTeamFromScratch} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCreateTeamFromExistTeam},
+        ${EnableCreateTeamFromExistTeam} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableCreateTeamFromTeamTemplate} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${SelectedTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Boolean]]
-        ${EnableCloneChannels},
+        [PSCustomObject]
+        ${SelectedMSTemplate},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${TeamTemplates},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCloneApps},
+        ${EnableCloneChannels} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCloneTabs},
+        ${EnableCloneApps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCloneMembers},
+        ${EnableCloneTabs} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCloneTeamSetting},
+        ${EnableCloneMembers} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCloneTeamPrivacy},
+        ${EnableCloneTeamSetting} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableCloneTeamClassification}
+        ${EnableCloneTeamPrivacy} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableCloneTeamClassification} = $false
     )
 
     Process {
@@ -50,7 +59,10 @@ function New-TeamsTemplateSettings {
         $PSO = [PSCustomObject]@{
             "EnableCreateTeamFromScratch" = ${EnableCreateTeamFromScratch}
             "EnableCreateTeamFromExistTeam" = ${EnableCreateTeamFromExistTeam}
+            "EnableCreateTeamFromTeamTemplate" = ${EnableCreateTeamFromTeamTemplate}
             "SelectedTemplate" = ${SelectedTemplate}
+            "SelectedMSTemplate" = ${SelectedMSTemplate}
+            "TeamTemplates" = ${TeamTemplates}
             "EnableCloneChannels" = ${EnableCloneChannels}
             "EnableCloneApps" = ${EnableCloneApps}
             "EnableCloneTabs" = ${EnableCloneTabs}
@@ -80,7 +92,7 @@ function ConvertFrom-JsonToTeamsTemplateSettings {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in TeamsTemplateSettings
-        $AllProperties = $("EnableCreateTeamFromScratch", "EnableCreateTeamFromExistTeam", "SelectedTemplate", "EnableCloneChannels", "EnableCloneApps", "EnableCloneTabs", "EnableCloneMembers", "EnableCloneTeamSetting", "EnableCloneTeamPrivacy", "EnableCloneTeamClassification")
+        $AllProperties = $("EnableCreateTeamFromScratch", "EnableCreateTeamFromExistTeam", "EnableCreateTeamFromTeamTemplate", "SelectedTemplate", "SelectedMSTemplate", "TeamTemplates", "EnableCloneChannels", "EnableCloneApps", "EnableCloneTabs", "EnableCloneMembers", "EnableCloneTeamSetting", "EnableCloneTeamPrivacy", "EnableCloneTeamClassification")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -99,10 +111,28 @@ function ConvertFrom-JsonToTeamsTemplateSettings {
             $EnableCreateTeamFromExistTeam = $JsonParameters.PSobject.Properties["EnableCreateTeamFromExistTeam"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableCreateTeamFromTeamTemplate"))) { #optional property not found
+            $EnableCreateTeamFromTeamTemplate = $null
+        } else {
+            $EnableCreateTeamFromTeamTemplate = $JsonParameters.PSobject.Properties["EnableCreateTeamFromTeamTemplate"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "SelectedTemplate"))) { #optional property not found
             $SelectedTemplate = $null
         } else {
             $SelectedTemplate = $JsonParameters.PSobject.Properties["SelectedTemplate"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SelectedMSTemplate"))) { #optional property not found
+            $SelectedMSTemplate = $null
+        } else {
+            $SelectedMSTemplate = $JsonParameters.PSobject.Properties["SelectedMSTemplate"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TeamTemplates"))) { #optional property not found
+            $TeamTemplates = $null
+        } else {
+            $TeamTemplates = $JsonParameters.PSobject.Properties["TeamTemplates"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableCloneChannels"))) { #optional property not found
@@ -150,7 +180,10 @@ function ConvertFrom-JsonToTeamsTemplateSettings {
         $PSO = [PSCustomObject]@{
             "EnableCreateTeamFromScratch" = ${EnableCreateTeamFromScratch}
             "EnableCreateTeamFromExistTeam" = ${EnableCreateTeamFromExistTeam}
+            "EnableCreateTeamFromTeamTemplate" = ${EnableCreateTeamFromTeamTemplate}
             "SelectedTemplate" = ${SelectedTemplate}
+            "SelectedMSTemplate" = ${SelectedMSTemplate}
+            "TeamTemplates" = ${TeamTemplates}
             "EnableCloneChannels" = ${EnableCloneChannels}
             "EnableCloneApps" = ${EnableCloneApps}
             "EnableCloneTabs" = ${EnableCloneTabs}

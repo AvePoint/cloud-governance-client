@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **int** |  | [optional] 
+**Size** | **int** |  | [optional] [default to 0]
 **UserName** | **string** |  | [optional] 
 **Password** | **string** |  | [optional] 
 

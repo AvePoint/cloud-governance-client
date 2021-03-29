@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 **ListUrl** | **String** |  | [optional] 
 **ParentUrl** | **String** |  | [optional] 
 **ListTitle** | **String** |  | [optional] 
-**IsDocumentLibrary** | **Boolean** |  | [optional] 
-**IsEditTask** | **Boolean** |  | [optional] 
-**IsFromQuestionnaire** | **Boolean** |  | [optional] 
+**IsDocumentLibrary** | **Boolean** |  | [optional] [default to $false]
+**IsEditTask** | **Boolean** |  | [optional] [default to $false]
+**IsFromQuestionnaire** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

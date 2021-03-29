@@ -31,17 +31,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SPRoleAssignment" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        /// <param name="id">id (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="loginName">loginName.</param>
+        /// <param name="azureUserType">azureUserType.</param>
         /// <param name="principalType">principalType.</param>
         /// <param name="principalTypeDescription">principalTypeDescription.</param>
         /// <param name="permissionLevels">permissionLevels.</param>
-        public SPRoleAssignment(int id = default(int), string name = default(string), string loginName = default(string), SPPrincipalType? principalType = default(SPPrincipalType?), string principalTypeDescription = default(string), List<string> permissionLevels = default(List<string>))
+        public SPRoleAssignment(int id = 0, string name = default(string), string loginName = default(string), string azureUserType = default(string), SPPrincipalType? principalType = default(SPPrincipalType?), string principalTypeDescription = default(string), List<string> permissionLevels = default(List<string>))
         {
             this.Id = id;
             this.Name = name;
             this.LoginName = loginName;
+            this.AzureUserType = azureUserType;
             this.PrincipalType = principalType;
             this.PrincipalTypeDescription = principalTypeDescription;
             this.PermissionLevels = permissionLevels;
@@ -66,6 +68,12 @@ namespace Cloud.Governance.Client.Model
         public string LoginName { get; set; }
 
         /// <summary>
+        /// Gets or Sets AzureUserType
+        /// </summary>
+        [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
+        public string AzureUserType { get; set; }
+
+        /// <summary>
         /// Gets or Sets PrincipalTypeDescription
         /// </summary>
         [DataMember(Name = "principalTypeDescription", EmitDefaultValue = true)]
@@ -88,6 +96,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  LoginName: ").Append(LoginName).Append("\n");
+            sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
             sb.Append("  PrincipalType: ").Append(PrincipalType).Append("\n");
             sb.Append("  PrincipalTypeDescription: ").Append(PrincipalTypeDescription).Append("\n");
             sb.Append("  PermissionLevels: ").Append(PermissionLevels).Append("\n");
@@ -140,6 +149,11 @@ namespace Cloud.Governance.Client.Model
                     this.LoginName.Equals(input.LoginName))
                 ) && 
                 (
+                    this.AzureUserType == input.AzureUserType ||
+                    (this.AzureUserType != null &&
+                    this.AzureUserType.Equals(input.AzureUserType))
+                ) && 
+                (
                     this.PrincipalType == input.PrincipalType ||
                     this.PrincipalType.Equals(input.PrincipalType)
                 ) && 
@@ -170,6 +184,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.LoginName != null)
                     hashCode = hashCode * 59 + this.LoginName.GetHashCode();
+                if (this.AzureUserType != null)
+                    hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
                 hashCode = hashCode * 59 + this.PrincipalType.GetHashCode();
                 if (this.PrincipalTypeDescription != null)
                     hashCode = hashCode * 59 + this.PrincipalTypeDescription.GetHashCode();

@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] 
+**Enabled** | **Boolean** |  | [optional] [default to $false]
 **SeletedItem** | **String** |  | [optional] 
 **AllItems** | **String[]** |  | [optional] 
 

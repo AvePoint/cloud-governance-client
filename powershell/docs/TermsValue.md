@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TermStore** | [**GuidModel**](GuidModel.md) |  | [optional] [readonly] 
-**TermGroup** | [**GuidModel**](GuidModel.md) |  | [optional] [readonly] 
-**TermSet** | [**GuidModel**](GuidModel.md) |  | [optional] [readonly] 
-**Value** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
+**TermStore** | [**GuidModel**](GuidModel.md) | Id and name of term store. | [optional] [readonly] 
+**TermGroup** | [**GuidModel**](GuidModel.md) | Id and name of term group. | [optional] [readonly] 
+**TermSet** | [**GuidModel**](GuidModel.md) | Id and name of term set. | [optional] [readonly] 
+**Value** | [**GuidModel[]**](GuidModel.md) | Id and name collection of terms. | [optional] 
 
 ## Examples
 

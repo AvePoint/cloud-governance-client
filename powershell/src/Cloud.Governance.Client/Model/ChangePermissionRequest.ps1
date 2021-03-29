@@ -15,10 +15,10 @@ function New-ChangePermissionRequest {
         ${ObjectProperty},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PermissionChangedType},
+        ${PermissionChangedType} = "RemovePermission",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsManagedAllUsers},
+        ${IsManagedAllUsers} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${SelectedUsers},

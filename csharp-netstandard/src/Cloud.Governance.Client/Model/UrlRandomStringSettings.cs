@@ -27,9 +27,9 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="UrlRandomStringSettings" /> class.
         /// </summary>
         /// <param name="prefix">prefix.</param>
-        /// <param name="maxLength">maxLength.</param>
-        /// <param name="minLength">minLength.</param>
-        public UrlRandomStringSettings(string prefix = default(string), int maxLength = default(int), int minLength = default(int))
+        /// <param name="maxLength">maxLength (default to 0).</param>
+        /// <param name="minLength">minLength (default to 0).</param>
+        public UrlRandomStringSettings(string prefix = default(string), int maxLength = 0, int minLength = 0)
         {
             this.Prefix = prefix;
             this.MaxLength = maxLength;

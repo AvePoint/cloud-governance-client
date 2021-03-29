@@ -12,13 +12,13 @@ function New-ExtendGroupResult {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExtendType},
+        ${ExtendType} = "WithConstantValue",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Duration},
+        ${Duration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DurationType}
+        ${DurationType} = "Day"
     )
 
     Process {

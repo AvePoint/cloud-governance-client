@@ -38,8 +38,8 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="userLevelRestrictionType">userLevelRestrictionType.</param>
         /// <param name="userManagementSourceType">userManagementSourceType.</param>
-        /// <param name="isEnableShowAADGroupMembers">isEnableShowAADGroupMembers.</param>
-        public ManagePermissionUserSetting(UserLevelRestrictionType? userLevelRestrictionType = default(UserLevelRestrictionType?), UserManagementSourceType? userManagementSourceType = default(UserManagementSourceType?), bool isEnableShowAADGroupMembers = default(bool))
+        /// <param name="isEnableShowAADGroupMembers">isEnableShowAADGroupMembers (default to false).</param>
+        public ManagePermissionUserSetting(UserLevelRestrictionType? userLevelRestrictionType = default(UserLevelRestrictionType?), UserManagementSourceType? userManagementSourceType = default(UserManagementSourceType?), bool isEnableShowAADGroupMembers = false)
         {
             this.UserLevelRestrictionType = userLevelRestrictionType;
             this.UserManagementSourceType = userManagementSourceType;

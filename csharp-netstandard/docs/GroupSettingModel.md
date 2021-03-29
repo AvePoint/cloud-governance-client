@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **GroupEmailAddress** | **string** |  | [optional] 
 **Owners** | **string** |  | [optional] 
 **Members** | **string** |  | [optional] 
-**GroupDuration** | **int** |  | [optional] 
+**GroupDuration** | **int** |  | [optional] [default to 0]
 **EmailSubject** | **string** |  | [optional] 
 **EmailBody** | **string** |  | [optional] 
 

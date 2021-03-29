@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ContainerConflictSolution** | **ConflictSolutionType** |  | [optional] 
-**IsCheckLowerObject** | **bool** |  | [optional] 
-**IsEnableContentConflictResolution** | **bool** |  | [optional] 
+**IsCheckLowerObject** | **bool** |  | [optional] [default to false]
+**IsEnableContentConflictResolution** | **bool** |  | [optional] [default to false]
 **ContentConflictSolution** | **ConflictSolutionType** |  | [optional] 
 **AppConflictSolution** | **ConflictSolutionType** |  | [optional] 
 

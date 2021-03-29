@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// LookupValue
+    /// Value of Lookup to SharePoint library/list metadata.
     /// </summary>
     [DataContract(Name = "LookupValue")]
     public partial class LookupValue : IEquatable<LookupValue>, IValidatableObject
@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LookupValue" /> class.
         /// </summary>
-        /// <param name="targetUser">targetUser.</param>
-        /// <param name="userPropertyValue">userPropertyValue.</param>
-        /// <param name="userPropertyDisplayValue">userPropertyDisplayValue.</param>
+        /// <param name="targetUser">Lookup user.</param>
+        /// <param name="userPropertyValue">Property value of lookup user.</param>
+        /// <param name="userPropertyDisplayValue">Property display value of lookup user.</param>
         public LookupValue(ApiUser targetUser = default(ApiUser), string userPropertyValue = default(string), string userPropertyDisplayValue = default(string))
         {
             this.TargetUser = targetUser;
@@ -37,8 +37,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Tenant
+        /// Id of Office365 tenant.
         /// </summary>
+        /// <value>Id of Office365 tenant.</value>
         [DataMember(Name = "tenant", EmitDefaultValue = true)]
         public string Tenant { get; private set; }
 
@@ -52,8 +53,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Property
+        /// Name of user property.
         /// </summary>
+        /// <value>Name of user property.</value>
         [DataMember(Name = "property", EmitDefaultValue = true)]
         public string Property { get; private set; }
 
@@ -67,20 +69,23 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets TargetUser
+        /// Lookup user
         /// </summary>
+        /// <value>Lookup user</value>
         [DataMember(Name = "targetUser", EmitDefaultValue = true)]
         public ApiUser TargetUser { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserPropertyValue
+        /// Property value of lookup user
         /// </summary>
+        /// <value>Property value of lookup user</value>
         [DataMember(Name = "userPropertyValue", EmitDefaultValue = true)]
         public string UserPropertyValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserPropertyDisplayValue
+        /// Property display value of lookup user
         /// </summary>
+        /// <value>Property display value of lookup user</value>
         [DataMember(Name = "userPropertyDisplayValue", EmitDefaultValue = true)]
         public string UserPropertyDisplayValue { get; set; }
 

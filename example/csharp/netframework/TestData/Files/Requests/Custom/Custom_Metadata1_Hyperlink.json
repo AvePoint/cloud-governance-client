@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_CustomService",
+  "HyperlinkMetadataName": "Api_Sample_Hyperlink",
+  "LinkMetadataValue": "Baidu;https://www.baidu.com"
+}

@@ -1,0 +1,7 @@
+{
+  "ServiceName": "Api_Sample_GrantAnyUser_Permission",
+  "ObjectUrl": "https://contoso.sharepoint.com/sites/ApiSampleSite",
+  "UserLoginNames": "user@example.com",
+  "SelectedPermissionLevels": "View Only;Design",
+  "SelectedSharePointGroup": "ApiSampleSite Owners"
+}

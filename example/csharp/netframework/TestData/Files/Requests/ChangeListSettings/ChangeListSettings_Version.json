@@ -1,0 +1,7 @@
+{
+  "ServiceName": "ApiTest_Sample_ChangeListSettings_Service",
+  "Summary": "ApiTest_Sample_ChangeListVersion",
+  "Uri": "https://contoso.sharepoint.com/sites/FuSC1",
+  "MajorVersionLimit": 100,
+  "MinorVersionLimit": 1
+}

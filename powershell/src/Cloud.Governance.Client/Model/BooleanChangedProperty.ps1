@@ -12,10 +12,10 @@ function New-BooleanChangedProperty {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ChangeValue},
+        ${ChangeValue} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${OriginalValue}
+        ${OriginalValue} = $false
     )
 
     Process {

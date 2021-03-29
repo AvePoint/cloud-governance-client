@@ -1,0 +1,10 @@
+{
+  "ServiceName": "Api_Sample_CreateSC_ConstructUrlWithMetadata",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "Department": "IT",
+  "ChoiceMetadataName": "Api_Sample_Choice",
+  "ChoiceMetadataValue": "222",
+  "SingleLineMetadataName": "Api_Sample_Single",
+  "SingleLineMetadataValue": "111"
+}

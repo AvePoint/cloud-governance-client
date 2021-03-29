@@ -24,7 +24,7 @@ function New-ReportMetadata {
         ${DisplayValue},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type}
+        ${Type} = "None"
     )
 
     Process {

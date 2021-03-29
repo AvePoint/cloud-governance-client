@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] 
+**Enabled** | **Boolean** |  | [optional] [default to $false]
 **AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Prefixs** | [**GroupConstructureRule[]**](GroupConstructureRule.md) |  | [optional] 
 **Suffixs** | [**GroupConstructureRule[]**](GroupConstructureRule.md) |  | [optional] 

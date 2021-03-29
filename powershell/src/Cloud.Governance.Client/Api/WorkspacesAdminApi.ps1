@@ -13,7 +13,7 @@ apply groups policy
 No description available.
 
 .PARAMETER ApplyGroupPolicyModel
-No description available.
+apply policy setting
 
 .PARAMETER WithHttpInfo
 
@@ -97,7 +97,7 @@ apply site policy
 No description available.
 
 .PARAMETER ApplySitePolicyModel
-No description available.
+apply policy setting
 
 .PARAMETER WithHttpInfo
 
@@ -264,12 +264,11 @@ completed renewal task
 
 No description available.
 
-.PARAMETER WorkspaceIdTypeModel
+.PARAMETER MarkAsCanceled
 No description available.
 
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json
+.PARAMETER WorkspaceIdTypeModel
+No description available.
 
 .PARAMETER WithHttpInfo
 
@@ -277,17 +276,17 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-ReportActionResult[]
+None
 #>
 function Complete-WorkspaceRenewalTask {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${MarkAsCanceled},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject[]]
         ${WorkspaceIdTypeModel},
-        [String]
-        [ValidateSet("text/plain", "application/json")]
-        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
@@ -307,17 +306,16 @@ function Complete-WorkspaceRenewalTask {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
+        $LocalVarAccepts = @('application/json')
 
         # HTTP header 'Content-Type'
         $LocalVarContentTypes = @('application/json')
 
         $LocalVarUri = '/admin/directory/workspace/renewal/complete'
+
+        if ($MarkAsCanceled) {
+            $LocalVarQueryParameters['markAsCanceled'] = $MarkAsCanceled
+        }
 
         $LocalVarBodyParameter = $WorkspaceIdTypeModel | ConvertTo-Json -Depth 100
 
@@ -340,7 +338,7 @@ function Complete-WorkspaceRenewalTask {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "ReportActionResult[]" `
+                                -ReturnType "" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -770,17 +768,13 @@ No description available.
 .PARAMETER WorkspaceIdTypeModel
 No description available.
 
-.PARAMETER ReturnType
-
-Select the return type (optional): text/plain, application/json
-
 .PARAMETER WithHttpInfo
 
 A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
 
 .OUTPUTS
 
-ReportActionResult[]
+None
 #>
 function Invoke-TriggerWorkspaceRenewal {
     [CmdletBinding()]
@@ -788,9 +782,6 @@ function Invoke-TriggerWorkspaceRenewal {
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject[]]
         ${WorkspaceIdTypeModel},
-        [String]
-        [ValidateSet("text/plain", "application/json")]
-        $ReturnType,
         [Switch]
         $WithHttpInfo
     )
@@ -810,12 +801,7 @@ function Invoke-TriggerWorkspaceRenewal {
 
         $Configuration = Get-Configuration
         # HTTP header 'Accept' (if needed)
-        $LocalVarAccepts = @('text/plain', 'application/json')
-
-        if ($ReturnType) {
-            # use the return type (MIME) provided by the user
-            $LocalVarAccepts = @($ReturnType)
-        }
+        $LocalVarAccepts = @('application/json')
 
         # HTTP header 'Content-Type'
         $LocalVarContentTypes = @('application/json')
@@ -843,7 +829,7 @@ function Invoke-TriggerWorkspaceRenewal {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "ReportActionResult[]" `
+                                -ReturnType "" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

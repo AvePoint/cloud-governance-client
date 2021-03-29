@@ -12,7 +12,7 @@ function New-ContentMoveRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Method},
+        ${Method} = "Copy",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CopySettings},

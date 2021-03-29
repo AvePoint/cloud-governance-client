@@ -32,8 +32,8 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="UserLevelControlSettings" /> class.
         /// </summary>
         /// <param name="userLevelControlMode">userLevelControlMode.</param>
-        /// <param name="isSetRequesterAsDefaultEnabled">isSetRequesterAsDefaultEnabled.</param>
-        public UserLevelControlSettings(UserLevelControlMode? userLevelControlMode = default(UserLevelControlMode?), bool isSetRequesterAsDefaultEnabled = default(bool))
+        /// <param name="isSetRequesterAsDefaultEnabled">isSetRequesterAsDefaultEnabled (default to false).</param>
+        public UserLevelControlSettings(UserLevelControlMode? userLevelControlMode = default(UserLevelControlMode?), bool isSetRequesterAsDefaultEnabled = false)
         {
             this.UserLevelControlMode = userLevelControlMode;
             this.IsSetRequesterAsDefaultEnabled = isSetRequesterAsDefaultEnabled;

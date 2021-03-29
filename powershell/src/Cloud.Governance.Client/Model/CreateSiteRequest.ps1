@@ -24,10 +24,10 @@ function New-CreateSiteRequest {
         ${PolicyId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${TimeZone},
+        ${TimeZone} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Language},
+        ${Language} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Template},

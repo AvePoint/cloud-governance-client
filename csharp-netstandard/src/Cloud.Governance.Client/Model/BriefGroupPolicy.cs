@@ -34,13 +34,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
-        /// <param name="enableLeaseExpiration">enableLeaseExpiration.</param>
-        /// <param name="leaseExpiredInterval">leaseExpiredInterval.</param>
+        /// <param name="enableLeaseExpiration">enableLeaseExpiration (default to false).</param>
+        /// <param name="leaseExpiredInterval">leaseExpiredInterval (default to 0).</param>
         /// <param name="leaseExpiredIntervalType">leaseExpiredIntervalType.</param>
-        /// <param name="enableManageGroupSharing">enableManageGroupSharing.</param>
-        /// <param name="enableInviteAuthorizedGuestUser">enableInviteAuthorizedGuestUser.</param>
-        /// <param name="enableInviteGuestUser">enableInviteGuestUser.</param>
-        public BriefGroupPolicy(Guid id = default(Guid), string name = default(string), string description = default(string), bool enableLeaseExpiration = default(bool), int leaseExpiredInterval = default(int), ApiDurationType? leaseExpiredIntervalType = default(ApiDurationType?), bool enableManageGroupSharing = default(bool), bool enableInviteAuthorizedGuestUser = default(bool), bool enableInviteGuestUser = default(bool))
+        /// <param name="enableManageGroupSharing">enableManageGroupSharing (default to false).</param>
+        /// <param name="enableInviteAuthorizedGuestUser">enableInviteAuthorizedGuestUser (default to false).</param>
+        /// <param name="enableInviteGuestUser">enableInviteGuestUser (default to false).</param>
+        public BriefGroupPolicy(Guid id = default(Guid), string name = default(string), string description = default(string), bool enableLeaseExpiration = false, int leaseExpiredInterval = 0, ApiDurationType? leaseExpiredIntervalType = default(ApiDurationType?), bool enableManageGroupSharing = false, bool enableInviteAuthorizedGuestUser = false, bool enableInviteGuestUser = false)
         {
             this.Id = id;
             this.Name = name;

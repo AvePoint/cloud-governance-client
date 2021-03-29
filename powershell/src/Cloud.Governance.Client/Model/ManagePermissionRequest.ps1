@@ -15,7 +15,7 @@ function New-ManagePermissionRequest {
         ${ObjectUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ObjectType},
+        ${ObjectType} = "Container",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ObjectTitle},

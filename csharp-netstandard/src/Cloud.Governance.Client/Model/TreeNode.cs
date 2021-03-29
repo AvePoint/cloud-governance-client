@@ -37,10 +37,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="siteCollectionUrl">siteCollectionUrl.</param>
         /// <param name="siteId">siteId.</param>
         /// <param name="nodeId">nodeId.</param>
-        /// <param name="startIndex">startIndex.</param>
-        /// <param name="pageSize">pageSize.</param>
-        /// <param name="pageIndex">pageIndex.</param>
-        /// <param name="fullCount">fullCount.</param>
+        /// <param name="startIndex">startIndex (default to 0).</param>
+        /// <param name="pageSize">pageSize (default to 0).</param>
+        /// <param name="pageIndex">pageIndex (default to 0).</param>
+        /// <param name="fullCount">fullCount (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="title">title.</param>
         /// <param name="description">description.</param>
@@ -49,7 +49,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="agentID">agentID.</param>
         /// <param name="fullPath">fullPath.</param>
         /// <param name="farmName">farmName.</param>
-        /// <param name="hasNextPage">hasNextPage.</param>
+        /// <param name="hasNextPage">hasNextPage (default to false).</param>
         /// <param name="farmID">farmID.</param>
         /// <param name="parentID">parentID.</param>
         /// <param name="extension">extension.</param>
@@ -59,21 +59,21 @@ namespace Cloud.Governance.Client.Model
         /// <param name="networkId">networkId.</param>
         /// <param name="parentSPObjectID">parentSPObjectID.</param>
         /// <param name="id">id.</param>
-        /// <param name="loadManagedPath">loadManagedPath.</param>
-        /// <param name="loadChildrenFromDB">loadChildrenFromDB.</param>
-        /// <param name="loadedPageCount">loadedPageCount.</param>
+        /// <param name="loadManagedPath">loadManagedPath (default to false).</param>
+        /// <param name="loadChildrenFromDB">loadChildrenFromDB (default to false).</param>
+        /// <param name="loadedPageCount">loadedPageCount (default to 0).</param>
         /// <param name="children">children.</param>
         /// <param name="selectedChildren">selectedChildren.</param>
         /// <param name="filterUrls">filterUrls.</param>
-        /// <param name="filterType">filterType.</param>
-        /// <param name="checkNumber">checkNumber.</param>
+        /// <param name="filterType">filterType (default to 0).</param>
+        /// <param name="checkNumber">checkNumber (default to 0).</param>
         /// <param name="selectedWebAppIdSubSiteProvServ">selectedWebAppIdSubSiteProvServ.</param>
         /// <param name="selectedSiteCollIdsSubSiteProvServ">selectedSiteCollIdsSubSiteProvServ.</param>
-        /// <param name="childrenType">childrenType.</param>
+        /// <param name="childrenType">childrenType (default to 0).</param>
         /// <param name="listId">listId.</param>
         /// <param name="serverRelativeUrl">serverRelativeUrl.</param>
         /// <param name="userName">userName.</param>
-        public TreeNode(string webApplicationId = default(string), string webApplicationUri = default(string), string siteCollectionId = default(string), string siteCollectionUrl = default(string), string siteId = default(string), string nodeId = default(string), int startIndex = default(int), int pageSize = default(int), int pageIndex = default(int), int fullCount = default(int), string name = default(string), string title = default(string), string description = default(string), string displayName = default(string), string managedPath = default(string), string agentID = default(string), string fullPath = default(string), string farmName = default(string), bool hasNextPage = default(bool), Guid farmID = default(Guid), Guid parentID = default(Guid), TreeNodeExtension extension = default(TreeNodeExtension), TreeNode parent = default(TreeNode), TreeNodeType? type = default(TreeNodeType?), Guid spObjectID = default(Guid), string networkId = default(string), Guid parentSPObjectID = default(Guid), Guid id = default(Guid), bool loadManagedPath = default(bool), bool loadChildrenFromDB = default(bool), int loadedPageCount = default(int), List<TreeNode> children = default(List<TreeNode>), List<TreeNode> selectedChildren = default(List<TreeNode>), string filterUrls = default(string), int filterType = default(int), int checkNumber = default(int), Guid selectedWebAppIdSubSiteProvServ = default(Guid), string selectedSiteCollIdsSubSiteProvServ = default(string), int childrenType = default(int), Guid listId = default(Guid), string serverRelativeUrl = default(string), string userName = default(string))
+        public TreeNode(string webApplicationId = default(string), string webApplicationUri = default(string), string siteCollectionId = default(string), string siteCollectionUrl = default(string), string siteId = default(string), string nodeId = default(string), int startIndex = 0, int pageSize = 0, int pageIndex = 0, int fullCount = 0, string name = default(string), string title = default(string), string description = default(string), string displayName = default(string), string managedPath = default(string), string agentID = default(string), string fullPath = default(string), string farmName = default(string), bool hasNextPage = false, Guid farmID = default(Guid), Guid parentID = default(Guid), TreeNodeExtension extension = default(TreeNodeExtension), TreeNode parent = default(TreeNode), TreeNodeType? type = default(TreeNodeType?), Guid spObjectID = default(Guid), string networkId = default(string), Guid parentSPObjectID = default(Guid), Guid id = default(Guid), bool loadManagedPath = false, bool loadChildrenFromDB = false, int loadedPageCount = 0, List<TreeNode> children = default(List<TreeNode>), List<TreeNode> selectedChildren = default(List<TreeNode>), string filterUrls = default(string), int filterType = 0, int checkNumber = 0, Guid selectedWebAppIdSubSiteProvServ = default(Guid), string selectedSiteCollIdsSubSiteProvServ = default(string), int childrenType = 0, Guid listId = default(Guid), string serverRelativeUrl = default(string), string userName = default(string))
         {
             this.WebApplicationId = webApplicationId;
             this.WebApplicationUri = webApplicationUri;

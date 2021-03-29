@@ -39,8 +39,9 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "action", EmitDefaultValue = false)]
         public SiteLifecycleActionType? Action { get; set; }
         /// <summary>
-        /// Gets or Sets Type
+        /// Service type of request.
         /// </summary>
+        /// <value>Service type of request.</value>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public ServiceType? Type { get; set; }
 
@@ -53,8 +54,9 @@ namespace Cloud.Governance.Client.Model
             return false;
         }
         /// <summary>
-        /// Gets or Sets Status
+        /// Status of request.
         /// </summary>
+        /// <value>Status of request.</value>
         [DataMember(Name = "status", EmitDefaultValue = true)]
         public RequestStatus? Status { get; set; }
 
@@ -70,21 +72,21 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ChangeSitePolicyRequest" /> class.
         /// </summary>
         /// <param name="policy">policy.</param>
-        /// <param name="isLeaseEnabled">isLeaseEnabled.</param>
+        /// <param name="isLeaseEnabled">isLeaseEnabled (default to false).</param>
         /// <param name="changePolicyConfig">changePolicyConfig.</param>
         /// <param name="startDateType">startDateType.</param>
         /// <param name="specifyStartDate">specifyStartDate.</param>
         /// <param name="action">action.</param>
         /// <param name="siteId">siteId.</param>
         /// <param name="siteUrl">siteUrl.</param>
-        /// <param name="id">id.</param>
-        /// <param name="serviceId">serviceId.</param>
-        /// <param name="department">department.</param>
-        /// <param name="summary">summary.</param>
-        /// <param name="notesToApprovers">notesToApprovers.</param>
-        /// <param name="questionnaireId">questionnaireId.</param>
-        /// <param name="metadatas">metadatas.</param>
-        public ChangeSitePolicyRequest(GuidModel policy = default(GuidModel), bool isLeaseEnabled = default(bool), AssignBy? changePolicyConfig = default(AssignBy?), StartDateType? startDateType = default(StartDateType?), DateTime? specifyStartDate = default(DateTime?), SiteLifecycleActionType? action = default(SiteLifecycleActionType?), Guid siteId = default(Guid), string siteUrl = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        /// <param name="id">Id of request..</param>
+        /// <param name="serviceId">Id of service..</param>
+        /// <param name="department">Department of requester..</param>
+        /// <param name="summary">Summary of request..</param>
+        /// <param name="notesToApprovers">Notes to approvers..</param>
+        /// <param name="questionnaireId">Id of questionnaire.</param>
+        /// <param name="metadatas">Metadata of request..</param>
+        public ChangeSitePolicyRequest(GuidModel policy = default(GuidModel), bool isLeaseEnabled = false, AssignBy? changePolicyConfig = default(AssignBy?), StartDateType? startDateType = default(StartDateType?), DateTime? specifyStartDate = default(DateTime?), SiteLifecycleActionType? action = default(SiteLifecycleActionType?), Guid siteId = default(Guid), string siteUrl = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.Policy = policy;
             this.IsLeaseEnabled = isLeaseEnabled;
@@ -164,50 +166,58 @@ namespace Cloud.Governance.Client.Model
         public string SiteUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of request.
         /// </summary>
+        /// <value>Id of request.</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public Guid? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServiceId
+        /// Id of service.
         /// </summary>
+        /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Department
+        /// Department of requester.
         /// </summary>
+        /// <value>Department of requester.</value>
         [DataMember(Name = "department", EmitDefaultValue = true)]
         public string Department { get; set; }
 
         /// <summary>
-        /// Gets or Sets Summary
+        /// Summary of request.
         /// </summary>
+        /// <value>Summary of request.</value>
         [DataMember(Name = "summary", EmitDefaultValue = true)]
         public string Summary { get; set; }
 
         /// <summary>
-        /// Gets or Sets NotesToApprovers
+        /// Notes to approvers.
         /// </summary>
+        /// <value>Notes to approvers.</value>
         [DataMember(Name = "notesToApprovers", EmitDefaultValue = true)]
         public string NotesToApprovers { get; set; }
 
         /// <summary>
-        /// Gets or Sets QuestionnaireId
+        /// Id of questionnaire
         /// </summary>
+        /// <value>Id of questionnaire</value>
         [DataMember(Name = "questionnaireId", EmitDefaultValue = true)]
         public Guid? QuestionnaireId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Metadatas
+        /// Metadata of request.
         /// </summary>
+        /// <value>Metadata of request.</value>
         [DataMember(Name = "metadatas", EmitDefaultValue = true)]
         public List<RequestMetadata> Metadatas { get; set; }
 
         /// <summary>
-        /// Gets or Sets TicketNumber
+        /// Ticket number of request.
         /// </summary>
+        /// <value>Ticket number of request.</value>
         [DataMember(Name = "ticketNumber", EmitDefaultValue = true)]
         public int? TicketNumber { get; private set; }
 
@@ -221,8 +231,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets TypeDescription
+        /// Service type description of request.
         /// </summary>
+        /// <value>Service type description of request.</value>
         [DataMember(Name = "typeDescription", EmitDefaultValue = true)]
         public string TypeDescription { get; private set; }
 
@@ -236,8 +247,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Requester
+        /// Requester display name.
         /// </summary>
+        /// <value>Requester display name.</value>
         [DataMember(Name = "requester", EmitDefaultValue = true)]
         public string Requester { get; private set; }
 
@@ -251,8 +263,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets RequesterLoginName
+        /// Requester login name.
         /// </summary>
+        /// <value>Requester login name.</value>
         [DataMember(Name = "requesterLoginName", EmitDefaultValue = true)]
         public string RequesterLoginName { get; private set; }
 
@@ -266,8 +279,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ProgressStatus
+        /// Progress status of request.
         /// </summary>
+        /// <value>Progress status of request.</value>
         [DataMember(Name = "progressStatus", EmitDefaultValue = false)]
         public int ProgressStatus { get; private set; }
 
@@ -281,8 +295,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ProgressStatusDescription
+        /// Progress status description of request.
         /// </summary>
+        /// <value>Progress status description of request.</value>
         [DataMember(Name = "progressStatusDescription", EmitDefaultValue = true)]
         public string ProgressStatusDescription { get; private set; }
 
@@ -296,8 +311,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets SubmittedTime
+        /// Submitted time of request.
         /// </summary>
+        /// <value>Submitted time of request.</value>
         [DataMember(Name = "submittedTime", EmitDefaultValue = true)]
         public DateTime? SubmittedTime { get; private set; }
 
@@ -311,8 +327,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets LastUpdated
+        /// Last updated time of request.
         /// </summary>
+        /// <value>Last updated time of request.</value>
         [DataMember(Name = "lastUpdated", EmitDefaultValue = true)]
         public DateTime? LastUpdated { get; private set; }
 
@@ -326,8 +343,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets CreatedTime
+        /// Created time of request.
         /// </summary>
+        /// <value>Created time of request.</value>
         [DataMember(Name = "createdTime", EmitDefaultValue = true)]
         public DateTime? CreatedTime { get; private set; }
 
@@ -341,8 +359,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets AssignTo
+        /// Task assignee of request.
         /// </summary>
+        /// <value>Task assignee of request.</value>
         [DataMember(Name = "assignTo", EmitDefaultValue = true)]
         public string AssignTo { get; private set; }
 
@@ -356,8 +375,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets FullPath
+        /// Object full path of request.
         /// </summary>
+        /// <value>Object full path of request.</value>
         [DataMember(Name = "fullPath", EmitDefaultValue = true)]
         public string FullPath { get; private set; }
 

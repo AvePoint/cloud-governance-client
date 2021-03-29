@@ -32,10 +32,10 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="CreateListUrlValidationResult" /> class.
         /// </summary>
         /// <param name="parentObject">parentObject.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public CreateListUrlValidationResult(CreateListSPObject parentObject = default(CreateListSPObject), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public CreateListUrlValidationResult(CreateListSPObject parentObject = default(CreateListSPObject), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.ParentObject = parentObject;
             this.IsValid = isValid;

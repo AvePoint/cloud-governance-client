@@ -26,11 +26,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppSettings" /> class.
         /// </summary>
-        /// <param name="enableInstallApp">enableInstallApp.</param>
-        /// <param name="enableAddSiteInfoCard">enableAddSiteInfoCard.</param>
-        /// <param name="enableAddTimeLine">enableAddTimeLine.</param>
-        /// <param name="enableAddPanel">enableAddPanel.</param>
-        public AppSettings(bool enableInstallApp = default(bool), bool enableAddSiteInfoCard = default(bool), bool enableAddTimeLine = default(bool), bool enableAddPanel = default(bool))
+        /// <param name="enableInstallApp">enableInstallApp (default to false).</param>
+        /// <param name="enableAddSiteInfoCard">enableAddSiteInfoCard (default to false).</param>
+        /// <param name="enableAddTimeLine">enableAddTimeLine (default to false).</param>
+        /// <param name="enableAddPanel">enableAddPanel (default to false).</param>
+        public AppSettings(bool enableInstallApp = false, bool enableAddSiteInfoCard = false, bool enableAddTimeLine = false, bool enableAddPanel = false)
         {
             this.EnableInstallApp = enableInstallApp;
             this.EnableAddSiteInfoCard = enableAddSiteInfoCard;

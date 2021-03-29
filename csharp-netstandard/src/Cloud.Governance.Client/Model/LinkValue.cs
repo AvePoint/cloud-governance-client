@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// LinkValue
+    /// Value of Hyperlink metadata
     /// </summary>
     [DataContract(Name = "LinkValue")]
     public partial class LinkValue : IEquatable<LinkValue>, IValidatableObject
@@ -26,8 +26,8 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LinkValue" /> class.
         /// </summary>
-        /// <param name="title">title.</param>
-        /// <param name="address">address.</param>
+        /// <param name="title">Title of link metadata.</param>
+        /// <param name="address">Address of link metadata.</param>
         public LinkValue(string title = default(string), string address = default(string))
         {
             this.Title = title;
@@ -35,14 +35,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Title
+        /// Title of link metadata
         /// </summary>
+        /// <value>Title of link metadata</value>
         [DataMember(Name = "title", EmitDefaultValue = true)]
         public string Title { get; set; }
 
         /// <summary>
-        /// Gets or Sets Address
+        /// Address of link metadata
         /// </summary>
+        /// <value>Address of link metadata</value>
         [DataMember(Name = "address", EmitDefaultValue = true)]
         public string Address { get; set; }
 

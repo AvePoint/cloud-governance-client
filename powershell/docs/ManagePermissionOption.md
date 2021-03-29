@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GrantPermissionSetting** | [**ManagePermissionGrantSetting**](ManagePermissionGrantSetting.md) |  | [optional] 
-**IsEnableEditPermission** | **Boolean** |  | [optional] 
-**IsEnableRemovePermission** | **Boolean** |  | [optional] 
-**IsEnableStopInheritPermission** | **Boolean** |  | [optional] 
-**IsEnableDeleteUniquePermission** | **Boolean** |  | [optional] 
-**IsEnableExcludePermissionLevel** | **Boolean** |  | [optional] 
-**IsHideExcludePermissionItem** | **Boolean** |  | [optional] 
+**IsEnableEditPermission** | **Boolean** |  | [optional] [default to $false]
+**IsEnableRemovePermission** | **Boolean** |  | [optional] [default to $false]
+**IsEnableStopInheritPermission** | **Boolean** |  | [optional] [default to $false]
+**IsEnableDeleteUniquePermission** | **Boolean** |  | [optional] [default to $false]
+**IsEnableExcludePermissionLevel** | **Boolean** |  | [optional] [default to $false]
+**IsHideExcludePermissionItem** | **Boolean** |  | [optional] [default to $false]
 **ExcludedPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 
 ## Examples

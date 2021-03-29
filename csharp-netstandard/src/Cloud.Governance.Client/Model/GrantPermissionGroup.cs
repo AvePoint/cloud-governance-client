@@ -26,12 +26,12 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GrantPermissionGroup" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        /// <param name="id">id (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="permissionIds">permissionIds.</param>
         /// <param name="description">description.</param>
-        public GrantPermissionGroup(int id = default(int), string name = default(string), string displayName = default(string), List<string> permissionIds = default(List<string>), string description = default(string))
+        public GrantPermissionGroup(int id = 0, string name = default(string), string displayName = default(string), List<string> permissionIds = default(List<string>), string description = default(string))
         {
             this.Id = id;
             this.Name = name;

@@ -12,10 +12,10 @@ function New-ChangeSiteQuotaRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${QuotaSize},
+        ${QuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SiteId},

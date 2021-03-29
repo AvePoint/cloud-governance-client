@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ParentSiteUrl** | **string** |  | [optional] 
 **SitePrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **SiteSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**IsValid** | **bool** |  | [optional] 
+**IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 
 

@@ -12,10 +12,10 @@ function New-PermissionSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowGrantUserPermission},
+        ${AllowGrantUserPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${PreventGrantSpecificPermissionLevels},
+        ${PreventGrantSpecificPermissionLevels} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${PreventPermissionLevles}

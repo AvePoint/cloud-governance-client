@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UsersAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **GroupOwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**AllowChangePermissionLevel** | **Boolean** |  | [optional] 
-**Removable** | **Boolean** |  | [optional] 
+**AllowChangePermissionLevel** | **Boolean** |  | [optional] [default to $false]
+**Removable** | **Boolean** |  | [optional] [default to $false]
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Users** | [**GroupUser[]**](GroupUser.md) |  | [optional] 

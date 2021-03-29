@@ -61,7 +61,7 @@ function Invoke-ApiClient {
     }
     $HeaderParameters["Accept-Encoding"]="gzip, deflate"
     $HeaderParameters["X-CLOUD-GOVERNANCE-JSONCONTRACT"]="PascalCase"
-    $HeaderParameters["User-Agent"]="(sdk/powershell/4.1.10)"
+    $HeaderParameters["User-Agent"]="(sdk/powershell/4.1.17)"
     $ContentType= SelectHeaders -Headers $ContentTypes
     if ($ContentType) {
         $HeaderParameters['Content-Type'] = $ContentType
@@ -202,7 +202,7 @@ function DeserializeResponse {
         return $Response
     } Elseif ($ReturnType -match '\[\]$') { # array
         return ConvertFrom-Json $Response
-    } Elseif (@("String", "Boolean", "System.DateTime") -contains $ReturnType) { # string, boolean ,datetime
+    } Elseif (@("Boolean", "System.DateTime") -contains $ReturnType) { # string, boolean ,datetime
         return $Response
     } Else { # others (e.g. model, file)
         if ($ContentTypes) {

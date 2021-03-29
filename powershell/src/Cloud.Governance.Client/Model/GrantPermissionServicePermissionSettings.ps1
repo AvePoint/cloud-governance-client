@@ -12,13 +12,13 @@ function New-GrantPermissionServicePermissionSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AssignBy},
+        ${AssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGrantPermissionDirectly},
+        ${IsGrantPermissionDirectly} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableExcludePermissionLevles},
+        ${EnableExcludePermissionLevles} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${ExcludedPermissionLevles}

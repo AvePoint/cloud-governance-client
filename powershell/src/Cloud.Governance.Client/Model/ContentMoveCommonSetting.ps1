@@ -12,19 +12,19 @@ function New-ContentMoveCommonSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsIncludeVersions},
+        ${IsIncludeVersions} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsIncludeWorkflowDefinition},
+        ${IsIncludeWorkflowDefinition} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsDisableInformationRightsManagement},
+        ${IsDisableInformationRightsManagement} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsPreserveNullColumnValues},
+        ${IsPreserveNullColumnValues} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsKeepModifiedByAndModifiedTime},
+        ${IsKeepModifiedByAndModifiedTime} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ProfileMappings},
@@ -39,10 +39,10 @@ function New-ContentMoveCommonSetting {
         ${FilterPolicy},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DeleteType},
+        ${DeleteType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsDeleteCheckedFiles}
+        ${IsDeleteCheckedFiles} = $false
     )
 
     Process {

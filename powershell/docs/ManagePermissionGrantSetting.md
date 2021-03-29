@@ -3,24 +3,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnableGrantPermission** | **Boolean** |  | [optional] 
-**IsGrantTemporaryPermission** | **Boolean** |  | [optional] 
+**IsEnableGrantPermission** | **Boolean** |  | [optional] [default to $false]
+**IsGrantTemporaryPermission** | **Boolean** |  | [optional] [default to $false]
 **GrantPermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**TemporaryPermissionDuration** | **Int32** |  | [optional] 
+**TemporaryPermissionDuration** | **Int32** |  | [optional] [default to 0]
 **TemporaryDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**IsMaxTemporaryDurationSetted** | **Boolean** |  | [optional] 
-**TemporaryPermissionMaxDuration** | **Int32** |  | [optional] 
+**IsMaxTemporaryDurationSetted** | **Boolean** |  | [optional] [default to $false]
+**TemporaryPermissionMaxDuration** | **Int32** |  | [optional] [default to 0]
 **TemporaryPermissionMaxDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**IsEnableExpireNotify** | **Boolean** |  | [optional] 
-**IsAllowSelectAdmin** | **Boolean** |  | [optional] 
-**ExpireNotifyDuration** | **Int32** |  | [optional] 
+**IsEnableExpireNotify** | **Boolean** |  | [optional] [default to $false]
+**IsAllowSelectAdmin** | **Boolean** |  | [optional] [default to $false]
+**ExpireNotifyDuration** | **Int32** |  | [optional] [default to 0]
 **ExpireNotifyDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **ExpireNotifyEmailTemplate** | **String** |  | [optional] 
-**IsEnableWelcomeNotify** | **Boolean** |  | [optional] 
+**IsEnableWelcomeNotify** | **Boolean** |  | [optional] [default to $false]
 **WelcomeEmailSubject** | **String** |  | [optional] 
 **WelcomeEmailBody** | **String** |  | [optional] 
 **WelcomeEmailAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**AllowSpecifyTemporayPermissionDuration** | **Boolean** |  | [optional] 
+**AllowSpecifyTemporayPermissionDuration** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

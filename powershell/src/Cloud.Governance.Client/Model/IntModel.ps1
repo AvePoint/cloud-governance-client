@@ -12,7 +12,7 @@ function New-IntModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Id},
+        ${Id} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name},

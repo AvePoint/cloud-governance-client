@@ -46,12 +46,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="changePolicyAssignBy">changePolicyAssignBy.</param>
         /// <param name="startDateType">startDateType.</param>
         /// <param name="serviceSpecifyDate">serviceSpecifyDate.</param>
-        /// <param name="isEnableLeaseExpired">isEnableLeaseExpired.</param>
-        /// <param name="leaseDuration">leaseDuration.</param>
+        /// <param name="isEnableLeaseExpired">isEnableLeaseExpired (default to false).</param>
+        /// <param name="leaseDuration">leaseDuration (default to 0).</param>
         /// <param name="leaseDurationType">leaseDurationType.</param>
         /// <param name="currentStartDate">currentStartDate.</param>
-        /// <param name="isAllowAutoCancel">isAllowAutoCancel.</param>
-        public ChangeSitePolicySetting(GuidModel currentPolicy = default(GuidModel), List<GuidModel> allPolicies = default(List<GuidModel>), AssignBy? changePolicyAssignBy = default(AssignBy?), StartDateType? startDateType = default(StartDateType?), DateTime serviceSpecifyDate = default(DateTime), bool isEnableLeaseExpired = default(bool), int leaseDuration = default(int), ApiDurationType? leaseDurationType = default(ApiDurationType?), DateTime currentStartDate = default(DateTime), bool isAllowAutoCancel = default(bool))
+        /// <param name="isAllowAutoCancel">isAllowAutoCancel (default to false).</param>
+        public ChangeSitePolicySetting(GuidModel currentPolicy = default(GuidModel), List<GuidModel> allPolicies = default(List<GuidModel>), AssignBy? changePolicyAssignBy = default(AssignBy?), StartDateType? startDateType = default(StartDateType?), DateTime serviceSpecifyDate = default(DateTime), bool isEnableLeaseExpired = false, int leaseDuration = 0, ApiDurationType? leaseDurationType = default(ApiDurationType?), DateTime currentStartDate = default(DateTime), bool isAllowAutoCancel = false)
         {
             this.CurrentPolicy = currentPolicy;
             this.AllPolicies = allPolicies;

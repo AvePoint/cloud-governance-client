@@ -33,17 +33,17 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="subType">subType.</param>
         /// <param name="policyId">policyId.</param>
-        /// <param name="isApplyAllSetting">isApplyAllSetting.</param>
-        /// <param name="isApplyQuota">isApplyQuota.</param>
-        /// <param name="isApplySharing">isApplySharing.</param>
-        /// <param name="isApplyQuotaThreshold">isApplyQuotaThreshold.</param>
-        /// <param name="isApplyDeactivatedElection">isApplyDeactivatedElection.</param>
-        /// <param name="isApplyLifecycle">isApplyLifecycle.</param>
+        /// <param name="isApplyAllSetting">isApplyAllSetting (default to false).</param>
+        /// <param name="isApplyQuota">isApplyQuota (default to false).</param>
+        /// <param name="isApplySharing">isApplySharing (default to false).</param>
+        /// <param name="isApplyQuotaThreshold">isApplyQuotaThreshold (default to false).</param>
+        /// <param name="isApplyDeactivatedElection">isApplyDeactivatedElection (default to false).</param>
+        /// <param name="isApplyLifecycle">isApplyLifecycle (default to false).</param>
         /// <param name="lifecycleRenewalSetting">lifecycleRenewalSetting.</param>
         /// <param name="filter">filter.</param>
         /// <param name="selectedObjects">selectedObjects.</param>
-        /// <param name="hasOngoingTasks">hasOngoingTasks.</param>
-        public ApplyGroupPolicyModel(GroupPolicySubType? subType = default(GroupPolicySubType?), Guid policyId = default(Guid), bool isApplyAllSetting = default(bool), bool isApplyQuota = default(bool), bool isApplySharing = default(bool), bool isApplyQuotaThreshold = default(bool), bool isApplyDeactivatedElection = default(bool), bool isApplyLifecycle = default(bool), LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = default(bool))
+        /// <param name="hasOngoingTasks">hasOngoingTasks (default to false).</param>
+        public ApplyGroupPolicyModel(GroupPolicySubType? subType = default(GroupPolicySubType?), Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false)
         {
             this.SubType = subType;
             this.PolicyId = policyId;

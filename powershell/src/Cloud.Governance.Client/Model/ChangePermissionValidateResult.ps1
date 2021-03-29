@@ -30,28 +30,28 @@ function New-ChangePermissionValidateResult {
         ${ObjectUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsInherit},
+        ${IsInherit} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${InheritNodeType},
+        ${InheritNodeType} = "Container",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TopInheritUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${CheckType},
+        ${CheckType} = "Container",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Collections.Hashtable]
         ${UserMetadata},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMessage},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MessageCode}
+        ${MessageCode} = "None"
     )
 
     Process {

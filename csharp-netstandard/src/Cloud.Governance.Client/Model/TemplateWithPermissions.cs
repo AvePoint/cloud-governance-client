@@ -27,10 +27,10 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="TemplateWithPermissions" /> class.
         /// </summary>
         /// <param name="templateId">templateId.</param>
-        /// <param name="isUseCommon">isUseCommon.</param>
+        /// <param name="isUseCommon">isUseCommon (default to false).</param>
         /// <param name="userPermissions">userPermissions.</param>
         /// <param name="groupPermissions">groupPermissions.</param>
-        public TemplateWithPermissions(string templateId = default(string), bool isUseCommon = default(bool), List<ServiceUserWithPermissions> userPermissions = default(List<ServiceUserWithPermissions>), List<ServiceGroupWithPermissions> groupPermissions = default(List<ServiceGroupWithPermissions>))
+        public TemplateWithPermissions(string templateId = default(string), bool isUseCommon = false, List<ServiceUserWithPermissions> userPermissions = default(List<ServiceUserWithPermissions>), List<ServiceGroupWithPermissions> groupPermissions = default(List<ServiceGroupWithPermissions>))
         {
             this.TemplateId = templateId;
             this.IsUseCommon = isUseCommon;

@@ -18,16 +18,16 @@ function New-ListTemplate {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "NoListTemplate",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${BaseType},
+        ${BaseType} = "GenericList",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsCustomTemplate}
+        ${IsCustomTemplate} = $false
     )
 
     Process {

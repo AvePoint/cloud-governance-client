@@ -12,7 +12,7 @@ function New-LockSiteParameter {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LockType},
+        ${LockType} = "NoAccess",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Workspace}

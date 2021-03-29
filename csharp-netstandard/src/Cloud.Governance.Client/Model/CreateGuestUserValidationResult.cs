@@ -32,10 +32,10 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="CreateGuestUserValidationResult" /> class.
         /// </summary>
         /// <param name="groupName">groupName.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public CreateGuestUserValidationResult(string groupName = default(string), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public CreateGuestUserValidationResult(string groupName = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.GroupName = groupName;
             this.IsValid = isValid;

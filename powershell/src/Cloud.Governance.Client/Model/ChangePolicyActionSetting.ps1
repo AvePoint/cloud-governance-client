@@ -12,16 +12,16 @@ function New-ChangePolicyActionSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${StartDateType},
+        ${StartDateType} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${SpecifyDateTicks},
+        ${SpecifyDateTicks} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ChangePolicyConfig},
+        ${ChangePolicyConfig} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAllowAutoCancel}
+        ${IsAllowAutoCancel} = $false
     )
 
     Process {

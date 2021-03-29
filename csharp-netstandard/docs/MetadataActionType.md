@@ -1,4 +1,5 @@
 # Cloud.Governance.Client.Model.MetadataActionType
+Action types when changing metadata
 ## Properties
 
 Name | Type | Description | Notes

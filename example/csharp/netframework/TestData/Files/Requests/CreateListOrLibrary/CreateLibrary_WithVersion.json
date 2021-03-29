@@ -1,0 +1,12 @@
+{
+  "ServiceName": "ApiTest_Sample_Create List/Libary_Service",
+  "Summary": "ApiTest_Sample_CreateLibraryWithVersion",
+  "LibraryName": "ApiTest_Sample_CreateLibraryWithVersion_LibraryName",
+  "LibraryTitle": "ApiTest_Sample",
+  "WebUrl": "https://contoso.sharepoint.com/sites/FuSC1",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/FuSC1",
+  "Library": "Library",
+  "LibraryTemplate": "doclib",
+  "MajorVersionLimit": 100,
+  "MinorVersionLimit": 1
+}

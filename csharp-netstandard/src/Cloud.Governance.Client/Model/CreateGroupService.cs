@@ -124,21 +124,21 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupType">groupType.</param>
         /// <param name="tenantId">tenantId.</param>
         /// <param name="networkId">networkId.</param>
-        /// <param name="enableTeams">enableTeams.</param>
-        /// <param name="isPrivate">isPrivate.</param>
-        /// <param name="enableSubscribe">enableSubscribe.</param>
-        /// <param name="enableApplySiteDesign">enableApplySiteDesign.</param>
-        /// <param name="enableOutsideSender">enableOutsideSender.</param>
-        /// <param name="enableHideGroupMembership">enableHideGroupMembership.</param>
-        /// <param name="enableClassification">enableClassification.</param>
-        /// <param name="enableSensitivity">enableSensitivity.</param>
-        /// <param name="allowConfigureLeasePeriod">allowConfigureLeasePeriod.</param>
-        /// <param name="showNotebookLink">showNotebookLink.</param>
-        /// <param name="showConversationsLink">showConversationsLink.</param>
-        /// <param name="showFilesLink">showFilesLink.</param>
-        /// <param name="showTeamSiteLink">showTeamSiteLink.</param>
-        /// <param name="showPlannerLink">showPlannerLink.</param>
-        /// <param name="showYammerGroupLink">showYammerGroupLink.</param>
+        /// <param name="enableTeams">enableTeams (default to false).</param>
+        /// <param name="isPrivate">isPrivate (default to false).</param>
+        /// <param name="enableSubscribe">enableSubscribe (default to false).</param>
+        /// <param name="enableApplySiteDesign">enableApplySiteDesign (default to false).</param>
+        /// <param name="enableOutsideSender">enableOutsideSender (default to false).</param>
+        /// <param name="enableHideGroupMembership">enableHideGroupMembership (default to false).</param>
+        /// <param name="enableClassification">enableClassification (default to false).</param>
+        /// <param name="enableSensitivity">enableSensitivity (default to false).</param>
+        /// <param name="allowConfigureLeasePeriod">allowConfigureLeasePeriod (default to false).</param>
+        /// <param name="showNotebookLink">showNotebookLink (default to false).</param>
+        /// <param name="showConversationsLink">showConversationsLink (default to false).</param>
+        /// <param name="showFilesLink">showFilesLink (default to false).</param>
+        /// <param name="showTeamSiteLink">showTeamSiteLink (default to false).</param>
+        /// <param name="showPlannerLink">showPlannerLink (default to false).</param>
+        /// <param name="showYammerGroupLink">showYammerGroupLink (default to false).</param>
         /// <param name="classifications">classifications.</param>
         /// <param name="sensitivities">sensitivities.</param>
         /// <param name="siteDesigns">siteDesigns.</param>
@@ -148,8 +148,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="teamsSettings">teamsSettings.</param>
         /// <param name="groupNameConstructureSettings">groupNameConstructureSettings.</param>
         /// <param name="groupIdConstructureSettings">groupIdConstructureSettings.</param>
-        /// <param name="enableInstallApp">enableInstallApp.</param>
-        /// <param name="enableInstallPanel">enableInstallPanel.</param>
+        /// <param name="enableInstallApp">enableInstallApp (default to false).</param>
+        /// <param name="enableInstallPanel">enableInstallPanel (default to false).</param>
         /// <param name="templateSettings">templateSettings.</param>
         /// <param name="defaultPrimaryContact">defaultPrimaryContact.</param>
         /// <param name="defaultSecondaryContact">defaultSecondaryContact.</param>
@@ -174,37 +174,36 @@ namespace Cloud.Governance.Client.Model
         /// <param name="languageAssignBy">languageAssignBy.</param>
         /// <param name="secondaryContactAssignBy">secondaryContactAssignBy.</param>
         /// <param name="primaryContactAssignBy">primaryContactAssignBy.</param>
-        /// <param name="enableDynamicMembership">enableDynamicMembership.</param>
+        /// <param name="enableDynamicMembership">enableDynamicMembership (default to false).</param>
         /// <param name="hideGroupMembershipAssignBy">hideGroupMembershipAssignBy.</param>
         /// <param name="policyAssignBy">policyAssignBy.</param>
         /// <param name="siteDesignAssignBy">siteDesignAssignBy.</param>
         /// <param name="hubSiteAssignBy">hubSiteAssignBy.</param>
         /// <param name="multiGeoSetting">multiGeoSetting.</param>
         /// <param name="hubSiteSettings">hubSiteSettings.</param>
-        /// <param name="hasImpernastionUsers">hasImpernastionUsers.</param>
+        /// <param name="hasImpernastionUsers">hasImpernastionUsers (default to false).</param>
         /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
         /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="hideRequestSummary">hideRequestSummary.</param>
+        /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
         /// <param name="department">department.</param>
-        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps.</param>
+        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps (default to false).</param>
         /// <param name="departments">departments.</param>
         /// <param name="serviceContact">serviceContact.</param>
         /// <param name="serviceAdminContact">serviceAdminContact.</param>
-        /// <param name="approversContainManagerRole">approversContainManagerRole.</param>
+        /// <param name="approversContainManagerRole">approversContainManagerRole (default to false).</param>
         /// <param name="status">status.</param>
-        /// <param name="showServiceInCatalog">showServiceInCatalog.</param>
+        /// <param name="showServiceInCatalog">showServiceInCatalog (default to false).</param>
         /// <param name="customActions">customActions.</param>
         /// <param name="approvalProcessId">approvalProcessId.</param>
-        /// <param name="languageId">languageId.</param>
+        /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        /// <param name="details">details.</param>
-        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = default(bool), bool isPrivate = default(bool), bool enableSubscribe = default(bool), bool enableApplySiteDesign = default(bool), bool enableOutsideSender = default(bool), bool enableHideGroupMembership = default(bool), bool enableClassification = default(bool), bool enableSensitivity = default(bool), bool allowConfigureLeasePeriod = default(bool), bool showNotebookLink = default(bool), bool showConversationsLink = default(bool), bool showFilesLink = default(bool), bool showTeamSiteLink = default(bool), bool showPlannerLink = default(bool), bool showYammerGroupLink = default(bool), List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = default(bool), bool enableInstallPanel = default(bool), TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = default(bool), AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = default(bool), Guid? peoplePickerFilterProfileId = default(Guid?), CreateGroupRequest requestTemplate = default(CreateGroupRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
+        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = false, bool isPrivate = false, bool enableSubscribe = false, bool enableApplySiteDesign = false, bool enableOutsideSender = false, bool enableHideGroupMembership = false, bool enableClassification = false, bool enableSensitivity = false, bool allowConfigureLeasePeriod = false, bool showNotebookLink = false, bool showConversationsLink = false, bool showFilesLink = false, bool showTeamSiteLink = false, bool showPlannerLink = false, bool showYammerGroupLink = false, List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = false, bool enableInstallPanel = false, TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = false, AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = false, Guid? peoplePickerFilterProfileId = default(Guid?), CreateGroupRequest requestTemplate = default(CreateGroupRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = false, List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.GroupType = groupType;
             this.TenantId = tenantId;
@@ -288,7 +287,6 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
-            this.Details = details;
         }
 
         /// <summary>
@@ -685,12 +683,6 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Details
-        /// </summary>
-        [DataMember(Name = "details", EmitDefaultValue = true)]
-        public string Details { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -781,7 +773,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
-            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1197,11 +1188,6 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
-                ) && 
-                (
-                    this.Details == input.Details ||
-                    (this.Details != null &&
-                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -1336,8 +1322,6 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
-                if (this.Details != null)
-                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

@@ -1042,7 +1042,7 @@ namespace Cloud.Governance.Client.Api
         /// submit create site collection request
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <returns>Guid</returns>
         Guid SubmitCreateSiteRequest(CreateSiteRequest createSiteRequest);
 
@@ -1053,7 +1053,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <returns>ApiResponse of Guid</returns>
         ApiResponse<Guid> SubmitCreateSiteRequestWithHttpInfo(CreateSiteRequest createSiteRequest);
         /// <summary>
@@ -2588,7 +2588,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Guid</returns>
         System.Threading.Tasks.Task<Guid> SubmitCreateSiteRequestAsync(CreateSiteRequest createSiteRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -2600,7 +2600,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Guid)</returns>
         System.Threading.Tasks.Task<ApiResponse<Guid>> SubmitCreateSiteRequestWithHttpInfoAsync(CreateSiteRequest createSiteRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -10348,7 +10348,7 @@ namespace Cloud.Governance.Client.Api
         /// submit create site collection request 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <returns>Guid</returns>
         public Guid SubmitCreateSiteRequest(CreateSiteRequest createSiteRequest)
         {
@@ -10360,7 +10360,7 @@ namespace Cloud.Governance.Client.Api
         /// submit create site collection request 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <returns>ApiResponse of Guid</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Guid> SubmitCreateSiteRequestWithHttpInfo(CreateSiteRequest createSiteRequest)
         {
@@ -10415,7 +10415,7 @@ namespace Cloud.Governance.Client.Api
         /// submit create site collection request 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Guid</returns>
         public async System.Threading.Tasks.Task<Guid> SubmitCreateSiteRequestAsync(CreateSiteRequest createSiteRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -10428,7 +10428,7 @@ namespace Cloud.Governance.Client.Api
         /// submit create site collection request 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSiteRequest"></param>
+        /// <param name="createSiteRequest">CreateSiteRequest</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Guid)</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Guid>> SubmitCreateSiteRequestWithHttpInfoAsync(CreateSiteRequest createSiteRequest, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))

@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int** |  | [optional] 
+**Id** | **int** |  | [optional] [default to 0]
 **Name** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 

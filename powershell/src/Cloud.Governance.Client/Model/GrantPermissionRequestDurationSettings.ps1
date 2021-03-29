@@ -12,16 +12,16 @@ function New-GrantPermissionRequestDurationSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGrantTemporaryPermission},
+        ${IsGrantTemporaryPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGrantPermissionLevel},
+        ${IsGrantPermissionLevel} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExpirationType},
+        ${ExpirationType} = "Duration",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${DurationInterval},
+        ${DurationInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${DurationDateType},

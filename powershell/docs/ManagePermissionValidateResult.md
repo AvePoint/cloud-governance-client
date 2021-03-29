@@ -5,10 +5,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 **ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] 
-**EnableShareAnonymousLink** | **Boolean** |  | [optional] 
+**EnableShareAnonymousLink** | **Boolean** |  | [optional] [default to $false]
 **Object** | [**ManagePermissionSPObject**](ManagePermissionSPObject.md) |  | [optional] 
 **UserMetadata** | [**System.Collections.Hashtable**](UserInfo.md) |  | [optional] 
-**IsValid** | **Boolean** |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
 

@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_ChangeSiteSettings_HubSite_Service",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/PermissionTest1",
+  "HubSite": "sc1"
+}

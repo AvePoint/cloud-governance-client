@@ -28,12 +28,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="adminCenter">adminCenter.</param>
         /// <param name="valueType">valueType.</param>
-        /// <param name="enableValueSync">enableValueSync.</param>
-        /// <param name="enableRoleValueSync">enableRoleValueSync.</param>
-        /// <param name="value">value.</param>
+        /// <param name="enableValueSync">enableValueSync (default to false).</param>
+        /// <param name="enableRoleValueSync">enableRoleValueSync (default to false).</param>
+        /// <param name="value">Value of Lookup to SharePoint library/list metadata..</param>
         /// <param name="property">property.</param>
-        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess.</param>
-        public UserProfileMetadataSettings(string adminCenter = default(string), string valueType = default(string), bool enableValueSync = default(bool), bool enableRoleValueSync = default(bool), LookupValue value = default(LookupValue), string property = default(string), bool allowReferenceAsRoleInApprovalProcess = default(bool))
+        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess (default to false).</param>
+        public UserProfileMetadataSettings(string adminCenter = default(string), string valueType = default(string), bool enableValueSync = false, bool enableRoleValueSync = false, LookupValue value = default(LookupValue), string property = default(string), bool allowReferenceAsRoleInApprovalProcess = false)
         {
             this.AdminCenter = adminCenter;
             this.ValueType = valueType;
@@ -69,8 +69,9 @@ namespace Cloud.Governance.Client.Model
         public bool EnableRoleValueSync { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Value of Lookup to SharePoint library/list metadata.
         /// </summary>
+        /// <value>Value of Lookup to SharePoint library/list metadata.</value>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public LookupValue Value { get; set; }
 

@@ -18,22 +18,23 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// ArchiveWorkspaceParameter
+    /// archive workspace parameter
     /// </summary>
     [DataContract(Name = "ArchiveWorkspaceParameter")]
     public partial class ArchiveWorkspaceParameter : IEquatable<ArchiveWorkspaceParameter>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets WorkspaceType
+        /// workspace type
         /// </summary>
+        /// <value>workspace type</value>
         [DataMember(Name = "workspaceType", EmitDefaultValue = false)]
         public WorkspaceArchivedType? WorkspaceType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchiveWorkspaceParameter" /> class.
         /// </summary>
-        /// <param name="archiveProfile">archiveProfile.</param>
-        /// <param name="objectIds">objectIds.</param>
-        /// <param name="workspaceType">workspaceType.</param>
+        /// <param name="archiveProfile">WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id.</param>
+        /// <param name="objectIds">workspace ids.</param>
+        /// <param name="workspaceType">workspace type.</param>
         public ArchiveWorkspaceParameter(string archiveProfile = default(string), List<Guid> objectIds = default(List<Guid>), WorkspaceArchivedType? workspaceType = default(WorkspaceArchivedType?))
         {
             this.ArchiveProfile = archiveProfile;
@@ -42,14 +43,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ArchiveProfile
+        /// WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id
         /// </summary>
+        /// <value>WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id</value>
         [DataMember(Name = "archiveProfile", EmitDefaultValue = true)]
         public string ArchiveProfile { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjectIds
+        /// workspace ids
         /// </summary>
+        /// <value>workspace ids</value>
         [DataMember(Name = "objectIds", EmitDefaultValue = true)]
         public List<Guid> ObjectIds { get; set; }
 

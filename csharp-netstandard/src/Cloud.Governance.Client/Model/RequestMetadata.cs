@@ -18,14 +18,15 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// RequestMetadata
+    /// Metadata model of request.
     /// </summary>
     [DataContract(Name = "RequestMetadata")]
     public partial class RequestMetadata : IEquatable<RequestMetadata>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets Type
+        /// Type of metadata.
         /// </summary>
+        /// <value>Type of metadata.</value>
         [DataMember(Name = "type", EmitDefaultValue = true)]
         public MetadataFieldType? Type { get; set; }
 
@@ -38,30 +39,32 @@ namespace Cloud.Governance.Client.Model
             return false;
         }
         /// <summary>
-        /// Gets or Sets Action
+        /// Action of metadata, used in change workspace metadata service.
         /// </summary>
+        /// <value>Action of metadata, used in change workspace metadata service.</value>
         [DataMember(Name = "action", EmitDefaultValue = false)]
         public MetadataActionType? Action { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestMetadata" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="booleanValue">booleanValue.</param>
-        /// <param name="singleLineOrMultipleLineValue">singleLineOrMultipleLineValue.</param>
-        /// <param name="upsOrAzureAdValue">upsOrAzureAdValue.</param>
-        /// <param name="termsValue">termsValue.</param>
-        /// <param name="userValue">userValue.</param>
-        /// <param name="linkValue">linkValue.</param>
-        /// <param name="choiceValue">choiceValue.</param>
-        /// <param name="lookupListValue">lookupListValue.</param>
-        /// <param name="value">value.</param>
-        /// <param name="action">action.</param>
-        public RequestMetadata(Guid id = default(Guid), string name = default(string), bool? booleanValue = default(bool?), string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), string value = default(string), MetadataActionType? action = default(MetadataActionType?))
+        /// <param name="id">Id of metadata..</param>
+        /// <param name="name">Name of metadata..</param>
+        /// <param name="booleanValue">Value of Yes/No metadata. (default to false).</param>
+        /// <param name="singleLineOrMultipleLineValue">Value of Single/Multiple line of text metadata..</param>
+        /// <param name="upsOrAzureAdValue">Value of User Profile or Azure AD metadata..</param>
+        /// <param name="termsValue">Value of Managed metadata metadata..</param>
+        /// <param name="userValue">Value of Person or Group metadata..</param>
+        /// <param name="linkValue">Value of Hyperlink metadata..</param>
+        /// <param name="choiceValue">Value of Choice metadata..</param>
+        /// <param name="lookupListValue">Value of Lookup to SharePoint library/list metadata..</param>
+        /// <param name="value">Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot;.</param>
+        /// <param name="action">Action of metadata, used in change workspace metadata service..</param>
+        public RequestMetadata(Guid id = default(Guid), string name = default(string), bool? booleanValue = false, string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), string value = default(string), MetadataActionType? action = default(MetadataActionType?))
         {
             this.Id = id;
             this.Name = name;
-            this.BooleanValue = booleanValue;
+            // use default value if no "booleanValue" provided
+            this.BooleanValue = booleanValue ?? false;
             this.SingleLineOrMultipleLineValue = singleLineOrMultipleLineValue;
             this.UpsOrAzureAdValue = upsOrAzureAdValue;
             this.TermsValue = termsValue;
@@ -74,68 +77,79 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Id of metadata.
         /// </summary>
+        /// <value>Id of metadata.</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Name of metadata.
         /// </summary>
+        /// <value>Name of metadata.</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets BooleanValue
+        /// Value of Yes/No metadata.
         /// </summary>
+        /// <value>Value of Yes/No metadata.</value>
         [DataMember(Name = "booleanValue", EmitDefaultValue = true)]
         public bool? BooleanValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets SingleLineOrMultipleLineValue
+        /// Value of Single/Multiple line of text metadata.
         /// </summary>
+        /// <value>Value of Single/Multiple line of text metadata.</value>
         [DataMember(Name = "singleLineOrMultipleLineValue", EmitDefaultValue = true)]
         public string SingleLineOrMultipleLineValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets UpsOrAzureAdValue
+        /// Value of User Profile or Azure AD metadata.
         /// </summary>
+        /// <value>Value of User Profile or Azure AD metadata.</value>
         [DataMember(Name = "upsOrAzureAdValue", EmitDefaultValue = true)]
         public LookupValue UpsOrAzureAdValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets TermsValue
+        /// Value of Managed metadata metadata.
         /// </summary>
+        /// <value>Value of Managed metadata metadata.</value>
         [DataMember(Name = "termsValue", EmitDefaultValue = true)]
         public TermsValue TermsValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserValue
+        /// Value of Person or Group metadata.
         /// </summary>
+        /// <value>Value of Person or Group metadata.</value>
         [DataMember(Name = "userValue", EmitDefaultValue = true)]
         public List<ApiUser> UserValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets LinkValue
+        /// Value of Hyperlink metadata.
         /// </summary>
+        /// <value>Value of Hyperlink metadata.</value>
         [DataMember(Name = "linkValue", EmitDefaultValue = true)]
         public LinkValue LinkValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets ChoiceValue
+        /// Value of Choice metadata.
         /// </summary>
+        /// <value>Value of Choice metadata.</value>
         [DataMember(Name = "choiceValue", EmitDefaultValue = true)]
         public List<string> ChoiceValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets LookupListValue
+        /// Value of Lookup to SharePoint library/list metadata.
         /// </summary>
+        /// <value>Value of Lookup to SharePoint library/list metadata.</value>
         [DataMember(Name = "lookupListValue", EmitDefaultValue = true)]
         public LookupListValue LookupListValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets ValueString
+        /// Display value of metadata.
         /// </summary>
+        /// <value>Display value of metadata.</value>
         [DataMember(Name = "valueString", EmitDefaultValue = true)]
         public string ValueString { get; private set; }
 
@@ -149,8 +163,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot;
         /// </summary>
+        /// <value>Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot;</value>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public string Value { get; set; }
 

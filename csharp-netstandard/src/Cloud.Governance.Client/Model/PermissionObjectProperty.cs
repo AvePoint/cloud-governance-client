@@ -42,11 +42,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webServerRelativeUrl">webServerRelativeUrl.</param>
         /// <param name="listTitle">listTitle.</param>
         /// <param name="objectUrl">objectUrl.</param>
-        /// <param name="isInherit">isInherit.</param>
+        /// <param name="isInherit">isInherit (default to false).</param>
         /// <param name="inheritNodeType">inheritNodeType.</param>
         /// <param name="topInheritUrl">topInheritUrl.</param>
         /// <param name="checkType">checkType.</param>
-        public PermissionObjectProperty(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string objectUrl = default(string), bool isInherit = default(bool), TreeNodeType? inheritNodeType = default(TreeNodeType?), string topInheritUrl = default(string), TreeNodeType? checkType = default(TreeNodeType?))
+        public PermissionObjectProperty(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string objectUrl = default(string), bool isInherit = false, TreeNodeType? inheritNodeType = default(TreeNodeType?), string topInheritUrl = default(string), TreeNodeType? checkType = default(TreeNodeType?))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;

@@ -5,7 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IdentityName** | **string** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
-**IsGroup** | **bool** |  | [optional] 
+**IsGroup** | **bool** |  | [optional] [default to false]
+**AzureUserType** | **string** |  | [optional] 
 **Action** | **ManagePermissionAction** |  | [optional] 
 **ExternalUserType** | **ExternalUserType** |  | [optional] 
 

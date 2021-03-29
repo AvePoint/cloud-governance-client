@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsExpired** | **Boolean** |  | [optional] 
-**IsExtendEnabled** | **Boolean** |  | [optional] 
+**IsExpired** | **Boolean** |  | [optional] [default to $false]
+**IsExtendEnabled** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

@@ -29,10 +29,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="listUrl">listUrl.</param>
         /// <param name="parentUrl">parentUrl.</param>
         /// <param name="listTitle">listTitle.</param>
-        /// <param name="isDocumentLibrary">isDocumentLibrary.</param>
-        /// <param name="isEditTask">isEditTask.</param>
-        /// <param name="isFromQuestionnaire">isFromQuestionnaire.</param>
-        public ListValidationParameter(string listUrl = default(string), string parentUrl = default(string), string listTitle = default(string), bool isDocumentLibrary = default(bool), bool isEditTask = default(bool), bool isFromQuestionnaire = default(bool))
+        /// <param name="isDocumentLibrary">isDocumentLibrary (default to false).</param>
+        /// <param name="isEditTask">isEditTask (default to false).</param>
+        /// <param name="isFromQuestionnaire">isFromQuestionnaire (default to false).</param>
+        public ListValidationParameter(string listUrl = default(string), string parentUrl = default(string), string listTitle = default(string), bool isDocumentLibrary = false, bool isEditTask = false, bool isFromQuestionnaire = false)
         {
             this.ListUrl = listUrl;
             this.ParentUrl = parentUrl;

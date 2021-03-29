@@ -12,10 +12,10 @@ function New-SiteTitleSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${TitleAssignBy},
+        ${TitleAssignBy} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTitleConstructure},
+        ${EnableTitleConstructure} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${TitlePrefixes},

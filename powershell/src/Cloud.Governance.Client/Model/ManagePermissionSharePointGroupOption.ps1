@@ -12,43 +12,43 @@ function New-ManagePermissionSharePointGroupOption {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableCreateSPGroup},
+        ${IsEnableCreateSPGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableDeleteSPGroup},
+        ${IsEnableDeleteSPGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableManageGroupSettings},
+        ${IsEnableManageGroupSettings} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableManageGroupMembers},
+        ${IsEnableManageGroupMembers} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${GroupOwner},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupOwnerAssignBy},
+        ${GroupOwnerAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SpGroupViewType},
+        ${SpGroupViewType} = "GroupMembers",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SpGroupEditType},
+        ${SpGroupEditType} = "GroupOwner",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SpGroupOptionAssignBy},
+        ${SpGroupOptionAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAllowJoinOrLeaveRequest},
+        ${IsAllowJoinOrLeaveRequest} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAutoAcceptRequest},
+        ${IsAutoAcceptRequest} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SendMembershipRequestEmailAddress},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupRequestAssignBy}
+        ${GroupRequestAssignBy} = "BusinessUser"
     )
 
     Process {

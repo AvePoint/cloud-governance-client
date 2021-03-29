@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Int32** |  | [optional] 
+**Id** | **Int32** |  | [optional] [default to 0]
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Owner** | [**SPPrincipal**](SPPrincipal.md) |  | [optional] 
@@ -11,10 +11,10 @@ Name | Type | Description | Notes
 **PermissionLevels** | **String[]** |  | [optional] 
 **SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] 
 **SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] 
-**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] 
-**AutoAcceptRequestToJoinLeave** | **Boolean** |  | [optional] 
+**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] [default to $false]
+**AutoAcceptRequestToJoinLeave** | **Boolean** |  | [optional] [default to $false]
 **RequestToJoinLeaveEmailSetting** | **String** |  | [optional] 
-**IsTemporaryGroup** | **Boolean** |  | [optional] 
+**IsTemporaryGroup** | **Boolean** |  | [optional] [default to $false]
 **RoleID** | **String[]** |  | [optional] 
 
 ## Examples

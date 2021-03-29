@@ -5,39 +5,40 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IdentityName** | **String** |  | [optional] 
 **UserDisplayName** | **String** |  | [optional] 
-**DomainGroup** | **Boolean** |  | [optional] 
+**DomainGroup** | **Boolean** |  | [optional] [default to $false]
 **Department** | **String** |  | [optional] 
 **MobilePhone** | **String** |  | [optional] 
 **Manager** | **String** |  | [optional] 
 **Permission** | **String** |  | [optional] 
-**IsDeleted** | **Boolean** |  | [optional] 
+**IsDeleted** | **Boolean** |  | [optional] [default to $false]
 **SecurityToken** | **String** |  | [optional] 
-**UserType** | **Int32** |  | [optional] 
+**UserType** | **Int32** |  | [optional] [default to 0]
 **AzureUserType** | **String** |  | [optional] 
-**LegalPerson** | **Boolean** |  | [optional] 
+**LegalPerson** | **Boolean** |  | [optional] [default to $false]
 **AuthenticationType** | [**AuthenticationType**](AuthenticationType.md) |  | [optional] 
 **AdminCenterUrl** | **String** |  | [optional] 
 **InviteType** | [**InviteType**](InviteType.md) |  | [optional] 
 **Type** | **String** |  | [optional] 
-**IsRegisteredAosGroup** | **Boolean** |  | [optional] 
+**IsRegisteredAosGroup** | **Boolean** |  | [optional] [default to $false]
 **IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
-**IsAPIExceptional** | **Boolean** |  | [optional] 
+**IsAPIExceptional** | **Boolean** |  | [optional] [default to $false]
 **TenantId** | **String** |  | [optional] 
 **ObjectId** | **String** |  | [optional] 
-**Version** | **Int32** |  | [optional] 
+**Version** | **Int32** |  | [optional] [default to 0]
 **JobTitle** | **String** |  | [optional] 
 **UsageLocation** | **String** |  | [optional] 
 **PhysicalDeliveryOfficeName** | **String** |  | [optional] 
-**IsOtherTenantUser** | **Boolean** |  | [optional] 
+**IsOtherTenantUser** | **Boolean** |  | [optional] [default to $false]
 **NetworkId** | **String** |  | [optional] 
-**IsValidateByProfile** | **Boolean** |  | [optional] 
+**IsValidateByProfile** | **Boolean** |  | [optional] [default to $false]
 **ProxyAddresses** | **String[]** |  | [optional] 
-**Id** | **Int32** |  | [optional] 
+**PrincipalType** | [**PrincipalType**](PrincipalType.md) |  | [optional] 
+**Id** | **Int32** |  | [optional] [default to 0]
 **DisplayName** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **Email** | **String** |  | [optional] 
-**IsValid** | **Boolean** |  | [optional] 
-**ExistInAOS** | **Boolean** |  | [optional] 
+**IsValid** | **Boolean** |  | [optional] [default to $false]
+**ExistInAOS** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -72,6 +73,7 @@ $UserInfo = New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -NetworkId null `
  -IsValidateByProfile null `
  -ProxyAddresses null `
+ -PrincipalType null `
  -Id null `
  -DisplayName null `
  -Title null `

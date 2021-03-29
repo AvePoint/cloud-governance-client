@@ -12,7 +12,7 @@ function New-TreeNodeExtension {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Size},
+        ${Size} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${UserName},

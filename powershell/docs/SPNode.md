@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Type** | [**NodeType**](NodeType.md) |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
-**IsSelected** | **Boolean** |  | [optional] 
+**IsSelected** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

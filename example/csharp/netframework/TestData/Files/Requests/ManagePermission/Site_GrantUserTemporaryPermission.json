@@ -1,0 +1,8 @@
+{
+  "ServiceName": "Api_Sample_ManagePermission_Service",
+  "ObjectUrl": "https://contoso.sharepoint.com/sites/CreateSiteCollection028",
+  "Department": "IT",
+  "ObjectInfoLoginName": "Temporary group_{Permission expiration time}_",
+  "UserLoginName": "user@example.com",
+  "PermissionLevels": "Full Control;Contribute"
+}

@@ -36,7 +36,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SPGroup" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
+        /// <param name="id">id (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="owner">owner.</param>
@@ -44,12 +44,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="permissionLevels">permissionLevels.</param>
         /// <param name="spGroupViewType">spGroupViewType.</param>
         /// <param name="spGroupEditType">spGroupEditType.</param>
-        /// <param name="isAllowJoinOrLeaveRequest">isAllowJoinOrLeaveRequest.</param>
-        /// <param name="autoAcceptRequestToJoinLeave">autoAcceptRequestToJoinLeave.</param>
+        /// <param name="isAllowJoinOrLeaveRequest">isAllowJoinOrLeaveRequest (default to false).</param>
+        /// <param name="autoAcceptRequestToJoinLeave">autoAcceptRequestToJoinLeave (default to false).</param>
         /// <param name="requestToJoinLeaveEmailSetting">requestToJoinLeaveEmailSetting.</param>
-        /// <param name="isTemporaryGroup">isTemporaryGroup.</param>
+        /// <param name="isTemporaryGroup">isTemporaryGroup (default to false).</param>
         /// <param name="roleID">roleID.</param>
-        public SPGroup(int id = default(int), string name = default(string), string description = default(string), SPPrincipal owner = default(SPPrincipal), List<ApiUser> members = default(List<ApiUser>), List<string> permissionLevels = default(List<string>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), bool isAllowJoinOrLeaveRequest = default(bool), bool autoAcceptRequestToJoinLeave = default(bool), string requestToJoinLeaveEmailSetting = default(string), bool isTemporaryGroup = default(bool), List<string> roleID = default(List<string>))
+        public SPGroup(int id = 0, string name = default(string), string description = default(string), SPPrincipal owner = default(SPPrincipal), List<ApiUser> members = default(List<ApiUser>), List<string> permissionLevels = default(List<string>), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), bool isAllowJoinOrLeaveRequest = false, bool autoAcceptRequestToJoinLeave = false, string requestToJoinLeaveEmailSetting = default(string), bool isTemporaryGroup = false, List<string> roleID = default(List<string>))
         {
             this.Id = id;
             this.Name = name;

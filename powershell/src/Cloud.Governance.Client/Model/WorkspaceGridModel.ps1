@@ -21,13 +21,13 @@ function New-WorkspaceGridModel {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Active",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${StatusDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Site",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TypeDescription},
@@ -39,7 +39,7 @@ function New-WorkspaceGridModel {
         ${Email},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Privacy},
+        ${Privacy} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PrivacyDescription},
@@ -84,7 +84,7 @@ function New-WorkspaceGridModel {
         ${SecondaryContactDisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${HubType},
+        ${HubType} = "No",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AssociateHubTitle},
@@ -96,19 +96,19 @@ function New-WorkspaceGridModel {
         ${GeoLocationDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${StorageLimit},
+        ${StorageLimit} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Double]]
         ${StorageUsed},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SiteSharing},
+        ${SiteSharing} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SiteSharingDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupSharing},
+        ${GroupSharing} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupSharingDescription},
@@ -117,7 +117,7 @@ function New-WorkspaceGridModel {
         ${Classification},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ClaimStatus},
+        ${ClaimStatus} = "Unclaimed",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ClaimStatusDescription},
@@ -135,10 +135,10 @@ function New-WorkspaceGridModel {
         ${LastRenewalTime},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ApplyPolicyStatus},
+        ${ApplyPolicyStatus} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HasOngoingTasks},
+        ${HasOngoingTasks} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${HasOngoingTasksDescription},
@@ -165,7 +165,7 @@ function New-WorkspaceGridModel {
         ${NextRenewalDate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Phase},
+        ${Phase} = "Confirmed",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PhaseDescription},

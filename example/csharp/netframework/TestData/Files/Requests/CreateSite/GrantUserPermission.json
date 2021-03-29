@@ -1,0 +1,8 @@
+{
+  "ServiceName": "Api_Sample_CreateSC_Permission",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "Department": "IT",
+  "GrantedUserLoginName": "user@example.com",
+  "GrantedUserPermissionLevelNames": "View Only;Design"
+}

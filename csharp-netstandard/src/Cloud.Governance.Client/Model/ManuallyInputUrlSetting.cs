@@ -36,15 +36,15 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManuallyInputUrlSetting" /> class.
         /// </summary>
-        /// <param name="enableConstructUrl">enableConstructUrl.</param>
-        /// <param name="enableUrlValidation">enableUrlValidation.</param>
+        /// <param name="enableConstructUrl">enableConstructUrl (default to false).</param>
+        /// <param name="enableUrlValidation">enableUrlValidation (default to false).</param>
         /// <param name="constructUrlAssignBy">constructUrlAssignBy.</param>
         /// <param name="validationRule">validationRule.</param>
         /// <param name="rules">rules.</param>
         /// <param name="suffix">suffix.</param>
         /// <param name="connection">connection.</param>
         /// <param name="contructUrlAssignBy">contructUrlAssignBy.</param>
-        public ManuallyInputUrlSetting(bool enableConstructUrl = default(bool), bool enableUrlValidation = default(bool), AssignBy? constructUrlAssignBy = default(AssignBy?), TextValidationRuleRef validationRule = default(TextValidationRuleRef), List<string> rules = default(List<string>), string suffix = default(string), string connection = default(string), AssignBy? contructUrlAssignBy = default(AssignBy?))
+        public ManuallyInputUrlSetting(bool enableConstructUrl = false, bool enableUrlValidation = false, AssignBy? constructUrlAssignBy = default(AssignBy?), TextValidationRuleRef validationRule = default(TextValidationRuleRef), List<string> rules = default(List<string>), string suffix = default(string), string connection = default(string), AssignBy? contructUrlAssignBy = default(AssignBy?))
         {
             this.EnableConstructUrl = enableConstructUrl;
             this.EnableUrlValidation = enableUrlValidation;

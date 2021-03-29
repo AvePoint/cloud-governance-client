@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] 
+**IsEnabled** | **Boolean** |  | [optional] [default to $false]
 **DefaultValue** | **String** |  | [optional] 
 **SelectedItems** | **String[]** |  | [optional] 
 **AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 

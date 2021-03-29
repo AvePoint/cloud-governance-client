@@ -12,7 +12,7 @@ function New-WelcomeEmailSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Enabled},
+        ${Enabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Subject},

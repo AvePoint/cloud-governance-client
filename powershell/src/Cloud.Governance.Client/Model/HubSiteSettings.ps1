@@ -12,10 +12,10 @@ function New-HubSiteSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Enabled},
+        ${Enabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "ConvertToHubSite",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AssociatedHubSiteId},

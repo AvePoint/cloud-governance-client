@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LanguageId** | **int** |  | [optional] 
+**LanguageId** | **int** |  | [optional] [default to 0]
 **DefaultTemplate** | **string** |  | [optional] 
 **Templates** | [**List&lt;SiteTemplate&gt;**](SiteTemplate.md) |  | [optional] 
 

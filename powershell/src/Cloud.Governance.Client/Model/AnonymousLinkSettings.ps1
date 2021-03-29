@@ -12,7 +12,7 @@ function New-AnonymousLinkSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Permisssion},
+        ${Permisssion} = "View",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${ExpirationDate}

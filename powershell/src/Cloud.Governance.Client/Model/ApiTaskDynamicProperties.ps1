@@ -69,6 +69,9 @@ function New-ApiTaskDynamicProperties {
         ${IsTeam},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
+        ${IsYammer},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
         ${GroupOwnersStr},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
@@ -100,6 +103,7 @@ function New-ApiTaskDynamicProperties {
             "SiteDescription" = ${SiteDescription}
             "Requester" = ${Requester}
             "IsTeam" = ${IsTeam}
+            "IsYammer" = ${IsYammer}
             "GroupOwnersStr" = ${GroupOwnersStr}
             "TenantId" = ${TenantId}
         }
@@ -124,7 +128,7 @@ function ConvertFrom-JsonToApiTaskDynamicProperties {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApiTaskDynamicProperties
-        $AllProperties = $("None", "PrimaryContact", "SecondaryContact", "SiteId", "SiteUrl", "GroupName", "ExpirationDate", "GroupOwners", "AutoTaskActionHistories", "InactivityThresholdDate", "GroupEmail", "GroupId", "PolicyName", "PrimaryAdministrator", "SiteTemplate", "SiteTitle", "SiteDescription", "Requester", "IsTeam", "GroupOwnersStr", "TenantId")
+        $AllProperties = $("None", "PrimaryContact", "SecondaryContact", "SiteId", "SiteUrl", "GroupName", "ExpirationDate", "GroupOwners", "AutoTaskActionHistories", "InactivityThresholdDate", "GroupEmail", "GroupId", "PolicyName", "PrimaryAdministrator", "SiteTemplate", "SiteTitle", "SiteDescription", "Requester", "IsTeam", "IsYammer", "GroupOwnersStr", "TenantId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -245,6 +249,12 @@ function ConvertFrom-JsonToApiTaskDynamicProperties {
             $IsTeam = $JsonParameters.PSobject.Properties["IsTeam"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsYammer"))) { #optional property not found
+            $IsYammer = $null
+        } else {
+            $IsYammer = $JsonParameters.PSobject.Properties["IsYammer"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "GroupOwnersStr"))) { #optional property not found
             $GroupOwnersStr = $null
         } else {
@@ -277,6 +287,7 @@ function ConvertFrom-JsonToApiTaskDynamicProperties {
             "SiteDescription" = ${SiteDescription}
             "Requester" = ${Requester}
             "IsTeam" = ${IsTeam}
+            "IsYammer" = ${IsYammer}
             "GroupOwnersStr" = ${GroupOwnersStr}
             "TenantId" = ${TenantId}
         }

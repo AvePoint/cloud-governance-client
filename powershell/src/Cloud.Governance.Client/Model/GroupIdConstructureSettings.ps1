@@ -12,19 +12,19 @@ function New-GroupIdConstructureSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${RuleType},
+        ${RuleType} = "ConstructGroupId",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAutoSequenceNumber},
+        ${EnableAutoSequenceNumber} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AutoSequenceNumber},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Enabled},
+        ${Enabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AssignBy},
+        ${AssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Prefixs},

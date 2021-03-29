@@ -18,10 +18,10 @@ function New-UserProfileMetadataSettings {
         ${ValueType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableValueSync},
+        ${EnableValueSync} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableRoleValueSync},
+        ${EnableRoleValueSync} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Value},
@@ -30,7 +30,7 @@ function New-UserProfileMetadataSettings {
         ${Property},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowReferenceAsRoleInApprovalProcess}
+        ${AllowReferenceAsRoleInApprovalProcess} = $false
     )
 
     Process {

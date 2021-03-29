@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Type** | [**SPListTemplateType**](SPListTemplateType.md) |  | [optional] 
 **BaseType** | [**SPBaseType**](SPBaseType.md) |  | [optional] 
 **Name** | **String** |  | [optional] 
-**IsCustomTemplate** | **Boolean** |  | [optional] 
+**IsCustomTemplate** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

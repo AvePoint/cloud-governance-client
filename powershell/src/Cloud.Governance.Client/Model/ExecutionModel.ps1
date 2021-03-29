@@ -12,13 +12,13 @@ function New-ExecutionModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Enabled},
+        ${Enabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${WebServiceAddress},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${WebServiceAuthenticationType},
+        ${WebServiceAuthenticationType} = "Anonymous",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${WebServiceAppClientId},

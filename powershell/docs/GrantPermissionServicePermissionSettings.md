@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**IsGrantPermissionDirectly** | **Boolean** |  | [optional] 
-**EnableExcludePermissionLevles** | **Boolean** |  | [optional] 
+**IsGrantPermissionDirectly** | **Boolean** |  | [optional] [default to $false]
+**EnableExcludePermissionLevles** | **Boolean** |  | [optional] [default to $false]
 **ExcludedPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 
 ## Examples

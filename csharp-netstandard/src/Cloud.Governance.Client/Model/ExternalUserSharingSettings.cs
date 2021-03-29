@@ -31,10 +31,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalUserSharingSettings" /> class.
         /// </summary>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="sharingType">sharingType.</param>
         /// <param name="anonymousLinkSettings">anonymousLinkSettings.</param>
-        public ExternalUserSharingSettings(bool enabled = default(bool), ExternalUserSharingType? sharingType = default(ExternalUserSharingType?), AnonymousLinkSettings anonymousLinkSettings = default(AnonymousLinkSettings))
+        public ExternalUserSharingSettings(bool enabled = false, ExternalUserSharingType? sharingType = default(ExternalUserSharingType?), AnonymousLinkSettings anonymousLinkSettings = default(AnonymousLinkSettings))
         {
             this.Enabled = enabled;
             this.SharingType = sharingType;

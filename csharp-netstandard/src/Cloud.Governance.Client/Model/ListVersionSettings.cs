@@ -32,14 +32,14 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ListVersionSettings" /> class.
         /// </summary>
         /// <param name="listType">listType.</param>
-        /// <param name="enableMajorVersions">enableMajorVersions.</param>
-        /// <param name="enableMajorAndMinorVersions">enableMajorAndMinorVersions.</param>
-        /// <param name="enableMajorVersionLimit">enableMajorVersionLimit.</param>
-        /// <param name="majorVersionLimit">majorVersionLimit.</param>
-        /// <param name="enableMinorVersionLimit">enableMinorVersionLimit.</param>
-        /// <param name="minorVersionsLimit">minorVersionsLimit.</param>
-        /// <param name="requireContentApproval">requireContentApproval.</param>
-        public ListVersionSettings(ListType? listType = default(ListType?), bool enableMajorVersions = default(bool), bool enableMajorAndMinorVersions = default(bool), bool enableMajorVersionLimit = default(bool), int majorVersionLimit = default(int), bool enableMinorVersionLimit = default(bool), int minorVersionsLimit = default(int), bool requireContentApproval = default(bool))
+        /// <param name="enableMajorVersions">enableMajorVersions (default to false).</param>
+        /// <param name="enableMajorAndMinorVersions">enableMajorAndMinorVersions (default to false).</param>
+        /// <param name="enableMajorVersionLimit">enableMajorVersionLimit (default to false).</param>
+        /// <param name="majorVersionLimit">majorVersionLimit (default to 0).</param>
+        /// <param name="enableMinorVersionLimit">enableMinorVersionLimit (default to false).</param>
+        /// <param name="minorVersionsLimit">minorVersionsLimit (default to 0).</param>
+        /// <param name="requireContentApproval">requireContentApproval (default to false).</param>
+        public ListVersionSettings(ListType? listType = default(ListType?), bool enableMajorVersions = false, bool enableMajorAndMinorVersions = false, bool enableMajorVersionLimit = false, int majorVersionLimit = 0, bool enableMinorVersionLimit = false, int minorVersionsLimit = 0, bool requireContentApproval = false)
         {
             this.ListType = listType;
             this.EnableMajorVersions = enableMajorVersions;

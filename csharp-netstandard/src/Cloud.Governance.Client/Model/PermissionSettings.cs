@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionSettings" /> class.
         /// </summary>
-        /// <param name="allowGrantUserPermission">allowGrantUserPermission.</param>
-        /// <param name="preventGrantSpecificPermissionLevels">preventGrantSpecificPermissionLevels.</param>
+        /// <param name="allowGrantUserPermission">allowGrantUserPermission (default to false).</param>
+        /// <param name="preventGrantSpecificPermissionLevels">preventGrantSpecificPermissionLevels (default to false).</param>
         /// <param name="preventPermissionLevles">preventPermissionLevles.</param>
-        public PermissionSettings(bool allowGrantUserPermission = default(bool), bool preventGrantSpecificPermissionLevels = default(bool), List<PermissionLevel> preventPermissionLevles = default(List<PermissionLevel>))
+        public PermissionSettings(bool allowGrantUserPermission = false, bool preventGrantSpecificPermissionLevels = false, List<PermissionLevel> preventPermissionLevles = default(List<PermissionLevel>))
         {
             this.AllowGrantUserPermission = allowGrantUserPermission;
             this.PreventGrantSpecificPermissionLevels = preventGrantSpecificPermissionLevels;

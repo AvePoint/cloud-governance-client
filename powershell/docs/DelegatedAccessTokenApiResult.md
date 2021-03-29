@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Value** | [**DelegatedAccessToken**](DelegatedAccessToken.md) |  | [optional] 
-**IsSuccess** | **Boolean** |  | [optional] 
+**IsSuccess** | **Boolean** |  | [optional] [default to $false]
 **ErrorMsg** | **String** |  | [optional] 
 
 ## Examples

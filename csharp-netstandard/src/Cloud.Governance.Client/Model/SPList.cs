@@ -30,14 +30,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="title">title.</param>
         /// <param name="url">url.</param>
         /// <param name="description">description.</param>
-        /// <param name="isLibrary">isLibrary.</param>
-        /// <param name="isOnQuickLaunch">isOnQuickLaunch.</param>
-        /// <param name="isEnableModeration">isEnableModeration.</param>
-        /// <param name="isEnableVersioning">isEnableVersioning.</param>
-        /// <param name="isEnableMinorVersion">isEnableMinorVersion.</param>
-        /// <param name="majorVersionLimit">majorVersionLimit.</param>
-        /// <param name="majorWithMinorVersionsLimit">majorWithMinorVersionsLimit.</param>
-        public SPList(Guid id = default(Guid), string title = default(string), string url = default(string), string description = default(string), bool isLibrary = default(bool), bool isOnQuickLaunch = default(bool), bool isEnableModeration = default(bool), bool isEnableVersioning = default(bool), bool isEnableMinorVersion = default(bool), int majorVersionLimit = default(int), int majorWithMinorVersionsLimit = default(int))
+        /// <param name="isLibrary">isLibrary (default to false).</param>
+        /// <param name="isOnQuickLaunch">isOnQuickLaunch (default to false).</param>
+        /// <param name="isEnableModeration">isEnableModeration (default to false).</param>
+        /// <param name="isEnableVersioning">isEnableVersioning (default to false).</param>
+        /// <param name="isEnableMinorVersion">isEnableMinorVersion (default to false).</param>
+        /// <param name="majorVersionLimit">majorVersionLimit (default to 0).</param>
+        /// <param name="majorWithMinorVersionsLimit">majorWithMinorVersionsLimit (default to 0).</param>
+        public SPList(Guid id = default(Guid), string title = default(string), string url = default(string), string description = default(string), bool isLibrary = false, bool isOnQuickLaunch = false, bool isEnableModeration = false, bool isEnableVersioning = false, bool isEnableMinorVersion = false, int majorVersionLimit = 0, int majorWithMinorVersionsLimit = 0)
         {
             this.Id = id;
             this.Title = title;

@@ -27,13 +27,13 @@ function New-MetadataGridModel {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${FieldType},
+        ${FieldType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${MetadataValue},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ShowInReportType},
+        ${ShowInReportType} = "DoNotDisplayInReport",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ShowInReportTypeDescription},

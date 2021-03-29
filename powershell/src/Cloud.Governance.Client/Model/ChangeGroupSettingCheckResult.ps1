@@ -30,34 +30,34 @@ function New-ChangeGroupSettingCheckResult {
         ${GroupDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableSubscribeMembers},
+        ${IsEnableSubscribeMembers} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableOutsideSender},
+        ${IsEnableOutsideSender} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Classification},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsTeamsEnabled},
+        ${IsTeamsEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableManageGroupSharing},
+        ${EnableManageGroupSharing} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInviteAuthorizedGuestUser},
+        ${EnableInviteAuthorizedGuestUser} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInviteGuestUser},
+        ${EnableInviteGuestUser} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableDynamicMembership},
+        ${EnableDynamicMembership} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTeamCollaboration},
+        ${EnableTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsHubSite},
+        ${IsHubSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AssociatedHubSiteId},
@@ -69,13 +69,13 @@ function New-ChangeGroupSettingCheckResult {
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableChangeMembershipType},
+        ${EnableChangeMembershipType} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${YammerGroupInfo},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${NetworkId},
@@ -84,13 +84,13 @@ function New-ChangeGroupSettingCheckResult {
         ${GroupObjectId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMessage},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MessageCode}
+        ${MessageCode} = "None"
     )
 
     Process {

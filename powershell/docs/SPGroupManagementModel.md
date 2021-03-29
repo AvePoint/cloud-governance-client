@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Int32** |  | [optional] 
+**Id** | **Int32** |  | [optional] [default to 0]
 **Name** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Owner** | [**ApiUser**](ApiUser.md) |  | [optional] 
@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] 
 **Permissions** | **String[]** |  | [optional] 
 **Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] 
-**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] 
-**IsAutoAcceptRequest** | **Boolean** |  | [optional] 
+**IsAllowJoinOrLeaveRequest** | **Boolean** |  | [optional] [default to $false]
+**IsAutoAcceptRequest** | **Boolean** |  | [optional] [default to $false]
 **SendMembershipRequestEmailAddress** | **String** |  | [optional] 
-**IsTemporaryGroup** | **Boolean** |  | [optional] 
+**IsTemporaryGroup** | **Boolean** |  | [optional] [default to $false]
 **RoleID** | **String[]** |  | [optional] 
 
 ## Examples

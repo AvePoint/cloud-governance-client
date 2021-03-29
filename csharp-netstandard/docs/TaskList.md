@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **Guid** |  | [optional] 
 **Title** | **string** |  | [optional] 
 **Requester** | **string** |  | [optional] 
-**RequestTicketNumber** | **int** |  | [optional] 
+**RequestTicketNumber** | **int** |  | [optional] [default to 0]
 **RequesterDisplayName** | **string** |  | [optional] 
 **DueDate** | **DateTime?** |  | [optional] 
 **DueDateType** | **DueDateType** |  | [optional] 

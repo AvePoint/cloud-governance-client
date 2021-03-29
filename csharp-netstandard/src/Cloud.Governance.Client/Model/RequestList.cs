@@ -46,18 +46,18 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceName">serviceName.</param>
         /// <param name="serviceType">serviceType.</param>
         /// <param name="serviceTypeDescription">serviceTypeDescription.</param>
-        /// <param name="ticketNumber">ticketNumber.</param>
+        /// <param name="ticketNumber">ticketNumber (default to 0).</param>
         /// <param name="summary">summary.</param>
         /// <param name="status">status.</param>
         /// <param name="processStatus">processStatus.</param>
         /// <param name="statusDescription">statusDescription.</param>
         /// <param name="modified">modified.</param>
-        /// <param name="submitStatus">submitStatus.</param>
+        /// <param name="submitStatus">submitStatus (default to 0).</param>
         /// <param name="assigned">assigned.</param>
         /// <param name="serviceAdmin">serviceAdmin.</param>
-        /// <param name="enabledCopy">enabledCopy.</param>
+        /// <param name="enabledCopy">enabledCopy (default to false).</param>
         /// <param name="questionnaireId">questionnaireId.</param>
-        public RequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), int ticketNumber = default(int), string summary = default(string), RequestProgressStatus? status = default(RequestProgressStatus?), ApiRequestProgressStatus? processStatus = default(ApiRequestProgressStatus?), string statusDescription = default(string), DateTime modified = default(DateTime), int submitStatus = default(int), string assigned = default(string), string serviceAdmin = default(string), bool enabledCopy = default(bool), Guid questionnaireId = default(Guid))
+        public RequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), int ticketNumber = 0, string summary = default(string), RequestProgressStatus? status = default(RequestProgressStatus?), ApiRequestProgressStatus? processStatus = default(ApiRequestProgressStatus?), string statusDescription = default(string), DateTime modified = default(DateTime), int submitStatus = 0, string assigned = default(string), string serviceAdmin = default(string), bool enabledCopy = false, Guid questionnaireId = default(Guid))
         {
             this.Id = id;
             this.ServiceId = serviceId;

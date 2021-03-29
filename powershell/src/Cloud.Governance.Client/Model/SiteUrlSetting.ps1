@@ -12,7 +12,7 @@ function New-SiteUrlSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "ManualInputUrl",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ManuallyInputSetting},

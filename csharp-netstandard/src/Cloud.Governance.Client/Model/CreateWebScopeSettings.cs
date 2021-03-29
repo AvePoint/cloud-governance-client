@@ -38,13 +38,13 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="restrictParentUrl">restrictParentUrl.</param>
         /// <param name="scopeType">scopeType.</param>
-        /// <param name="useTitleInUrl">useTitleInUrl.</param>
-        /// <param name="enableUrlValidation">enableUrlValidation.</param>
+        /// <param name="useTitleInUrl">useTitleInUrl (default to false).</param>
+        /// <param name="enableUrlValidation">enableUrlValidation (default to false).</param>
         /// <param name="textValidationRule">textValidationRule.</param>
         /// <param name="selectedNodes">selectedNodes.</param>
-        /// <param name="autoPopulateUrlWithSPContext">autoPopulateUrlWithSPContext.</param>
+        /// <param name="autoPopulateUrlWithSPContext">autoPopulateUrlWithSPContext (default to false).</param>
         /// <param name="autoPopulateUrlWithSPContextAssignBy">autoPopulateUrlWithSPContextAssignBy.</param>
-        public CreateWebScopeSettings(string restrictParentUrl = default(string), ScopeType? scopeType = default(ScopeType?), bool useTitleInUrl = default(bool), bool enableUrlValidation = default(bool), TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), List<SPNode> selectedNodes = default(List<SPNode>), bool autoPopulateUrlWithSPContext = default(bool), AssignBy? autoPopulateUrlWithSPContextAssignBy = default(AssignBy?))
+        public CreateWebScopeSettings(string restrictParentUrl = default(string), ScopeType? scopeType = default(ScopeType?), bool useTitleInUrl = false, bool enableUrlValidation = false, TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), List<SPNode> selectedNodes = default(List<SPNode>), bool autoPopulateUrlWithSPContext = false, AssignBy? autoPopulateUrlWithSPContextAssignBy = default(AssignBy?))
         {
             this.RestrictParentUrl = restrictParentUrl;
             this.ScopeType = scopeType;

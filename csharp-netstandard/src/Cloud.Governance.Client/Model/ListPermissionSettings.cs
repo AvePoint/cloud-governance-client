@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPermissionSettings" /> class.
         /// </summary>
-        /// <param name="stopInheritingPermissions">stopInheritingPermissions.</param>
+        /// <param name="stopInheritingPermissions">stopInheritingPermissions (default to false).</param>
         /// <param name="userPermissions">userPermissions.</param>
         /// <param name="groupPermissions">groupPermissions.</param>
-        public ListPermissionSettings(bool stopInheritingPermissions = default(bool), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>))
+        public ListPermissionSettings(bool stopInheritingPermissions = false, List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>))
         {
             this.StopInheritingPermissions = stopInheritingPermissions;
             this.UserPermissions = userPermissions;

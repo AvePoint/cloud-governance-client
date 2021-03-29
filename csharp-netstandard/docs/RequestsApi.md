@@ -4769,7 +4769,7 @@ namespace Example
 
             var apiInstance = new RequestsApi(config);
 
-            var createSiteRequest = new CreateSiteRequest(); // CreateSiteRequest | 
+            var createSiteRequest = new CreateSiteRequest(); // CreateSiteRequest | CreateSiteRequest
 
             try
             {
@@ -4792,7 +4792,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createSiteRequest** | [**CreateSiteRequest**](CreateSiteRequest.md)|  | 
+ **createSiteRequest** | [**CreateSiteRequest**](CreateSiteRequest.md)| CreateSiteRequest | 
 
 ### Return type
 

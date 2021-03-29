@@ -26,11 +26,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateListUrlSettings" /> class.
         /// </summary>
-        /// <param name="enableContructUrl">enableContructUrl.</param>
+        /// <param name="enableContructUrl">enableContructUrl (default to false).</param>
         /// <param name="contructUrlSetting">contructUrlSetting.</param>
-        /// <param name="enableUrlValidation">enableUrlValidation.</param>
+        /// <param name="enableUrlValidation">enableUrlValidation (default to false).</param>
         /// <param name="textValidationRule">textValidationRule.</param>
-        public CreateListUrlSettings(bool enableContructUrl = default(bool), ContructUrlSetting contructUrlSetting = default(ContructUrlSetting), bool enableUrlValidation = default(bool), TextValidationRuleRef textValidationRule = default(TextValidationRuleRef))
+        public CreateListUrlSettings(bool enableContructUrl = false, ContructUrlSetting contructUrlSetting = default(ContructUrlSetting), bool enableUrlValidation = false, TextValidationRuleRef textValidationRule = default(TextValidationRuleRef))
         {
             this.EnableContructUrl = enableContructUrl;
             this.ContructUrlSetting = contructUrlSetting;

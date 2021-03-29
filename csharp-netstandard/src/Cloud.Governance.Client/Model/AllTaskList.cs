@@ -51,7 +51,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="requester">requester.</param>
         /// <param name="requesterLoginName">requesterLoginName.</param>
         /// <param name="requesterDisplayName">requesterDisplayName.</param>
-        /// <param name="requestTicketNumber">requestTicketNumber.</param>
+        /// <param name="requestTicketNumber">requestTicketNumber (default to 0).</param>
         /// <param name="dueDate">dueDate.</param>
         /// <param name="dueDateType">dueDateType.</param>
         /// <param name="serviceType">serviceType.</param>
@@ -60,11 +60,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="taskType">taskType.</param>
         /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
-        /// <param name="isApproveTask">isApproveTask.</param>
+        /// <param name="isApproveTask">isApproveTask (default to false).</param>
         /// <param name="assignee">assignee.</param>
         /// <param name="assigneeLoginName">assigneeLoginName.</param>
         /// <param name="assigneeDisplayName">assigneeDisplayName.</param>
-        public AllTaskList(Guid id = default(Guid), string title = default(string), string requester = default(string), string requesterLoginName = default(string), string requesterDisplayName = default(string), int requestTicketNumber = default(int), DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string), bool isApproveTask = default(bool), string assignee = default(string), string assigneeLoginName = default(string), string assigneeDisplayName = default(string))
+        public AllTaskList(Guid id = default(Guid), string title = default(string), string requester = default(string), string requesterLoginName = default(string), string requesterDisplayName = default(string), int requestTicketNumber = 0, DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string), bool isApproveTask = false, string assignee = default(string), string assigneeLoginName = default(string), string assigneeDisplayName = default(string))
         {
             this.Id = id;
             this.Title = title;

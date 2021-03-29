@@ -18,7 +18,7 @@ function New-ArchiveWorkspaceParameter {
         ${ObjectIds},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${WorkspaceType}
+        ${WorkspaceType} = "Site"
     )
 
     Process {

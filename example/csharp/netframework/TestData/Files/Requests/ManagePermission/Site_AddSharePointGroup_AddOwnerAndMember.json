@@ -1,0 +1,10 @@
+{
+  "ServiceName": "Api_Sample_ManagePermission_Service",
+  "ObjectUrl": "https://contoso.sharepoint.com/sites/CreateSiteCollection028",
+  "Department": "IT",
+  "SpGroupNameChangeValue": "Api_Example_Group",
+  "SpGroupNameOriginalValue": "Api_Example_Group",
+  "SpGroupDescription": "the group is crea for testing manage permision add group",
+  "SpGroupOwnerLoginName": "group@example.com",
+  "SpGroupMemberIdentityName": "group1@example.com;group2@example.com"
+}

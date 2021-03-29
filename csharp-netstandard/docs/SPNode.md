@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Type** | **NodeType** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 
-**IsSelected** | **bool** |  | [optional] 
+**IsSelected** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

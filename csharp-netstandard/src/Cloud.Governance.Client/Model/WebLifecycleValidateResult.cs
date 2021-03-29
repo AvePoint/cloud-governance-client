@@ -36,10 +36,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webRelativeUrl">webRelativeUrl.</param>
         /// <param name="siteId">siteId.</param>
         /// <param name="siteUrl">siteUrl.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public WebLifecycleValidateResult(Guid webId = default(Guid), string webUrl = default(string), string webRelativeUrl = default(string), Guid siteId = default(Guid), string siteUrl = default(string), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public WebLifecycleValidateResult(Guid webId = default(Guid), string webUrl = default(string), string webRelativeUrl = default(string), Guid siteId = default(Guid), string siteUrl = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.WebId = webId;
             this.WebUrl = webUrl;

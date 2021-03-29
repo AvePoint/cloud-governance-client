@@ -51,11 +51,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContactEmail">primaryContactEmail.</param>
         /// <param name="phase">phase.</param>
         /// <param name="phaseDescription">phaseDescription.</param>
-        /// <param name="isCurrentRenewer">isCurrentRenewer.</param>
+        /// <param name="isCurrentRenewer">isCurrentRenewer (default to false).</param>
         /// <param name="createdTime">createdTime.</param>
         /// <param name="status">status.</param>
         /// <param name="autoImportProfileId">autoImportProfileId.</param>
-        /// <param name="pendingAction">pendingAction.</param>
+        /// <param name="pendingAction">pendingAction (default to 0).</param>
         /// <param name="secondaryContact">secondaryContact.</param>
         /// <param name="secondaryContactEmail">secondaryContactEmail.</param>
         /// <param name="policy">policy.</param>
@@ -70,10 +70,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="storageLimit">storageLimit.</param>
         /// <param name="storageUsage">storageUsage.</param>
         /// <param name="classification">classification.</param>
-        /// <param name="privacy">privacy.</param>
+        /// <param name="privacy">privacy (default to false).</param>
         /// <param name="privacyDescription">privacyDescription.</param>
         /// <param name="metadata">metadata.</param>
-        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = default(bool), DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = default(int), string secondaryContact = default(string), string secondaryContactEmail = default(string), string policy = default(string), Guid policyId = default(Guid), string description = default(string), string primaryAdmin = default(string), string primaryAdminEmail = default(string), string additionalAdmin = default(string), string additionalAdminEmail = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), string storageLimit = default(string), string storageUsage = default(string), string classification = default(string), bool? privacy = default(bool?), string privacyDescription = default(string), List<EndUserReportMetadata> metadata = default(List<EndUserReportMetadata>))
+        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = false, DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = 0, string secondaryContact = default(string), string secondaryContactEmail = default(string), string policy = default(string), Guid policyId = default(Guid), string description = default(string), string primaryAdmin = default(string), string primaryAdminEmail = default(string), string additionalAdmin = default(string), string additionalAdminEmail = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), string storageLimit = default(string), string storageUsage = default(string), string classification = default(string), bool? privacy = false, string privacyDescription = default(string), List<EndUserReportMetadata> metadata = default(List<EndUserReportMetadata>))
         {
             this.Id = id;
             this.Name = name;
@@ -104,7 +104,8 @@ namespace Cloud.Governance.Client.Model
             this.StorageLimit = storageLimit;
             this.StorageUsage = storageUsage;
             this.Classification = classification;
-            this.Privacy = privacy;
+            // use default value if no "privacy" provided
+            this.Privacy = privacy ?? false;
             this.PrivacyDescription = privacyDescription;
             this.Metadata = metadata;
         }

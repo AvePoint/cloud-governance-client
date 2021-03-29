@@ -17,8 +17,8 @@ Name | Type | Description | Notes
 **ErrorMessage** | **string** |  | [optional] 
 **LastModifiedTime** | **DateTime** |  | [optional] 
 **TaskType** | **TaskType** |  | [optional] 
-**AllowReassign** | **bool** |  | [optional] 
-**AllowEdit** | **bool** |  | [optional] 
+**AllowReassign** | **bool** |  | [optional] [default to false]
+**AllowEdit** | **bool** |  | [optional] [default to false]
 **DynamicActions** | [**List&lt;TaskDynamicActions&gt;**](TaskDynamicActions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

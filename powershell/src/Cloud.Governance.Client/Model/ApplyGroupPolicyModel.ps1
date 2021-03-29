@@ -12,28 +12,28 @@ function New-ApplyGroupPolicyModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SubType},
+        ${SubType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PolicyId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyAllSetting},
+        ${IsApplyAllSetting} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyQuota},
+        ${IsApplyQuota} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplySharing},
+        ${IsApplySharing} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyQuotaThreshold},
+        ${IsApplyQuotaThreshold} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyDeactivatedElection},
+        ${IsApplyDeactivatedElection} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyLifecycle},
+        ${IsApplyLifecycle} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${LifecycleRenewalSetting},
@@ -45,7 +45,7 @@ function New-ApplyGroupPolicyModel {
         ${SelectedObjects},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HasOngoingTasks}
+        ${HasOngoingTasks} = $false
     )
 
     Process {

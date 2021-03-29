@@ -12,19 +12,19 @@ function New-ConflictResolutionSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ContainerConflictSolution},
+        ${ContainerConflictSolution} = "Skip",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsCheckLowerObject},
+        ${IsCheckLowerObject} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableContentConflictResolution},
+        ${IsEnableContentConflictResolution} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ContentConflictSolution},
+        ${ContentConflictSolution} = "Skip",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AppConflictSolution}
+        ${AppConflictSolution} = "Skip"
     )
 
     Process {

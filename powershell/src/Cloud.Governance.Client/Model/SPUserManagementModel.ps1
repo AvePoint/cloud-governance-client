@@ -18,13 +18,16 @@ function New-SPUserManagementModel {
         ${DisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGroup},
+        ${IsGroup} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExternalUserType}
+        ${ExternalUserType} = "None"
     )
 
     Process {
@@ -36,6 +39,7 @@ function New-SPUserManagementModel {
             "IdentityName" = ${IdentityName}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
+            "AzureUserType" = ${AzureUserType}
             "Action" = ${Action}
             "ExternalUserType" = ${ExternalUserType}
         }
@@ -60,7 +64,7 @@ function ConvertFrom-JsonToSPUserManagementModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in SPUserManagementModel
-        $AllProperties = $("IdentityName", "DisplayName", "IsGroup", "Action", "ExternalUserType")
+        $AllProperties = $("IdentityName", "DisplayName", "IsGroup", "AzureUserType", "Action", "ExternalUserType")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -85,6 +89,12 @@ function ConvertFrom-JsonToSPUserManagementModel {
             $IsGroup = $JsonParameters.PSobject.Properties["IsGroup"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Action"))) { #optional property not found
             $Action = $null
         } else {
@@ -101,6 +111,7 @@ function ConvertFrom-JsonToSPUserManagementModel {
             "IdentityName" = ${IdentityName}
             "DisplayName" = ${DisplayName}
             "IsGroup" = ${IsGroup}
+            "AzureUserType" = ${AzureUserType}
             "Action" = ${Action}
             "ExternalUserType" = ${ExternalUserType}
         }

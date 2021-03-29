@@ -32,10 +32,10 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="GrantPermissionServicePermissionSettings" /> class.
         /// </summary>
         /// <param name="assignBy">assignBy.</param>
-        /// <param name="isGrantPermissionDirectly">isGrantPermissionDirectly.</param>
-        /// <param name="enableExcludePermissionLevles">enableExcludePermissionLevles.</param>
+        /// <param name="isGrantPermissionDirectly">isGrantPermissionDirectly (default to false).</param>
+        /// <param name="enableExcludePermissionLevles">enableExcludePermissionLevles (default to false).</param>
         /// <param name="excludedPermissionLevles">excludedPermissionLevles.</param>
-        public GrantPermissionServicePermissionSettings(AssignBy? assignBy = default(AssignBy?), bool isGrantPermissionDirectly = default(bool), bool enableExcludePermissionLevles = default(bool), List<PermissionLevel> excludedPermissionLevles = default(List<PermissionLevel>))
+        public GrantPermissionServicePermissionSettings(AssignBy? assignBy = default(AssignBy?), bool isGrantPermissionDirectly = false, bool enableExcludePermissionLevles = false, List<PermissionLevel> excludedPermissionLevles = default(List<PermissionLevel>))
         {
             this.AssignBy = assignBy;
             this.IsGrantPermissionDirectly = isGrantPermissionDirectly;

@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_ChangeGroup_ChangeOwnersAdd_Service",
+  "GroupEmail": "group@example.com",
+  "NewOwners": "user1@example.com;user2@example.com"
+}

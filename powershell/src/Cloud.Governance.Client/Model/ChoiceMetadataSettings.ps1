@@ -18,7 +18,7 @@ function New-ChoiceMetadataSettings {
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ChoiceType}
+        ${ChoiceType} = "DropDown"
     )
 
     Process {

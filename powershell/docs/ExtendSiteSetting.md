@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] 
+**IsEnabled** | **Boolean** |  | [optional] [default to $false]
 **ExtendType** | [**ExtendType**](ExtendType.md) |  | [optional] 
-**Duration** | **Int32** |  | [optional] 
+**Duration** | **Int32** |  | [optional] [default to 0]
 **DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**ConstantDuration** | **Int32** |  | [optional] 
+**ConstantDuration** | **Int32** |  | [optional] [default to 0]
 **ConstantDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **ExtendBasedTime** | **System.DateTime** |  | [optional] 
 

@@ -55,10 +55,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="lastModifiedTime">lastModifiedTime.</param>
         /// <param name="taskType">taskType.</param>
-        /// <param name="allowReassign">allowReassign.</param>
-        /// <param name="allowEdit">allowEdit.</param>
+        /// <param name="allowReassign">allowReassign (default to false).</param>
+        /// <param name="allowEdit">allowEdit (default to false).</param>
         /// <param name="dynamicActions">dynamicActions.</param>
-        public ApiTask(ApiTaskDynamicProperties dynamicProperties = default(ApiTaskDynamicProperties), Guid id = default(Guid), string title = default(string), string description = default(string), Guid requestGuid = default(Guid), TaskResult? status = default(TaskResult?), string statusDescription = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string comments = default(string), List<TaskComment> allComments = default(List<TaskComment>), string errorMessage = default(string), DateTime lastModifiedTime = default(DateTime), TaskType? taskType = default(TaskType?), bool allowReassign = default(bool), bool allowEdit = default(bool), List<TaskDynamicActions> dynamicActions = default(List<TaskDynamicActions>))
+        public ApiTask(ApiTaskDynamicProperties dynamicProperties = default(ApiTaskDynamicProperties), Guid id = default(Guid), string title = default(string), string description = default(string), Guid requestGuid = default(Guid), TaskResult? status = default(TaskResult?), string statusDescription = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string comments = default(string), List<TaskComment> allComments = default(List<TaskComment>), string errorMessage = default(string), DateTime lastModifiedTime = default(DateTime), TaskType? taskType = default(TaskType?), bool allowReassign = false, bool allowEdit = false, List<TaskDynamicActions> dynamicActions = default(List<TaskDynamicActions>))
         {
             this.DynamicProperties = dynamicProperties;
             this.Id = id;

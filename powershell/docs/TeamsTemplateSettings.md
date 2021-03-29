@@ -3,16 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableCreateTeamFromScratch** | **Boolean** |  | [optional] 
-**EnableCreateTeamFromExistTeam** | **Boolean** |  | [optional] 
+**EnableCreateTeamFromScratch** | **Boolean** |  | [optional] [default to $false]
+**EnableCreateTeamFromExistTeam** | **Boolean** |  | [optional] [default to $false]
+**EnableCreateTeamFromTeamTemplate** | **Boolean** |  | [optional] [default to $false]
 **SelectedTemplate** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**EnableCloneChannels** | **Boolean** |  | [optional] 
-**EnableCloneApps** | **Boolean** |  | [optional] 
-**EnableCloneTabs** | **Boolean** |  | [optional] 
-**EnableCloneMembers** | **Boolean** |  | [optional] 
-**EnableCloneTeamSetting** | **Boolean** |  | [optional] 
-**EnableCloneTeamPrivacy** | **Boolean** |  | [optional] 
-**EnableCloneTeamClassification** | **Boolean** |  | [optional] 
+**SelectedMSTemplate** | [**StringModel**](StringModel.md) |  | [optional] 
+**TeamTemplates** | [**TextModel[]**](TextModel.md) |  | [optional] 
+**EnableCloneChannels** | **Boolean** |  | [optional] [default to $false]
+**EnableCloneApps** | **Boolean** |  | [optional] [default to $false]
+**EnableCloneTabs** | **Boolean** |  | [optional] [default to $false]
+**EnableCloneMembers** | **Boolean** |  | [optional] [default to $false]
+**EnableCloneTeamSetting** | **Boolean** |  | [optional] [default to $false]
+**EnableCloneTeamPrivacy** | **Boolean** |  | [optional] [default to $false]
+**EnableCloneTeamClassification** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -20,7 +23,10 @@ Name | Type | Description | Notes
 ```powershell
 $TeamsTemplateSettings = New-Cloud.Governance.ClientTeamsTemplateSettings  -EnableCreateTeamFromScratch null `
  -EnableCreateTeamFromExistTeam null `
+ -EnableCreateTeamFromTeamTemplate null `
  -SelectedTemplate null `
+ -SelectedMSTemplate null `
+ -TeamTemplates null `
  -EnableCloneChannels null `
  -EnableCloneApps null `
  -EnableCloneTabs null `

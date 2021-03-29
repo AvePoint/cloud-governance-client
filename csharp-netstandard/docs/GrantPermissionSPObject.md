@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **ListTitle** | **string** |  | [optional] 
 **TopInheritUrl** | **string** |  | [optional] 
 **InheritNodeType** | **NodeType** |  | [optional] 
-**IsInheritedPermission** | **bool** |  | [optional] 
+**IsInheritedPermission** | **bool** |  | [optional] [default to false]
 **Id** | **Guid** |  | [optional] 
 **Title** | **string** |  | [optional] 
 **FullUrl** | **string** |  | [optional] 

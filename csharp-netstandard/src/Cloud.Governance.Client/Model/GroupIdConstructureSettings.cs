@@ -37,13 +37,13 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="GroupIdConstructureSettings" /> class.
         /// </summary>
         /// <param name="ruleType">ruleType.</param>
-        /// <param name="enableAutoSequenceNumber">enableAutoSequenceNumber.</param>
+        /// <param name="enableAutoSequenceNumber">enableAutoSequenceNumber (default to false).</param>
         /// <param name="autoSequenceNumber">autoSequenceNumber.</param>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="assignBy">assignBy.</param>
         /// <param name="prefixs">prefixs.</param>
         /// <param name="suffixs">suffixs.</param>
-        public GroupIdConstructureSettings(GroupIdRuleType? ruleType = default(GroupIdRuleType?), bool enableAutoSequenceNumber = default(bool), string autoSequenceNumber = default(string), bool enabled = default(bool), AssignBy? assignBy = default(AssignBy?), List<GroupConstructureRule> prefixs = default(List<GroupConstructureRule>), List<GroupConstructureRule> suffixs = default(List<GroupConstructureRule>))
+        public GroupIdConstructureSettings(GroupIdRuleType? ruleType = default(GroupIdRuleType?), bool enableAutoSequenceNumber = false, string autoSequenceNumber = default(string), bool enabled = false, AssignBy? assignBy = default(AssignBy?), List<GroupConstructureRule> prefixs = default(List<GroupConstructureRule>), List<GroupConstructureRule> suffixs = default(List<GroupConstructureRule>))
         {
             this.RuleType = ruleType;
             this.EnableAutoSequenceNumber = enableAutoSequenceNumber;

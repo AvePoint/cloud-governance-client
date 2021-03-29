@@ -42,11 +42,11 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ConflictResolutionSetting" /> class.
         /// </summary>
         /// <param name="containerConflictSolution">containerConflictSolution.</param>
-        /// <param name="isCheckLowerObject">isCheckLowerObject.</param>
-        /// <param name="isEnableContentConflictResolution">isEnableContentConflictResolution.</param>
+        /// <param name="isCheckLowerObject">isCheckLowerObject (default to false).</param>
+        /// <param name="isEnableContentConflictResolution">isEnableContentConflictResolution (default to false).</param>
         /// <param name="contentConflictSolution">contentConflictSolution.</param>
         /// <param name="appConflictSolution">appConflictSolution.</param>
-        public ConflictResolutionSetting(ConflictSolutionType? containerConflictSolution = default(ConflictSolutionType?), bool isCheckLowerObject = default(bool), bool isEnableContentConflictResolution = default(bool), ConflictSolutionType? contentConflictSolution = default(ConflictSolutionType?), ConflictSolutionType? appConflictSolution = default(ConflictSolutionType?))
+        public ConflictResolutionSetting(ConflictSolutionType? containerConflictSolution = default(ConflictSolutionType?), bool isCheckLowerObject = false, bool isEnableContentConflictResolution = false, ConflictSolutionType? contentConflictSolution = default(ConflictSolutionType?), ConflictSolutionType? appConflictSolution = default(ConflictSolutionType?))
         {
             this.ContainerConflictSolution = containerConflictSolution;
             this.IsCheckLowerObject = isCheckLowerObject;

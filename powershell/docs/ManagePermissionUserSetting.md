@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UserLevelRestrictionType** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] 
 **UserManagementSourceType** | [**UserManagementSourceType**](UserManagementSourceType.md) |  | [optional] 
-**IsEnableShowAADGroupMembers** | **Boolean** |  | [optional] 
+**IsEnableShowAADGroupMembers** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

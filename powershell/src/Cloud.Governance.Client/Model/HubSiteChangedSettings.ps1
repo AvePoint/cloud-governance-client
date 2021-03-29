@@ -12,10 +12,10 @@ function New-HubSiteChangedSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsModernSite},
+        ${IsModernSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AssociatedHubSiteId},

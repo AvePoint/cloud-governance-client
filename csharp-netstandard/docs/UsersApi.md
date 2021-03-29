@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 <a name="resolveusers"></a>
 # **ResolveUsers**
-> List&lt;ApiUser&gt; ResolveUsers (string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, Guid? peopleFilterProfileId = null)
+> List&lt;ApiUser&gt; ResolveUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, Guid? peopleFilterProfileId = null)
 
 resolve users
 
@@ -389,7 +389,7 @@ namespace Example
             var apiInstance = new UsersApi(config);
 
             var keyword = keyword_example;  // string | 
-            var userType = ;  // UserType | 
+            var userType = ;  // ApiUserType | 
             var userSource = ;  // UserSource | 
             var sharingOptions = ;  // ExternalSharingOptions | 
             var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string |  (optional)  (default to "")
@@ -417,7 +417,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyword** | **string**|  | 
- **userType** | **UserType**|  | 
+ **userType** | **ApiUserType**|  | 
  **userSource** | **UserSource**|  | 
  **sharingOptions** | **ExternalSharingOptions**|  | 
  **siteUrlOrTenantId** | **string**|  | [optional] [default to &quot;&quot;]
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 <a name="searchusers"></a>
 # **SearchUsers**
-> List&lt;ApiUser&gt; SearchUsers (string keyword, UserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, Guid? peopleFilterProfileId = null)
+> List&lt;ApiUser&gt; SearchUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, Guid? peopleFilterProfileId = null)
 
 search users
 
@@ -482,7 +482,7 @@ namespace Example
             var apiInstance = new UsersApi(config);
 
             var keyword = keyword_example;  // string | 
-            var userType = ;  // UserType | 
+            var userType = ;  // ApiUserType | 
             var userSource = ;  // UserSource | 
             var sharingOptions = ;  // ExternalSharingOptions | 
             var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string |  (optional)  (default to "")
@@ -510,7 +510,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **keyword** | **string**|  | 
- **userType** | **UserType**|  | 
+ **userType** | **ApiUserType**|  | 
  **userSource** | **UserSource**|  | 
  **sharingOptions** | **ExternalSharingOptions**|  | 
  **siteUrlOrTenantId** | **string**|  | [optional] [default to &quot;&quot;]

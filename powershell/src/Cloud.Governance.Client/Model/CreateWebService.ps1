@@ -27,7 +27,7 @@ function New-CreateWebService {
         ${PermissionSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${UseUniquePermissions},
+        ${UseUniquePermissions} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${DeploymentManagerPlanSettings},
@@ -54,52 +54,52 @@ function New-CreateWebService {
         ${DefaultSecondaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsOnQuickLaunch},
+        ${IsOnQuickLaunch} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsOnTopLinkBar},
+        ${IsOnTopLinkBar} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsNavigationInheritance},
+        ${IsNavigationInheritance} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${DefaultWebLanguage},
+        ${DefaultWebLanguage} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ScopeAssignBy},
+        ${ScopeAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${WebLanguageAssignBy},
+        ${WebLanguageAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TemplateAssignBy},
+        ${TemplateAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${NavigationInheritanceAssignBy},
+        ${NavigationInheritanceAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${NavigationAssignBy},
+        ${NavigationAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrimaryContactAssignBy},
+        ${PrimaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SecondaryContactAssignBy},
+        ${SecondaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PermissionAssignBy},
+        ${PermissionAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DepartmentAssignBy},
+        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HideRequestSummary},
+        ${HideRequestSummary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -111,13 +111,13 @@ function New-CreateWebService {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps},
+        ${LoadDepartmentFromUps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Departments},
@@ -129,13 +129,13 @@ function New-CreateWebService {
         ${ServiceAdminContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ApproversContainManagerRole},
+        ${ApproversContainManagerRole} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowServiceInCatalog},
+        ${ShowServiceInCatalog} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CustomActions},
@@ -144,13 +144,10 @@ function New-CreateWebService {
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CategoryId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Details}
+        ${CategoryId}
     )
 
     Process {
@@ -205,7 +202,6 @@ function New-CreateWebService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO
@@ -228,7 +224,7 @@ function ConvertFrom-JsonToCreateWebService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateWebService
-        $AllProperties = $("ScopeSettings", "WebLanguages", "LanguageIdsAndTemplates", "TemplateIdsAndPermissions", "PermissionSettings", "UseUniquePermissions", "DeploymentManagerPlanSettings", "YammerGroupSettings", "TemplateStoreUrl", "AppSettings", "NotifyPrimaryContactSettings", "NotifySecondaryContactSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "IsOnQuickLaunch", "IsOnTopLinkBar", "IsNavigationInheritance", "DefaultWebLanguage", "ScopeAssignBy", "WebLanguageAssignBy", "TemplateAssignBy", "NavigationInheritanceAssignBy", "NavigationAssignBy", "PrimaryContactAssignBy", "SecondaryContactAssignBy", "PermissionAssignBy", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "Details")
+        $AllProperties = $("ScopeSettings", "WebLanguages", "LanguageIdsAndTemplates", "TemplateIdsAndPermissions", "PermissionSettings", "UseUniquePermissions", "DeploymentManagerPlanSettings", "YammerGroupSettings", "TemplateStoreUrl", "AppSettings", "NotifyPrimaryContactSettings", "NotifySecondaryContactSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "IsOnQuickLaunch", "IsOnTopLinkBar", "IsNavigationInheritance", "DefaultWebLanguage", "ScopeAssignBy", "WebLanguageAssignBy", "TemplateAssignBy", "NavigationInheritanceAssignBy", "NavigationAssignBy", "PrimaryContactAssignBy", "SecondaryContactAssignBy", "PermissionAssignBy", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -511,12 +507,6 @@ function ConvertFrom-JsonToCreateWebService {
             $CategoryId = $JsonParameters.PSobject.Properties["CategoryId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Details"))) { #optional property not found
-            $Details = $null
-        } else {
-            $Details = $JsonParameters.PSobject.Properties["Details"].value
-        }
-
         $PSO = [PSCustomObject]@{
             "ScopeSettings" = ${ScopeSettings}
             "WebLanguages" = ${WebLanguages}
@@ -564,7 +554,6 @@ function ConvertFrom-JsonToCreateWebService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO

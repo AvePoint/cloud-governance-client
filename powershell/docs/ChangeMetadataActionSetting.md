@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] 
-**EnableAddOrDelete** | **Boolean** |  | [optional] 
+**IsEnabled** | **Boolean** |  | [optional] [default to $false]
+**EnableAddOrDelete** | **Boolean** |  | [optional] [default to $false]
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 
 ## Examples

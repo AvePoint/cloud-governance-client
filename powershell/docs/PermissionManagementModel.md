@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsUniquePermission** | **Boolean** |  | [optional] 
-**IsPermissionInheritanceChanged** | **Boolean** |  | [optional] 
-**IsCopyPermissionsFromParent** | **Boolean** |  | [optional] 
+**IsUniquePermission** | **Boolean** |  | [optional] [default to $false]
+**IsPermissionInheritanceChanged** | **Boolean** |  | [optional] [default to $false]
+**IsCopyPermissionsFromParent** | **Boolean** |  | [optional] [default to $false]
 **InheritedSiteUrl** | **String** |  | [optional] 
 **PermissionItems** | [**ObjectPermissionManagementModel[]**](ObjectPermissionManagementModel.md) |  | [optional] 
 

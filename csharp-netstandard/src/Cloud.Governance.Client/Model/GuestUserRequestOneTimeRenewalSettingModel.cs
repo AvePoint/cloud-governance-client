@@ -37,10 +37,10 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="GuestUserRequestOneTimeRenewalSettingModel" /> class.
         /// </summary>
         /// <param name="option">option.</param>
-        /// <param name="duration">duration.</param>
+        /// <param name="duration">duration (default to 0).</param>
         /// <param name="durationType">durationType.</param>
         /// <param name="startTime">startTime.</param>
-        public GuestUserRequestOneTimeRenewalSettingModel(OneTimeRenewalOption? option = default(OneTimeRenewalOption?), int duration = default(int), ApiDurationType? durationType = default(ApiDurationType?), DateTime? startTime = default(DateTime?))
+        public GuestUserRequestOneTimeRenewalSettingModel(OneTimeRenewalOption? option = default(OneTimeRenewalOption?), int duration = 0, ApiDurationType? durationType = default(ApiDurationType?), DateTime? startTime = default(DateTime?))
         {
             this.Option = option;
             this.Duration = duration;

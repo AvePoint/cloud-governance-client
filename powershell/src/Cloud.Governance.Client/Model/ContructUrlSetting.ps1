@@ -21,7 +21,7 @@ function New-ContructUrlSetting {
         ${Connection},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ContructUrlAssignBy}
+        ${ContructUrlAssignBy} = "BusinessUser"
     )
 
     Process {

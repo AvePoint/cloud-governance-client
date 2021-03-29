@@ -27,9 +27,9 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="PermissionLevel" /> class.
         /// </summary>
         /// <param name="id">id.</param>
-        /// <param name="idInSharePoint">idInSharePoint.</param>
+        /// <param name="idInSharePoint">idInSharePoint (default to 0).</param>
         /// <param name="name">name.</param>
-        public PermissionLevel(Guid id = default(Guid), int idInSharePoint = default(int), string name = default(string))
+        public PermissionLevel(Guid id = default(Guid), int idInSharePoint = 0, string name = default(string))
         {
             this.Id = id;
             this.IdInSharePoint = idInSharePoint;

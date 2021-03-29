@@ -15,13 +15,13 @@ function New-DynamicGroupRuleInfo {
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Order},
+        ${Order} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Relation},
+        ${Relation} = "And",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Category},
+        ${Category} = "Contact",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${MetadataId},
@@ -35,8 +35,11 @@ function New-DynamicGroupRuleInfo {
         [String]
         ${MetadataDisplayValue},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${MetadataValueAzureUserType},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Condition}
+        ${Condition} = "Equals"
     )
 
     Process {
@@ -53,6 +56,7 @@ function New-DynamicGroupRuleInfo {
             "MetadataName" = ${MetadataName}
             "MetadataValue" = ${MetadataValue}
             "MetadataDisplayValue" = ${MetadataDisplayValue}
+            "MetadataValueAzureUserType" = ${MetadataValueAzureUserType}
             "Condition" = ${Condition}
         }
 
@@ -76,7 +80,7 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in DynamicGroupRuleInfo
-        $AllProperties = $("Id", "Order", "Relation", "Category", "MetadataId", "MetadataName", "MetadataValue", "MetadataDisplayValue", "Condition")
+        $AllProperties = $("Id", "Order", "Relation", "Category", "MetadataId", "MetadataName", "MetadataValue", "MetadataDisplayValue", "MetadataValueAzureUserType", "Condition")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -131,6 +135,12 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
             $MetadataDisplayValue = $JsonParameters.PSobject.Properties["MetadataDisplayValue"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "MetadataValueAzureUserType"))) { #optional property not found
+            $MetadataValueAzureUserType = $null
+        } else {
+            $MetadataValueAzureUserType = $JsonParameters.PSobject.Properties["MetadataValueAzureUserType"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Condition"))) { #optional property not found
             $Condition = $null
         } else {
@@ -146,6 +156,7 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
             "MetadataName" = ${MetadataName}
             "MetadataValue" = ${MetadataValue}
             "MetadataDisplayValue" = ${MetadataDisplayValue}
+            "MetadataValueAzureUserType" = ${MetadataValueAzureUserType}
             "Condition" = ${Condition}
         }
 

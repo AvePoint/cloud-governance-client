@@ -41,8 +41,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="type">type.</param>
         /// <param name="baseType">baseType.</param>
         /// <param name="name">name.</param>
-        /// <param name="isCustomTemplate">isCustomTemplate.</param>
-        public ListTemplate(string title = default(string), string description = default(string), SPListTemplateType? type = default(SPListTemplateType?), SPBaseType? baseType = default(SPBaseType?), string name = default(string), bool isCustomTemplate = default(bool))
+        /// <param name="isCustomTemplate">isCustomTemplate (default to false).</param>
+        public ListTemplate(string title = default(string), string description = default(string), SPListTemplateType? type = default(SPListTemplateType?), SPBaseType? baseType = default(SPBaseType?), string name = default(string), bool isCustomTemplate = false)
         {
             this.Title = title;
             this.Description = description;

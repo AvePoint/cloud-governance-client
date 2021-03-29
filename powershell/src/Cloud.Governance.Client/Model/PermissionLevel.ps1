@@ -15,7 +15,7 @@ function New-PermissionLevel {
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${IdInSharePoint},
+        ${IdInSharePoint} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name}

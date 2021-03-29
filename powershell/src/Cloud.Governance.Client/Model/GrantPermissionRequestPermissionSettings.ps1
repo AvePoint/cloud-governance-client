@@ -12,10 +12,10 @@ function New-GrantPermissionRequestPermissionSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsBreakInheritance},
+        ${IsBreakInheritance} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGrantPermissionDirectly},
+        ${IsGrantPermissionDirectly} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${SelectedSPGroup},

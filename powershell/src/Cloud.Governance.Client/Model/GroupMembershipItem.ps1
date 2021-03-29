@@ -17,8 +17,14 @@ function New-GroupMembershipItem {
         [String]
         ${DisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${AzureUserType},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsGroup} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action}
+        ${Action} = "None"
     )
 
     Process {
@@ -29,6 +35,8 @@ function New-GroupMembershipItem {
         $PSO = [PSCustomObject]@{
             "LoginName" = ${LoginName}
             "DisplayName" = ${DisplayName}
+            "AzureUserType" = ${AzureUserType}
+            "IsGroup" = ${IsGroup}
             "Action" = ${Action}
         }
 
@@ -52,7 +60,7 @@ function ConvertFrom-JsonToGroupMembershipItem {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in GroupMembershipItem
-        $AllProperties = $("LoginName", "DisplayName", "Action")
+        $AllProperties = $("LoginName", "DisplayName", "AzureUserType", "IsGroup", "Action")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -71,6 +79,18 @@ function ConvertFrom-JsonToGroupMembershipItem {
             $DisplayName = $JsonParameters.PSobject.Properties["DisplayName"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AzureUserType"))) { #optional property not found
+            $AzureUserType = $null
+        } else {
+            $AzureUserType = $JsonParameters.PSobject.Properties["AzureUserType"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsGroup"))) { #optional property not found
+            $IsGroup = $null
+        } else {
+            $IsGroup = $JsonParameters.PSobject.Properties["IsGroup"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Action"))) { #optional property not found
             $Action = $null
         } else {
@@ -80,6 +100,8 @@ function ConvertFrom-JsonToGroupMembershipItem {
         $PSO = [PSCustomObject]@{
             "LoginName" = ${LoginName}
             "DisplayName" = ${DisplayName}
+            "AzureUserType" = ${AzureUserType}
+            "IsGroup" = ${IsGroup}
             "Action" = ${Action}
         }
 

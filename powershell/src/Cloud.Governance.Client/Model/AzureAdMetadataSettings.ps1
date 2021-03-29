@@ -15,7 +15,7 @@ function New-AzureAdMetadataSettings {
         ${Office365Tenant},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${UseBuiltInProperty},
+        ${UseBuiltInProperty} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Value},
@@ -24,7 +24,7 @@ function New-AzureAdMetadataSettings {
         ${Property},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowReferenceAsRoleInApprovalProcess}
+        ${AllowReferenceAsRoleInApprovalProcess} = $false
     )
 
     Process {

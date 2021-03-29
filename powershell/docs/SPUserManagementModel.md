@@ -5,7 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IdentityName** | **String** |  | [optional] 
 **DisplayName** | **String** |  | [optional] 
-**IsGroup** | **Boolean** |  | [optional] 
+**IsGroup** | **Boolean** |  | [optional] [default to $false]
+**AzureUserType** | **String** |  | [optional] 
 **Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] 
 **ExternalUserType** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
 
@@ -16,6 +17,7 @@ Name | Type | Description | Notes
 $SPUserManagementModel = New-Cloud.Governance.ClientSPUserManagementModel  -IdentityName null `
  -DisplayName null `
  -IsGroup null `
+ -AzureUserType null `
  -Action null `
  -ExternalUserType null
 ```

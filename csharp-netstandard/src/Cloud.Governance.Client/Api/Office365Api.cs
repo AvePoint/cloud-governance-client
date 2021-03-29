@@ -22,7 +22,7 @@ namespace Cloud.Governance.Client.Api
         /// Create mail-enabled security group
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <returns></returns>
         void CreateSecurityGroup(GroupSettingModel groupSettingModel = default(GroupSettingModel));
 
@@ -33,7 +33,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CreateSecurityGroupWithHttpInfo(GroupSettingModel groupSettingModel = default(GroupSettingModel));
         /// <summary>
@@ -42,8 +42,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiUserPageResult</returns>
         ApiUserPageResult GetGroupAllMembersByGroupValue(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string));
@@ -57,8 +57,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         ApiResponse<ApiUserPageResult> GetGroupAllMembersByGroupValueWithHttpInfo(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string));
@@ -67,8 +67,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiUserPageResult</returns>
         ApiUserPageResult GetGroupMembers(string email, int? top = default(int?), int? skip = default(int?), string search = default(string));
@@ -81,8 +81,8 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         ApiResponse<ApiUserPageResult> GetGroupMembersWithHttpInfo(string email, int? top = default(int?), int? skip = default(int?), string search = default(string));
@@ -91,8 +91,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiUserPageResult</returns>
         ApiUserPageResult GetGroupOwners(string email, int? top = default(int?), int? skip = default(int?), string search = default(string));
@@ -105,8 +105,8 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         ApiResponse<ApiUserPageResult> GetGroupOwnersWithHttpInfo(string email, int? top = default(int?), int? skip = default(int?), string search = default(string));
@@ -328,7 +328,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task CreateSecurityGroupAsync(GroupSettingModel groupSettingModel = default(GroupSettingModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -340,7 +340,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CreateSecurityGroupWithHttpInfoAsync(GroupSettingModel groupSettingModel = default(GroupSettingModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -353,8 +353,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiUserPageResult</returns>
@@ -369,8 +369,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
@@ -383,8 +383,8 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiUserPageResult</returns>
@@ -398,8 +398,8 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
@@ -412,8 +412,8 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiUserPageResult</returns>
@@ -427,8 +427,8 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
@@ -814,7 +814,7 @@ namespace Cloud.Governance.Client.Api
         /// Create mail-enabled security group 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <returns></returns>
         public void CreateSecurityGroup(GroupSettingModel groupSettingModel = default(GroupSettingModel))
         {
@@ -825,7 +825,7 @@ namespace Cloud.Governance.Client.Api
         /// Create mail-enabled security group 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> CreateSecurityGroupWithHttpInfo(GroupSettingModel groupSettingModel = default(GroupSettingModel))
         {
@@ -875,7 +875,7 @@ namespace Cloud.Governance.Client.Api
         /// Create mail-enabled security group 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task CreateSecurityGroupAsync(GroupSettingModel groupSettingModel = default(GroupSettingModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -887,7 +887,7 @@ namespace Cloud.Governance.Client.Api
         /// Create mail-enabled security group 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="groupSettingModel"> (optional)</param>
+        /// <param name="groupSettingModel">GroupName,GroupEmailAddress,Owners,Members (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> CreateSecurityGroupWithHttpInfoAsync(GroupSettingModel groupSettingModel = default(GroupSettingModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -943,8 +943,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiUserPageResult</returns>
         public ApiUserPageResult GetGroupAllMembersByGroupValue(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string))
@@ -959,8 +959,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult> GetGroupAllMembersByGroupValueWithHttpInfo(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string))
@@ -1034,8 +1034,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiUserPageResult</returns>
@@ -1051,8 +1051,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="objectIdOrNameOrEmail"></param>
         /// <param name="tenantId"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
@@ -1129,8 +1129,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiUserPageResult</returns>
         public ApiUserPageResult GetGroupMembers(string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
@@ -1144,8 +1144,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult> GetGroupMembersWithHttpInfo(string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
@@ -1213,8 +1213,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiUserPageResult</returns>
@@ -1229,8 +1229,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
@@ -1302,8 +1302,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiUserPageResult</returns>
         public ApiUserPageResult GetGroupOwners(string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
@@ -1317,8 +1317,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         public Cloud.Governance.Client.Client.ApiResponse<ApiUserPageResult> GetGroupOwnersWithHttpInfo(string email, int? top = default(int?), int? skip = default(int?), string search = default(string))
@@ -1386,8 +1386,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiUserPageResult</returns>
@@ -1402,8 +1402,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
-        /// <param name="top"> (optional)</param>
-        /// <param name="skip"> (optional)</param>
+        /// <param name="top"> (optional, default to 0)</param>
+        /// <param name="skip"> (optional, default to 0)</param>
         /// <param name="search"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>

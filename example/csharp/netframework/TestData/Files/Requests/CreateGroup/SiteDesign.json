@@ -1,0 +1,7 @@
+{
+  "ServiceName": "Api_Sample_CreateTeam_Siesign",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "OwnerList": "user@example.com",
+  "SiteDesignName": "Customer list"
+}

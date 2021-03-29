@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **WebServerRelativeUrl** | **String** |  | [optional] 
 **ListTitle** | **String** |  | [optional] 
 **ObjectUrl** | **String** |  | [optional] 
-**IsInherit** | **Boolean** |  | [optional] 
+**IsInherit** | **Boolean** |  | [optional] [default to $false]
 **InheritNodeType** | [**TreeNodeType**](TreeNodeType.md) |  | [optional] 
 **TopInheritUrl** | **String** |  | [optional] 
 **CheckType** | [**TreeNodeType**](TreeNodeType.md) |  | [optional] 

@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnlockSiteSetting" /> class.
         /// </summary>
-        /// <param name="isExpired">isExpired.</param>
-        /// <param name="isExtendEnabled">isExtendEnabled.</param>
-        public UnlockSiteSetting(bool isExpired = default(bool), bool isExtendEnabled = default(bool))
+        /// <param name="isExpired">isExpired (default to false).</param>
+        /// <param name="isExtendEnabled">isExtendEnabled (default to false).</param>
+        public UnlockSiteSetting(bool isExpired = false, bool isExtendEnabled = false)
         {
             this.IsExpired = isExpired;
             this.IsExtendEnabled = isExtendEnabled;

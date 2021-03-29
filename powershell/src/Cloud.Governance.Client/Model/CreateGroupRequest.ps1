@@ -12,7 +12,7 @@ function New-CreateGroupRequest {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupType},
+        ${GroupType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupId},
@@ -39,16 +39,16 @@ function New-CreateGroupRequest {
         ${Members},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Privacy},
+        ${Privacy} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Subscribe},
+        ${Subscribe} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${OutsideSender},
+        ${OutsideSender} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTeamCollaboration},
+        ${EnableTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Language},
@@ -75,13 +75,13 @@ function New-CreateGroupRequest {
         ${SecondaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableGroupMembershipHidden},
+        ${EnableGroupMembershipHidden} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAssignedMembership},
+        ${EnableAssignedMembership} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableDynamicMembership},
+        ${EnableDynamicMembership} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${TemplateSettings},

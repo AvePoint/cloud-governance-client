@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GroupEmail** | **String** |  | [optional] 
 **GroupId** | **String** |  | [optional] 
-**IsEditTask** | **Boolean** |  | [optional] 
-**IsFromQuestionnaire** | **Boolean** |  | [optional] 
+**IsEditTask** | **Boolean** |  | [optional] [default to $false]
+**IsFromQuestionnaire** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

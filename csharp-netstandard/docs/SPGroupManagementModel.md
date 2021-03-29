@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int** |  | [optional] 
+**Id** | **int** |  | [optional] [default to 0]
 **Name** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Owner** | [**ApiUser**](ApiUser.md) |  | [optional] 
@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **SpGroupEditType** | **SPGroupEditOption** |  | [optional] 
 **Permissions** | **List&lt;string&gt;** |  | [optional] 
 **Action** | **ManagePermissionAction** |  | [optional] 
-**IsAllowJoinOrLeaveRequest** | **bool** |  | [optional] 
-**IsAutoAcceptRequest** | **bool** |  | [optional] 
+**IsAllowJoinOrLeaveRequest** | **bool** |  | [optional] [default to false]
+**IsAutoAcceptRequest** | **bool** |  | [optional] [default to false]
 **SendMembershipRequestEmailAddress** | **string** |  | [optional] 
-**IsTemporaryGroup** | **bool** |  | [optional] 
+**IsTemporaryGroup** | **bool** |  | [optional] [default to false]
 **RoleID** | **List&lt;string&gt;** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -12,28 +12,28 @@ function New-ListVersionSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ListType},
+        ${ListType} = "Library",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableMajorVersions},
+        ${EnableMajorVersions} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableMajorAndMinorVersions},
+        ${EnableMajorAndMinorVersions} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableMajorVersionLimit},
+        ${EnableMajorVersionLimit} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${MajorVersionLimit},
+        ${MajorVersionLimit} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableMinorVersionLimit},
+        ${EnableMinorVersionLimit} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${MinorVersionsLimit},
+        ${MinorVersionsLimit} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${RequireContentApproval}
+        ${RequireContentApproval} = $false
     )
 
     Process {

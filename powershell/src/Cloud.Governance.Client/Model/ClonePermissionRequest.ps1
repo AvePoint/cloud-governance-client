@@ -21,19 +21,19 @@ function New-ClonePermissionRequest {
         ${TargetUser},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${CloneOption},
+        ${CloneOption} = "Append",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AdditionalCloneOption},
+        ${AdditionalCloneOption} = "AddUserToTheSameGroup",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledRemoveExplicitPermission},
+        ${EnabledRemoveExplicitPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledRemoveUserFromSPGroup},
+        ${EnabledRemoveUserFromSPGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledDeleteUserPermission},
+        ${EnabledDeleteUserPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},

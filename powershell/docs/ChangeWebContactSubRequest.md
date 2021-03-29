@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **String** |  | [optional] 
 **AssignTo** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **Reason** | **String** |  | [optional] 
-**Status** | **Int32** |  | [optional] [readonly] 
+**Status** | **Int32** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **String** |  | [optional] 
 **ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [readonly] 
 **ContactChangeSettings** | [**ChangeWebContactByUrlSetting**](ChangeWebContactByUrlSetting.md) |  | [optional] 

@@ -13,7 +13,7 @@ Create mail-enabled security group
 No description available.
 
 .PARAMETER GroupSettingModel
-No description available.
+GroupName,GroupEmailAddress,Owners,Members
 
 .PARAMETER WithHttpInfo
 

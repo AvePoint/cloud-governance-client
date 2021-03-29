@@ -15,10 +15,10 @@ function New-ServiceScopeSettings {
         ${SelectedNodes},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AutoPopulateUrlWithSPContext},
+        ${AutoPopulateUrlWithSPContext} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AutoPopulateUrlWithSPContextAssignBy}
+        ${AutoPopulateUrlWithSPContextAssignBy} = "BusinessUser"
     )
 
     Process {

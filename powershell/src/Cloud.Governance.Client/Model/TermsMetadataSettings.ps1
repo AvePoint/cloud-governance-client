@@ -12,7 +12,7 @@ function New-TermsMetadataSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowMultiple},
+        ${AllowMultiple} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AdminCenter},
@@ -36,7 +36,7 @@ function New-TermsMetadataSettings {
         ${Tree},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid}
+        ${IsValid} = $false
     )
 
     Process {

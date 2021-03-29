@@ -12,16 +12,16 @@ function New-MultiGeoSerivceSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsMultiGeoTenant},
+        ${IsMultiGeoTenant} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${AllLocations},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnabled},
+        ${IsEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ControlMode},
+        ${ControlMode} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${DefaultLocation},
@@ -30,7 +30,7 @@ function New-MultiGeoSerivceSetting {
         ${SelectedLocations},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LocationAssignBy},
+        ${LocationAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${UserRoleForLocation}

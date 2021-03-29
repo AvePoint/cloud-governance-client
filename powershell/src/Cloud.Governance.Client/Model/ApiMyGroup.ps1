@@ -30,10 +30,10 @@ function New-ApiMyGroup {
         ${Language},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ApplyPolicyStatus},
+        ${ApplyPolicyStatus} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableTeamCollaboration},
+        ${EnableTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupType},
@@ -51,7 +51,7 @@ function New-ApiMyGroup {
         ${PreferredDataLocationName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableDynamicMembership},
+        ${EnableDynamicMembership} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupTeamSiteUrl},
@@ -69,7 +69,7 @@ function New-ApiMyGroup {
         ${Classification},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupObjectType},
+        ${GroupObjectType} = "Group",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupObjectId},
@@ -81,7 +81,7 @@ function New-ApiMyGroup {
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Phase},
+        ${Phase} = "Confirmed",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${PhaseStartTime},
@@ -102,7 +102,7 @@ function New-ApiMyGroup {
         ${PolicyDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsCurrentRenewer},
+        ${IsCurrentRenewer} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${PhaseAssignees},

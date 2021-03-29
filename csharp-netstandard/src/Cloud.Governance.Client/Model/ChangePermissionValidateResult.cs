@@ -47,15 +47,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webServerRelativeUrl">webServerRelativeUrl.</param>
         /// <param name="listTitle">listTitle.</param>
         /// <param name="objectUrl">objectUrl.</param>
-        /// <param name="isInherit">isInherit.</param>
+        /// <param name="isInherit">isInherit (default to false).</param>
         /// <param name="inheritNodeType">inheritNodeType.</param>
         /// <param name="topInheritUrl">topInheritUrl.</param>
         /// <param name="checkType">checkType.</param>
         /// <param name="userMetadata">userMetadata.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangePermissionValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string objectUrl = default(string), bool isInherit = default(bool), NodeType? inheritNodeType = default(NodeType?), string topInheritUrl = default(string), NodeType? checkType = default(NodeType?), Dictionary<string, UserInfo> userMetadata = default(Dictionary<string, UserInfo>), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangePermissionValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webServerRelativeUrl = default(string), string listTitle = default(string), string objectUrl = default(string), bool isInherit = false, NodeType? inheritNodeType = default(NodeType?), string topInheritUrl = default(string), NodeType? checkType = default(NodeType?), Dictionary<string, UserInfo> userMetadata = default(Dictionary<string, UserInfo>), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;

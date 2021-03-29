@@ -40,13 +40,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="title">title.</param>
         /// <param name="department">department.</param>
         /// <param name="description">description.</param>
-        /// <param name="size">size.</param>
-        /// <param name="quotaSize">quotaSize.</param>
+        /// <param name="size">size (default to 0).</param>
+        /// <param name="quotaSize">quotaSize (default to 0).</param>
         /// <param name="type">type.</param>
         /// <param name="mySiteType">mySiteType.</param>
         /// <param name="classification">classification.</param>
         /// <param name="sensitivity">sensitivity.</param>
-        /// <param name="isCommunicationSite">isCommunicationSite.</param>
+        /// <param name="isCommunicationSite">isCommunicationSite (default to false).</param>
         /// <param name="createdTime">createdTime.</param>
         /// <param name="storageUsed">storageUsed.</param>
         /// <param name="primaryAdministrator">primaryAdministrator.</param>
@@ -61,20 +61,21 @@ namespace Cloud.Governance.Client.Model
         /// <param name="autoImportProfileName">autoImportProfileName.</param>
         /// <param name="policyName">policyName.</param>
         /// <param name="policyDescription">policyDescription.</param>
-        /// <param name="isCurrentRenewer">isCurrentRenewer.</param>
+        /// <param name="isCurrentRenewer">isCurrentRenewer (default to false).</param>
         /// <param name="phaseAssignees">phaseAssignees.</param>
         /// <param name="phaseDueDate">phaseDueDate.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="primaryContact">primaryContact.</param>
         /// <param name="secondaryContact">secondaryContact.</param>
         /// <param name="errorMessage">errorMessage.</param>
-        public MySite(string fullUrl = default(string), string title = default(string), string department = default(string), string description = default(string), long? size = default(long?), long quotaSize = default(long), MySiteType? type = default(MySiteType?), string mySiteType = default(string), string classification = default(string), string sensitivity = default(string), bool isCommunicationSite = default(bool), DateTime createdTime = default(DateTime), string storageUsed = default(string), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrator = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = default(bool), List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
+        public MySite(string fullUrl = default(string), string title = default(string), string department = default(string), string description = default(string), long? size = 0, long quotaSize = 0, MySiteType? type = default(MySiteType?), string mySiteType = default(string), string classification = default(string), string sensitivity = default(string), bool isCommunicationSite = false, DateTime createdTime = default(DateTime), string storageUsed = default(string), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrator = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
             this.FullUrl = fullUrl;
             this.Title = title;
             this.Department = department;
             this.Description = description;
-            this.Size = size;
+            // use default value if no "size" provided
+            this.Size = size ?? 0;
             this.QuotaSize = quotaSize;
             this.Type = type;
             this.MySiteType = mySiteType;

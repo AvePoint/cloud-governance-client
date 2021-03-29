@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ContainerConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] 
-**IsCheckLowerObject** | **Boolean** |  | [optional] 
-**IsEnableContentConflictResolution** | **Boolean** |  | [optional] 
+**IsCheckLowerObject** | **Boolean** |  | [optional] [default to $false]
+**IsEnableContentConflictResolution** | **Boolean** |  | [optional] [default to $false]
 **ContentConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] 
 **AppConflictSolution** | [**ConflictSolutionType**](ConflictSolutionType.md) |  | [optional] 
 

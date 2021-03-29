@@ -46,7 +46,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceName">serviceName.</param>
         /// <param name="serviceType">serviceType.</param>
         /// <param name="serviceTypeDescription">serviceTypeDescription.</param>
-        /// <param name="ticketNumber">ticketNumber.</param>
+        /// <param name="ticketNumber">ticketNumber (default to 0).</param>
         /// <param name="summary">summary.</param>
         /// <param name="requester">requester.</param>
         /// <param name="requesterDisplayName">requesterDisplayName.</param>
@@ -60,7 +60,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceAdmin">serviceAdmin.</param>
         /// <param name="objectUrl">objectUrl.</param>
         /// <param name="createdTime">createdTime.</param>
-        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), int ticketNumber = default(int), string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), string serviceAdmin = default(string), string objectUrl = default(string), string createdTime = default(string))
+        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), int ticketNumber = 0, string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), string serviceAdmin = default(string), string objectUrl = default(string), string createdTime = default(string))
         {
             this.Id = id;
             this.ServiceId = serviceId;

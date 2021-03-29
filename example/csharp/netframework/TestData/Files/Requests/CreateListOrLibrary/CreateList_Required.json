@@ -1,0 +1,10 @@
+{
+  "ServiceName": "ApiTest_Sample_Create List/Libary_Service",
+  "Summary": "ApiTest_Sample_CreateListRequired",
+  "ListName": "ApiTest_Sample_CreateListRequired_ListName",
+  "ListTitle": "ApiTest_Sample",
+  "WebUrl": "https://contoso.sharepoint.com/sites/FuSC1",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/FuSC1",
+  "List": "List",
+  "ListTemplate": "discuss"
+}

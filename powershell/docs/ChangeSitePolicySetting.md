@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **ChangePolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **StartDateType** | [**StartDateType**](StartDateType.md) |  | [optional] 
 **ServiceSpecifyDate** | **System.DateTime** |  | [optional] 
-**IsEnableLeaseExpired** | **Boolean** |  | [optional] 
-**LeaseDuration** | **Int32** |  | [optional] 
+**IsEnableLeaseExpired** | **Boolean** |  | [optional] [default to $false]
+**LeaseDuration** | **Int32** |  | [optional] [default to 0]
 **LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **CurrentStartDate** | **System.DateTime** |  | [optional] 
-**IsAllowAutoCancel** | **Boolean** |  | [optional] 
+**IsAllowAutoCancel** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

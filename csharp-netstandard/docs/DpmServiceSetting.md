@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **bool** |  | [optional] 
+**IsEnabled** | **bool** |  | [optional] [default to false]
 **DefaultValue** | **string** |  | [optional] 
 **SelectedItems** | **List&lt;string&gt;** |  | [optional] 
 **AssignBy** | **AssignBy** |  | [optional] 

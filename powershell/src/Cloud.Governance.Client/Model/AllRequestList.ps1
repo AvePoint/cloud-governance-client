@@ -21,13 +21,13 @@ function New-AllRequestList {
         ${ServiceName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ServiceType},
+        ${ServiceType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ServiceTypeDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${TicketNumber},
+        ${TicketNumber} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Summary},
@@ -39,13 +39,13 @@ function New-AllRequestList {
         ${RequesterDisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DetailStatus},
+        ${DetailStatus} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DetailStatusDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ProgressStatus},
+        ${ProgressStatus} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ProgressStatusDescription},

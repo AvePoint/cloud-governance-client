@@ -38,10 +38,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="unlockSetting">unlockSetting.</param>
         /// <param name="changePolicySetting">changePolicySetting.</param>
         /// <param name="lockSetting">lockSetting.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public SiteLifecycleValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), ChangeSiteQuotaSettings changeQuotaSetting = default(ChangeSiteQuotaSettings), ExtendSiteSetting extendSetting = default(ExtendSiteSetting), UnlockSiteSetting unlockSetting = default(UnlockSiteSetting), ChangeSitePolicySetting changePolicySetting = default(ChangeSitePolicySetting), LockSiteSetting lockSetting = default(LockSiteSetting), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public SiteLifecycleValidateResult(Guid siteId = default(Guid), string siteUrl = default(string), ChangeSiteQuotaSettings changeQuotaSetting = default(ChangeSiteQuotaSettings), ExtendSiteSetting extendSetting = default(ExtendSiteSetting), UnlockSiteSetting unlockSetting = default(UnlockSiteSetting), ChangeSitePolicySetting changePolicySetting = default(ChangeSitePolicySetting), LockSiteSetting lockSetting = default(LockSiteSetting), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;

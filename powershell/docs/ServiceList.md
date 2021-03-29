@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **Description** | **String** |  | [optional] 
 **Category** | **String** |  | [optional] 
 **Contact** | **String** |  | [optional] 
-**LanguageId** | **Int32** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] [default to 0]
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **TypeDescription** | **String** |  | [optional] 
-**IsQuestionnaire** | **Boolean** |  | [optional] 
+**IsQuestionnaire** | **Boolean** |  | [optional] [default to $false]
 **QuestionnaireId** | **String** |  | [optional] 
 
 ## Examples

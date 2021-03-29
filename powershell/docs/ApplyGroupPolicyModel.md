@@ -5,16 +5,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SubType** | [**GroupPolicySubType**](GroupPolicySubType.md) |  | [optional] 
 **PolicyId** | **String** |  | [optional] 
-**IsApplyAllSetting** | **Boolean** |  | [optional] 
-**IsApplyQuota** | **Boolean** |  | [optional] 
-**IsApplySharing** | **Boolean** |  | [optional] 
-**IsApplyQuotaThreshold** | **Boolean** |  | [optional] 
-**IsApplyDeactivatedElection** | **Boolean** |  | [optional] 
-**IsApplyLifecycle** | **Boolean** |  | [optional] 
+**IsApplyAllSetting** | **Boolean** |  | [optional] [default to $false]
+**IsApplyQuota** | **Boolean** |  | [optional] [default to $false]
+**IsApplySharing** | **Boolean** |  | [optional] [default to $false]
+**IsApplyQuotaThreshold** | **Boolean** |  | [optional] [default to $false]
+**IsApplyDeactivatedElection** | **Boolean** |  | [optional] [default to $false]
+**IsApplyLifecycle** | **Boolean** |  | [optional] [default to $false]
 **LifecycleRenewalSetting** | [**LifecycleRenewalSetting**](LifecycleRenewalSetting.md) |  | [optional] 
 **VarFilter** | **String** |  | [optional] 
 **SelectedObjects** | **String[]** |  | [optional] 
-**HasOngoingTasks** | **Boolean** |  | [optional] 
+**HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

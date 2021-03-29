@@ -42,14 +42,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupName">groupName.</param>
         /// <param name="email">email.</param>
         /// <param name="language">language.</param>
-        /// <param name="applyPolicyStatus">applyPolicyStatus.</param>
-        /// <param name="enableTeamCollaboration">enableTeamCollaboration.</param>
+        /// <param name="applyPolicyStatus">applyPolicyStatus (default to 0).</param>
+        /// <param name="enableTeamCollaboration">enableTeamCollaboration (default to false).</param>
         /// <param name="groupType">groupType.</param>
         /// <param name="createdTime">createdTime.</param>
         /// <param name="owners">owners.</param>
         /// <param name="preferredDataLocation">preferredDataLocation.</param>
         /// <param name="preferredDataLocationName">preferredDataLocationName.</param>
-        /// <param name="enableDynamicMembership">enableDynamicMembership.</param>
+        /// <param name="enableDynamicMembership">enableDynamicMembership (default to false).</param>
         /// <param name="groupTeamSiteUrl">groupTeamSiteUrl.</param>
         /// <param name="teamLink">teamLink.</param>
         /// <param name="noteBookLink">noteBookLink.</param>
@@ -66,14 +66,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="autoImportProfileName">autoImportProfileName.</param>
         /// <param name="policyName">policyName.</param>
         /// <param name="policyDescription">policyDescription.</param>
-        /// <param name="isCurrentRenewer">isCurrentRenewer.</param>
+        /// <param name="isCurrentRenewer">isCurrentRenewer (default to false).</param>
         /// <param name="phaseAssignees">phaseAssignees.</param>
         /// <param name="phaseDueDate">phaseDueDate.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="primaryContact">primaryContact.</param>
         /// <param name="secondaryContact">secondaryContact.</param>
         /// <param name="errorMessage">errorMessage.</param>
-        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = default(int), bool enableTeamCollaboration = default(bool), string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = default(bool), string groupTeamSiteUrl = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = default(bool), List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
+        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
             this.ObjectId = objectId;
             this.PolicyId = policyId;

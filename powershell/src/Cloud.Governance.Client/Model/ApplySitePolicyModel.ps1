@@ -12,37 +12,37 @@ function New-ApplySitePolicyModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyDesigner},
+        ${IsApplyDesigner} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplySiteMaxDepth},
+        ${IsApplySiteMaxDepth} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyPolicyIcon},
+        ${IsApplyPolicyIcon} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyAosPlans},
+        ${IsApplyAosPlans} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PolicyId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyAllSetting},
+        ${IsApplyAllSetting} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyQuota},
+        ${IsApplyQuota} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplySharing},
+        ${IsApplySharing} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyQuotaThreshold},
+        ${IsApplyQuotaThreshold} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyDeactivatedElection},
+        ${IsApplyDeactivatedElection} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsApplyLifecycle},
+        ${IsApplyLifecycle} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${LifecycleRenewalSetting},
@@ -54,7 +54,7 @@ function New-ApplySitePolicyModel {
         ${SelectedObjects},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HasOngoingTasks}
+        ${HasOngoingTasks} = $false
     )
 
     Process {

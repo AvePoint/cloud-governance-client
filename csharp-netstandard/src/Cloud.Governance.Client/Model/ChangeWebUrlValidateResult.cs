@@ -35,10 +35,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webTitle">webTitle.</param>
         /// <param name="webDescription">webDescription.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeWebUrlValidateResult(ChangeWebSPObject url = default(ChangeWebSPObject), string webTitle = default(string), string webDescription = default(string), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeWebUrlValidateResult(ChangeWebSPObject url = default(ChangeWebSPObject), string webTitle = default(string), string webDescription = default(string), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.Url = url;
             this.WebTitle = webTitle;

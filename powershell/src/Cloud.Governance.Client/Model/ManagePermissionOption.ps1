@@ -15,22 +15,22 @@ function New-ManagePermissionOption {
         ${GrantPermissionSetting},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableEditPermission},
+        ${IsEnableEditPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableRemovePermission},
+        ${IsEnableRemovePermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableStopInheritPermission},
+        ${IsEnableStopInheritPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableDeleteUniquePermission},
+        ${IsEnableDeleteUniquePermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableExcludePermissionLevel},
+        ${IsEnableExcludePermissionLevel} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsHideExcludePermissionItem},
+        ${IsHideExcludePermissionItem} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${ExcludedPermissionLevles}

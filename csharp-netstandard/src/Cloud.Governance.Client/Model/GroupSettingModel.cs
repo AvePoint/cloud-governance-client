@@ -31,10 +31,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupEmailAddress">groupEmailAddress.</param>
         /// <param name="owners">owners.</param>
         /// <param name="members">members.</param>
-        /// <param name="groupDuration">groupDuration.</param>
+        /// <param name="groupDuration">groupDuration (default to 0).</param>
         /// <param name="emailSubject">emailSubject.</param>
         /// <param name="emailBody">emailBody.</param>
-        public GroupSettingModel(string groupName = default(string), string groupDescription = default(string), string groupEmailAddress = default(string), string owners = default(string), string members = default(string), int groupDuration = default(int), string emailSubject = default(string), string emailBody = default(string))
+        public GroupSettingModel(string groupName = default(string), string groupDescription = default(string), string groupEmailAddress = default(string), string owners = default(string), string members = default(string), int groupDuration = 0, string emailSubject = default(string), string emailBody = default(string))
         {
             this.GroupName = groupName;
             this.GroupDescription = groupDescription;

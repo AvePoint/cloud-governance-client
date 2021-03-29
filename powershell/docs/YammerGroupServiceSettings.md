@@ -4,16 +4,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NetworkId** | **String** |  | [optional] 
-**AllowCreate** | **Boolean** |  | [optional] 
-**AllowReuseExisting** | **Boolean** |  | [optional] 
-**Enabled** | **Boolean** |  | [optional] 
+**AllowCreate** | **Boolean** |  | [optional] [default to $false]
+**AllowReuseExisting** | **Boolean** |  | [optional] [default to $false]
+**Enabled** | **Boolean** |  | [optional] [default to $false]
 **CreateNewGroupAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **NameOrId** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**YammerGroupType**](YammerGroupType.md) |  | [optional] 
 **JoinType** | [**YammerGroupJoinType**](YammerGroupJoinType.md) |  | [optional] 
-**IsListInDirectory** | **Boolean** |  | [optional] 
-**IsGroupAlreadyExisted** | **Boolean** |  | [optional] 
+**IsListInDirectory** | **Boolean** |  | [optional] [default to $false]
+**IsGroupAlreadyExisted** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

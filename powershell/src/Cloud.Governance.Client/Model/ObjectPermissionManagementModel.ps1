@@ -12,13 +12,13 @@ function New-ObjectPermissionManagementModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ObjectType},
+        ${ObjectType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ObjectInfo},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Permissions},
@@ -27,7 +27,7 @@ function New-ObjectPermissionManagementModel {
         ${OriginalPermissions},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExternalUserType},
+        ${ExternalUserType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Members},

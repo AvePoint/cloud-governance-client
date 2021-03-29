@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsMigrateConfiguration** | **bool** |  | [optional] 
-**IsKeepLookAndFeel** | **bool** |  | [optional] 
+**IsMigrateConfiguration** | **bool** |  | [optional] [default to false]
+**IsKeepLookAndFeel** | **bool** |  | [optional] [default to false]
 **ColumnsAndContentConflictResolution** | **ItemConflictResolutionType** |  | [optional] 
-**IsMigrateSecurity** | **bool** |  | [optional] 
-**IsMigrateColumnsAndContentTypes** | **bool** |  | [optional] 
-**IsMigrateContent** | **bool** |  | [optional] 
-**IsMigrateContentIncludeListAttachment** | **bool** |  | [optional] 
+**IsMigrateSecurity** | **bool** |  | [optional] [default to false]
+**IsMigrateColumnsAndContentTypes** | **bool** |  | [optional] [default to false]
+**IsMigrateContent** | **bool** |  | [optional] [default to false]
+**IsMigrateContentIncludeListAttachment** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **LanguageIdsAndTemplates** | [**LanguageWithTemplates[]**](LanguageWithTemplates.md) |  | [optional] 
 **TemplateIdsAndPermissions** | [**TemplateWithPermissions[]**](TemplateWithPermissions.md) |  | [optional] 
 **PermissionSettings** | [**PermissionSettings**](PermissionSettings.md) |  | [optional] 
-**UseUniquePermissions** | **Boolean** |  | [optional] 
+**UseUniquePermissions** | **Boolean** |  | [optional] [default to $false]
 **DeploymentManagerPlanSettings** | [**DeploymentManagerPlanSettings**](DeploymentManagerPlanSettings.md) |  | [optional] 
 **YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] 
 **TemplateStoreUrl** | **String** |  | [optional] 
@@ -17,10 +17,10 @@ Name | Type | Description | Notes
 **NotifySecondaryContactSettings** | [**GuidBooleanModel**](GuidBooleanModel.md) |  | [optional] 
 **DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**IsOnQuickLaunch** | **Boolean** |  | [optional] 
-**IsOnTopLinkBar** | **Boolean** |  | [optional] 
-**IsNavigationInheritance** | **Boolean** |  | [optional] 
-**DefaultWebLanguage** | **Int32** |  | [optional] 
+**IsOnQuickLaunch** | **Boolean** |  | [optional] [default to $false]
+**IsOnTopLinkBar** | **Boolean** |  | [optional] [default to $false]
+**IsNavigationInheritance** | **Boolean** |  | [optional] [default to $false]
+**DefaultWebLanguage** | **Int32** |  | [optional] [default to 0]
 **ScopeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **WebLanguageAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **TemplateAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
@@ -32,24 +32,23 @@ Name | Type | Description | Notes
 **RequestTemplate** | [**CreateWebRequest**](CreateWebRequest.md) |  | [optional] 
 **DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
-**HideRequestSummary** | **Boolean** |  | [optional] 
+**HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] 
+**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
 **Departments** | **String[]** |  | [optional] 
 **ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
 **ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ApproversContainManagerRole** | **Boolean** |  | [optional] 
+**ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
-**ShowServiceInCatalog** | **Boolean** |  | [optional] 
+**ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
 **CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
 **ApprovalProcessId** | **String** |  | [optional] 
-**LanguageId** | **Int32** |  | [optional] 
+**LanguageId** | **Int32** |  | [optional] [default to 0]
 **CategoryId** | **String** |  | [optional] 
-**Details** | **String** |  | [optional] 
 
 ## Examples
 
@@ -100,8 +99,7 @@ $CreateWebService = New-Cloud.Governance.ClientCreateWebService  -ScopeSettings 
  -CustomActions null `
  -ApprovalProcessId null `
  -LanguageId null `
- -CategoryId null `
- -Details null
+ -CategoryId null
 ```
 
 - Convert the resource to JSON

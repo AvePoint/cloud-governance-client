@@ -18,7 +18,7 @@ function New-ContentMoveSPObjectMapping {
         ${Destination},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action}
+        ${Action} = "Merge"
     )
 
     Process {

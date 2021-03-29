@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] 
+**Enabled** | **Boolean** |  | [optional] [default to $false]
 **WebServiceAddress** | **String** |  | [optional] 
 **WebServiceAuthenticationType** | [**WebServiceAuthenticationType**](WebServiceAuthenticationType.md) |  | [optional] 
 **WebServiceAppClientId** | **String** |  | [optional] 

@@ -31,15 +31,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="propertyType">propertyType.</param>
         /// <param name="property">property.</param>
         /// <param name="propertyName">propertyName.</param>
-        /// <param name="isAdditionalColumnEnabled">isAdditionalColumnEnabled.</param>
+        /// <param name="isAdditionalColumnEnabled">isAdditionalColumnEnabled (default to false).</param>
         /// <param name="matchedMetadataId">matchedMetadataId.</param>
         /// <param name="matchedMetadataName">matchedMetadataName.</param>
         /// <param name="additionalColumn">additionalColumn.</param>
         /// <param name="additionalColumnType">additionalColumnType.</param>
         /// <param name="additionalColumnName">additionalColumnName.</param>
-        /// <param name="value">value.</param>
-        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess.</param>
-        public SharePointListMetadataSettings(string listUrl = default(string), string webUrl = default(string), string propertyType = default(string), string property = default(string), string propertyName = default(string), bool isAdditionalColumnEnabled = default(bool), string matchedMetadataId = default(string), string matchedMetadataName = default(string), string additionalColumn = default(string), string additionalColumnType = default(string), string additionalColumnName = default(string), LookupListValue value = default(LookupListValue), bool allowReferenceAsRoleInApprovalProcess = default(bool))
+        /// <param name="value">Value of Lookup User Profile or Azure Ad metadata..</param>
+        /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess (default to false).</param>
+        public SharePointListMetadataSettings(string listUrl = default(string), string webUrl = default(string), string propertyType = default(string), string property = default(string), string propertyName = default(string), bool isAdditionalColumnEnabled = false, string matchedMetadataId = default(string), string matchedMetadataName = default(string), string additionalColumn = default(string), string additionalColumnType = default(string), string additionalColumnName = default(string), LookupListValue value = default(LookupListValue), bool allowReferenceAsRoleInApprovalProcess = false)
         {
             this.ListUrl = listUrl;
             this.WebUrl = webUrl;
@@ -123,8 +123,9 @@ namespace Cloud.Governance.Client.Model
         public string AdditionalColumnName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Value of Lookup User Profile or Azure Ad metadata.
         /// </summary>
+        /// <value>Value of Lookup User Profile or Azure Ad metadata.</value>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public LookupListValue Value { get; set; }
 

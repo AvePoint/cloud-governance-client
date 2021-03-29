@@ -26,11 +26,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangePolicyActionSetting" /> class.
         /// </summary>
-        /// <param name="startDateType">startDateType.</param>
-        /// <param name="specifyDateTicks">specifyDateTicks.</param>
-        /// <param name="changePolicyConfig">changePolicyConfig.</param>
-        /// <param name="isAllowAutoCancel">isAllowAutoCancel.</param>
-        public ChangePolicyActionSetting(int startDateType = default(int), long specifyDateTicks = default(long), int changePolicyConfig = default(int), bool isAllowAutoCancel = default(bool))
+        /// <param name="startDateType">startDateType (default to 0).</param>
+        /// <param name="specifyDateTicks">specifyDateTicks (default to 0).</param>
+        /// <param name="changePolicyConfig">changePolicyConfig (default to 0).</param>
+        /// <param name="isAllowAutoCancel">isAllowAutoCancel (default to false).</param>
+        public ChangePolicyActionSetting(int startDateType = 0, long specifyDateTicks = 0, int changePolicyConfig = 0, bool isAllowAutoCancel = false)
         {
             this.StartDateType = startDateType;
             this.SpecifyDateTicks = specifyDateTicks;

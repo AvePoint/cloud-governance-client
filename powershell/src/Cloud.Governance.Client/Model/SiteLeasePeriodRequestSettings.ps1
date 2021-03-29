@@ -12,16 +12,16 @@ function New-SiteLeasePeriodRequestSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LeaseInterval},
+        ${LeaseInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseDurationType},
+        ${LeaseDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LeaseWarningInterval},
+        ${LeaseWarningInterval} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseWarningDurationType}
+        ${LeaseWarningDurationType} = "Day"
     )
 
     Process {

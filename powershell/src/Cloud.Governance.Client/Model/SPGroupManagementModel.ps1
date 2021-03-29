@@ -12,7 +12,7 @@ function New-SPGroupManagementModel {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Id},
+        ${Id} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Name},
@@ -27,28 +27,28 @@ function New-SPGroupManagementModel {
         ${Members},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SpGroupViewType},
+        ${SpGroupViewType} = "GroupMembers",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SpGroupEditType},
+        ${SpGroupEditType} = "GroupOwner",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Permissions},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action},
+        ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAllowJoinOrLeaveRequest},
+        ${IsAllowJoinOrLeaveRequest} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAutoAcceptRequest},
+        ${IsAutoAcceptRequest} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SendMembershipRequestEmailAddress},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsTemporaryGroup},
+        ${IsTemporaryGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${RoleID}

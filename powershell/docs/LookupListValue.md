@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ColumnType** | **String** |  | [optional] 
-**ColumnName** | **String** |  | [optional] 
-**Value** | **String** |  | [optional] 
-**DisplayValue** | **String** |  | [optional] 
+**ColumnType** | **String** | type of lookup list column | [optional] 
+**ColumnName** | **String** | name of lookup list column | [optional] 
+**Value** | **String** | Value of lookup list | [optional] 
+**DisplayValue** | **String** | Display value of lookup list | [optional] 
 
 ## Examples
 

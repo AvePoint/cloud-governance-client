@@ -47,7 +47,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$GroupSettingModel = (Initialize-GroupSettingModel-GroupName "GroupName_example" -GroupDescription "GroupDescription_example" -GroupEmailAddress "GroupEmailAddress_example" -Owners "Owners_example" -Members "Members_example" -GroupDuration 123 -EmailSubject "EmailSubject_example" -EmailBody "EmailBody_example") # GroupSettingModel |  (optional)
+$GroupSettingModel = (New-GroupSettingModel-GroupName "GroupName_example" -GroupDescription "GroupDescription_example" -GroupEmailAddress "GroupEmailAddress_example" -Owners "Owners_example" -Members "Members_example" -GroupDuration 123 -EmailSubject "EmailSubject_example" -EmailBody "EmailBody_example") # GroupSettingModel | GroupName,GroupEmailAddress,Owners,Members (optional)
 
 # Create mail-enabled security group
 try {
@@ -62,7 +62,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **GroupSettingModel** | [**GroupSettingModel**](GroupSettingModel.md)|  | [optional] 
+ **GroupSettingModel** | [**GroupSettingModel**](GroupSettingModel.md)| GroupName,GroupEmailAddress,Owners,Members | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -111,8 +111,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ObjectIdOrNameOrEmail = "ObjectIdOrNameOrEmail_example" # String | 
 $TenantId = "TenantId_example" # String | 
-$Top = 987 # Int32 |  (optional)
-$Skip = 987 # Int32 |  (optional)
+$Top = 987 # Int32 |  (optional) (default to 0)
+$Skip = 987 # Int32 |  (optional) (default to 0)
 $Search = "Search_example" # String |  (optional)
 
 # get group members by group email
@@ -130,8 +130,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ObjectIdOrNameOrEmail** | **String**|  | 
  **TenantId** | **String**|  | 
- **Top** | **Int32**|  | [optional] 
- **Skip** | **Int32**|  | [optional] 
+ **Top** | **Int32**|  | [optional] [default to 0]
+ **Skip** | **Int32**|  | [optional] [default to 0]
  **Search** | **String**|  | [optional] 
 
 ### Return type
@@ -179,8 +179,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Email = "Email_example" # String | 
-$Top = 987 # Int32 |  (optional)
-$Skip = 987 # Int32 |  (optional)
+$Top = 987 # Int32 |  (optional) (default to 0)
+$Skip = 987 # Int32 |  (optional) (default to 0)
 $Search = "Search_example" # String |  (optional)
 
 # get group members by group email
@@ -197,8 +197,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Email** | **String**|  | 
- **Top** | **Int32**|  | [optional] 
- **Skip** | **Int32**|  | [optional] 
+ **Top** | **Int32**|  | [optional] [default to 0]
+ **Skip** | **Int32**|  | [optional] [default to 0]
  **Search** | **String**|  | [optional] 
 
 ### Return type
@@ -246,8 +246,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Email = "Email_example" # String | 
-$Top = 987 # Int32 |  (optional)
-$Skip = 987 # Int32 |  (optional)
+$Top = 987 # Int32 |  (optional) (default to 0)
+$Skip = 987 # Int32 |  (optional) (default to 0)
 $Search = "Search_example" # String |  (optional)
 
 # get group owners by group email
@@ -264,8 +264,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Email** | **String**|  | 
- **Top** | **Int32**|  | [optional] 
- **Skip** | **Int32**|  | [optional] 
+ **Top** | **Int32**|  | [optional] [default to 0]
+ **Skip** | **Int32**|  | [optional] [default to 0]
  **Search** | **String**|  | [optional] 
 
 ### Return type
@@ -480,7 +480,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Url = "Url_example" # String | 
-$Type = (Initialize-NodeType) # NodeType | 
+$Type = (New-NodeType) # NodeType | 
 
 # get site permimssion role assignment
 try {
@@ -772,7 +772,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Languageid = 987 # Int32 | 
+$Languageid = 987 # Int32 |  (default to 0)
 $Url = "Url_example" # String |  (optional)
 
 # get site templates with language code identifier
@@ -788,7 +788,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Languageid** | **Int32**|  | 
+ **Languageid** | **Int32**|  | [default to 0]
  **Url** | **String**|  | [optional] 
 
 ### Return type

@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Theme** | [**ThemeType**](ThemeType.md) |  | [optional] 
 **SelectedLanguages** | **Int32[]** |  | [optional] 
-**IsUsingBrowserLanguage** | **Boolean** |  | [optional] 
+**IsUsingBrowserLanguage** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

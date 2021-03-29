@@ -12,46 +12,46 @@ function New-ManagePermissionGrantSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableGrantPermission},
+        ${IsEnableGrantPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGrantTemporaryPermission},
+        ${IsGrantTemporaryPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GrantPermissionAssignBy},
+        ${GrantPermissionAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${TemporaryPermissionDuration},
+        ${TemporaryPermissionDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TemporaryDurationType},
+        ${TemporaryDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsMaxTemporaryDurationSetted},
+        ${IsMaxTemporaryDurationSetted} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${TemporaryPermissionMaxDuration},
+        ${TemporaryPermissionMaxDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TemporaryPermissionMaxDurationType},
+        ${TemporaryPermissionMaxDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableExpireNotify},
+        ${IsEnableExpireNotify} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAllowSelectAdmin},
+        ${IsAllowSelectAdmin} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${ExpireNotifyDuration},
+        ${ExpireNotifyDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExpireNotifyDurationType},
+        ${ExpireNotifyDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ExpireNotifyEmailTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableWelcomeNotify},
+        ${IsEnableWelcomeNotify} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${WelcomeEmailSubject},
@@ -60,10 +60,10 @@ function New-ManagePermissionGrantSetting {
         ${WelcomeEmailBody},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${WelcomeEmailAssignBy},
+        ${WelcomeEmailAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowSpecifyTemporayPermissionDuration}
+        ${AllowSpecifyTemporayPermissionDuration} = $false
     )
 
     Process {

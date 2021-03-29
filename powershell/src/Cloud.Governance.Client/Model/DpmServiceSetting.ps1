@@ -12,7 +12,7 @@ function New-DpmServiceSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnabled},
+        ${IsEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DefaultValue},
@@ -21,7 +21,7 @@ function New-DpmServiceSetting {
         ${SelectedItems},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AssignBy}
+        ${AssignBy} = "BusinessUser"
     )
 
     Process {

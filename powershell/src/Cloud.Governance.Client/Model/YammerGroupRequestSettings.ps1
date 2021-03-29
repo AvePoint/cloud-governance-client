@@ -18,16 +18,16 @@ function New-YammerGroupRequestSettings {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Public",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${JoinType},
+        ${JoinType} = "Anyone",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsListInDirectory},
+        ${IsListInDirectory} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsGroupAlreadyExisted}
+        ${IsGroupAlreadyExisted} = $false
     )
 
     Process {

@@ -1,0 +1,5 @@
+{
+  "ServiceName": "Api_Sample_ChangeSiteSettings_DPMPlan_Service",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/PermissionTest1",
+  "DPMPlanName": "GAO-DPM"
+}

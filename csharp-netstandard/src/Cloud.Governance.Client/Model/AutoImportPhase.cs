@@ -65,7 +65,10 @@ namespace Cloud.Governance.Client.Model
         Archived = 13,
 
         [EnumMember(Value = "14")]
-        Escalation = 14
+        Escalation = 14,
+
+        [EnumMember(Value = "15")]
+        ITRenewalCanceled = 15
 
     }
 

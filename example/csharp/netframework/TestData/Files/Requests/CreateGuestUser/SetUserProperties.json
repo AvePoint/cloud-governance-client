@@ -1,0 +1,8 @@
+{
+  "ServiceName": "UT_CreateGuestUser_Basic",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "DisplayName": "DisplayName",
+  "FirstName": "FirstName",
+  "LastName": "LastName"
+}

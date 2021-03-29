@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SelectedNodes** | [**SPNode[]**](SPNode.md) |  | [optional] 
-**AutoPopulateUrlWithSPContext** | **Boolean** |  | [optional] 
+**AutoPopulateUrlWithSPContext** | **Boolean** |  | [optional] [default to $false]
 **AutoPopulateUrlWithSPContextAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 
 ## Examples

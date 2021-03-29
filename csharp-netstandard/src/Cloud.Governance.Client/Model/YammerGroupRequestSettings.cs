@@ -40,9 +40,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
         /// <param name="joinType">joinType.</param>
-        /// <param name="isListInDirectory">isListInDirectory.</param>
-        /// <param name="isGroupAlreadyExisted">isGroupAlreadyExisted.</param>
-        public YammerGroupRequestSettings(string nameOrId = default(string), string description = default(string), YammerGroupType? type = default(YammerGroupType?), YammerGroupJoinType? joinType = default(YammerGroupJoinType?), bool isListInDirectory = default(bool), bool isGroupAlreadyExisted = default(bool))
+        /// <param name="isListInDirectory">isListInDirectory (default to false).</param>
+        /// <param name="isGroupAlreadyExisted">isGroupAlreadyExisted (default to false).</param>
+        public YammerGroupRequestSettings(string nameOrId = default(string), string description = default(string), YammerGroupType? type = default(YammerGroupType?), YammerGroupJoinType? joinType = default(YammerGroupJoinType?), bool isListInDirectory = false, bool isGroupAlreadyExisted = false)
         {
             this.NameOrId = nameOrId;
             this.Description = description;

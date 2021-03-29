@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ChangeGroup_ChangeNameOrDescription_Service",
+  "GroupEmail": "group@example.com",
+  "GroupName": "NameGroupSampleChangeGroup_changedBySample",
+  "GroupDescription": "DescriptionGroupSampleChangeGroup_changedBySample"
+}

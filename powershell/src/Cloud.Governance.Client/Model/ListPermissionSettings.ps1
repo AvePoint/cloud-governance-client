@@ -12,7 +12,7 @@ function New-ListPermissionSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${StopInheritingPermissions},
+        ${StopInheritingPermissions} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${UserPermissions},

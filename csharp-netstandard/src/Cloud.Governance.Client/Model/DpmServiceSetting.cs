@@ -31,11 +31,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DpmServiceSetting" /> class.
         /// </summary>
-        /// <param name="isEnabled">isEnabled.</param>
+        /// <param name="isEnabled">isEnabled (default to false).</param>
         /// <param name="defaultValue">defaultValue.</param>
         /// <param name="selectedItems">selectedItems.</param>
         /// <param name="assignBy">assignBy.</param>
-        public DpmServiceSetting(bool isEnabled = default(bool), string defaultValue = default(string), List<string> selectedItems = default(List<string>), AssignBy? assignBy = default(AssignBy?))
+        public DpmServiceSetting(bool isEnabled = false, string defaultValue = default(string), List<string> selectedItems = default(List<string>), AssignBy? assignBy = default(AssignBy?))
         {
             this.IsEnabled = isEnabled;
             this.DefaultValue = defaultValue;

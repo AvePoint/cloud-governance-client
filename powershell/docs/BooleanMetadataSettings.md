@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableTerms** | **Boolean** |  | [optional] 
-**Value** | **Boolean** |  | [optional] 
+**EnableTerms** | **Boolean** |  | [optional] [default to $false]
+**Value** | **Boolean** |  | [optional] [default to $false]
 **TermsAndConditions** | **String** |  | [optional] 
 
 ## Examples

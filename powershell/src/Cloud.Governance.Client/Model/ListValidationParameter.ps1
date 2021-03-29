@@ -21,13 +21,13 @@ function New-ListValidationParameter {
         ${ListTitle},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsDocumentLibrary},
+        ${IsDocumentLibrary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEditTask},
+        ${IsEditTask} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsFromQuestionnaire}
+        ${IsFromQuestionnaire} = $false
     )
 
     Process {

@@ -22,7 +22,7 @@ namespace Cloud.Governance.Client.Api
         /// apply groups policy
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <returns></returns>
         void ApplyGroupsPolicy(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel));
 
@@ -33,14 +33,14 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ApplyGroupsPolicyWithHttpInfo(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel));
         /// <summary>
         /// apply site policy
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <returns></returns>
         void ApplySitesPolicy(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel));
 
@@ -51,7 +51,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ApplySitesPolicyWithHttpInfo(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel));
         /// <summary>
@@ -76,9 +76,10 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>List&lt;ReportActionResult&gt;</returns>
-        List<ReportActionResult> CompleteWorkspaceRenewalTask(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        /// <returns></returns>
+        void CompleteWorkspaceRenewalTask(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
 
         /// <summary>
         /// completed renewal task
@@ -87,9 +88,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;ReportActionResult&gt;</returns>
-        ApiResponse<List<ReportActionResult>> CompleteWorkspaceRenewalTaskWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
         /// <summary>
         /// delete workspaces
         /// </summary>
@@ -179,8 +181,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>List&lt;ReportActionResult&gt;</returns>
-        List<ReportActionResult> TriggerWorkspaceRenewal(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        /// <returns></returns>
+        void TriggerWorkspaceRenewal(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
 
         /// <summary>
         /// trigger workspace renewal
@@ -190,8 +192,8 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;ReportActionResult&gt;</returns>
-        ApiResponse<List<ReportActionResult>> TriggerWorkspaceRenewalWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
         /// <summary>
         /// unlock sites and Office365 group site
         /// </summary>
@@ -226,7 +228,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ApplyGroupsPolicyAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -238,7 +240,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ApplyGroupsPolicyWithHttpInfoAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -249,7 +251,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ApplySitesPolicyAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -261,7 +263,7 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ApplySitesPolicyWithHttpInfoAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
@@ -295,10 +297,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;ReportActionResult&gt;</returns>
-        System.Threading.Tasks.Task<List<ReportActionResult>> CompleteWorkspaceRenewalTaskAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// completed renewal task
@@ -307,10 +310,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;ReportActionResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ReportActionResult>>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// delete workspaces
         /// </summary>
@@ -424,8 +428,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;ReportActionResult&gt;</returns>
-        System.Threading.Tasks.Task<List<ReportActionResult>> TriggerWorkspaceRenewalAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// trigger workspace renewal
@@ -436,8 +440,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;ReportActionResult&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ReportActionResult>>> TriggerWorkspaceRenewalWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// unlock sites and Office365 group site
         /// </summary>
@@ -585,7 +589,7 @@ namespace Cloud.Governance.Client.Api
         /// apply groups policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <returns></returns>
         public void ApplyGroupsPolicy(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel))
         {
@@ -596,7 +600,7 @@ namespace Cloud.Governance.Client.Api
         /// apply groups policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ApplyGroupsPolicyWithHttpInfo(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel))
         {
@@ -646,7 +650,7 @@ namespace Cloud.Governance.Client.Api
         /// apply groups policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ApplyGroupsPolicyAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -658,7 +662,7 @@ namespace Cloud.Governance.Client.Api
         /// apply groups policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applyGroupPolicyModel"> (optional)</param>
+        /// <param name="applyGroupPolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ApplyGroupsPolicyWithHttpInfoAsync(ApplyGroupPolicyModel applyGroupPolicyModel = default(ApplyGroupPolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -712,7 +716,7 @@ namespace Cloud.Governance.Client.Api
         /// apply site policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <returns></returns>
         public void ApplySitesPolicy(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel))
         {
@@ -723,7 +727,7 @@ namespace Cloud.Governance.Client.Api
         /// apply site policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public Cloud.Governance.Client.Client.ApiResponse<Object> ApplySitesPolicyWithHttpInfo(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel))
         {
@@ -773,7 +777,7 @@ namespace Cloud.Governance.Client.Api
         /// apply site policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ApplySitesPolicyAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -785,7 +789,7 @@ namespace Cloud.Governance.Client.Api
         /// apply site policy 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="applySitePolicyModel"> (optional)</param>
+        /// <param name="applySitePolicyModel">apply policy setting (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> ApplySitesPolicyWithHttpInfoAsync(ApplySitePolicyModel applySitePolicyModel = default(ApplySitePolicyModel), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
@@ -966,21 +970,22 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>List&lt;ReportActionResult&gt;</returns>
-        public List<ReportActionResult> CompleteWorkspaceRenewalTask(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        /// <returns></returns>
+        public void CompleteWorkspaceRenewalTask(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>> localVarResponse = CompleteWorkspaceRenewalTaskWithHttpInfo(workspaceIdTypeModel);
-            return localVarResponse.Data;
+            CompleteWorkspaceRenewalTaskWithHttpInfo(markAsCanceled, workspaceIdTypeModel);
         }
 
         /// <summary>
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;ReportActionResult&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>> CompleteWorkspaceRenewalTaskWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -990,7 +995,6 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
-                "text/plain",
                 "application/json"
             };
 
@@ -1000,6 +1004,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (markAsCanceled != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "markAsCanceled", markAsCanceled));
+            }
             localVarRequestOptions.Data = workspaceIdTypeModel;
 
             // authentication (clientSecret) required
@@ -1014,7 +1022,7 @@ namespace Cloud.Governance.Client.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<List<ReportActionResult>>("/admin/directory/workspace/renewal/complete", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/admin/directory/workspace/renewal/complete", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1029,23 +1037,24 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;ReportActionResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ReportActionResult>> CompleteWorkspaceRenewalTaskAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>> localVarResponse = await CompleteWorkspaceRenewalTaskWithHttpInfoAsync(workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
+            await CompleteWorkspaceRenewalTaskWithHttpInfoAsync(markAsCanceled, workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="markAsCanceled"> (optional, default to false)</param>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;ReportActionResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1056,7 +1065,6 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
-                "text/plain",
                 "application/json"
             };
 
@@ -1067,6 +1075,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (markAsCanceled != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "markAsCanceled", markAsCanceled));
+            }
             localVarRequestOptions.Data = workspaceIdTypeModel;
 
             // authentication (clientSecret) required
@@ -1082,7 +1094,7 @@ namespace Cloud.Governance.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<List<ReportActionResult>>("/admin/directory/workspace/renewal/complete", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/admin/directory/workspace/renewal/complete", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1690,11 +1702,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>List&lt;ReportActionResult&gt;</returns>
-        public List<ReportActionResult> TriggerWorkspaceRenewal(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        /// <returns></returns>
+        public void TriggerWorkspaceRenewal(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>> localVarResponse = TriggerWorkspaceRenewalWithHttpInfo(workspaceIdTypeModel);
-            return localVarResponse.Data;
+            TriggerWorkspaceRenewalWithHttpInfo(workspaceIdTypeModel);
         }
 
         /// <summary>
@@ -1702,8 +1713,8 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;ReportActionResult&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>> TriggerWorkspaceRenewalWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1713,7 +1724,6 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
-                "text/plain",
                 "application/json"
             };
 
@@ -1737,7 +1747,7 @@ namespace Cloud.Governance.Client.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Post<List<ReportActionResult>>("/admin/directory/workspace/renewal/trigger", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Post<Object>("/admin/directory/workspace/renewal/trigger", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1754,11 +1764,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of List&lt;ReportActionResult&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ReportActionResult>> TriggerWorkspaceRenewalAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>> localVarResponse = await TriggerWorkspaceRenewalWithHttpInfoAsync(workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
-            return localVarResponse.Data;
+            await TriggerWorkspaceRenewalWithHttpInfoAsync(workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -1767,8 +1776,8 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="workspaceIdTypeModel"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (List&lt;ReportActionResult&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ReportActionResult>>> TriggerWorkspaceRenewalWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1779,7 +1788,6 @@ namespace Cloud.Governance.Client.Api
 
             // to determine the Accept header
             String[] _accepts = new String[] {
-                "text/plain",
                 "application/json"
             };
 
@@ -1805,7 +1813,7 @@ namespace Cloud.Governance.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.PostAsync<List<ReportActionResult>>("/admin/directory/workspace/renewal/trigger", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/admin/directory/workspace/renewal/trigger", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

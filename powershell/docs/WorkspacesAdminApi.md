@@ -42,7 +42,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyGroupPolicyModel = (Initialize-ApplyGroupPolicyModel-SubType (Initialize-GroupPolicySubType) -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (Initialize-LifecycleRenewalSetting-LeaseDateType (Initialize-LeaseDateType) -StartDateType (Initialize-LeaseStartDateType) -SpecifyStartDate Get-Date -HandleOngoingType (Initialize-HandleOngoingType)) -VarFilter "VarFilter_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false) # ApplyGroupPolicyModel |  (optional)
+$ApplyGroupPolicyModel = (New-ApplyGroupPolicyModel-SubType (New-GroupPolicySubType) -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (New-LifecycleRenewalSetting-LeaseDateType (New-LeaseDateType) -StartDateType (New-LeaseStartDateType) -SpecifyStartDate Get-Date -HandleOngoingType (New-HandleOngoingType)) -VarFilter "VarFilter_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false) # ApplyGroupPolicyModel | apply policy setting (optional)
 
 # apply groups policy
 try {
@@ -57,7 +57,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ApplyGroupPolicyModel** | [**ApplyGroupPolicyModel**](ApplyGroupPolicyModel.md)|  | [optional] 
+ **ApplyGroupPolicyModel** | [**ApplyGroupPolicyModel**](ApplyGroupPolicyModel.md)| apply policy setting | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -100,7 +100,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplySitePolicyModel = (Initialize-ApplySitePolicyModel-IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (Initialize-LifecycleRenewalSetting-LeaseDateType (Initialize-LeaseDateType) -StartDateType (Initialize-LeaseStartDateType) -SpecifyStartDate Get-Date -HandleOngoingType (Initialize-HandleOngoingType)) -VarFilter "VarFilter_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false) # ApplySitePolicyModel |  (optional)
+$ApplySitePolicyModel = (New-ApplySitePolicyModel-IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (New-LifecycleRenewalSetting-LeaseDateType (New-LeaseDateType) -StartDateType (New-LeaseStartDateType) -SpecifyStartDate Get-Date -HandleOngoingType (New-HandleOngoingType)) -VarFilter "VarFilter_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false) # ApplySitePolicyModel | apply policy setting (optional)
 
 # apply site policy
 try {
@@ -115,7 +115,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ApplySitePolicyModel** | [**ApplySitePolicyModel**](ApplySitePolicyModel.md)|  | [optional] 
+ **ApplySitePolicyModel** | [**ApplySitePolicyModel**](ApplySitePolicyModel.md)| apply policy setting | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -158,7 +158,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ArchiveWorkspaceParameter = (Initialize-ArchiveWorkspaceParameter-ArchiveProfile "ArchiveProfile_example" -ObjectIds @("ObjectIds_example") -WorkspaceType (Initialize-WorkspaceArchivedType)) # ArchiveWorkspaceParameter |  (optional)
+$ArchiveWorkspaceParameter = (New-ArchiveWorkspaceParameter-ArchiveProfile "ArchiveProfile_example" -ObjectIds @("ObjectIds_example") -WorkspaceType (New-WorkspaceArchivedType)) # ArchiveWorkspaceParameter |  (optional)
 
 # archive workspace
 try {
@@ -192,7 +192,8 @@ void (empty response body)
 
 <a name="Complete-WorkspaceRenewalTask"></a>
 # **Complete-WorkspaceRenewalTask**
-> ReportActionResult[] Complete-WorkspaceRenewalTask<br>
+> void Complete-WorkspaceRenewalTask<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-MarkAsCanceled] <System.Nullable[Boolean]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceIdTypeModel] <PSCustomObject[]><br>
 
 completed renewal task
@@ -216,11 +217,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceIdTypeModel = @((Initialize-WorkspaceIdTypeModel-ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType))) # WorkspaceIdTypeModel[] |  (optional)
+$MarkAsCanceled = true # Boolean |  (optional) (default to $false)
+$WorkspaceIdTypeModel = @((New-WorkspaceIdTypeModel-ObjectId "ObjectId_example" -WorkspaceType (New-WorkspaceType))) # WorkspaceIdTypeModel[] |  (optional)
 
 # completed renewal task
 try {
-     $Result = Complete-WorkspaceRenewalTask -WorkspaceIdTypeModel $WorkspaceIdTypeModel
+     $Result = Complete-WorkspaceRenewalTask -MarkAsCanceled $MarkAsCanceled -WorkspaceIdTypeModel $WorkspaceIdTypeModel
 } catch {
     Write-Host ("Exception occured when calling Complete-WorkspaceRenewalTask: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -231,11 +233,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **MarkAsCanceled** | **Boolean**|  | [optional] [default to $false]
  **WorkspaceIdTypeModel** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
-[**ReportActionResult[]**](ReportActionResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -244,7 +247,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -274,7 +277,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceIdTypeModel = @((Initialize-WorkspaceIdTypeModel-ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType))) # WorkspaceIdTypeModel[] |  (optional)
+$WorkspaceIdTypeModel = @((New-WorkspaceIdTypeModel-ObjectId "ObjectId_example" -WorkspaceType (New-WorkspaceType))) # WorkspaceIdTypeModel[] |  (optional)
 
 # delete workspaces
 try {
@@ -466,7 +469,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$LockSiteParameter = (Initialize-LockSiteParameter-LockType (Initialize-LockSiteCollectionType) -Workspace @()) # LockSiteParameter |  (optional)
+$LockSiteParameter = (New-LockSiteParameter-LockType (New-LockSiteCollectionType) -Workspace @()) # LockSiteParameter |  (optional)
 
 # lock sites or Office365 group sites
 try {
@@ -500,7 +503,7 @@ void (empty response body)
 
 <a name="Invoke-TriggerWorkspaceRenewal"></a>
 # **Invoke-TriggerWorkspaceRenewal**
-> ReportActionResult[] Invoke-TriggerWorkspaceRenewal<br>
+> void Invoke-TriggerWorkspaceRenewal<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceIdTypeModel] <PSCustomObject[]><br>
 
 trigger workspace renewal
@@ -543,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
-[**ReportActionResult[]**](ReportActionResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -552,7 +555,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/plain, application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

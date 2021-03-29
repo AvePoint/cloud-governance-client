@@ -12,7 +12,7 @@ function New-ServiceUserWithPermissions {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${UserAssignBy},
+        ${UserAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${User},

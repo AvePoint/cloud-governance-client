@@ -86,7 +86,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="languageIdsAndTemplates">languageIdsAndTemplates.</param>
         /// <param name="templateIdsAndPermissions">templateIdsAndPermissions.</param>
         /// <param name="permissionSettings">permissionSettings.</param>
-        /// <param name="useUniquePermissions">useUniquePermissions.</param>
+        /// <param name="useUniquePermissions">useUniquePermissions (default to false).</param>
         /// <param name="deploymentManagerPlanSettings">deploymentManagerPlanSettings.</param>
         /// <param name="yammerGroupSettings">yammerGroupSettings.</param>
         /// <param name="templateStoreUrl">templateStoreUrl.</param>
@@ -95,10 +95,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notifySecondaryContactSettings">notifySecondaryContactSettings.</param>
         /// <param name="defaultPrimaryContact">defaultPrimaryContact.</param>
         /// <param name="defaultSecondaryContact">defaultSecondaryContact.</param>
-        /// <param name="isOnQuickLaunch">isOnQuickLaunch.</param>
-        /// <param name="isOnTopLinkBar">isOnTopLinkBar.</param>
-        /// <param name="isNavigationInheritance">isNavigationInheritance.</param>
-        /// <param name="defaultWebLanguage">defaultWebLanguage.</param>
+        /// <param name="isOnQuickLaunch">isOnQuickLaunch (default to false).</param>
+        /// <param name="isOnTopLinkBar">isOnTopLinkBar (default to false).</param>
+        /// <param name="isNavigationInheritance">isNavigationInheritance (default to false).</param>
+        /// <param name="defaultWebLanguage">defaultWebLanguage (default to 0).</param>
         /// <param name="scopeAssignBy">scopeAssignBy.</param>
         /// <param name="webLanguageAssignBy">webLanguageAssignBy.</param>
         /// <param name="templateAssignBy">templateAssignBy.</param>
@@ -110,25 +110,24 @@ namespace Cloud.Governance.Client.Model
         /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="hideRequestSummary">hideRequestSummary.</param>
+        /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
         /// <param name="department">department.</param>
-        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps.</param>
+        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps (default to false).</param>
         /// <param name="departments">departments.</param>
         /// <param name="serviceContact">serviceContact.</param>
         /// <param name="serviceAdminContact">serviceAdminContact.</param>
-        /// <param name="approversContainManagerRole">approversContainManagerRole.</param>
+        /// <param name="approversContainManagerRole">approversContainManagerRole (default to false).</param>
         /// <param name="status">status.</param>
-        /// <param name="showServiceInCatalog">showServiceInCatalog.</param>
+        /// <param name="showServiceInCatalog">showServiceInCatalog (default to false).</param>
         /// <param name="customActions">customActions.</param>
         /// <param name="approvalProcessId">approvalProcessId.</param>
-        /// <param name="languageId">languageId.</param>
+        /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        /// <param name="details">details.</param>
-        public CreateWebService(CreateWebScopeSettings scopeSettings = default(CreateWebScopeSettings), List<IntModel> webLanguages = default(List<IntModel>), List<LanguageWithTemplates> languageIdsAndTemplates = default(List<LanguageWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), bool useUniquePermissions = default(bool), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), string templateStoreUrl = default(string), AppSettings appSettings = default(AppSettings), GuidBooleanModel notifyPrimaryContactSettings = default(GuidBooleanModel), GuidBooleanModel notifySecondaryContactSettings = default(GuidBooleanModel), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), bool isOnQuickLaunch = default(bool), bool isOnTopLinkBar = default(bool), bool isNavigationInheritance = default(bool), int defaultWebLanguage = default(int), AssignBy? scopeAssignBy = default(AssignBy?), AssignBy? webLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? navigationInheritanceAssignBy = default(AssignBy?), AssignBy? navigationAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), CreateWebRequest requestTemplate = default(CreateWebRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = default(bool), Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = default(bool), List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = default(bool), CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = default(bool), CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = default(int), string categoryId = default(string), string details = default(string))
+        public CreateWebService(CreateWebScopeSettings scopeSettings = default(CreateWebScopeSettings), List<IntModel> webLanguages = default(List<IntModel>), List<LanguageWithTemplates> languageIdsAndTemplates = default(List<LanguageWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), bool useUniquePermissions = false, DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), string templateStoreUrl = default(string), AppSettings appSettings = default(AppSettings), GuidBooleanModel notifyPrimaryContactSettings = default(GuidBooleanModel), GuidBooleanModel notifySecondaryContactSettings = default(GuidBooleanModel), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), bool isOnQuickLaunch = false, bool isOnTopLinkBar = false, bool isNavigationInheritance = false, int defaultWebLanguage = 0, AssignBy? scopeAssignBy = default(AssignBy?), AssignBy? webLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? navigationInheritanceAssignBy = default(AssignBy?), AssignBy? navigationAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), CreateWebRequest requestTemplate = default(CreateWebRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = false, List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.ScopeSettings = scopeSettings;
             this.WebLanguages = webLanguages;
@@ -176,7 +175,6 @@ namespace Cloud.Governance.Client.Model
             this.ApprovalProcessId = approvalProcessId;
             this.LanguageId = languageId;
             this.CategoryId = categoryId;
-            this.Details = details;
         }
 
         /// <summary>
@@ -390,12 +388,6 @@ namespace Cloud.Governance.Client.Model
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Details
-        /// </summary>
-        [DataMember(Name = "details", EmitDefaultValue = true)]
-        public string Details { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -449,7 +441,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ApprovalProcessId: ").Append(ApprovalProcessId).Append("\n");
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
             sb.Append("  CategoryId: ").Append(CategoryId).Append("\n");
-            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -697,11 +688,6 @@ namespace Cloud.Governance.Client.Model
                     this.CategoryId == input.CategoryId ||
                     (this.CategoryId != null &&
                     this.CategoryId.Equals(input.CategoryId))
-                ) && 
-                (
-                    this.Details == input.Details ||
-                    (this.Details != null &&
-                    this.Details.Equals(input.Details))
                 );
         }
 
@@ -785,8 +771,6 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageId.GetHashCode();
                 if (this.CategoryId != null)
                     hashCode = hashCode * 59 + this.CategoryId.GetHashCode();
-                if (this.Details != null)
-                    hashCode = hashCode * 59 + this.Details.GetHashCode();
                 return hashCode;
             }
         }

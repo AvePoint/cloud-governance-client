@@ -27,9 +27,9 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="DelegatedAccessTokenApiResult" /> class.
         /// </summary>
         /// <param name="value">value.</param>
-        /// <param name="isSuccess">isSuccess.</param>
+        /// <param name="isSuccess">isSuccess (default to false).</param>
         /// <param name="errorMsg">errorMsg.</param>
-        public DelegatedAccessTokenApiResult(DelegatedAccessToken value = default(DelegatedAccessToken), bool isSuccess = default(bool), string errorMsg = default(string))
+        public DelegatedAccessTokenApiResult(DelegatedAccessToken value = default(DelegatedAccessToken), bool isSuccess = false, string errorMsg = default(string))
         {
             this.Value = value;
             this.IsSuccess = isSuccess;

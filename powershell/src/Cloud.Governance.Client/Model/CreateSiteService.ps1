@@ -63,7 +63,7 @@ function New-CreateSiteService {
         ${DefaultTeamSiteDesignId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SiteDesignAssignBy},
+        ${SiteDesignAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${YammerGroupSettings},
@@ -78,7 +78,7 @@ function New-CreateSiteService {
         ${HubSiteSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnabledCustomTemplate},
+        ${EnabledCustomTemplate} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${CustomSiteTemplateListURL},
@@ -102,7 +102,7 @@ function New-CreateSiteService {
         ${DefaultSecondaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${DefaultSiteLanguage},
+        ${DefaultSiteLanguage} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DefaultRootSite},
@@ -117,7 +117,7 @@ function New-CreateSiteService {
         ${DefaultTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${DefaultTimeZone},
+        ${DefaultTimeZone} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DefaultClassification},
@@ -129,58 +129,58 @@ function New-CreateSiteService {
         ${DefaultDesignType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SiteLanguageAssignBy},
+        ${SiteLanguageAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TemplateAssignBy},
+        ${TemplateAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PolicyAssignBy},
+        ${PolicyAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PermissionAssignBy},
+        ${PermissionAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${RootSiteAndManagedPathAssignBy},
+        ${RootSiteAndManagedPathAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TimeZoneAssignBy},
+        ${TimeZoneAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrimaryAdminAssignBy},
+        ${PrimaryAdminAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AdditionalAdminAssignBy},
+        ${AdditionalAdminAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${PrimaryContactAssignBy},
+        ${PrimaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SecondaryContactAssignBy},
+        ${SecondaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DesignTypeAssignBy},
+        ${DesignTypeAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ClassificationAssignBy},
+        ${ClassificationAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SensitivityAssignBy},
+        ${SensitivityAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${HubSiteAssignBy},
+        ${HubSiteAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${DepartmentAssignBy},
+        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HideRequestSummary},
+        ${HideRequestSummary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -192,13 +192,13 @@ function New-CreateSiteService {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps},
+        ${LoadDepartmentFromUps} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${Departments},
@@ -210,13 +210,13 @@ function New-CreateSiteService {
         ${ServiceAdminContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ApproversContainManagerRole},
+        ${ApproversContainManagerRole} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Inactive",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ShowServiceInCatalog},
+        ${ShowServiceInCatalog} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${CustomActions},
@@ -225,13 +225,10 @@ function New-CreateSiteService {
         ${ApprovalProcessId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CategoryId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Details}
+        ${CategoryId}
     )
 
     Process {
@@ -313,7 +310,6 @@ function New-CreateSiteService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO
@@ -336,7 +332,7 @@ function ConvertFrom-JsonToCreateSiteService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateSiteService
-        $AllProperties = $("ScopeSettings", "AdminCenterUrl", "SiteLanguages", "RootSiteAndManagedPaths", "SiteUrlSetting", "MultiGeoSetting", "SiteTitleSetting", "Policies", "DeploymentManagerPlanSettings", "PolicyIdsAndTemplates", "TemplateIdsAndPermissions", "PermissionSettings", "LeasePeriodSettings", "TimeZones", "SiteDesigns", "SiteDesign", "DefaultTeamSiteDesignId", "SiteDesignAssignBy", "YammerGroupSettings", "Classifications", "Sensitivities", "HubSiteSettings", "EnabledCustomTemplate", "CustomSiteTemplateListURL", "DefaultPrimaryAdmin", "DefaultAdditionalAdmins", "DefaultPrimaryAdminReal", "DefaultAdditionalAdminsReal", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultSiteLanguage", "DefaultRootSite", "DefaultManagedPath", "DefaultPolicy", "DefaultTemplate", "DefaultTimeZone", "DefaultClassification", "DefaultSensitivity", "DefaultDesignType", "SiteLanguageAssignBy", "TemplateAssignBy", "PolicyAssignBy", "PermissionAssignBy", "RootSiteAndManagedPathAssignBy", "TimeZoneAssignBy", "PrimaryAdminAssignBy", "AdditionalAdminAssignBy", "PrimaryContactAssignBy", "SecondaryContactAssignBy", "DesignTypeAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "HubSiteAssignBy", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "Details")
+        $AllProperties = $("ScopeSettings", "AdminCenterUrl", "SiteLanguages", "RootSiteAndManagedPaths", "SiteUrlSetting", "MultiGeoSetting", "SiteTitleSetting", "Policies", "DeploymentManagerPlanSettings", "PolicyIdsAndTemplates", "TemplateIdsAndPermissions", "PermissionSettings", "LeasePeriodSettings", "TimeZones", "SiteDesigns", "SiteDesign", "DefaultTeamSiteDesignId", "SiteDesignAssignBy", "YammerGroupSettings", "Classifications", "Sensitivities", "HubSiteSettings", "EnabledCustomTemplate", "CustomSiteTemplateListURL", "DefaultPrimaryAdmin", "DefaultAdditionalAdmins", "DefaultPrimaryAdminReal", "DefaultAdditionalAdminsReal", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultSiteLanguage", "DefaultRootSite", "DefaultManagedPath", "DefaultPolicy", "DefaultTemplate", "DefaultTimeZone", "DefaultClassification", "DefaultSensitivity", "DefaultDesignType", "SiteLanguageAssignBy", "TemplateAssignBy", "PolicyAssignBy", "PermissionAssignBy", "RootSiteAndManagedPathAssignBy", "TimeZoneAssignBy", "PrimaryAdminAssignBy", "AdditionalAdminAssignBy", "PrimaryContactAssignBy", "SecondaryContactAssignBy", "DesignTypeAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "HubSiteAssignBy", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -781,12 +777,6 @@ function ConvertFrom-JsonToCreateSiteService {
             $CategoryId = $JsonParameters.PSobject.Properties["CategoryId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Details"))) { #optional property not found
-            $Details = $null
-        } else {
-            $Details = $JsonParameters.PSobject.Properties["Details"].value
-        }
-
         $PSO = [PSCustomObject]@{
             "ScopeSettings" = ${ScopeSettings}
             "AdminCenterUrl" = ${AdminCenterUrl}
@@ -861,7 +851,6 @@ function ConvertFrom-JsonToCreateSiteService {
             "ApprovalProcessId" = ${ApprovalProcessId}
             "LanguageId" = ${LanguageId}
             "CategoryId" = ${CategoryId}
-            "Details" = ${Details}
         }
 
         return $PSO

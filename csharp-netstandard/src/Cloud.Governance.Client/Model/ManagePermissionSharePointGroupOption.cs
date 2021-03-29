@@ -51,20 +51,20 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagePermissionSharePointGroupOption" /> class.
         /// </summary>
-        /// <param name="isEnableCreateSPGroup">isEnableCreateSPGroup.</param>
-        /// <param name="isEnableDeleteSPGroup">isEnableDeleteSPGroup.</param>
-        /// <param name="isEnableManageGroupSettings">isEnableManageGroupSettings.</param>
-        /// <param name="isEnableManageGroupMembers">isEnableManageGroupMembers.</param>
+        /// <param name="isEnableCreateSPGroup">isEnableCreateSPGroup (default to false).</param>
+        /// <param name="isEnableDeleteSPGroup">isEnableDeleteSPGroup (default to false).</param>
+        /// <param name="isEnableManageGroupSettings">isEnableManageGroupSettings (default to false).</param>
+        /// <param name="isEnableManageGroupMembers">isEnableManageGroupMembers (default to false).</param>
         /// <param name="groupOwner">groupOwner.</param>
         /// <param name="groupOwnerAssignBy">groupOwnerAssignBy.</param>
         /// <param name="spGroupViewType">spGroupViewType.</param>
         /// <param name="spGroupEditType">spGroupEditType.</param>
         /// <param name="spGroupOptionAssignBy">spGroupOptionAssignBy.</param>
-        /// <param name="isAllowJoinOrLeaveRequest">isAllowJoinOrLeaveRequest.</param>
-        /// <param name="isAutoAcceptRequest">isAutoAcceptRequest.</param>
+        /// <param name="isAllowJoinOrLeaveRequest">isAllowJoinOrLeaveRequest (default to false).</param>
+        /// <param name="isAutoAcceptRequest">isAutoAcceptRequest (default to false).</param>
         /// <param name="sendMembershipRequestEmailAddress">sendMembershipRequestEmailAddress.</param>
         /// <param name="groupRequestAssignBy">groupRequestAssignBy.</param>
-        public ManagePermissionSharePointGroupOption(bool isEnableCreateSPGroup = default(bool), bool isEnableDeleteSPGroup = default(bool), bool isEnableManageGroupSettings = default(bool), bool isEnableManageGroupMembers = default(bool), ApiUser groupOwner = default(ApiUser), AssignBy? groupOwnerAssignBy = default(AssignBy?), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), AssignBy? spGroupOptionAssignBy = default(AssignBy?), bool isAllowJoinOrLeaveRequest = default(bool), bool isAutoAcceptRequest = default(bool), string sendMembershipRequestEmailAddress = default(string), AssignBy? groupRequestAssignBy = default(AssignBy?))
+        public ManagePermissionSharePointGroupOption(bool isEnableCreateSPGroup = false, bool isEnableDeleteSPGroup = false, bool isEnableManageGroupSettings = false, bool isEnableManageGroupMembers = false, ApiUser groupOwner = default(ApiUser), AssignBy? groupOwnerAssignBy = default(AssignBy?), SPGroupViewOption? spGroupViewType = default(SPGroupViewOption?), SPGroupEditOption? spGroupEditType = default(SPGroupEditOption?), AssignBy? spGroupOptionAssignBy = default(AssignBy?), bool isAllowJoinOrLeaveRequest = false, bool isAutoAcceptRequest = false, string sendMembershipRequestEmailAddress = default(string), AssignBy? groupRequestAssignBy = default(AssignBy?))
         {
             this.IsEnableCreateSPGroup = isEnableCreateSPGroup;
             this.IsEnableDeleteSPGroup = isEnableDeleteSPGroup;

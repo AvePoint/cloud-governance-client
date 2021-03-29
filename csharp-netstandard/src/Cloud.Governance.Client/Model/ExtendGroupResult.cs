@@ -37,9 +37,9 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ExtendGroupResult" /> class.
         /// </summary>
         /// <param name="extendType">extendType.</param>
-        /// <param name="duration">duration.</param>
+        /// <param name="duration">duration (default to 0).</param>
         /// <param name="durationType">durationType.</param>
-        public ExtendGroupResult(ExtendType? extendType = default(ExtendType?), int duration = default(int), ApiDurationType? durationType = default(ApiDurationType?))
+        public ExtendGroupResult(ExtendType? extendType = default(ExtendType?), int duration = 0, ApiDurationType? durationType = default(ApiDurationType?))
         {
             this.ExtendType = extendType;
             this.Duration = duration;

@@ -3,10 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Int32** |  | [optional] 
+**Id** | **Int32** |  | [optional] [default to 0]
 **LoginName** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **PrincipalType** | [**SPPrincipalType**](SPPrincipalType.md) |  | [optional] 
+**AzureUserType** | **String** |  | [optional] 
 
 ## Examples
 
@@ -15,7 +16,8 @@ Name | Type | Description | Notes
 $SPPrincipal = New-Cloud.Governance.ClientSPPrincipal  -Id null `
  -LoginName null `
  -Name null `
- -PrincipalType null
+ -PrincipalType null `
+ -AzureUserType null
 ```
 
 - Convert the resource to JSON

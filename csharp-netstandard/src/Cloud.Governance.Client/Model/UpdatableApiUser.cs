@@ -24,10 +24,10 @@ namespace Cloud.Governance.Client.Model
     public partial class UpdatableApiUser : IEquatable<UpdatableApiUser>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets UserType
+        /// Gets or Sets ApiUserType
         /// </summary>
-        [DataMember(Name = "userType", EmitDefaultValue = false)]
-        public UserType? UserType { get; set; }
+        [DataMember(Name = "apiUserType", EmitDefaultValue = false)]
+        public ApiUserType? ApiUserType { get; set; }
         /// <summary>
         /// Gets or Sets IsExternalUser
         /// </summary>
@@ -40,22 +40,24 @@ namespace Cloud.Governance.Client.Model
         /// <param name="jobTitle">jobTitle.</param>
         /// <param name="tenantId">tenantId.</param>
         /// <param name="peopleFilterProfileId">peopleFilterProfileId.</param>
-        /// <param name="userType">userType.</param>
+        /// <param name="apiUserType">apiUserType.</param>
         /// <param name="id">id.</param>
         /// <param name="loginName">loginName.</param>
         /// <param name="isExternalUser">isExternalUser.</param>
+        /// <param name="azureUserType">azureUserType.</param>
         /// <param name="displayName">displayName.</param>
-        /// <param name="isGroup">isGroup.</param>
-        public UpdatableApiUser(string email = default(string), string jobTitle = default(string), string tenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), UserType? userType = default(UserType?), string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string displayName = default(string), bool isGroup = default(bool))
+        /// <param name="isGroup">isGroup (default to false).</param>
+        public UpdatableApiUser(string email = default(string), string jobTitle = default(string), string tenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), ApiUserType? apiUserType = default(ApiUserType?), string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string azureUserType = default(string), string displayName = default(string), bool isGroup = false)
         {
             this.Email = email;
             this.JobTitle = jobTitle;
             this.TenantId = tenantId;
             this.PeopleFilterProfileId = peopleFilterProfileId;
-            this.UserType = userType;
+            this.ApiUserType = apiUserType;
             this.Id = id;
             this.LoginName = loginName;
             this.IsExternalUser = isExternalUser;
+            this.AzureUserType = azureUserType;
             this.DisplayName = displayName;
             this.IsGroup = isGroup;
         }
@@ -95,6 +97,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "loginName", EmitDefaultValue = true)]
         public string LoginName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AzureUserType
+        /// </summary>
+        [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
+        public string AzureUserType { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayName
@@ -180,10 +188,11 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  JobTitle: ").Append(JobTitle).Append("\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  PeopleFilterProfileId: ").Append(PeopleFilterProfileId).Append("\n");
-            sb.Append("  UserType: ").Append(UserType).Append("\n");
+            sb.Append("  ApiUserType: ").Append(ApiUserType).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  LoginName: ").Append(LoginName).Append("\n");
             sb.Append("  IsExternalUser: ").Append(IsExternalUser).Append("\n");
+            sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  IsGroup: ").Append(IsGroup).Append("\n");
             sb.Append("  IsLocalUser: ").Append(IsLocalUser).Append("\n");
@@ -245,8 +254,8 @@ namespace Cloud.Governance.Client.Model
                     this.PeopleFilterProfileId.Equals(input.PeopleFilterProfileId))
                 ) && 
                 (
-                    this.UserType == input.UserType ||
-                    this.UserType.Equals(input.UserType)
+                    this.ApiUserType == input.ApiUserType ||
+                    this.ApiUserType.Equals(input.ApiUserType)
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -261,6 +270,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.IsExternalUser == input.IsExternalUser ||
                     this.IsExternalUser.Equals(input.IsExternalUser)
+                ) && 
+                (
+                    this.AzureUserType == input.AzureUserType ||
+                    (this.AzureUserType != null &&
+                    this.AzureUserType.Equals(input.AzureUserType))
                 ) && 
                 (
                     this.DisplayName == input.DisplayName ||
@@ -309,12 +323,14 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.TenantId.GetHashCode();
                 if (this.PeopleFilterProfileId != null)
                     hashCode = hashCode * 59 + this.PeopleFilterProfileId.GetHashCode();
-                hashCode = hashCode * 59 + this.UserType.GetHashCode();
+                hashCode = hashCode * 59 + this.ApiUserType.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.LoginName != null)
                     hashCode = hashCode * 59 + this.LoginName.GetHashCode();
                 hashCode = hashCode * 59 + this.IsExternalUser.GetHashCode();
+                if (this.AzureUserType != null)
+                    hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 hashCode = hashCode * 59 + this.IsGroup.GetHashCode();

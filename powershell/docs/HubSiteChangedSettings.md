@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **Boolean** |  | [optional] [readonly] 
-**IsModernSite** | **Boolean** |  | [optional] 
+**Enabled** | **Boolean** |  | [optional] [readonly] [default to $false]
+**IsModernSite** | **Boolean** |  | [optional] [default to $false]
 **Action** | [**ChangeHubsiteActionType**](ChangeHubsiteActionType.md) |  | [optional] 
 **AssociatedHubSiteId** | **String** |  | [optional] 
 **AssociatedHubSiteTitle** | **String** |  | [optional] 

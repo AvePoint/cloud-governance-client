@@ -27,10 +27,10 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="SiteValidationParameter" /> class.
         /// </summary>
         /// <param name="uri">uri.</param>
-        /// <param name="ignoreLock">ignoreLock.</param>
-        /// <param name="isEditTask">isEditTask.</param>
-        /// <param name="isFromQuestionnaire">isFromQuestionnaire.</param>
-        public SiteValidationParameter(string uri = default(string), bool ignoreLock = default(bool), bool isEditTask = default(bool), bool isFromQuestionnaire = default(bool))
+        /// <param name="ignoreLock">ignoreLock (default to false).</param>
+        /// <param name="isEditTask">isEditTask (default to false).</param>
+        /// <param name="isFromQuestionnaire">isFromQuestionnaire (default to false).</param>
+        public SiteValidationParameter(string uri = default(string), bool ignoreLock = false, bool isEditTask = false, bool isFromQuestionnaire = false)
         {
             this.Uri = uri;
             this.IgnoreLock = ignoreLock;

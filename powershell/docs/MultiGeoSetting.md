@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] 
+**IsEnabled** | **Boolean** |  | [optional] [default to $false]
 **ControlMode** | [**MultiGeoControlMode**](MultiGeoControlMode.md) |  | [optional] 
 **DefaultLocation** | [**GeoLocationBase**](GeoLocationBase.md) |  | [optional] 
 **SelectedLocations** | [**GeoLocationBase[]**](GeoLocationBase.md) |  | [optional] 

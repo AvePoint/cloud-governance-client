@@ -96,7 +96,7 @@ function New-WorkspaceReport {
         ${GeoLocation},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${StorageLimit},
+        ${StorageLimit} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Double]]
         ${StorageUsed},

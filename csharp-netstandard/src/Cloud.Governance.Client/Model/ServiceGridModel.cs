@@ -43,11 +43,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceTypeDescription">serviceTypeDescription.</param>
         /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
-        /// <param name="language">language.</param>
+        /// <param name="language">language (default to 0).</param>
         /// <param name="modifiedTime">modifiedTime.</param>
         /// <param name="createdByDisplayName">createdByDisplayName.</param>
         /// <param name="createdBy">createdBy.</param>
-        public ServiceGridModel(Guid id = default(Guid), string description = default(string), string name = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), CommonStatus? status = default(CommonStatus?), string statusDescription = default(string), int language = default(int), DateTime modifiedTime = default(DateTime), string createdByDisplayName = default(string), string createdBy = default(string))
+        public ServiceGridModel(Guid id = default(Guid), string description = default(string), string name = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), CommonStatus? status = default(CommonStatus?), string statusDescription = default(string), int language = 0, DateTime modifiedTime = default(DateTime), string createdByDisplayName = default(string), string createdBy = default(string))
         {
             this.Id = id;
             this.Description = description;

@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableContructUrl** | **Boolean** |  | [optional] 
+**EnableContructUrl** | **Boolean** |  | [optional] [default to $false]
 **ContructUrlSetting** | [**ContructUrlSetting**](ContructUrlSetting.md) |  | [optional] 
-**EnableUrlValidation** | **Boolean** |  | [optional] 
+**EnableUrlValidation** | **Boolean** |  | [optional] [default to $false]
 **TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
 
 ## Examples

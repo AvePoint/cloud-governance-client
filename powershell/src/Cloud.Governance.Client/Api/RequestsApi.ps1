@@ -5389,7 +5389,7 @@ submit create site collection request
 No description available.
 
 .PARAMETER CreateSiteRequest
-No description available.
+CreateSiteRequest
 
 .PARAMETER ReturnType
 

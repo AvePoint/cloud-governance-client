@@ -12,10 +12,10 @@ function New-BackupEnvironmentSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsBackupSource},
+        ${IsBackupSource} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsBackupDestination},
+        ${IsBackupDestination} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${StoragePolicy}

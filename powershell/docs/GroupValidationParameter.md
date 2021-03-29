@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GroupId** | **String** |  | [optional] 
-**IsEditTask** | **Boolean** |  | [optional] 
-**IsFromQuestionnaire** | **Boolean** |  | [optional] 
+**IsEditTask** | **Boolean** |  | [optional] [default to $false]
+**IsFromQuestionnaire** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

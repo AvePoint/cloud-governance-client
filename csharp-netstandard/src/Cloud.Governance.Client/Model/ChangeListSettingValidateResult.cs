@@ -36,10 +36,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webUrl">webUrl.</param>
         /// <param name="webId">webId.</param>
         /// <param name="lists">lists.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeListSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string webUrl = default(string), Guid webId = default(Guid), List<SPList> lists = default(List<SPList>), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeListSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string webUrl = default(string), Guid webId = default(Guid), List<SPList> lists = default(List<SPList>), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.SiteUrl = siteUrl;
             this.SiteId = siteId;

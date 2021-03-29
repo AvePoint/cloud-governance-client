@@ -12,16 +12,16 @@ function New-ChangeSiteQuotaSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowedAnySize},
+        ${AllowedAnySize} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${MinQuotaSize},
+        ${MinQuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${MaxQuotaSize},
+        ${MaxQuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${CurrentQuotaSize}
+        ${CurrentQuotaSize} = 0
     )
 
     Process {

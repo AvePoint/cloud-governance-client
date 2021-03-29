@@ -6,12 +6,12 @@ Name | Type | Description | Notes
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
-**EnableLeaseExpiration** | **Boolean** |  | [optional] 
-**LeaseExpiredInterval** | **Int32** |  | [optional] 
+**EnableLeaseExpiration** | **Boolean** |  | [optional] [default to $false]
+**LeaseExpiredInterval** | **Int32** |  | [optional] [default to 0]
 **LeaseExpiredIntervalType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**EnableManageGroupSharing** | **Boolean** |  | [optional] 
-**EnableInviteAuthorizedGuestUser** | **Boolean** |  | [optional] 
-**EnableInviteGuestUser** | **Boolean** |  | [optional] 
+**EnableManageGroupSharing** | **Boolean** |  | [optional] [default to $false]
+**EnableInviteAuthorizedGuestUser** | **Boolean** |  | [optional] [default to $false]
+**EnableInviteGuestUser** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Office365Tenant** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**UseBuiltInProperty** | **bool** |  | [optional] 
-**Value** | [**LookupValue**](LookupValue.md) |  | [optional] 
+**UseBuiltInProperty** | **bool** |  | [optional] [default to false]
+**Value** | [**LookupValue**](LookupValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
 **Property** | **string** |  | [optional] 
-**AllowReferenceAsRoleInApprovalProcess** | **bool** |  | [optional] 
+**AllowReferenceAsRoleInApprovalProcess** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

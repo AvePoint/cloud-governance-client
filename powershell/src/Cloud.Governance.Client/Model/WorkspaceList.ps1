@@ -18,7 +18,7 @@ function New-WorkspaceList {
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Site",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SiteUrl},
@@ -36,25 +36,25 @@ function New-WorkspaceList {
         ${PrimaryContactEmail},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Phase},
+        ${Phase} = "Confirmed",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PhaseDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsCurrentRenewer},
+        ${IsCurrentRenewer} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${CreatedTime},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Status},
+        ${Status} = "Active",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AutoImportProfileId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${PendingAction},
+        ${PendingAction} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SecondaryContact},
@@ -99,7 +99,7 @@ function New-WorkspaceList {
         ${Classification},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${Privacy},
+        ${Privacy} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PrivacyDescription},

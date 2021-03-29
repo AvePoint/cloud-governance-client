@@ -26,11 +26,11 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GrantPermissionRequestPermissionSettings" /> class.
         /// </summary>
-        /// <param name="isBreakInheritance">isBreakInheritance.</param>
-        /// <param name="isGrantPermissionDirectly">isGrantPermissionDirectly.</param>
+        /// <param name="isBreakInheritance">isBreakInheritance (default to false).</param>
+        /// <param name="isGrantPermissionDirectly">isGrantPermissionDirectly (default to false).</param>
         /// <param name="selectedSPGroup">selectedSPGroup.</param>
         /// <param name="selectedPermissionLevels">selectedPermissionLevels.</param>
-        public GrantPermissionRequestPermissionSettings(bool isBreakInheritance = default(bool), bool isGrantPermissionDirectly = default(bool), GrantPermissionGroup selectedSPGroup = default(GrantPermissionGroup), List<IntModel> selectedPermissionLevels = default(List<IntModel>))
+        public GrantPermissionRequestPermissionSettings(bool isBreakInheritance = false, bool isGrantPermissionDirectly = false, GrantPermissionGroup selectedSPGroup = default(GrantPermissionGroup), List<IntModel> selectedPermissionLevels = default(List<IntModel>))
         {
             this.IsBreakInheritance = isBreakInheritance;
             this.IsGrantPermissionDirectly = isGrantPermissionDirectly;

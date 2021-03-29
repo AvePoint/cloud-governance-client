@@ -36,12 +36,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="description">description.</param>
         /// <param name="category">category.</param>
         /// <param name="contact">contact.</param>
-        /// <param name="languageId">languageId.</param>
+        /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="type">type.</param>
         /// <param name="typeDescription">typeDescription.</param>
-        /// <param name="isQuestionnaire">isQuestionnaire.</param>
+        /// <param name="isQuestionnaire">isQuestionnaire (default to false).</param>
         /// <param name="questionnaireId">questionnaireId.</param>
-        public ServiceList(Guid id = default(Guid), string name = default(string), string description = default(string), string category = default(string), string contact = default(string), int languageId = default(int), ServiceType? type = default(ServiceType?), string typeDescription = default(string), bool isQuestionnaire = default(bool), Guid? questionnaireId = default(Guid?))
+        public ServiceList(Guid id = default(Guid), string name = default(string), string description = default(string), string category = default(string), string contact = default(string), int languageId = 0, ServiceType? type = default(ServiceType?), string typeDescription = default(string), bool isQuestionnaire = false, Guid? questionnaireId = default(Guid?))
         {
             this.Id = id;
             this.Name = name;

@@ -15,7 +15,7 @@ function New-WorkspaceIdTypeModel {
         ${ObjectId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${WorkspaceType}
+        ${WorkspaceType} = "Site"
     )
 
     Process {

@@ -27,16 +27,16 @@ function New-ServiceList {
         ${Contact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LanguageId},
+        ${LanguageId} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TypeDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsQuestionnaire},
+        ${IsQuestionnaire} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${QuestionnaireId}

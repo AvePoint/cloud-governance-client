@@ -7,13 +7,13 @@ Name | Type | Description | Notes
 **Title** | **String** |  | [optional] 
 **Url** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
-**IsLibrary** | **Boolean** |  | [optional] 
-**IsOnQuickLaunch** | **Boolean** |  | [optional] 
-**IsEnableModeration** | **Boolean** |  | [optional] 
-**IsEnableVersioning** | **Boolean** |  | [optional] 
-**IsEnableMinorVersion** | **Boolean** |  | [optional] 
-**MajorVersionLimit** | **Int32** |  | [optional] 
-**MajorWithMinorVersionsLimit** | **Int32** |  | [optional] 
+**IsLibrary** | **Boolean** |  | [optional] [default to $false]
+**IsOnQuickLaunch** | **Boolean** |  | [optional] [default to $false]
+**IsEnableModeration** | **Boolean** |  | [optional] [default to $false]
+**IsEnableVersioning** | **Boolean** |  | [optional] [default to $false]
+**IsEnableMinorVersion** | **Boolean** |  | [optional] [default to $false]
+**MajorVersionLimit** | **Int32** |  | [optional] [default to 0]
+**MajorWithMinorVersionsLimit** | **Int32** |  | [optional] [default to 0]
 
 ## Examples
 

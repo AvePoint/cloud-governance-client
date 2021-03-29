@@ -5,11 +5,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AdminCenter** | **String** |  | [optional] 
 **ValueType** | **String** |  | [optional] 
-**EnableValueSync** | **Boolean** |  | [optional] 
-**EnableRoleValueSync** | **Boolean** |  | [optional] 
-**Value** | [**LookupValue**](LookupValue.md) |  | [optional] 
+**EnableValueSync** | **Boolean** |  | [optional] [default to $false]
+**EnableRoleValueSync** | **Boolean** |  | [optional] [default to $false]
+**Value** | [**LookupValue**](LookupValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
 **Property** | **String** |  | [optional] 
-**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] 
+**AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

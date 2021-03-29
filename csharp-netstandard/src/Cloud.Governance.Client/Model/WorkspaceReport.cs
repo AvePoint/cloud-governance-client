@@ -54,7 +54,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="privacy">privacy.</param>
         /// <param name="associateHubTitle">associateHubTitle.</param>
         /// <param name="geoLocation">geoLocation.</param>
-        /// <param name="storageLimit">storageLimit.</param>
+        /// <param name="storageLimit">storageLimit (default to 0).</param>
         /// <param name="storageUsed">storageUsed.</param>
         /// <param name="siteSharing">siteSharing.</param>
         /// <param name="groupSharing">groupSharing.</param>
@@ -66,7 +66,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadata">metadata.</param>
         /// <param name="hasOngoingTasks">hasOngoingTasks.</param>
         /// <param name="lastRenewalTime">lastRenewalTime.</param>
-        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = default(long?), double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>), string hasOngoingTasks = default(string), DateTime? lastRenewalTime = default(DateTime?))
+        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = 0, double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>), string hasOngoingTasks = default(string), DateTime? lastRenewalTime = default(DateTime?))
         {
             this.Id = id;
             this.Name = name;
@@ -96,7 +96,8 @@ namespace Cloud.Governance.Client.Model
             this.Privacy = privacy;
             this.AssociateHubTitle = associateHubTitle;
             this.GeoLocation = geoLocation;
-            this.StorageLimit = storageLimit;
+            // use default value if no "storageLimit" provided
+            this.StorageLimit = storageLimit ?? 0;
             this.StorageUsed = storageUsed;
             this.SiteSharing = siteSharing;
             this.GroupSharing = groupSharing;

@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableConstructUrl** | **bool** |  | [optional] 
-**EnableUrlValidation** | **bool** |  | [optional] 
+**EnableConstructUrl** | **bool** |  | [optional] [default to false]
+**EnableUrlValidation** | **bool** |  | [optional] [default to false]
 **ConstructUrlAssignBy** | **AssignBy** |  | [optional] 
 **ValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
 **Rules** | **List&lt;string&gt;** |  | [optional] 

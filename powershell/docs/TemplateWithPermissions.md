@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TemplateId** | **String** |  | [optional] 
-**IsUseCommon** | **Boolean** |  | [optional] 
+**IsUseCommon** | **Boolean** |  | [optional] [default to $false]
 **UserPermissions** | [**ServiceUserWithPermissions[]**](ServiceUserWithPermissions.md) |  | [optional] 
 **GroupPermissions** | [**ServiceGroupWithPermissions[]**](ServiceGroupWithPermissions.md) |  | [optional] 
 

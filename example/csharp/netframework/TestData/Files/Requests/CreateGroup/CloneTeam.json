@@ -1,0 +1,7 @@
+{
+  "ServiceName": "Api_Sample_CreateGroup_Clone",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "OwnerList": "user1@example.com;user2@example.com",
+  "CloneTeamId": "fa63205b-31dd-4698-a599-49adcf8b9c51"
+}

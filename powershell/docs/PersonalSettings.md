@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
-**UserID** | **Int32** |  | [optional] 
-**LanguageID** | **Int32** |  | [optional] 
-**TimeZoneID** | **Int32** |  | [optional] 
-**IsAdjustDaylight** | **Boolean** |  | [optional] 
+**UserID** | **Int32** |  | [optional] [default to 0]
+**LanguageID** | **Int32** |  | [optional] [default to 0]
+**TimeZoneID** | **Int32** |  | [optional] [default to 0]
+**IsAdjustDaylight** | **Boolean** |  | [optional] [default to $false]
 **Properties** | [**PersonalSettingsPropertyInfo**](PersonalSettingsPropertyInfo.md) |  | [optional] 
 
 ## Examples

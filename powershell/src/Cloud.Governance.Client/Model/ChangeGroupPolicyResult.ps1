@@ -18,28 +18,28 @@ function New-ChangeGroupPolicyResult {
         ${AllPolicies},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ChangePolicyAssignBy},
+        ${ChangePolicyAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${StartDateType},
+        ${StartDateType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${ServiceSpecifyDate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableLeaseExpired},
+        ${IsEnableLeaseExpired} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${LeaseDuration},
+        ${LeaseDuration} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseDurationType},
+        ${LeaseDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${CurrentStartDate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAllowAutoCancel}
+        ${IsAllowAutoCancel} = $false
     )
 
     Process {

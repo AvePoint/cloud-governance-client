@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **ServiceTypeDescription** | **String** |  | [optional] 
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **StatusDescription** | **String** |  | [optional] 
-**Language** | **Int32** |  | [optional] 
+**Language** | **Int32** |  | [optional] [default to 0]
 **ModifiedTime** | **System.DateTime** |  | [optional] 
 **CreatedByDisplayName** | **String** |  | [optional] 
 **CreatedBy** | **String** |  | [optional] 

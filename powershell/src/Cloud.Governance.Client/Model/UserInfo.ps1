@@ -18,7 +18,7 @@ function New-UserInfo {
         ${UserDisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${DomainGroup},
+        ${DomainGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Department},
@@ -33,40 +33,40 @@ function New-UserInfo {
         ${Permission},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsDeleted},
+        ${IsDeleted} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SecurityToken},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${UserType},
+        ${UserType} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AzureUserType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${LegalPerson},
+        ${LegalPerson} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${AuthenticationType},
+        ${AuthenticationType} = "LocalSystem",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${AdminCenterUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${InviteType},
+        ${InviteType} = "User",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Type},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsRegisteredAosGroup},
+        ${IsRegisteredAosGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${IsExternalUser},
+        ${IsExternalUser} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAPIExceptional},
+        ${IsAPIExceptional} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TenantId},
@@ -75,7 +75,7 @@ function New-UserInfo {
         ${ObjectId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Version},
+        ${Version} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${JobTitle},
@@ -87,19 +87,22 @@ function New-UserInfo {
         ${PhysicalDeliveryOfficeName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsOtherTenantUser},
+        ${IsOtherTenantUser} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${NetworkId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValidateByProfile},
+        ${IsValidateByProfile} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${ProxyAddresses},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${PrincipalType} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Id},
+        ${Id} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DisplayName},
@@ -111,10 +114,10 @@ function New-UserInfo {
         ${Email},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${ExistInAOS}
+        ${ExistInAOS} = $false
     )
 
     Process {
@@ -152,6 +155,7 @@ function New-UserInfo {
             "NetworkId" = ${NetworkId}
             "IsValidateByProfile" = ${IsValidateByProfile}
             "ProxyAddresses" = ${ProxyAddresses}
+            "PrincipalType" = ${PrincipalType}
             "Id" = ${Id}
             "DisplayName" = ${DisplayName}
             "Title" = ${Title}
@@ -180,7 +184,7 @@ function ConvertFrom-JsonToUserInfo {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UserInfo
-        $AllProperties = $("IdentityName", "UserDisplayName", "DomainGroup", "Department", "MobilePhone", "Manager", "Permission", "IsDeleted", "SecurityToken", "UserType", "AzureUserType", "LegalPerson", "AuthenticationType", "AdminCenterUrl", "InviteType", "Type", "IsRegisteredAosGroup", "IsExternalUser", "IsAPIExceptional", "TenantId", "ObjectId", "Version", "JobTitle", "UsageLocation", "PhysicalDeliveryOfficeName", "IsOtherTenantUser", "NetworkId", "IsValidateByProfile", "ProxyAddresses", "Id", "DisplayName", "Title", "Email", "IsValid", "ExistInAOS")
+        $AllProperties = $("IdentityName", "UserDisplayName", "DomainGroup", "Department", "MobilePhone", "Manager", "Permission", "IsDeleted", "SecurityToken", "UserType", "AzureUserType", "LegalPerson", "AuthenticationType", "AdminCenterUrl", "InviteType", "Type", "IsRegisteredAosGroup", "IsExternalUser", "IsAPIExceptional", "TenantId", "ObjectId", "Version", "JobTitle", "UsageLocation", "PhysicalDeliveryOfficeName", "IsOtherTenantUser", "NetworkId", "IsValidateByProfile", "ProxyAddresses", "PrincipalType", "Id", "DisplayName", "Title", "Email", "IsValid", "ExistInAOS")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -361,6 +365,12 @@ function ConvertFrom-JsonToUserInfo {
             $ProxyAddresses = $JsonParameters.PSobject.Properties["ProxyAddresses"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "PrincipalType"))) { #optional property not found
+            $PrincipalType = $null
+        } else {
+            $PrincipalType = $JsonParameters.PSobject.Properties["PrincipalType"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
             $Id = $null
         } else {
@@ -427,6 +437,7 @@ function ConvertFrom-JsonToUserInfo {
             "NetworkId" = ${NetworkId}
             "IsValidateByProfile" = ${IsValidateByProfile}
             "ProxyAddresses" = ${ProxyAddresses}
+            "PrincipalType" = ${PrincipalType}
             "Id" = ${Id}
             "DisplayName" = ${DisplayName}
             "Title" = ${Title}

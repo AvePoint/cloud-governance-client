@@ -27,10 +27,10 @@ function New-RequestGroupWithPermissions {
         ${GroupOwner},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${GroupOwnerType},
+        ${GroupOwnerType} = "SpoGroup",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${BuildInGroupType}
+        ${BuildInGroupType} = "None"
     )
 
     Process {

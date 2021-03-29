@@ -401,7 +401,13 @@ namespace Cloud.Governance.Client.Model
         AutoImportGroupEscalation = 543,
 
         [EnumMember(Value = "544")]
-        AutoImportSiteEscalation = 544
+        AutoImportSiteEscalation = 544,
+
+        [EnumMember(Value = "545")]
+        BulkAutoCompleteRenewal = 545,
+
+        [EnumMember(Value = "546")]
+        BulkRestartRenewal = 546
 
     }
 

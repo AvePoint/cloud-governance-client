@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsMultiGeoTenant** | **Boolean** |  | [optional] 
+**IsMultiGeoTenant** | **Boolean** |  | [optional] [default to $false]
 **AllLocations** | [**GeoLocationModel[]**](GeoLocationModel.md) |  | [optional] 
-**IsEnabled** | **Boolean** |  | [optional] 
+**IsEnabled** | **Boolean** |  | [optional] [default to $false]
 **ControlMode** | [**MultiGeoControlMode**](MultiGeoControlMode.md) |  | [optional] 
 **DefaultLocation** | [**GeoLocationBase**](GeoLocationBase.md) |  | [optional] 
 **SelectedLocations** | [**GeoLocationBase[]**](GeoLocationBase.md) |  | [optional] 

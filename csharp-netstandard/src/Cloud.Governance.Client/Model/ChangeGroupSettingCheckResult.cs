@@ -42,28 +42,28 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupName">groupName.</param>
         /// <param name="groupEmail">groupEmail.</param>
         /// <param name="groupDescription">groupDescription.</param>
-        /// <param name="isEnableSubscribeMembers">isEnableSubscribeMembers.</param>
-        /// <param name="isEnableOutsideSender">isEnableOutsideSender.</param>
+        /// <param name="isEnableSubscribeMembers">isEnableSubscribeMembers (default to false).</param>
+        /// <param name="isEnableOutsideSender">isEnableOutsideSender (default to false).</param>
         /// <param name="classification">classification.</param>
-        /// <param name="isTeamsEnabled">isTeamsEnabled.</param>
-        /// <param name="enableManageGroupSharing">enableManageGroupSharing.</param>
-        /// <param name="enableInviteAuthorizedGuestUser">enableInviteAuthorizedGuestUser.</param>
-        /// <param name="enableInviteGuestUser">enableInviteGuestUser.</param>
-        /// <param name="enableDynamicMembership">enableDynamicMembership.</param>
-        /// <param name="enableTeamCollaboration">enableTeamCollaboration.</param>
-        /// <param name="isHubSite">isHubSite.</param>
+        /// <param name="isTeamsEnabled">isTeamsEnabled (default to false).</param>
+        /// <param name="enableManageGroupSharing">enableManageGroupSharing (default to false).</param>
+        /// <param name="enableInviteAuthorizedGuestUser">enableInviteAuthorizedGuestUser (default to false).</param>
+        /// <param name="enableInviteGuestUser">enableInviteGuestUser (default to false).</param>
+        /// <param name="enableDynamicMembership">enableDynamicMembership (default to false).</param>
+        /// <param name="enableTeamCollaboration">enableTeamCollaboration (default to false).</param>
+        /// <param name="isHubSite">isHubSite (default to false).</param>
         /// <param name="associatedHubSiteId">associatedHubSiteId.</param>
         /// <param name="dynamicMembershipRules">dynamicMembershipRules.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="enableChangeMembershipType">enableChangeMembershipType.</param>
+        /// <param name="enableChangeMembershipType">enableChangeMembershipType (default to false).</param>
         /// <param name="yammerGroupInfo">yammerGroupInfo.</param>
         /// <param name="groupObjectType">groupObjectType.</param>
         /// <param name="networkId">networkId.</param>
         /// <param name="groupObjectId">groupObjectId.</param>
-        /// <param name="isValid">isValid.</param>
+        /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeGroupSettingCheckResult(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string groupId = default(string), string groupName = default(string), string groupEmail = default(string), string groupDescription = default(string), bool isEnableSubscribeMembers = default(bool), bool isEnableOutsideSender = default(bool), string classification = default(string), bool isTeamsEnabled = default(bool), bool enableManageGroupSharing = default(bool), bool enableInviteAuthorizedGuestUser = default(bool), bool enableInviteGuestUser = default(bool), bool enableDynamicMembership = default(bool), bool enableTeamCollaboration = default(bool), bool isHubSite = default(bool), Guid? associatedHubSiteId = default(Guid?), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool enableChangeMembershipType = default(bool), string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), bool isValid = default(bool), string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeGroupSettingCheckResult(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string groupId = default(string), string groupName = default(string), string groupEmail = default(string), string groupDescription = default(string), bool isEnableSubscribeMembers = false, bool isEnableOutsideSender = false, string classification = default(string), bool isTeamsEnabled = false, bool enableManageGroupSharing = false, bool enableInviteAuthorizedGuestUser = false, bool enableInviteGuestUser = false, bool enableDynamicMembership = false, bool enableTeamCollaboration = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool enableChangeMembershipType = false, string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;

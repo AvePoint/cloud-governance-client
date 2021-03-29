@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeMetadataActionSetting" /> class.
         /// </summary>
-        /// <param name="isEnabled">isEnabled.</param>
-        /// <param name="enableAddOrDelete">enableAddOrDelete.</param>
+        /// <param name="isEnabled">isEnabled (default to false).</param>
+        /// <param name="enableAddOrDelete">enableAddOrDelete (default to false).</param>
         /// <param name="metadatas">metadatas.</param>
-        public ChangeMetadataActionSetting(bool isEnabled = default(bool), bool enableAddOrDelete = default(bool), List<CustomMetadata> metadatas = default(List<CustomMetadata>))
+        public ChangeMetadataActionSetting(bool isEnabled = false, bool enableAddOrDelete = false, List<CustomMetadata> metadatas = default(List<CustomMetadata>))
         {
             this.IsEnabled = isEnabled;
             this.EnableAddOrDelete = enableAddOrDelete;

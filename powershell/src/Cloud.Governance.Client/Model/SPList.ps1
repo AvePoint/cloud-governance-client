@@ -24,25 +24,25 @@ function New-SPList {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsLibrary},
+        ${IsLibrary} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsOnQuickLaunch},
+        ${IsOnQuickLaunch} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableModeration},
+        ${IsEnableModeration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableVersioning},
+        ${IsEnableVersioning} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsEnableMinorVersion},
+        ${IsEnableMinorVersion} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${MajorVersionLimit},
+        ${MajorVersionLimit} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${MajorWithMinorVersionsLimit}
+        ${MajorWithMinorVersionsLimit} = 0
     )
 
     Process {

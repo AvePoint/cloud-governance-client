@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Option** | [**OneTimeRenewalOption**](OneTimeRenewalOption.md) |  | [optional] 
-**Duration** | **Int32** |  | [optional] 
+**Duration** | **Int32** |  | [optional] [default to 0]
 **DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **StartTime** | **System.DateTime** |  | [optional] 
 

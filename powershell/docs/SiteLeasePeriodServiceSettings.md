@@ -5,12 +5,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LeasePeriodAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **LeaseWarningAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**LeaseEnabled** | **Boolean** |  | [optional] 
-**LeaseWarningEnabled** | **Boolean** |  | [optional] 
+**LeaseEnabled** | **Boolean** |  | [optional] [default to $false]
+**LeaseWarningEnabled** | **Boolean** |  | [optional] [default to $false]
 **ApprovalProcessId** | **String** |  | [optional] 
-**LeaseInterval** | **Int32** |  | [optional] 
+**LeaseInterval** | **Int32** |  | [optional] [default to 0]
 **LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**LeaseWarningInterval** | **Int32** |  | [optional] 
+**LeaseWarningInterval** | **Int32** |  | [optional] [default to 0]
 **LeaseWarningDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 
 ## Examples

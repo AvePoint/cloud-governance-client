@@ -24,13 +24,13 @@ function New-MySite {
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${Size},
+        ${Size} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${QuotaSize},
+        ${QuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "Site",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${MySiteType},
@@ -42,7 +42,7 @@ function New-MySite {
         ${Sensitivity},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsCommunicationSite},
+        ${IsCommunicationSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${CreatedTime},
@@ -66,7 +66,7 @@ function New-MySite {
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Phase},
+        ${Phase} = "Confirmed",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${PhaseStartTime},
@@ -87,7 +87,7 @@ function New-MySite {
         ${PolicyDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsCurrentRenewer},
+        ${IsCurrentRenewer} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${PhaseAssignees},

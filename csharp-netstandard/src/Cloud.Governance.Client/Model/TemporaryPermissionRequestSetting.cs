@@ -36,19 +36,20 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TemporaryPermissionRequestSetting" /> class.
         /// </summary>
-        /// <param name="isGrantTemporaryPermission">isGrantTemporaryPermission.</param>
-        /// <param name="isGrantAdminGroup">isGrantAdminGroup.</param>
+        /// <param name="isGrantTemporaryPermission">isGrantTemporaryPermission (default to false).</param>
+        /// <param name="isGrantAdminGroup">isGrantAdminGroup (default to false).</param>
         /// <param name="expirationType">expirationType.</param>
-        /// <param name="durationInterval">durationInterval.</param>
+        /// <param name="durationInterval">durationInterval (default to 0).</param>
         /// <param name="durationDateType">durationDateType.</param>
         /// <param name="startTime">startTime.</param>
         /// <param name="endTime">endTime.</param>
-        public TemporaryPermissionRequestSetting(bool isGrantTemporaryPermission = default(bool), bool isGrantAdminGroup = default(bool), ExpirationType? expirationType = default(ExpirationType?), int? durationInterval = default(int?), ApiDurationType? durationDateType = default(ApiDurationType?), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
+        public TemporaryPermissionRequestSetting(bool isGrantTemporaryPermission = false, bool isGrantAdminGroup = false, ExpirationType? expirationType = default(ExpirationType?), int? durationInterval = 0, ApiDurationType? durationDateType = default(ApiDurationType?), DateTime? startTime = default(DateTime?), DateTime? endTime = default(DateTime?))
         {
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
             this.IsGrantAdminGroup = isGrantAdminGroup;
             this.ExpirationType = expirationType;
-            this.DurationInterval = durationInterval;
+            // use default value if no "durationInterval" provided
+            this.DurationInterval = durationInterval ?? 0;
             this.DurationDateType = durationDateType;
             this.StartTime = startTime;
             this.EndTime = endTime;

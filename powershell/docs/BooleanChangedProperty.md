@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangeValue** | **Boolean** |  | [optional] 
-**OriginalValue** | **Boolean** |  | [optional] 
+**ChangeValue** | **Boolean** |  | [optional] [default to $false]
+**OriginalValue** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 

@@ -12,16 +12,16 @@ function New-LifecycleRenewalSetting {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${LeaseDateType},
+        ${LeaseDateType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${StartDateType},
+        ${StartDateType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${SpecifyStartDate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${HandleOngoingType}
+        ${HandleOngoingType} = "None"
     )
 
     Process {

@@ -41,14 +41,14 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExtendSiteSetting" /> class.
         /// </summary>
-        /// <param name="isEnabled">isEnabled.</param>
+        /// <param name="isEnabled">isEnabled (default to false).</param>
         /// <param name="extendType">extendType.</param>
-        /// <param name="duration">duration.</param>
+        /// <param name="duration">duration (default to 0).</param>
         /// <param name="durationType">durationType.</param>
-        /// <param name="constantDuration">constantDuration.</param>
+        /// <param name="constantDuration">constantDuration (default to 0).</param>
         /// <param name="constantDurationType">constantDurationType.</param>
         /// <param name="extendBasedTime">extendBasedTime.</param>
-        public ExtendSiteSetting(bool isEnabled = default(bool), ExtendType? extendType = default(ExtendType?), int duration = default(int), ApiDurationType? durationType = default(ApiDurationType?), int constantDuration = default(int), ApiDurationType? constantDurationType = default(ApiDurationType?), DateTime extendBasedTime = default(DateTime))
+        public ExtendSiteSetting(bool isEnabled = false, ExtendType? extendType = default(ExtendType?), int duration = 0, ApiDurationType? durationType = default(ApiDurationType?), int constantDuration = 0, ApiDurationType? constantDurationType = default(ApiDurationType?), DateTime extendBasedTime = default(DateTime))
         {
             this.IsEnabled = isEnabled;
             this.ExtendType = extendType;

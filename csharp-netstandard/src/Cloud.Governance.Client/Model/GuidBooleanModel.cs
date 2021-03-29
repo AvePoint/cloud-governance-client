@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GuidBooleanModel" /> class.
         /// </summary>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="seletedItem">seletedItem.</param>
         /// <param name="allItems">allItems.</param>
-        public GuidBooleanModel(bool enabled = default(bool), Guid seletedItem = default(Guid), List<Guid> allItems = default(List<Guid>))
+        public GuidBooleanModel(bool enabled = false, Guid seletedItem = default(Guid), List<Guid> allItems = default(List<Guid>))
         {
             this.Enabled = enabled;
             this.SeletedItem = seletedItem;

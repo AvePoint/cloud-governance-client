@@ -15,7 +15,7 @@ function New-ManagePermissionSPObject {
         ${ParentUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ParentNodeType},
+        ${ParentNodeType} = "Container",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${SiteUrl},
@@ -51,10 +51,10 @@ function New-ManagePermissionSPObject {
         ${TopInheritUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${InheritNodeType},
+        ${InheritNodeType} = "Container",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsInheritedPermission},
+        ${IsInheritedPermission} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
@@ -66,7 +66,7 @@ function New-ManagePermissionSPObject {
         ${FullUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type}
+        ${Type} = "Container"
     )
 
     Process {

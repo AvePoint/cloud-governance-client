@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **ListTitle** | **String** |  | [optional] 
 **TopInheritUrl** | **String** |  | [optional] 
 **InheritNodeType** | [**NodeType**](NodeType.md) |  | [optional] 
-**IsInheritedPermission** | **Boolean** |  | [optional] 
+**IsInheritedPermission** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **FullUrl** | **String** |  | [optional] 

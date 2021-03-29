@@ -15,10 +15,10 @@ function New-ManagePermissionValidateResult {
         ${PermissionLevels},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExternalSharingOptions},
+        ${ExternalSharingOptions} = "Disabled",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableShareAnonymousLink},
+        ${EnableShareAnonymousLink} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Object},
@@ -27,13 +27,13 @@ function New-ManagePermissionValidateResult {
         ${UserMetadata},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsValid},
+        ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ErrorMessage},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${MessageCode}
+        ${MessageCode} = "None"
     )
 
     Process {

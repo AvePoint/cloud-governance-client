@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TitleAssignBy** | **Int32** |  | [optional] 
-**EnableTitleConstructure** | **Boolean** |  | [optional] 
+**TitleAssignBy** | **Int32** |  | [optional] [default to 0]
+**EnableTitleConstructure** | **Boolean** |  | [optional] [default to $false]
 **TitlePrefixes** | [**SiteTitleConstructureRule[]**](SiteTitleConstructureRule.md) |  | [optional] 
 **TitleSuffixes** | [**SiteTitleConstructureRule[]**](SiteTitleConstructureRule.md) |  | [optional] 
 

@@ -18,7 +18,7 @@ function New-DynamicRuleElement {
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Type},
+        ${Type} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${ChoiceItems}

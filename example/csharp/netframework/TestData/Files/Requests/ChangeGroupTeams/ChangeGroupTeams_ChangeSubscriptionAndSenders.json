@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ChangeGroup_ChangeSubscribeSenders_Service",
+  "GroupEmail": "group@example.com",
+  "OutsideSender": true,
+  "Subscribe": true
+}

@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ChangeSCAdminContactByUrl_Service",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/ApiSampleSC"
+}

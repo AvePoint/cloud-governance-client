@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_CreateGroup_ConstructName",
+  "PrimaryContactLoginName": "user@example.com",
+  "SecondaryContactLoginName": "user@example.com",
+  "OwnerList": "user1@example.com;user2@example.com"
+}

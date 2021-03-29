@@ -12,16 +12,16 @@ function New-AppSettings {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableInstallApp},
+        ${EnableInstallApp} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAddSiteInfoCard},
+        ${EnableAddSiteInfoCard} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAddTimeLine},
+        ${EnableAddTimeLine} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${EnableAddPanel}
+        ${EnableAddPanel} = $false
     )
 
     Process {

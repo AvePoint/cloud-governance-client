@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **Guid** |  | [optional] 
 **AssignTo** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **Reason** | **string** |  | [optional] 
-**Status** | **int** |  | [optional] [readonly] 
+**Status** | **int** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **string** |  | [optional] [readonly] 
 **AdminContactSettings** | [**ChangeContactByUrlSetting**](ChangeContactByUrlSetting.md) |  | [optional] 
 **ProgressStatus** | **ApiRequestProgressStatus** |  | [optional] [readonly] 

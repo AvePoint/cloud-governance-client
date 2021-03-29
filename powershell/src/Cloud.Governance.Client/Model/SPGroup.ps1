@@ -12,7 +12,7 @@ function New-SPGroup {
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
-        ${Id},
+        ${Id} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Name},
@@ -30,22 +30,22 @@ function New-SPGroup {
         ${PermissionLevels},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SpGroupViewType},
+        ${SpGroupViewType} = "GroupMembers",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${SpGroupEditType},
+        ${SpGroupEditType} = "GroupOwner",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsAllowJoinOrLeaveRequest},
+        ${IsAllowJoinOrLeaveRequest} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AutoAcceptRequestToJoinLeave},
+        ${AutoAcceptRequestToJoinLeave} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${RequestToJoinLeaveEmailSetting},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsTemporaryGroup},
+        ${IsTemporaryGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${RoleID}

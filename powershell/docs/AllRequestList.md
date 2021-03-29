@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ServiceName** | **String** |  | [optional] 
 **ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **ServiceTypeDescription** | **String** |  | [optional] 
-**TicketNumber** | **Int32** |  | [optional] 
+**TicketNumber** | **Int32** |  | [optional] [default to 0]
 **Summary** | **String** |  | [optional] 
 **Requester** | **String** |  | [optional] 
 **RequesterDisplayName** | **String** |  | [optional] 

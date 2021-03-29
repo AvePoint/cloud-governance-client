@@ -27,9 +27,9 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="GroupValidationParameter" /> class.
         /// </summary>
         /// <param name="groupId">groupId.</param>
-        /// <param name="isEditTask">isEditTask.</param>
-        /// <param name="isFromQuestionnaire">isFromQuestionnaire.</param>
-        public GroupValidationParameter(Guid groupId = default(Guid), bool isEditTask = default(bool), bool isFromQuestionnaire = default(bool))
+        /// <param name="isEditTask">isEditTask (default to false).</param>
+        /// <param name="isFromQuestionnaire">isFromQuestionnaire (default to false).</param>
+        public GroupValidationParameter(Guid groupId = default(Guid), bool isEditTask = false, bool isFromQuestionnaire = false)
         {
             this.GroupId = groupId;
             this.IsEditTask = isEditTask;

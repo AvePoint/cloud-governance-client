@@ -27,12 +27,12 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="PersonalSettings" /> class.
         /// </summary>
         /// <param name="id">id.</param>
-        /// <param name="userID">userID.</param>
-        /// <param name="languageID">languageID.</param>
-        /// <param name="timeZoneID">timeZoneID.</param>
-        /// <param name="isAdjustDaylight">isAdjustDaylight.</param>
+        /// <param name="userID">userID (default to 0).</param>
+        /// <param name="languageID">languageID (default to 0).</param>
+        /// <param name="timeZoneID">timeZoneID (default to 0).</param>
+        /// <param name="isAdjustDaylight">isAdjustDaylight (default to false).</param>
         /// <param name="properties">properties.</param>
-        public PersonalSettings(Guid id = default(Guid), int userID = default(int), int languageID = default(int), int timeZoneID = default(int), bool isAdjustDaylight = default(bool), PersonalSettingsPropertyInfo properties = default(PersonalSettingsPropertyInfo))
+        public PersonalSettings(Guid id = default(Guid), int userID = 0, int languageID = 0, int timeZoneID = 0, bool isAdjustDaylight = false, PersonalSettingsPropertyInfo properties = default(PersonalSettingsPropertyInfo))
         {
             this.Id = id;
             this.UserID = userID;

@@ -1,0 +1,6 @@
+{
+  "ServiceName": "Api_Sample_ChangeSCAdminContactByUser_Service",
+  "CurrentUser": "user@example.com",
+  "NewUser": "user@example.com",
+  "AlternateUser": "user@example.com"
+}
