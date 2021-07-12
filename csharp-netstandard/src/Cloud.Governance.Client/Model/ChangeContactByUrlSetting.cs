@@ -28,12 +28,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="siteId">siteId.</param>
         /// <param name="siteUrl">siteUrl.</param>
-        /// <param name="originalPrimaryContact">originalPrimaryContact.</param>
-        /// <param name="newPrimaryContact">newPrimaryContact.</param>
-        /// <param name="originalSecondaryContact">originalSecondaryContact.</param>
-        /// <param name="newSecondaryContact">newSecondaryContact.</param>
-        /// <param name="originalPrimaryAdministrator">originalPrimaryAdministrator.</param>
-        /// <param name="newPrimaryAdministrator">newPrimaryAdministrator.</param>
+        /// <param name="originalPrimaryContact">ApiUser model.</param>
+        /// <param name="newPrimaryContact">ApiUser model.</param>
+        /// <param name="originalSecondaryContact">ApiUser model.</param>
+        /// <param name="newSecondaryContact">ApiUser model.</param>
+        /// <param name="originalPrimaryAdministrator">ApiUser model.</param>
+        /// <param name="newPrimaryAdministrator">ApiUser model.</param>
         /// <param name="originalAdditionalAdministrators">originalAdditionalAdministrators.</param>
         /// <param name="newAdditionalAdministrators">newAdditionalAdministrators.</param>
         public ChangeContactByUrlSetting(Guid siteId = default(Guid), string siteUrl = default(string), ApiUser originalPrimaryContact = default(ApiUser), ApiUser newPrimaryContact = default(ApiUser), ApiUser originalSecondaryContact = default(ApiUser), ApiUser newSecondaryContact = default(ApiUser), ApiUser originalPrimaryAdministrator = default(ApiUser), ApiUser newPrimaryAdministrator = default(ApiUser), List<ApiUser> originalAdditionalAdministrators = default(List<ApiUser>), List<ApiUser> newAdditionalAdministrators = default(List<ApiUser>))
@@ -63,38 +63,44 @@ namespace Cloud.Governance.Client.Model
         public string SiteUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets OriginalPrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "originalPrimaryContact", EmitDefaultValue = true)]
         public ApiUser OriginalPrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets NewPrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "newPrimaryContact", EmitDefaultValue = true)]
         public ApiUser NewPrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets OriginalSecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "originalSecondaryContact", EmitDefaultValue = true)]
         public ApiUser OriginalSecondaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets NewSecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "newSecondaryContact", EmitDefaultValue = true)]
         public ApiUser NewSecondaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets OriginalPrimaryAdministrator
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "originalPrimaryAdministrator", EmitDefaultValue = true)]
         public ApiUser OriginalPrimaryAdministrator { get; set; }
 
         /// <summary>
-        /// Gets or Sets NewPrimaryAdministrator
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "newPrimaryAdministrator", EmitDefaultValue = true)]
         public ApiUser NewPrimaryAdministrator { get; set; }
 

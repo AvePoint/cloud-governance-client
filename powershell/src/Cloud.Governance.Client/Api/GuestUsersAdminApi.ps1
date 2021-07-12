@@ -12,11 +12,11 @@ get all managed guest users
 
 No description available.
 
-.PARAMETER VarFilter
-Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, mail, primaryContact, primaryContactDisplayName, secondaryContact, secondaryContactDisplayName, status, profileName, nextRenewalDate
+.PARAMETER Filter
+Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime
 
 .PARAMETER Orderby
-Order by one field, supported fields:<br/> id, displayName, mail, primaryContact, primaryContactDisplayName, secondaryContact, secondaryContactDisplayName, status, profileName, nextRenewalDate
+Order by one field, supported fields:<br/> id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime
 
 .PARAMETER Search
 Search for displayName
@@ -47,7 +47,7 @@ function Get-ManagedGuestUsers {
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
-        ${VarFilter},
+        ${Filter},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${Orderby},
@@ -94,7 +94,7 @@ function Get-ManagedGuestUsers {
 
         $LocalVarUri = '/admin/directory/guestusers'
 
-        $LocalVarQueryParameters['filter'] = $VarFilter
+        $LocalVarQueryParameters['filter'] = $Filter
 
         $LocalVarQueryParameters['orderby'] = $Orderby
 

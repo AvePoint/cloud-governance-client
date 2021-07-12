@@ -70,8 +70,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="phaseAssignees">phaseAssignees.</param>
         /// <param name="phaseDueDate">phaseDueDate.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
+        /// <param name="primaryContact">ApiUser model.</param>
+        /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="errorMessage">errorMessage.</param>
         public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
@@ -307,14 +307,16 @@ namespace Cloud.Governance.Client.Model
         public List<RequestMetadata> Metadatas { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 

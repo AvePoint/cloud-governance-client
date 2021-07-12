@@ -69,7 +69,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="welcomeEmailBody">welcomeEmailBody.</param>
         /// <param name="welcomeEmailAssignBy">welcomeEmailAssignBy.</param>
         /// <param name="allowSpecifyTemporayPermissionDuration">allowSpecifyTemporayPermissionDuration (default to false).</param>
-        public ManagePermissionGrantSetting(bool isEnableGrantPermission = false, bool isGrantTemporaryPermission = false, AssignBy? grantPermissionAssignBy = default(AssignBy?), int temporaryPermissionDuration = 0, ApiDurationType? temporaryDurationType = default(ApiDurationType?), bool isMaxTemporaryDurationSetted = false, int temporaryPermissionMaxDuration = 0, ApiDurationType? temporaryPermissionMaxDurationType = default(ApiDurationType?), bool isEnableExpireNotify = false, bool isAllowSelectAdmin = false, int expireNotifyDuration = 0, ApiDurationType? expireNotifyDurationType = default(ApiDurationType?), Guid? expireNotifyEmailTemplate = default(Guid?), bool isEnableWelcomeNotify = false, string welcomeEmailSubject = default(string), string welcomeEmailBody = default(string), AssignBy? welcomeEmailAssignBy = default(AssignBy?), bool allowSpecifyTemporayPermissionDuration = false)
+        /// <param name="welcomeEmailTemplateId">welcomeEmailTemplateId.</param>
+        /// <param name="isWelcomeEmailTemplate">isWelcomeEmailTemplate (default to false).</param>
+        public ManagePermissionGrantSetting(bool isEnableGrantPermission = false, bool isGrantTemporaryPermission = false, AssignBy? grantPermissionAssignBy = default(AssignBy?), int temporaryPermissionDuration = 0, ApiDurationType? temporaryDurationType = default(ApiDurationType?), bool isMaxTemporaryDurationSetted = false, int temporaryPermissionMaxDuration = 0, ApiDurationType? temporaryPermissionMaxDurationType = default(ApiDurationType?), bool isEnableExpireNotify = false, bool isAllowSelectAdmin = false, int expireNotifyDuration = 0, ApiDurationType? expireNotifyDurationType = default(ApiDurationType?), Guid? expireNotifyEmailTemplate = default(Guid?), bool isEnableWelcomeNotify = false, string welcomeEmailSubject = default(string), string welcomeEmailBody = default(string), AssignBy? welcomeEmailAssignBy = default(AssignBy?), bool allowSpecifyTemporayPermissionDuration = false, Guid? welcomeEmailTemplateId = default(Guid?), bool isWelcomeEmailTemplate = false)
         {
             this.IsEnableGrantPermission = isEnableGrantPermission;
             this.IsGrantTemporaryPermission = isGrantTemporaryPermission;
@@ -89,6 +91,8 @@ namespace Cloud.Governance.Client.Model
             this.WelcomeEmailBody = welcomeEmailBody;
             this.WelcomeEmailAssignBy = welcomeEmailAssignBy;
             this.AllowSpecifyTemporayPermissionDuration = allowSpecifyTemporayPermissionDuration;
+            this.WelcomeEmailTemplateId = welcomeEmailTemplateId;
+            this.IsWelcomeEmailTemplate = isWelcomeEmailTemplate;
         }
 
         /// <summary>
@@ -170,6 +174,18 @@ namespace Cloud.Governance.Client.Model
         public bool AllowSpecifyTemporayPermissionDuration { get; set; }
 
         /// <summary>
+        /// Gets or Sets WelcomeEmailTemplateId
+        /// </summary>
+        [DataMember(Name = "welcomeEmailTemplateId", EmitDefaultValue = true)]
+        public Guid? WelcomeEmailTemplateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsWelcomeEmailTemplate
+        /// </summary>
+        [DataMember(Name = "isWelcomeEmailTemplate", EmitDefaultValue = false)]
+        public bool IsWelcomeEmailTemplate { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -195,6 +211,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  WelcomeEmailBody: ").Append(WelcomeEmailBody).Append("\n");
             sb.Append("  WelcomeEmailAssignBy: ").Append(WelcomeEmailAssignBy).Append("\n");
             sb.Append("  AllowSpecifyTemporayPermissionDuration: ").Append(AllowSpecifyTemporayPermissionDuration).Append("\n");
+            sb.Append("  WelcomeEmailTemplateId: ").Append(WelcomeEmailTemplateId).Append("\n");
+            sb.Append("  IsWelcomeEmailTemplate: ").Append(IsWelcomeEmailTemplate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -303,6 +321,15 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.AllowSpecifyTemporayPermissionDuration == input.AllowSpecifyTemporayPermissionDuration ||
                     this.AllowSpecifyTemporayPermissionDuration.Equals(input.AllowSpecifyTemporayPermissionDuration)
+                ) && 
+                (
+                    this.WelcomeEmailTemplateId == input.WelcomeEmailTemplateId ||
+                    (this.WelcomeEmailTemplateId != null &&
+                    this.WelcomeEmailTemplateId.Equals(input.WelcomeEmailTemplateId))
+                ) && 
+                (
+                    this.IsWelcomeEmailTemplate == input.IsWelcomeEmailTemplate ||
+                    this.IsWelcomeEmailTemplate.Equals(input.IsWelcomeEmailTemplate)
                 );
         }
 
@@ -336,6 +363,9 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.WelcomeEmailBody.GetHashCode();
                 hashCode = hashCode * 59 + this.WelcomeEmailAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowSpecifyTemporayPermissionDuration.GetHashCode();
+                if (this.WelcomeEmailTemplateId != null)
+                    hashCode = hashCode * 59 + this.WelcomeEmailTemplateId.GetHashCode();
+                hashCode = hashCode * 59 + this.IsWelcomeEmailTemplate.GetHashCode();
                 return hashCode;
             }
         }

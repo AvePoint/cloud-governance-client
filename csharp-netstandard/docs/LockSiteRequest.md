@@ -1,17 +1,17 @@
 # Cloud.Governance.Client.Model.LockSiteRequest
+Lock site collection request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LockType** | **SiteLockType** |  | [optional] 
-**LockTypeDescription** | **string** |  | [optional] [readonly] 
-**Action** | **SiteLifecycleActionType** |  | [optional] 
-**ActionDescription** | **string** |  | [optional] [readonly] 
-**SiteId** | **Guid** |  | [optional] 
-**SiteUrl** | **string** |  | [optional] 
+**LockType** | **SiteLockType** | Site collection locking status | [optional] 
+**LockTypeDescription** | **string** | Description of site collection locking status. You can get all available description of site collection locking statuses by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**Action** | **SiteLifecycleActionType** | Lifecycle management action type | [optional] 
+**ActionDescription** | **string** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**SiteId** | **Guid** | Site collection ID | [optional] 
+**SiteUrl** | **string** | Site collection URL | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

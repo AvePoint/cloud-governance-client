@@ -48,7 +48,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isYammer">isYammer.</param>
         /// <param name="groupOwnersStr">groupOwnersStr.</param>
         /// <param name="tenantId">tenantId.</param>
-        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object isYammer = default(Object), Object groupOwnersStr = default(Object), Object tenantId = default(Object))
+        /// <param name="approver">approver.</param>
+        /// <param name="approvalHistory">approvalHistory.</param>
+        /// <param name="currentTaskAction">currentTaskAction.</param>
+        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object isYammer = default(Object), Object groupOwnersStr = default(Object), Object tenantId = default(Object), Object approver = default(Object), Object approvalHistory = default(Object), Object currentTaskAction = default(Object))
         {
             this.None = none;
             this.PrimaryContact = primaryContact;
@@ -72,6 +75,9 @@ namespace Cloud.Governance.Client.Model
             this.IsYammer = isYammer;
             this.GroupOwnersStr = groupOwnersStr;
             this.TenantId = tenantId;
+            this.Approver = approver;
+            this.ApprovalHistory = approvalHistory;
+            this.CurrentTaskAction = currentTaskAction;
         }
 
         /// <summary>
@@ -207,6 +213,24 @@ namespace Cloud.Governance.Client.Model
         public Object TenantId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Approver
+        /// </summary>
+        [DataMember(Name = "Approver", EmitDefaultValue = true)]
+        public Object Approver { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ApprovalHistory
+        /// </summary>
+        [DataMember(Name = "ApprovalHistory", EmitDefaultValue = true)]
+        public Object ApprovalHistory { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CurrentTaskAction
+        /// </summary>
+        [DataMember(Name = "CurrentTaskAction", EmitDefaultValue = true)]
+        public Object CurrentTaskAction { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -236,6 +260,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsYammer: ").Append(IsYammer).Append("\n");
             sb.Append("  GroupOwnersStr: ").Append(GroupOwnersStr).Append("\n");
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
+            sb.Append("  Approver: ").Append(Approver).Append("\n");
+            sb.Append("  ApprovalHistory: ").Append(ApprovalHistory).Append("\n");
+            sb.Append("  CurrentTaskAction: ").Append(CurrentTaskAction).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,6 +406,21 @@ namespace Cloud.Governance.Client.Model
                     this.TenantId == input.TenantId ||
                     (this.TenantId != null &&
                     this.TenantId.Equals(input.TenantId))
+                ) && 
+                (
+                    this.Approver == input.Approver ||
+                    (this.Approver != null &&
+                    this.Approver.Equals(input.Approver))
+                ) && 
+                (
+                    this.ApprovalHistory == input.ApprovalHistory ||
+                    (this.ApprovalHistory != null &&
+                    this.ApprovalHistory.Equals(input.ApprovalHistory))
+                ) && 
+                (
+                    this.CurrentTaskAction == input.CurrentTaskAction ||
+                    (this.CurrentTaskAction != null &&
+                    this.CurrentTaskAction.Equals(input.CurrentTaskAction))
                 );
         }
 
@@ -435,6 +477,12 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.GroupOwnersStr.GetHashCode();
                 if (this.TenantId != null)
                     hashCode = hashCode * 59 + this.TenantId.GetHashCode();
+                if (this.Approver != null)
+                    hashCode = hashCode * 59 + this.Approver.GetHashCode();
+                if (this.ApprovalHistory != null)
+                    hashCode = hashCode * 59 + this.ApprovalHistory.GetHashCode();
+                if (this.CurrentTaskAction != null)
+                    hashCode = hashCode * 59 + this.CurrentTaskAction.GetHashCode();
                 return hashCode;
             }
         }

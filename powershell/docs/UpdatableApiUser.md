@@ -8,16 +8,17 @@ Name | Type | Description | Notes
 **TenantId** | **String** |  | [optional] 
 **PeopleFilterProfileId** | **String** |  | [optional] 
 **ApiUserType** | [**ApiUserType**](ApiUserType.md) |  | [optional] 
-**Id** | **String** |  | [optional] 
-**LoginName** | **String** |  | [optional] 
-**IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
-**AzureUserType** | **String** |  | [optional] 
-**DisplayName** | **String** |  | [optional] 
-**IsGroup** | **Boolean** |  | [optional] [default to $false]
-**IsLocalUser** | **Boolean** |  | [optional] [readonly] [default to $false]
-**PhysicalDeliveryOfficeName** | **String** |  | [optional] [readonly] 
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to $false]
-**AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) |  | [optional] [readonly] 
+**UserSource** | [**UserSource**](UserSource.md) |  | [optional] 
+**Id** | **String** | Object ID | [optional] 
+**LoginName** | **String** | Login name | [optional] 
+**IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) | Whether the user is an external user. | [optional] 
+**AzureUserType** | **String** | User type in Azure AD | [optional] 
+**DisplayName** | **String** | User display name | [optional] 
+**IsGroup** | **Boolean** | Whether an object is a domain group. | [optional] [default to $false]
+**IsLocalUser** | **Boolean** | Whether the user is a local system user. | [optional] [readonly] [default to $false]
+**PhysicalDeliveryOfficeName** | **String** | Physical delivery office name of the user | [optional] [readonly] 
+**IsValid** | **Boolean** | Whether the user is valid. | [optional] [readonly] [default to $false]
+**AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) | User additional data | [optional] [readonly] 
 
 ## Examples
 
@@ -28,6 +29,7 @@ $UpdatableApiUser = New-Cloud.Governance.ClientUpdatableApiUser  -Email null `
  -TenantId null `
  -PeopleFilterProfileId null `
  -ApiUserType null `
+ -UserSource null `
  -Id null `
  -LoginName null `
  -IsExternalUser null `

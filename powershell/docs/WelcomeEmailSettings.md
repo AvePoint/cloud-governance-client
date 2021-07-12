@@ -6,6 +6,9 @@ Name | Type | Description | Notes
 **Enabled** | **Boolean** |  | [optional] [default to $false]
 **Subject** | **String** |  | [optional] 
 **PersonalMessage** | **String** |  | [optional] 
+**EnabledSendEmailInService** | **Boolean** |  | [optional] [default to $false]
+**WelcomeEmailTemplateId** | **String** |  | [optional] 
+**IsWelcomeEmailTemplate** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -13,7 +16,10 @@ Name | Type | Description | Notes
 ```powershell
 $WelcomeEmailSettings = New-Cloud.Governance.ClientWelcomeEmailSettings  -Enabled null `
  -Subject null `
- -PersonalMessage null
+ -PersonalMessage null `
+ -EnabledSendEmailInService null `
+ -WelcomeEmailTemplateId null `
+ -IsWelcomeEmailTemplate null
 ```
 
 - Convert the resource to JSON

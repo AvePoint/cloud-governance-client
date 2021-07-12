@@ -24,6 +24,9 @@ function New-ChangeGroupSettingService {
         ${EnableChangeName} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
+        ${PreventDuplicateName} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
         ${EnableChangeDescription} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
@@ -104,9 +107,6 @@ function New-ChangeGroupSettingService {
         [PSCustomObject]
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [PSCustomObject]
-        ${DepartmentAssignBy} = "BusinessUser",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -124,15 +124,6 @@ function New-ChangeGroupSettingService {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Type} = "None",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps} = $false,
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${Departments},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ServiceContact},
@@ -172,6 +163,7 @@ function New-ChangeGroupSettingService {
             "NetworkId" = ${NetworkId}
             "GroupRestriction" = ${GroupRestriction}
             "EnableChangeName" = ${EnableChangeName}
+            "PreventDuplicateName" = ${PreventDuplicateName}
             "EnableChangeDescription" = ${EnableChangeDescription}
             "EnableChangeMemberSubscription" = ${EnableChangeMemberSubscription}
             "EnableChangeOutsideSenders" = ${EnableChangeOutsideSenders}
@@ -199,16 +191,12 @@ function New-ChangeGroupSettingService {
             "ScopePeoplePickerFilterProfileId" = ${ScopePeoplePickerFilterProfileId}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}
@@ -240,7 +228,7 @@ function ConvertFrom-JsonToChangeGroupSettingService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupSettingService
-        $AllProperties = $("TenantId", "NetworkId", "GroupRestriction", "EnableChangeName", "EnableChangeDescription", "EnableChangeMemberSubscription", "EnableChangeOutsideSenders", "EnableChangePrimaryContact", "EnableChangeSecondaryContact", "EnableAddOwners", "AddOwnerRestriction", "EnableRemoveOwners", "EnableAddMembers", "AddMemberRestriction", "EnableRemoveMembers", "EnableChangeDynamicMembershipRules", "EnableChangeTeamCollaboration", "EnableChangeHubSite", "EnableChangeClassification", "ClassificationList", "EnableChangeSensitivity", "SensitivityList", "EnableChangeMetadata", "EnableAddOrDeleteMetadata", "MetadataList", "EnableChangeMembershipType", "GroupObjectType", "EnableChangeYammerGroupInfo", "ScopePeoplePickerFilterProfileId", "PeoplePickerFilterProfileId", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("TenantId", "NetworkId", "GroupRestriction", "EnableChangeName", "PreventDuplicateName", "EnableChangeDescription", "EnableChangeMemberSubscription", "EnableChangeOutsideSenders", "EnableChangePrimaryContact", "EnableChangeSecondaryContact", "EnableAddOwners", "AddOwnerRestriction", "EnableRemoveOwners", "EnableAddMembers", "AddMemberRestriction", "EnableRemoveMembers", "EnableChangeDynamicMembershipRules", "EnableChangeTeamCollaboration", "EnableChangeHubSite", "EnableChangeClassification", "ClassificationList", "EnableChangeSensitivity", "SensitivityList", "EnableChangeMetadata", "EnableAddOrDeleteMetadata", "MetadataList", "EnableChangeMembershipType", "GroupObjectType", "EnableChangeYammerGroupInfo", "ScopePeoplePickerFilterProfileId", "PeoplePickerFilterProfileId", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -269,6 +257,12 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             $EnableChangeName = $null
         } else {
             $EnableChangeName = $JsonParameters.PSobject.Properties["EnableChangeName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "PreventDuplicateName"))) { #optional property not found
+            $PreventDuplicateName = $null
+        } else {
+            $PreventDuplicateName = $JsonParameters.PSobject.Properties["PreventDuplicateName"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableChangeDescription"))) { #optional property not found
@@ -433,12 +427,6 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             $RequestTemplate = $JsonParameters.PSobject.Properties["RequestTemplate"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DepartmentAssignBy"))) { #optional property not found
-            $DepartmentAssignBy = $null
-        } else {
-            $DepartmentAssignBy = $JsonParameters.PSobject.Properties["DepartmentAssignBy"].value
-        }
-
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
             $Metadatas = $null
         } else {
@@ -473,24 +461,6 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             $Type = $null
         } else {
             $Type = $JsonParameters.PSobject.Properties["Type"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LoadDepartmentFromUps"))) { #optional property not found
-            $LoadDepartmentFromUps = $null
-        } else {
-            $LoadDepartmentFromUps = $JsonParameters.PSobject.Properties["LoadDepartmentFromUps"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Departments"))) { #optional property not found
-            $Departments = $null
-        } else {
-            $Departments = $JsonParameters.PSobject.Properties["Departments"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ServiceContact"))) { #optional property not found
@@ -552,6 +522,7 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             "NetworkId" = ${NetworkId}
             "GroupRestriction" = ${GroupRestriction}
             "EnableChangeName" = ${EnableChangeName}
+            "PreventDuplicateName" = ${PreventDuplicateName}
             "EnableChangeDescription" = ${EnableChangeDescription}
             "EnableChangeMemberSubscription" = ${EnableChangeMemberSubscription}
             "EnableChangeOutsideSenders" = ${EnableChangeOutsideSenders}
@@ -579,16 +550,12 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             "ScopePeoplePickerFilterProfileId" = ${ScopePeoplePickerFilterProfileId}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}

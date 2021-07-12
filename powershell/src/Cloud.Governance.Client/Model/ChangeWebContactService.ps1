@@ -35,9 +35,6 @@ function New-ChangeWebContactService {
         [PSCustomObject]
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [PSCustomObject]
-        ${DepartmentAssignBy} = "BusinessUser",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -55,15 +52,6 @@ function New-ChangeWebContactService {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Type} = "None",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps} = $false,
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${Departments},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ServiceContact},
@@ -107,16 +95,12 @@ function New-ChangeWebContactService {
             "NewContactNotifiedEmail" = ${NewContactNotifiedEmail}
             "ScopeSettings" = ${ScopeSettings}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}
@@ -148,7 +132,7 @@ function ConvertFrom-JsonToChangeWebContactService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeWebContactService
-        $AllProperties = $("SelectedNodes", "UnCheckedNodesInfo", "ChangeMethod", "ChangeMethodAssignBy", "EnableNotifyNewContact", "NewContactNotifiedEmail", "ScopeSettings", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("SelectedNodes", "UnCheckedNodesInfo", "ChangeMethod", "ChangeMethodAssignBy", "EnableNotifyNewContact", "NewContactNotifiedEmail", "ScopeSettings", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -203,12 +187,6 @@ function ConvertFrom-JsonToChangeWebContactService {
             $RequestTemplate = $JsonParameters.PSobject.Properties["RequestTemplate"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DepartmentAssignBy"))) { #optional property not found
-            $DepartmentAssignBy = $null
-        } else {
-            $DepartmentAssignBy = $JsonParameters.PSobject.Properties["DepartmentAssignBy"].value
-        }
-
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
             $Metadatas = $null
         } else {
@@ -243,24 +221,6 @@ function ConvertFrom-JsonToChangeWebContactService {
             $Type = $null
         } else {
             $Type = $JsonParameters.PSobject.Properties["Type"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LoadDepartmentFromUps"))) { #optional property not found
-            $LoadDepartmentFromUps = $null
-        } else {
-            $LoadDepartmentFromUps = $JsonParameters.PSobject.Properties["LoadDepartmentFromUps"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Departments"))) { #optional property not found
-            $Departments = $null
-        } else {
-            $Departments = $JsonParameters.PSobject.Properties["Departments"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ServiceContact"))) { #optional property not found
@@ -326,16 +286,12 @@ function ConvertFrom-JsonToChangeWebContactService {
             "NewContactNotifiedEmail" = ${NewContactNotifiedEmail}
             "ScopeSettings" = ${ScopeSettings}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}

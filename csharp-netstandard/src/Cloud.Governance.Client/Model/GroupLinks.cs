@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// GroupLinks
+    /// Group links model
     /// </summary>
     [DataContract(Name = "GroupLinks")]
     public partial class GroupLinks : IEquatable<GroupLinks>, IValidatableObject
@@ -26,12 +26,12 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupLinks" /> class.
         /// </summary>
-        /// <param name="groupSiteLink">groupSiteLink.</param>
-        /// <param name="groupPlannerLink">groupPlannerLink.</param>
-        /// <param name="groupFilesLink">groupFilesLink.</param>
-        /// <param name="groupConversationsLink">groupConversationsLink.</param>
-        /// <param name="groupNotebookLink">groupNotebookLink.</param>
-        /// <param name="yammerGroupLink">yammerGroupLink.</param>
+        /// <param name="groupSiteLink">Group team site link.</param>
+        /// <param name="groupPlannerLink">Planner link.</param>
+        /// <param name="groupFilesLink">Files link.</param>
+        /// <param name="groupConversationsLink">Conversations link.</param>
+        /// <param name="groupNotebookLink">Notebook link.</param>
+        /// <param name="yammerGroupLink">Yammer community link.</param>
         public GroupLinks(string groupSiteLink = default(string), string groupPlannerLink = default(string), string groupFilesLink = default(string), string groupConversationsLink = default(string), string groupNotebookLink = default(string), string yammerGroupLink = default(string))
         {
             this.GroupSiteLink = groupSiteLink;
@@ -43,38 +43,44 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets GroupSiteLink
+        /// Group team site link
         /// </summary>
+        /// <value>Group team site link</value>
         [DataMember(Name = "groupSiteLink", EmitDefaultValue = true)]
         public string GroupSiteLink { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupPlannerLink
+        /// Planner link
         /// </summary>
+        /// <value>Planner link</value>
         [DataMember(Name = "groupPlannerLink", EmitDefaultValue = true)]
         public string GroupPlannerLink { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupFilesLink
+        /// Files link
         /// </summary>
+        /// <value>Files link</value>
         [DataMember(Name = "groupFilesLink", EmitDefaultValue = true)]
         public string GroupFilesLink { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupConversationsLink
+        /// Conversations link
         /// </summary>
+        /// <value>Conversations link</value>
         [DataMember(Name = "groupConversationsLink", EmitDefaultValue = true)]
         public string GroupConversationsLink { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupNotebookLink
+        /// Notebook link
         /// </summary>
+        /// <value>Notebook link</value>
         [DataMember(Name = "groupNotebookLink", EmitDefaultValue = true)]
         public string GroupNotebookLink { get; set; }
 
         /// <summary>
-        /// Gets or Sets YammerGroupLink
+        /// Yammer community link
         /// </summary>
+        /// <value>Yammer community link</value>
         [DataMember(Name = "yammerGroupLink", EmitDefaultValue = true)]
         public string YammerGroupLink { get; set; }
 

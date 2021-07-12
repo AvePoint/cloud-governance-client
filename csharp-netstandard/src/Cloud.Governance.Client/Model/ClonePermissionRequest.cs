@@ -67,8 +67,8 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ClonePermissionRequest" /> class.
         /// </summary>
         /// <param name="urls">urls.</param>
-        /// <param name="sourceUser">sourceUser.</param>
-        /// <param name="targetUser">targetUser.</param>
+        /// <param name="sourceUser">ApiUser model.</param>
+        /// <param name="targetUser">ApiUser model.</param>
         /// <param name="cloneOption">cloneOption.</param>
         /// <param name="additionalCloneOption">additionalCloneOption.</param>
         /// <param name="enabledRemoveExplicitPermission">enabledRemoveExplicitPermission (default to false).</param>
@@ -76,12 +76,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enabledDeleteUserPermission">enabledDeleteUserPermission (default to false).</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
-        /// <param name="department">Department of requester..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ClonePermissionRequest(List<string> urls = default(List<string>), ApiUser sourceUser = default(ApiUser), ApiUser targetUser = default(ApiUser), ClonePermissionOption? cloneOption = default(ClonePermissionOption?), ClonePermissionAdditionalOption? additionalCloneOption = default(ClonePermissionAdditionalOption?), bool enabledRemoveExplicitPermission = false, bool enabledRemoveUserFromSPGroup = false, bool enabledDeleteUserPermission = false, Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ClonePermissionRequest(List<string> urls = default(List<string>), ApiUser sourceUser = default(ApiUser), ApiUser targetUser = default(ApiUser), ClonePermissionOption? cloneOption = default(ClonePermissionOption?), ClonePermissionAdditionalOption? additionalCloneOption = default(ClonePermissionAdditionalOption?), bool enabledRemoveExplicitPermission = false, bool enabledRemoveUserFromSPGroup = false, bool enabledDeleteUserPermission = false, Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.Urls = urls;
             this.SourceUser = sourceUser;
@@ -93,7 +92,6 @@ namespace Cloud.Governance.Client.Model
             this.EnabledDeleteUserPermission = enabledDeleteUserPermission;
             this.Id = id;
             this.ServiceId = serviceId;
-            this.Department = department;
             this.Summary = summary;
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
@@ -107,14 +105,16 @@ namespace Cloud.Governance.Client.Model
         public List<string> Urls { get; set; }
 
         /// <summary>
-        /// Gets or Sets SourceUser
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "sourceUser", EmitDefaultValue = true)]
         public ApiUser SourceUser { get; set; }
 
         /// <summary>
-        /// Gets or Sets TargetUser
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "targetUser", EmitDefaultValue = true)]
         public ApiUser TargetUser { get; set; }
 
@@ -149,13 +149,6 @@ namespace Cloud.Governance.Client.Model
         /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
-
-        /// <summary>
-        /// Department of requester.
-        /// </summary>
-        /// <value>Department of requester.</value>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
 
         /// <summary>
         /// Summary of request.
@@ -379,7 +372,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  EnabledDeleteUserPermission: ").Append(EnabledDeleteUserPermission).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  NotesToApprovers: ").Append(NotesToApprovers).Append("\n");
             sb.Append("  QuestionnaireId: ").Append(QuestionnaireId).Append("\n");
@@ -476,11 +468,6 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceId == input.ServiceId ||
                     (this.ServiceId != null &&
                     this.ServiceId.Equals(input.ServiceId))
-                ) && 
-                (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
                 ) && 
                 (
                     this.Summary == input.Summary ||
@@ -591,8 +578,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)
                     hashCode = hashCode * 59 + this.ServiceId.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
                 if (this.NotesToApprovers != null)

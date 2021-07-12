@@ -43,6 +43,9 @@ Name | Type | Description | Notes
 **Metadata** | **System.Collections.Hashtable** |  | [optional] 
 **HasOngoingTasks** | **String** |  | [optional] 
 **LastRenewalTime** | **System.DateTime** |  | [optional] 
+**LastRenewalBy** | **String** |  | [optional] 
+**LastRenewalByEmail** | **String** |  | [optional] 
+**LastRenewalByDisplayName** | **String** |  | [optional] 
 
 ## Examples
 
@@ -87,7 +90,10 @@ $WorkspaceReport = New-Cloud.Governance.ClientWorkspaceReport  -Id null `
  -InactivityThresholdTime null `
  -Metadata null `
  -HasOngoingTasks null `
- -LastRenewalTime null
+ -LastRenewalTime null `
+ -LastRenewalBy null `
+ -LastRenewalByEmail null `
+ -LastRenewalByDisplayName null
 ```
 
 - Convert the resource to JSON

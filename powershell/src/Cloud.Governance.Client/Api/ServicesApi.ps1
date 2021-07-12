@@ -2134,9 +2134,10 @@ function Get-ServiceId {
 
         $LocalVarUri = '/services/id'
 
-        if ($Name) {
-            $LocalVarQueryParameters['name'] = $Name
+        if (!$Name) {
+            throw "Error! The required parameter `Name` missing when calling getServiceId."
         }
+        $LocalVarQueryParameters['name'] = $Name
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -2449,9 +2450,10 @@ function Resolve-EmailForCreateGuestUserService {
         }
         $LocalVarUri = $LocalVarUri.replace('{id}', $Id)
 
-        if ($Email) {
-            $LocalVarQueryParameters['email'] = $Email
+        if (!$Email) {
+            throw "Error! The required parameter `Email` missing when calling validateEmailForCreateGuestUserService."
         }
+        $LocalVarQueryParameters['email'] = $Email
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]

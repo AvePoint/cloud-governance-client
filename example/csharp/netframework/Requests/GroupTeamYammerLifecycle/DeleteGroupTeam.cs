@@ -26,7 +26,7 @@ namespace NetFramework
                     GroupId = new Guid(group.Id),
                     Summary = $"Summary_{DateTime.Now}",
                     GroupObjectType = GroupObjectType.Group,
-                    Department = service.Department
+                    //Department = service.Department
                 };
                 var id = this.RequestsApi.SubmitDeleteGroupRequest(request);
                 return id;

@@ -66,9 +66,6 @@ function New-CreateWebRequest {
         ${ServiceId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -113,7 +110,6 @@ function New-CreateWebRequest {
             "DeploymentManagerPlanName" = ${DeploymentManagerPlanName}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
@@ -140,7 +136,7 @@ function ConvertFrom-JsonToCreateWebRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateWebRequest
-        $AllProperties = $("WebName", "WebTitle", "WebDescription", "WebLanguage", "WebTemplate", "ParentSiteUrl", "ParentWebUrl", "PrimaryContact", "SecondaryContact", "UserPermissions", "GroupPermissions", "YammerGroupSettings", "IsOnQuickLaunch", "IsOnTopLinkBar", "IsInheritance", "DeploymentManagerPlanName", "Id", "ServiceId", "Department", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("WebName", "WebTitle", "WebDescription", "WebLanguage", "WebTemplate", "ParentSiteUrl", "ParentWebUrl", "PrimaryContact", "SecondaryContact", "UserPermissions", "GroupPermissions", "YammerGroupSettings", "IsOnQuickLaunch", "IsOnTopLinkBar", "IsInheritance", "DeploymentManagerPlanName", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -253,12 +249,6 @@ function ConvertFrom-JsonToCreateWebRequest {
             $ServiceId = $null
         } else {
             $ServiceId = $JsonParameters.PSobject.Properties["ServiceId"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Summary"))) { #optional property not found
@@ -382,7 +372,6 @@ function ConvertFrom-JsonToCreateWebRequest {
             "DeploymentManagerPlanName" = ${DeploymentManagerPlanName}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}

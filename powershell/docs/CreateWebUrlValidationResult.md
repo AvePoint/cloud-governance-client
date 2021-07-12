@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ParentWebUrl** | **String** |  | [optional] 
 **ParentSiteUrl** | **String** |  | [optional] 
-**SitePrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SiteSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SitePrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SiteSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 

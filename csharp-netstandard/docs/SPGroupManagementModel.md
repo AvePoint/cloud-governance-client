@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **int** |  | [optional] [default to 0]
 **Name** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **Description** | **string** |  | [optional] 
-**Owner** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**Owner** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **Members** | [**List&lt;SPUserManagementModel&gt;**](SPUserManagementModel.md) |  | [optional] 
 **SpGroupViewType** | **SPGroupViewOption** |  | [optional] 
 **SpGroupEditType** | **SPGroupEditOption** |  | [optional] 

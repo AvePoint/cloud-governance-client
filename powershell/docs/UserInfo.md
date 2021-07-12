@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **IsValidateByProfile** | **Boolean** |  | [optional] [default to $false]
 **ProxyAddresses** | **String[]** |  | [optional] 
 **PrincipalType** | [**PrincipalType**](PrincipalType.md) |  | [optional] 
+**Inviter** | **String** |  | [optional] 
 **Id** | **Int32** |  | [optional] [default to 0]
 **DisplayName** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
@@ -74,6 +75,7 @@ $UserInfo = New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -IsValidateByProfile null `
  -ProxyAddresses null `
  -PrincipalType null `
+ -Inviter null `
  -Id null `
  -DisplayName null `
  -Title null `

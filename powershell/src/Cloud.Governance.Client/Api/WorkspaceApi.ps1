@@ -393,7 +393,7 @@ get my workspace items
 
 No description available.
 
-.PARAMETER VarFilter
+.PARAMETER Filter
 Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy
 
 .PARAMETER Orderby
@@ -428,7 +428,7 @@ function Get-WorkspaceItems {
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
-        ${VarFilter},
+        ${Filter},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${Orderby},
@@ -475,7 +475,7 @@ function Get-WorkspaceItems {
 
         $LocalVarUri = '/workspace/my'
 
-        $LocalVarQueryParameters['filter'] = $VarFilter
+        $LocalVarQueryParameters['filter'] = $Filter
 
         $LocalVarQueryParameters['orderby'] = $Orderby
 

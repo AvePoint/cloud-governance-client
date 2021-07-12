@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// TeamsTemplateSettings
+    /// Teams template settings model
     /// </summary>
     [DataContract(Name = "TeamsTemplateSettings")]
     public partial class TeamsTemplateSettings : IEquatable<TeamsTemplateSettings>, IValidatableObject
@@ -26,19 +26,19 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamsTemplateSettings" /> class.
         /// </summary>
-        /// <param name="enableCreateTeamFromScratch">enableCreateTeamFromScratch (default to false).</param>
-        /// <param name="enableCreateTeamFromExistTeam">enableCreateTeamFromExistTeam (default to false).</param>
-        /// <param name="enableCreateTeamFromTeamTemplate">enableCreateTeamFromTeamTemplate (default to false).</param>
-        /// <param name="selectedTemplate">selectedTemplate.</param>
-        /// <param name="selectedMSTemplate">selectedMSTemplate.</param>
-        /// <param name="teamTemplates">teamTemplates.</param>
-        /// <param name="enableCloneChannels">enableCloneChannels (default to false).</param>
-        /// <param name="enableCloneApps">enableCloneApps (default to false).</param>
-        /// <param name="enableCloneTabs">enableCloneTabs (default to false).</param>
-        /// <param name="enableCloneMembers">enableCloneMembers (default to false).</param>
-        /// <param name="enableCloneTeamSetting">enableCloneTeamSetting (default to false).</param>
-        /// <param name="enableCloneTeamPrivacy">enableCloneTeamPrivacy (default to false).</param>
-        /// <param name="enableCloneTeamClassification">enableCloneTeamClassification (default to false).</param>
+        /// <param name="enableCreateTeamFromScratch">Whether to allow business users to create a team from scratch. (default to false).</param>
+        /// <param name="enableCreateTeamFromExistTeam">Whether to allow business users to create a team from an existing team. (default to false).</param>
+        /// <param name="enableCreateTeamFromTeamTemplate">Whether to allow business users to create a team using a team template. (default to false).</param>
+        /// <param name="selectedTemplate">The selected custom team template.</param>
+        /// <param name="selectedMSTemplate">The selected built-in team template.</param>
+        /// <param name="teamTemplates">All team templates.</param>
+        /// <param name="enableCloneChannels">Set whether copying channels from the team is enabled. (default to false).</param>
+        /// <param name="enableCloneApps">Set whether copying apps from the team is enabled. (default to false).</param>
+        /// <param name="enableCloneTabs">Set whether copying tabs from the team is enabled. (default to false).</param>
+        /// <param name="enableCloneMembers">Set whether copying members from the team is enabled. (default to false).</param>
+        /// <param name="enableCloneTeamSetting">Set whether copying team settings from the team is enabled. (default to false).</param>
+        /// <param name="enableCloneTeamPrivacy">Whether to enable the team privacy. (Currently not supported) (default to false).</param>
+        /// <param name="enableCloneTeamClassification">Whether to enable the team classification. (Currently not supported) (default to false).</param>
         public TeamsTemplateSettings(bool enableCreateTeamFromScratch = false, bool enableCreateTeamFromExistTeam = false, bool enableCreateTeamFromTeamTemplate = false, GuidModel selectedTemplate = default(GuidModel), StringModel selectedMSTemplate = default(StringModel), List<TextModel> teamTemplates = default(List<TextModel>), bool enableCloneChannels = false, bool enableCloneApps = false, bool enableCloneTabs = false, bool enableCloneMembers = false, bool enableCloneTeamSetting = false, bool enableCloneTeamPrivacy = false, bool enableCloneTeamClassification = false)
         {
             this.EnableCreateTeamFromScratch = enableCreateTeamFromScratch;
@@ -57,80 +57,93 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets EnableCreateTeamFromScratch
+        /// Whether to allow business users to create a team from scratch.
         /// </summary>
+        /// <value>Whether to allow business users to create a team from scratch.</value>
         [DataMember(Name = "enableCreateTeamFromScratch", EmitDefaultValue = false)]
         public bool EnableCreateTeamFromScratch { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCreateTeamFromExistTeam
+        /// Whether to allow business users to create a team from an existing team.
         /// </summary>
+        /// <value>Whether to allow business users to create a team from an existing team.</value>
         [DataMember(Name = "enableCreateTeamFromExistTeam", EmitDefaultValue = false)]
         public bool EnableCreateTeamFromExistTeam { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCreateTeamFromTeamTemplate
+        /// Whether to allow business users to create a team using a team template.
         /// </summary>
+        /// <value>Whether to allow business users to create a team using a team template.</value>
         [DataMember(Name = "enableCreateTeamFromTeamTemplate", EmitDefaultValue = false)]
         public bool EnableCreateTeamFromTeamTemplate { get; set; }
 
         /// <summary>
-        /// Gets or Sets SelectedTemplate
+        /// The selected custom team template
         /// </summary>
+        /// <value>The selected custom team template</value>
         [DataMember(Name = "selectedTemplate", EmitDefaultValue = true)]
         public GuidModel SelectedTemplate { get; set; }
 
         /// <summary>
-        /// Gets or Sets SelectedMSTemplate
+        /// The selected built-in team template
         /// </summary>
+        /// <value>The selected built-in team template</value>
         [DataMember(Name = "selectedMSTemplate", EmitDefaultValue = true)]
         public StringModel SelectedMSTemplate { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamTemplates
+        /// All team templates
         /// </summary>
+        /// <value>All team templates</value>
         [DataMember(Name = "teamTemplates", EmitDefaultValue = true)]
         public List<TextModel> TeamTemplates { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCloneChannels
+        /// Set whether copying channels from the team is enabled.
         /// </summary>
+        /// <value>Set whether copying channels from the team is enabled.</value>
         [DataMember(Name = "enableCloneChannels", EmitDefaultValue = false)]
         public bool EnableCloneChannels { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCloneApps
+        /// Set whether copying apps from the team is enabled.
         /// </summary>
+        /// <value>Set whether copying apps from the team is enabled.</value>
         [DataMember(Name = "enableCloneApps", EmitDefaultValue = false)]
         public bool EnableCloneApps { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCloneTabs
+        /// Set whether copying tabs from the team is enabled.
         /// </summary>
+        /// <value>Set whether copying tabs from the team is enabled.</value>
         [DataMember(Name = "enableCloneTabs", EmitDefaultValue = false)]
         public bool EnableCloneTabs { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCloneMembers
+        /// Set whether copying members from the team is enabled.
         /// </summary>
+        /// <value>Set whether copying members from the team is enabled.</value>
         [DataMember(Name = "enableCloneMembers", EmitDefaultValue = false)]
         public bool EnableCloneMembers { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCloneTeamSetting
+        /// Set whether copying team settings from the team is enabled.
         /// </summary>
+        /// <value>Set whether copying team settings from the team is enabled.</value>
         [DataMember(Name = "enableCloneTeamSetting", EmitDefaultValue = false)]
         public bool EnableCloneTeamSetting { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCloneTeamPrivacy
+        /// Whether to enable the team privacy. (Currently not supported)
         /// </summary>
+        /// <value>Whether to enable the team privacy. (Currently not supported)</value>
         [DataMember(Name = "enableCloneTeamPrivacy", EmitDefaultValue = false)]
         public bool EnableCloneTeamPrivacy { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCloneTeamClassification
+        /// Whether to enable the team classification. (Currently not supported)
         /// </summary>
+        /// <value>Whether to enable the team classification. (Currently not supported)</value>
         [DataMember(Name = "enableCloneTeamClassification", EmitDefaultValue = false)]
         public bool EnableCloneTeamClassification { get; set; }
 

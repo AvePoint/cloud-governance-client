@@ -12,7 +12,7 @@ get all metadata
 
 No description available.
 
-.PARAMETER VarFilter
+.PARAMETER Filter
 Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime
 
 .PARAMETER Orderby
@@ -47,7 +47,7 @@ function Get-AllMetadata {
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
-        ${VarFilter},
+        ${Filter},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${Orderby},
@@ -94,7 +94,7 @@ function Get-AllMetadata {
 
         $LocalVarUri = '/admin/metadata'
 
-        $LocalVarQueryParameters['filter'] = $VarFilter
+        $LocalVarQueryParameters['filter'] = $Filter
 
         $LocalVarQueryParameters['orderby'] = $Orderby
 

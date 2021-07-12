@@ -29,6 +29,11 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "status", EmitDefaultValue = false)]
         public GuestUserStatus? Status { get; set; }
         /// <summary>
+        /// Gets or Sets ExternalUserState
+        /// </summary>
+        [DataMember(Name = "externalUserState", EmitDefaultValue = false)]
+        public ExternalUserState? ExternalUserState { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="GuestUserGridModel" /> class.
         /// </summary>
         /// <param name="id">id.</param>
@@ -41,9 +46,18 @@ namespace Cloud.Governance.Client.Model
         /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
         /// <param name="profileName">profileName.</param>
+        /// <param name="tenantId">tenantId.</param>
         /// <param name="nextRenewalDate">nextRenewalDate.</param>
+        /// <param name="renewalAssignees">renewalAssignees.</param>
+        /// <param name="renewalAssigneeDisplayNames">renewalAssigneeDisplayNames.</param>
+        /// <param name="lastRenewalBy">lastRenewalBy.</param>
+        /// <param name="lastRenewalByDisplayName">lastRenewalByDisplayName.</param>
+        /// <param name="externalUserState">externalUserState.</param>
+        /// <param name="externalUserStateDescription">externalUserStateDescription.</param>
+        /// <param name="lastSyncTime">lastSyncTime.</param>
+        /// <param name="inviteTime">inviteTime.</param>
         /// <param name="metadata">metadata.</param>
-        public GuestUserGridModel(Guid id = default(Guid), string displayName = default(string), string mail = default(string), string primaryContact = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactDisplayName = default(string), GuestUserStatus? status = default(GuestUserStatus?), string statusDescription = default(string), string profileName = default(string), DateTime? nextRenewalDate = default(DateTime?), List<ReportMetadata> metadata = default(List<ReportMetadata>))
+        public GuestUserGridModel(Guid id = default(Guid), string displayName = default(string), string mail = default(string), string primaryContact = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactDisplayName = default(string), GuestUserStatus? status = default(GuestUserStatus?), string statusDescription = default(string), string profileName = default(string), Guid tenantId = default(Guid), DateTime? nextRenewalDate = default(DateTime?), string renewalAssignees = default(string), string renewalAssigneeDisplayNames = default(string), string lastRenewalBy = default(string), string lastRenewalByDisplayName = default(string), ExternalUserState? externalUserState = default(ExternalUserState?), string externalUserStateDescription = default(string), DateTime? lastSyncTime = default(DateTime?), DateTime? inviteTime = default(DateTime?), List<ReportMetadata> metadata = default(List<ReportMetadata>))
         {
             this.Id = id;
             this.DisplayName = displayName;
@@ -55,7 +69,16 @@ namespace Cloud.Governance.Client.Model
             this.Status = status;
             this.StatusDescription = statusDescription;
             this.ProfileName = profileName;
+            this.TenantId = tenantId;
             this.NextRenewalDate = nextRenewalDate;
+            this.RenewalAssignees = renewalAssignees;
+            this.RenewalAssigneeDisplayNames = renewalAssigneeDisplayNames;
+            this.LastRenewalBy = lastRenewalBy;
+            this.LastRenewalByDisplayName = lastRenewalByDisplayName;
+            this.ExternalUserState = externalUserState;
+            this.ExternalUserStateDescription = externalUserStateDescription;
+            this.LastSyncTime = lastSyncTime;
+            this.InviteTime = inviteTime;
             this.Metadata = metadata;
         }
 
@@ -114,10 +137,58 @@ namespace Cloud.Governance.Client.Model
         public string ProfileName { get; set; }
 
         /// <summary>
+        /// Gets or Sets TenantId
+        /// </summary>
+        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        public Guid TenantId { get; set; }
+
+        /// <summary>
         /// Gets or Sets NextRenewalDate
         /// </summary>
         [DataMember(Name = "nextRenewalDate", EmitDefaultValue = true)]
         public DateTime? NextRenewalDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RenewalAssignees
+        /// </summary>
+        [DataMember(Name = "renewalAssignees", EmitDefaultValue = true)]
+        public string RenewalAssignees { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RenewalAssigneeDisplayNames
+        /// </summary>
+        [DataMember(Name = "renewalAssigneeDisplayNames", EmitDefaultValue = true)]
+        public string RenewalAssigneeDisplayNames { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LastRenewalBy
+        /// </summary>
+        [DataMember(Name = "lastRenewalBy", EmitDefaultValue = true)]
+        public string LastRenewalBy { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LastRenewalByDisplayName
+        /// </summary>
+        [DataMember(Name = "lastRenewalByDisplayName", EmitDefaultValue = true)]
+        public string LastRenewalByDisplayName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ExternalUserStateDescription
+        /// </summary>
+        [DataMember(Name = "externalUserStateDescription", EmitDefaultValue = true)]
+        public string ExternalUserStateDescription { get; set; }
+
+        /// <summary>
+        /// Gets or Sets LastSyncTime
+        /// </summary>
+        [DataMember(Name = "lastSyncTime", EmitDefaultValue = true)]
+        public DateTime? LastSyncTime { get; set; }
+
+        /// <summary>
+        /// Gets or Sets InviteTime
+        /// </summary>
+        [DataMember(Name = "inviteTime", EmitDefaultValue = true)]
+        public DateTime? InviteTime { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadata
@@ -143,7 +214,16 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StatusDescription: ").Append(StatusDescription).Append("\n");
             sb.Append("  ProfileName: ").Append(ProfileName).Append("\n");
+            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  NextRenewalDate: ").Append(NextRenewalDate).Append("\n");
+            sb.Append("  RenewalAssignees: ").Append(RenewalAssignees).Append("\n");
+            sb.Append("  RenewalAssigneeDisplayNames: ").Append(RenewalAssigneeDisplayNames).Append("\n");
+            sb.Append("  LastRenewalBy: ").Append(LastRenewalBy).Append("\n");
+            sb.Append("  LastRenewalByDisplayName: ").Append(LastRenewalByDisplayName).Append("\n");
+            sb.Append("  ExternalUserState: ").Append(ExternalUserState).Append("\n");
+            sb.Append("  ExternalUserStateDescription: ").Append(ExternalUserStateDescription).Append("\n");
+            sb.Append("  LastSyncTime: ").Append(LastSyncTime).Append("\n");
+            sb.Append("  InviteTime: ").Append(InviteTime).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -229,9 +309,53 @@ namespace Cloud.Governance.Client.Model
                     this.ProfileName.Equals(input.ProfileName))
                 ) && 
                 (
+                    this.TenantId == input.TenantId ||
+                    (this.TenantId != null &&
+                    this.TenantId.Equals(input.TenantId))
+                ) && 
+                (
                     this.NextRenewalDate == input.NextRenewalDate ||
                     (this.NextRenewalDate != null &&
                     this.NextRenewalDate.Equals(input.NextRenewalDate))
+                ) && 
+                (
+                    this.RenewalAssignees == input.RenewalAssignees ||
+                    (this.RenewalAssignees != null &&
+                    this.RenewalAssignees.Equals(input.RenewalAssignees))
+                ) && 
+                (
+                    this.RenewalAssigneeDisplayNames == input.RenewalAssigneeDisplayNames ||
+                    (this.RenewalAssigneeDisplayNames != null &&
+                    this.RenewalAssigneeDisplayNames.Equals(input.RenewalAssigneeDisplayNames))
+                ) && 
+                (
+                    this.LastRenewalBy == input.LastRenewalBy ||
+                    (this.LastRenewalBy != null &&
+                    this.LastRenewalBy.Equals(input.LastRenewalBy))
+                ) && 
+                (
+                    this.LastRenewalByDisplayName == input.LastRenewalByDisplayName ||
+                    (this.LastRenewalByDisplayName != null &&
+                    this.LastRenewalByDisplayName.Equals(input.LastRenewalByDisplayName))
+                ) && 
+                (
+                    this.ExternalUserState == input.ExternalUserState ||
+                    this.ExternalUserState.Equals(input.ExternalUserState)
+                ) && 
+                (
+                    this.ExternalUserStateDescription == input.ExternalUserStateDescription ||
+                    (this.ExternalUserStateDescription != null &&
+                    this.ExternalUserStateDescription.Equals(input.ExternalUserStateDescription))
+                ) && 
+                (
+                    this.LastSyncTime == input.LastSyncTime ||
+                    (this.LastSyncTime != null &&
+                    this.LastSyncTime.Equals(input.LastSyncTime))
+                ) && 
+                (
+                    this.InviteTime == input.InviteTime ||
+                    (this.InviteTime != null &&
+                    this.InviteTime.Equals(input.InviteTime))
                 ) && 
                 (
                     this.Metadata == input.Metadata ||
@@ -269,8 +393,25 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.StatusDescription.GetHashCode();
                 if (this.ProfileName != null)
                     hashCode = hashCode * 59 + this.ProfileName.GetHashCode();
+                if (this.TenantId != null)
+                    hashCode = hashCode * 59 + this.TenantId.GetHashCode();
                 if (this.NextRenewalDate != null)
                     hashCode = hashCode * 59 + this.NextRenewalDate.GetHashCode();
+                if (this.RenewalAssignees != null)
+                    hashCode = hashCode * 59 + this.RenewalAssignees.GetHashCode();
+                if (this.RenewalAssigneeDisplayNames != null)
+                    hashCode = hashCode * 59 + this.RenewalAssigneeDisplayNames.GetHashCode();
+                if (this.LastRenewalBy != null)
+                    hashCode = hashCode * 59 + this.LastRenewalBy.GetHashCode();
+                if (this.LastRenewalByDisplayName != null)
+                    hashCode = hashCode * 59 + this.LastRenewalByDisplayName.GetHashCode();
+                hashCode = hashCode * 59 + this.ExternalUserState.GetHashCode();
+                if (this.ExternalUserStateDescription != null)
+                    hashCode = hashCode * 59 + this.ExternalUserStateDescription.GetHashCode();
+                if (this.LastSyncTime != null)
+                    hashCode = hashCode * 59 + this.LastSyncTime.GetHashCode();
+                if (this.InviteTime != null)
+                    hashCode = hashCode * 59 + this.InviteTime.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;

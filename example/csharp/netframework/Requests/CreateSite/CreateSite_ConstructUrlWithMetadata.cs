@@ -25,7 +25,7 @@
                 request.SiteTitle = $"ConstructUrl_{DateTime.Now}";
                 request.PrimaryContact = this.ResolveUser(data.PrimaryContactLoginName);
                 request.SecondaryContact = this.ResolveUser(data.SecondaryContactLoginName);
-                request.Department = data.Department;
+                //request.Department = data.Department;
 
                 var choiceMetadata = request.Metadatas.Find(m => m.Name.Equals(data.ChoiceMetadataName, StringComparison.CurrentCultureIgnoreCase));
                 if (choiceMetadata != null)

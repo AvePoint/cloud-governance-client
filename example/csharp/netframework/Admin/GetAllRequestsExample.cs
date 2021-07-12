@@ -1,5 +1,5 @@
 ﻿
-//namespace Api.Test
+//namespace NetFramework
 //{
 //    using Cloud.Governance.Client.Api;
 //    using Cloud.Governance.Client.Client;

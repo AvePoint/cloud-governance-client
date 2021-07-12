@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**IsMemberOfGroup**](UsersApi.md#ismemberofgroup) | **GET** /users/{userprincipalname}/ismemberof/{groupid} | Is Member Of Group
 [**ResolveUsers**](UsersApi.md#resolveusers) | **GET** /users/resolve | resolve users
 [**SearchUsers**](UsersApi.md#searchusers) | **GET** /users/search | search users
-[**UpdateUserInfo**](UsersApi.md#updateuserinfo) | **POST** /users | 
+[**UpdateUserInfo**](UsersApi.md#updateuserinfo) | **POST** /users | add users or update user information
 
 
 <a name="filterusersbyattribute"></a>
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 # **UpdateUserInfo**
 > void UpdateUserInfo (UpdatableApiUser updatableApiUser = null)
 
-
+add users or update user information
 
 ### Example
 ```csharp
@@ -578,6 +578,7 @@ namespace Example
 
             try
             {
+                // add users or update user information
                 apiInstance.UpdateUserInfo(updatableApiUser);
             }
             catch (ApiException  e)

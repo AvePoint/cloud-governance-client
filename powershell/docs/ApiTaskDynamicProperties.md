@@ -25,6 +25,9 @@ Name | Type | Description | Notes
 **IsYammer** | [**AnyType**](.md) |  | [optional] 
 **GroupOwnersStr** | [**AnyType**](.md) |  | [optional] 
 **TenantId** | [**AnyType**](.md) |  | [optional] 
+**Approver** | [**AnyType**](.md) |  | [optional] 
+**ApprovalHistory** | [**AnyType**](.md) |  | [optional] 
+**CurrentTaskAction** | [**AnyType**](.md) |  | [optional] 
 
 ## Examples
 
@@ -51,7 +54,10 @@ $ApiTaskDynamicProperties = New-Cloud.Governance.ClientApiTaskDynamicProperties 
  -IsTeam null `
  -IsYammer null `
  -GroupOwnersStr null `
- -TenantId null
+ -TenantId null `
+ -Approver null `
+ -ApprovalHistory null `
+ -CurrentTaskAction null
 ```
 
 - Convert the resource to JSON

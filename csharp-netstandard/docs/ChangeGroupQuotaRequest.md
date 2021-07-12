@@ -1,17 +1,17 @@
 # Cloud.Governance.Client.Model.ChangeGroupQuotaRequest
+Change group team site quota request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupQuotaSize** | **long** |  | [optional] [default to 0]
-**OriginalQuotaSize** | **long** |  | [optional] [readonly] [default to 0]
-**GroupId** | **Guid** |  | [optional] 
-**GroupName** | **string** |  | [optional] [readonly] 
-**GroupEmail** | **string** |  | [optional] [readonly] 
-**GroupObjectType** | **GroupObjectType** |  | [optional] 
+**GroupQuotaSize** | **long** | The new group team site quota size | [optional] [default to 0]
+**OriginalQuotaSize** | **long** | The original group team site quota size | [optional] [readonly] [default to 0]
+**GroupId** | **Guid** | Object ID | [optional] 
+**GroupName** | **string** | Group name | [optional] [readonly] 
+**GroupEmail** | **string** | Group e-mail address | [optional] [readonly] 
+**GroupObjectType** | **GroupObjectType** | Group type | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

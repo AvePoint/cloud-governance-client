@@ -23,7 +23,7 @@
                 request.SiteTitle = $"AddGroupPermission_{DateTime.Now}";
                 request.PrimaryContact = this.ResolveUser(data.PrimaryContactLoginName);
                 request.SecondaryContact = this.ResolveUser(data.SecondaryContactLoginName);
-                request.Department = data.Department;
+                ////request.Department = data.Department;
 
                 var sharePointGroupMembers = data.SharePointGroupMemberLoginNames
                     .Split(new String[] { ";" }, StringSplitOptions.RemoveEmptyEntries)

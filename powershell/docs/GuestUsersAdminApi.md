@@ -10,7 +10,7 @@ Method | HTTP request | Description
 <a name="Get-ManagedGuestUsers"></a>
 # **Get-ManagedGuestUsers**
 > GuestUserGridModelPageResult Get-ManagedGuestUsers<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
@@ -38,8 +38,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$VarFilter = "VarFilter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, mail, primaryContact, primaryContactDisplayName, secondaryContact, secondaryContactDisplayName, status, profileName, nextRenewalDate (optional)
-$Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> id, displayName, mail, primaryContact, primaryContactDisplayName, secondaryContact, secondaryContactDisplayName, status, profileName, nextRenewalDate (optional)
+$Filter = "Filter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime (optional)
+$Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime (optional)
 $Search = "Search_example" # String | Search for displayName (optional)
 $Top = 987 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
 $Skip = "Skip_example" # String |  Define the number of records you want to skip, default value is 0 (optional)
@@ -47,7 +47,7 @@ $Nexttoken = "Nexttoken_example" # String |  Use the next token to get the next 
 
 # get all managed guest users
 try {
-     $Result = Get-ManagedGuestUsers -VarFilter $VarFilter -Orderby $Orderby -Search $Search -Top $Top -Skip $Skip -Nexttoken $Nexttoken
+     $Result = Get-ManagedGuestUsers -Filter $Filter -Orderby $Orderby -Search $Search -Top $Top -Skip $Skip -Nexttoken $Nexttoken
 } catch {
     Write-Host ("Exception occured when calling Get-ManagedGuestUsers: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -58,8 +58,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **VarFilter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, primaryContactDisplayName, secondaryContact, secondaryContactDisplayName, status, profileName, nextRenewalDate | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, primaryContactDisplayName, secondaryContact, secondaryContactDisplayName, status, profileName, nextRenewalDate | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime | [optional] 
  **Search** | **String**| Search for displayName | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 

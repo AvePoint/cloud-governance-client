@@ -29,13 +29,15 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "createNewGroupAssignBy", EmitDefaultValue = false)]
         public AssignBy? CreateNewGroupAssignBy { get; set; }
         /// <summary>
-        /// Gets or Sets Type
+        /// Yammer community privacy type
         /// </summary>
+        /// <value>Yammer community privacy type</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public YammerGroupType? Type { get; set; }
         /// <summary>
-        /// Gets or Sets JoinType
+        /// Set who can view Yammer community content. Whether to allow every user in the Yammer network to view the community content or allow users approved by community members to view the community content.
         /// </summary>
+        /// <value>Set who can view Yammer community content. Whether to allow every user in the Yammer network to view the community content or allow users approved by community members to view the community content.</value>
         [DataMember(Name = "joinType", EmitDefaultValue = false)]
         public YammerGroupJoinType? JoinType { get; set; }
         /// <summary>
@@ -46,12 +48,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="allowReuseExisting">allowReuseExisting (default to false).</param>
         /// <param name="enabled">enabled (default to false).</param>
         /// <param name="createNewGroupAssignBy">createNewGroupAssignBy.</param>
-        /// <param name="nameOrId">nameOrId.</param>
-        /// <param name="description">description.</param>
-        /// <param name="type">type.</param>
-        /// <param name="joinType">joinType.</param>
-        /// <param name="isListInDirectory">isListInDirectory (default to false).</param>
-        /// <param name="isGroupAlreadyExisted">isGroupAlreadyExisted (default to false).</param>
+        /// <param name="nameOrId">Yammer community name or ID.</param>
+        /// <param name="description">Yammer community description.</param>
+        /// <param name="type">Yammer community privacy type.</param>
+        /// <param name="joinType">Set who can view Yammer community content. Whether to allow every user in the Yammer network to view the community content or allow users approved by community members to view the community content..</param>
+        /// <param name="isListInDirectory">Whether the Yammer community is associated with a Microsoft 365 Group. (default to false).</param>
+        /// <param name="isGroupAlreadyExisted">Whether the Yammer community already exists. (default to false).</param>
         public YammerGroupServiceSettings(string networkId = default(string), bool allowCreate = false, bool allowReuseExisting = false, bool enabled = false, AssignBy? createNewGroupAssignBy = default(AssignBy?), string nameOrId = default(string), string description = default(string), YammerGroupType? type = default(YammerGroupType?), YammerGroupJoinType? joinType = default(YammerGroupJoinType?), bool isListInDirectory = false, bool isGroupAlreadyExisted = false)
         {
             this.NetworkId = networkId;
@@ -92,26 +94,30 @@ namespace Cloud.Governance.Client.Model
         public bool Enabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets NameOrId
+        /// Yammer community name or ID
         /// </summary>
+        /// <value>Yammer community name or ID</value>
         [DataMember(Name = "nameOrId", EmitDefaultValue = true)]
         public string NameOrId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Yammer community description
         /// </summary>
+        /// <value>Yammer community description</value>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsListInDirectory
+        /// Whether the Yammer community is associated with a Microsoft 365 Group.
         /// </summary>
+        /// <value>Whether the Yammer community is associated with a Microsoft 365 Group.</value>
         [DataMember(Name = "isListInDirectory", EmitDefaultValue = false)]
         public bool IsListInDirectory { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsGroupAlreadyExisted
+        /// Whether the Yammer community already exists.
         /// </summary>
+        /// <value>Whether the Yammer community already exists.</value>
         [DataMember(Name = "isGroupAlreadyExisted", EmitDefaultValue = false)]
         public bool IsGroupAlreadyExisted { get; set; }
 

@@ -25,7 +25,7 @@ namespace NetFramework
                     GroupId = new Guid(group.Id),
                     Summary = $"Summary_{DateTime.Now}",
                     GroupObjectType = GroupObjectType.Team,
-                    Department = service.Department
+                    //Department = service.Department
                 };
 
                 var id = this.RequestsApi.SubmitRestoreGroupRequest(request);

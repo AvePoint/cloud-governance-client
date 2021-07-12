@@ -3,19 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] [readonly] 
-**IsLeaseEnabled** | **Boolean** |  | [optional] [default to $false]
-**ChangePolicyConfig** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**StartDateType** | [**StartDateType**](StartDateType.md) |  | [optional] 
-**SpecifyStartDate** | **System.DateTime** |  | [optional] 
-**GroupId** | **String** |  | [optional] 
-**GroupName** | **String** |  | [optional] [readonly] 
-**GroupEmail** | **String** |  | [optional] [readonly] 
-**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
+**Policy** | [**GuidModel**](GuidModel.md) | The new policy information settings | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original policy information settings | [optional] [readonly] 
+**IsLeaseEnabled** | **Boolean** | Whether to enable the group/team lease extension. | [optional] [default to $false]
+**ChangePolicyConfig** | [**AssignBy**](AssignBy.md) | Set how to assign the group policy. | [optional] 
+**StartDateType** | [**StartDateType**](StartDateType.md) | Group lease start date configuration after a policy change | [optional] 
+**SpecifyStartDate** | **System.DateTime** | New lease start date | [optional] 
+**GroupId** | **String** | Object ID | [optional] 
+**GroupName** | **String** | Group name | [optional] [readonly] 
+**GroupEmail** | **String** | Group e-mail address | [optional] [readonly] 
+**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) | Group type | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -50,7 +49,6 @@ $ChangeGroupPolicyRequest = New-Cloud.Governance.ClientChangeGroupPolicyRequest 
  -GroupObjectType null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

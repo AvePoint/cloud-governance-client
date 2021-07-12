@@ -28,8 +28,8 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="rootSiteUrl">rootSiteUrl.</param>
         /// <param name="tenantAdminUrl">tenantAdminUrl.</param>
-        /// <param name="name">name.</param>
-        /// <param name="displayName">displayName.</param>
+        /// <param name="name">Geo location name.</param>
+        /// <param name="displayName">Geo location display name.</param>
         public GeoLocationModel(string rootSiteUrl = default(string), string tenantAdminUrl = default(string), string name = default(string), string displayName = default(string))
         {
             this.RootSiteUrl = rootSiteUrl;
@@ -51,14 +51,16 @@ namespace Cloud.Governance.Client.Model
         public string TenantAdminUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Geo location name
         /// </summary>
+        /// <value>Geo location name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// Geo location display name
         /// </summary>
+        /// <value>Geo location display name</value>
         [DataMember(Name = "displayName", EmitDefaultValue = true)]
         public string DisplayName { get; set; }
 

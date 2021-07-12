@@ -35,7 +35,7 @@ namespace NetFramework
                     ServiceId = request.ServiceId,
                     SiteId = validationResult.SiteId,
                     SiteUrl = validationResult.SiteUrl,
-                    Department = request.Department,
+                    //Department = request.Department,
                     Metadatas = request.Metadatas,
                     Policy = policy,
                     Summary = $"ChangeSitePolicy_{data.SiteUrl}"

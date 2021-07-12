@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **GroupDescription** | **String** |  | [optional] 
 **OriginalGroupDescription** | **String** |  | [optional] 
 **OriginalYammerGroupInfo** | **String** |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**OriginalPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**OriginalSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**OriginalPrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**OriginalSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **GroupOwners** | [**GroupMembershipItem[]**](GroupMembershipItem.md) |  | [optional] 
 **GroupMembers** | [**GroupMembershipItem[]**](GroupMembershipItem.md) |  | [optional] 
 **IsDynamicMembership** | **Boolean** |  | [optional] [default to $false]
@@ -41,7 +41,6 @@ Name | Type | Description | Notes
 **EnableTeamCollaboration** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -102,7 +101,6 @@ $ChangeGroupSettingRequest = New-Cloud.Governance.ClientChangeGroupSettingReques
  -EnableTeamCollaboration null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

@@ -2,6 +2,5 @@
   "ServiceName": "Api_Sample_CreateSC",
   "PrimaryContactLoginName": "user@example.com",
   "SecondaryContactLoginName": "user@example.com",
-  "TemplateTitle": "PROJECTSITE#0#Project Site#Collaboration",
-  "Department": "IT"
+  "TemplateTitle": "PROJECTSITE#0#Project Site#Collaboration"
 }

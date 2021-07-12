@@ -1,17 +1,17 @@
 # Cloud.Governance.Client.Model.ExtendGroupRequest
+Extend group lease request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtendDuration** | **int** |  | [optional] [default to 0]
-**ExtendDurationType** | **ApiDurationType** |  | [optional] 
-**GroupId** | **Guid** |  | [optional] 
-**GroupName** | **string** |  | [optional] [readonly] 
-**GroupEmail** | **string** |  | [optional] [readonly] 
-**GroupObjectType** | **GroupObjectType** |  | [optional] 
+**ExtendDuration** | **int** | Group lease extension duration | [optional] [default to 0]
+**ExtendDurationType** | **ApiDurationType** | Duration type | [optional] 
+**GroupId** | **Guid** | Object ID | [optional] 
+**GroupName** | **string** | Group name | [optional] [readonly] 
+**GroupEmail** | **string** | Group e-mail address | [optional] [readonly] 
+**GroupObjectType** | **GroupObjectType** | Group type | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

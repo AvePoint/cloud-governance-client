@@ -18,32 +18,22 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum TaskStatus
     {
-        [EnumMember(Value = "0")]
         Created = 0,
 
-        [EnumMember(Value = "1")]
         WaitingForActivation = 1,
 
-        [EnumMember(Value = "2")]
         WaitingToRun = 2,
 
-        [EnumMember(Value = "3")]
         Running = 3,
 
-        [EnumMember(Value = "4")]
         WaitingForChildrenToComplete = 4,
 
-        [EnumMember(Value = "5")]
         RanToCompletion = 5,
 
-        [EnumMember(Value = "6")]
         Canceled = 6,
 
-        [EnumMember(Value = "7")]
         Faulted = 7
 
     }

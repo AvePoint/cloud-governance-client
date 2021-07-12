@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **NetworkId** | **String** |  | [optional] 
 **GroupRestriction** | [**GroupRestrictionType**](GroupRestrictionType.md) |  | [optional] 
 **EnableChangeName** | **Boolean** |  | [optional] [default to $false]
+**PreventDuplicateName** | **Boolean** |  | [optional] [default to $false]
 **EnableChangeDescription** | **Boolean** |  | [optional] [default to $false]
 **EnableChangeMemberSubscription** | **Boolean** |  | [optional] [default to $false]
 **EnableChangeOutsideSenders** | **Boolean** |  | [optional] [default to $false]
@@ -34,18 +35,14 @@ Name | Type | Description | Notes
 **ScopePeoplePickerFilterProfileId** | **String** |  | [optional] 
 **PeoplePickerFilterProfileId** | **String** |  | [optional] 
 **RequestTemplate** | [**ChangeGroupSettingRequest**](ChangeGroupSettingRequest.md) |  | [optional] 
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
-**Departments** | **String[]** |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
@@ -62,6 +59,7 @@ $ChangeGroupSettingService = New-Cloud.Governance.ClientChangeGroupSettingServic
  -NetworkId null `
  -GroupRestriction null `
  -EnableChangeName null `
+ -PreventDuplicateName null `
  -EnableChangeDescription null `
  -EnableChangeMemberSubscription null `
  -EnableChangeOutsideSenders null `
@@ -89,16 +87,12 @@ $ChangeGroupSettingService = New-Cloud.Governance.ClientChangeGroupSettingServic
  -ScopePeoplePickerFilterProfileId null `
  -PeoplePickerFilterProfileId null `
  -RequestTemplate null `
- -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `
  -Name null `
  -Description null `
  -Type null `
- -Department null `
- -LoadDepartmentFromUps null `
- -Departments null `
  -ServiceContact null `
  -ServiceAdminContact null `
  -ApproversContainManagerRole null `

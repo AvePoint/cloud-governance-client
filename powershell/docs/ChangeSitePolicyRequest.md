@@ -3,19 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] [readonly] 
-**IsLeaseEnabled** | **Boolean** |  | [optional] [default to $false]
-**ChangePolicyConfig** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**StartDateType** | [**StartDateType**](StartDateType.md) |  | [optional] 
-**SpecifyStartDate** | **System.DateTime** |  | [optional] 
-**Action** | [**SiteLifecycleActionType**](SiteLifecycleActionType.md) |  | [optional] 
-**ActionDescription** | **String** |  | [optional] [readonly] 
-**SiteId** | **String** |  | [optional] 
-**SiteUrl** | **String** |  | [optional] 
+**Policy** | [**GuidModel**](GuidModel.md) | The new site collection policy information settings | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original site collection policy information settings | [optional] [readonly] 
+**IsLeaseEnabled** | **Boolean** | Whether to enable the site collection lease extension. | [optional] [default to $false]
+**ChangePolicyConfig** | [**AssignBy**](AssignBy.md) | Set how to assign the site collection policy. | [optional] 
+**StartDateType** | [**StartDateType**](StartDateType.md) | Site collection lease start date configuration after a policy change | [optional] 
+**SpecifyStartDate** | **System.DateTime** | New lease start date | [optional] 
+**Action** | [**SiteLifecycleActionType**](SiteLifecycleActionType.md) | Lifecycle management action type | [optional] 
+**ActionDescription** | **String** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**SiteId** | **String** | Site collection ID | [optional] 
+**SiteUrl** | **String** | Site collection URL | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -50,7 +49,6 @@ $ChangeSitePolicyRequest = New-Cloud.Governance.ClientChangeSitePolicyRequest  -
  -SiteUrl null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

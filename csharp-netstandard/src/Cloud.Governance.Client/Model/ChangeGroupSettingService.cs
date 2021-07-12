@@ -44,11 +44,6 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "groupObjectType", EmitDefaultValue = false)]
         public GroupObjectType? GroupObjectType { get; set; }
         /// <summary>
-        /// Gets or Sets DepartmentAssignBy
-        /// </summary>
-        [DataMember(Name = "departmentAssignBy", EmitDefaultValue = false)]
-        public AssignBy? DepartmentAssignBy { get; set; }
-        /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", EmitDefaultValue = false)]
@@ -65,6 +60,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="networkId">networkId.</param>
         /// <param name="groupRestriction">groupRestriction.</param>
         /// <param name="enableChangeName">enableChangeName (default to false).</param>
+        /// <param name="preventDuplicateName">preventDuplicateName (default to false).</param>
         /// <param name="enableChangeDescription">enableChangeDescription (default to false).</param>
         /// <param name="enableChangeMemberSubscription">enableChangeMemberSubscription (default to false).</param>
         /// <param name="enableChangeOutsideSenders">enableChangeOutsideSenders (default to false).</param>
@@ -92,18 +88,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="scopePeoplePickerFilterProfileId">scopePeoplePickerFilterProfileId.</param>
         /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
         /// <param name="requestTemplate">requestTemplate.</param>
-        /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
-        /// <param name="department">department.</param>
-        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps (default to false).</param>
-        /// <param name="departments">departments.</param>
-        /// <param name="serviceContact">serviceContact.</param>
-        /// <param name="serviceAdminContact">serviceAdminContact.</param>
+        /// <param name="serviceContact">ApiUser model.</param>
+        /// <param name="serviceAdminContact">ApiUser model.</param>
         /// <param name="approversContainManagerRole">approversContainManagerRole (default to false).</param>
         /// <param name="status">status.</param>
         /// <param name="showServiceInCatalog">showServiceInCatalog (default to false).</param>
@@ -111,12 +103,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = false, bool enableChangeDescription = false, bool enableChangeMemberSubscription = false, bool enableChangeOutsideSenders = false, bool enableChangePrimaryContact = false, bool enableChangeSecondaryContact = false, bool enableAddOwners = false, UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = false, bool enableAddMembers = false, UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = false, bool enableChangeDynamicMembershipRules = false, bool enableChangeTeamCollaboration = false, bool enableChangeHubSite = false, bool enableChangeClassification = false, List<string> classificationList = default(List<string>), bool enableChangeSensitivity = false, List<string> sensitivityList = default(List<string>), bool enableChangeMetadata = false, bool enableAddOrDeleteMetadata = false, List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = false, GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = false, Guid? scopePeoplePickerFilterProfileId = default(Guid?), Guid? peoplePickerFilterProfileId = default(Guid?), ChangeGroupSettingRequest requestTemplate = default(ChangeGroupSettingRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = false, List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = false, bool preventDuplicateName = false, bool enableChangeDescription = false, bool enableChangeMemberSubscription = false, bool enableChangeOutsideSenders = false, bool enableChangePrimaryContact = false, bool enableChangeSecondaryContact = false, bool enableAddOwners = false, UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = false, bool enableAddMembers = false, UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = false, bool enableChangeDynamicMembershipRules = false, bool enableChangeTeamCollaboration = false, bool enableChangeHubSite = false, bool enableChangeClassification = false, List<string> classificationList = default(List<string>), bool enableChangeSensitivity = false, List<string> sensitivityList = default(List<string>), bool enableChangeMetadata = false, bool enableAddOrDeleteMetadata = false, List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = false, GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = false, Guid? scopePeoplePickerFilterProfileId = default(Guid?), Guid? peoplePickerFilterProfileId = default(Guid?), ChangeGroupSettingRequest requestTemplate = default(ChangeGroupSettingRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.TenantId = tenantId;
             this.NetworkId = networkId;
             this.GroupRestriction = groupRestriction;
             this.EnableChangeName = enableChangeName;
+            this.PreventDuplicateName = preventDuplicateName;
             this.EnableChangeDescription = enableChangeDescription;
             this.EnableChangeMemberSubscription = enableChangeMemberSubscription;
             this.EnableChangeOutsideSenders = enableChangeOutsideSenders;
@@ -144,16 +137,12 @@ namespace Cloud.Governance.Client.Model
             this.ScopePeoplePickerFilterProfileId = scopePeoplePickerFilterProfileId;
             this.PeoplePickerFilterProfileId = peoplePickerFilterProfileId;
             this.RequestTemplate = requestTemplate;
-            this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
             this.Id = id;
             this.Name = name;
             this.Description = description;
             this.Type = type;
-            this.Department = department;
-            this.LoadDepartmentFromUps = loadDepartmentFromUps;
-            this.Departments = departments;
             this.ServiceContact = serviceContact;
             this.ServiceAdminContact = serviceAdminContact;
             this.ApproversContainManagerRole = approversContainManagerRole;
@@ -182,6 +171,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "enableChangeName", EmitDefaultValue = false)]
         public bool EnableChangeName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PreventDuplicateName
+        /// </summary>
+        [DataMember(Name = "preventDuplicateName", EmitDefaultValue = false)]
+        public bool PreventDuplicateName { get; set; }
 
         /// <summary>
         /// Gets or Sets EnableChangeDescription
@@ -358,32 +353,16 @@ namespace Cloud.Governance.Client.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Department
+        /// ApiUser model
         /// </summary>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LoadDepartmentFromUps
-        /// </summary>
-        [DataMember(Name = "loadDepartmentFromUps", EmitDefaultValue = false)]
-        public bool LoadDepartmentFromUps { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Departments
-        /// </summary>
-        [DataMember(Name = "departments", EmitDefaultValue = true)]
-        public List<string> Departments { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ServiceContact
-        /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServiceAdminContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
@@ -435,6 +414,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  NetworkId: ").Append(NetworkId).Append("\n");
             sb.Append("  GroupRestriction: ").Append(GroupRestriction).Append("\n");
             sb.Append("  EnableChangeName: ").Append(EnableChangeName).Append("\n");
+            sb.Append("  PreventDuplicateName: ").Append(PreventDuplicateName).Append("\n");
             sb.Append("  EnableChangeDescription: ").Append(EnableChangeDescription).Append("\n");
             sb.Append("  EnableChangeMemberSubscription: ").Append(EnableChangeMemberSubscription).Append("\n");
             sb.Append("  EnableChangeOutsideSenders: ").Append(EnableChangeOutsideSenders).Append("\n");
@@ -462,16 +442,12 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ScopePeoplePickerFilterProfileId: ").Append(ScopePeoplePickerFilterProfileId).Append("\n");
             sb.Append("  PeoplePickerFilterProfileId: ").Append(PeoplePickerFilterProfileId).Append("\n");
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
-            sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
-            sb.Append("  LoadDepartmentFromUps: ").Append(LoadDepartmentFromUps).Append("\n");
-            sb.Append("  Departments: ").Append(Departments).Append("\n");
             sb.Append("  ServiceContact: ").Append(ServiceContact).Append("\n");
             sb.Append("  ServiceAdminContact: ").Append(ServiceAdminContact).Append("\n");
             sb.Append("  ApproversContainManagerRole: ").Append(ApproversContainManagerRole).Append("\n");
@@ -532,6 +508,10 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.EnableChangeName == input.EnableChangeName ||
                     this.EnableChangeName.Equals(input.EnableChangeName)
+                ) && 
+                (
+                    this.PreventDuplicateName == input.PreventDuplicateName ||
+                    this.PreventDuplicateName.Equals(input.PreventDuplicateName)
                 ) && 
                 (
                     this.EnableChangeDescription == input.EnableChangeDescription ||
@@ -651,10 +631,6 @@ namespace Cloud.Governance.Client.Model
                     this.RequestTemplate.Equals(input.RequestTemplate))
                 ) && 
                 (
-                    this.DepartmentAssignBy == input.DepartmentAssignBy ||
-                    this.DepartmentAssignBy.Equals(input.DepartmentAssignBy)
-                ) && 
-                (
                     this.Metadatas == input.Metadatas ||
                     this.Metadatas != null &&
                     input.Metadatas != null &&
@@ -682,21 +658,6 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.Type == input.Type ||
                     this.Type.Equals(input.Type)
-                ) && 
-                (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
-                ) && 
-                (
-                    this.LoadDepartmentFromUps == input.LoadDepartmentFromUps ||
-                    this.LoadDepartmentFromUps.Equals(input.LoadDepartmentFromUps)
-                ) && 
-                (
-                    this.Departments == input.Departments ||
-                    this.Departments != null &&
-                    input.Departments != null &&
-                    this.Departments.SequenceEqual(input.Departments)
                 ) && 
                 (
                     this.ServiceContact == input.ServiceContact ||
@@ -756,6 +717,7 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.NetworkId.GetHashCode();
                 hashCode = hashCode * 59 + this.GroupRestriction.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableChangeName.GetHashCode();
+                hashCode = hashCode * 59 + this.PreventDuplicateName.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableChangeDescription.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableChangeMemberSubscription.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableChangeOutsideSenders.GetHashCode();
@@ -789,7 +751,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.PeoplePickerFilterProfileId.GetHashCode();
                 if (this.RequestTemplate != null)
                     hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
-                hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
                 hashCode = hashCode * 59 + this.HideRequestSummary.GetHashCode();
@@ -800,11 +761,6 @@ namespace Cloud.Governance.Client.Model
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
-                hashCode = hashCode * 59 + this.LoadDepartmentFromUps.GetHashCode();
-                if (this.Departments != null)
-                    hashCode = hashCode * 59 + this.Departments.GetHashCode();
                 if (this.ServiceContact != null)
                     hashCode = hashCode * 59 + this.ServiceContact.GetHashCode();
                 if (this.ServiceAdminContact != null)

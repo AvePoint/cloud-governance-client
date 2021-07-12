@@ -20,11 +20,17 @@ function New-TaskList {
         [String]
         ${Requester},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${RequestId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${RequestTicketNumber} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${RequesterDisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${RequesterEmail},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${DueDate},
@@ -48,7 +54,34 @@ function New-TaskList {
         ${Status} = "Running",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${StatusDescription}
+        ${StatusDescription},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${TaskFullPath},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[System.DateTime]]
+        ${LastUpdated},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${Category},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${CategoryDisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${ServiceName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${ObjectId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${ProfileId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${AllowEdit} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${ProgressStatus} = "None"
     )
 
     Process {
@@ -60,8 +93,10 @@ function New-TaskList {
             "Id" = ${Id}
             "Title" = ${Title}
             "Requester" = ${Requester}
+            "RequestId" = ${RequestId}
             "RequestTicketNumber" = ${RequestTicketNumber}
             "RequesterDisplayName" = ${RequesterDisplayName}
+            "RequesterEmail" = ${RequesterEmail}
             "DueDate" = ${DueDate}
             "DueDateType" = ${DueDateType}
             "ServiceType" = ${ServiceType}
@@ -70,6 +105,15 @@ function New-TaskList {
             "TaskType" = ${TaskType}
             "Status" = ${Status}
             "StatusDescription" = ${StatusDescription}
+            "TaskFullPath" = ${TaskFullPath}
+            "LastUpdated" = ${LastUpdated}
+            "Category" = ${Category}
+            "CategoryDisplayName" = ${CategoryDisplayName}
+            "ServiceName" = ${ServiceName}
+            "ObjectId" = ${ObjectId}
+            "ProfileId" = ${ProfileId}
+            "AllowEdit" = ${AllowEdit}
+            "ProgressStatus" = ${ProgressStatus}
         }
 
         return $PSO
@@ -92,7 +136,7 @@ function ConvertFrom-JsonToTaskList {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in TaskList
-        $AllProperties = $("Id", "Title", "Requester", "RequestTicketNumber", "RequesterDisplayName", "DueDate", "DueDateType", "ServiceType", "ServiceTypeDescription", "CreatedTime", "TaskType", "Status", "StatusDescription")
+        $AllProperties = $("Id", "Title", "Requester", "RequestId", "RequestTicketNumber", "RequesterDisplayName", "RequesterEmail", "DueDate", "DueDateType", "ServiceType", "ServiceTypeDescription", "CreatedTime", "TaskType", "Status", "StatusDescription", "TaskFullPath", "LastUpdated", "Category", "CategoryDisplayName", "ServiceName", "ObjectId", "ProfileId", "AllowEdit", "ProgressStatus")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -117,6 +161,12 @@ function ConvertFrom-JsonToTaskList {
             $Requester = $JsonParameters.PSobject.Properties["Requester"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "RequestId"))) { #optional property not found
+            $RequestId = $null
+        } else {
+            $RequestId = $JsonParameters.PSobject.Properties["RequestId"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "RequestTicketNumber"))) { #optional property not found
             $RequestTicketNumber = $null
         } else {
@@ -127,6 +177,12 @@ function ConvertFrom-JsonToTaskList {
             $RequesterDisplayName = $null
         } else {
             $RequesterDisplayName = $JsonParameters.PSobject.Properties["RequesterDisplayName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "RequesterEmail"))) { #optional property not found
+            $RequesterEmail = $null
+        } else {
+            $RequesterEmail = $JsonParameters.PSobject.Properties["RequesterEmail"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "DueDate"))) { #optional property not found
@@ -177,12 +233,68 @@ function ConvertFrom-JsonToTaskList {
             $StatusDescription = $JsonParameters.PSobject.Properties["StatusDescription"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TaskFullPath"))) { #optional property not found
+            $TaskFullPath = $null
+        } else {
+            $TaskFullPath = $JsonParameters.PSobject.Properties["TaskFullPath"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastUpdated"))) { #optional property not found
+            $LastUpdated = $null
+        } else {
+            $LastUpdated = $JsonParameters.PSobject.Properties["LastUpdated"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Category"))) { #optional property not found
+            $Category = $null
+        } else {
+            $Category = $JsonParameters.PSobject.Properties["Category"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CategoryDisplayName"))) { #optional property not found
+            $CategoryDisplayName = $null
+        } else {
+            $CategoryDisplayName = $JsonParameters.PSobject.Properties["CategoryDisplayName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ServiceName"))) { #optional property not found
+            $ServiceName = $null
+        } else {
+            $ServiceName = $JsonParameters.PSobject.Properties["ServiceName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ObjectId"))) { #optional property not found
+            $ObjectId = $null
+        } else {
+            $ObjectId = $JsonParameters.PSobject.Properties["ObjectId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ProfileId"))) { #optional property not found
+            $ProfileId = $null
+        } else {
+            $ProfileId = $JsonParameters.PSobject.Properties["ProfileId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AllowEdit"))) { #optional property not found
+            $AllowEdit = $null
+        } else {
+            $AllowEdit = $JsonParameters.PSobject.Properties["AllowEdit"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ProgressStatus"))) { #optional property not found
+            $ProgressStatus = $null
+        } else {
+            $ProgressStatus = $JsonParameters.PSobject.Properties["ProgressStatus"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Title" = ${Title}
             "Requester" = ${Requester}
+            "RequestId" = ${RequestId}
             "RequestTicketNumber" = ${RequestTicketNumber}
             "RequesterDisplayName" = ${RequesterDisplayName}
+            "RequesterEmail" = ${RequesterEmail}
             "DueDate" = ${DueDate}
             "DueDateType" = ${DueDateType}
             "ServiceType" = ${ServiceType}
@@ -191,6 +303,15 @@ function ConvertFrom-JsonToTaskList {
             "TaskType" = ${TaskType}
             "Status" = ${Status}
             "StatusDescription" = ${StatusDescription}
+            "TaskFullPath" = ${TaskFullPath}
+            "LastUpdated" = ${LastUpdated}
+            "Category" = ${Category}
+            "CategoryDisplayName" = ${CategoryDisplayName}
+            "ServiceName" = ${ServiceName}
+            "ObjectId" = ${ObjectId}
+            "ProfileId" = ${ProfileId}
+            "AllowEdit" = ${AllowEdit}
+            "ProgressStatus" = ${ProgressStatus}
         }
 
         return $PSO

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **EnableOutsideSender** | **Boolean** |  | [optional] [default to $false]
 **EnableHideGroupMembership** | **Boolean** |  | [optional] [default to $false]
 **EnableClassification** | **Boolean** |  | [optional] [default to $false]
+**PreventDuplicateName** | **Boolean** |  | [optional] [default to $false]
 **EnableSensitivity** | **Boolean** |  | [optional] [default to $false]
 **AllowConfigureLeasePeriod** | **Boolean** |  | [optional] [default to $false]
 **ShowNotebookLink** | **Boolean** |  | [optional] [default to $false]
@@ -33,8 +34,8 @@ Name | Type | Description | Notes
 **EnableInstallApp** | **Boolean** |  | [optional] [default to $false]
 **EnableInstallPanel** | **Boolean** |  | [optional] [default to $false]
 **TemplateSettings** | [**TeamsTemplateServiceSettings**](TeamsTemplateServiceSettings.md) |  | [optional] 
-**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **DefaultOwners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **DefaultMembers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **DefaultPolicy** | **String** |  | [optional] 
@@ -44,8 +45,8 @@ Name | Type | Description | Notes
 **DefaultSiteDesign** | **String** |  | [optional] 
 **DefaultOwnersReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **DefaultMembersReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**DefaultPrimaryContactReal** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**DefaultSecondaryContactReal** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryContactReal** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**DefaultSecondaryContactReal** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **MemberAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **OwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **PrivacyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
@@ -63,22 +64,18 @@ Name | Type | Description | Notes
 **HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **MultiGeoSetting** | [**MultiGeoSetting**](MultiGeoSetting.md) |  | [optional] 
 **IsShowHubSiteSection** | **Boolean** |  | [optional] [readonly] [default to $false]
-**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] 
+**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site settings model | [optional] 
 **HasImpernastionUsers** | **Boolean** |  | [optional] [default to $false]
 **PeoplePickerFilterProfileId** | **String** |  | [optional] 
-**RequestTemplate** | [**CreateGroupRequest**](CreateGroupRequest.md) |  | [optional] 
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**RequestTemplate** | [**CreateGroupRequest**](CreateGroupRequest.md) | Create group request model | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
-**Departments** | **String[]** |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
@@ -101,6 +98,7 @@ $CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType 
  -EnableOutsideSender null `
  -EnableHideGroupMembership null `
  -EnableClassification null `
+ -PreventDuplicateName null `
  -EnableSensitivity null `
  -AllowConfigureLeasePeriod null `
  -ShowNotebookLink null `
@@ -155,16 +153,12 @@ $CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType 
  -HasImpernastionUsers null `
  -PeoplePickerFilterProfileId null `
  -RequestTemplate null `
- -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `
  -Name null `
  -Description null `
  -Type null `
- -Department null `
- -LoadDepartmentFromUps null `
- -Departments null `
  -ServiceContact null `
  -ServiceAdminContact null `
  -ApproversContainManagerRole null `

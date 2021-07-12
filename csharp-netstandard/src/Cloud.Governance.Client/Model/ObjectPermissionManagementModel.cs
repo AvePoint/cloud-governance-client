@@ -42,7 +42,7 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ObjectPermissionManagementModel" /> class.
         /// </summary>
         /// <param name="objectType">objectType.</param>
-        /// <param name="objectInfo">objectInfo.</param>
+        /// <param name="objectInfo">ApiUser model.</param>
         /// <param name="action">action.</param>
         /// <param name="permissions">permissions.</param>
         /// <param name="originalPermissions">originalPermissions.</param>
@@ -64,8 +64,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ObjectInfo
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "objectInfo", EmitDefaultValue = true)]
         public ApiUser ObjectInfo { get; set; }
 

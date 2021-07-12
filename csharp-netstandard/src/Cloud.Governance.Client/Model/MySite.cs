@@ -38,7 +38,6 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="fullUrl">fullUrl.</param>
         /// <param name="title">title.</param>
-        /// <param name="department">department.</param>
         /// <param name="description">description.</param>
         /// <param name="size">size (default to 0).</param>
         /// <param name="quotaSize">quotaSize (default to 0).</param>
@@ -49,7 +48,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isCommunicationSite">isCommunicationSite (default to false).</param>
         /// <param name="createdTime">createdTime.</param>
         /// <param name="storageUsed">storageUsed.</param>
-        /// <param name="primaryAdministrator">primaryAdministrator.</param>
+        /// <param name="primaryAdministrator">ApiUser model.</param>
         /// <param name="additionalAdministrator">additionalAdministrator.</param>
         /// <param name="preferredDataLocation">preferredDataLocation.</param>
         /// <param name="preferredDataLocationName">preferredDataLocationName.</param>
@@ -65,14 +64,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="phaseAssignees">phaseAssignees.</param>
         /// <param name="phaseDueDate">phaseDueDate.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
+        /// <param name="primaryContact">ApiUser model.</param>
+        /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="errorMessage">errorMessage.</param>
-        public MySite(string fullUrl = default(string), string title = default(string), string department = default(string), string description = default(string), long? size = 0, long quotaSize = 0, MySiteType? type = default(MySiteType?), string mySiteType = default(string), string classification = default(string), string sensitivity = default(string), bool isCommunicationSite = false, DateTime createdTime = default(DateTime), string storageUsed = default(string), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrator = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
+        public MySite(string fullUrl = default(string), string title = default(string), string description = default(string), long? size = 0, long quotaSize = 0, MySiteType? type = default(MySiteType?), string mySiteType = default(string), string classification = default(string), string sensitivity = default(string), bool isCommunicationSite = false, DateTime createdTime = default(DateTime), string storageUsed = default(string), ApiUser primaryAdministrator = default(ApiUser), List<ApiUser> additionalAdministrator = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
             this.FullUrl = fullUrl;
             this.Title = title;
-            this.Department = department;
             this.Description = description;
             // use default value if no "size" provided
             this.Size = size ?? 0;
@@ -116,12 +114,6 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "title", EmitDefaultValue = true)]
         public string Title { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Department
-        /// </summary>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
@@ -178,8 +170,9 @@ namespace Cloud.Governance.Client.Model
         public string StorageUsed { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryAdministrator
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryAdministrator", EmitDefaultValue = true)]
         public ApiUser PrimaryAdministrator { get; set; }
 
@@ -268,14 +261,16 @@ namespace Cloud.Governance.Client.Model
         public List<RequestMetadata> Metadatas { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
@@ -295,7 +290,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class MySite {\n");
             sb.Append("  FullUrl: ").Append(FullUrl).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  QuotaSize: ").Append(QuotaSize).Append("\n");
@@ -368,11 +362,6 @@ namespace Cloud.Governance.Client.Model
                     this.Title == input.Title ||
                     (this.Title != null &&
                     this.Title.Equals(input.Title))
-                ) && 
-                (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
                 ) && 
                 (
                     this.Description == input.Description ||
@@ -532,8 +521,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.FullUrl.GetHashCode();
                 if (this.Title != null)
                     hashCode = hashCode * 59 + this.Title.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Size != null)

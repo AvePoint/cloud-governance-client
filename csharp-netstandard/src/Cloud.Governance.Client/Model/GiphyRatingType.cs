@@ -18,14 +18,10 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum GiphyRatingType
     {
-        [EnumMember(Value = "0")]
         Moderate = 0,
 
-        [EnumMember(Value = "1")]
         Strict = 1
 
     }

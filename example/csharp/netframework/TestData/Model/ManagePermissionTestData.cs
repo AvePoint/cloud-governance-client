@@ -32,7 +32,7 @@ namespace NetFramework
 
         public String ObjectInfoLoginName { get; set; }
 
-        public String Department { get; set; }
+        
 
         public String UserLoginName { get; set; }
 

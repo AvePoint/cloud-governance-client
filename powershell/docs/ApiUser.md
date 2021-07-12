@@ -3,20 +3,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **String** |  | [optional] 
-**LoginName** | **String** |  | [optional] 
-**IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
-**AzureUserType** | **String** |  | [optional] 
-**DisplayName** | **String** |  | [optional] 
-**IsGroup** | **Boolean** |  | [optional] [default to $false]
-**IsLocalUser** | **Boolean** |  | [optional] [readonly] [default to $false]
-**Email** | **String** |  | [optional] 
-**JobTitle** | **String** |  | [optional] [readonly] 
-**PhysicalDeliveryOfficeName** | **String** |  | [optional] [readonly] 
-**IsValid** | **Boolean** |  | [optional] [readonly] [default to $false]
-**TenantId** | **String** |  | [optional] [readonly] 
-**AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) |  | [optional] [readonly] 
-**ApiUserType** | [**ApiUserType**](ApiUserType.md) |  | [optional] [readonly] 
+**Id** | **String** | Object ID | [optional] 
+**LoginName** | **String** | Login name | [optional] 
+**IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) | Whether the user is an external user. | [optional] 
+**AzureUserType** | **String** | User type in Azure AD | [optional] 
+**DisplayName** | **String** | User display name | [optional] 
+**IsGroup** | **Boolean** | Whether an object is a domain group. | [optional] [default to $false]
+**IsLocalUser** | **Boolean** | Whether the user is a local system user. | [optional] [readonly] [default to $false]
+**Email** | **String** | User e-mail address | [optional] 
+**JobTitle** | **String** | User job title | [optional] [readonly] 
+**PhysicalDeliveryOfficeName** | **String** | Physical delivery office name of the user | [optional] [readonly] 
+**IsValid** | **Boolean** | Whether the user is valid. | [optional] [readonly] [default to $false]
+**TenantId** | **String** | Office 365 tenant ID of the user | [optional] [readonly] 
+**AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) | User additional data | [optional] [readonly] 
+**ApiUserType** | [**ApiUserType**](ApiUserType.md) | ApiUser type | [optional] [readonly] 
 
 ## Examples
 

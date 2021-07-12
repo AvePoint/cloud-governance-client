@@ -34,13 +34,15 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "leaseWarningAssignBy", EmitDefaultValue = false)]
         public AssignBy? LeaseWarningAssignBy { get; set; }
         /// <summary>
-        /// Gets or Sets LeaseDurationType
+        /// Duration type of the site collection lease period
         /// </summary>
+        /// <value>Duration type of the site collection lease period</value>
         [DataMember(Name = "leaseDurationType", EmitDefaultValue = false)]
         public ApiDurationType? LeaseDurationType { get; set; }
         /// <summary>
-        /// Gets or Sets LeaseWarningDurationType
+        /// Duration type of the site collection lease expiration warning interval
         /// </summary>
+        /// <value>Duration type of the site collection lease expiration warning interval</value>
         [DataMember(Name = "leaseWarningDurationType", EmitDefaultValue = false)]
         public ApiDurationType? LeaseWarningDurationType { get; set; }
         /// <summary>
@@ -51,10 +53,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="leaseEnabled">leaseEnabled (default to false).</param>
         /// <param name="leaseWarningEnabled">leaseWarningEnabled (default to false).</param>
         /// <param name="approvalProcessId">approvalProcessId.</param>
-        /// <param name="leaseInterval">leaseInterval (default to 0).</param>
-        /// <param name="leaseDurationType">leaseDurationType.</param>
-        /// <param name="leaseWarningInterval">leaseWarningInterval (default to 0).</param>
-        /// <param name="leaseWarningDurationType">leaseWarningDurationType.</param>
+        /// <param name="leaseInterval">Site Collection lease period (default to 0).</param>
+        /// <param name="leaseDurationType">Duration type of the site collection lease period.</param>
+        /// <param name="leaseWarningInterval">Site collection lease expiration warning interval (default to 0).</param>
+        /// <param name="leaseWarningDurationType">Duration type of the site collection lease expiration warning interval.</param>
         public SiteLeasePeriodServiceSettings(AssignBy? leasePeriodAssignBy = default(AssignBy?), AssignBy? leaseWarningAssignBy = default(AssignBy?), bool leaseEnabled = false, bool leaseWarningEnabled = false, Guid? approvalProcessId = default(Guid?), int leaseInterval = 0, ApiDurationType? leaseDurationType = default(ApiDurationType?), int leaseWarningInterval = 0, ApiDurationType? leaseWarningDurationType = default(ApiDurationType?))
         {
             this.LeasePeriodAssignBy = leasePeriodAssignBy;
@@ -87,14 +89,16 @@ namespace Cloud.Governance.Client.Model
         public Guid? ApprovalProcessId { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeaseInterval
+        /// Site Collection lease period
         /// </summary>
+        /// <value>Site Collection lease period</value>
         [DataMember(Name = "leaseInterval", EmitDefaultValue = false)]
         public int LeaseInterval { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeaseWarningInterval
+        /// Site collection lease expiration warning interval
         /// </summary>
+        /// <value>Site collection lease expiration warning interval</value>
         [DataMember(Name = "leaseWarningInterval", EmitDefaultValue = false)]
         public int LeaseWarningInterval { get; set; }
 

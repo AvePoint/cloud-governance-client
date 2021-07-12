@@ -44,7 +44,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="id">id (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
-        /// <param name="owner">owner.</param>
+        /// <param name="owner">ApiUser model.</param>
         /// <param name="members">members.</param>
         /// <param name="spGroupViewType">spGroupViewType.</param>
         /// <param name="spGroupEditType">spGroupEditType.</param>
@@ -92,8 +92,9 @@ namespace Cloud.Governance.Client.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Owner
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "owner", EmitDefaultValue = true)]
         public ApiUser Owner { get; set; }
 

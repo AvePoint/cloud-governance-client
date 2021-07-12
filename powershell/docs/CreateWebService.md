@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **AppSettings** | [**AppSettings**](AppSettings.md) |  | [optional] 
 **NotifyPrimaryContactSettings** | [**GuidBooleanModel**](GuidBooleanModel.md) |  | [optional] 
 **NotifySecondaryContactSettings** | [**GuidBooleanModel**](GuidBooleanModel.md) |  | [optional] 
-**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **IsOnQuickLaunch** | **Boolean** |  | [optional] [default to $false]
 **IsOnTopLinkBar** | **Boolean** |  | [optional] [default to $false]
 **IsNavigationInheritance** | **Boolean** |  | [optional] [default to $false]
@@ -30,18 +30,14 @@ Name | Type | Description | Notes
 **SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **PermissionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **RequestTemplate** | [**CreateWebRequest**](CreateWebRequest.md) |  | [optional] 
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
-**Departments** | **String[]** |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
@@ -81,16 +77,12 @@ $CreateWebService = New-Cloud.Governance.ClientCreateWebService  -ScopeSettings 
  -SecondaryContactAssignBy null `
  -PermissionAssignBy null `
  -RequestTemplate null `
- -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `
  -Name null `
  -Description null `
  -Type null `
- -Department null `
- -LoadDepartmentFromUps null `
- -Departments null `
  -ServiceContact null `
  -ServiceAdminContact null `
  -ApproversContainManagerRole null `

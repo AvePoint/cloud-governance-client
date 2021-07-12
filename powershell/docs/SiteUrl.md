@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Root** | **String** |  | [optional] 
-**ManagedPath** | **String** |  | [optional] 
-**Name** | **String** |  | [optional] 
+**Root** | **String** | Site collection root site url | [optional] 
+**ManagedPath** | **String** | Managed path | [optional] 
+**Name** | **String** | Site collection name | [optional] 
 
 ## Examples
 

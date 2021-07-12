@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **FullUrl** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
-**Department** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Size** | **Int64** |  | [optional] [default to 0]
 **QuotaSize** | **Int64** |  | [optional] [default to 0]
@@ -16,7 +15,7 @@ Name | Type | Description | Notes
 **IsCommunicationSite** | **Boolean** |  | [optional] [default to $false]
 **CreatedTime** | **System.DateTime** |  | [optional] 
 **StorageUsed** | **String** |  | [optional] 
-**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **AdditionalAdministrator** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **PreferredDataLocation** | **String** |  | [optional] 
 **PreferredDataLocationName** | **String** |  | [optional] 
@@ -32,8 +31,8 @@ Name | Type | Description | Notes
 **PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **PhaseDueDate** | **System.DateTime** |  | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
 
 ## Examples
@@ -42,7 +41,6 @@ Name | Type | Description | Notes
 ```powershell
 $MySite = New-Cloud.Governance.ClientMySite  -FullUrl null `
  -Title null `
- -Department null `
  -Description null `
  -Size null `
  -QuotaSize null `

@@ -55,7 +55,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isEnableDeleteSPGroup">isEnableDeleteSPGroup (default to false).</param>
         /// <param name="isEnableManageGroupSettings">isEnableManageGroupSettings (default to false).</param>
         /// <param name="isEnableManageGroupMembers">isEnableManageGroupMembers (default to false).</param>
-        /// <param name="groupOwner">groupOwner.</param>
+        /// <param name="groupOwner">ApiUser model.</param>
         /// <param name="groupOwnerAssignBy">groupOwnerAssignBy.</param>
         /// <param name="spGroupViewType">spGroupViewType.</param>
         /// <param name="spGroupEditType">spGroupEditType.</param>
@@ -106,8 +106,9 @@ namespace Cloud.Governance.Client.Model
         public bool IsEnableManageGroupMembers { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupOwner
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "groupOwner", EmitDefaultValue = true)]
         public ApiUser GroupOwner { get; set; }
 

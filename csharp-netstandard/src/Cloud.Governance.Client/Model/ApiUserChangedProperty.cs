@@ -26,8 +26,8 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiUserChangedProperty" /> class.
         /// </summary>
-        /// <param name="changeValue">changeValue.</param>
-        /// <param name="originalValue">originalValue.</param>
+        /// <param name="changeValue">ApiUser model.</param>
+        /// <param name="originalValue">ApiUser model.</param>
         public ApiUserChangedProperty(ApiUser changeValue = default(ApiUser), ApiUser originalValue = default(ApiUser))
         {
             this.ChangeValue = changeValue;
@@ -35,14 +35,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ChangeValue
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "changeValue", EmitDefaultValue = true)]
         public ApiUser ChangeValue { get; set; }
 
         /// <summary>
-        /// Gets or Sets OriginalValue
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "originalValue", EmitDefaultValue = true)]
         public ApiUser OriginalValue { get; set; }
 

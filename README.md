@@ -6,7 +6,7 @@
 
 *  [**PowerShell**](https://github.com/AvePoint/cloud-governance-client/tree/master/powershell)
 
-*  [**JavaScript**](https://github.com/AvePoint/cloud-governance-client/tree/master/javascript_promise)
+*  [**TypeScript**](https://github.com/AvePoint/cloud-governance-client/tree/master/typescript)
 
 <br/><br/>
 ## About Cloud Governance 

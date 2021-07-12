@@ -33,7 +33,7 @@ namespace NetFramework
                     ServiceId = request.ServiceId,
                     SiteId = validationResult.SiteId,
                     SiteUrl = validationResult.SiteUrl,
-                    Department = request.Department,
+                    //Department = request.Department,
                     Metadatas = request.Metadatas,
                     QuotaSize = data.ChangedQuotaSizeGB,
                     Summary = $"ChangeSiteQuota_{data.SiteUrl}"

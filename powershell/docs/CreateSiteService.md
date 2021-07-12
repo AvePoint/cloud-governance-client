@@ -24,15 +24,15 @@ Name | Type | Description | Notes
 **YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] 
 **Classifications** | **String[]** |  | [optional] 
 **Sensitivities** | **String[]** |  | [optional] 
-**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) |  | [optional] 
+**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site settings model | [optional] 
 **EnabledCustomTemplate** | **Boolean** |  | [optional] [default to $false]
 **CustomSiteTemplateListURL** | **String** |  | [optional] 
-**DefaultPrimaryAdmin** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryAdmin** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **DefaultAdditionalAdmins** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**DefaultPrimaryAdminReal** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryAdminReal** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **DefaultAdditionalAdminsReal** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**DefaultPrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **DefaultSiteLanguage** | **Int32** |  | [optional] [default to 0]
 **DefaultRootSite** | **String** |  | [optional] 
 **DefaultManagedPath** | **String** |  | [optional] 
@@ -57,18 +57,14 @@ Name | Type | Description | Notes
 **SensitivityAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **RequestTemplate** | [**CreateSiteRequest**](CreateSiteRequest.md) | Create collection requesst model | [optional] 
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
-**Departments** | **String[]** |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
@@ -135,16 +131,12 @@ $CreateSiteService = New-Cloud.Governance.ClientCreateSiteService  -ScopeSetting
  -SensitivityAssignBy null `
  -HubSiteAssignBy null `
  -RequestTemplate null `
- -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `
  -Name null `
  -Description null `
  -Type null `
- -Department null `
- -LoadDepartmentFromUps null `
- -Departments null `
  -ServiceContact null `
  -ServiceAdminContact null `
  -ApproversContainManagerRole null `

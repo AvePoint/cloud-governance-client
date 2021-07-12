@@ -416,9 +416,9 @@ namespace Cloud.Governance.Client.Api
         /// get service id by service name
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <returns>Guid</returns>
-        Guid GetServiceId(string name = default(string));
+        Guid GetServiceId(string name);
 
         /// <summary>
         /// get service id by service name
@@ -427,9 +427,9 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <returns>ApiResponse of Guid</returns>
-        ApiResponse<Guid> GetServiceIdWithHttpInfo(string name = default(string));
+        ApiResponse<Guid> GetServiceIdWithHttpInfo(string name);
         /// <summary>
         /// get site lifecycle service
         /// </summary>
@@ -475,9 +475,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <returns>ObjectValidateResult</returns>
-        ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email = default(string));
+        ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email);
 
         /// <summary>
         /// validate guest user email
@@ -487,9 +487,9 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <returns>ApiResponse of ObjectValidateResult</returns>
-        ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email = default(string));
+        ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email);
         /// <summary>
         /// validate permissions, scope for change group setting service
         /// </summary>
@@ -1342,10 +1342,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Guid</returns>
-        System.Threading.Tasks.Task<Guid> GetServiceIdAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Guid> GetServiceIdAsync(string name, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get service id by service name
@@ -1354,10 +1354,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Guid)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Guid>> GetServiceIdWithHttpInfoAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Guid>> GetServiceIdWithHttpInfoAsync(string name, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get site lifecycle service
         /// </summary>
@@ -1416,10 +1416,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectValidateResult</returns>
-        System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// validate guest user email
@@ -1429,10 +1429,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectValidateResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// validate permissions, scope for change group setting service
         /// </summary>
@@ -4780,9 +4780,9 @@ namespace Cloud.Governance.Client.Api
         /// get service id by service name 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <returns>Guid</returns>
-        public Guid GetServiceId(string name = default(string))
+        public Guid GetServiceId(string name)
         {
             Cloud.Governance.Client.Client.ApiResponse<Guid> localVarResponse = GetServiceIdWithHttpInfo(name);
             return localVarResponse.Data;
@@ -4792,10 +4792,14 @@ namespace Cloud.Governance.Client.Api
         /// get service id by service name 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <returns>ApiResponse of Guid</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Guid> GetServiceIdWithHttpInfo(string name = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<Guid> GetServiceIdWithHttpInfo(string name)
         {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling ServicesApi->GetServiceId");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -4813,10 +4817,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (name != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "name", name));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "name", name));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -4845,10 +4846,10 @@ namespace Cloud.Governance.Client.Api
         /// get service id by service name 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of Guid</returns>
-        public async System.Threading.Tasks.Task<Guid> GetServiceIdAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Guid> GetServiceIdAsync(string name, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Cloud.Governance.Client.Client.ApiResponse<Guid> localVarResponse = await GetServiceIdWithHttpInfoAsync(name, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4858,11 +4859,15 @@ namespace Cloud.Governance.Client.Api
         /// get service id by service name 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">service name, case insensitive (optional)</param>
+        /// <param name="name">service name, case insensitive</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Guid)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Guid>> GetServiceIdWithHttpInfoAsync(string name = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Guid>> GetServiceIdWithHttpInfoAsync(string name, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'name' when calling ServicesApi->GetServiceId");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4882,10 +4887,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (name != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "name", name));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "name", name));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -5198,9 +5200,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <returns>ObjectValidateResult</returns>
-        public ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email = default(string))
+        public ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email)
         {
             Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = ValidateEmailForCreateGuestUserServiceWithHttpInfo(id, email);
             return localVarResponse.Data;
@@ -5211,10 +5213,14 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <returns>ApiResponse of ObjectValidateResult</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email)
         {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'email' when calling ServicesApi->ValidateEmailForCreateGuestUserService");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -5233,10 +5239,7 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (email != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -5266,10 +5269,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectValidateResult</returns>
-        public async System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = await ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(id, email, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5280,11 +5283,15 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="email"> (optional)</param>
+        /// <param name="email"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectValidateResult)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'email' is set
+            if (email == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'email' when calling ServicesApi->ValidateEmailForCreateGuestUserService");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5305,10 +5312,7 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            if (email != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))

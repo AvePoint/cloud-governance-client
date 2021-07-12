@@ -34,6 +34,11 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "serviceType", EmitDefaultValue = false)]
         public ServiceType? ServiceType { get; set; }
         /// <summary>
+        /// Gets or Sets RequestProgressStatus
+        /// </summary>
+        [DataMember(Name = "requestProgressStatus", EmitDefaultValue = false)]
+        public RequestProgressStatus? RequestProgressStatus { get; set; }
+        /// <summary>
         /// Gets or Sets TaskType
         /// </summary>
         [DataMember(Name = "taskType", EmitDefaultValue = false)]
@@ -47,6 +52,7 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="TaskReport" /> class.
         /// </summary>
         /// <param name="id">id.</param>
+        /// <param name="requestId">requestId.</param>
         /// <param name="title">title.</param>
         /// <param name="requester">requester.</param>
         /// <param name="requesterLoginName">requesterLoginName.</param>
@@ -57,6 +63,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceType">serviceType.</param>
         /// <param name="serviceTypeDescription">serviceTypeDescription.</param>
         /// <param name="createdTime">createdTime.</param>
+        /// <param name="taskLastModifiedTime">taskLastModifiedTime.</param>
+        /// <param name="requestLastModifiedTime">requestLastModifiedTime.</param>
+        /// <param name="requestProgressStatus">requestProgressStatus.</param>
         /// <param name="taskType">taskType.</param>
         /// <param name="status">status.</param>
         /// <param name="statusDescription">statusDescription.</param>
@@ -64,9 +73,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="assignee">assignee.</param>
         /// <param name="assigneeLoginName">assigneeLoginName.</param>
         /// <param name="assigneeDisplayName">assigneeDisplayName.</param>
-        public TaskReport(Guid id = default(Guid), string title = default(string), string requester = default(string), string requesterLoginName = default(string), string requesterDisplayName = default(string), int requestTicketNumber = 0, DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string), bool isApproveTask = false, string assignee = default(string), string assigneeLoginName = default(string), string assigneeDisplayName = default(string))
+        public TaskReport(Guid id = default(Guid), Guid requestId = default(Guid), string title = default(string), string requester = default(string), string requesterLoginName = default(string), string requesterDisplayName = default(string), int requestTicketNumber = 0, DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), DateTime taskLastModifiedTime = default(DateTime), DateTime? requestLastModifiedTime = default(DateTime?), RequestProgressStatus? requestProgressStatus = default(RequestProgressStatus?), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string), bool isApproveTask = false, string assignee = default(string), string assigneeLoginName = default(string), string assigneeDisplayName = default(string))
         {
             this.Id = id;
+            this.RequestId = requestId;
             this.Title = title;
             this.Requester = requester;
             this.RequesterLoginName = requesterLoginName;
@@ -77,6 +87,9 @@ namespace Cloud.Governance.Client.Model
             this.ServiceType = serviceType;
             this.ServiceTypeDescription = serviceTypeDescription;
             this.CreatedTime = createdTime;
+            this.TaskLastModifiedTime = taskLastModifiedTime;
+            this.RequestLastModifiedTime = requestLastModifiedTime;
+            this.RequestProgressStatus = requestProgressStatus;
             this.TaskType = taskType;
             this.Status = status;
             this.StatusDescription = statusDescription;
@@ -91,6 +104,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public Guid Id { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestId
+        /// </summary>
+        [DataMember(Name = "requestId", EmitDefaultValue = false)]
+        public Guid RequestId { get; set; }
 
         /// <summary>
         /// Gets or Sets Title
@@ -141,6 +160,18 @@ namespace Cloud.Governance.Client.Model
         public DateTime CreatedTime { get; set; }
 
         /// <summary>
+        /// Gets or Sets TaskLastModifiedTime
+        /// </summary>
+        [DataMember(Name = "taskLastModifiedTime", EmitDefaultValue = false)]
+        public DateTime TaskLastModifiedTime { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RequestLastModifiedTime
+        /// </summary>
+        [DataMember(Name = "requestLastModifiedTime", EmitDefaultValue = true)]
+        public DateTime? RequestLastModifiedTime { get; set; }
+
+        /// <summary>
         /// Gets or Sets StatusDescription
         /// </summary>
         [DataMember(Name = "statusDescription", EmitDefaultValue = true)]
@@ -179,6 +210,7 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class TaskReport {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Requester: ").Append(Requester).Append("\n");
             sb.Append("  RequesterLoginName: ").Append(RequesterLoginName).Append("\n");
@@ -189,6 +221,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ServiceType: ").Append(ServiceType).Append("\n");
             sb.Append("  ServiceTypeDescription: ").Append(ServiceTypeDescription).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
+            sb.Append("  TaskLastModifiedTime: ").Append(TaskLastModifiedTime).Append("\n");
+            sb.Append("  RequestLastModifiedTime: ").Append(RequestLastModifiedTime).Append("\n");
+            sb.Append("  RequestProgressStatus: ").Append(RequestProgressStatus).Append("\n");
             sb.Append("  TaskType: ").Append(TaskType).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StatusDescription: ").Append(StatusDescription).Append("\n");
@@ -234,6 +269,11 @@ namespace Cloud.Governance.Client.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.RequestId == input.RequestId ||
+                    (this.RequestId != null &&
+                    this.RequestId.Equals(input.RequestId))
                 ) && 
                 (
                     this.Title == input.Title ||
@@ -283,6 +323,20 @@ namespace Cloud.Governance.Client.Model
                     this.CreatedTime.Equals(input.CreatedTime))
                 ) && 
                 (
+                    this.TaskLastModifiedTime == input.TaskLastModifiedTime ||
+                    (this.TaskLastModifiedTime != null &&
+                    this.TaskLastModifiedTime.Equals(input.TaskLastModifiedTime))
+                ) && 
+                (
+                    this.RequestLastModifiedTime == input.RequestLastModifiedTime ||
+                    (this.RequestLastModifiedTime != null &&
+                    this.RequestLastModifiedTime.Equals(input.RequestLastModifiedTime))
+                ) && 
+                (
+                    this.RequestProgressStatus == input.RequestProgressStatus ||
+                    this.RequestProgressStatus.Equals(input.RequestProgressStatus)
+                ) && 
+                (
                     this.TaskType == input.TaskType ||
                     this.TaskType.Equals(input.TaskType)
                 ) && 
@@ -327,6 +381,8 @@ namespace Cloud.Governance.Client.Model
                 int hashCode = 41;
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.RequestId != null)
+                    hashCode = hashCode * 59 + this.RequestId.GetHashCode();
                 if (this.Title != null)
                     hashCode = hashCode * 59 + this.Title.GetHashCode();
                 if (this.Requester != null)
@@ -344,6 +400,11 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.ServiceTypeDescription.GetHashCode();
                 if (this.CreatedTime != null)
                     hashCode = hashCode * 59 + this.CreatedTime.GetHashCode();
+                if (this.TaskLastModifiedTime != null)
+                    hashCode = hashCode * 59 + this.TaskLastModifiedTime.GetHashCode();
+                if (this.RequestLastModifiedTime != null)
+                    hashCode = hashCode * 59 + this.RequestLastModifiedTime.GetHashCode();
+                hashCode = hashCode * 59 + this.RequestProgressStatus.GetHashCode();
                 hashCode = hashCode * 59 + this.TaskType.GetHashCode();
                 hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.StatusDescription != null)

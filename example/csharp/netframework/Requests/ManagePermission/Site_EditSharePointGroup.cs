@@ -23,7 +23,7 @@ namespace NetFramework
 
                 request.Summary = $"Api_Sample_ManagePermission_EditSharePoint_Request_{DateTime.Now}";
                 request.ObjectUrl = data.ObjectUrl;
-                request.Department = data.Department;
+                ////request.Department = data.Department;
                 request.SpGroupManagement = new List<SPGroupManagementModel>();
                 request.PermissionManagement = new PermissionManagementModel()
                 {

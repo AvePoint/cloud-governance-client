@@ -18,20 +18,14 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum ExternalSharingOptions
     {
-        [EnumMember(Value = "0")]
         Disabled = 0,
 
-        [EnumMember(Value = "1")]
         VerifiedGuestUser = 1,
 
-        [EnumMember(Value = "2")]
         Anyone = 2,
 
-        [EnumMember(Value = "3")]
         ExistingGuestUser = 3
 
     }

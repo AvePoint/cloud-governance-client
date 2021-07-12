@@ -679,18 +679,36 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> EditUnLockSiteRequestWithHttpInfo(Guid id, UnlockSiteRequest unlockSiteRequest = default(UnlockSiteRequest));
         /// <summary>
+        /// get all batch tasks by id
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>List&lt;ApiTask&gt;</returns>
+        List<ApiTask> GetBatchTasksById(Guid id);
+
+        /// <summary>
+        /// get all batch tasks by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of List&lt;ApiTask&gt;</returns>
+        ApiResponse<List<ApiTask>> GetBatchTasksByIdWithHttpInfo(Guid id);
+        /// <summary>
         /// get my tasks
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
         /// <param name="search">Search for title (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <returns>TaskListPageResult</returns>
-        TaskListPageResult GetMyTasks(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
+        TaskListPageResult GetMyTasks(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
 
         /// <summary>
         /// get my tasks
@@ -699,17 +717,17 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
         /// <param name="search">Search for title (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <returns>ApiResponse of TaskListPageResult</returns>
-        ApiResponse<TaskListPageResult> GetMyTasksWithHttpInfo(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
+        ApiResponse<TaskListPageResult> GetMyTasksWithHttpInfo(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
         /// <summary>
-        /// get task by batch id
+        /// get my task by batch id
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchid"></param>
@@ -717,7 +735,7 @@ namespace Cloud.Governance.Client.Api
         TaskList GetTaskByBatchId(Guid batchid);
 
         /// <summary>
-        /// get task by batch id
+        /// get my task by batch id
         /// </summary>
         /// <remarks>
         /// 
@@ -1659,22 +1677,45 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> EditUnLockSiteRequestWithHttpInfoAsync(Guid id, UnlockSiteRequest unlockSiteRequest = default(UnlockSiteRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// get all batch tasks by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;ApiTask&gt;</returns>
+        System.Threading.Tasks.Task<List<ApiTask>> GetBatchTasksByIdAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get all batch tasks by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;ApiTask&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<ApiTask>>> GetBatchTasksByIdWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// get my tasks
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
         /// <param name="search">Search for title (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaskListPageResult</returns>
-        System.Threading.Tasks.Task<TaskListPageResult> GetMyTasksAsync(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaskListPageResult> GetMyTasksAsync(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get my tasks
@@ -1683,18 +1724,18 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
         /// <param name="search">Search for title (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaskListPageResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TaskListPageResult>> GetMyTasksWithHttpInfoAsync(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TaskListPageResult>> GetMyTasksWithHttpInfoAsync(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// get task by batch id
+        /// get my task by batch id
         /// </summary>
         /// <remarks>
         /// 
@@ -1706,7 +1747,7 @@ namespace Cloud.Governance.Client.Api
         System.Threading.Tasks.Task<TaskList> GetTaskByBatchIdAsync(Guid batchid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// get task by batch id
+        /// get my task by batch id
         /// </summary>
         /// <remarks>
         /// 
@@ -6349,36 +6390,24 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get my tasks 
+        /// get all batch tasks by id 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="search">Search for title (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
-        /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
-        /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>TaskListPageResult</returns>
-        public TaskListPageResult GetMyTasks(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        /// <param name="id"></param>
+        /// <returns>List&lt;ApiTask&gt;</returns>
+        public List<ApiTask> GetBatchTasksById(Guid id)
         {
-            Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult> localVarResponse = GetMyTasksWithHttpInfo(isconfirmtask, filter, orderby, search, top, skip, nexttoken);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> localVarResponse = GetBatchTasksByIdWithHttpInfo(id);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// get my tasks 
+        /// get all batch tasks by id 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="search">Search for title (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
-        /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
-        /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>ApiResponse of TaskListPageResult</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult> GetMyTasksWithHttpInfo(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of List&lt;ApiTask&gt;</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> GetBatchTasksByIdWithHttpInfo(Guid id)
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -6397,10 +6426,148 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (isconfirmtask != null)
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
             {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isconfirmtask", isconfirmtask));
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
             }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<ApiTask>>("/tasks/{id}/batchTasks", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetBatchTasksById", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get all batch tasks by id 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;ApiTask&gt;</returns>
+        public async System.Threading.Tasks.Task<List<ApiTask>> GetBatchTasksByIdAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> localVarResponse = await GetBatchTasksByIdWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get all batch tasks by id 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;ApiTask&gt;)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>>> GetBatchTasksByIdWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<ApiTask>>("/tasks/{id}/batchTasks", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetBatchTasksById", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get my tasks 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="search">Search for title (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
+        /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
+        /// <returns>TaskListPageResult</returns>
+        public TaskListPageResult GetMyTasks(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult> localVarResponse = GetMyTasksWithHttpInfo(taskApprovalStatus, filter, orderby, search, top, skip, nexttoken);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get my tasks 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="search">Search for title (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
+        /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
+        /// <returns>ApiResponse of TaskListPageResult</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult> GetMyTasksWithHttpInfo(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "taskApprovalStatus", taskApprovalStatus));
             if (filter != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
@@ -6438,7 +6605,7 @@ namespace Cloud.Governance.Client.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<TaskListPageResult>("/tasks/my", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<TaskListPageResult>("/tasks/my/v2", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -6453,18 +6620,18 @@ namespace Cloud.Governance.Client.Api
         /// get my tasks 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
         /// <param name="search">Search for title (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TaskListPageResult</returns>
-        public async System.Threading.Tasks.Task<TaskListPageResult> GetMyTasksAsync(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TaskListPageResult> GetMyTasksAsync(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult> localVarResponse = await GetMyTasksWithHttpInfoAsync(isconfirmtask, filter, orderby, search, top, skip, nexttoken, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult> localVarResponse = await GetMyTasksWithHttpInfoAsync(taskApprovalStatus, filter, orderby, search, top, skip, nexttoken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6472,16 +6639,16 @@ namespace Cloud.Governance.Client.Api
         /// get my tasks 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="isconfirmtask"> (optional, default to false)</param>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestTicketNumber, requesterDisplayName, dueDate, serviceType, createdTime, taskType, status (optional)</param>
+        /// <param name="taskApprovalStatus"></param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)</param>
         /// <param name="search">Search for title (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TaskListPageResult)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult>> GetMyTasksWithHttpInfoAsync(bool? isconfirmtask = default(bool?), string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<TaskListPageResult>> GetMyTasksWithHttpInfoAsync(TaskApprovalStatus taskApprovalStatus, string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -6502,10 +6669,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (isconfirmtask != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isconfirmtask", isconfirmtask));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "taskApprovalStatus", taskApprovalStatus));
             if (filter != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
@@ -6544,7 +6708,7 @@ namespace Cloud.Governance.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<TaskListPageResult>("/tasks/my", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<TaskListPageResult>("/tasks/my/v2", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -6556,7 +6720,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get task by batch id 
+        /// get my task by batch id 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchid"></param>
@@ -6568,7 +6732,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get task by batch id 
+        /// get my task by batch id 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchid"></param>
@@ -6618,7 +6782,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get task by batch id 
+        /// get my task by batch id 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchid"></param>
@@ -6631,7 +6795,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get task by batch id 
+        /// get my task by batch id 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batchid"></param>

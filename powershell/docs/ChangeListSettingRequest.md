@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **VersionSetting** | [**ListVersionSettingsChangedProperty**](ListVersionSettingsChangedProperty.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -40,7 +39,6 @@ $ChangeListSettingRequest = New-Cloud.Governance.ClientChangeListSettingRequest 
  -VersionSetting null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

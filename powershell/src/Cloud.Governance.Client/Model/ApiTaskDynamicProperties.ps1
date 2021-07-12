@@ -75,7 +75,16 @@ function New-ApiTaskDynamicProperties {
         ${GroupOwnersStr},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${TenantId}
+        ${TenantId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${Approver},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${ApprovalHistory},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${CurrentTaskAction}
     )
 
     Process {
@@ -106,6 +115,9 @@ function New-ApiTaskDynamicProperties {
             "IsYammer" = ${IsYammer}
             "GroupOwnersStr" = ${GroupOwnersStr}
             "TenantId" = ${TenantId}
+            "Approver" = ${Approver}
+            "ApprovalHistory" = ${ApprovalHistory}
+            "CurrentTaskAction" = ${CurrentTaskAction}
         }
 
         return $PSO
@@ -128,7 +140,7 @@ function ConvertFrom-JsonToApiTaskDynamicProperties {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApiTaskDynamicProperties
-        $AllProperties = $("None", "PrimaryContact", "SecondaryContact", "SiteId", "SiteUrl", "GroupName", "ExpirationDate", "GroupOwners", "AutoTaskActionHistories", "InactivityThresholdDate", "GroupEmail", "GroupId", "PolicyName", "PrimaryAdministrator", "SiteTemplate", "SiteTitle", "SiteDescription", "Requester", "IsTeam", "IsYammer", "GroupOwnersStr", "TenantId")
+        $AllProperties = $("None", "PrimaryContact", "SecondaryContact", "SiteId", "SiteUrl", "GroupName", "ExpirationDate", "GroupOwners", "AutoTaskActionHistories", "InactivityThresholdDate", "GroupEmail", "GroupId", "PolicyName", "PrimaryAdministrator", "SiteTemplate", "SiteTitle", "SiteDescription", "Requester", "IsTeam", "IsYammer", "GroupOwnersStr", "TenantId", "Approver", "ApprovalHistory", "CurrentTaskAction")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -267,6 +279,24 @@ function ConvertFrom-JsonToApiTaskDynamicProperties {
             $TenantId = $JsonParameters.PSobject.Properties["TenantId"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Approver"))) { #optional property not found
+            $Approver = $null
+        } else {
+            $Approver = $JsonParameters.PSobject.Properties["Approver"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApprovalHistory"))) { #optional property not found
+            $ApprovalHistory = $null
+        } else {
+            $ApprovalHistory = $JsonParameters.PSobject.Properties["ApprovalHistory"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CurrentTaskAction"))) { #optional property not found
+            $CurrentTaskAction = $null
+        } else {
+            $CurrentTaskAction = $JsonParameters.PSobject.Properties["CurrentTaskAction"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "None" = ${None}
             "PrimaryContact" = ${PrimaryContact}
@@ -290,6 +320,9 @@ function ConvertFrom-JsonToApiTaskDynamicProperties {
             "IsYammer" = ${IsYammer}
             "GroupOwnersStr" = ${GroupOwnersStr}
             "TenantId" = ${TenantId}
+            "Approver" = ${Approver}
+            "ApprovalHistory" = ${ApprovalHistory}
+            "CurrentTaskAction" = ${CurrentTaskAction}
         }
 
         return $PSO

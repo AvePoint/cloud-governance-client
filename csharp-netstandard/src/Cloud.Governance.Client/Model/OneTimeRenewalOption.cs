@@ -18,14 +18,10 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum OneTimeRenewalOption
     {
-        [EnumMember(Value = "0")]
         NoMore = 0,
 
-        [EnumMember(Value = "1")]
         Specific = 1
 
     }

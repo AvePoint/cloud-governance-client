@@ -101,6 +101,9 @@ function New-UserInfo {
         [PSCustomObject]
         ${PrincipalType} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${Inviter},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${Id} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -156,6 +159,7 @@ function New-UserInfo {
             "IsValidateByProfile" = ${IsValidateByProfile}
             "ProxyAddresses" = ${ProxyAddresses}
             "PrincipalType" = ${PrincipalType}
+            "Inviter" = ${Inviter}
             "Id" = ${Id}
             "DisplayName" = ${DisplayName}
             "Title" = ${Title}
@@ -184,7 +188,7 @@ function ConvertFrom-JsonToUserInfo {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UserInfo
-        $AllProperties = $("IdentityName", "UserDisplayName", "DomainGroup", "Department", "MobilePhone", "Manager", "Permission", "IsDeleted", "SecurityToken", "UserType", "AzureUserType", "LegalPerson", "AuthenticationType", "AdminCenterUrl", "InviteType", "Type", "IsRegisteredAosGroup", "IsExternalUser", "IsAPIExceptional", "TenantId", "ObjectId", "Version", "JobTitle", "UsageLocation", "PhysicalDeliveryOfficeName", "IsOtherTenantUser", "NetworkId", "IsValidateByProfile", "ProxyAddresses", "PrincipalType", "Id", "DisplayName", "Title", "Email", "IsValid", "ExistInAOS")
+        $AllProperties = $("IdentityName", "UserDisplayName", "DomainGroup", "Department", "MobilePhone", "Manager", "Permission", "IsDeleted", "SecurityToken", "UserType", "AzureUserType", "LegalPerson", "AuthenticationType", "AdminCenterUrl", "InviteType", "Type", "IsRegisteredAosGroup", "IsExternalUser", "IsAPIExceptional", "TenantId", "ObjectId", "Version", "JobTitle", "UsageLocation", "PhysicalDeliveryOfficeName", "IsOtherTenantUser", "NetworkId", "IsValidateByProfile", "ProxyAddresses", "PrincipalType", "Inviter", "Id", "DisplayName", "Title", "Email", "IsValid", "ExistInAOS")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -371,6 +375,12 @@ function ConvertFrom-JsonToUserInfo {
             $PrincipalType = $JsonParameters.PSobject.Properties["PrincipalType"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Inviter"))) { #optional property not found
+            $Inviter = $null
+        } else {
+            $Inviter = $JsonParameters.PSobject.Properties["Inviter"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
             $Id = $null
         } else {
@@ -438,6 +448,7 @@ function ConvertFrom-JsonToUserInfo {
             "IsValidateByProfile" = ${IsValidateByProfile}
             "ProxyAddresses" = ${ProxyAddresses}
             "PrincipalType" = ${PrincipalType}
+            "Inviter" = ${Inviter}
             "Id" = ${Id}
             "DisplayName" = ${DisplayName}
             "Title" = ${Title}

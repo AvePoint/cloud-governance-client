@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// GeoLocationBase
+    /// Geo location base model
     /// </summary>
     [DataContract(Name = "GeoLocationBase")]
     public partial class GeoLocationBase : IEquatable<GeoLocationBase>, IValidatableObject
@@ -26,8 +26,8 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GeoLocationBase" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="displayName">displayName.</param>
+        /// <param name="name">Geo location name.</param>
+        /// <param name="displayName">Geo location display name.</param>
         public GeoLocationBase(string name = default(string), string displayName = default(string))
         {
             this.Name = name;
@@ -35,14 +35,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Geo location name
         /// </summary>
+        /// <value>Geo location name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// Geo location display name
         /// </summary>
+        /// <value>Geo location display name</value>
         [DataMember(Name = "displayName", EmitDefaultValue = true)]
         public string DisplayName { get; set; }
 

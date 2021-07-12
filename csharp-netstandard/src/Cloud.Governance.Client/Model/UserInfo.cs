@@ -76,13 +76,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isValidateByProfile">isValidateByProfile (default to false).</param>
         /// <param name="proxyAddresses">proxyAddresses.</param>
         /// <param name="principalType">principalType.</param>
+        /// <param name="inviter">inviter.</param>
         /// <param name="id">id (default to 0).</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="title">title.</param>
         /// <param name="email">email.</param>
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="existInAOS">existInAOS (default to false).</param>
-        public UserInfo(string identityName = default(string), string userDisplayName = default(string), bool domainGroup = false, string department = default(string), string mobilePhone = default(string), string manager = default(string), string permission = default(string), bool isDeleted = false, string securityToken = default(string), int userType = 0, string azureUserType = default(string), bool legalPerson = false, AuthenticationType? authenticationType = default(AuthenticationType?), string adminCenterUrl = default(string), InviteType? inviteType = default(InviteType?), string type = default(string), bool isRegisteredAosGroup = false, ExternalUserType? isExternalUser = default(ExternalUserType?), bool isAPIExceptional = false, string tenantId = default(string), string objectId = default(string), int version = 0, string jobTitle = default(string), string usageLocation = default(string), string physicalDeliveryOfficeName = default(string), bool isOtherTenantUser = false, string networkId = default(string), bool isValidateByProfile = false, List<string> proxyAddresses = default(List<string>), PrincipalType? principalType = default(PrincipalType?), int id = 0, string displayName = default(string), string title = default(string), string email = default(string), bool isValid = false, bool existInAOS = false)
+        public UserInfo(string identityName = default(string), string userDisplayName = default(string), bool domainGroup = false, string department = default(string), string mobilePhone = default(string), string manager = default(string), string permission = default(string), bool isDeleted = false, string securityToken = default(string), int userType = 0, string azureUserType = default(string), bool legalPerson = false, AuthenticationType? authenticationType = default(AuthenticationType?), string adminCenterUrl = default(string), InviteType? inviteType = default(InviteType?), string type = default(string), bool isRegisteredAosGroup = false, ExternalUserType? isExternalUser = default(ExternalUserType?), bool isAPIExceptional = false, string tenantId = default(string), string objectId = default(string), int version = 0, string jobTitle = default(string), string usageLocation = default(string), string physicalDeliveryOfficeName = default(string), bool isOtherTenantUser = false, string networkId = default(string), bool isValidateByProfile = false, List<string> proxyAddresses = default(List<string>), PrincipalType? principalType = default(PrincipalType?), string inviter = default(string), int id = 0, string displayName = default(string), string title = default(string), string email = default(string), bool isValid = false, bool existInAOS = false)
         {
             this.IdentityName = identityName;
             this.UserDisplayName = userDisplayName;
@@ -114,6 +115,7 @@ namespace Cloud.Governance.Client.Model
             this.IsValidateByProfile = isValidateByProfile;
             this.ProxyAddresses = proxyAddresses;
             this.PrincipalType = principalType;
+            this.Inviter = inviter;
             this.Id = id;
             this.DisplayName = displayName;
             this.Title = title;
@@ -279,6 +281,12 @@ namespace Cloud.Governance.Client.Model
         public List<string> ProxyAddresses { get; set; }
 
         /// <summary>
+        /// Gets or Sets Inviter
+        /// </summary>
+        [DataMember(Name = "inviter", EmitDefaultValue = true)]
+        public string Inviter { get; set; }
+
+        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
@@ -352,6 +360,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsValidateByProfile: ").Append(IsValidateByProfile).Append("\n");
             sb.Append("  ProxyAddresses: ").Append(ProxyAddresses).Append("\n");
             sb.Append("  PrincipalType: ").Append(PrincipalType).Append("\n");
+            sb.Append("  Inviter: ").Append(Inviter).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
@@ -531,6 +540,11 @@ namespace Cloud.Governance.Client.Model
                     this.PrincipalType.Equals(input.PrincipalType)
                 ) && 
                 (
+                    this.Inviter == input.Inviter ||
+                    (this.Inviter != null &&
+                    this.Inviter.Equals(input.Inviter))
+                ) && 
+                (
                     this.Id == input.Id ||
                     this.Id.Equals(input.Id)
                 ) && 
@@ -615,6 +629,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.ProxyAddresses != null)
                     hashCode = hashCode * 59 + this.ProxyAddresses.GetHashCode();
                 hashCode = hashCode * 59 + this.PrincipalType.GetHashCode();
+                if (this.Inviter != null)
+                    hashCode = hashCode * 59 + this.Inviter.GetHashCode();
                 hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.DisplayName != null)
                     hashCode = hashCode * 59 + this.DisplayName.GetHashCode();

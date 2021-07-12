@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteId** | **String** |  | [optional] 
 **SiteUrl** | **String** |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **AdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 

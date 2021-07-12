@@ -3,13 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | **String** |  | [optional] 
-**GroupName** | **String** |  | [optional] [readonly] 
-**GroupEmail** | **String** |  | [optional] [readonly] 
-**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
+**GroupId** | **String** | Object ID | [optional] 
+**GroupName** | **String** | Group name | [optional] [readonly] 
+**GroupEmail** | **String** | Group e-mail address | [optional] [readonly] 
+**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) | Group type | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -38,7 +37,6 @@ $RestoreGroupRequest = New-Cloud.Governance.ClientRestoreGroupRequest  -GroupId 
  -GroupObjectType null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

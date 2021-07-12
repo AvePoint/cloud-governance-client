@@ -30,7 +30,10 @@ function New-GuestUserPropertyModel {
         ${JobTitle},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${JobDepartment}
+        ${JobDepartment},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${Manager}
     )
 
     Process {
@@ -46,6 +49,7 @@ function New-GuestUserPropertyModel {
             "UsageLocation" = ${UsageLocation}
             "JobTitle" = ${JobTitle}
             "JobDepartment" = ${JobDepartment}
+            "Manager" = ${Manager}
         }
 
         return $PSO
@@ -68,7 +72,7 @@ function ConvertFrom-JsonToGuestUserPropertyModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in GuestUserPropertyModel
-        $AllProperties = $("DisplayName", "FirstName", "LastName", "UserName", "UsageLocation", "JobTitle", "JobDepartment")
+        $AllProperties = $("DisplayName", "FirstName", "LastName", "UserName", "UsageLocation", "JobTitle", "JobDepartment", "Manager")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -117,6 +121,12 @@ function ConvertFrom-JsonToGuestUserPropertyModel {
             $JobDepartment = $JsonParameters.PSobject.Properties["JobDepartment"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Manager"))) { #optional property not found
+            $Manager = $null
+        } else {
+            $Manager = $JsonParameters.PSobject.Properties["Manager"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "DisplayName" = ${DisplayName}
             "FirstName" = ${FirstName}
@@ -125,6 +135,7 @@ function ConvertFrom-JsonToGuestUserPropertyModel {
             "UsageLocation" = ${UsageLocation}
             "JobTitle" = ${JobTitle}
             "JobDepartment" = ${JobDepartment}
+            "Manager" = ${Manager}
         }
 
         return $PSO

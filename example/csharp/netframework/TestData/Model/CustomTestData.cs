@@ -9,7 +9,7 @@ namespace NetFramework
     {
         public String ServiceName { get; set; }
         public List<RequestMetadata> Metadata { get; set; }
-        public String Department { get; set; }
+        
 
         #region Metadata Name
         public String ChoiceMetadataName { get; set; }

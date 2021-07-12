@@ -18,14 +18,15 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// ManagePermissionRequest
+    /// Manage permission request model
     /// </summary>
     [DataContract(Name = "ManagePermissionRequest")]
     public partial class ManagePermissionRequest : IEquatable<ManagePermissionRequest>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets ObjectType
+        /// Object type
         /// </summary>
+        /// <value>Object type</value>
         [DataMember(Name = "objectType", EmitDefaultValue = false)]
         public NodeType? ObjectType { get; set; }
         /// <summary>
@@ -61,21 +62,20 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagePermissionRequest" /> class.
         /// </summary>
-        /// <param name="objectUrl">objectUrl.</param>
-        /// <param name="objectType">objectType.</param>
-        /// <param name="objectTitle">objectTitle.</param>
-        /// <param name="siteUrl">siteUrl.</param>
-        /// <param name="webUrl">webUrl.</param>
-        /// <param name="spGroupManagement">spGroupManagement.</param>
-        /// <param name="permissionManagement">permissionManagement.</param>
+        /// <param name="objectUrl">Object URL.</param>
+        /// <param name="objectType">Object type.</param>
+        /// <param name="objectTitle">Object name.</param>
+        /// <param name="siteUrl">Site collection URL.</param>
+        /// <param name="webUrl">Site URL.</param>
+        /// <param name="spGroupManagement">SharePoint group management settings.</param>
+        /// <param name="permissionManagement">Permission management settings.</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
-        /// <param name="department">Department of requester..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ManagePermissionRequest(string objectUrl = default(string), NodeType? objectType = default(NodeType?), string objectTitle = default(string), string siteUrl = default(string), string webUrl = default(string), List<SPGroupManagementModel> spGroupManagement = default(List<SPGroupManagementModel>), PermissionManagementModel permissionManagement = default(PermissionManagementModel), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ManagePermissionRequest(string objectUrl = default(string), NodeType? objectType = default(NodeType?), string objectTitle = default(string), string siteUrl = default(string), string webUrl = default(string), List<SPGroupManagementModel> spGroupManagement = default(List<SPGroupManagementModel>), PermissionManagementModel permissionManagement = default(PermissionManagementModel), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.ObjectUrl = objectUrl;
             this.ObjectType = objectType;
@@ -86,7 +86,6 @@ namespace Cloud.Governance.Client.Model
             this.PermissionManagement = permissionManagement;
             this.Id = id;
             this.ServiceId = serviceId;
-            this.Department = department;
             this.Summary = summary;
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
@@ -94,38 +93,44 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets ObjectUrl
+        /// Object URL
         /// </summary>
+        /// <value>Object URL</value>
         [DataMember(Name = "objectUrl", EmitDefaultValue = true)]
         public string ObjectUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets ObjectTitle
+        /// Object name
         /// </summary>
+        /// <value>Object name</value>
         [DataMember(Name = "objectTitle", EmitDefaultValue = true)]
         public string ObjectTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets SiteUrl
+        /// Site collection URL
         /// </summary>
+        /// <value>Site collection URL</value>
         [DataMember(Name = "siteUrl", EmitDefaultValue = true)]
         public string SiteUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets WebUrl
+        /// Site URL
         /// </summary>
+        /// <value>Site URL</value>
         [DataMember(Name = "webUrl", EmitDefaultValue = true)]
         public string WebUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets SpGroupManagement
+        /// SharePoint group management settings
         /// </summary>
+        /// <value>SharePoint group management settings</value>
         [DataMember(Name = "spGroupManagement", EmitDefaultValue = true)]
         public List<SPGroupManagementModel> SpGroupManagement { get; set; }
 
         /// <summary>
-        /// Gets or Sets PermissionManagement
+        /// Permission management settings
         /// </summary>
+        /// <value>Permission management settings</value>
         [DataMember(Name = "permissionManagement", EmitDefaultValue = true)]
         public PermissionManagementModel PermissionManagement { get; set; }
 
@@ -142,13 +147,6 @@ namespace Cloud.Governance.Client.Model
         /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
-
-        /// <summary>
-        /// Department of requester.
-        /// </summary>
-        /// <value>Department of requester.</value>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
 
         /// <summary>
         /// Summary of request.
@@ -371,7 +369,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PermissionManagement: ").Append(PermissionManagement).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  NotesToApprovers: ").Append(NotesToApprovers).Append("\n");
             sb.Append("  QuestionnaireId: ").Append(QuestionnaireId).Append("\n");
@@ -467,11 +464,6 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceId == input.ServiceId ||
                     (this.ServiceId != null &&
                     this.ServiceId.Equals(input.ServiceId))
-                ) && 
-                (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
                 ) && 
                 (
                     this.Summary == input.Summary ||
@@ -584,8 +576,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)
                     hashCode = hashCode * 59 + this.ServiceId.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
                 if (this.NotesToApprovers != null)

@@ -38,7 +38,7 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="isEnabled">isEnabled (default to false).</param>
         /// <param name="controlMode">controlMode.</param>
-        /// <param name="defaultLocation">defaultLocation.</param>
+        /// <param name="defaultLocation">Geo location base model.</param>
         /// <param name="selectedLocations">selectedLocations.</param>
         /// <param name="locationAssignBy">locationAssignBy.</param>
         /// <param name="userRoleForLocation">userRoleForLocation.</param>
@@ -61,8 +61,9 @@ namespace Cloud.Governance.Client.Model
         public bool IsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets DefaultLocation
+        /// Geo location base model
         /// </summary>
+        /// <value>Geo location base model</value>
         [DataMember(Name = "defaultLocation", EmitDefaultValue = true)]
         public GeoLocationBase DefaultLocation { get; set; }
 

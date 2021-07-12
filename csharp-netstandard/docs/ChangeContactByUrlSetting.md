@@ -5,12 +5,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteId** | **Guid** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
-**OriginalPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**NewPrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**OriginalSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**NewSecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**OriginalPrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**NewPrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**OriginalPrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**NewPrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**OriginalSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**NewSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**OriginalPrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**NewPrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **OriginalAdditionalAdministrators** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **NewAdditionalAdministrators** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 

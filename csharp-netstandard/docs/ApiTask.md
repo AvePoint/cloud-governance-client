@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **TaskType** | **TaskType** |  | [optional] 
 **AllowReassign** | **bool** |  | [optional] [default to false]
 **AllowEdit** | **bool** |  | [optional] [default to false]
+**RequestTicketNumber** | **int** |  | [optional] [default to 0]
 **DynamicActions** | [**List&lt;TaskDynamicActions&gt;**](TaskDynamicActions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

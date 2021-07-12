@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
 **AllowReassign** | **Boolean** |  | [optional] [default to $false]
 **AllowEdit** | **Boolean** |  | [optional] [default to $false]
+**RequestTicketNumber** | **Int32** |  | [optional] [default to 0]
 **DynamicActions** | [**TaskDynamicActions[]**](TaskDynamicActions.md) |  | [optional] 
 
 ## Examples
@@ -41,6 +42,7 @@ $ApiTask = New-Cloud.Governance.ClientApiTask  -DynamicProperties null `
  -TaskType null `
  -AllowReassign null `
  -AllowEdit null `
+ -RequestTicketNumber null `
  -DynamicActions null
 ```
 

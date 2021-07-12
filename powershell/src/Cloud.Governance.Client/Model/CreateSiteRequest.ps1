@@ -84,9 +84,6 @@ function New-CreateSiteRequest {
         ${ServiceId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -141,7 +138,6 @@ function New-CreateSiteRequest {
             "InputTitle" = ${InputTitle}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
@@ -168,7 +164,7 @@ function ConvertFrom-JsonToCreateSiteRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateSiteRequest
-        $AllProperties = $("SiteTitle", "SiteDescription", "SiteUrl", "PolicyId", "TimeZone", "Language", "Template", "DeploymentManagerPlanName", "PrimaryAdmin", "AdditionalAdmins", "PrimaryContact", "SecondaryContact", "SiteDesign", "TeamSiteDesign", "Classification", "HubSiteSettings", "UserPermissions", "GroupPermissions", "YammerGroupSettings", "LeasePeriodSettings", "MultiGeoLocation", "InputTitle", "Id", "ServiceId", "Department", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("SiteTitle", "SiteDescription", "SiteUrl", "PolicyId", "TimeZone", "Language", "Template", "DeploymentManagerPlanName", "PrimaryAdmin", "AdditionalAdmins", "PrimaryContact", "SecondaryContact", "SiteDesign", "TeamSiteDesign", "Classification", "HubSiteSettings", "UserPermissions", "GroupPermissions", "YammerGroupSettings", "LeasePeriodSettings", "MultiGeoLocation", "InputTitle", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -319,12 +315,6 @@ function ConvertFrom-JsonToCreateSiteRequest {
             $ServiceId = $JsonParameters.PSobject.Properties["ServiceId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
-        }
-
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Summary"))) { #optional property not found
             $Summary = $null
         } else {
@@ -452,7 +442,6 @@ function ConvertFrom-JsonToCreateSiteRequest {
             "InputTitle" = ${InputTitle}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}

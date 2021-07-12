@@ -727,7 +727,7 @@ function Search-ACGUsers {
 <#
 .SYNOPSIS
 
-No summary available.
+add users or update user information
 
 .DESCRIPTION
 

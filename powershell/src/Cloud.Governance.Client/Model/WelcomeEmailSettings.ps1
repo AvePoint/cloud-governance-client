@@ -18,7 +18,16 @@ function New-WelcomeEmailSettings {
         ${Subject},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${PersonalMessage}
+        ${PersonalMessage},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnabledSendEmailInService} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${WelcomeEmailTemplateId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsWelcomeEmailTemplate} = $false
     )
 
     Process {
@@ -30,6 +39,9 @@ function New-WelcomeEmailSettings {
             "Enabled" = ${Enabled}
             "Subject" = ${Subject}
             "PersonalMessage" = ${PersonalMessage}
+            "EnabledSendEmailInService" = ${EnabledSendEmailInService}
+            "WelcomeEmailTemplateId" = ${WelcomeEmailTemplateId}
+            "IsWelcomeEmailTemplate" = ${IsWelcomeEmailTemplate}
         }
 
         return $PSO
@@ -52,7 +64,7 @@ function ConvertFrom-JsonToWelcomeEmailSettings {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WelcomeEmailSettings
-        $AllProperties = $("Enabled", "Subject", "PersonalMessage")
+        $AllProperties = $("Enabled", "Subject", "PersonalMessage", "EnabledSendEmailInService", "WelcomeEmailTemplateId", "IsWelcomeEmailTemplate")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -77,10 +89,31 @@ function ConvertFrom-JsonToWelcomeEmailSettings {
             $PersonalMessage = $JsonParameters.PSobject.Properties["PersonalMessage"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnabledSendEmailInService"))) { #optional property not found
+            $EnabledSendEmailInService = $null
+        } else {
+            $EnabledSendEmailInService = $JsonParameters.PSobject.Properties["EnabledSendEmailInService"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WelcomeEmailTemplateId"))) { #optional property not found
+            $WelcomeEmailTemplateId = $null
+        } else {
+            $WelcomeEmailTemplateId = $JsonParameters.PSobject.Properties["WelcomeEmailTemplateId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsWelcomeEmailTemplate"))) { #optional property not found
+            $IsWelcomeEmailTemplate = $null
+        } else {
+            $IsWelcomeEmailTemplate = $JsonParameters.PSobject.Properties["IsWelcomeEmailTemplate"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Enabled" = ${Enabled}
             "Subject" = ${Subject}
             "PersonalMessage" = ${PersonalMessage}
+            "EnabledSendEmailInService" = ${EnabledSendEmailInService}
+            "WelcomeEmailTemplateId" = ${WelcomeEmailTemplateId}
+            "IsWelcomeEmailTemplate" = ${IsWelcomeEmailTemplate}
         }
 
         return $PSO

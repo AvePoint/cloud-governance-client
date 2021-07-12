@@ -1,21 +1,21 @@
 # Cloud.Governance.Client.Model.ChangeGroupPolicyRequest
+Change group policy request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] [readonly] 
-**IsLeaseEnabled** | **bool** |  | [optional] [default to false]
-**ChangePolicyConfig** | **AssignBy** |  | [optional] 
-**StartDateType** | **StartDateType** |  | [optional] 
-**SpecifyStartDate** | **DateTime?** |  | [optional] 
-**GroupId** | **Guid** |  | [optional] 
-**GroupName** | **string** |  | [optional] [readonly] 
-**GroupEmail** | **string** |  | [optional] [readonly] 
-**GroupObjectType** | **GroupObjectType** |  | [optional] 
+**Policy** | [**GuidModel**](GuidModel.md) | The new policy information settings | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original policy information settings | [optional] [readonly] 
+**IsLeaseEnabled** | **bool** | Whether to enable the group/team lease extension. | [optional] [default to false]
+**ChangePolicyConfig** | **AssignBy** | Set how to assign the group policy. | [optional] 
+**StartDateType** | **StartDateType** | Group lease start date configuration after a policy change | [optional] 
+**SpecifyStartDate** | **DateTime?** | New lease start date | [optional] 
+**GroupId** | **Guid** | Object ID | [optional] 
+**GroupName** | **string** | Group name | [optional] [readonly] 
+**GroupEmail** | **string** | Group e-mail address | [optional] [readonly] 
+**GroupObjectType** | **GroupObjectType** | Group type | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

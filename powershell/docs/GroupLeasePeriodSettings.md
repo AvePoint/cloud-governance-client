@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsEnabled** | **Boolean** |  | [optional] [default to $false]
-**LeaseType** | [**GroupLeasePeriodType**](GroupLeasePeriodType.md) |  | [optional] 
-**DurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**DurationInterval** | **Int32** |  | [optional] [default to 0]
-**LeaseExpirationDate** | **System.DateTime** |  | [optional] 
+**IsEnabled** | **Boolean** | Whether group extend lease is enabled after expiration | [optional] [default to $false]
+**LeaseType** | [**GroupLeasePeriodType**](GroupLeasePeriodType.md) | Group lease period extension type | [optional] 
+**DurationType** | [**ApiDurationType**](ApiDurationType.md) | Duration type of the group lease period | [optional] 
+**DurationInterval** | **Int32** | Group lease period | [optional] [default to 0]
+**LeaseExpirationDate** | **System.DateTime** | Group lease expiration date and time | [optional] 
 
 ## Examples
 

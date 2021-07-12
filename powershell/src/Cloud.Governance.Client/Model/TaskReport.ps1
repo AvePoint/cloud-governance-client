@@ -15,6 +15,9 @@ function New-TaskReport {
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${RequestId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${Title},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -43,6 +46,15 @@ function New-TaskReport {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
         ${CreatedTime},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[System.DateTime]]
+        ${TaskLastModifiedTime},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[System.DateTime]]
+        ${RequestLastModifiedTime},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${RequestProgressStatus} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${TaskType} = "ApprovalTask",
@@ -73,6 +85,7 @@ function New-TaskReport {
         
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
+            "RequestId" = ${RequestId}
             "Title" = ${Title}
             "Requester" = ${Requester}
             "RequesterLoginName" = ${RequesterLoginName}
@@ -83,6 +96,9 @@ function New-TaskReport {
             "ServiceType" = ${ServiceType}
             "ServiceTypeDescription" = ${ServiceTypeDescription}
             "CreatedTime" = ${CreatedTime}
+            "TaskLastModifiedTime" = ${TaskLastModifiedTime}
+            "RequestLastModifiedTime" = ${RequestLastModifiedTime}
+            "RequestProgressStatus" = ${RequestProgressStatus}
             "TaskType" = ${TaskType}
             "Status" = ${Status}
             "StatusDescription" = ${StatusDescription}
@@ -112,7 +128,7 @@ function ConvertFrom-JsonToTaskReport {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in TaskReport
-        $AllProperties = $("Id", "Title", "Requester", "RequesterLoginName", "RequesterDisplayName", "RequestTicketNumber", "DueDate", "DueDateType", "ServiceType", "ServiceTypeDescription", "CreatedTime", "TaskType", "Status", "StatusDescription", "IsApproveTask", "Assignee", "AssigneeLoginName", "AssigneeDisplayName")
+        $AllProperties = $("Id", "RequestId", "Title", "Requester", "RequesterLoginName", "RequesterDisplayName", "RequestTicketNumber", "DueDate", "DueDateType", "ServiceType", "ServiceTypeDescription", "CreatedTime", "TaskLastModifiedTime", "RequestLastModifiedTime", "RequestProgressStatus", "TaskType", "Status", "StatusDescription", "IsApproveTask", "Assignee", "AssigneeLoginName", "AssigneeDisplayName")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -123,6 +139,12 @@ function ConvertFrom-JsonToTaskReport {
             $Id = $null
         } else {
             $Id = $JsonParameters.PSobject.Properties["Id"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "RequestId"))) { #optional property not found
+            $RequestId = $null
+        } else {
+            $RequestId = $JsonParameters.PSobject.Properties["RequestId"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Title"))) { #optional property not found
@@ -185,6 +207,24 @@ function ConvertFrom-JsonToTaskReport {
             $CreatedTime = $JsonParameters.PSobject.Properties["CreatedTime"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TaskLastModifiedTime"))) { #optional property not found
+            $TaskLastModifiedTime = $null
+        } else {
+            $TaskLastModifiedTime = $JsonParameters.PSobject.Properties["TaskLastModifiedTime"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "RequestLastModifiedTime"))) { #optional property not found
+            $RequestLastModifiedTime = $null
+        } else {
+            $RequestLastModifiedTime = $JsonParameters.PSobject.Properties["RequestLastModifiedTime"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "RequestProgressStatus"))) { #optional property not found
+            $RequestProgressStatus = $null
+        } else {
+            $RequestProgressStatus = $JsonParameters.PSobject.Properties["RequestProgressStatus"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "TaskType"))) { #optional property not found
             $TaskType = $null
         } else {
@@ -229,6 +269,7 @@ function ConvertFrom-JsonToTaskReport {
 
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
+            "RequestId" = ${RequestId}
             "Title" = ${Title}
             "Requester" = ${Requester}
             "RequesterLoginName" = ${RequesterLoginName}
@@ -239,6 +280,9 @@ function ConvertFrom-JsonToTaskReport {
             "ServiceType" = ${ServiceType}
             "ServiceTypeDescription" = ${ServiceTypeDescription}
             "CreatedTime" = ${CreatedTime}
+            "TaskLastModifiedTime" = ${TaskLastModifiedTime}
+            "RequestLastModifiedTime" = ${RequestLastModifiedTime}
+            "RequestProgressStatus" = ${RequestProgressStatus}
             "TaskType" = ${TaskType}
             "Status" = ${Status}
             "StatusDescription" = ${StatusDescription}

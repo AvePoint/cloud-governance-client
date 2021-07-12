@@ -33,8 +33,8 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="parentWebUrl">parentWebUrl.</param>
         /// <param name="parentSiteUrl">parentSiteUrl.</param>
-        /// <param name="sitePrimaryContact">sitePrimaryContact.</param>
-        /// <param name="siteSecondaryContact">siteSecondaryContact.</param>
+        /// <param name="sitePrimaryContact">ApiUser model.</param>
+        /// <param name="siteSecondaryContact">ApiUser model.</param>
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
@@ -62,14 +62,16 @@ namespace Cloud.Governance.Client.Model
         public string ParentSiteUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets SitePrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "sitePrimaryContact", EmitDefaultValue = true)]
         public ApiUser SitePrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SiteSecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "siteSecondaryContact", EmitDefaultValue = true)]
         public ApiUser SiteSecondaryContact { get; set; }
 

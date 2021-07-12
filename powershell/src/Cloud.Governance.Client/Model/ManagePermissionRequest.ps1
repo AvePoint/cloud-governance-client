@@ -39,9 +39,6 @@ function New-ManagePermissionRequest {
         ${ServiceId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -77,7 +74,6 @@ function New-ManagePermissionRequest {
             "PermissionManagement" = ${PermissionManagement}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
@@ -104,7 +100,7 @@ function ConvertFrom-JsonToManagePermissionRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ManagePermissionRequest
-        $AllProperties = $("ObjectUrl", "ObjectType", "ObjectTitle", "SiteUrl", "WebUrl", "SpGroupManagement", "PermissionManagement", "Id", "ServiceId", "Department", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("ObjectUrl", "ObjectType", "ObjectTitle", "SiteUrl", "WebUrl", "SpGroupManagement", "PermissionManagement", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -163,12 +159,6 @@ function ConvertFrom-JsonToManagePermissionRequest {
             $ServiceId = $null
         } else {
             $ServiceId = $JsonParameters.PSobject.Properties["ServiceId"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Summary"))) { #optional property not found
@@ -283,7 +273,6 @@ function ConvertFrom-JsonToManagePermissionRequest {
             "PermissionManagement" = ${PermissionManagement}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}

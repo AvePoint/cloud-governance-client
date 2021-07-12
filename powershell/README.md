@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 4.1.17
+- SDK version: 4.7.4
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -30,7 +30,7 @@ Class | Method | HTTP request | Description
 *MetadataAdminApi* | [**Get-SingleMetadataById**](docs/MetadataAdminApi.md#Get-SingleMetadataById) | **GET** /admin/metadata/{id} | Get metadata by id
 *Office365Api* | [**New-ACGSecurityGroup**](docs/Office365Api.md#new-acgsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
 *Office365Api* | [**Get-GroupAllMembersByGroupValue**](docs/Office365Api.md#Get-GroupAllMembersByGroupValue) | **GET** /office365/groups/allmembers | get group members by group email
-*Office365Api* | [**Get-ACGGroupMembers**](docs/Office365Api.md#get-acggroupmembers) | **GET** /office365/groups/{email}/members | get group members by group email
+*Office365Api* | [**Get-ACGGroupMembers**](docs/Office365Api.md#get-acggroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 *Office365Api* | [**Get-ACGGroupOwners**](docs/Office365Api.md#get-acggroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
 *Office365Api* | [**Get-HubSitesByUrl**](docs/Office365Api.md#Get-HubSitesByUrl) | **GET** /office365/hubsites | get all hubsites from site's tenant
 *Office365Api* | [**Get-OwnedTeams**](docs/Office365Api.md#Get-OwnedTeams) | **GET** /office365/teams/my | get all teams that owner is curernt user
@@ -43,6 +43,8 @@ Class | Method | HTTP request | Description
 *Office365Api* | [**Get-ACGSiteTemplates**](docs/Office365Api.md#get-acgsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
 *Office365Api* | [**Invoke-HasPermission**](docs/Office365Api.md#Invoke-HasPermission) | **GET** /office365/sites/haspermission | whether user has permission on the site
 *Office365Api* | [**Remove-ACGSecurityGroup**](docs/Office365Api.md#remove-acgsecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
+*Office365AdminApi* | [**Add-WebUserCustomAction**](docs/Office365AdminApi.md#Add-WebUserCustomAction) | **POST** /admin/office365/web/usercustomactions | add user custom actions, if exists, will update the existing one.
+*Office365AdminApi* | [**Invoke-DeleteWebUserCustomAction**](docs/Office365AdminApi.md#Invoke-DeleteWebUserCustomAction) | **DELETE** /admin/office365/web/usercustomactions | delete user custom actions by action name
 *Office365AdminApi* | [**Get-AzureAdCustomPropertyNames**](docs/Office365AdminApi.md#Get-AzureAdCustomPropertyNames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
 *Office365AdminApi* | [**Get-TenantIdByUrl**](docs/Office365AdminApi.md#Get-TenantIdByUrl) | **GET** /admin/office365/tenantid | get tenant ids by url
 *ReportAdminApi* | [**Invoke-GeTaskReport**](docs/ReportAdminApi.md#Invoke-GeTaskReport) | **GET** /admin/report/tasks | get all tasks report
@@ -82,6 +84,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Get-RequestById**](docs/RequestsApi.md#Get-RequestById) | **GET** /requests/{id} | get request by id
 *RequestsApi* | [**Get-RestoreGroupRequest**](docs/RequestsApi.md#Get-RestoreGroupRequest) | **GET** /requests/restoregroup/{id} | get restore group request
 *RequestsApi* | [**Get-SiteCollectionLifecycleRequest**](docs/RequestsApi.md#Get-SiteCollectionLifecycleRequest) | **GET** /requests/sitelifecycle/{id} | get site lifecycel request
+*RequestsApi* | [**Get-Tasks**](docs/RequestsApi.md#Get-Tasks) | **GET** /requests/{requestid}/tasks | get task by request id
 *RequestsApi* | [**Get-UnlockSiteRequest**](docs/RequestsApi.md#Get-UnlockSiteRequest) | **GET** /requests/unlocksite/{id} | get unlock site request
 *RequestsApi* | [**Invoke-IsUrlExistsInPendingRequests**](docs/RequestsApi.md#Invoke-IsUrlExistsInPendingRequests) | **GET** /requests/isUrlExistInPendingRequests | check url exists in pending requests.
 *RequestsApi* | [**Submit-ArchiveGroupRequest**](docs/RequestsApi.md#Submit-ArchiveGroupRequest) | **POST** /requests/archivegroup | submit archive group group request
@@ -195,8 +198,9 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**Edit-ManagePermissionRequest**](docs/TasksApi.md#Edit-ManagePermissionRequest) | **PUT** /tasks/{id}/managepermission | edit manage permission request
 *TasksApi* | [**Edit-RestoreGroupRequest**](docs/TasksApi.md#Edit-RestoreGroupRequest) | **PUT** /tasks/{id}/restoregroup | edit restore group request in task
 *TasksApi* | [**Edit-UnLockSiteRequest**](docs/TasksApi.md#Edit-UnLockSiteRequest) | **PUT** /tasks/{id}/unlocksite | edit unlock site request
-*TasksApi* | [**Get-MyTasks**](docs/TasksApi.md#Get-MyTasks) | **GET** /tasks/my | get my tasks
-*TasksApi* | [**Get-TaskByBatchId**](docs/TasksApi.md#Get-TaskByBatchId) | **GET** /tasks/my/{batchid} | get task by batch id
+*TasksApi* | [**Get-BatchTasksById**](docs/TasksApi.md#Get-BatchTasksById) | **GET** /tasks/{id}/batchTasks | get all batch tasks by id
+*TasksApi* | [**Get-MyTasks**](docs/TasksApi.md#Get-MyTasks) | **GET** /tasks/my/v2 | get my tasks
+*TasksApi* | [**Get-TaskByBatchId**](docs/TasksApi.md#Get-TaskByBatchId) | **GET** /tasks/my/{batchid} | get my task by batch id
 *TasksApi* | [**Get-TaskById**](docs/TasksApi.md#Get-TaskById) | **GET** /tasks/{id} | get task by id
 *TasksApi* | [**Invoke-ReassignTask**](docs/TasksApi.md#Invoke-ReassignTask) | **POST** /tasks/{id}/reassignto/{user} | reassign task
 *TasksApi* | [**Deny-Task**](docs/TasksApi.md#Deny-Task) | **POST** /tasks/{id}/reject | reject task
@@ -209,7 +213,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**Invoke-IsMemberOfGroup**](docs/UsersApi.md#Invoke-IsMemberOfGroup) | **GET** /users/{userprincipalname}/ismemberof/{groupid} | Is Member Of Group
 *UsersApi* | [**Resolve-ACGUsers**](docs/UsersApi.md#resolve-acgusers) | **GET** /users/resolve | resolve users
 *UsersApi* | [**Search-ACGUsers**](docs/UsersApi.md#search-acgusers) | **GET** /users/search | search users
-*UsersApi* | [**Update-UserInfo**](docs/UsersApi.md#Update-UserInfo) | **POST** /users | 
+*UsersApi* | [**Update-UserInfo**](docs/UsersApi.md#Update-UserInfo) | **POST** /users | add users or update user information
 *WorkspaceApi* | [**Get-GroupMetadata**](docs/WorkspaceApi.md#Get-GroupMetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
 *WorkspaceApi* | [**Get-MyGroupInformation**](docs/WorkspaceApi.md#Get-MyGroupInformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
 *WorkspaceApi* | [**Get-MySiteInformation**](docs/WorkspaceApi.md#Get-MySiteInformation) | **GET** /workspace/sites/{id} | get site information
@@ -382,6 +386,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ExternalSharingOptions](docs/ExternalSharingOptions.md)
  - [Cloud.Governance.Client\Model.ExternalUserSharingSettings](docs/ExternalUserSharingSettings.md)
  - [Cloud.Governance.Client\Model.ExternalUserSharingType](docs/ExternalUserSharingType.md)
+ - [Cloud.Governance.Client\Model.ExternalUserState](docs/ExternalUserState.md)
  - [Cloud.Governance.Client\Model.ExternalUserType](docs/ExternalUserType.md)
  - [Cloud.Governance.Client\Model.GeoLocationBase](docs/GeoLocationBase.md)
  - [Cloud.Governance.Client\Model.GeoLocationModel](docs/GeoLocationModel.md)
@@ -546,6 +551,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.StartDateType](docs/StartDateType.md)
  - [Cloud.Governance.Client\Model.StringChangedProperty](docs/StringChangedProperty.md)
  - [Cloud.Governance.Client\Model.StringModel](docs/StringModel.md)
+ - [Cloud.Governance.Client\Model.TaskApprovalStatus](docs/TaskApprovalStatus.md)
  - [Cloud.Governance.Client\Model.TaskComment](docs/TaskComment.md)
  - [Cloud.Governance.Client\Model.TaskDynamicActions](docs/TaskDynamicActions.md)
  - [Cloud.Governance.Client\Model.TaskList](docs/TaskList.md)
@@ -574,6 +580,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.UpdatableApiUser](docs/UpdatableApiUser.md)
  - [Cloud.Governance.Client\Model.UrlRandomStringSettings](docs/UrlRandomStringSettings.md)
  - [Cloud.Governance.Client\Model.UrlSequentialNumberingSettings](docs/UrlSequentialNumberingSettings.md)
+ - [Cloud.Governance.Client\Model.UserCustomAction](docs/UserCustomAction.md)
  - [Cloud.Governance.Client\Model.UserGroupPermissions](docs/UserGroupPermissions.md)
  - [Cloud.Governance.Client\Model.UserInfo](docs/UserInfo.md)
  - [Cloud.Governance.Client\Model.UserLevelControlMode](docs/UserLevelControlMode.md)

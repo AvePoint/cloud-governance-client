@@ -47,6 +47,9 @@ Name | Type | Description | Notes
 **ApplyPolicyStatus** | [**ApplyPolicyStatus**](ApplyPolicyStatus.md) |  | [optional] 
 **HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **HasOngoingTasksDescription** | **String** |  | [optional] 
+**LastRenewalBy** | **String** |  | [optional] 
+**LastRenewalByEmail** | **String** |  | [optional] 
+**LastRenewalByDisplayName** | **String** |  | [optional] 
 **PhaseAssigneeDisplayNames** | **String** |  | [optional] 
 **PhaseAssignees** | **String** |  | [optional] 
 **PhaseProfileName** | **String** |  | [optional] 
@@ -106,6 +109,9 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -ApplyPolicyStatus null `
  -HasOngoingTasks null `
  -HasOngoingTasksDescription null `
+ -LastRenewalBy null `
+ -LastRenewalByEmail null `
+ -LastRenewalByDisplayName null `
  -PhaseAssigneeDisplayNames null `
  -PhaseAssignees null `
  -PhaseProfileName null `

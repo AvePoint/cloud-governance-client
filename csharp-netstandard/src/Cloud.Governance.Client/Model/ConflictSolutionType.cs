@@ -18,32 +18,22 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum ConflictSolutionType
     {
-        [EnumMember(Value = "0")]
         Skip = 0,
 
-        [EnumMember(Value = "1")]
         NotOverWrite = 1,
 
-        [EnumMember(Value = "2")]
         Append = 2,
 
-        [EnumMember(Value = "3")]
         OverWrite = 3,
 
-        [EnumMember(Value = "4")]
         Replace = 4,
 
-        [EnumMember(Value = "5")]
         Merge = 5,
 
-        [EnumMember(Value = "6")]
         OverWritebyLastModifiedTime = 6,
 
-        [EnumMember(Value = "7")]
         None = 7
 
     }

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Urls** | **String[]** |  | [optional] 
-**SourceUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**TargetUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SourceUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**TargetUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **CloneOption** | [**ClonePermissionOption**](ClonePermissionOption.md) |  | [optional] 
 **AdditionalCloneOption** | [**ClonePermissionAdditionalOption**](ClonePermissionAdditionalOption.md) |  | [optional] 
 **EnabledRemoveExplicitPermission** | **Boolean** |  | [optional] [default to $false]
@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **EnabledDeleteUserPermission** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -46,7 +45,6 @@ $ClonePermissionRequest = New-Cloud.Governance.ClientClonePermissionRequest  -Ur
  -EnabledDeleteUserPermission null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

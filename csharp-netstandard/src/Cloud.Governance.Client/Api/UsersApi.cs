@@ -155,7 +155,7 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
         ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
         /// <summary>
-        /// 
+        /// add users or update user information
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatableApiUser"> (optional)</param>
@@ -163,7 +163,7 @@ namespace Cloud.Governance.Client.Api
         void UpdateUserInfo(UpdatableApiUser updatableApiUser = default(UpdatableApiUser));
 
         /// <summary>
-        /// 
+        /// add users or update user information
         /// </summary>
         /// <remarks>
         /// 
@@ -348,7 +348,7 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// 
+        /// add users or update user information
         /// </summary>
         /// <remarks>
         /// 
@@ -360,7 +360,7 @@ namespace Cloud.Governance.Client.Api
         System.Threading.Tasks.Task UpdateUserInfoAsync(UpdatableApiUser updatableApiUser = default(UpdatableApiUser), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// 
+        /// add users or update user information
         /// </summary>
         /// <remarks>
         /// 
@@ -1451,7 +1451,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// add users or update user information 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatableApiUser"> (optional)</param>
@@ -1462,7 +1462,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// add users or update user information 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatableApiUser"> (optional)</param>
@@ -1512,7 +1512,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// add users or update user information 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatableApiUser"> (optional)</param>
@@ -1524,7 +1524,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        ///  
+        /// add users or update user information 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="updatableApiUser"> (optional)</param>

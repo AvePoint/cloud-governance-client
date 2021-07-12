@@ -18,20 +18,14 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum WorkerObjectType
     {
-        [EnumMember(Value = "0")]
         GroupOrTeamOrYammer = 0,
 
-        [EnumMember(Value = "1")]
         Site = 1,
 
-        [EnumMember(Value = "2")]
         Web = 2,
 
-        [EnumMember(Value = "3")]
         GuestUser = 3
 
     }

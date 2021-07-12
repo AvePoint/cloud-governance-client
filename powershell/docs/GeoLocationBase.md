@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **String** |  | [optional] 
-**DisplayName** | **String** |  | [optional] 
+**Name** | **String** | Geo location name | [optional] 
+**DisplayName** | **String** | Geo location display name | [optional] 
 
 ## Examples
 

@@ -18,17 +18,12 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum UserLevelRestrictionType
     {
-        [EnumMember(Value = "0")]
         AnyUser = 0,
 
-        [EnumMember(Value = "1")]
         PeersAndDirectOrIndirectReport = 1,
 
-        [EnumMember(Value = "2")]
         DirectOrIndirectReports = 2
 
     }

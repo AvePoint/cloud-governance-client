@@ -227,7 +227,7 @@ function Get-GroupAllMembersByGroupValue {
 <#
 .SYNOPSIS
 
-get group members by group email
+get group members without owners by group email
 
 .DESCRIPTION
 
@@ -301,7 +301,7 @@ function Get-ACGGroupMembers {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/office365/groups/{email}/members'
+        $LocalVarUri = '/office365/groups/{email}/memberswithoutowner'
         if (!$Email) {
             throw "Error! The required parameter `Email` missing when calling getGroupMembers."
         }
@@ -535,9 +535,10 @@ function Get-HubSitesByUrl {
 
         $LocalVarUri = '/office365/hubsites'
 
-        if ($SiteUrl) {
-            $LocalVarQueryParameters['siteUrl'] = $SiteUrl
+        if (!$SiteUrl) {
+            throw "Error! The required parameter `SiteUrl` missing when calling getHubSitesByUrl."
         }
+        $LocalVarQueryParameters['siteUrl'] = $SiteUrl
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -918,9 +919,10 @@ function Get-ACGSiteDesigns {
 
         $LocalVarUri = '/office365/sitedesigns'
 
-        if ($SiteUrl) {
-            $LocalVarQueryParameters['siteUrl'] = $SiteUrl
+        if (!$SiteUrl) {
+            throw "Error! The required parameter `SiteUrl` missing when calling getSiteDesigns."
         }
+        $LocalVarQueryParameters['siteUrl'] = $SiteUrl
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -1249,10 +1251,10 @@ get site templates with language code identifier
 
 No description available.
 
-.PARAMETER Languageid
+.PARAMETER Url
 No description available.
 
-.PARAMETER Url
+.PARAMETER Languageid
 No description available.
 
 .PARAMETER ReturnType
@@ -1271,11 +1273,11 @@ function Get-ACGSiteTemplates {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [Int32]
-        ${Languageid},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${Url},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [Int32]
+        ${Languageid},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1311,9 +1313,10 @@ function Get-ACGSiteTemplates {
         }
         $LocalVarUri = $LocalVarUri.replace('{languageid}', $Languageid)
 
-        if ($Url) {
-            $LocalVarQueryParameters['url'] = $Url
+        if (!$Url) {
+            throw "Error! The required parameter `Url` missing when calling getSiteTemplates."
         }
+        $LocalVarQueryParameters['url'] = $Url
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -1412,13 +1415,15 @@ function Invoke-HasPermission {
 
         $LocalVarUri = '/office365/sites/haspermission'
 
-        if ($Siteurl) {
-            $LocalVarQueryParameters['siteurl'] = $Siteurl
+        if (!$Siteurl) {
+            throw "Error! The required parameter `Siteurl` missing when calling hasPermission."
         }
+        $LocalVarQueryParameters['siteurl'] = $Siteurl
 
-        if ($Currentuser) {
-            $LocalVarQueryParameters['currentuser'] = $Currentuser
+        if (!$Currentuser) {
+            throw "Error! The required parameter `Currentuser` missing when calling hasPermission."
         }
+        $LocalVarQueryParameters['currentuser'] = $Currentuser
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]

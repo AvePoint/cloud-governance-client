@@ -3,15 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupQuotaSize** | **Int64** |  | [optional] [default to 0]
-**OriginalQuotaSize** | **Int64** |  | [optional] [readonly] [default to 0]
-**GroupId** | **String** |  | [optional] 
-**GroupName** | **String** |  | [optional] [readonly] 
-**GroupEmail** | **String** |  | [optional] [readonly] 
-**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
+**GroupQuotaSize** | **Int64** | The new group team site quota size | [optional] [default to 0]
+**OriginalQuotaSize** | **Int64** | The original group team site quota size | [optional] [readonly] [default to 0]
+**GroupId** | **String** | Object ID | [optional] 
+**GroupName** | **String** | Group name | [optional] [readonly] 
+**GroupEmail** | **String** | Group e-mail address | [optional] [readonly] 
+**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) | Group type | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -42,7 +41,6 @@ $ChangeGroupQuotaRequest = New-Cloud.Governance.ClientChangeGroupQuotaRequest  -
  -GroupObjectType null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

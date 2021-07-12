@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
+**RequestId** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **Requester** | **String** |  | [optional] 
 **RequesterLoginName** | **String** |  | [optional] 
@@ -14,6 +15,9 @@ Name | Type | Description | Notes
 **ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **ServiceTypeDescription** | **String** |  | [optional] 
 **CreatedTime** | **System.DateTime** |  | [optional] 
+**TaskLastModifiedTime** | **System.DateTime** |  | [optional] 
+**RequestLastModifiedTime** | **System.DateTime** |  | [optional] 
+**RequestProgressStatus** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] 
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
 **Status** | [**TaskResult**](TaskResult.md) |  | [optional] 
 **StatusDescription** | **String** |  | [optional] 
@@ -27,6 +31,7 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $TaskReport = New-Cloud.Governance.ClientTaskReport  -Id null `
+ -RequestId null `
  -Title null `
  -Requester null `
  -RequesterLoginName null `
@@ -37,6 +42,9 @@ $TaskReport = New-Cloud.Governance.ClientTaskReport  -Id null `
  -ServiceType null `
  -ServiceTypeDescription null `
  -CreatedTime null `
+ -TaskLastModifiedTime null `
+ -RequestLastModifiedTime null `
+ -RequestProgressStatus null `
  -TaskType null `
  -Status null `
  -StatusDescription null `

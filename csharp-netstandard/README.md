@@ -83,7 +83,7 @@ Class | Method | HTTP request | Description
 *MetadataAdminApi* | [**GetSingleMetadataById**](docs/MetadataAdminApi.md#getsinglemetadatabyid) | **GET** /admin/metadata/{id} | Get metadata by id
 *Office365Api* | [**CreateSecurityGroup**](docs/Office365Api.md#createsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
 *Office365Api* | [**GetGroupAllMembersByGroupValue**](docs/Office365Api.md#getgroupallmembersbygroupvalue) | **GET** /office365/groups/allmembers | get group members by group email
-*Office365Api* | [**GetGroupMembers**](docs/Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/members | get group members by group email
+*Office365Api* | [**GetGroupMembers**](docs/Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 *Office365Api* | [**GetGroupOwners**](docs/Office365Api.md#getgroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
 *Office365Api* | [**GetHubSitesByUrl**](docs/Office365Api.md#gethubsitesbyurl) | **GET** /office365/hubsites | get all hubsites from site's tenant
 *Office365Api* | [**GetOwnedTeams**](docs/Office365Api.md#getownedteams) | **GET** /office365/teams/my | get all teams that owner is curernt user
@@ -96,6 +96,8 @@ Class | Method | HTTP request | Description
 *Office365Api* | [**GetSiteTemplates**](docs/Office365Api.md#getsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
 *Office365Api* | [**HasPermission**](docs/Office365Api.md#haspermission) | **GET** /office365/sites/haspermission | whether user has permission on the site
 *Office365Api* | [**RemoveSecurityGroup**](docs/Office365Api.md#removesecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
+*Office365AdminApi* | [**AddWebUserCustomAction**](docs/Office365AdminApi.md#addwebusercustomaction) | **POST** /admin/office365/web/usercustomactions | add user custom actions, if exists, will update the existing one.
+*Office365AdminApi* | [**DeleteWebUserCustomAction**](docs/Office365AdminApi.md#deletewebusercustomaction) | **DELETE** /admin/office365/web/usercustomactions | delete user custom actions by action name
 *Office365AdminApi* | [**GetAzureAdCustomPropertyNames**](docs/Office365AdminApi.md#getazureadcustompropertynames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
 *Office365AdminApi* | [**GetTenantIdByUrl**](docs/Office365AdminApi.md#gettenantidbyurl) | **GET** /admin/office365/tenantid | get tenant ids by url
 *ReportAdminApi* | [**GeTaskReport**](docs/ReportAdminApi.md#getaskreport) | **GET** /admin/report/tasks | get all tasks report
@@ -135,6 +137,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetRequestById**](docs/RequestsApi.md#getrequestbyid) | **GET** /requests/{id} | get request by id
 *RequestsApi* | [**GetRestoreGroupRequest**](docs/RequestsApi.md#getrestoregrouprequest) | **GET** /requests/restoregroup/{id} | get restore group request
 *RequestsApi* | [**GetSiteCollectionLifecycleRequest**](docs/RequestsApi.md#getsitecollectionlifecyclerequest) | **GET** /requests/sitelifecycle/{id} | get site lifecycel request
+*RequestsApi* | [**GetTasks**](docs/RequestsApi.md#gettasks) | **GET** /requests/{requestid}/tasks | get task by request id
 *RequestsApi* | [**GetUnlockSiteRequest**](docs/RequestsApi.md#getunlocksiterequest) | **GET** /requests/unlocksite/{id} | get unlock site request
 *RequestsApi* | [**IsUrlExistsInPendingRequests**](docs/RequestsApi.md#isurlexistsinpendingrequests) | **GET** /requests/isUrlExistInPendingRequests | check url exists in pending requests.
 *RequestsApi* | [**SubmitArchiveGroupRequest**](docs/RequestsApi.md#submitarchivegrouprequest) | **POST** /requests/archivegroup | submit archive group group request
@@ -248,8 +251,9 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**EditManagePermissionRequest**](docs/TasksApi.md#editmanagepermissionrequest) | **PUT** /tasks/{id}/managepermission | edit manage permission request
 *TasksApi* | [**EditRestoreGroupRequest**](docs/TasksApi.md#editrestoregrouprequest) | **PUT** /tasks/{id}/restoregroup | edit restore group request in task
 *TasksApi* | [**EditUnLockSiteRequest**](docs/TasksApi.md#editunlocksiterequest) | **PUT** /tasks/{id}/unlocksite | edit unlock site request
-*TasksApi* | [**GetMyTasks**](docs/TasksApi.md#getmytasks) | **GET** /tasks/my | get my tasks
-*TasksApi* | [**GetTaskByBatchId**](docs/TasksApi.md#gettaskbybatchid) | **GET** /tasks/my/{batchid} | get task by batch id
+*TasksApi* | [**GetBatchTasksById**](docs/TasksApi.md#getbatchtasksbyid) | **GET** /tasks/{id}/batchTasks | get all batch tasks by id
+*TasksApi* | [**GetMyTasks**](docs/TasksApi.md#getmytasks) | **GET** /tasks/my/v2 | get my tasks
+*TasksApi* | [**GetTaskByBatchId**](docs/TasksApi.md#gettaskbybatchid) | **GET** /tasks/my/{batchid} | get my task by batch id
 *TasksApi* | [**GetTaskById**](docs/TasksApi.md#gettaskbyid) | **GET** /tasks/{id} | get task by id
 *TasksApi* | [**ReassignTask**](docs/TasksApi.md#reassigntask) | **POST** /tasks/{id}/reassignto/{user} | reassign task
 *TasksApi* | [**RejectTask**](docs/TasksApi.md#rejecttask) | **POST** /tasks/{id}/reject | reject task
@@ -262,7 +266,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**IsMemberOfGroup**](docs/UsersApi.md#ismemberofgroup) | **GET** /users/{userprincipalname}/ismemberof/{groupid} | Is Member Of Group
 *UsersApi* | [**ResolveUsers**](docs/UsersApi.md#resolveusers) | **GET** /users/resolve | resolve users
 *UsersApi* | [**SearchUsers**](docs/UsersApi.md#searchusers) | **GET** /users/search | search users
-*UsersApi* | [**UpdateUserInfo**](docs/UsersApi.md#updateuserinfo) | **POST** /users | 
+*UsersApi* | [**UpdateUserInfo**](docs/UsersApi.md#updateuserinfo) | **POST** /users | add users or update user information
 *WorkspaceApi* | [**GetGroupMetadata**](docs/WorkspaceApi.md#getgroupmetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
 *WorkspaceApi* | [**GetMyGroupInformation**](docs/WorkspaceApi.md#getmygroupinformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
 *WorkspaceApi* | [**GetMySiteInformation**](docs/WorkspaceApi.md#getmysiteinformation) | **GET** /workspace/sites/{id} | get site information
@@ -436,6 +440,7 @@ Class | Method | HTTP request | Description
  - [Model.ExternalSharingOptions](docs/ExternalSharingOptions.md)
  - [Model.ExternalUserSharingSettings](docs/ExternalUserSharingSettings.md)
  - [Model.ExternalUserSharingType](docs/ExternalUserSharingType.md)
+ - [Model.ExternalUserState](docs/ExternalUserState.md)
  - [Model.ExternalUserType](docs/ExternalUserType.md)
  - [Model.GeoLocationBase](docs/GeoLocationBase.md)
  - [Model.GeoLocationModel](docs/GeoLocationModel.md)
@@ -600,6 +605,7 @@ Class | Method | HTTP request | Description
  - [Model.StartDateType](docs/StartDateType.md)
  - [Model.StringChangedProperty](docs/StringChangedProperty.md)
  - [Model.StringModel](docs/StringModel.md)
+ - [Model.TaskApprovalStatus](docs/TaskApprovalStatus.md)
  - [Model.TaskComment](docs/TaskComment.md)
  - [Model.TaskDynamicActions](docs/TaskDynamicActions.md)
  - [Model.TaskList](docs/TaskList.md)
@@ -628,6 +634,7 @@ Class | Method | HTTP request | Description
  - [Model.UpdatableApiUser](docs/UpdatableApiUser.md)
  - [Model.UrlRandomStringSettings](docs/UrlRandomStringSettings.md)
  - [Model.UrlSequentialNumberingSettings](docs/UrlSequentialNumberingSettings.md)
+ - [Model.UserCustomAction](docs/UserCustomAction.md)
  - [Model.UserGroupPermissions](docs/UserGroupPermissions.md)
  - [Model.UserInfo](docs/UserInfo.md)
  - [Model.UserLevelControlMode](docs/UserLevelControlMode.md)

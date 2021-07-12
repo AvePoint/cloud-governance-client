@@ -18,14 +18,10 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum ChangeContactMethod
     {
-        [EnumMember(Value = "0")]
         ChangeByUrl = 0,
 
-        [EnumMember(Value = "1")]
         ChangeByUser = 1
 
     }

@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **WelcomeEmailBody** | **string** |  | [optional] 
 **WelcomeEmailAssignBy** | **AssignBy** |  | [optional] 
 **AllowSpecifyTemporayPermissionDuration** | **bool** |  | [optional] [default to false]
+**WelcomeEmailTemplateId** | **Guid?** |  | [optional] 
+**IsWelcomeEmailTemplate** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

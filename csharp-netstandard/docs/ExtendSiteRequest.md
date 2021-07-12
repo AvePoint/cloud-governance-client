@@ -1,17 +1,17 @@
 # Cloud.Governance.Client.Model.ExtendSiteRequest
+Extend site collection request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtendDuration** | **int** |  | [optional] [default to 0]
-**ExtendDurationType** | **ApiDurationType** |  | [optional] 
-**Action** | **SiteLifecycleActionType** |  | [optional] 
-**ActionDescription** | **string** |  | [optional] [readonly] 
-**SiteId** | **Guid** |  | [optional] 
-**SiteUrl** | **string** |  | [optional] 
+**ExtendDuration** | **int** | Extend site collection lease duration | [optional] [default to 0]
+**ExtendDurationType** | **ApiDurationType** | Extend site collection lease duration type | [optional] 
+**Action** | **SiteLifecycleActionType** | Lifecycle management action type | [optional] 
+**ActionDescription** | **string** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**SiteId** | **Guid** | Site collection ID | [optional] 
+**SiteUrl** | **string** | Site collection URL | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

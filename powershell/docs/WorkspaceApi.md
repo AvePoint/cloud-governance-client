@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 <a name="Get-WorkspaceItems"></a>
 # **Get-WorkspaceItems**
 > WorkspaceListPageResult Get-WorkspaceItems<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
@@ -274,7 +274,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$VarFilter = "VarFilter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)
+$Filter = "Filter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)
 $Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy (optional)
 $Search = "Search_example" # String | Search for name (optional)
 $Top = 987 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
@@ -283,7 +283,7 @@ $Nexttoken = "Nexttoken_example" # String |  Use the next token to get the next 
 
 # get my workspace items
 try {
-     $Result = Get-WorkspaceItems -VarFilter $VarFilter -Orderby $Orderby -Search $Search -Top $Top -Skip $Skip -Nexttoken $Nexttoken
+     $Result = Get-WorkspaceItems -Filter $Filter -Orderby $Orderby -Search $Search -Top $Top -Skip $Skip -Nexttoken $Nexttoken
 } catch {
     Write-Host ("Exception occured when calling Get-WorkspaceItems: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -294,7 +294,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **VarFilter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy | [optional] 
  **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy | [optional] 
  **Search** | **String**| Search for name | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 

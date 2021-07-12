@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RootSiteUrl** | **String** |  | [optional] 
 **TenantAdminUrl** | **String** |  | [optional] 
-**Name** | **String** |  | [optional] 
-**DisplayName** | **String** |  | [optional] 
+**Name** | **String** | Geo location name | [optional] 
+**DisplayName** | **String** | Geo location display name | [optional] 
 
 ## Examples
 

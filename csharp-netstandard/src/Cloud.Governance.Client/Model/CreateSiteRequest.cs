@@ -76,16 +76,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupPermissions">Site collection SharePoint group setting.</param>
         /// <param name="yammerGroupSettings">Yammer group setting.</param>
         /// <param name="leasePeriodSettings">Lease period setting.</param>
-        /// <param name="multiGeoLocation">Multi-geo lication.</param>
+        /// <param name="multiGeoLocation">Multi-geo location.</param>
         /// <param name="inputTitle">Site collection title without prefix and sufix when service enables constructing title.</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
-        /// <param name="department">Department of requester..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = 0, int language = 0, string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = 0, int language = 0, string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SiteTitle = siteTitle;
             this.SiteDescription = siteDescription;
@@ -112,7 +111,6 @@ namespace Cloud.Governance.Client.Model
             this.InputTitle = inputTitle;
             this.Id = id;
             this.ServiceId = serviceId;
-            this.Department = department;
             this.Summary = summary;
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
@@ -260,9 +258,9 @@ namespace Cloud.Governance.Client.Model
         public SiteLeasePeriodRequestSettings LeasePeriodSettings { get; set; }
 
         /// <summary>
-        /// Multi-geo lication
+        /// Multi-geo location
         /// </summary>
-        /// <value>Multi-geo lication</value>
+        /// <value>Multi-geo location</value>
         [DataMember(Name = "multiGeoLocation", EmitDefaultValue = true)]
         public GeoLocationBase MultiGeoLocation { get; set; }
 
@@ -286,13 +284,6 @@ namespace Cloud.Governance.Client.Model
         /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
-
-        /// <summary>
-        /// Department of requester.
-        /// </summary>
-        /// <value>Department of requester.</value>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
 
         /// <summary>
         /// Summary of request.
@@ -530,7 +521,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  InputTitle: ").Append(InputTitle).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  NotesToApprovers: ").Append(NotesToApprovers).Append("\n");
             sb.Append("  QuestionnaireId: ").Append(QuestionnaireId).Append("\n");
@@ -705,11 +695,6 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceId.Equals(input.ServiceId))
                 ) && 
                 (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
-                ) && 
-                (
                     this.Summary == input.Summary ||
                     (this.Summary != null &&
                     this.Summary.Equals(input.Summary))
@@ -850,8 +835,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)
                     hashCode = hashCode * 59 + this.ServiceId.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
                 if (this.NotesToApprovers != null)

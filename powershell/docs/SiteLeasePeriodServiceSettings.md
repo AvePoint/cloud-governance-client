@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **LeaseEnabled** | **Boolean** |  | [optional] [default to $false]
 **LeaseWarningEnabled** | **Boolean** |  | [optional] [default to $false]
 **ApprovalProcessId** | **String** |  | [optional] 
-**LeaseInterval** | **Int32** |  | [optional] [default to 0]
-**LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**LeaseWarningInterval** | **Int32** |  | [optional] [default to 0]
-**LeaseWarningDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
+**LeaseInterval** | **Int32** | Site Collection lease period | [optional] [default to 0]
+**LeaseDurationType** | [**ApiDurationType**](ApiDurationType.md) | Duration type of the site collection lease period | [optional] 
+**LeaseWarningInterval** | **Int32** | Site collection lease expiration warning interval | [optional] [default to 0]
+**LeaseWarningDurationType** | [**ApiDurationType**](ApiDurationType.md) | Duration type of the site collection lease expiration warning interval | [optional] 
 
 ## Examples
 

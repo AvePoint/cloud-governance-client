@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// RequestUserWithPermissions
+    /// User permissions model in request
     /// </summary>
     [DataContract(Name = "RequestUserWithPermissions")]
     public partial class RequestUserWithPermissions : IEquatable<RequestUserWithPermissions>, IValidatableObject
@@ -26,8 +26,8 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestUserWithPermissions" /> class.
         /// </summary>
-        /// <param name="user">user.</param>
-        /// <param name="permissionLevels">permissionLevels.</param>
+        /// <param name="user">User information.</param>
+        /// <param name="permissionLevels">User permission levels&#39; information.</param>
         public RequestUserWithPermissions(ApiUser user = default(ApiUser), List<PermissionLevel> permissionLevels = default(List<PermissionLevel>))
         {
             this.User = user;
@@ -35,14 +35,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets User
+        /// User information
         /// </summary>
+        /// <value>User information</value>
         [DataMember(Name = "user", EmitDefaultValue = true)]
         public ApiUser User { get; set; }
 
         /// <summary>
-        /// Gets or Sets PermissionLevels
+        /// User permission levels&#39; information
         /// </summary>
+        /// <value>User permission levels&#39; information</value>
         [DataMember(Name = "permissionLevels", EmitDefaultValue = true)]
         public List<PermissionLevel> PermissionLevels { get; set; }
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Guid** |  | [optional] 
+**RequestId** | **Guid** |  | [optional] 
 **Title** | **string** |  | [optional] 
 **Requester** | **string** |  | [optional] 
 **RequesterLoginName** | **string** |  | [optional] 
@@ -14,6 +15,9 @@ Name | Type | Description | Notes
 **ServiceType** | **ServiceType** |  | [optional] 
 **ServiceTypeDescription** | **string** |  | [optional] 
 **CreatedTime** | **DateTime** |  | [optional] 
+**TaskLastModifiedTime** | **DateTime** |  | [optional] 
+**RequestLastModifiedTime** | **DateTime?** |  | [optional] 
+**RequestProgressStatus** | **RequestProgressStatus** |  | [optional] 
 **TaskType** | **TaskType** |  | [optional] 
 **Status** | **TaskResult** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 

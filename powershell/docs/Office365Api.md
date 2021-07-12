@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**New-ACGSecurityGroup**](Office365Api.md#new-acgsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
 [**Get-GroupAllMembersByGroupValue**](Office365Api.md#Get-GroupAllMembersByGroupValue) | **GET** /office365/groups/allmembers | get group members by group email
-[**Get-ACGGroupMembers**](Office365Api.md#get-acggroupmembers) | **GET** /office365/groups/{email}/members | get group members by group email
+[**Get-ACGGroupMembers**](Office365Api.md#get-acggroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 [**Get-ACGGroupOwners**](Office365Api.md#get-acggroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
 [**Get-HubSitesByUrl**](Office365Api.md#Get-HubSitesByUrl) | **GET** /office365/hubsites | get all hubsites from site&#39;s tenant
 [**Get-OwnedTeams**](Office365Api.md#Get-OwnedTeams) | **GET** /office365/teams/my | get all teams that owner is curernt user
@@ -47,7 +47,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$GroupSettingModel = (New-GroupSettingModel-GroupName "GroupName_example" -GroupDescription "GroupDescription_example" -GroupEmailAddress "GroupEmailAddress_example" -Owners "Owners_example" -Members "Members_example" -GroupDuration 123 -EmailSubject "EmailSubject_example" -EmailBody "EmailBody_example") # GroupSettingModel | GroupName,GroupEmailAddress,Owners,Members (optional)
+$GroupSettingModel = (Initialize-GroupSettingModel -GroupName "GroupName_example" -GroupDescription "GroupDescription_example" -GroupEmailAddress "GroupEmailAddress_example" -Owners "Owners_example" -Members "Members_example" -GroupDuration 123 -EmailSubject "EmailSubject_example" -EmailBody "EmailBody_example") # GroupSettingModel | GroupName,GroupEmailAddress,Owners,Members (optional)
 
 # Create mail-enabled security group
 try {
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
 
-get group members by group email
+get group members without owners by group email
 
 ### Example
 ```powershell
@@ -183,7 +183,7 @@ $Top = 987 # Int32 |  (optional) (default to 0)
 $Skip = 987 # Int32 |  (optional) (default to 0)
 $Search = "Search_example" # String |  (optional)
 
-# get group members by group email
+# get group members without owners by group email
 try {
      $Result = Get-ACGGroupMembers -Email $Email -Top $Top -Skip $Skip -Search $Search
 } catch {
@@ -309,7 +309,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$SiteUrl = "SiteUrl_example" # String | any site url in your tenant (optional)
+$SiteUrl = "SiteUrl_example" # String | any site url in your tenant
 
 # get all hubsites from site's tenant
 try {
@@ -324,7 +324,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **SiteUrl** | **String**| any site url in your tenant | [optional] 
+ **SiteUrl** | **String**| any site url in your tenant | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -480,7 +480,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Url = "Url_example" # String | 
-$Type = (New-NodeType) # NodeType | 
+$Type = (Initialize-NodeType ) # NodeType | 
 
 # get site permimssion role assignment
 try {
@@ -539,7 +539,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$SiteUrl = "SiteUrl_example" # String |  (optional)
+$SiteUrl = "SiteUrl_example" # String | 
 
 # get site designs by site url
 try {
@@ -554,7 +554,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **SiteUrl** | **String**|  | [optional] 
+ **SiteUrl** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -748,8 +748,8 @@ Name | Type | Description  | Notes
 <a name="get-acgsitetemplates"></a>
 # **Get-ACGSiteTemplates**
 > SiteTemplate[] Get-ACGSiteTemplates<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Languageid] <Int32><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Url] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Languageid] <Int32><br>
 
 get site templates with language code identifier
 
@@ -772,12 +772,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
+$Url = "Url_example" # String | 
 $Languageid = 987 # Int32 |  (default to 0)
-$Url = "Url_example" # String |  (optional)
 
 # get site templates with language code identifier
 try {
-     $Result = Get-ACGSiteTemplates -Languageid $Languageid -Url $Url
+     $Result = Get-ACGSiteTemplates -Url $Url -Languageid $Languageid
 } catch {
     Write-Host ("Exception occured when calling Get-ACGSiteTemplates: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -788,8 +788,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **Url** | **String**|  | 
  **Languageid** | **Int32**|  | [default to 0]
- **Url** | **String**|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -833,8 +833,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Siteurl = "Siteurl_example" # String |  (optional)
-$Currentuser = "Currentuser_example" # String |  (optional)
+$Siteurl = "Siteurl_example" # String | 
+$Currentuser = "Currentuser_example" # String | 
 
 # whether user has permission on the site
 try {
@@ -849,8 +849,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Siteurl** | **String**|  | [optional] 
- **Currentuser** | **String**|  | [optional] 
+ **Siteurl** | **String**|  | 
+ **Currentuser** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

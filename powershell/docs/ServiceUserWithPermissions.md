@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UserAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**User** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
+**User** | [**ApiUser**](ApiUser.md) | User information | [optional] 
+**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) | User permission levels&#39; information | [optional] 
 
 ## Examples
 

@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// SiteUrl
+    /// Site collection url model
     /// </summary>
     [DataContract(Name = "SiteUrl")]
     public partial class SiteUrl : IEquatable<SiteUrl>, IValidatableObject
@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SiteUrl" /> class.
         /// </summary>
-        /// <param name="root">root.</param>
-        /// <param name="managedPath">managedPath.</param>
-        /// <param name="name">name.</param>
+        /// <param name="root">Site collection root site url.</param>
+        /// <param name="managedPath">Managed path.</param>
+        /// <param name="name">Site collection name.</param>
         public SiteUrl(string root = default(string), string managedPath = default(string), string name = default(string))
         {
             this.Root = root;
@@ -37,20 +37,23 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Root
+        /// Site collection root site url
         /// </summary>
+        /// <value>Site collection root site url</value>
         [DataMember(Name = "root", EmitDefaultValue = true)]
         public string Root { get; set; }
 
         /// <summary>
-        /// Gets or Sets ManagedPath
+        /// Managed path
         /// </summary>
+        /// <value>Managed path</value>
         [DataMember(Name = "managedPath", EmitDefaultValue = true)]
         public string ManagedPath { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Site collection name
         /// </summary>
+        /// <value>Site collection name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 

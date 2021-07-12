@@ -18,26 +18,18 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum SPPrincipalType
     {
-        [EnumMember(Value = "0")]
         None = 0,
 
-        [EnumMember(Value = "1")]
         User = 1,
 
-        [EnumMember(Value = "2")]
         DistributionList = 2,
 
-        [EnumMember(Value = "4")]
         SecurityGroup = 4,
 
-        [EnumMember(Value = "8")]
         SharePointGroup = 8,
 
-        [EnumMember(Value = "15")]
         All = 15
 
     }

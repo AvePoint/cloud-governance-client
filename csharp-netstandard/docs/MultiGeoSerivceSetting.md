@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **AllLocations** | [**List&lt;GeoLocationModel&gt;**](GeoLocationModel.md) |  | [optional] 
 **IsEnabled** | **bool** |  | [optional] [default to false]
 **ControlMode** | **MultiGeoControlMode** |  | [optional] 
-**DefaultLocation** | [**GeoLocationBase**](GeoLocationBase.md) |  | [optional] 
+**DefaultLocation** | [**GeoLocationBase**](GeoLocationBase.md) | Geo location base model | [optional] 
 **SelectedLocations** | [**List&lt;GeoLocationBase&gt;**](GeoLocationBase.md) |  | [optional] 
 **LocationAssignBy** | **AssignBy** |  | [optional] 
 **UserRoleForLocation** | **string** |  | [optional] 

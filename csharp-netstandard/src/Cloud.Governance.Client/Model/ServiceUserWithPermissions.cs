@@ -32,8 +32,8 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ServiceUserWithPermissions" /> class.
         /// </summary>
         /// <param name="userAssignBy">userAssignBy.</param>
-        /// <param name="user">user.</param>
-        /// <param name="permissionLevels">permissionLevels.</param>
+        /// <param name="user">User information.</param>
+        /// <param name="permissionLevels">User permission levels&#39; information.</param>
         public ServiceUserWithPermissions(AssignBy? userAssignBy = default(AssignBy?), ApiUser user = default(ApiUser), List<PermissionLevel> permissionLevels = default(List<PermissionLevel>))
         {
             this.UserAssignBy = userAssignBy;
@@ -42,14 +42,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets User
+        /// User information
         /// </summary>
+        /// <value>User information</value>
         [DataMember(Name = "user", EmitDefaultValue = true)]
         public ApiUser User { get; set; }
 
         /// <summary>
-        /// Gets or Sets PermissionLevels
+        /// User permission levels&#39; information
         /// </summary>
+        /// <value>User permission levels&#39; information</value>
         [DataMember(Name = "permissionLevels", EmitDefaultValue = true)]
         public List<PermissionLevel> PermissionLevels { get; set; }
 

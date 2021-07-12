@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Guid** |  | [optional] 
-**AssignTo** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**AssignTo** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **Reason** | **string** |  | [optional] 
 **Status** | **int** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **string** |  | [optional] 

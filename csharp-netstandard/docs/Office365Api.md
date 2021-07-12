@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateSecurityGroup**](Office365Api.md#createsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
 [**GetGroupAllMembersByGroupValue**](Office365Api.md#getgroupallmembersbygroupvalue) | **GET** /office365/groups/allmembers | get group members by group email
-[**GetGroupMembers**](Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/members | get group members by group email
+[**GetGroupMembers**](Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 [**GetGroupOwners**](Office365Api.md#getgroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
 [**GetHubSitesByUrl**](Office365Api.md#gethubsitesbyurl) | **GET** /office365/hubsites | get all hubsites from site&#39;s tenant
 [**GetOwnedTeams**](Office365Api.md#getownedteams) | **GET** /office365/teams/my | get all teams that owner is curernt user
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 # **GetGroupMembers**
 > ApiUserPageResult GetGroupMembers (string email, int? top = null, int? skip = null, string search = null)
 
-get group members by group email
+get group members without owners by group email
 
 ### Example
 ```csharp
@@ -236,7 +236,7 @@ namespace Example
 
             try
             {
-                // get group members by group email
+                // get group members without owners by group email
                 ApiUserPageResult result = apiInstance.GetGroupMembers(email, top, skip, search);
                 Debug.WriteLine(result);
             }
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 
 <a name="gethubsitesbyurl"></a>
 # **GetHubSitesByUrl**
-> List&lt;GuidModel&gt; GetHubSitesByUrl (string siteUrl = null)
+> List&lt;GuidModel&gt; GetHubSitesByUrl (string siteUrl)
 
 get all hubsites from site's tenant
 
@@ -407,7 +407,7 @@ namespace Example
 
             var apiInstance = new Office365Api(config);
 
-            var siteUrl = siteUrl_example;  // string | any site url in your tenant (optional) 
+            var siteUrl = siteUrl_example;  // string | any site url in your tenant
 
             try
             {
@@ -430,7 +430,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **siteUrl** | **string**| any site url in your tenant | [optional] 
+ **siteUrl** | **string**| any site url in your tenant | 
 
 ### Return type
 
@@ -704,7 +704,7 @@ Name | Type | Description  | Notes
 
 <a name="getsitedesigns"></a>
 # **GetSiteDesigns**
-> List&lt;StringModel&gt; GetSiteDesigns (string siteUrl = null)
+> List&lt;StringModel&gt; GetSiteDesigns (string siteUrl)
 
 get site designs by site url
 
@@ -737,7 +737,7 @@ namespace Example
 
             var apiInstance = new Office365Api(config);
 
-            var siteUrl = siteUrl_example;  // string |  (optional) 
+            var siteUrl = siteUrl_example;  // string | 
 
             try
             {
@@ -760,7 +760,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **siteUrl** | **string**|  | [optional] 
+ **siteUrl** | **string**|  | 
 
 ### Return type
 
@@ -1036,7 +1036,7 @@ Name | Type | Description  | Notes
 
 <a name="getsitetemplates"></a>
 # **GetSiteTemplates**
-> List&lt;SiteTemplate&gt; GetSiteTemplates (int languageid, string url = null)
+> List&lt;SiteTemplate&gt; GetSiteTemplates (string url, int languageid)
 
 get site templates with language code identifier
 
@@ -1069,13 +1069,13 @@ namespace Example
 
             var apiInstance = new Office365Api(config);
 
+            var url = url_example;  // string | 
             var languageid = 56;  // int |  (default to 0)
-            var url = url_example;  // string |  (optional) 
 
             try
             {
                 // get site templates with language code identifier
-                List<SiteTemplate> result = apiInstance.GetSiteTemplates(languageid, url);
+                List<SiteTemplate> result = apiInstance.GetSiteTemplates(url, languageid);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1093,8 +1093,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **url** | **string**|  | 
  **languageid** | **int**|  | [default to 0]
- **url** | **string**|  | [optional] 
 
 ### Return type
 
@@ -1121,7 +1121,7 @@ Name | Type | Description  | Notes
 
 <a name="haspermission"></a>
 # **HasPermission**
-> bool HasPermission (string siteurl = null, string currentuser = null)
+> bool HasPermission (string siteurl, string currentuser)
 
 whether user has permission on the site
 
@@ -1154,8 +1154,8 @@ namespace Example
 
             var apiInstance = new Office365Api(config);
 
-            var siteurl = siteurl_example;  // string |  (optional) 
-            var currentuser = currentuser_example;  // string |  (optional) 
+            var siteurl = siteurl_example;  // string | 
+            var currentuser = currentuser_example;  // string | 
 
             try
             {
@@ -1178,8 +1178,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **siteurl** | **string**|  | [optional] 
- **currentuser** | **string**|  | [optional] 
+ **siteurl** | **string**|  | 
+ **currentuser** | **string**|  | 
 
 ### Return type
 

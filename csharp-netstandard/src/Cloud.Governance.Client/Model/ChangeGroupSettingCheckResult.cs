@@ -36,8 +36,8 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeGroupSettingCheckResult" /> class.
         /// </summary>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
+        /// <param name="primaryContact">ApiUser model.</param>
+        /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="groupId">groupId.</param>
         /// <param name="groupName">groupName.</param>
         /// <param name="groupEmail">groupEmail.</param>
@@ -95,14 +95,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 

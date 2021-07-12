@@ -18,14 +18,10 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum ClonePermissionAdditionalOption
     {
-        [EnumMember(Value = "0")]
         AddUserToTheSameGroup = 0,
 
-        [EnumMember(Value = "1")]
         GranPermissionDirectly = 1
 
     }

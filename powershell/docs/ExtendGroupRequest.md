@@ -3,15 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExtendDuration** | **Int32** |  | [optional] [default to 0]
-**ExtendDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
-**GroupId** | **String** |  | [optional] 
-**GroupName** | **String** |  | [optional] [readonly] 
-**GroupEmail** | **String** |  | [optional] [readonly] 
-**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
+**ExtendDuration** | **Int32** | Group lease extension duration | [optional] [default to 0]
+**ExtendDurationType** | [**ApiDurationType**](ApiDurationType.md) | Duration type | [optional] 
+**GroupId** | **String** | Object ID | [optional] 
+**GroupName** | **String** | Group name | [optional] [readonly] 
+**GroupEmail** | **String** | Group e-mail address | [optional] [readonly] 
+**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) | Group type | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -42,7 +41,6 @@ $ExtendGroupRequest = New-Cloud.Governance.ClientExtendGroupRequest  -ExtendDura
  -GroupObjectType null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

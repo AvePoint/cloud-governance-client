@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **GroupId** | **String** |  | [optional] 
 **GroupName** | **String** |  | [optional] 
 **GroupEmail** | **String** |  | [optional] 

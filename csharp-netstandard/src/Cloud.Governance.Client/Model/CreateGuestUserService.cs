@@ -34,15 +34,15 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "secondaryContactAssignBy", EmitDefaultValue = false)]
         public AssignBy? SecondaryContactAssignBy { get; set; }
         /// <summary>
+        /// Gets or Sets ManagerAssignBy
+        /// </summary>
+        [DataMember(Name = "managerAssignBy", EmitDefaultValue = false)]
+        public AssignBy? ManagerAssignBy { get; set; }
+        /// <summary>
         /// Gets or Sets OneTimeDurationType
         /// </summary>
         [DataMember(Name = "oneTimeDurationType", EmitDefaultValue = false)]
         public ApiDurationType? OneTimeDurationType { get; set; }
-        /// <summary>
-        /// Gets or Sets DepartmentAssignBy
-        /// </summary>
-        [DataMember(Name = "departmentAssignBy", EmitDefaultValue = false)]
-        public AssignBy? DepartmentAssignBy { get; set; }
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -59,26 +59,24 @@ namespace Cloud.Governance.Client.Model
         /// <param name="tenantId">tenantId.</param>
         /// <param name="enableInviteOwnersGroup">enableInviteOwnersGroup (default to false).</param>
         /// <param name="enableInviteContactGroup">enableInviteContactGroup (default to false).</param>
-        /// <param name="primaryContact">primaryContact.</param>
+        /// <param name="primaryContact">ApiUser model.</param>
         /// <param name="primaryContactAssignBy">primaryContactAssignBy.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
+        /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="secondaryContactAssignBy">secondaryContactAssignBy.</param>
+        /// <param name="manager">ApiUser model.</param>
+        /// <param name="managerAssignBy">managerAssignBy.</param>
         /// <param name="enableOnTimeRenewal">enableOnTimeRenewal (default to false).</param>
         /// <param name="oneTimeDuration">oneTimeDuration (default to 0).</param>
         /// <param name="oneTimeDurationType">oneTimeDurationType.</param>
         /// <param name="requestTemplate">requestTemplate.</param>
-        /// <param name="departmentAssignBy">departmentAssignBy.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
-        /// <param name="department">department.</param>
-        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps (default to false).</param>
-        /// <param name="departments">departments.</param>
-        /// <param name="serviceContact">serviceContact.</param>
-        /// <param name="serviceAdminContact">serviceAdminContact.</param>
+        /// <param name="serviceContact">ApiUser model.</param>
+        /// <param name="serviceAdminContact">ApiUser model.</param>
         /// <param name="approversContainManagerRole">approversContainManagerRole (default to false).</param>
         /// <param name="status">status.</param>
         /// <param name="showServiceInCatalog">showServiceInCatalog (default to false).</param>
@@ -86,7 +84,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateGuestUserService(Guid tenantId = default(Guid), bool enableInviteOwnersGroup = false, bool enableInviteContactGroup = false, ApiUser primaryContact = default(ApiUser), AssignBy? primaryContactAssignBy = default(AssignBy?), ApiUser secondaryContact = default(ApiUser), AssignBy? secondaryContactAssignBy = default(AssignBy?), bool enableOnTimeRenewal = false, int oneTimeDuration = 0, ApiDurationType? oneTimeDurationType = default(ApiDurationType?), CreateGuestUserRequest requestTemplate = default(CreateGuestUserRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = false, List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public CreateGuestUserService(Guid tenantId = default(Guid), bool enableInviteOwnersGroup = false, bool enableInviteContactGroup = false, ApiUser primaryContact = default(ApiUser), AssignBy? primaryContactAssignBy = default(AssignBy?), ApiUser secondaryContact = default(ApiUser), AssignBy? secondaryContactAssignBy = default(AssignBy?), ApiUser manager = default(ApiUser), AssignBy? managerAssignBy = default(AssignBy?), bool enableOnTimeRenewal = false, int oneTimeDuration = 0, ApiDurationType? oneTimeDurationType = default(ApiDurationType?), CreateGuestUserRequest requestTemplate = default(CreateGuestUserRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.TenantId = tenantId;
             this.EnableInviteOwnersGroup = enableInviteOwnersGroup;
@@ -95,20 +93,18 @@ namespace Cloud.Governance.Client.Model
             this.PrimaryContactAssignBy = primaryContactAssignBy;
             this.SecondaryContact = secondaryContact;
             this.SecondaryContactAssignBy = secondaryContactAssignBy;
+            this.Manager = manager;
+            this.ManagerAssignBy = managerAssignBy;
             this.EnableOnTimeRenewal = enableOnTimeRenewal;
             this.OneTimeDuration = oneTimeDuration;
             this.OneTimeDurationType = oneTimeDurationType;
             this.RequestTemplate = requestTemplate;
-            this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
             this.Id = id;
             this.Name = name;
             this.Description = description;
             this.Type = type;
-            this.Department = department;
-            this.LoadDepartmentFromUps = loadDepartmentFromUps;
-            this.Departments = departments;
             this.ServiceContact = serviceContact;
             this.ServiceAdminContact = serviceAdminContact;
             this.ApproversContainManagerRole = approversContainManagerRole;
@@ -139,16 +135,25 @@ namespace Cloud.Governance.Client.Model
         public bool EnableInviteContactGroup { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
+
+        /// <summary>
+        /// ApiUser model
+        /// </summary>
+        /// <value>ApiUser model</value>
+        [DataMember(Name = "manager", EmitDefaultValue = true)]
+        public ApiUser Manager { get; set; }
 
         /// <summary>
         /// Gets or Sets EnableOnTimeRenewal
@@ -199,32 +204,16 @@ namespace Cloud.Governance.Client.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Department
+        /// ApiUser model
         /// </summary>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LoadDepartmentFromUps
-        /// </summary>
-        [DataMember(Name = "loadDepartmentFromUps", EmitDefaultValue = false)]
-        public bool LoadDepartmentFromUps { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Departments
-        /// </summary>
-        [DataMember(Name = "departments", EmitDefaultValue = true)]
-        public List<string> Departments { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ServiceContact
-        /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServiceAdminContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
@@ -279,20 +268,18 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PrimaryContactAssignBy: ").Append(PrimaryContactAssignBy).Append("\n");
             sb.Append("  SecondaryContact: ").Append(SecondaryContact).Append("\n");
             sb.Append("  SecondaryContactAssignBy: ").Append(SecondaryContactAssignBy).Append("\n");
+            sb.Append("  Manager: ").Append(Manager).Append("\n");
+            sb.Append("  ManagerAssignBy: ").Append(ManagerAssignBy).Append("\n");
             sb.Append("  EnableOnTimeRenewal: ").Append(EnableOnTimeRenewal).Append("\n");
             sb.Append("  OneTimeDuration: ").Append(OneTimeDuration).Append("\n");
             sb.Append("  OneTimeDurationType: ").Append(OneTimeDurationType).Append("\n");
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
-            sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
-            sb.Append("  LoadDepartmentFromUps: ").Append(LoadDepartmentFromUps).Append("\n");
-            sb.Append("  Departments: ").Append(Departments).Append("\n");
             sb.Append("  ServiceContact: ").Append(ServiceContact).Append("\n");
             sb.Append("  ServiceAdminContact: ").Append(ServiceAdminContact).Append("\n");
             sb.Append("  ApproversContainManagerRole: ").Append(ApproversContainManagerRole).Append("\n");
@@ -368,6 +355,15 @@ namespace Cloud.Governance.Client.Model
                     this.SecondaryContactAssignBy.Equals(input.SecondaryContactAssignBy)
                 ) && 
                 (
+                    this.Manager == input.Manager ||
+                    (this.Manager != null &&
+                    this.Manager.Equals(input.Manager))
+                ) && 
+                (
+                    this.ManagerAssignBy == input.ManagerAssignBy ||
+                    this.ManagerAssignBy.Equals(input.ManagerAssignBy)
+                ) && 
+                (
                     this.EnableOnTimeRenewal == input.EnableOnTimeRenewal ||
                     this.EnableOnTimeRenewal.Equals(input.EnableOnTimeRenewal)
                 ) && 
@@ -383,10 +379,6 @@ namespace Cloud.Governance.Client.Model
                     this.RequestTemplate == input.RequestTemplate ||
                     (this.RequestTemplate != null &&
                     this.RequestTemplate.Equals(input.RequestTemplate))
-                ) && 
-                (
-                    this.DepartmentAssignBy == input.DepartmentAssignBy ||
-                    this.DepartmentAssignBy.Equals(input.DepartmentAssignBy)
                 ) && 
                 (
                     this.Metadatas == input.Metadatas ||
@@ -416,21 +408,6 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.Type == input.Type ||
                     this.Type.Equals(input.Type)
-                ) && 
-                (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
-                ) && 
-                (
-                    this.LoadDepartmentFromUps == input.LoadDepartmentFromUps ||
-                    this.LoadDepartmentFromUps.Equals(input.LoadDepartmentFromUps)
-                ) && 
-                (
-                    this.Departments == input.Departments ||
-                    this.Departments != null &&
-                    input.Departments != null &&
-                    this.Departments.SequenceEqual(input.Departments)
                 ) && 
                 (
                     this.ServiceContact == input.ServiceContact ||
@@ -494,12 +471,14 @@ namespace Cloud.Governance.Client.Model
                 if (this.SecondaryContact != null)
                     hashCode = hashCode * 59 + this.SecondaryContact.GetHashCode();
                 hashCode = hashCode * 59 + this.SecondaryContactAssignBy.GetHashCode();
+                if (this.Manager != null)
+                    hashCode = hashCode * 59 + this.Manager.GetHashCode();
+                hashCode = hashCode * 59 + this.ManagerAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableOnTimeRenewal.GetHashCode();
                 hashCode = hashCode * 59 + this.OneTimeDuration.GetHashCode();
                 hashCode = hashCode * 59 + this.OneTimeDurationType.GetHashCode();
                 if (this.RequestTemplate != null)
                     hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
-                hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
                 hashCode = hashCode * 59 + this.HideRequestSummary.GetHashCode();
@@ -510,11 +489,6 @@ namespace Cloud.Governance.Client.Model
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
-                hashCode = hashCode * 59 + this.LoadDepartmentFromUps.GetHashCode();
-                if (this.Departments != null)
-                    hashCode = hashCode * 59 + this.Departments.GetHashCode();
                 if (this.ServiceContact != null)
                     hashCode = hashCode * 59 + this.ServiceContact.GetHashCode();
                 if (this.ServiceAdminContact != null)

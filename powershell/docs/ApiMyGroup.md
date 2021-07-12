@@ -37,8 +37,8 @@ Name | Type | Description | Notes
 **PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **PhaseDueDate** | **System.DateTime** |  | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
 
 ## Examples

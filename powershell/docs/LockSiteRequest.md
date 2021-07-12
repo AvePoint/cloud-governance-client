@@ -3,15 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LockType** | [**SiteLockType**](SiteLockType.md) |  | [optional] 
-**LockTypeDescription** | **String** |  | [optional] [readonly] 
-**Action** | [**SiteLifecycleActionType**](SiteLifecycleActionType.md) |  | [optional] 
-**ActionDescription** | **String** |  | [optional] [readonly] 
-**SiteId** | **String** |  | [optional] 
-**SiteUrl** | **String** |  | [optional] 
+**LockType** | [**SiteLockType**](SiteLockType.md) | Site collection locking status | [optional] 
+**LockTypeDescription** | **String** | Description of site collection locking status. You can get all available description of site collection locking statuses by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**Action** | [**SiteLifecycleActionType**](SiteLifecycleActionType.md) | Lifecycle management action type | [optional] 
+**ActionDescription** | **String** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**SiteId** | **String** | Site collection ID | [optional] 
+**SiteUrl** | **String** | Site collection URL | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -42,7 +41,6 @@ $LockSiteRequest = New-Cloud.Governance.ClientLockSiteRequest  -LockType null `
  -SiteUrl null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

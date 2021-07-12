@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**Invoke-IsMemberOfGroup**](UsersApi.md#Invoke-IsMemberOfGroup) | **GET** /users/{userprincipalname}/ismemberof/{groupid} | Is Member Of Group
 [**Resolve-ACGUsers**](UsersApi.md#resolve-acgusers) | **GET** /users/resolve | resolve users
 [**Search-ACGUsers**](UsersApi.md#search-acgusers) | **GET** /users/search | search users
-[**Update-UserInfo**](UsersApi.md#Update-UserInfo) | **POST** /users | 
+[**Update-UserInfo**](UsersApi.md#Update-UserInfo) | **POST** /users | add users or update user information
 
 
 <a name="Invoke-FilterUsersByAttribute"></a>
@@ -289,9 +289,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Keyword = "Keyword_example" # String | 
-$UserType = (New-ApiUserType) # ApiUserType | 
-$UserSource = (New-UserSource) # UserSource | 
-$SharingOptions = (New-ExternalSharingOptions) # ExternalSharingOptions | 
+$UserType = (Initialize-ApiUserType ) # ApiUserType | 
+$UserSource = (Initialize-UserSource ) # UserSource | 
+$SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
 $PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
@@ -362,9 +362,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Keyword = "Keyword_example" # String | 
-$UserType = (New-ApiUserType) # ApiUserType | 
-$UserSource = (New-UserSource) # UserSource | 
-$SharingOptions = (New-ExternalSharingOptions) # ExternalSharingOptions | 
+$UserType = (Initialize-ApiUserType ) # ApiUserType | 
+$UserSource = (Initialize-UserSource ) # UserSource | 
+$SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
 $PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 > void Update-UserInfo<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-UpdatableApiUser] <PSCustomObject><br>
 
-
+add users or update user information
 
 ### Example
 ```powershell
@@ -429,8 +429,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$UpdatableApiUser = (New-UpdatableApiUser-Email "Email_example" -JobTitle "JobTitle_example" -TenantId "TenantId_example" -PeopleFilterProfileId "PeopleFilterProfileId_example" -ApiUserType  -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (New-ExternalUserType) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -AdditionalData "TODO") # UpdatableApiUser |  (optional)
+$UpdatableApiUser = (Initialize-UpdatableApiUser -Email "Email_example" -JobTitle "JobTitle_example" -TenantId "TenantId_example" -PeopleFilterProfileId "PeopleFilterProfileId_example" -ApiUserType  -UserSource  -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -AdditionalData "TODO") # UpdatableApiUser |  (optional)
 
+# add users or update user information
 try {
      $Result = Update-UserInfo -UpdatableApiUser $UpdatableApiUser
 } catch {

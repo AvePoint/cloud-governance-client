@@ -18,17 +18,12 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum MultiGeoControlMode
     {
-        [EnumMember(Value = "0")]
         None = 0,
 
-        [EnumMember(Value = "1")]
         SpecifiedDirectly = 1,
 
-        [EnumMember(Value = "2")]
         SpecifiedByRole = 2
 
     }

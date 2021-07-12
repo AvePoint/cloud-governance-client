@@ -24,13 +24,15 @@ namespace Cloud.Governance.Client.Model
     public partial class SharingEnabledUser : IEquatable<SharingEnabledUser>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets IsExternalUser
+        /// Whether the user is an external user.
         /// </summary>
+        /// <value>Whether the user is an external user.</value>
         [DataMember(Name = "isExternalUser", EmitDefaultValue = false)]
         public ExternalUserType? IsExternalUser { get; set; }
         /// <summary>
-        /// Gets or Sets ApiUserType
+        /// ApiUser type
         /// </summary>
+        /// <value>ApiUser type</value>
         [DataMember(Name = "apiUserType", EmitDefaultValue = false)]
         public ApiUserType? ApiUserType { get; set; }
 
@@ -48,13 +50,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isSharePointGroup">isSharePointGroup (default to false).</param>
         /// <param name="isGuestUser">isGuestUser (default to false).</param>
         /// <param name="isGuestUserExistsInOrganization">isGuestUserExistsInOrganization (default to false).</param>
-        /// <param name="id">id.</param>
-        /// <param name="loginName">loginName.</param>
-        /// <param name="isExternalUser">isExternalUser.</param>
-        /// <param name="azureUserType">azureUserType.</param>
-        /// <param name="displayName">displayName.</param>
-        /// <param name="isGroup">isGroup (default to false).</param>
-        /// <param name="email">email.</param>
+        /// <param name="id">Object ID.</param>
+        /// <param name="loginName">Login name.</param>
+        /// <param name="isExternalUser">Whether the user is an external user..</param>
+        /// <param name="azureUserType">User type in Azure AD.</param>
+        /// <param name="displayName">User display name.</param>
+        /// <param name="isGroup">Whether an object is a domain group. (default to false).</param>
+        /// <param name="email">User e-mail address.</param>
         public SharingEnabledUser(bool isSharePointGroup = false, bool isGuestUser = false, bool isGuestUserExistsInOrganization = false, string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string azureUserType = default(string), string displayName = default(string), bool isGroup = false, string email = default(string))
         {
             this.IsSharePointGroup = isSharePointGroup;
@@ -88,38 +90,44 @@ namespace Cloud.Governance.Client.Model
         public bool IsGuestUserExistsInOrganization { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Object ID
         /// </summary>
+        /// <value>Object ID</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets LoginName
+        /// Login name
         /// </summary>
+        /// <value>Login name</value>
         [DataMember(Name = "loginName", EmitDefaultValue = true)]
         public string LoginName { get; set; }
 
         /// <summary>
-        /// Gets or Sets AzureUserType
+        /// User type in Azure AD
         /// </summary>
+        /// <value>User type in Azure AD</value>
         [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
         public string AzureUserType { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// User display name
         /// </summary>
+        /// <value>User display name</value>
         [DataMember(Name = "displayName", EmitDefaultValue = true)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsGroup
+        /// Whether an object is a domain group.
         /// </summary>
+        /// <value>Whether an object is a domain group.</value>
         [DataMember(Name = "isGroup", EmitDefaultValue = false)]
         public bool IsGroup { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsLocalUser
+        /// Whether the user is a local system user.
         /// </summary>
+        /// <value>Whether the user is a local system user.</value>
         [DataMember(Name = "isLocalUser", EmitDefaultValue = false)]
         public bool IsLocalUser { get; private set; }
 
@@ -133,14 +141,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Email
+        /// User e-mail address
         /// </summary>
+        /// <value>User e-mail address</value>
         [DataMember(Name = "email", EmitDefaultValue = true)]
         public string Email { get; set; }
 
         /// <summary>
-        /// Gets or Sets JobTitle
+        /// User job title
         /// </summary>
+        /// <value>User job title</value>
         [DataMember(Name = "jobTitle", EmitDefaultValue = true)]
         public string JobTitle { get; private set; }
 
@@ -154,8 +164,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets PhysicalDeliveryOfficeName
+        /// Physical delivery office name of the user
         /// </summary>
+        /// <value>Physical delivery office name of the user</value>
         [DataMember(Name = "physicalDeliveryOfficeName", EmitDefaultValue = true)]
         public string PhysicalDeliveryOfficeName { get; private set; }
 
@@ -169,8 +180,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets IsValid
+        /// Whether the user is valid.
         /// </summary>
+        /// <value>Whether the user is valid.</value>
         [DataMember(Name = "isValid", EmitDefaultValue = false)]
         public bool IsValid { get; private set; }
 
@@ -184,8 +196,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets TenantId
+        /// Office 365 tenant ID of the user
         /// </summary>
+        /// <value>Office 365 tenant ID of the user</value>
         [DataMember(Name = "tenantId", EmitDefaultValue = true)]
         public string TenantId { get; private set; }
 
@@ -199,8 +212,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets AdditionalData
+        /// User additional data
         /// </summary>
+        /// <value>User additional data</value>
         [DataMember(Name = "additionalData", EmitDefaultValue = true)]
         public Dictionary<string, Object> AdditionalData { get; private set; }
 

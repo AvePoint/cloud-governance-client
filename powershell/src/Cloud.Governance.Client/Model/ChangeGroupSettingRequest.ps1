@@ -126,9 +126,6 @@ function New-ChangeGroupSettingRequest {
         ${ServiceId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -193,7 +190,6 @@ function New-ChangeGroupSettingRequest {
             "EnableTeamCollaboration" = ${EnableTeamCollaboration}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
@@ -220,7 +216,7 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupSettingRequest
-        $AllProperties = $("GroupId", "GroupEmail", "GroupName", "OriginalGroupName", "GroupDescription", "OriginalGroupDescription", "OriginalYammerGroupInfo", "PrimaryContact", "OriginalPrimaryContact", "SecondaryContact", "OriginalSecondaryContact", "GroupOwners", "GroupMembers", "IsDynamicMembership", "DynamicMembershipRules", "EnabledSubscribe", "OriginalEnabledSubscribe", "EnabledOutsideSender", "OriginalEnabledOutsideSender", "HubSiteActionType", "AssociateHubSiteId", "AssociateHubSiteTitle", "Classification", "OriginalClassification", "Sensitivity", "OriginalSensitivity", "EnableTeams", "OriginalEnableTeams", "GroupMetadatas", "OriginalGroupMetadata", "ChangedDynamicGroupType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "EnableTeamCollaboration", "Id", "ServiceId", "Department", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("GroupId", "GroupEmail", "GroupName", "OriginalGroupName", "GroupDescription", "OriginalGroupDescription", "OriginalYammerGroupInfo", "PrimaryContact", "OriginalPrimaryContact", "SecondaryContact", "OriginalSecondaryContact", "GroupOwners", "GroupMembers", "IsDynamicMembership", "DynamicMembershipRules", "EnabledSubscribe", "OriginalEnabledSubscribe", "EnabledOutsideSender", "OriginalEnabledOutsideSender", "HubSiteActionType", "AssociateHubSiteId", "AssociateHubSiteTitle", "Classification", "OriginalClassification", "Sensitivity", "OriginalSensitivity", "EnableTeams", "OriginalEnableTeams", "GroupMetadatas", "OriginalGroupMetadata", "ChangedDynamicGroupType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "EnableTeamCollaboration", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -455,12 +451,6 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
             $ServiceId = $JsonParameters.PSobject.Properties["ServiceId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
-        }
-
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Summary"))) { #optional property not found
             $Summary = $null
         } else {
@@ -602,7 +592,6 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
             "EnableTeamCollaboration" = ${EnableTeamCollaboration}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}

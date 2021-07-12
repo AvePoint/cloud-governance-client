@@ -11,18 +11,14 @@ Name | Type | Description | Notes
 **DefaultWelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] 
 **WelcomeEmailAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **RequestTemplate** | [**GrantPermissionRequest**](GrantPermissionRequest.md) |  | [optional] 
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
-**Departments** | **String[]** |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
@@ -43,16 +39,12 @@ $GrantPermissionService = New-Cloud.Governance.ClientGrantPermissionService  -Al
  -DefaultWelcomeEmailSettings null `
  -WelcomeEmailAssignBy null `
  -RequestTemplate null `
- -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `
  -Name null `
  -Description null `
  -Type null `
- -Department null `
- -LoadDepartmentFromUps null `
- -Departments null `
  -ServiceContact null `
  -ServiceAdminContact null `
  -ApproversContainManagerRole null `

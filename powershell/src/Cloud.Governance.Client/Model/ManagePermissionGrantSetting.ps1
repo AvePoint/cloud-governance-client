@@ -63,7 +63,13 @@ function New-ManagePermissionGrantSetting {
         ${WelcomeEmailAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${AllowSpecifyTemporayPermissionDuration} = $false
+        ${AllowSpecifyTemporayPermissionDuration} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${WelcomeEmailTemplateId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsWelcomeEmailTemplate} = $false
     )
 
     Process {
@@ -90,6 +96,8 @@ function New-ManagePermissionGrantSetting {
             "WelcomeEmailBody" = ${WelcomeEmailBody}
             "WelcomeEmailAssignBy" = ${WelcomeEmailAssignBy}
             "AllowSpecifyTemporayPermissionDuration" = ${AllowSpecifyTemporayPermissionDuration}
+            "WelcomeEmailTemplateId" = ${WelcomeEmailTemplateId}
+            "IsWelcomeEmailTemplate" = ${IsWelcomeEmailTemplate}
         }
 
         return $PSO
@@ -112,7 +120,7 @@ function ConvertFrom-JsonToManagePermissionGrantSetting {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ManagePermissionGrantSetting
-        $AllProperties = $("IsEnableGrantPermission", "IsGrantTemporaryPermission", "GrantPermissionAssignBy", "TemporaryPermissionDuration", "TemporaryDurationType", "IsMaxTemporaryDurationSetted", "TemporaryPermissionMaxDuration", "TemporaryPermissionMaxDurationType", "IsEnableExpireNotify", "IsAllowSelectAdmin", "ExpireNotifyDuration", "ExpireNotifyDurationType", "ExpireNotifyEmailTemplate", "IsEnableWelcomeNotify", "WelcomeEmailSubject", "WelcomeEmailBody", "WelcomeEmailAssignBy", "AllowSpecifyTemporayPermissionDuration")
+        $AllProperties = $("IsEnableGrantPermission", "IsGrantTemporaryPermission", "GrantPermissionAssignBy", "TemporaryPermissionDuration", "TemporaryDurationType", "IsMaxTemporaryDurationSetted", "TemporaryPermissionMaxDuration", "TemporaryPermissionMaxDurationType", "IsEnableExpireNotify", "IsAllowSelectAdmin", "ExpireNotifyDuration", "ExpireNotifyDurationType", "ExpireNotifyEmailTemplate", "IsEnableWelcomeNotify", "WelcomeEmailSubject", "WelcomeEmailBody", "WelcomeEmailAssignBy", "AllowSpecifyTemporayPermissionDuration", "WelcomeEmailTemplateId", "IsWelcomeEmailTemplate")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -227,6 +235,18 @@ function ConvertFrom-JsonToManagePermissionGrantSetting {
             $AllowSpecifyTemporayPermissionDuration = $JsonParameters.PSobject.Properties["AllowSpecifyTemporayPermissionDuration"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WelcomeEmailTemplateId"))) { #optional property not found
+            $WelcomeEmailTemplateId = $null
+        } else {
+            $WelcomeEmailTemplateId = $JsonParameters.PSobject.Properties["WelcomeEmailTemplateId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsWelcomeEmailTemplate"))) { #optional property not found
+            $IsWelcomeEmailTemplate = $null
+        } else {
+            $IsWelcomeEmailTemplate = $JsonParameters.PSobject.Properties["IsWelcomeEmailTemplate"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "IsEnableGrantPermission" = ${IsEnableGrantPermission}
             "IsGrantTemporaryPermission" = ${IsGrantTemporaryPermission}
@@ -246,6 +266,8 @@ function ConvertFrom-JsonToManagePermissionGrantSetting {
             "WelcomeEmailBody" = ${WelcomeEmailBody}
             "WelcomeEmailAssignBy" = ${WelcomeEmailAssignBy}
             "AllowSpecifyTemporayPermissionDuration" = ${AllowSpecifyTemporayPermissionDuration}
+            "WelcomeEmailTemplateId" = ${WelcomeEmailTemplateId}
+            "IsWelcomeEmailTemplate" = ${IsWelcomeEmailTemplate}
         }
 
         return $PSO

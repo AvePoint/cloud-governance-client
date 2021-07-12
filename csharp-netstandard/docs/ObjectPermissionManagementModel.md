@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | **SPPrincipalType** |  | [optional] 
-**ObjectInfo** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ObjectInfo** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **Action** | **ManagePermissionAction** |  | [optional] 
 **Permissions** | **List&lt;string&gt;** |  | [optional] 
 **OriginalPermissions** | **List&lt;string&gt;** |  | [optional] 

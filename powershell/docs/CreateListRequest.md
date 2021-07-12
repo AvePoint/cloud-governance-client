@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **PermissionSettings** | [**ListPermissionSettings**](ListPermissionSettings.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -48,7 +47,6 @@ $CreateListRequest = New-Cloud.Governance.ClientCreateListRequest  -ListTitle nu
  -PermissionSettings null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

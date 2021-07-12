@@ -27,9 +27,6 @@ function New-ChangeWebContactRequest {
         ${ServiceId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -61,7 +58,6 @@ function New-ChangeWebContactRequest {
             "ChangedByUrlItems" = ${ChangedByUrlItems}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
@@ -88,7 +84,7 @@ function ConvertFrom-JsonToChangeWebContactRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeWebContactRequest
-        $AllProperties = $("ChangedMethod", "ChangedByUserSetting", "ChangedByUrlItems", "SubRequests", "Id", "ServiceId", "Department", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("ChangedMethod", "ChangedByUserSetting", "ChangedByUrlItems", "SubRequests", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -129,12 +125,6 @@ function ConvertFrom-JsonToChangeWebContactRequest {
             $ServiceId = $null
         } else {
             $ServiceId = $JsonParameters.PSobject.Properties["ServiceId"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Summary"))) { #optional property not found
@@ -246,7 +236,6 @@ function ConvertFrom-JsonToChangeWebContactRequest {
             "SubRequests" = ${SubRequests}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}

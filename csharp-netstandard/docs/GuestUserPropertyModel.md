@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **UsageLocation** | **string** |  | [optional] 
 **JobTitle** | **string** |  | [optional] 
 **JobDepartment** | **string** |  | [optional] 
+**Manager** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

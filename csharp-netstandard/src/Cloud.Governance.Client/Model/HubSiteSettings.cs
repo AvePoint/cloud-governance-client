@@ -18,23 +18,24 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// HubSiteSettings
+    /// Hub site settings model
     /// </summary>
     [DataContract(Name = "HubSiteSettings")]
     public partial class HubSiteSettings : IEquatable<HubSiteSettings>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets Action
+        /// Set how to enable the hub site functionality. You can register the site collection as a hub site or associate the site collection with a hub site.
         /// </summary>
+        /// <value>Set how to enable the hub site functionality. You can register the site collection as a hub site or associate the site collection with a hub site.</value>
         [DataMember(Name = "action", EmitDefaultValue = false)]
         public ConvertHubSiteActionType? Action { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="HubSiteSettings" /> class.
         /// </summary>
-        /// <param name="enabled">enabled (default to false).</param>
-        /// <param name="action">action.</param>
-        /// <param name="associatedHubSiteId">associatedHubSiteId.</param>
-        /// <param name="associatedHubSiteTitle">associatedHubSiteTitle.</param>
+        /// <param name="enabled">Whether the hub site functionality is enabled. (default to false).</param>
+        /// <param name="action">Set how to enable the hub site functionality. You can register the site collection as a hub site or associate the site collection with a hub site..</param>
+        /// <param name="associatedHubSiteId">ID of the associated hub site.</param>
+        /// <param name="associatedHubSiteTitle">Title of the associated hub site.</param>
         public HubSiteSettings(bool enabled = false, ConvertHubSiteActionType? action = default(ConvertHubSiteActionType?), Guid? associatedHubSiteId = default(Guid?), string associatedHubSiteTitle = default(string))
         {
             this.Enabled = enabled;
@@ -44,20 +45,23 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Enabled
+        /// Whether the hub site functionality is enabled.
         /// </summary>
+        /// <value>Whether the hub site functionality is enabled.</value>
         [DataMember(Name = "enabled", EmitDefaultValue = false)]
         public bool Enabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssociatedHubSiteId
+        /// ID of the associated hub site
         /// </summary>
+        /// <value>ID of the associated hub site</value>
         [DataMember(Name = "associatedHubSiteId", EmitDefaultValue = true)]
         public Guid? AssociatedHubSiteId { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssociatedHubSiteTitle
+        /// Title of the associated hub site
         /// </summary>
+        /// <value>Title of the associated hub site</value>
         [DataMember(Name = "associatedHubSiteTitle", EmitDefaultValue = true)]
         public string AssociatedHubSiteTitle { get; set; }
 

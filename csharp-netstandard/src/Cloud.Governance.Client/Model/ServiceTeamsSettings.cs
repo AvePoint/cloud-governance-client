@@ -44,8 +44,9 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "funStuffAssignBy", EmitDefaultValue = false)]
         public AssignBy? FunStuffAssignBy { get; set; }
         /// <summary>
-        /// Gets or Sets GiphyRatingType
+        /// Set the gihpy type settings.
         /// </summary>
+        /// <value>Set the gihpy type settings.</value>
         [DataMember(Name = "giphyRatingType", EmitDefaultValue = false)]
         public GiphyRatingType? GiphyRatingType { get; set; }
         /// <summary>
@@ -55,22 +56,22 @@ namespace Cloud.Governance.Client.Model
         /// <param name="guestPermissionsAssignBy">guestPermissionsAssignBy.</param>
         /// <param name="mentionsAssignBy">mentionsAssignBy.</param>
         /// <param name="funStuffAssignBy">funStuffAssignBy.</param>
-        /// <param name="allowMembersCreateUpdateChannels">allowMembersCreateUpdateChannels (default to false).</param>
-        /// <param name="allowMembersCreatePrivateChannels">allowMembersCreatePrivateChannels (default to false).</param>
-        /// <param name="allowMemberDeleteRestoreChannels">allowMemberDeleteRestoreChannels (default to false).</param>
-        /// <param name="allowMembersAddRemoveApps">allowMembersAddRemoveApps (default to false).</param>
-        /// <param name="allowMembersCreateUpdateRemoveTabs">allowMembersCreateUpdateRemoveTabs (default to false).</param>
-        /// <param name="allowMembersCreateUpdateRemoveConnections">allowMembersCreateUpdateRemoveConnections (default to false).</param>
-        /// <param name="allowMembersDeleteMessages">allowMembersDeleteMessages (default to false).</param>
-        /// <param name="allowMembersEditMessages">allowMembersEditMessages (default to false).</param>
-        /// <param name="allowGuestsCreateUpdateChannels">allowGuestsCreateUpdateChannels (default to false).</param>
-        /// <param name="allowGuestsDeleteChannels">allowGuestsDeleteChannels (default to false).</param>
-        /// <param name="allowMentionsTeam">allowMentionsTeam (default to false).</param>
-        /// <param name="allowMentionsChannel">allowMentionsChannel (default to false).</param>
-        /// <param name="enableGiphy">enableGiphy (default to false).</param>
-        /// <param name="enableStickersAndMemes">enableStickersAndMemes (default to false).</param>
-        /// <param name="enableCustomMemes">enableCustomMemes (default to false).</param>
-        /// <param name="giphyRatingType">giphyRatingType.</param>
+        /// <param name="allowMembersCreateUpdateChannels">Whether to allow team members to create and update channels. (default to false).</param>
+        /// <param name="allowMembersCreatePrivateChannels">Whether to allow members to create private channels. (default to false).</param>
+        /// <param name="allowMemberDeleteRestoreChannels">Whether to allow members to delete and restore channels. (default to false).</param>
+        /// <param name="allowMembersAddRemoveApps">Whether to allow members to add and remove apps. (default to false).</param>
+        /// <param name="allowMembersCreateUpdateRemoveTabs">Whether to allow members to create, update, and remove tabs. (default to false).</param>
+        /// <param name="allowMembersCreateUpdateRemoveConnections">Whether to allow members to create, update, and remove connectors. (default to false).</param>
+        /// <param name="allowMembersDeleteMessages">Whether to allow members to delete their messages. (default to false).</param>
+        /// <param name="allowMembersEditMessages">Whether to allow members to edit their messages. (default to false).</param>
+        /// <param name="allowGuestsCreateUpdateChannels">Whether to allow guests to create and update channels. (default to false).</param>
+        /// <param name="allowGuestsDeleteChannels">Whether to allow guests to delete channels. (default to false).</param>
+        /// <param name="allowMentionsTeam">Whether to show members the option to @team or @[team name] (this will send a notification to everyone on the team). (default to false).</param>
+        /// <param name="allowMentionsChannel">Whether to show members the option to @channel or @[channel name] (this will send a notification to everyone who has favorited the channel being mentioned). (default to false).</param>
+        /// <param name="enableGiphy">Whether to enable giphy for the team. (default to false).</param>
+        /// <param name="enableStickersAndMemes">Whether to enable stickers and memes. (default to false).</param>
+        /// <param name="enableCustomMemes">Whether to allow memes to be uploaded. (default to false).</param>
+        /// <param name="giphyRatingType">Set the gihpy type settings..</param>
         public ServiceTeamsSettings(AssignBy? memberPermissionsAssignBy = default(AssignBy?), AssignBy? guestPermissionsAssignBy = default(AssignBy?), AssignBy? mentionsAssignBy = default(AssignBy?), AssignBy? funStuffAssignBy = default(AssignBy?), bool allowMembersCreateUpdateChannels = false, bool allowMembersCreatePrivateChannels = false, bool allowMemberDeleteRestoreChannels = false, bool allowMembersAddRemoveApps = false, bool allowMembersCreateUpdateRemoveTabs = false, bool allowMembersCreateUpdateRemoveConnections = false, bool allowMembersDeleteMessages = false, bool allowMembersEditMessages = false, bool allowGuestsCreateUpdateChannels = false, bool allowGuestsDeleteChannels = false, bool allowMentionsTeam = false, bool allowMentionsChannel = false, bool enableGiphy = false, bool enableStickersAndMemes = false, bool enableCustomMemes = false, GiphyRatingType? giphyRatingType = default(GiphyRatingType?))
         {
             this.MemberPermissionsAssignBy = memberPermissionsAssignBy;
@@ -96,92 +97,107 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets AllowMembersCreateUpdateChannels
+        /// Whether to allow team members to create and update channels.
         /// </summary>
+        /// <value>Whether to allow team members to create and update channels.</value>
         [DataMember(Name = "allowMembersCreateUpdateChannels", EmitDefaultValue = false)]
         public bool AllowMembersCreateUpdateChannels { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMembersCreatePrivateChannels
+        /// Whether to allow members to create private channels.
         /// </summary>
+        /// <value>Whether to allow members to create private channels.</value>
         [DataMember(Name = "allowMembersCreatePrivateChannels", EmitDefaultValue = false)]
         public bool AllowMembersCreatePrivateChannels { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMemberDeleteRestoreChannels
+        /// Whether to allow members to delete and restore channels.
         /// </summary>
+        /// <value>Whether to allow members to delete and restore channels.</value>
         [DataMember(Name = "allowMemberDeleteRestoreChannels", EmitDefaultValue = false)]
         public bool AllowMemberDeleteRestoreChannels { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMembersAddRemoveApps
+        /// Whether to allow members to add and remove apps.
         /// </summary>
+        /// <value>Whether to allow members to add and remove apps.</value>
         [DataMember(Name = "allowMembersAddRemoveApps", EmitDefaultValue = false)]
         public bool AllowMembersAddRemoveApps { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMembersCreateUpdateRemoveTabs
+        /// Whether to allow members to create, update, and remove tabs.
         /// </summary>
+        /// <value>Whether to allow members to create, update, and remove tabs.</value>
         [DataMember(Name = "allowMembersCreateUpdateRemoveTabs", EmitDefaultValue = false)]
         public bool AllowMembersCreateUpdateRemoveTabs { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMembersCreateUpdateRemoveConnections
+        /// Whether to allow members to create, update, and remove connectors.
         /// </summary>
+        /// <value>Whether to allow members to create, update, and remove connectors.</value>
         [DataMember(Name = "allowMembersCreateUpdateRemoveConnections", EmitDefaultValue = false)]
         public bool AllowMembersCreateUpdateRemoveConnections { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMembersDeleteMessages
+        /// Whether to allow members to delete their messages.
         /// </summary>
+        /// <value>Whether to allow members to delete their messages.</value>
         [DataMember(Name = "allowMembersDeleteMessages", EmitDefaultValue = false)]
         public bool AllowMembersDeleteMessages { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMembersEditMessages
+        /// Whether to allow members to edit their messages.
         /// </summary>
+        /// <value>Whether to allow members to edit their messages.</value>
         [DataMember(Name = "allowMembersEditMessages", EmitDefaultValue = false)]
         public bool AllowMembersEditMessages { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowGuestsCreateUpdateChannels
+        /// Whether to allow guests to create and update channels.
         /// </summary>
+        /// <value>Whether to allow guests to create and update channels.</value>
         [DataMember(Name = "allowGuestsCreateUpdateChannels", EmitDefaultValue = false)]
         public bool AllowGuestsCreateUpdateChannels { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowGuestsDeleteChannels
+        /// Whether to allow guests to delete channels.
         /// </summary>
+        /// <value>Whether to allow guests to delete channels.</value>
         [DataMember(Name = "allowGuestsDeleteChannels", EmitDefaultValue = false)]
         public bool AllowGuestsDeleteChannels { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMentionsTeam
+        /// Whether to show members the option to @team or @[team name] (this will send a notification to everyone on the team).
         /// </summary>
+        /// <value>Whether to show members the option to @team or @[team name] (this will send a notification to everyone on the team).</value>
         [DataMember(Name = "allowMentionsTeam", EmitDefaultValue = false)]
         public bool AllowMentionsTeam { get; set; }
 
         /// <summary>
-        /// Gets or Sets AllowMentionsChannel
+        /// Whether to show members the option to @channel or @[channel name] (this will send a notification to everyone who has favorited the channel being mentioned).
         /// </summary>
+        /// <value>Whether to show members the option to @channel or @[channel name] (this will send a notification to everyone who has favorited the channel being mentioned).</value>
         [DataMember(Name = "allowMentionsChannel", EmitDefaultValue = false)]
         public bool AllowMentionsChannel { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableGiphy
+        /// Whether to enable giphy for the team.
         /// </summary>
+        /// <value>Whether to enable giphy for the team.</value>
         [DataMember(Name = "enableGiphy", EmitDefaultValue = false)]
         public bool EnableGiphy { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableStickersAndMemes
+        /// Whether to enable stickers and memes.
         /// </summary>
+        /// <value>Whether to enable stickers and memes.</value>
         [DataMember(Name = "enableStickersAndMemes", EmitDefaultValue = false)]
         public bool EnableStickersAndMemes { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableCustomMemes
+        /// Whether to allow memes to be uploaded.
         /// </summary>
+        /// <value>Whether to allow memes to be uploaded.</value>
         [DataMember(Name = "enableCustomMemes", EmitDefaultValue = false)]
         public bool EnableCustomMemes { get; set; }
 

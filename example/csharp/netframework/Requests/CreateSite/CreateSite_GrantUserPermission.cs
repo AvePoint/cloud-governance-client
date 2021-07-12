@@ -23,7 +23,7 @@
                 request.SiteTitle = $"GrantUserPermission_{DateTime.Now}";
                 request.PrimaryContact = this.ResolveUser(data.PrimaryContactLoginName);
                 request.SecondaryContact = this.ResolveUser(data.SecondaryContactLoginName);
-                request.Department = data.Department;
+                //request.Department = data.Department;
 
                 var settingsApi = new SettingsApi(Configuration.Default);
                 var permissionLevels = settingsApi.GetPermissionLevels().ToDictionary(p => p.Name, p => p);

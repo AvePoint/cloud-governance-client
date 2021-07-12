@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// PermissionLevel
+    /// Permission level model
     /// </summary>
     [DataContract(Name = "PermissionLevel")]
     public partial class PermissionLevel : IEquatable<PermissionLevel>, IValidatableObject
@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionLevel" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="idInSharePoint">idInSharePoint (default to 0).</param>
-        /// <param name="name">name.</param>
+        /// <param name="id">Permission level ID.</param>
+        /// <param name="idInSharePoint">Permission ID in SharePoint (default to 0).</param>
+        /// <param name="name">Permission name.</param>
         public PermissionLevel(Guid id = default(Guid), int idInSharePoint = 0, string name = default(string))
         {
             this.Id = id;
@@ -37,26 +37,30 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Permission level ID
         /// </summary>
+        /// <value>Permission level ID</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets IdInSharePoint
+        /// Permission ID in SharePoint
         /// </summary>
+        /// <value>Permission ID in SharePoint</value>
         [DataMember(Name = "idInSharePoint", EmitDefaultValue = false)]
         public int IdInSharePoint { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Permission name
         /// </summary>
+        /// <value>Permission name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Permission description
         /// </summary>
+        /// <value>Permission description</value>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; private set; }
 
@@ -70,8 +74,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets IsExcluded
+        /// Whether the permission is excluded.
         /// </summary>
+        /// <value>Whether the permission is excluded.</value>
         [DataMember(Name = "isExcluded", EmitDefaultValue = false)]
         public bool IsExcluded { get; private set; }
 
@@ -85,8 +90,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Permission type
         /// </summary>
+        /// <value>Permission type</value>
         [DataMember(Name = "type", EmitDefaultValue = false)]
         public int Type { get; private set; }
 

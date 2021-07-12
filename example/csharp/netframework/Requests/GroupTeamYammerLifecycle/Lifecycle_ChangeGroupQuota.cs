@@ -24,7 +24,7 @@
                     GroupId = new Guid(group.Id),
                     Summary = $"Summary_{DateTime.Now}",
                     GroupObjectType = GroupObjectType.Group,
-                    Department = service.Department,
+                    //Department = service.Department,
                     GroupQuotaSize = quota
                     
                 };

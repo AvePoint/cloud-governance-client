@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **WelcomeEmailBody** | **String** |  | [optional] 
 **WelcomeEmailAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **AllowSpecifyTemporayPermissionDuration** | **Boolean** |  | [optional] [default to $false]
+**WelcomeEmailTemplateId** | **String** |  | [optional] 
+**IsWelcomeEmailTemplate** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -43,7 +45,9 @@ $ManagePermissionGrantSetting = New-Cloud.Governance.ClientManagePermissionGrant
  -WelcomeEmailSubject null `
  -WelcomeEmailBody null `
  -WelcomeEmailAssignBy null `
- -AllowSpecifyTemporayPermissionDuration null
+ -AllowSpecifyTemporayPermissionDuration null `
+ -WelcomeEmailTemplateId null `
+ -IsWelcomeEmailTemplate null
 ```
 
 - Convert the resource to JSON

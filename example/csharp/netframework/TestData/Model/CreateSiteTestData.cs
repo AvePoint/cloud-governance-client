@@ -11,7 +11,7 @@ namespace NetFramework
     {
         public String SiteName { get; set; } = DateTime.Now.ToString("yyyyMMddHHmmss");
 
-        public String Department { get; set; }
+        
 
         public String PolicyName { get; set; }
 

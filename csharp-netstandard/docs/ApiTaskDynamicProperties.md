@@ -25,6 +25,9 @@ Name | Type | Description | Notes
 **IsYammer** | **Object** |  | [optional] 
 **GroupOwnersStr** | **Object** |  | [optional] 
 **TenantId** | **Object** |  | [optional] 
+**Approver** | **Object** |  | [optional] 
+**ApprovalHistory** | **Object** |  | [optional] 
+**CurrentTaskAction** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

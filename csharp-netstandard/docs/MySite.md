@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **FullUrl** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 
-**Department** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Size** | **long?** |  | [optional] [default to 0]
 **QuotaSize** | **long** |  | [optional] [default to 0]
@@ -16,7 +15,7 @@ Name | Type | Description | Notes
 **IsCommunicationSite** | **bool** |  | [optional] [default to false]
 **CreatedTime** | **DateTime** |  | [optional] 
 **StorageUsed** | **string** |  | [optional] 
-**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **AdditionalAdministrator** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **PreferredDataLocation** | **string** |  | [optional] 
 **PreferredDataLocationName** | **string** |  | [optional] 
@@ -32,8 +31,8 @@ Name | Type | Description | Notes
 **PhaseAssignees** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **PhaseDueDate** | **DateTime?** |  | [optional] 
 **Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

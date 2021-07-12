@@ -24,11 +24,6 @@ namespace Cloud.Governance.Client.Model
     public partial class ManagePermissionService : IEquatable<ManagePermissionService>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets DepartmentAssignBy
-        /// </summary>
-        [DataMember(Name = "departmentAssignBy", EmitDefaultValue = false)]
-        public AssignBy? DepartmentAssignBy { get; set; }
-        /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", EmitDefaultValue = false)]
@@ -46,19 +41,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="permissionOptions">permissionOptions.</param>
         /// <param name="scopeSettings">scopeSettings.</param>
         /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
-        /// <param name="requestTemplate">requestTemplate.</param>
-        /// <param name="departmentAssignBy">departmentAssignBy.</param>
+        /// <param name="requestTemplate">Manage permission request model.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
-        /// <param name="department">department.</param>
-        /// <param name="loadDepartmentFromUps">loadDepartmentFromUps (default to false).</param>
-        /// <param name="departments">departments.</param>
-        /// <param name="serviceContact">serviceContact.</param>
-        /// <param name="serviceAdminContact">serviceAdminContact.</param>
+        /// <param name="serviceContact">ApiUser model.</param>
+        /// <param name="serviceAdminContact">ApiUser model.</param>
         /// <param name="approversContainManagerRole">approversContainManagerRole (default to false).</param>
         /// <param name="status">status.</param>
         /// <param name="showServiceInCatalog">showServiceInCatalog (default to false).</param>
@@ -66,7 +57,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public ManagePermissionService(ManagePermissionUserSetting userScopeSetting = default(ManagePermissionUserSetting), ManagePermissionSharePointGroupOption sharePointGroupOptions = default(ManagePermissionSharePointGroupOption), ManagePermissionOption permissionOptions = default(ManagePermissionOption), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), Guid? peoplePickerFilterProfileId = default(Guid?), ManagePermissionRequest requestTemplate = default(ManagePermissionRequest), AssignBy? departmentAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), string department = default(string), bool loadDepartmentFromUps = false, List<string> departments = default(List<string>), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public ManagePermissionService(ManagePermissionUserSetting userScopeSetting = default(ManagePermissionUserSetting), ManagePermissionSharePointGroupOption sharePointGroupOptions = default(ManagePermissionSharePointGroupOption), ManagePermissionOption permissionOptions = default(ManagePermissionOption), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), Guid? peoplePickerFilterProfileId = default(Guid?), ManagePermissionRequest requestTemplate = default(ManagePermissionRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.UserScopeSetting = userScopeSetting;
             this.SharePointGroupOptions = sharePointGroupOptions;
@@ -74,16 +65,12 @@ namespace Cloud.Governance.Client.Model
             this.ScopeSettings = scopeSettings;
             this.PeoplePickerFilterProfileId = peoplePickerFilterProfileId;
             this.RequestTemplate = requestTemplate;
-            this.DepartmentAssignBy = departmentAssignBy;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
             this.Id = id;
             this.Name = name;
             this.Description = description;
             this.Type = type;
-            this.Department = department;
-            this.LoadDepartmentFromUps = loadDepartmentFromUps;
-            this.Departments = departments;
             this.ServiceContact = serviceContact;
             this.ServiceAdminContact = serviceAdminContact;
             this.ApproversContainManagerRole = approversContainManagerRole;
@@ -126,8 +113,9 @@ namespace Cloud.Governance.Client.Model
         public Guid? PeoplePickerFilterProfileId { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestTemplate
+        /// Manage permission request model
         /// </summary>
+        /// <value>Manage permission request model</value>
         [DataMember(Name = "requestTemplate", EmitDefaultValue = true)]
         public ManagePermissionRequest RequestTemplate { get; set; }
 
@@ -162,32 +150,16 @@ namespace Cloud.Governance.Client.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Department
+        /// ApiUser model
         /// </summary>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LoadDepartmentFromUps
-        /// </summary>
-        [DataMember(Name = "loadDepartmentFromUps", EmitDefaultValue = false)]
-        public bool LoadDepartmentFromUps { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Departments
-        /// </summary>
-        [DataMember(Name = "departments", EmitDefaultValue = true)]
-        public List<string> Departments { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ServiceContact
-        /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "serviceContact", EmitDefaultValue = true)]
         public ApiUser ServiceContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServiceAdminContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "serviceAdminContact", EmitDefaultValue = true)]
         public ApiUser ServiceAdminContact { get; set; }
 
@@ -241,16 +213,12 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ScopeSettings: ").Append(ScopeSettings).Append("\n");
             sb.Append("  PeoplePickerFilterProfileId: ").Append(PeoplePickerFilterProfileId).Append("\n");
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
-            sb.Append("  DepartmentAssignBy: ").Append(DepartmentAssignBy).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
-            sb.Append("  LoadDepartmentFromUps: ").Append(LoadDepartmentFromUps).Append("\n");
-            sb.Append("  Departments: ").Append(Departments).Append("\n");
             sb.Append("  ServiceContact: ").Append(ServiceContact).Append("\n");
             sb.Append("  ServiceAdminContact: ").Append(ServiceAdminContact).Append("\n");
             sb.Append("  ApproversContainManagerRole: ").Append(ApproversContainManagerRole).Append("\n");
@@ -325,10 +293,6 @@ namespace Cloud.Governance.Client.Model
                     this.RequestTemplate.Equals(input.RequestTemplate))
                 ) && 
                 (
-                    this.DepartmentAssignBy == input.DepartmentAssignBy ||
-                    this.DepartmentAssignBy.Equals(input.DepartmentAssignBy)
-                ) && 
-                (
                     this.Metadatas == input.Metadatas ||
                     this.Metadatas != null &&
                     input.Metadatas != null &&
@@ -356,21 +320,6 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.Type == input.Type ||
                     this.Type.Equals(input.Type)
-                ) && 
-                (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
-                ) && 
-                (
-                    this.LoadDepartmentFromUps == input.LoadDepartmentFromUps ||
-                    this.LoadDepartmentFromUps.Equals(input.LoadDepartmentFromUps)
-                ) && 
-                (
-                    this.Departments == input.Departments ||
-                    this.Departments != null &&
-                    input.Departments != null &&
-                    this.Departments.SequenceEqual(input.Departments)
                 ) && 
                 (
                     this.ServiceContact == input.ServiceContact ||
@@ -436,7 +385,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.PeoplePickerFilterProfileId.GetHashCode();
                 if (this.RequestTemplate != null)
                     hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
-                hashCode = hashCode * 59 + this.DepartmentAssignBy.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
                 hashCode = hashCode * 59 + this.HideRequestSummary.GetHashCode();
@@ -447,11 +395,6 @@ namespace Cloud.Governance.Client.Model
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
-                hashCode = hashCode * 59 + this.LoadDepartmentFromUps.GetHashCode();
-                if (this.Departments != null)
-                    hashCode = hashCode * 59 + this.Departments.GetHashCode();
                 if (this.ServiceContact != null)
                     hashCode = hashCode * 59 + this.ServiceContact.GetHashCode();
                 if (this.ServiceAdminContact != null)

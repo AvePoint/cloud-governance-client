@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupSiteLink** | **String** |  | [optional] 
-**GroupPlannerLink** | **String** |  | [optional] 
-**GroupFilesLink** | **String** |  | [optional] 
-**GroupConversationsLink** | **String** |  | [optional] 
-**GroupNotebookLink** | **String** |  | [optional] 
-**YammerGroupLink** | **String** |  | [optional] 
+**GroupSiteLink** | **String** | Group team site link | [optional] 
+**GroupPlannerLink** | **String** | Planner link | [optional] 
+**GroupFilesLink** | **String** | Files link | [optional] 
+**GroupConversationsLink** | **String** | Conversations link | [optional] 
+**GroupNotebookLink** | **String** | Notebook link | [optional] 
+**YammerGroupLink** | **String** | Yammer community link | [optional] 
 
 ## Examples
 

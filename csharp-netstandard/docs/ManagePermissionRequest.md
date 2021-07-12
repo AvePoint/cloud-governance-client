@@ -1,18 +1,18 @@
 # Cloud.Governance.Client.Model.ManagePermissionRequest
+Manage permission request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectUrl** | **string** |  | [optional] 
-**ObjectType** | **NodeType** |  | [optional] 
-**ObjectTitle** | **string** |  | [optional] 
-**SiteUrl** | **string** |  | [optional] 
-**WebUrl** | **string** |  | [optional] 
-**SpGroupManagement** | [**List&lt;SPGroupManagementModel&gt;**](SPGroupManagementModel.md) |  | [optional] 
-**PermissionManagement** | [**PermissionManagementModel**](PermissionManagementModel.md) |  | [optional] 
+**ObjectUrl** | **string** | Object URL | [optional] 
+**ObjectType** | **NodeType** | Object type | [optional] 
+**ObjectTitle** | **string** | Object name | [optional] 
+**SiteUrl** | **string** | Site collection URL | [optional] 
+**WebUrl** | **string** | Site URL | [optional] 
+**SpGroupManagement** | [**List&lt;SPGroupManagementModel&gt;**](SPGroupManagementModel.md) | SharePoint group management settings | [optional] 
+**PermissionManagement** | [**PermissionManagementModel**](PermissionManagementModel.md) | Permission management settings | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

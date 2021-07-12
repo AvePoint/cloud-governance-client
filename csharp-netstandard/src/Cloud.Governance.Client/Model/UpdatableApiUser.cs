@@ -29,8 +29,14 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "apiUserType", EmitDefaultValue = false)]
         public ApiUserType? ApiUserType { get; set; }
         /// <summary>
-        /// Gets or Sets IsExternalUser
+        /// Gets or Sets UserSource
         /// </summary>
+        [DataMember(Name = "userSource", EmitDefaultValue = false)]
+        public UserSource? UserSource { get; set; }
+        /// <summary>
+        /// Whether the user is an external user.
+        /// </summary>
+        /// <value>Whether the user is an external user.</value>
         [DataMember(Name = "isExternalUser", EmitDefaultValue = false)]
         public ExternalUserType? IsExternalUser { get; set; }
         /// <summary>
@@ -41,19 +47,21 @@ namespace Cloud.Governance.Client.Model
         /// <param name="tenantId">tenantId.</param>
         /// <param name="peopleFilterProfileId">peopleFilterProfileId.</param>
         /// <param name="apiUserType">apiUserType.</param>
-        /// <param name="id">id.</param>
-        /// <param name="loginName">loginName.</param>
-        /// <param name="isExternalUser">isExternalUser.</param>
-        /// <param name="azureUserType">azureUserType.</param>
-        /// <param name="displayName">displayName.</param>
-        /// <param name="isGroup">isGroup (default to false).</param>
-        public UpdatableApiUser(string email = default(string), string jobTitle = default(string), string tenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), ApiUserType? apiUserType = default(ApiUserType?), string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string azureUserType = default(string), string displayName = default(string), bool isGroup = false)
+        /// <param name="userSource">userSource.</param>
+        /// <param name="id">Object ID.</param>
+        /// <param name="loginName">Login name.</param>
+        /// <param name="isExternalUser">Whether the user is an external user..</param>
+        /// <param name="azureUserType">User type in Azure AD.</param>
+        /// <param name="displayName">User display name.</param>
+        /// <param name="isGroup">Whether an object is a domain group. (default to false).</param>
+        public UpdatableApiUser(string email = default(string), string jobTitle = default(string), string tenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), ApiUserType? apiUserType = default(ApiUserType?), UserSource? userSource = default(UserSource?), string id = default(string), string loginName = default(string), ExternalUserType? isExternalUser = default(ExternalUserType?), string azureUserType = default(string), string displayName = default(string), bool isGroup = false)
         {
             this.Email = email;
             this.JobTitle = jobTitle;
             this.TenantId = tenantId;
             this.PeopleFilterProfileId = peopleFilterProfileId;
             this.ApiUserType = apiUserType;
+            this.UserSource = userSource;
             this.Id = id;
             this.LoginName = loginName;
             this.IsExternalUser = isExternalUser;
@@ -87,38 +95,44 @@ namespace Cloud.Governance.Client.Model
         public Guid? PeopleFilterProfileId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Object ID
         /// </summary>
+        /// <value>Object ID</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets LoginName
+        /// Login name
         /// </summary>
+        /// <value>Login name</value>
         [DataMember(Name = "loginName", EmitDefaultValue = true)]
         public string LoginName { get; set; }
 
         /// <summary>
-        /// Gets or Sets AzureUserType
+        /// User type in Azure AD
         /// </summary>
+        /// <value>User type in Azure AD</value>
         [DataMember(Name = "azureUserType", EmitDefaultValue = true)]
         public string AzureUserType { get; set; }
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// User display name
         /// </summary>
+        /// <value>User display name</value>
         [DataMember(Name = "displayName", EmitDefaultValue = true)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsGroup
+        /// Whether an object is a domain group.
         /// </summary>
+        /// <value>Whether an object is a domain group.</value>
         [DataMember(Name = "isGroup", EmitDefaultValue = false)]
         public bool IsGroup { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsLocalUser
+        /// Whether the user is a local system user.
         /// </summary>
+        /// <value>Whether the user is a local system user.</value>
         [DataMember(Name = "isLocalUser", EmitDefaultValue = false)]
         public bool IsLocalUser { get; private set; }
 
@@ -132,8 +146,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets PhysicalDeliveryOfficeName
+        /// Physical delivery office name of the user
         /// </summary>
+        /// <value>Physical delivery office name of the user</value>
         [DataMember(Name = "physicalDeliveryOfficeName", EmitDefaultValue = true)]
         public string PhysicalDeliveryOfficeName { get; private set; }
 
@@ -147,8 +162,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets IsValid
+        /// Whether the user is valid.
         /// </summary>
+        /// <value>Whether the user is valid.</value>
         [DataMember(Name = "isValid", EmitDefaultValue = false)]
         public bool IsValid { get; private set; }
 
@@ -162,8 +178,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets AdditionalData
+        /// User additional data
         /// </summary>
+        /// <value>User additional data</value>
         [DataMember(Name = "additionalData", EmitDefaultValue = true)]
         public Dictionary<string, Object> AdditionalData { get; private set; }
 
@@ -189,6 +206,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  PeopleFilterProfileId: ").Append(PeopleFilterProfileId).Append("\n");
             sb.Append("  ApiUserType: ").Append(ApiUserType).Append("\n");
+            sb.Append("  UserSource: ").Append(UserSource).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  LoginName: ").Append(LoginName).Append("\n");
             sb.Append("  IsExternalUser: ").Append(IsExternalUser).Append("\n");
@@ -258,6 +276,10 @@ namespace Cloud.Governance.Client.Model
                     this.ApiUserType.Equals(input.ApiUserType)
                 ) && 
                 (
+                    this.UserSource == input.UserSource ||
+                    this.UserSource.Equals(input.UserSource)
+                ) && 
+                (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
@@ -324,6 +346,7 @@ namespace Cloud.Governance.Client.Model
                 if (this.PeopleFilterProfileId != null)
                     hashCode = hashCode * 59 + this.PeopleFilterProfileId.GetHashCode();
                 hashCode = hashCode * 59 + this.ApiUserType.GetHashCode();
+                hashCode = hashCode * 59 + this.UserSource.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.LoginName != null)

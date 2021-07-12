@@ -36,9 +36,6 @@ function New-CreateGuestUserRequest {
         ${ServiceId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -73,7 +70,6 @@ function New-CreateGuestUserRequest {
             "OneTimeSettings" = ${OneTimeSettings}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
@@ -100,7 +96,7 @@ function ConvertFrom-JsonToCreateGuestUserRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGuestUserRequest
-        $AllProperties = $("UserProperties", "WelcomeEmailMessage", "PrimaryContact", "SecondaryContact", "InviteGroups", "OneTimeSettings", "Id", "ServiceId", "Department", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("UserProperties", "WelcomeEmailMessage", "PrimaryContact", "SecondaryContact", "InviteGroups", "OneTimeSettings", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -153,12 +149,6 @@ function ConvertFrom-JsonToCreateGuestUserRequest {
             $ServiceId = $null
         } else {
             $ServiceId = $JsonParameters.PSobject.Properties["ServiceId"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Summary"))) { #optional property not found
@@ -272,7 +262,6 @@ function ConvertFrom-JsonToCreateGuestUserRequest {
             "OneTimeSettings" = ${OneTimeSettings}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}

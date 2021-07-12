@@ -129,7 +129,16 @@ function New-WorkspaceReport {
         ${HasOngoingTasks},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[System.DateTime]]
-        ${LastRenewalTime}
+        ${LastRenewalTime},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${LastRenewalBy},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${LastRenewalByEmail},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${LastRenewalByDisplayName}
     )
 
     Process {
@@ -178,6 +187,9 @@ function New-WorkspaceReport {
             "Metadata" = ${Metadata}
             "HasOngoingTasks" = ${HasOngoingTasks}
             "LastRenewalTime" = ${LastRenewalTime}
+            "LastRenewalBy" = ${LastRenewalBy}
+            "LastRenewalByEmail" = ${LastRenewalByEmail}
+            "LastRenewalByDisplayName" = ${LastRenewalByDisplayName}
         }
 
         return $PSO
@@ -200,7 +212,7 @@ function ConvertFrom-JsonToWorkspaceReport {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WorkspaceReport
-        $AllProperties = $("Id", "Name", "Description", "Status", "Type", "Url", "Email", "PolicyName", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "Phase", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Privacy", "AssociateHubTitle", "GeoLocation", "StorageLimit", "StorageUsed", "SiteSharing", "GroupSharing", "Classification", "ClaimStatus", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "Metadata", "HasOngoingTasks", "LastRenewalTime")
+        $AllProperties = $("Id", "Name", "Description", "Status", "Type", "Url", "Email", "PolicyName", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "Phase", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Privacy", "AssociateHubTitle", "GeoLocation", "StorageLimit", "StorageUsed", "SiteSharing", "GroupSharing", "Classification", "ClaimStatus", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "Metadata", "HasOngoingTasks", "LastRenewalTime", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -447,6 +459,24 @@ function ConvertFrom-JsonToWorkspaceReport {
             $LastRenewalTime = $JsonParameters.PSobject.Properties["LastRenewalTime"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastRenewalBy"))) { #optional property not found
+            $LastRenewalBy = $null
+        } else {
+            $LastRenewalBy = $JsonParameters.PSobject.Properties["LastRenewalBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastRenewalByEmail"))) { #optional property not found
+            $LastRenewalByEmail = $null
+        } else {
+            $LastRenewalByEmail = $JsonParameters.PSobject.Properties["LastRenewalByEmail"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastRenewalByDisplayName"))) { #optional property not found
+            $LastRenewalByDisplayName = $null
+        } else {
+            $LastRenewalByDisplayName = $JsonParameters.PSobject.Properties["LastRenewalByDisplayName"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
@@ -488,6 +518,9 @@ function ConvertFrom-JsonToWorkspaceReport {
             "Metadata" = ${Metadata}
             "HasOngoingTasks" = ${HasOngoingTasks}
             "LastRenewalTime" = ${LastRenewalTime}
+            "LastRenewalBy" = ${LastRenewalBy}
+            "LastRenewalByEmail" = ${LastRenewalByEmail}
+            "LastRenewalByDisplayName" = ${LastRenewalByDisplayName}
         }
 
         return $PSO

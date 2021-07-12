@@ -13,7 +13,16 @@ Name | Type | Description | Notes
 **Status** | [**GuestUserStatus**](GuestUserStatus.md) |  | [optional] 
 **StatusDescription** | **String** |  | [optional] 
 **ProfileName** | **String** |  | [optional] 
+**TenantId** | **String** |  | [optional] 
 **NextRenewalDate** | **System.DateTime** |  | [optional] 
+**RenewalAssignees** | **String** |  | [optional] 
+**RenewalAssigneeDisplayNames** | **String** |  | [optional] 
+**LastRenewalBy** | **String** |  | [optional] 
+**LastRenewalByDisplayName** | **String** |  | [optional] 
+**ExternalUserState** | [**ExternalUserState**](ExternalUserState.md) |  | [optional] 
+**ExternalUserStateDescription** | **String** |  | [optional] 
+**LastSyncTime** | **System.DateTime** |  | [optional] 
+**InviteTime** | **System.DateTime** |  | [optional] 
 **Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 
 ## Examples
@@ -30,7 +39,16 @@ $GuestUserGridModel = New-Cloud.Governance.ClientGuestUserGridModel  -Id null `
  -Status null `
  -StatusDescription null `
  -ProfileName null `
+ -TenantId null `
  -NextRenewalDate null `
+ -RenewalAssignees null `
+ -RenewalAssigneeDisplayNames null `
+ -LastRenewalBy null `
+ -LastRenewalByDisplayName null `
+ -ExternalUserState null `
+ -ExternalUserStateDescription null `
+ -LastSyncTime null `
+ -InviteTime null `
  -Metadata null
 ```
 

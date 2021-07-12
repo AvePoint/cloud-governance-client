@@ -63,7 +63,7 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ApiUserPageResult</returns>
         ApiResponse<ApiUserPageResult> GetGroupAllMembersByGroupValueWithHttpInfo(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string));
         /// <summary>
-        /// get group members by group email
+        /// get group members without owners by group email
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
@@ -74,7 +74,7 @@ namespace Cloud.Governance.Client.Api
         ApiUserPageResult GetGroupMembers(string email, int? top = default(int?), int? skip = default(int?), string search = default(string));
 
         /// <summary>
-        /// get group members by group email
+        /// get group members without owners by group email
         /// </summary>
         /// <remarks>
         /// 
@@ -114,9 +114,9 @@ namespace Cloud.Governance.Client.Api
         /// get all hubsites from site&#39;s tenant
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <returns>List&lt;GuidModel&gt;</returns>
-        List<GuidModel> GetHubSitesByUrl(string siteUrl = default(string));
+        List<GuidModel> GetHubSitesByUrl(string siteUrl);
 
         /// <summary>
         /// get all hubsites from site&#39;s tenant
@@ -125,9 +125,9 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <returns>ApiResponse of List&lt;GuidModel&gt;</returns>
-        ApiResponse<List<GuidModel>> GetHubSitesByUrlWithHttpInfo(string siteUrl = default(string));
+        ApiResponse<List<GuidModel>> GetHubSitesByUrlWithHttpInfo(string siteUrl);
         /// <summary>
         /// get all teams that owner is curernt user
         /// </summary>
@@ -186,9 +186,9 @@ namespace Cloud.Governance.Client.Api
         /// get site designs by site url
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <returns>List&lt;StringModel&gt;</returns>
-        List<StringModel> GetSiteDesigns(string siteUrl = default(string));
+        List<StringModel> GetSiteDesigns(string siteUrl);
 
         /// <summary>
         /// get site designs by site url
@@ -197,9 +197,9 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <returns>ApiResponse of List&lt;StringModel&gt;</returns>
-        ApiResponse<List<StringModel>> GetSiteDesignsWithHttpInfo(string siteUrl = default(string));
+        ApiResponse<List<StringModel>> GetSiteDesignsWithHttpInfo(string siteUrl);
         /// <summary>
         /// get site permission levels
         /// </summary>
@@ -258,10 +258,10 @@ namespace Cloud.Governance.Client.Api
         /// get site templates with language code identifier
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <returns>List&lt;SiteTemplate&gt;</returns>
-        List<SiteTemplate> GetSiteTemplates(int languageid, string url = default(string));
+        List<SiteTemplate> GetSiteTemplates(string url, int languageid);
 
         /// <summary>
         /// get site templates with language code identifier
@@ -270,18 +270,18 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <returns>ApiResponse of List&lt;SiteTemplate&gt;</returns>
-        ApiResponse<List<SiteTemplate>> GetSiteTemplatesWithHttpInfo(int languageid, string url = default(string));
+        ApiResponse<List<SiteTemplate>> GetSiteTemplatesWithHttpInfo(string url, int languageid);
         /// <summary>
         /// whether user has permission on the site
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <returns>bool</returns>
-        bool HasPermission(string siteurl = default(string), string currentuser = default(string));
+        bool HasPermission(string siteurl, string currentuser);
 
         /// <summary>
         /// whether user has permission on the site
@@ -290,10 +290,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <returns>ApiResponse of bool</returns>
-        ApiResponse<bool> HasPermissionWithHttpInfo(string siteurl = default(string), string currentuser = default(string));
+        ApiResponse<bool> HasPermissionWithHttpInfo(string siteurl, string currentuser);
         /// <summary>
         /// Remove mail-enabled security group by group name
         /// </summary>
@@ -376,7 +376,7 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (ApiUserPageResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiUserPageResult>> GetGroupAllMembersByGroupValueWithHttpInfoAsync(string objectIdOrNameOrEmail, string tenantId, int? top = default(int?), int? skip = default(int?), string search = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// get group members by group email
+        /// get group members without owners by group email
         /// </summary>
         /// <remarks>
         /// 
@@ -391,7 +391,7 @@ namespace Cloud.Governance.Client.Api
         System.Threading.Tasks.Task<ApiUserPageResult> GetGroupMembersAsync(string email, int? top = default(int?), int? skip = default(int?), string search = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// get group members by group email
+        /// get group members without owners by group email
         /// </summary>
         /// <remarks>
         /// 
@@ -440,10 +440,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GuidModel&gt;</returns>
-        System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesByUrlAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesByUrlAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get all hubsites from site&#39;s tenant
@@ -452,10 +452,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GuidModel&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<GuidModel>>> GetHubSitesByUrlWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<GuidModel>>> GetHubSitesByUrlWithHttpInfoAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get all teams that owner is curernt user
         /// </summary>
@@ -532,10 +532,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;StringModel&gt;</returns>
-        System.Threading.Tasks.Task<List<StringModel>> GetSiteDesignsAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<StringModel>> GetSiteDesignsAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get site designs by site url
@@ -544,10 +544,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;StringModel&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<StringModel>>> GetSiteDesignsWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<StringModel>>> GetSiteDesignsWithHttpInfoAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get site permission levels
         /// </summary>
@@ -624,11 +624,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SiteTemplate&gt;</returns>
-        System.Threading.Tasks.Task<List<SiteTemplate>> GetSiteTemplatesAsync(int languageid, string url = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<SiteTemplate>> GetSiteTemplatesAsync(string url, int languageid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get site templates with language code identifier
@@ -637,11 +637,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SiteTemplate&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<SiteTemplate>>> GetSiteTemplatesWithHttpInfoAsync(int languageid, string url = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<SiteTemplate>>> GetSiteTemplatesWithHttpInfoAsync(string url, int languageid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// whether user has permission on the site
         /// </summary>
@@ -649,11 +649,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of bool</returns>
-        System.Threading.Tasks.Task<bool> HasPermissionAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<bool> HasPermissionAsync(string siteurl, string currentuser, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// whether user has permission on the site
@@ -662,11 +662,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (bool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<bool>> HasPermissionWithHttpInfoAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<bool>> HasPermissionWithHttpInfoAsync(string siteurl, string currentuser, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Remove mail-enabled security group by group name
         /// </summary>
@@ -1125,7 +1125,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get group members by group email 
+        /// get group members without owners by group email 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
@@ -1140,7 +1140,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get group members by group email 
+        /// get group members without owners by group email 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
@@ -1197,7 +1197,7 @@ namespace Cloud.Governance.Client.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ApiUserPageResult>("/office365/groups/{email}/members", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ApiUserPageResult>("/office365/groups/{email}/memberswithoutowner", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -1209,7 +1209,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get group members by group email 
+        /// get group members without owners by group email 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
@@ -1225,7 +1225,7 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
-        /// get group members by group email 
+        /// get group members without owners by group email 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="email"></param>
@@ -1286,7 +1286,7 @@ namespace Cloud.Governance.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ApiUserPageResult>("/office365/groups/{email}/members", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ApiUserPageResult>("/office365/groups/{email}/memberswithoutowner", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1474,9 +1474,9 @@ namespace Cloud.Governance.Client.Api
         /// get all hubsites from site&#39;s tenant 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <returns>List&lt;GuidModel&gt;</returns>
-        public List<GuidModel> GetHubSitesByUrl(string siteUrl = default(string))
+        public List<GuidModel> GetHubSitesByUrl(string siteUrl)
         {
             Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> localVarResponse = GetHubSitesByUrlWithHttpInfo(siteUrl);
             return localVarResponse.Data;
@@ -1486,10 +1486,14 @@ namespace Cloud.Governance.Client.Api
         /// get all hubsites from site&#39;s tenant 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <returns>ApiResponse of List&lt;GuidModel&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> GetHubSitesByUrlWithHttpInfo(string siteUrl = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> GetHubSitesByUrlWithHttpInfo(string siteUrl)
         {
+            // verify the required parameter 'siteUrl' is set
+            if (siteUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrl' when calling Office365Api->GetHubSitesByUrl");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -1507,10 +1511,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (siteUrl != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -1539,10 +1540,10 @@ namespace Cloud.Governance.Client.Api
         /// get all hubsites from site&#39;s tenant 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;GuidModel&gt;</returns>
-        public async System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesByUrlAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<GuidModel>> GetHubSitesByUrlAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>> localVarResponse = await GetHubSitesByUrlWithHttpInfoAsync(siteUrl, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1552,11 +1553,15 @@ namespace Cloud.Governance.Client.Api
         /// get all hubsites from site&#39;s tenant 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl">any site url in your tenant (optional)</param>
+        /// <param name="siteUrl">any site url in your tenant</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;GuidModel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>>> GetHubSitesByUrlWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<GuidModel>>> GetHubSitesByUrlWithHttpInfoAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'siteUrl' is set
+            if (siteUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrl' when calling Office365Api->GetHubSitesByUrl");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1576,10 +1581,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (siteUrl != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -2012,9 +2014,9 @@ namespace Cloud.Governance.Client.Api
         /// get site designs by site url 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <returns>List&lt;StringModel&gt;</returns>
-        public List<StringModel> GetSiteDesigns(string siteUrl = default(string))
+        public List<StringModel> GetSiteDesigns(string siteUrl)
         {
             Cloud.Governance.Client.Client.ApiResponse<List<StringModel>> localVarResponse = GetSiteDesignsWithHttpInfo(siteUrl);
             return localVarResponse.Data;
@@ -2024,10 +2026,14 @@ namespace Cloud.Governance.Client.Api
         /// get site designs by site url 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <returns>ApiResponse of List&lt;StringModel&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<StringModel>> GetSiteDesignsWithHttpInfo(string siteUrl = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<List<StringModel>> GetSiteDesignsWithHttpInfo(string siteUrl)
         {
+            // verify the required parameter 'siteUrl' is set
+            if (siteUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrl' when calling Office365Api->GetSiteDesigns");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2045,10 +2051,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (siteUrl != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -2077,10 +2080,10 @@ namespace Cloud.Governance.Client.Api
         /// get site designs by site url 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;StringModel&gt;</returns>
-        public async System.Threading.Tasks.Task<List<StringModel>> GetSiteDesignsAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<StringModel>> GetSiteDesignsAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Cloud.Governance.Client.Client.ApiResponse<List<StringModel>> localVarResponse = await GetSiteDesignsWithHttpInfoAsync(siteUrl, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2090,11 +2093,15 @@ namespace Cloud.Governance.Client.Api
         /// get site designs by site url 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteUrl"> (optional)</param>
+        /// <param name="siteUrl"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;StringModel&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<StringModel>>> GetSiteDesignsWithHttpInfoAsync(string siteUrl = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<StringModel>>> GetSiteDesignsWithHttpInfoAsync(string siteUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'siteUrl' is set
+            if (siteUrl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteUrl' when calling Office365Api->GetSiteDesigns");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2114,10 +2121,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (siteUrl != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrl", siteUrl));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -2558,12 +2562,12 @@ namespace Cloud.Governance.Client.Api
         /// get site templates with language code identifier 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <returns>List&lt;SiteTemplate&gt;</returns>
-        public List<SiteTemplate> GetSiteTemplates(int languageid, string url = default(string))
+        public List<SiteTemplate> GetSiteTemplates(string url, int languageid)
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>> localVarResponse = GetSiteTemplatesWithHttpInfo(languageid, url);
+            Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>> localVarResponse = GetSiteTemplatesWithHttpInfo(url, languageid);
             return localVarResponse.Data;
         }
 
@@ -2571,11 +2575,15 @@ namespace Cloud.Governance.Client.Api
         /// get site templates with language code identifier 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <returns>ApiResponse of List&lt;SiteTemplate&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>> GetSiteTemplatesWithHttpInfo(int languageid, string url = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>> GetSiteTemplatesWithHttpInfo(string url, int languageid)
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling Office365Api->GetSiteTemplates");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2594,10 +2602,7 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("languageid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(languageid)); // path parameter
-            if (url != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -2626,13 +2631,13 @@ namespace Cloud.Governance.Client.Api
         /// get site templates with language code identifier 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;SiteTemplate&gt;</returns>
-        public async System.Threading.Tasks.Task<List<SiteTemplate>> GetSiteTemplatesAsync(int languageid, string url = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<SiteTemplate>> GetSiteTemplatesAsync(string url, int languageid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>> localVarResponse = await GetSiteTemplatesWithHttpInfoAsync(languageid, url, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>> localVarResponse = await GetSiteTemplatesWithHttpInfoAsync(url, languageid, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2640,12 +2645,16 @@ namespace Cloud.Governance.Client.Api
         /// get site templates with language code identifier 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="url"></param>
         /// <param name="languageid"></param>
-        /// <param name="url"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;SiteTemplate&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>>> GetSiteTemplatesWithHttpInfoAsync(int languageid, string url = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<SiteTemplate>>> GetSiteTemplatesWithHttpInfoAsync(string url, int languageid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'url' is set
+            if (url == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'url' when calling Office365Api->GetSiteTemplates");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2666,10 +2675,7 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("languageid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(languageid)); // path parameter
-            if (url != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "url", url));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -2699,10 +2705,10 @@ namespace Cloud.Governance.Client.Api
         /// whether user has permission on the site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <returns>bool</returns>
-        public bool HasPermission(string siteurl = default(string), string currentuser = default(string))
+        public bool HasPermission(string siteurl, string currentuser)
         {
             Cloud.Governance.Client.Client.ApiResponse<bool> localVarResponse = HasPermissionWithHttpInfo(siteurl, currentuser);
             return localVarResponse.Data;
@@ -2712,11 +2718,19 @@ namespace Cloud.Governance.Client.Api
         /// whether user has permission on the site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <returns>ApiResponse of bool</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<bool> HasPermissionWithHttpInfo(string siteurl = default(string), string currentuser = default(string))
+        public Cloud.Governance.Client.Client.ApiResponse<bool> HasPermissionWithHttpInfo(string siteurl, string currentuser)
         {
+            // verify the required parameter 'siteurl' is set
+            if (siteurl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteurl' when calling Office365Api->HasPermission");
+
+            // verify the required parameter 'currentuser' is set
+            if (currentuser == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'currentuser' when calling Office365Api->HasPermission");
+
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
             String[] _contentTypes = new String[] {
@@ -2734,14 +2748,8 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (siteurl != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteurl", siteurl));
-            }
-            if (currentuser != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "currentuser", currentuser));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteurl", siteurl));
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "currentuser", currentuser));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -2770,11 +2778,11 @@ namespace Cloud.Governance.Client.Api
         /// whether user has permission on the site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of bool</returns>
-        public async System.Threading.Tasks.Task<bool> HasPermissionAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<bool> HasPermissionAsync(string siteurl, string currentuser, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             Cloud.Governance.Client.Client.ApiResponse<bool> localVarResponse = await HasPermissionWithHttpInfoAsync(siteurl, currentuser, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2784,12 +2792,20 @@ namespace Cloud.Governance.Client.Api
         /// whether user has permission on the site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="siteurl"> (optional)</param>
-        /// <param name="currentuser"> (optional)</param>
+        /// <param name="siteurl"></param>
+        /// <param name="currentuser"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (bool)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<bool>> HasPermissionWithHttpInfoAsync(string siteurl = default(string), string currentuser = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<bool>> HasPermissionWithHttpInfoAsync(string siteurl, string currentuser, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
+            // verify the required parameter 'siteurl' is set
+            if (siteurl == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'siteurl' when calling Office365Api->HasPermission");
+
+            // verify the required parameter 'currentuser' is set
+            if (currentuser == null)
+                throw new Cloud.Governance.Client.Client.ApiException(400, "Missing required parameter 'currentuser' when calling Office365Api->HasPermission");
+
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2809,14 +2825,8 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (siteurl != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteurl", siteurl));
-            }
-            if (currentuser != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "currentuser", currentuser));
-            }
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteurl", siteurl));
+            localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "currentuser", currentuser));
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))

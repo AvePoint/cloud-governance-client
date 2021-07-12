@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
-**AssignTo** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**AssignTo** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **Reason** | **String** |  | [optional] 
 **Status** | **Int32** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **String** |  | [optional] 

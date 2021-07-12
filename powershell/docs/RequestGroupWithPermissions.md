@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **String** |  | [optional] 
-**Description** | **String** |  | [optional] 
-**Users** | [**GroupUser[]**](GroupUser.md) |  | [optional] 
-**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
-**GroupOwner** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**GroupOwnerType** | [**GroupOwnerType**](GroupOwnerType.md) |  | [optional] 
-**BuildInGroupType** | [**SharePointBuildInGroupType**](SharePointBuildInGroupType.md) |  | [optional] 
+**Name** | **String** | Group name | [optional] 
+**Description** | **String** | Group description | [optional] 
+**Users** | [**GroupUser[]**](GroupUser.md) | The list of the group users | [optional] 
+**PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) | The list of the group permission levels | [optional] 
+**GroupOwner** | [**ApiUser**](ApiUser.md) | Group owner information | [optional] 
+**GroupOwnerType** | [**GroupOwnerType**](GroupOwnerType.md) | Group owner type | [optional] 
+**BuildInGroupType** | [**SharePointBuildInGroupType**](SharePointBuildInGroupType.md) | Built-in group type | [optional] 
 
 ## Examples
 

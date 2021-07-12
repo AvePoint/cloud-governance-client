@@ -42,6 +42,9 @@ function New-CreateGroupService {
         ${EnableClassification} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
+        ${PreventDuplicateName} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
         ${EnableSensitivity} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
@@ -200,9 +203,6 @@ function New-CreateGroupService {
         [PSCustomObject]
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [PSCustomObject]
-        ${DepartmentAssignBy} = "BusinessUser",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -220,15 +220,6 @@ function New-CreateGroupService {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Type} = "None",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps} = $false,
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${Departments},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ServiceContact},
@@ -274,6 +265,7 @@ function New-CreateGroupService {
             "EnableOutsideSender" = ${EnableOutsideSender}
             "EnableHideGroupMembership" = ${EnableHideGroupMembership}
             "EnableClassification" = ${EnableClassification}
+            "PreventDuplicateName" = ${PreventDuplicateName}
             "EnableSensitivity" = ${EnableSensitivity}
             "AllowConfigureLeasePeriod" = ${AllowConfigureLeasePeriod}
             "ShowNotebookLink" = ${ShowNotebookLink}
@@ -327,16 +319,12 @@ function New-CreateGroupService {
             "HasImpernastionUsers" = ${HasImpernastionUsers}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}
@@ -368,7 +356,7 @@ function ConvertFrom-JsonToCreateGroupService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGroupService
-        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "EnableSensitivity", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "PreventDuplicateName", "EnableSensitivity", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -433,6 +421,12 @@ function ConvertFrom-JsonToCreateGroupService {
             $EnableClassification = $null
         } else {
             $EnableClassification = $JsonParameters.PSobject.Properties["EnableClassification"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "PreventDuplicateName"))) { #optional property not found
+            $PreventDuplicateName = $null
+        } else {
+            $PreventDuplicateName = $JsonParameters.PSobject.Properties["PreventDuplicateName"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableSensitivity"))) { #optional property not found
@@ -759,12 +753,6 @@ function ConvertFrom-JsonToCreateGroupService {
             $RequestTemplate = $JsonParameters.PSobject.Properties["RequestTemplate"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DepartmentAssignBy"))) { #optional property not found
-            $DepartmentAssignBy = $null
-        } else {
-            $DepartmentAssignBy = $JsonParameters.PSobject.Properties["DepartmentAssignBy"].value
-        }
-
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
             $Metadatas = $null
         } else {
@@ -799,24 +787,6 @@ function ConvertFrom-JsonToCreateGroupService {
             $Type = $null
         } else {
             $Type = $JsonParameters.PSobject.Properties["Type"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LoadDepartmentFromUps"))) { #optional property not found
-            $LoadDepartmentFromUps = $null
-        } else {
-            $LoadDepartmentFromUps = $JsonParameters.PSobject.Properties["LoadDepartmentFromUps"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Departments"))) { #optional property not found
-            $Departments = $null
-        } else {
-            $Departments = $JsonParameters.PSobject.Properties["Departments"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ServiceContact"))) { #optional property not found
@@ -884,6 +854,7 @@ function ConvertFrom-JsonToCreateGroupService {
             "EnableOutsideSender" = ${EnableOutsideSender}
             "EnableHideGroupMembership" = ${EnableHideGroupMembership}
             "EnableClassification" = ${EnableClassification}
+            "PreventDuplicateName" = ${PreventDuplicateName}
             "EnableSensitivity" = ${EnableSensitivity}
             "AllowConfigureLeasePeriod" = ${AllowConfigureLeasePeriod}
             "ShowNotebookLink" = ${ShowNotebookLink}
@@ -938,16 +909,12 @@ function ConvertFrom-JsonToCreateGroupService {
             "HasImpernastionUsers" = ${HasImpernastionUsers}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}

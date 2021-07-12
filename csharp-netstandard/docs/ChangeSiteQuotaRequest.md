@@ -1,16 +1,16 @@
 # Cloud.Governance.Client.Model.ChangeSiteQuotaRequest
+Change site collection quota request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**QuotaSize** | **int** |  | [optional] [default to 0]
-**Action** | **SiteLifecycleActionType** |  | [optional] 
-**ActionDescription** | **string** |  | [optional] [readonly] 
-**SiteId** | **Guid** |  | [optional] 
-**SiteUrl** | **string** |  | [optional] 
+**QuotaSize** | **int** | The new site collection quota size | [optional] [default to 0]
+**Action** | **SiteLifecycleActionType** | Lifecycle management action type | [optional] 
+**ActionDescription** | **string** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**SiteId** | **Guid** | Site collection ID | [optional] 
+**SiteUrl** | **string** | Site collection URL | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

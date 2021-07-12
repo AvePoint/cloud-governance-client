@@ -1282,7 +1282,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Name = "Name_example" # String | service name, case insensitive (optional)
+$Name = "Name_example" # String | service name, case insensitive
 
 # get service id by service name
 try {
@@ -1297,7 +1297,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Name** | **String**| service name, case insensitive | [optional] 
+ **Name** | **String**| service name, case insensitive | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1464,7 +1464,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$Email = "Email_example" # String |  (optional)
+$Email = "Email_example" # String | 
 
 # validate guest user email
 try {
@@ -1480,7 +1480,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
- **Email** | **String**|  | [optional] 
+ **Email** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1525,7 +1525,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$ChangeGroupSettingValidationParameter = (New-ChangeGroupSettingValidationParameter-GroupEmail "GroupEmail_example" -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
+$ChangeGroupSettingValidationParameter = (Initialize-ChangeGroupSettingValidationParameter -GroupEmail "GroupEmail_example" -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
 
 # validate permissions, scope for change group setting service
 try {
@@ -1586,7 +1586,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$SiteValidationParameter = (New-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$SiteValidationParameter = (Initialize-SiteValidationParameter -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change list setting service
 try {
@@ -1647,7 +1647,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$SiteValidationParameter = (New-SiteValidationParameter-Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$SiteValidationParameter = (Initialize-SiteValidationParameter -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change permission service
 try {
@@ -2076,7 +2076,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $Id = "Id_example" # String | 
 $RequestId = "RequestId_example" # String |  (optional)
-$ApiUser = @((New-ApiUser-Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (New-ExternalUserType) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (New-ApiUserType))) # ApiUser[] |  (optional)
+$ApiUser = @((Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType ))) # ApiUser[] |  (optional)
 
 # validate groups can invite
 try {
@@ -2138,7 +2138,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$ListValidationParameter = (New-ListValidationParameter-ListUrl "ListUrl_example" -ParentUrl "ParentUrl_example" -ListTitle "ListTitle_example" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
+$ListValidationParameter = (Initialize-ListValidationParameter -ListUrl "ListUrl_example" -ParentUrl "ParentUrl_example" -ListTitle "ListTitle_example" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
 
 # validate permissions, scope for create list service
 try {
@@ -2199,7 +2199,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$CreateWebValidationParameter = (New-CreateWebValidationParameter-ParentUrl "ParentUrl_example" -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
+$CreateWebValidationParameter = (Initialize-CreateWebValidationParameter -ParentUrl "ParentUrl_example" -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
 
 # validate permissions, scope for create web service
 try {
@@ -2321,7 +2321,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
-$GroupValidationParameter = (New-GroupValidationParameter-GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
+$GroupValidationParameter = (Initialize-GroupValidationParameter -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
 
 # validate permissions, scope for group lifecycle service
 try {

@@ -26,6 +26,9 @@ function New-UpdatableApiUser {
         [PSCustomObject]
         ${ApiUserType} = "User",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${UserSource} = "All",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -56,6 +59,7 @@ function New-UpdatableApiUser {
             "TenantId" = ${TenantId}
             "PeopleFilterProfileId" = ${PeopleFilterProfileId}
             "ApiUserType" = ${ApiUserType}
+            "UserSource" = ${UserSource}
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}
@@ -84,7 +88,7 @@ function ConvertFrom-JsonToUpdatableApiUser {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UpdatableApiUser
-        $AllProperties = $("Email", "JobTitle", "TenantId", "PeopleFilterProfileId", "ApiUserType", "Id", "LoginName", "IsExternalUser", "AzureUserType", "DisplayName", "IsGroup", "IsLocalUser", "PhysicalDeliveryOfficeName", "IsValid", "AdditionalData")
+        $AllProperties = $("Email", "JobTitle", "TenantId", "PeopleFilterProfileId", "ApiUserType", "UserSource", "Id", "LoginName", "IsExternalUser", "AzureUserType", "DisplayName", "IsGroup", "IsLocalUser", "PhysicalDeliveryOfficeName", "IsValid", "AdditionalData")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -119,6 +123,12 @@ function ConvertFrom-JsonToUpdatableApiUser {
             $ApiUserType = $null
         } else {
             $ApiUserType = $JsonParameters.PSobject.Properties["ApiUserType"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "UserSource"))) { #optional property not found
+            $UserSource = $null
+        } else {
+            $UserSource = $JsonParameters.PSobject.Properties["UserSource"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
@@ -187,6 +197,7 @@ function ConvertFrom-JsonToUpdatableApiUser {
             "TenantId" = ${TenantId}
             "PeopleFilterProfileId" = ${PeopleFilterProfileId}
             "ApiUserType" = ${ApiUserType}
+            "UserSource" = ${UserSource}
             "Id" = ${Id}
             "LoginName" = ${LoginName}
             "IsExternalUser" = ${IsExternalUser}

@@ -18,17 +18,12 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum HubSiteType
     {
-        [EnumMember(Value = "0")]
         No = 0,
 
-        [EnumMember(Value = "1")]
         Registere = 1,
 
-        [EnumMember(Value = "2")]
         Associated = 2
 
     }

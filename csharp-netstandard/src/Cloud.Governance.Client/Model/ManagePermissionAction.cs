@@ -18,23 +18,16 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum ManagePermissionAction
     {
-        [EnumMember(Value = "0")]
         None = 0,
 
-        [EnumMember(Value = "1")]
         Added = 1,
 
-        [EnumMember(Value = "2")]
         Changed = 2,
 
-        [EnumMember(Value = "3")]
         Deleted = 3,
 
-        [EnumMember(Value = "4")]
         Copied = 4
 
     }

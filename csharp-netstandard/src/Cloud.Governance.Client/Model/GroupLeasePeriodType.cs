@@ -18,14 +18,10 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum GroupLeasePeriodType
     {
-        [EnumMember(Value = "0")]
         Duration = 0,
 
-        [EnumMember(Value = "1")]
         Date = 1
 
     }

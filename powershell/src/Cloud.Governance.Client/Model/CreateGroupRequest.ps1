@@ -105,9 +105,6 @@ function New-CreateGroupRequest {
         ${ServiceId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Summary},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -165,7 +162,6 @@ function New-CreateGroupRequest {
             "YammerGroupInfo" = ${YammerGroupInfo}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
@@ -192,7 +188,7 @@ function ConvertFrom-JsonToCreateGroupRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGroupRequest
-        $AllProperties = $("GroupType", "GroupId", "GroupIdWithoutPrefixSuffix", "GroupName", "GroupNameWithoutPrefixSuffix", "GroupEmail", "Policy", "GroupDescription", "Owners", "Members", "Privacy", "Subscribe", "OutsideSender", "EnableTeamCollaboration", "Language", "Classification", "Sensitivity", "Links", "LeasePeriodSettings", "TeamsSettings", "AppliedSiteDesignId", "PrimaryContact", "SecondaryContact", "EnableGroupMembershipHidden", "EnableAssignedMembership", "EnableDynamicMembership", "TemplateSettings", "DynamicMembershipRules", "MultiGeoLocation", "HubSiteSettings", "YammerGroupInfo", "Id", "ServiceId", "Department", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("GroupType", "GroupId", "GroupIdWithoutPrefixSuffix", "GroupName", "GroupNameWithoutPrefixSuffix", "GroupEmail", "Policy", "GroupDescription", "Owners", "Members", "Privacy", "Subscribe", "OutsideSender", "EnableTeamCollaboration", "Language", "Classification", "Sensitivity", "Links", "LeasePeriodSettings", "TeamsSettings", "AppliedSiteDesignId", "PrimaryContact", "SecondaryContact", "EnableGroupMembershipHidden", "EnableAssignedMembership", "EnableDynamicMembership", "TemplateSettings", "DynamicMembershipRules", "MultiGeoLocation", "HubSiteSettings", "YammerGroupInfo", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -397,12 +393,6 @@ function ConvertFrom-JsonToCreateGroupRequest {
             $ServiceId = $JsonParameters.PSobject.Properties["ServiceId"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
-        }
-
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Summary"))) { #optional property not found
             $Summary = $null
         } else {
@@ -539,7 +529,6 @@ function ConvertFrom-JsonToCreateGroupRequest {
             "YammerGroupInfo" = ${YammerGroupInfo}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
-            "Department" = ${Department}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}

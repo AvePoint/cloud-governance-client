@@ -12,7 +12,7 @@ get all requests
 
 No description available.
 
-.PARAMETER VarFilter
+.PARAMETER Filter
 Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, ticketNumber, summary, requester, requesterDisplayName, detailStatus, progressStatus, modified, assignTo, assignToDisplayName, serviceAdmin, objectUrl, createdTime
 
 .PARAMETER Orderby
@@ -47,7 +47,7 @@ function Get-AllRequests {
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
-        ${VarFilter},
+        ${Filter},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${Orderby},
@@ -94,7 +94,7 @@ function Get-AllRequests {
 
         $LocalVarUri = '/admin/directory/requests'
 
-        $LocalVarQueryParameters['filter'] = $VarFilter
+        $LocalVarQueryParameters['filter'] = $Filter
 
         $LocalVarQueryParameters['orderby'] = $Orderby
 

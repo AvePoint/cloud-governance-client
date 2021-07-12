@@ -13,7 +13,16 @@ Name | Type | Description | Notes
 **Status** | **GuestUserStatus** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 
 **ProfileName** | **string** |  | [optional] 
+**TenantId** | **Guid** |  | [optional] 
 **NextRenewalDate** | **DateTime?** |  | [optional] 
+**RenewalAssignees** | **string** |  | [optional] 
+**RenewalAssigneeDisplayNames** | **string** |  | [optional] 
+**LastRenewalBy** | **string** |  | [optional] 
+**LastRenewalByDisplayName** | **string** |  | [optional] 
+**ExternalUserState** | **ExternalUserState** |  | [optional] 
+**ExternalUserStateDescription** | **string** |  | [optional] 
+**LastSyncTime** | **DateTime?** |  | [optional] 
+**InviteTime** | **DateTime?** |  | [optional] 
 **Metadata** | [**List&lt;ReportMetadata&gt;**](ReportMetadata.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

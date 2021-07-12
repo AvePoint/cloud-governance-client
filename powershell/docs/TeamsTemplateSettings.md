@@ -3,19 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnableCreateTeamFromScratch** | **Boolean** |  | [optional] [default to $false]
-**EnableCreateTeamFromExistTeam** | **Boolean** |  | [optional] [default to $false]
-**EnableCreateTeamFromTeamTemplate** | **Boolean** |  | [optional] [default to $false]
-**SelectedTemplate** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**SelectedMSTemplate** | [**StringModel**](StringModel.md) |  | [optional] 
-**TeamTemplates** | [**TextModel[]**](TextModel.md) |  | [optional] 
-**EnableCloneChannels** | **Boolean** |  | [optional] [default to $false]
-**EnableCloneApps** | **Boolean** |  | [optional] [default to $false]
-**EnableCloneTabs** | **Boolean** |  | [optional] [default to $false]
-**EnableCloneMembers** | **Boolean** |  | [optional] [default to $false]
-**EnableCloneTeamSetting** | **Boolean** |  | [optional] [default to $false]
-**EnableCloneTeamPrivacy** | **Boolean** |  | [optional] [default to $false]
-**EnableCloneTeamClassification** | **Boolean** |  | [optional] [default to $false]
+**EnableCreateTeamFromScratch** | **Boolean** | Whether to allow business users to create a team from scratch. | [optional] [default to $false]
+**EnableCreateTeamFromExistTeam** | **Boolean** | Whether to allow business users to create a team from an existing team. | [optional] [default to $false]
+**EnableCreateTeamFromTeamTemplate** | **Boolean** | Whether to allow business users to create a team using a team template. | [optional] [default to $false]
+**SelectedTemplate** | [**GuidModel**](GuidModel.md) | The selected custom team template | [optional] 
+**SelectedMSTemplate** | [**StringModel**](StringModel.md) | The selected built-in team template | [optional] 
+**TeamTemplates** | [**TextModel[]**](TextModel.md) | All team templates | [optional] 
+**EnableCloneChannels** | **Boolean** | Set whether copying channels from the team is enabled. | [optional] [default to $false]
+**EnableCloneApps** | **Boolean** | Set whether copying apps from the team is enabled. | [optional] [default to $false]
+**EnableCloneTabs** | **Boolean** | Set whether copying tabs from the team is enabled. | [optional] [default to $false]
+**EnableCloneMembers** | **Boolean** | Set whether copying members from the team is enabled. | [optional] [default to $false]
+**EnableCloneTeamSetting** | **Boolean** | Set whether copying team settings from the team is enabled. | [optional] [default to $false]
+**EnableCloneTeamPrivacy** | **Boolean** | Whether to enable the team privacy. (Currently not supported) | [optional] [default to $false]
+**EnableCloneTeamClassification** | **Boolean** | Whether to enable the team classification. (Currently not supported) | [optional] [default to $false]
 
 ## Examples
 

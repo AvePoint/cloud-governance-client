@@ -18,9 +18,6 @@ function New-MySite {
         ${Title},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
@@ -116,7 +113,6 @@ function New-MySite {
         $PSO = [PSCustomObject]@{
             "FullUrl" = ${FullUrl}
             "Title" = ${Title}
-            "Department" = ${Department}
             "Description" = ${Description}
             "Size" = ${Size}
             "QuotaSize" = ${QuotaSize}
@@ -168,7 +164,7 @@ function ConvertFrom-JsonToMySite {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in MySite
-        $AllProperties = $("FullUrl", "Title", "Department", "Description", "Size", "QuotaSize", "Type", "MySiteType", "Classification", "Sensitivity", "IsCommunicationSite", "CreatedTime", "StorageUsed", "PrimaryAdministrator", "AdditionalAdministrator", "PreferredDataLocation", "PreferredDataLocationName", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
+        $AllProperties = $("FullUrl", "Title", "Description", "Size", "QuotaSize", "Type", "MySiteType", "Classification", "Sensitivity", "IsCommunicationSite", "CreatedTime", "StorageUsed", "PrimaryAdministrator", "AdditionalAdministrator", "PreferredDataLocation", "PreferredDataLocationName", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -185,12 +181,6 @@ function ConvertFrom-JsonToMySite {
             $Title = $null
         } else {
             $Title = $JsonParameters.PSobject.Properties["Title"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Description"))) { #optional property not found
@@ -370,7 +360,6 @@ function ConvertFrom-JsonToMySite {
         $PSO = [PSCustomObject]@{
             "FullUrl" = ${FullUrl}
             "Title" = ${Title}
-            "Department" = ${Department}
             "Description" = ${Description}
             "Size" = ${Size}
             "QuotaSize" = ${QuotaSize}

@@ -8,20 +8,16 @@ Name | Type | Description | Notes
 **GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
 **NetworkId** | **String** |  | [optional] 
 **ScopePeoplePickerFilterProfileId** | **String** |  | [optional] 
-**RequestTemplate** | [**GroupLifecycleRequest**](GroupLifecycleRequest.md) |  | [optional] 
+**RequestTemplate** | [**GroupLifecycleRequest**](GroupLifecycleRequest.md) | Group lifecycle request model | [optional] 
 **ChangePolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
-**Departments** | **String[]** |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
@@ -41,16 +37,12 @@ $GroupLifecycleService = New-Cloud.Governance.ClientGroupLifecycleService  -Tena
  -ScopePeoplePickerFilterProfileId null `
  -RequestTemplate null `
  -ChangePolicyAssignBy null `
- -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `
  -Name null `
  -Description null `
  -Type null `
- -Department null `
- -LoadDepartmentFromUps null `
- -Departments null `
  -ServiceContact null `
  -ServiceAdminContact null `
  -ApproversContainManagerRole null `

@@ -1,21 +1,21 @@
 # Cloud.Governance.Client.Model.ChangeSitePolicyRequest
+Change site collection policy request model
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] [readonly] 
-**IsLeaseEnabled** | **bool** |  | [optional] [default to false]
-**ChangePolicyConfig** | **AssignBy** |  | [optional] 
-**StartDateType** | **StartDateType** |  | [optional] 
-**SpecifyStartDate** | **DateTime?** |  | [optional] 
-**Action** | **SiteLifecycleActionType** |  | [optional] 
-**ActionDescription** | **string** |  | [optional] [readonly] 
-**SiteId** | **Guid** |  | [optional] 
-**SiteUrl** | **string** |  | [optional] 
+**Policy** | [**GuidModel**](GuidModel.md) | The new site collection policy information settings | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original site collection policy information settings | [optional] [readonly] 
+**IsLeaseEnabled** | **bool** | Whether to enable the site collection lease extension. | [optional] [default to false]
+**ChangePolicyConfig** | **AssignBy** | Set how to assign the site collection policy. | [optional] 
+**StartDateType** | **StartDateType** | Site collection lease start date configuration after a policy change | [optional] 
+**SpecifyStartDate** | **DateTime?** | New lease start date | [optional] 
+**Action** | **SiteLifecycleActionType** | Lifecycle management action type | [optional] 
+**ActionDescription** | **string** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
+**SiteId** | **Guid** | Site collection ID | [optional] 
+**SiteUrl** | **string** | Site collection URL | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

@@ -22,7 +22,7 @@
                     GroupId = new Guid(group.Id),
                     Summary = $"Summary_{DateTime.Now}",
                     GroupObjectType = GroupObjectType.Group,
-                    Department = service.Department,
+                    //Department = service.Department,
                     ExtendDuration = 1,
                     ExtendDurationType = ApiDurationType.Week
                 };

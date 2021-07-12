@@ -23,11 +23,10 @@ Name | Type | Description | Notes
 **GroupPermissions** | [**RequestGroupWithPermissions[]**](RequestGroupWithPermissions.md) | Site collection SharePoint group setting | [optional] 
 **YammerGroupSettings** | [**YammerGroupRequestSettings**](YammerGroupRequestSettings.md) | Yammer group setting | [optional] 
 **LeasePeriodSettings** | [**SiteLeasePeriodRequestSettings**](SiteLeasePeriodRequestSettings.md) | Lease period setting | [optional] 
-**MultiGeoLocation** | [**GeoLocationBase**](GeoLocationBase.md) | Multi-geo lication | [optional] 
+**MultiGeoLocation** | [**GeoLocationBase**](GeoLocationBase.md) | Multi-geo location | [optional] 
 **InputTitle** | **String** | Site collection title without prefix and sufix when service enables constructing title | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -74,7 +73,6 @@ $CreateSiteRequest = New-Cloud.Governance.ClientCreateSiteRequest  -SiteTitle nu
  -InputTitle null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

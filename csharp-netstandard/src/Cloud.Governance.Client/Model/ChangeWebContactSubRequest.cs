@@ -41,7 +41,7 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ChangeWebContactSubRequest" /> class.
         /// </summary>
         /// <param name="id">id.</param>
-        /// <param name="assignTo">assignTo.</param>
+        /// <param name="assignTo">ApiUser model.</param>
         /// <param name="reason">reason.</param>
         /// <param name="statusDescription">statusDescription.</param>
         /// <param name="contactChangeSettings">contactChangeSettings.</param>
@@ -61,8 +61,9 @@ namespace Cloud.Governance.Client.Model
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets AssignTo
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "assignTo", EmitDefaultValue = true)]
         public ApiUser AssignTo { get; set; }
 

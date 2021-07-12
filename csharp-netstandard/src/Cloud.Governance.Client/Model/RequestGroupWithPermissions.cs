@@ -18,31 +18,33 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// RequestGroupWithPermissions
+    /// Group permissions model in request
     /// </summary>
     [DataContract(Name = "RequestGroupWithPermissions")]
     public partial class RequestGroupWithPermissions : IEquatable<RequestGroupWithPermissions>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets GroupOwnerType
+        /// Group owner type
         /// </summary>
+        /// <value>Group owner type</value>
         [DataMember(Name = "groupOwnerType", EmitDefaultValue = false)]
         public GroupOwnerType? GroupOwnerType { get; set; }
         /// <summary>
-        /// Gets or Sets BuildInGroupType
+        /// Built-in group type
         /// </summary>
+        /// <value>Built-in group type</value>
         [DataMember(Name = "buildInGroupType", EmitDefaultValue = false)]
         public SharePointBuildInGroupType? BuildInGroupType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestGroupWithPermissions" /> class.
         /// </summary>
-        /// <param name="name">name.</param>
-        /// <param name="description">description.</param>
-        /// <param name="users">users.</param>
-        /// <param name="permissionLevels">permissionLevels.</param>
-        /// <param name="groupOwner">groupOwner.</param>
-        /// <param name="groupOwnerType">groupOwnerType.</param>
-        /// <param name="buildInGroupType">buildInGroupType.</param>
+        /// <param name="name">Group name.</param>
+        /// <param name="description">Group description.</param>
+        /// <param name="users">The list of the group users.</param>
+        /// <param name="permissionLevels">The list of the group permission levels.</param>
+        /// <param name="groupOwner">Group owner information.</param>
+        /// <param name="groupOwnerType">Group owner type.</param>
+        /// <param name="buildInGroupType">Built-in group type.</param>
         public RequestGroupWithPermissions(string name = default(string), string description = default(string), List<GroupUser> users = default(List<GroupUser>), List<PermissionLevel> permissionLevels = default(List<PermissionLevel>), ApiUser groupOwner = default(ApiUser), GroupOwnerType? groupOwnerType = default(GroupOwnerType?), SharePointBuildInGroupType? buildInGroupType = default(SharePointBuildInGroupType?))
         {
             this.Name = name;
@@ -55,32 +57,37 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Group name
         /// </summary>
+        /// <value>Group name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Group description
         /// </summary>
+        /// <value>Group description</value>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Users
+        /// The list of the group users
         /// </summary>
+        /// <value>The list of the group users</value>
         [DataMember(Name = "users", EmitDefaultValue = true)]
         public List<GroupUser> Users { get; set; }
 
         /// <summary>
-        /// Gets or Sets PermissionLevels
+        /// The list of the group permission levels
         /// </summary>
+        /// <value>The list of the group permission levels</value>
         [DataMember(Name = "permissionLevels", EmitDefaultValue = true)]
         public List<PermissionLevel> PermissionLevels { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupOwner
+        /// Group owner information
         /// </summary>
+        /// <value>Group owner information</value>
         [DataMember(Name = "groupOwner", EmitDefaultValue = true)]
         public ApiUser GroupOwner { get; set; }
 

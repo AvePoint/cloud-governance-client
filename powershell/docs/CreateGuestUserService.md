@@ -6,26 +6,24 @@ Name | Type | Description | Notes
 **TenantId** | **String** |  | [optional] 
 **EnableInviteOwnersGroup** | **Boolean** |  | [optional] [default to $false]
 **EnableInviteContactGroup** | **Boolean** |  | [optional] [default to $false]
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **PrimaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContactAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**Manager** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ManagerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **EnableOnTimeRenewal** | **Boolean** |  | [optional] [default to $false]
 **OneTimeDuration** | **Int32** |  | [optional] [default to 0]
 **OneTimeDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **RequestTemplate** | [**CreateGuestUserRequest**](CreateGuestUserRequest.md) |  | [optional] 
-**DepartmentAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**Department** | **String** |  | [optional] 
-**LoadDepartmentFromUps** | **Boolean** |  | [optional] [default to $false]
-**Departments** | **String[]** |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
@@ -45,20 +43,18 @@ $CreateGuestUserService = New-Cloud.Governance.ClientCreateGuestUserService  -Te
  -PrimaryContactAssignBy null `
  -SecondaryContact null `
  -SecondaryContactAssignBy null `
+ -Manager null `
+ -ManagerAssignBy null `
  -EnableOnTimeRenewal null `
  -OneTimeDuration null `
  -OneTimeDurationType null `
  -RequestTemplate null `
- -DepartmentAssignBy null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `
  -Name null `
  -Description null `
  -Type null `
- -Department null `
- -LoadDepartmentFromUps null `
- -Departments null `
  -ServiceContact null `
  -ServiceAdminContact null `
  -ApproversContainManagerRole null `

@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **IsValidateByProfile** | **bool** |  | [optional] [default to false]
 **ProxyAddresses** | **List&lt;string&gt;** |  | [optional] 
 **PrincipalType** | **PrincipalType** |  | [optional] 
+**Inviter** | **string** |  | [optional] 
 **Id** | **int** |  | [optional] [default to 0]
 **DisplayName** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 

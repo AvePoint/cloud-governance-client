@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NameOrId** | **String** |  | [optional] 
-**Description** | **String** |  | [optional] 
-**Type** | [**YammerGroupType**](YammerGroupType.md) |  | [optional] 
-**JoinType** | [**YammerGroupJoinType**](YammerGroupJoinType.md) |  | [optional] 
-**IsListInDirectory** | **Boolean** |  | [optional] [default to $false]
-**IsGroupAlreadyExisted** | **Boolean** |  | [optional] [default to $false]
+**NameOrId** | **String** | Yammer community name or ID | [optional] 
+**Description** | **String** | Yammer community description | [optional] 
+**Type** | [**YammerGroupType**](YammerGroupType.md) | Yammer community privacy type | [optional] 
+**JoinType** | [**YammerGroupJoinType**](YammerGroupJoinType.md) | Set who can view Yammer community content. Whether to allow every user in the Yammer network to view the community content or allow users approved by community members to view the community content. | [optional] 
+**IsListInDirectory** | **Boolean** | Whether the Yammer community is associated with a Microsoft 365 Group. | [optional] [default to $false]
+**IsGroupAlreadyExisted** | **Boolean** | Whether the Yammer community already exists. | [optional] [default to $false]
 
 ## Examples
 

@@ -18,29 +18,31 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// GroupLeasePeriodSettings
+    /// Group lease period settings model
     /// </summary>
     [DataContract(Name = "GroupLeasePeriodSettings")]
     public partial class GroupLeasePeriodSettings : IEquatable<GroupLeasePeriodSettings>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets LeaseType
+        /// Group lease period extension type
         /// </summary>
+        /// <value>Group lease period extension type</value>
         [DataMember(Name = "leaseType", EmitDefaultValue = false)]
         public GroupLeasePeriodType? LeaseType { get; set; }
         /// <summary>
-        /// Gets or Sets DurationType
+        /// Duration type of the group lease period
         /// </summary>
+        /// <value>Duration type of the group lease period</value>
         [DataMember(Name = "durationType", EmitDefaultValue = false)]
         public ApiDurationType? DurationType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupLeasePeriodSettings" /> class.
         /// </summary>
-        /// <param name="isEnabled">isEnabled (default to false).</param>
-        /// <param name="leaseType">leaseType.</param>
-        /// <param name="durationType">durationType.</param>
-        /// <param name="durationInterval">durationInterval (default to 0).</param>
-        /// <param name="leaseExpirationDate">leaseExpirationDate.</param>
+        /// <param name="isEnabled">Whether group extend lease is enabled after expiration (default to false).</param>
+        /// <param name="leaseType">Group lease period extension type.</param>
+        /// <param name="durationType">Duration type of the group lease period.</param>
+        /// <param name="durationInterval">Group lease period (default to 0).</param>
+        /// <param name="leaseExpirationDate">Group lease expiration date and time.</param>
         public GroupLeasePeriodSettings(bool isEnabled = false, GroupLeasePeriodType? leaseType = default(GroupLeasePeriodType?), ApiDurationType? durationType = default(ApiDurationType?), int durationInterval = 0, DateTime? leaseExpirationDate = default(DateTime?))
         {
             this.IsEnabled = isEnabled;
@@ -51,20 +53,23 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets IsEnabled
+        /// Whether group extend lease is enabled after expiration
         /// </summary>
+        /// <value>Whether group extend lease is enabled after expiration</value>
         [DataMember(Name = "isEnabled", EmitDefaultValue = false)]
         public bool IsEnabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets DurationInterval
+        /// Group lease period
         /// </summary>
+        /// <value>Group lease period</value>
         [DataMember(Name = "durationInterval", EmitDefaultValue = false)]
         public int DurationInterval { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeaseExpirationDate
+        /// Group lease expiration date and time
         /// </summary>
+        /// <value>Group lease expiration date and time</value>
         [DataMember(Name = "leaseExpirationDate", EmitDefaultValue = true)]
         public DateTime? LeaseExpirationDate { get; set; }
 

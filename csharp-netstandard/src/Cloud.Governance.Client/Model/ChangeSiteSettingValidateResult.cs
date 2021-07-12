@@ -40,9 +40,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isHubSite">isHubSite (default to false).</param>
         /// <param name="associatedHubSiteId">associatedHubSiteId.</param>
         /// <param name="metadatas">metadatas.</param>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
-        /// <param name="primaryAdministrator">primaryAdministrator.</param>
+        /// <param name="primaryContact">ApiUser model.</param>
+        /// <param name="secondaryContact">ApiUser model.</param>
+        /// <param name="primaryAdministrator">ApiUser model.</param>
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
@@ -120,20 +120,23 @@ namespace Cloud.Governance.Client.Model
         public List<CustomMetadata> Metadatas { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryAdministrator
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryAdministrator", EmitDefaultValue = true)]
         public ApiUser PrimaryAdministrator { get; set; }
 

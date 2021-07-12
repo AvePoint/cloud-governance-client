@@ -63,23 +63,22 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webTemplate">webTemplate.</param>
         /// <param name="parentSiteUrl">parentSiteUrl.</param>
         /// <param name="parentWebUrl">parentWebUrl.</param>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
+        /// <param name="primaryContact">ApiUser model.</param>
+        /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="userPermissions">userPermissions.</param>
         /// <param name="groupPermissions">groupPermissions.</param>
-        /// <param name="yammerGroupSettings">yammerGroupSettings.</param>
+        /// <param name="yammerGroupSettings">Yammer community request settings model.</param>
         /// <param name="isOnQuickLaunch">isOnQuickLaunch (default to false).</param>
         /// <param name="isOnTopLinkBar">isOnTopLinkBar (default to false).</param>
         /// <param name="isInheritance">isInheritance (default to false).</param>
         /// <param name="deploymentManagerPlanName">deploymentManagerPlanName.</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
-        /// <param name="department">Department of requester..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public CreateWebRequest(string webName = default(string), string webTitle = default(string), string webDescription = default(string), IntModel webLanguage = default(IntModel), string webTemplate = default(string), string parentSiteUrl = default(string), string parentWebUrl = default(string), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), bool isOnQuickLaunch = false, bool isOnTopLinkBar = false, bool isInheritance = false, string deploymentManagerPlanName = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public CreateWebRequest(string webName = default(string), string webTitle = default(string), string webDescription = default(string), IntModel webLanguage = default(IntModel), string webTemplate = default(string), string parentSiteUrl = default(string), string parentWebUrl = default(string), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), bool isOnQuickLaunch = false, bool isOnTopLinkBar = false, bool isInheritance = false, string deploymentManagerPlanName = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.WebName = webName;
             this.WebTitle = webTitle;
@@ -99,7 +98,6 @@ namespace Cloud.Governance.Client.Model
             this.DeploymentManagerPlanName = deploymentManagerPlanName;
             this.Id = id;
             this.ServiceId = serviceId;
-            this.Department = department;
             this.Summary = summary;
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
@@ -149,14 +147,16 @@ namespace Cloud.Governance.Client.Model
         public string ParentWebUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
@@ -173,8 +173,9 @@ namespace Cloud.Governance.Client.Model
         public List<RequestGroupWithPermissions> GroupPermissions { get; set; }
 
         /// <summary>
-        /// Gets or Sets YammerGroupSettings
+        /// Yammer community request settings model
         /// </summary>
+        /// <value>Yammer community request settings model</value>
         [DataMember(Name = "yammerGroupSettings", EmitDefaultValue = true)]
         public YammerGroupRequestSettings YammerGroupSettings { get; set; }
 
@@ -215,13 +216,6 @@ namespace Cloud.Governance.Client.Model
         /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
-
-        /// <summary>
-        /// Department of requester.
-        /// </summary>
-        /// <value>Department of requester.</value>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
 
         /// <summary>
         /// Summary of request.
@@ -453,7 +447,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  DeploymentManagerPlanName: ").Append(DeploymentManagerPlanName).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  NotesToApprovers: ").Append(NotesToApprovers).Append("\n");
             sb.Append("  QuestionnaireId: ").Append(QuestionnaireId).Append("\n");
@@ -595,11 +588,6 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceId.Equals(input.ServiceId))
                 ) && 
                 (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
-                ) && 
-                (
                     this.Summary == input.Summary ||
                     (this.Summary != null &&
                     this.Summary.Equals(input.Summary))
@@ -726,8 +714,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)
                     hashCode = hashCode * 59 + this.ServiceId.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
                 if (this.NotesToApprovers != null)

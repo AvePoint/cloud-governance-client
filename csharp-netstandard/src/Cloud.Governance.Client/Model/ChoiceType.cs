@@ -18,17 +18,12 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum ChoiceType
     {
-        [EnumMember(Value = "1")]
         DropDown = 1,
 
-        [EnumMember(Value = "2")]
         RadioButton = 2,
 
-        [EnumMember(Value = "3")]
         CheckBoxes = 3
 
     }

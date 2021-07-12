@@ -5,13 +5,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UserProperties** | [**GuestUserPropertyModel**](GuestUserPropertyModel.md) |  | [optional] 
 **WelcomeEmailMessage** | **String** |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **InviteGroups** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **OneTimeSettings** | [**GuestUserRequestOneTimeRenewalSettingModel**](GuestUserRequestOneTimeRenewalSettingModel.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
-**Department** | **String** | Department of requester. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
@@ -42,7 +41,6 @@ $CreateGuestUserRequest = New-Cloud.Governance.ClientCreateGuestUserRequest  -Us
  -OneTimeSettings null `
  -Id null `
  -ServiceId null `
- -Department null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `

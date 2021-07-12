@@ -18,14 +18,10 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum AutoGenerateUrlType
     {
-        [EnumMember(Value = "0")]
         SequentialNumber = 0,
 
-        [EnumMember(Value = "1")]
         RandomString = 1
 
     }

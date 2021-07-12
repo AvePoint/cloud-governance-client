@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Urls** | **List&lt;string&gt;** |  | [optional] 
-**SourceUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**TargetUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**SourceUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**TargetUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **CloneOption** | **ClonePermissionOption** |  | [optional] 
 **AdditionalCloneOption** | **ClonePermissionAdditionalOption** |  | [optional] 
 **EnabledRemoveExplicitPermission** | **bool** |  | [optional] [default to false]
@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **EnabledDeleteUserPermission** | **bool** |  | [optional] [default to false]
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
-**Department** | **string** | Department of requester. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 

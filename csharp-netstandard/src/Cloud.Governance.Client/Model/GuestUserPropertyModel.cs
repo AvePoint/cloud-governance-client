@@ -33,7 +33,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="usageLocation">usageLocation.</param>
         /// <param name="jobTitle">jobTitle.</param>
         /// <param name="jobDepartment">jobDepartment.</param>
-        public GuestUserPropertyModel(string displayName = default(string), string firstName = default(string), string lastName = default(string), string userName = default(string), string usageLocation = default(string), string jobTitle = default(string), string jobDepartment = default(string))
+        /// <param name="manager">ApiUser model.</param>
+        public GuestUserPropertyModel(string displayName = default(string), string firstName = default(string), string lastName = default(string), string userName = default(string), string usageLocation = default(string), string jobTitle = default(string), string jobDepartment = default(string), ApiUser manager = default(ApiUser))
         {
             this.DisplayName = displayName;
             this.FirstName = firstName;
@@ -42,6 +43,7 @@ namespace Cloud.Governance.Client.Model
             this.UsageLocation = usageLocation;
             this.JobTitle = jobTitle;
             this.JobDepartment = jobDepartment;
+            this.Manager = manager;
         }
 
         /// <summary>
@@ -87,6 +89,13 @@ namespace Cloud.Governance.Client.Model
         public string JobDepartment { get; set; }
 
         /// <summary>
+        /// ApiUser model
+        /// </summary>
+        /// <value>ApiUser model</value>
+        [DataMember(Name = "manager", EmitDefaultValue = true)]
+        public ApiUser Manager { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,6 +110,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  UsageLocation: ").Append(UsageLocation).Append("\n");
             sb.Append("  JobTitle: ").Append(JobTitle).Append("\n");
             sb.Append("  JobDepartment: ").Append(JobDepartment).Append("\n");
+            sb.Append("  Manager: ").Append(Manager).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +179,11 @@ namespace Cloud.Governance.Client.Model
                     this.JobDepartment == input.JobDepartment ||
                     (this.JobDepartment != null &&
                     this.JobDepartment.Equals(input.JobDepartment))
+                ) && 
+                (
+                    this.Manager == input.Manager ||
+                    (this.Manager != null &&
+                    this.Manager.Equals(input.Manager))
                 );
         }
 
@@ -195,6 +210,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.JobTitle.GetHashCode();
                 if (this.JobDepartment != null)
                     hashCode = hashCode * 59 + this.JobDepartment.GetHashCode();
+                if (this.Manager != null)
+                    hashCode = hashCode * 59 + this.Manager.GetHashCode();
                 return hashCode;
             }
         }

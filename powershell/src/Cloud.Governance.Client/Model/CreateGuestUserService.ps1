@@ -32,6 +32,12 @@ function New-CreateGuestUserService {
         [PSCustomObject]
         ${SecondaryContactAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${Manager},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${ManagerAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${EnableOnTimeRenewal} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -43,9 +49,6 @@ function New-CreateGuestUserService {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${RequestTemplate},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [PSCustomObject]
-        ${DepartmentAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
@@ -64,15 +67,6 @@ function New-CreateGuestUserService {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Type} = "None",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Department},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Boolean]]
-        ${LoadDepartmentFromUps} = $false,
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String[]]
-        ${Departments},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ServiceContact},
@@ -115,20 +109,18 @@ function New-CreateGuestUserService {
             "PrimaryContactAssignBy" = ${PrimaryContactAssignBy}
             "SecondaryContact" = ${SecondaryContact}
             "SecondaryContactAssignBy" = ${SecondaryContactAssignBy}
+            "Manager" = ${Manager}
+            "ManagerAssignBy" = ${ManagerAssignBy}
             "EnableOnTimeRenewal" = ${EnableOnTimeRenewal}
             "OneTimeDuration" = ${OneTimeDuration}
             "OneTimeDurationType" = ${OneTimeDurationType}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}
@@ -160,7 +152,7 @@ function ConvertFrom-JsonToCreateGuestUserService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGuestUserService
-        $AllProperties = $("TenantId", "EnableInviteOwnersGroup", "EnableInviteContactGroup", "PrimaryContact", "PrimaryContactAssignBy", "SecondaryContact", "SecondaryContactAssignBy", "EnableOnTimeRenewal", "OneTimeDuration", "OneTimeDurationType", "RequestTemplate", "DepartmentAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "Department", "LoadDepartmentFromUps", "Departments", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("TenantId", "EnableInviteOwnersGroup", "EnableInviteContactGroup", "PrimaryContact", "PrimaryContactAssignBy", "SecondaryContact", "SecondaryContactAssignBy", "Manager", "ManagerAssignBy", "EnableOnTimeRenewal", "OneTimeDuration", "OneTimeDurationType", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -209,6 +201,18 @@ function ConvertFrom-JsonToCreateGuestUserService {
             $SecondaryContactAssignBy = $JsonParameters.PSobject.Properties["SecondaryContactAssignBy"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Manager"))) { #optional property not found
+            $Manager = $null
+        } else {
+            $Manager = $JsonParameters.PSobject.Properties["Manager"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ManagerAssignBy"))) { #optional property not found
+            $ManagerAssignBy = $null
+        } else {
+            $ManagerAssignBy = $JsonParameters.PSobject.Properties["ManagerAssignBy"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableOnTimeRenewal"))) { #optional property not found
             $EnableOnTimeRenewal = $null
         } else {
@@ -231,12 +235,6 @@ function ConvertFrom-JsonToCreateGuestUserService {
             $RequestTemplate = $null
         } else {
             $RequestTemplate = $JsonParameters.PSobject.Properties["RequestTemplate"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DepartmentAssignBy"))) { #optional property not found
-            $DepartmentAssignBy = $null
-        } else {
-            $DepartmentAssignBy = $JsonParameters.PSobject.Properties["DepartmentAssignBy"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
@@ -273,24 +271,6 @@ function ConvertFrom-JsonToCreateGuestUserService {
             $Type = $null
         } else {
             $Type = $JsonParameters.PSobject.Properties["Type"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Department"))) { #optional property not found
-            $Department = $null
-        } else {
-            $Department = $JsonParameters.PSobject.Properties["Department"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LoadDepartmentFromUps"))) { #optional property not found
-            $LoadDepartmentFromUps = $null
-        } else {
-            $LoadDepartmentFromUps = $JsonParameters.PSobject.Properties["LoadDepartmentFromUps"].value
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Departments"))) { #optional property not found
-            $Departments = $null
-        } else {
-            $Departments = $JsonParameters.PSobject.Properties["Departments"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ServiceContact"))) { #optional property not found
@@ -355,20 +335,18 @@ function ConvertFrom-JsonToCreateGuestUserService {
             "PrimaryContactAssignBy" = ${PrimaryContactAssignBy}
             "SecondaryContact" = ${SecondaryContact}
             "SecondaryContactAssignBy" = ${SecondaryContactAssignBy}
+            "Manager" = ${Manager}
+            "ManagerAssignBy" = ${ManagerAssignBy}
             "EnableOnTimeRenewal" = ${EnableOnTimeRenewal}
             "OneTimeDuration" = ${OneTimeDuration}
             "OneTimeDurationType" = ${OneTimeDurationType}
             "RequestTemplate" = ${RequestTemplate}
-            "DepartmentAssignBy" = ${DepartmentAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
             "Name" = ${Name}
             "Description" = ${Description}
             "Type" = ${Type}
-            "Department" = ${Department}
-            "LoadDepartmentFromUps" = ${LoadDepartmentFromUps}
-            "Departments" = ${Departments}
             "ServiceContact" = ${ServiceContact}
             "ServiceAdminContact" = ${ServiceAdminContact}
             "ApproversContainManagerRole" = ${ApproversContainManagerRole}

@@ -1741,7 +1741,7 @@ Name | Type | Description  | Notes
 
 <a name="getserviceid"></a>
 # **GetServiceId**
-> Guid GetServiceId (string name = null)
+> Guid GetServiceId (string name)
 
 get service id by service name
 
@@ -1774,7 +1774,7 @@ namespace Example
 
             var apiInstance = new ServicesApi(config);
 
-            var name = name_example;  // string | service name, case insensitive (optional) 
+            var name = name_example;  // string | service name, case insensitive
 
             try
             {
@@ -1797,7 +1797,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**| service name, case insensitive | [optional] 
+ **name** | **string**| service name, case insensitive | 
 
 ### Return type
 
@@ -1994,7 +1994,7 @@ Name | Type | Description  | Notes
 
 <a name="validateemailforcreateguestuserservice"></a>
 # **ValidateEmailForCreateGuestUserService**
-> ObjectValidateResult ValidateEmailForCreateGuestUserService (Guid id, string email = null)
+> ObjectValidateResult ValidateEmailForCreateGuestUserService (Guid id, string email)
 
 validate guest user email
 
@@ -2028,7 +2028,7 @@ namespace Example
             var apiInstance = new ServicesApi(config);
 
             var id = new Guid(); // Guid | 
-            var email = email_example;  // string |  (optional) 
+            var email = email_example;  // string | 
 
             try
             {
@@ -2052,7 +2052,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **email** | **string**|  | [optional] 
+ **email** | **string**|  | 
 
 ### Return type
 

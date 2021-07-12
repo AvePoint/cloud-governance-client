@@ -78,10 +78,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupDescription">groupDescription.</param>
         /// <param name="originalGroupDescription">originalGroupDescription.</param>
         /// <param name="originalYammerGroupInfo">originalYammerGroupInfo.</param>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="originalPrimaryContact">originalPrimaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
-        /// <param name="originalSecondaryContact">originalSecondaryContact.</param>
+        /// <param name="primaryContact">ApiUser model.</param>
+        /// <param name="originalPrimaryContact">ApiUser model.</param>
+        /// <param name="secondaryContact">ApiUser model.</param>
+        /// <param name="originalSecondaryContact">ApiUser model.</param>
         /// <param name="groupOwners">groupOwners.</param>
         /// <param name="groupMembers">groupMembers.</param>
         /// <param name="isDynamicMembership">isDynamicMembership (default to false).</param>
@@ -109,12 +109,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableTeamCollaboration">enableTeamCollaboration (default to false).</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
-        /// <param name="department">Department of requester..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ChangeGroupSettingRequest(Guid groupId = default(Guid), string groupEmail = default(string), string groupName = default(string), string originalGroupName = default(string), string groupDescription = default(string), string originalGroupDescription = default(string), string originalYammerGroupInfo = default(string), ApiUser primaryContact = default(ApiUser), ApiUser originalPrimaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser originalSecondaryContact = default(ApiUser), List<GroupMembershipItem> groupOwners = default(List<GroupMembershipItem>), List<GroupMembershipItem> groupMembers = default(List<GroupMembershipItem>), bool isDynamicMembership = false, List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), bool enabledSubscribe = false, bool originalEnabledSubscribe = false, bool enabledOutsideSender = false, bool originalEnabledOutsideSender = false, ChangeHubsiteActionType? hubSiteActionType = default(ChangeHubsiteActionType?), Guid? associateHubSiteId = default(Guid?), string associateHubSiteTitle = default(string), string classification = default(string), string originalClassification = default(string), string sensitivity = default(string), string originalSensitivity = default(string), bool enableTeams = false, bool originalEnableTeams = false, List<RequestMetadata> groupMetadatas = default(List<RequestMetadata>), List<RequestMetadata> originalGroupMetadata = default(List<RequestMetadata>), AddGroupMemberType? changedDynamicGroupType = default(AddGroupMemberType?), string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), bool enableTeamCollaboration = false, Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ChangeGroupSettingRequest(Guid groupId = default(Guid), string groupEmail = default(string), string groupName = default(string), string originalGroupName = default(string), string groupDescription = default(string), string originalGroupDescription = default(string), string originalYammerGroupInfo = default(string), ApiUser primaryContact = default(ApiUser), ApiUser originalPrimaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser originalSecondaryContact = default(ApiUser), List<GroupMembershipItem> groupOwners = default(List<GroupMembershipItem>), List<GroupMembershipItem> groupMembers = default(List<GroupMembershipItem>), bool isDynamicMembership = false, List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), bool enabledSubscribe = false, bool originalEnabledSubscribe = false, bool enabledOutsideSender = false, bool originalEnabledOutsideSender = false, ChangeHubsiteActionType? hubSiteActionType = default(ChangeHubsiteActionType?), Guid? associateHubSiteId = default(Guid?), string associateHubSiteTitle = default(string), string classification = default(string), string originalClassification = default(string), string sensitivity = default(string), string originalSensitivity = default(string), bool enableTeams = false, bool originalEnableTeams = false, List<RequestMetadata> groupMetadatas = default(List<RequestMetadata>), List<RequestMetadata> originalGroupMetadata = default(List<RequestMetadata>), AddGroupMemberType? changedDynamicGroupType = default(AddGroupMemberType?), string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), bool enableTeamCollaboration = false, Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.GroupId = groupId;
             this.GroupEmail = groupEmail;
@@ -154,7 +153,6 @@ namespace Cloud.Governance.Client.Model
             this.EnableTeamCollaboration = enableTeamCollaboration;
             this.Id = id;
             this.ServiceId = serviceId;
-            this.Department = department;
             this.Summary = summary;
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
@@ -204,26 +202,30 @@ namespace Cloud.Governance.Client.Model
         public string OriginalYammerGroupInfo { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets OriginalPrimaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "originalPrimaryContact", EmitDefaultValue = true)]
         public ApiUser OriginalPrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets OriginalSecondaryContact
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "originalSecondaryContact", EmitDefaultValue = true)]
         public ApiUser OriginalSecondaryContact { get; set; }
 
@@ -372,13 +374,6 @@ namespace Cloud.Governance.Client.Model
         /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
-
-        /// <summary>
-        /// Department of requester.
-        /// </summary>
-        /// <value>Department of requester.</value>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
 
         /// <summary>
         /// Summary of request.
@@ -630,7 +625,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  EnableTeamCollaboration: ").Append(EnableTeamCollaboration).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  NotesToApprovers: ").Append(NotesToApprovers).Append("\n");
             sb.Append("  QuestionnaireId: ").Append(QuestionnaireId).Append("\n");
@@ -867,11 +861,6 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceId.Equals(input.ServiceId))
                 ) && 
                 (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
-                ) && 
-                (
                     this.Summary == input.Summary ||
                     (this.Summary != null &&
                     this.Summary.Equals(input.Summary))
@@ -1030,8 +1019,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)
                     hashCode = hashCode * 59 + this.ServiceId.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
                 if (this.NotesToApprovers != null)

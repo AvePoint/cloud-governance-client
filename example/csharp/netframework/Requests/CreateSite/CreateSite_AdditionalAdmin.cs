@@ -25,7 +25,7 @@ namespace NetFramework
                 request.SiteUrl.Name = $"Api{DateTime.Now.Ticks}";
                 request.Summary = $"Summary_{DateTime.Now}";
                 request.SiteTitle = $"Title_{DateTime.Now}";
-                request.Department = data.Department;
+                ////request.Department = data.Department;
                 request.PrimaryContact = new ApiUser { LoginName = data.PrimaryContactLoginName };
                 request.SecondaryContact = new ApiUser { LoginName = data.SecondaryContactLoginName };
                 request.AdditionalAdmins = new List<ApiUser>();

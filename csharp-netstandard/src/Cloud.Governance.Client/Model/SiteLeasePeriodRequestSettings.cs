@@ -18,28 +18,30 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// SiteLeasePeriodRequestSettings
+    /// Site Collection lease period request settings model
     /// </summary>
     [DataContract(Name = "SiteLeasePeriodRequestSettings")]
     public partial class SiteLeasePeriodRequestSettings : IEquatable<SiteLeasePeriodRequestSettings>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets LeaseDurationType
+        /// Duration type of the site collection lease period
         /// </summary>
+        /// <value>Duration type of the site collection lease period</value>
         [DataMember(Name = "leaseDurationType", EmitDefaultValue = false)]
         public ApiDurationType? LeaseDurationType { get; set; }
         /// <summary>
-        /// Gets or Sets LeaseWarningDurationType
+        /// Duration type of the site collection lease expiration warning interval
         /// </summary>
+        /// <value>Duration type of the site collection lease expiration warning interval</value>
         [DataMember(Name = "leaseWarningDurationType", EmitDefaultValue = false)]
         public ApiDurationType? LeaseWarningDurationType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="SiteLeasePeriodRequestSettings" /> class.
         /// </summary>
-        /// <param name="leaseInterval">leaseInterval (default to 0).</param>
-        /// <param name="leaseDurationType">leaseDurationType.</param>
-        /// <param name="leaseWarningInterval">leaseWarningInterval (default to 0).</param>
-        /// <param name="leaseWarningDurationType">leaseWarningDurationType.</param>
+        /// <param name="leaseInterval">Site Collection lease period (default to 0).</param>
+        /// <param name="leaseDurationType">Duration type of the site collection lease period.</param>
+        /// <param name="leaseWarningInterval">Site collection lease expiration warning interval (default to 0).</param>
+        /// <param name="leaseWarningDurationType">Duration type of the site collection lease expiration warning interval.</param>
         public SiteLeasePeriodRequestSettings(int leaseInterval = 0, ApiDurationType? leaseDurationType = default(ApiDurationType?), int leaseWarningInterval = 0, ApiDurationType? leaseWarningDurationType = default(ApiDurationType?))
         {
             this.LeaseInterval = leaseInterval;
@@ -49,14 +51,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets LeaseInterval
+        /// Site Collection lease period
         /// </summary>
+        /// <value>Site Collection lease period</value>
         [DataMember(Name = "leaseInterval", EmitDefaultValue = false)]
         public int LeaseInterval { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeaseWarningInterval
+        /// Site collection lease expiration warning interval
         /// </summary>
+        /// <value>Site collection lease expiration warning interval</value>
         [DataMember(Name = "leaseWarningInterval", EmitDefaultValue = false)]
         public int LeaseWarningInterval { get; set; }
 

@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **String** |  | [optional] 
-**IdInSharePoint** | **Int32** |  | [optional] [default to 0]
-**Name** | **String** |  | [optional] 
-**Description** | **String** |  | [optional] [readonly] 
-**IsExcluded** | **Boolean** |  | [optional] [readonly] [default to $false]
-**Type** | **Int32** |  | [optional] [readonly] [default to 0]
+**Id** | **String** | Permission level ID | [optional] 
+**IdInSharePoint** | **Int32** | Permission ID in SharePoint | [optional] [default to 0]
+**Name** | **String** | Permission name | [optional] 
+**Description** | **String** | Permission description | [optional] [readonly] 
+**IsExcluded** | **Boolean** | Whether the permission is excluded. | [optional] [readonly] [default to $false]
+**Type** | **Int32** | Permission type | [optional] [readonly] [default to 0]
 
 ## Examples
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **UsageLocation** | **String** |  | [optional] 
 **JobTitle** | **String** |  | [optional] 
 **JobDepartment** | **String** |  | [optional] 
+**Manager** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 
 ## Examples
 
@@ -21,7 +22,8 @@ $GuestUserPropertyModel = New-Cloud.Governance.ClientGuestUserPropertyModel  -Di
  -UserName null `
  -UsageLocation null `
  -JobTitle null `
- -JobDepartment null
+ -JobDepartment null `
+ -Manager null
 ```
 
 - Convert the resource to JSON

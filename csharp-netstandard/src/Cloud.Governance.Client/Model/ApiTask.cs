@@ -57,8 +57,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="taskType">taskType.</param>
         /// <param name="allowReassign">allowReassign (default to false).</param>
         /// <param name="allowEdit">allowEdit (default to false).</param>
+        /// <param name="requestTicketNumber">requestTicketNumber (default to 0).</param>
         /// <param name="dynamicActions">dynamicActions.</param>
-        public ApiTask(ApiTaskDynamicProperties dynamicProperties = default(ApiTaskDynamicProperties), Guid id = default(Guid), string title = default(string), string description = default(string), Guid requestGuid = default(Guid), TaskResult? status = default(TaskResult?), string statusDescription = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string comments = default(string), List<TaskComment> allComments = default(List<TaskComment>), string errorMessage = default(string), DateTime lastModifiedTime = default(DateTime), TaskType? taskType = default(TaskType?), bool allowReassign = false, bool allowEdit = false, List<TaskDynamicActions> dynamicActions = default(List<TaskDynamicActions>))
+        public ApiTask(ApiTaskDynamicProperties dynamicProperties = default(ApiTaskDynamicProperties), Guid id = default(Guid), string title = default(string), string description = default(string), Guid requestGuid = default(Guid), TaskResult? status = default(TaskResult?), string statusDescription = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string comments = default(string), List<TaskComment> allComments = default(List<TaskComment>), string errorMessage = default(string), DateTime lastModifiedTime = default(DateTime), TaskType? taskType = default(TaskType?), bool allowReassign = false, bool allowEdit = false, int requestTicketNumber = 0, List<TaskDynamicActions> dynamicActions = default(List<TaskDynamicActions>))
         {
             this.DynamicProperties = dynamicProperties;
             this.Id = id;
@@ -76,6 +77,7 @@ namespace Cloud.Governance.Client.Model
             this.TaskType = taskType;
             this.AllowReassign = allowReassign;
             this.AllowEdit = allowEdit;
+            this.RequestTicketNumber = requestTicketNumber;
             this.DynamicActions = dynamicActions;
         }
 
@@ -158,6 +160,12 @@ namespace Cloud.Governance.Client.Model
         public bool AllowEdit { get; set; }
 
         /// <summary>
+        /// Gets or Sets RequestTicketNumber
+        /// </summary>
+        [DataMember(Name = "requestTicketNumber", EmitDefaultValue = false)]
+        public int RequestTicketNumber { get; set; }
+
+        /// <summary>
         /// Gets or Sets DynamicActions
         /// </summary>
         [DataMember(Name = "dynamicActions", EmitDefaultValue = true)]
@@ -187,6 +195,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  TaskType: ").Append(TaskType).Append("\n");
             sb.Append("  AllowReassign: ").Append(AllowReassign).Append("\n");
             sb.Append("  AllowEdit: ").Append(AllowEdit).Append("\n");
+            sb.Append("  RequestTicketNumber: ").Append(RequestTicketNumber).Append("\n");
             sb.Append("  DynamicActions: ").Append(DynamicActions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -299,6 +308,10 @@ namespace Cloud.Governance.Client.Model
                     this.AllowEdit.Equals(input.AllowEdit)
                 ) && 
                 (
+                    this.RequestTicketNumber == input.RequestTicketNumber ||
+                    this.RequestTicketNumber.Equals(input.RequestTicketNumber)
+                ) && 
+                (
                     this.DynamicActions == input.DynamicActions ||
                     this.DynamicActions != null &&
                     input.DynamicActions != null &&
@@ -342,6 +355,7 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.TaskType.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowReassign.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowEdit.GetHashCode();
+                hashCode = hashCode * 59 + this.RequestTicketNumber.GetHashCode();
                 if (this.DynamicActions != null)
                     hashCode = hashCode * 59 + this.DynamicActions.GetHashCode();
                 return hashCode;

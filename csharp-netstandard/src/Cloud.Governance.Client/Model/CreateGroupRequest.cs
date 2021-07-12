@@ -18,14 +18,15 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// CreateGroupRequest
+    /// Create group request model
     /// </summary>
     [DataContract(Name = "CreateGroupRequest")]
     public partial class CreateGroupRequest : IEquatable<CreateGroupRequest>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets GroupType
+        /// Group type
         /// </summary>
+        /// <value>Group type</value>
         [DataMember(Name = "groupType", EmitDefaultValue = false)]
         public CreateGroupType? GroupType { get; set; }
         /// <summary>
@@ -61,43 +62,42 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateGroupRequest" /> class.
         /// </summary>
-        /// <param name="groupType">groupType.</param>
-        /// <param name="groupId">groupId.</param>
-        /// <param name="groupIdWithoutPrefixSuffix">groupIdWithoutPrefixSuffix.</param>
-        /// <param name="groupName">groupName.</param>
-        /// <param name="groupNameWithoutPrefixSuffix">groupNameWithoutPrefixSuffix.</param>
-        /// <param name="policy">policy.</param>
-        /// <param name="groupDescription">groupDescription.</param>
-        /// <param name="owners">owners.</param>
-        /// <param name="members">members.</param>
-        /// <param name="privacy">privacy (default to false).</param>
-        /// <param name="subscribe">subscribe (default to false).</param>
-        /// <param name="outsideSender">outsideSender (default to false).</param>
-        /// <param name="enableTeamCollaboration">enableTeamCollaboration (default to false).</param>
-        /// <param name="language">language.</param>
-        /// <param name="classification">classification.</param>
-        /// <param name="sensitivity">sensitivity.</param>
-        /// <param name="leasePeriodSettings">leasePeriodSettings.</param>
-        /// <param name="teamsSettings">teamsSettings.</param>
-        /// <param name="appliedSiteDesignId">appliedSiteDesignId.</param>
-        /// <param name="primaryContact">primaryContact.</param>
-        /// <param name="secondaryContact">secondaryContact.</param>
-        /// <param name="enableGroupMembershipHidden">enableGroupMembershipHidden (default to false).</param>
-        /// <param name="enableAssignedMembership">enableAssignedMembership (default to false).</param>
-        /// <param name="enableDynamicMembership">enableDynamicMembership (default to false).</param>
-        /// <param name="templateSettings">templateSettings.</param>
-        /// <param name="dynamicMembershipRules">dynamicMembershipRules.</param>
-        /// <param name="multiGeoLocation">multiGeoLocation.</param>
-        /// <param name="hubSiteSettings">hubSiteSettings.</param>
-        /// <param name="yammerGroupInfo">yammerGroupInfo.</param>
+        /// <param name="groupType">Group type.</param>
+        /// <param name="groupId">An entire group ID.</param>
+        /// <param name="groupIdWithoutPrefixSuffix">Group ID (without prefix and suffix).</param>
+        /// <param name="groupName">An entire group name.</param>
+        /// <param name="groupNameWithoutPrefixSuffix">Group name (without prefix and suffix).</param>
+        /// <param name="policy">The ID of a group policy. You can get IDs and names of all available policies by invoking the GetCreateGroupServiceApi..</param>
+        /// <param name="groupDescription">Group description.</param>
+        /// <param name="owners">Group owners.</param>
+        /// <param name="members">Group members.</param>
+        /// <param name="privacy">The privacy settings of a group. Whether to allow anyone can see group content or only allow members to see group content. (default to false).</param>
+        /// <param name="subscribe">Whether to allow group members to receive copies of group conversations and events. (default to false).</param>
+        /// <param name="outsideSender">Whether to allow users outside the organization to send e-mails to groups. (default to false).</param>
+        /// <param name="enableTeamCollaboration">Enable a team for the group. (default to false).</param>
+        /// <param name="language">The language of a group. You can get IDs and names of all available languages by invoking the GetCreateGroupServiceApi..</param>
+        /// <param name="classification">Group classification.</param>
+        /// <param name="sensitivity">Group sensitive lable, currently doesn&#39;t support.</param>
+        /// <param name="leasePeriodSettings">Group lease period settings.</param>
+        /// <param name="teamsSettings">Team members permission settings.</param>
+        /// <param name="appliedSiteDesignId">The ID of the group team site design. You can get IDs and names of all group team sites by invoking the GetCreateGroupServiceApi..</param>
+        /// <param name="primaryContact">Primary group contact.</param>
+        /// <param name="secondaryContact">Secondary group contact.</param>
+        /// <param name="enableGroupMembershipHidden">Whether to hide the group members from users who are not members of the group. (default to false).</param>
+        /// <param name="enableAssignedMembership">Whether to allow to copy team members from existing teams. (default to false).</param>
+        /// <param name="enableDynamicMembership">Whether to use dynamic membership rules to get group members. (default to false).</param>
+        /// <param name="templateSettings">Teams template settings.</param>
+        /// <param name="dynamicMembershipRules">Dynamic group membership rules.</param>
+        /// <param name="multiGeoLocation">Multi-geo locations settings.</param>
+        /// <param name="hubSiteSettings">Hub site settings.</param>
+        /// <param name="yammerGroupInfo">Yammer community info.</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
-        /// <param name="department">Department of requester..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public CreateGroupRequest(CreateGroupType? groupType = default(CreateGroupType?), string groupId = default(string), string groupIdWithoutPrefixSuffix = default(string), string groupName = default(string), string groupNameWithoutPrefixSuffix = default(string), Guid policy = default(Guid), string groupDescription = default(string), List<ApiUser> owners = default(List<ApiUser>), List<ApiUser> members = default(List<ApiUser>), bool privacy = false, bool subscribe = false, bool outsideSender = false, bool enableTeamCollaboration = false, string language = default(string), string classification = default(string), string sensitivity = default(string), GroupLeasePeriodSettings leasePeriodSettings = default(GroupLeasePeriodSettings), RequestTeamsSettings teamsSettings = default(RequestTeamsSettings), Guid? appliedSiteDesignId = default(Guid?), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), bool enableGroupMembershipHidden = false, bool enableAssignedMembership = false, bool enableDynamicMembership = false, TeamsTemplateSettings templateSettings = default(TeamsTemplateSettings), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), GeoLocationBase multiGeoLocation = default(GeoLocationBase), HubSiteSettings hubSiteSettings = default(HubSiteSettings), string yammerGroupInfo = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string department = default(string), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public CreateGroupRequest(CreateGroupType? groupType = default(CreateGroupType?), string groupId = default(string), string groupIdWithoutPrefixSuffix = default(string), string groupName = default(string), string groupNameWithoutPrefixSuffix = default(string), Guid policy = default(Guid), string groupDescription = default(string), List<ApiUser> owners = default(List<ApiUser>), List<ApiUser> members = default(List<ApiUser>), bool privacy = false, bool subscribe = false, bool outsideSender = false, bool enableTeamCollaboration = false, string language = default(string), string classification = default(string), string sensitivity = default(string), GroupLeasePeriodSettings leasePeriodSettings = default(GroupLeasePeriodSettings), RequestTeamsSettings teamsSettings = default(RequestTeamsSettings), Guid? appliedSiteDesignId = default(Guid?), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), bool enableGroupMembershipHidden = false, bool enableAssignedMembership = false, bool enableDynamicMembership = false, TeamsTemplateSettings templateSettings = default(TeamsTemplateSettings), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), GeoLocationBase multiGeoLocation = default(GeoLocationBase), HubSiteSettings hubSiteSettings = default(HubSiteSettings), string yammerGroupInfo = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.GroupType = groupType;
             this.GroupId = groupId;
@@ -130,7 +130,6 @@ namespace Cloud.Governance.Client.Model
             this.YammerGroupInfo = yammerGroupInfo;
             this.Id = id;
             this.ServiceId = serviceId;
-            this.Department = department;
             this.Summary = summary;
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
@@ -138,32 +137,37 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets GroupId
+        /// An entire group ID
         /// </summary>
+        /// <value>An entire group ID</value>
         [DataMember(Name = "groupId", EmitDefaultValue = true)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupIdWithoutPrefixSuffix
+        /// Group ID (without prefix and suffix)
         /// </summary>
+        /// <value>Group ID (without prefix and suffix)</value>
         [DataMember(Name = "groupIdWithoutPrefixSuffix", EmitDefaultValue = true)]
         public string GroupIdWithoutPrefixSuffix { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupName
+        /// An entire group name
         /// </summary>
+        /// <value>An entire group name</value>
         [DataMember(Name = "groupName", EmitDefaultValue = true)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupNameWithoutPrefixSuffix
+        /// Group name (without prefix and suffix)
         /// </summary>
+        /// <value>Group name (without prefix and suffix)</value>
         [DataMember(Name = "groupNameWithoutPrefixSuffix", EmitDefaultValue = true)]
         public string GroupNameWithoutPrefixSuffix { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupEmail
+        /// Group e-mail address
         /// </summary>
+        /// <value>Group e-mail address</value>
         [DataMember(Name = "groupEmail", EmitDefaultValue = true)]
         public string GroupEmail { get; private set; }
 
@@ -177,74 +181,86 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Policy
+        /// The ID of a group policy. You can get IDs and names of all available policies by invoking the GetCreateGroupServiceApi.
         /// </summary>
+        /// <value>The ID of a group policy. You can get IDs and names of all available policies by invoking the GetCreateGroupServiceApi.</value>
         [DataMember(Name = "policy", EmitDefaultValue = false)]
         public Guid Policy { get; set; }
 
         /// <summary>
-        /// Gets or Sets GroupDescription
+        /// Group description
         /// </summary>
+        /// <value>Group description</value>
         [DataMember(Name = "groupDescription", EmitDefaultValue = true)]
         public string GroupDescription { get; set; }
 
         /// <summary>
-        /// Gets or Sets Owners
+        /// Group owners
         /// </summary>
+        /// <value>Group owners</value>
         [DataMember(Name = "owners", EmitDefaultValue = true)]
         public List<ApiUser> Owners { get; set; }
 
         /// <summary>
-        /// Gets or Sets Members
+        /// Group members
         /// </summary>
+        /// <value>Group members</value>
         [DataMember(Name = "members", EmitDefaultValue = true)]
         public List<ApiUser> Members { get; set; }
 
         /// <summary>
-        /// Gets or Sets Privacy
+        /// The privacy settings of a group. Whether to allow anyone can see group content or only allow members to see group content.
         /// </summary>
+        /// <value>The privacy settings of a group. Whether to allow anyone can see group content or only allow members to see group content.</value>
         [DataMember(Name = "privacy", EmitDefaultValue = false)]
         public bool Privacy { get; set; }
 
         /// <summary>
-        /// Gets or Sets Subscribe
+        /// Whether to allow group members to receive copies of group conversations and events.
         /// </summary>
+        /// <value>Whether to allow group members to receive copies of group conversations and events.</value>
         [DataMember(Name = "subscribe", EmitDefaultValue = false)]
         public bool Subscribe { get; set; }
 
         /// <summary>
-        /// Gets or Sets OutsideSender
+        /// Whether to allow users outside the organization to send e-mails to groups.
         /// </summary>
+        /// <value>Whether to allow users outside the organization to send e-mails to groups.</value>
         [DataMember(Name = "outsideSender", EmitDefaultValue = false)]
         public bool OutsideSender { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableTeamCollaboration
+        /// Enable a team for the group.
         /// </summary>
+        /// <value>Enable a team for the group.</value>
         [DataMember(Name = "enableTeamCollaboration", EmitDefaultValue = false)]
         public bool EnableTeamCollaboration { get; set; }
 
         /// <summary>
-        /// Gets or Sets Language
+        /// The language of a group. You can get IDs and names of all available languages by invoking the GetCreateGroupServiceApi.
         /// </summary>
+        /// <value>The language of a group. You can get IDs and names of all available languages by invoking the GetCreateGroupServiceApi.</value>
         [DataMember(Name = "language", EmitDefaultValue = true)]
         public string Language { get; set; }
 
         /// <summary>
-        /// Gets or Sets Classification
+        /// Group classification
         /// </summary>
+        /// <value>Group classification</value>
         [DataMember(Name = "classification", EmitDefaultValue = true)]
         public string Classification { get; set; }
 
         /// <summary>
-        /// Gets or Sets Sensitivity
+        /// Group sensitive lable, currently doesn&#39;t support
         /// </summary>
+        /// <value>Group sensitive lable, currently doesn&#39;t support</value>
         [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
         public string Sensitivity { get; set; }
 
         /// <summary>
-        /// Gets or Sets Links
+        /// Links of the group related objects. You can get IDs and names of all group related objects by invoking the GetCreateGroupServiceApi.
         /// </summary>
+        /// <value>Links of the group related objects. You can get IDs and names of all group related objects by invoking the GetCreateGroupServiceApi.</value>
         [DataMember(Name = "links", EmitDefaultValue = true)]
         public GroupLinks Links { get; private set; }
 
@@ -258,80 +274,93 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets LeasePeriodSettings
+        /// Group lease period settings
         /// </summary>
+        /// <value>Group lease period settings</value>
         [DataMember(Name = "leasePeriodSettings", EmitDefaultValue = true)]
         public GroupLeasePeriodSettings LeasePeriodSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets TeamsSettings
+        /// Team members permission settings
         /// </summary>
+        /// <value>Team members permission settings</value>
         [DataMember(Name = "teamsSettings", EmitDefaultValue = true)]
         public RequestTeamsSettings TeamsSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets AppliedSiteDesignId
+        /// The ID of the group team site design. You can get IDs and names of all group team sites by invoking the GetCreateGroupServiceApi.
         /// </summary>
+        /// <value>The ID of the group team site design. You can get IDs and names of all group team sites by invoking the GetCreateGroupServiceApi.</value>
         [DataMember(Name = "appliedSiteDesignId", EmitDefaultValue = true)]
         public Guid? AppliedSiteDesignId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PrimaryContact
+        /// Primary group contact
         /// </summary>
+        /// <value>Primary group contact</value>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
         public ApiUser PrimaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecondaryContact
+        /// Secondary group contact
         /// </summary>
+        /// <value>Secondary group contact</value>
         [DataMember(Name = "secondaryContact", EmitDefaultValue = true)]
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableGroupMembershipHidden
+        /// Whether to hide the group members from users who are not members of the group.
         /// </summary>
+        /// <value>Whether to hide the group members from users who are not members of the group.</value>
         [DataMember(Name = "enableGroupMembershipHidden", EmitDefaultValue = false)]
         public bool EnableGroupMembershipHidden { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableAssignedMembership
+        /// Whether to allow to copy team members from existing teams.
         /// </summary>
+        /// <value>Whether to allow to copy team members from existing teams.</value>
         [DataMember(Name = "enableAssignedMembership", EmitDefaultValue = false)]
         public bool EnableAssignedMembership { get; set; }
 
         /// <summary>
-        /// Gets or Sets EnableDynamicMembership
+        /// Whether to use dynamic membership rules to get group members.
         /// </summary>
+        /// <value>Whether to use dynamic membership rules to get group members.</value>
         [DataMember(Name = "enableDynamicMembership", EmitDefaultValue = false)]
         public bool EnableDynamicMembership { get; set; }
 
         /// <summary>
-        /// Gets or Sets TemplateSettings
+        /// Teams template settings
         /// </summary>
+        /// <value>Teams template settings</value>
         [DataMember(Name = "templateSettings", EmitDefaultValue = true)]
         public TeamsTemplateSettings TemplateSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets DynamicMembershipRules
+        /// Dynamic group membership rules
         /// </summary>
+        /// <value>Dynamic group membership rules</value>
         [DataMember(Name = "dynamicMembershipRules", EmitDefaultValue = true)]
         public List<DynamicGroupRuleInfo> DynamicMembershipRules { get; set; }
 
         /// <summary>
-        /// Gets or Sets MultiGeoLocation
+        /// Multi-geo locations settings
         /// </summary>
+        /// <value>Multi-geo locations settings</value>
         [DataMember(Name = "multiGeoLocation", EmitDefaultValue = true)]
         public GeoLocationBase MultiGeoLocation { get; set; }
 
         /// <summary>
-        /// Gets or Sets HubSiteSettings
+        /// Hub site settings
         /// </summary>
+        /// <value>Hub site settings</value>
         [DataMember(Name = "hubSiteSettings", EmitDefaultValue = true)]
         public HubSiteSettings HubSiteSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets YammerGroupInfo
+        /// Yammer community info
         /// </summary>
+        /// <value>Yammer community info</value>
         [DataMember(Name = "yammerGroupInfo", EmitDefaultValue = true)]
         public string YammerGroupInfo { get; set; }
 
@@ -348,13 +377,6 @@ namespace Cloud.Governance.Client.Model
         /// <value>Id of service.</value>
         [DataMember(Name = "serviceId", EmitDefaultValue = false)]
         public Guid ServiceId { get; set; }
-
-        /// <summary>
-        /// Department of requester.
-        /// </summary>
-        /// <value>Department of requester.</value>
-        [DataMember(Name = "department", EmitDefaultValue = true)]
-        public string Department { get; set; }
 
         /// <summary>
         /// Summary of request.
@@ -601,7 +623,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  YammerGroupInfo: ").Append(YammerGroupInfo).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
-            sb.Append("  Department: ").Append(Department).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  NotesToApprovers: ").Append(NotesToApprovers).Append("\n");
             sb.Append("  QuestionnaireId: ").Append(QuestionnaireId).Append("\n");
@@ -814,11 +835,6 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceId.Equals(input.ServiceId))
                 ) && 
                 (
-                    this.Department == input.Department ||
-                    (this.Department != null &&
-                    this.Department.Equals(input.Department))
-                ) && 
-                (
                     this.Summary == input.Summary ||
                     (this.Summary != null &&
                     this.Summary.Equals(input.Summary))
@@ -970,8 +986,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)
                     hashCode = hashCode * 59 + this.ServiceId.GetHashCode();
-                if (this.Department != null)
-                    hashCode = hashCode * 59 + this.Department.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
                 if (this.NotesToApprovers != null)

@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeContactByUserSetting" /> class.
         /// </summary>
-        /// <param name="currentUser">currentUser.</param>
-        /// <param name="newUser">newUser.</param>
-        /// <param name="alternativeUser">alternativeUser.</param>
+        /// <param name="currentUser">ApiUser model.</param>
+        /// <param name="newUser">ApiUser model.</param>
+        /// <param name="alternativeUser">ApiUser model.</param>
         public ChangeContactByUserSetting(ApiUser currentUser = default(ApiUser), ApiUser newUser = default(ApiUser), ApiUser alternativeUser = default(ApiUser))
         {
             this.CurrentUser = currentUser;
@@ -37,20 +37,23 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets CurrentUser
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "currentUser", EmitDefaultValue = true)]
         public ApiUser CurrentUser { get; set; }
 
         /// <summary>
-        /// Gets or Sets NewUser
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "newUser", EmitDefaultValue = true)]
         public ApiUser NewUser { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlternativeUser
+        /// ApiUser model
         /// </summary>
+        /// <value>ApiUser model</value>
         [DataMember(Name = "alternativeUser", EmitDefaultValue = true)]
         public ApiUser AlternativeUser { get; set; }
 

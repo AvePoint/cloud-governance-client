@@ -11,7 +11,7 @@ Method | HTTP request | Description
 <a name="Get-Jobs"></a>
 # **Get-Jobs**
 > WorkerJobGridModelPageResult Get-Jobs<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-VarFilter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
@@ -39,7 +39,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$VarFilter = "VarFilter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, method, updateTime, nextRunTime, isTimer, status, message, priority, intervalSeconds, jobType (optional)
+$Filter = "Filter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, method, updateTime, nextRunTime, isTimer, status, message, priority, intervalSeconds, jobType (optional)
 $Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> id, name, type, method, updateTime, nextRunTime, isTimer, status, message, priority, intervalSeconds, jobType (optional)
 $Search = "Search_example" # String | Search for name (optional)
 $Top = 987 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
@@ -48,7 +48,7 @@ $Nexttoken = "Nexttoken_example" # String |  Use the next token to get the next 
 
 # Get worker jobs
 try {
-     $Result = Get-Jobs -VarFilter $VarFilter -Orderby $Orderby -Search $Search -Top $Top -Skip $Skip -Nexttoken $Nexttoken
+     $Result = Get-Jobs -Filter $Filter -Orderby $Orderby -Search $Search -Top $Top -Skip $Skip -Nexttoken $Nexttoken
 } catch {
     Write-Host ("Exception occured when calling Get-Jobs: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -59,7 +59,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **VarFilter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, method, updateTime, nextRunTime, isTimer, status, message, priority, intervalSeconds, jobType | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, method, updateTime, nextRunTime, isTimer, status, message, priority, intervalSeconds, jobType | [optional] 
  **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, type, method, updateTime, nextRunTime, isTimer, status, message, priority, intervalSeconds, jobType | [optional] 
  **Search** | **String**| Search for name | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
@@ -109,7 +109,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $WorkspaceIdentity = "WorkspaceIdentity_example" # String | 
-$ObjectType = (New-WorkerObjectType) # WorkerObjectType | 
+$ObjectType = (Initialize-WorkerObjectType ) # WorkerObjectType | 
 
 # Get related worker job
 try {

@@ -18,23 +18,16 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    [JsonConverter(typeof(StringEnumConverter))]
-    
     public enum TaskPriority
     {
-        [EnumMember(Value = "0")]
         Lowest = 0,
 
-        [EnumMember(Value = "1")]
         BelowNormal = 1,
 
-        [EnumMember(Value = "2")]
         Normal = 2,
 
-        [EnumMember(Value = "3")]
         AboveNormal = 3,
 
-        [EnumMember(Value = "4")]
         Highest = 4
 
     }

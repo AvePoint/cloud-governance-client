@@ -6,8 +6,10 @@ Name | Type | Description | Notes
 **Id** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **Requester** | **String** |  | [optional] 
+**RequestId** | **String** |  | [optional] 
 **RequestTicketNumber** | **Int32** |  | [optional] [default to 0]
 **RequesterDisplayName** | **String** |  | [optional] 
+**RequesterEmail** | **String** |  | [optional] 
 **DueDate** | **System.DateTime** |  | [optional] 
 **DueDateType** | [**DueDateType**](DueDateType.md) |  | [optional] 
 **ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
@@ -16,6 +18,15 @@ Name | Type | Description | Notes
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
 **Status** | [**TaskResult**](TaskResult.md) |  | [optional] 
 **StatusDescription** | **String** |  | [optional] 
+**TaskFullPath** | **String** |  | [optional] 
+**LastUpdated** | **System.DateTime** |  | [optional] 
+**Category** | **String** |  | [optional] 
+**CategoryDisplayName** | **String** |  | [optional] 
+**ServiceName** | **String** |  | [optional] 
+**ObjectId** | **String** |  | [optional] 
+**ProfileId** | **String** |  | [optional] 
+**AllowEdit** | **Boolean** |  | [optional] [default to $false]
+**ProgressStatus** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] 
 
 ## Examples
 
@@ -24,8 +35,10 @@ Name | Type | Description | Notes
 $TaskList = New-Cloud.Governance.ClientTaskList  -Id null `
  -Title null `
  -Requester null `
+ -RequestId null `
  -RequestTicketNumber null `
  -RequesterDisplayName null `
+ -RequesterEmail null `
  -DueDate null `
  -DueDateType null `
  -ServiceType null `
@@ -33,7 +46,16 @@ $TaskList = New-Cloud.Governance.ClientTaskList  -Id null `
  -CreatedTime null `
  -TaskType null `
  -Status null `
- -StatusDescription null
+ -StatusDescription null `
+ -TaskFullPath null `
+ -LastUpdated null `
+ -Category null `
+ -CategoryDisplayName null `
+ -ServiceName null `
+ -ObjectId null `
+ -ProfileId null `
+ -AllowEdit null `
+ -ProgressStatus null
 ```
 
 - Convert the resource to JSON

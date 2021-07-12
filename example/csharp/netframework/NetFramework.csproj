@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cloud.Governance.Client, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Cloud.Governance.Client.4.1.16\lib\netstandard2.0\Cloud.Governance.Client.dll</HintPath>
+      <HintPath>..\packages\Cloud.Governance.Client.4.7.4\lib\netstandard2.0\Cloud.Governance.Client.dll</HintPath>
     </Reference>
     <Reference Include="JsonSubTypes, Version=1.7.0.0, Culture=neutral, PublicKeyToken=ee75fc290dbc1176, processorArchitecture=MSIL">
       <HintPath>..\packages\JsonSubTypes.1.7.0\lib\net47\JsonSubTypes.dll</HintPath>

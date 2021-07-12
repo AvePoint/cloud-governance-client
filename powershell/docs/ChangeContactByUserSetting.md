@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CurrentUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**NewUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
-**AlternativeUser** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**CurrentUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**NewUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**AlternativeUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 
 ## Examples
 
