@@ -52,7 +52,7 @@ $Manifest = @{
     CompanyName = 'AvePoint,Inc'
     Description = 'A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.'
 
-    ModuleVersion = '4.7.4'
+    ModuleVersion = '4.7.5'
 
     RootModule = 'Cloud.Governance.Client.psm1'
     Guid = 'B2610EE7-A791-4A00-8B5C-E0D47E25325B' # Has to be static, otherwise each new build will be considered different module

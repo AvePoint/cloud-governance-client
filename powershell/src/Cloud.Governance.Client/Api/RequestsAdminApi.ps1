@@ -13,16 +13,16 @@ get all requests
 No description available.
 
 .PARAMETER Filter
-Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, ticketNumber, summary, requester, requesterDisplayName, detailStatus, progressStatus, modified, assignTo, assignToDisplayName, serviceAdmin, objectUrl, createdTime
+Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, ticketNumber, summary, requester, detailStatus, progressStatus, modified, assignTo, serviceAdmin, objectUrl, createdTime
 
 .PARAMETER Orderby
-Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, ticketNumber, summary, requester, requesterDisplayName, detailStatus, progressStatus, modified, assignTo, assignToDisplayName, serviceAdmin, objectUrl, createdTime
+Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, ticketNumber, summary, requester, detailStatus, progressStatus, modified, assignTo, serviceAdmin, objectUrl, createdTime
 
 .PARAMETER Search
 Search for summary
 
 .PARAMETER Top
- Define the number of records you want to return, max value is 200, default value is 200
+ Define the number of records you want to return, max value is 3000, default value is 200
 
 .PARAMETER Skip
  Define the number of records you want to skip, default value is 0

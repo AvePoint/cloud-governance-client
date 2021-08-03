@@ -63,6 +63,9 @@ function New-AllRequestList {
         ${ServiceAdmin},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${ServiceAdminDisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${ObjectUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -92,6 +95,7 @@ function New-AllRequestList {
             "AssignTo" = ${AssignTo}
             "AssignToDisplayName" = ${AssignToDisplayName}
             "ServiceAdmin" = ${ServiceAdmin}
+            "ServiceAdminDisplayName" = ${ServiceAdminDisplayName}
             "ObjectUrl" = ${ObjectUrl}
             "CreatedTime" = ${CreatedTime}
         }
@@ -116,7 +120,7 @@ function ConvertFrom-JsonToAllRequestList {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in AllRequestList
-        $AllProperties = $("Id", "ServiceId", "ServiceName", "ServiceType", "ServiceTypeDescription", "TicketNumber", "Summary", "Requester", "RequesterDisplayName", "DetailStatus", "DetailStatusDescription", "ProgressStatus", "ProgressStatusDescription", "Modified", "AssignTo", "AssignToDisplayName", "ServiceAdmin", "ObjectUrl", "CreatedTime")
+        $AllProperties = $("Id", "ServiceId", "ServiceName", "ServiceType", "ServiceTypeDescription", "TicketNumber", "Summary", "Requester", "RequesterDisplayName", "DetailStatus", "DetailStatusDescription", "ProgressStatus", "ProgressStatusDescription", "Modified", "AssignTo", "AssignToDisplayName", "ServiceAdmin", "ServiceAdminDisplayName", "ObjectUrl", "CreatedTime")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -225,6 +229,12 @@ function ConvertFrom-JsonToAllRequestList {
             $ServiceAdmin = $JsonParameters.PSobject.Properties["ServiceAdmin"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ServiceAdminDisplayName"))) { #optional property not found
+            $ServiceAdminDisplayName = $null
+        } else {
+            $ServiceAdminDisplayName = $JsonParameters.PSobject.Properties["ServiceAdminDisplayName"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ObjectUrl"))) { #optional property not found
             $ObjectUrl = $null
         } else {
@@ -255,6 +265,7 @@ function ConvertFrom-JsonToAllRequestList {
             "AssignTo" = ${AssignTo}
             "AssignToDisplayName" = ${AssignToDisplayName}
             "ServiceAdmin" = ${ServiceAdmin}
+            "ServiceAdminDisplayName" = ${ServiceAdminDisplayName}
             "ObjectUrl" = ${ObjectUrl}
             "CreatedTime" = ${CreatedTime}
         }

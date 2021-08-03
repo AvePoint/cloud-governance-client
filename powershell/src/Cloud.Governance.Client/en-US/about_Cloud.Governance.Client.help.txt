@@ -2,7 +2,7 @@ SHORT DESCRIPTION
     Cloud.Governance.Client - the PowerShell module for the Cloud Governance Api
 
     - API version: 1.0
-    - SDK version: 4.7.4
+    - SDK version: 4.7.5
     - Build package: org.openapitools.codegen.languages.PowerShellClientCodegen
     For more information, please visit [http://www.avepoint.com/support](http://www.avepoint.com/support)
 

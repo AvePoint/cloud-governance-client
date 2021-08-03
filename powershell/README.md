@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 4.7.4
+- SDK version: 4.7.5
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -227,6 +227,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**Get-OngoingTasks**](docs/WorkspacesAdminApi.md#Get-OngoingTasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
 *WorkspacesAdminApi* | [**Get-Workspaces**](docs/WorkspacesAdminApi.md#Get-Workspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**Lock-Workspaces**](docs/WorkspacesAdminApi.md#Lock-Workspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
+*WorkspacesAdminApi* | [**Invoke-SpecifyContacts**](docs/WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | sepcify cnotacts
 *WorkspacesAdminApi* | [**Invoke-TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#Invoke-TriggerWorkspaceRenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
 *WorkspacesAdminApi* | [**Unlock-Workspace**](docs/WorkspacesAdminApi.md#Unlock-Workspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
@@ -548,6 +549,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.SiteUrl](docs/SiteUrl.md)
  - [Cloud.Governance.Client\Model.SiteUrlSetting](docs/SiteUrlSetting.md)
  - [Cloud.Governance.Client\Model.SiteValidationParameter](docs/SiteValidationParameter.md)
+ - [Cloud.Governance.Client\Model.SpecifyContactParameter](docs/SpecifyContactParameter.md)
  - [Cloud.Governance.Client\Model.StartDateType](docs/StartDateType.md)
  - [Cloud.Governance.Client\Model.StringChangedProperty](docs/StringChangedProperty.md)
  - [Cloud.Governance.Client\Model.StringModel](docs/StringModel.md)

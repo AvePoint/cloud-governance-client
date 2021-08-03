@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **AssignTo** | **String** |  | [optional] 
 **AssignToDisplayName** | **String** |  | [optional] 
 **ServiceAdmin** | **String** |  | [optional] 
+**ServiceAdminDisplayName** | **String** |  | [optional] 
 **ObjectUrl** | **String** |  | [optional] 
 **CreatedTime** | **String** |  | [optional] 
 
@@ -44,6 +45,7 @@ $AllRequestList = New-Cloud.Governance.ClientAllRequestList  -Id null `
  -AssignTo null `
  -AssignToDisplayName null `
  -ServiceAdmin null `
+ -ServiceAdminDisplayName null `
  -ObjectUrl null `
  -CreatedTime null
 ```
