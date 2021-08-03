@@ -18,19 +18,19 @@ $Configuration["ApiKey"]["clientSecret"] = "eyJ..."
 $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
-$siteObjectIds = [System.Collections.Arraylist]@("19904a41-924f-47db-9d2e-3dbfb4889922","19904a41-924f-47db-9d2e-3dbfb4889921")
-$workspaces = [System.Collections.Arraylist]@()
-$primaryContact = New-ApiUser -LoginName "user1@example.com"
-$secondaryContact = New-ApiUser -LoginName "user2@example.com"
+$site =  New-WorkspaceIdTypeModel -ObjectId "19904a41-924f-47db-9d2e-3dbfb4889921" -WorkspaceType "Site"
+$teams =  New-WorkspaceIdTypeModel -ObjectId "19904a41-924f-47db-9d2e-3dbfb4889922" -WorkspaceType "Teams"
+$group = New-WorkspaceIdTypeModel -ObjectId "19904a41-924f-47db-9d2e-3dbfb4889923" -WorkspaceType "Group"
+$primaryContact = "user1@example.com"
+$secondaryContact = "user2@example.com"
+$workspaces = [System.Collections.Arraylist]@($site,$teams,$group)
 
 try {
+    
+    $primaryContactUser =  Resolve-ACGUsers -Keyword $primaryContact -UserType "User" -UserSource "Azure" -SharingOptions "0"
+    $secondaryContactUser = Resolve-ACGUsers -Keyword $secondaryContact -UserType "User" -UserSource "Azure" -SharingOptions "0"
 
-    for ($i = 0; $i -lt $siteObjectIds.Count; $i++) {
-        $workspaceIdType = (New-WorkspaceIdTypeModel -ObjectId $siteObjectIds[$i] -WorkspaceType "Site")  #WorkspaceType "Site" "Group" "Teams" "Yammer"
-        $workspaces.Add($workspaceIdType)
-    }
-
-    $parameter = New-SpecifyContactParameter -PrimaryContact $primaryContact -SecondaryContact $secondaryContact -Workspace $workspaces -PrimaryContactNotifiedEmail "00000000-0000-0000-0000-000000000000" -SecondaryContactNotifiedEmail "00000000-0000-0000-0000-000000000000"
+    $parameter = New-SpecifyContactParameter -PrimaryContact $primaryContactUser -SecondaryContact $secondaryContactUser -Workspace $workspaces -PrimaryContactNotifiedEmail "00000000-0000-0000-0000-000000000000" -SecondaryContactNotifiedEmail "00000000-0000-0000-0000-000000000000"
     Invoke-SpecifyContacts -SpecifyContactParameter $parameter
 }
 catch {
