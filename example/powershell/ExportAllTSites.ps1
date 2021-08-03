@@ -1,16 +1,19 @@
 
 $ModuleName="Cloud.Governance.Client"
-if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "4.7.4")){
-    Install-Module -Name $ModuleName -Force -MinimumVersion "4.7.4"
+if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "4.7.5")){
+    Install-Module -Name $ModuleName -Force -MinimumVersion "4.7.5"
 }
 
-Import-Module -Name $ModuleName
 
 $Configuration = Get-Configuration
-$Configuration["BaseUrl"] = "API URL"
-$Configuration["ApiKey"]["clientId"] = ""
-$Configuration["ApiKey"]["clientSecret"] = ""
-$Configuration["ApiKey"]["userPrincipalName"] = ""
+$Configuration["BaseUrl"] = "{Cloud Governance Modern API Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $Top = 1000
 

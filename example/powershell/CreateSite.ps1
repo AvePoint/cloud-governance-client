@@ -1,14 +1,14 @@
 ﻿Try
 {
    $ModuleName="Cloud.Governance.Client"
-   if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "4.7.4")){
-    Install-Module -Name $ModuleName -Force -MinimumVersion "4.7.4"
+   if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "4.7.5")){
+    Install-Module -Name $ModuleName -Force -MinimumVersion "4.7.5"
    }
 
    Import-Module -Name $ModuleName
 
     $Configuration = Get-Configuration
-    $Configuration["BaseUrl"] = "Cloud Governance Modern API Endpoint"
+    $Configuration["BaseUrl"] = "{Cloud Governance Modern API Endpoint}"
 
     # Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
     $Configuration["ApiKey"]["clientSecret"] = "eyJ..."
