@@ -8,6 +8,8 @@
 
 *  [**TypeScript**](https://github.com/AvePoint/cloud-governance-client/tree/master/typescript)
 
+*  [**Samples**](https://github.com/AvePoint/cloud-governance-client/tree/main/example)
+
 <br/><br/>
 ## About Cloud Governance 
 
