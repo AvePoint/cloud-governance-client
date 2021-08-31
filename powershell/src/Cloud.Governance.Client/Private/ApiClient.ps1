@@ -94,7 +94,15 @@ function Invoke-ApiClient {
     }
 
     if ($Body -or $IsBodyNullable) {
-        $RequestBody = $Body
+        $utf8 = [System.Text.Encoding]::UTF8
+        $default = [System.Text.Encoding]::Default    
+        if($utf8 -ne $default){
+            $RequestBody = [System.Text.Encoding]::Convert($default,$utf8,$Body)
+        }else{
+            $RequestBody=$Body
+        }
+        
+
         if ([string]::IsNullOrEmpty($RequestBody) -and $IsBodyNullable -eq $true) {
             $RequestBody = "null"
         }
