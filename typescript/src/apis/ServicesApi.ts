@@ -264,6 +264,11 @@ export interface ValidateEmailForCreateGuestUserServiceRequest {
     email: string;
 }
 
+export interface ValidateEmailsForCreateGuestUserServiceRequest {
+    id: string;
+    requestBody?: Array<string>;
+}
+
 export interface ValidateForChangeGroupSettingServiceRequest {
     id: string;
     changeGroupSettingValidationParameter?: ChangeGroupSettingValidationParameter;
@@ -379,7 +384,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changegroupsetting/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -422,7 +427,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changelistsetting/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -465,7 +470,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changepermission/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -508,7 +513,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changesitecontact/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -551,7 +556,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changesitesetting/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -594,7 +599,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changewebcontact/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -637,7 +642,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changewebsettings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -680,7 +685,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/clonepermission/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -715,7 +720,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/contentmove/profiles`,
             method: 'GET',
@@ -758,7 +763,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/contentmove/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -801,7 +806,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/creategroup/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -844,7 +849,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createguestuser/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -887,7 +892,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createlist/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -930,7 +935,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createsite/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -973,7 +978,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createweb/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1016,7 +1021,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/custom/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1059,7 +1064,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/grantpermission/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1102,7 +1107,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/grouplifecycle/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1145,7 +1150,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/managepermission/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1184,7 +1189,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/my`,
             method: 'GET',
@@ -1227,7 +1232,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/id`,
             method: 'GET',
@@ -1270,7 +1275,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/sitelifecycle/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1313,7 +1318,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/weblifecycle/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1360,7 +1365,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createguestuser/{id}/email/validate`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1376,6 +1381,48 @@ export class ServicesApi extends runtime.BaseAPI {
      */
     async validateEmailForCreateGuestUserService(requestParameters: ValidateEmailForCreateGuestUserServiceRequest): Promise<ObjectValidateResult> {
         const response = await this.validateEmailForCreateGuestUserServiceRaw(requestParameters);
+        return await response.value();
+    }
+
+    /**
+     * validate guest user emails
+     */
+    async validateEmailsForCreateGuestUserServiceRaw(requestParameters: ValidateEmailsForCreateGuestUserServiceRequest): Promise<runtime.ApiResponse<Array<string>>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling validateEmailsForCreateGuestUserService.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["clientSecret"] = this.configuration.apiKey("clientSecret"); // clientSecret authentication
+        }
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
+        }
+
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
+        const response = await this.request({
+            path: `/services/createguestuser/{id}/email/validate`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: requestParameters.requestBody,
+        });
+
+        return new runtime.JSONApiResponse<any>(response);
+    }
+
+    /**
+     * validate guest user emails
+     */
+    async validateEmailsForCreateGuestUserService(requestParameters: ValidateEmailsForCreateGuestUserServiceRequest): Promise<Array<string>> {
+        const response = await this.validateEmailsForCreateGuestUserServiceRaw(requestParameters);
         return await response.value();
     }
 
@@ -1401,7 +1448,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changegroupsetting/{id}/group/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1443,7 +1490,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changelistsetting/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1485,7 +1532,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changepermission/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1527,7 +1574,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changesitecontact/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1569,7 +1616,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changesitesetting/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1611,7 +1658,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changewebcontact/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1653,7 +1700,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/changewebsettings/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1695,7 +1742,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/clonepermission/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1737,7 +1784,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/contentmove/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1783,7 +1830,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createguestuser/{id}/group/validate`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1825,7 +1872,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createlist/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1867,7 +1914,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/createweb/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1909,7 +1956,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/grantpermission/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1951,7 +1998,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/grouplifecycle/{id}/group/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1993,7 +2040,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/managepermission/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -2035,7 +2082,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/sitelifecycle/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -2077,7 +2124,7 @@ export class ServicesApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/services/weblifecycle/{id}/url/validation`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',

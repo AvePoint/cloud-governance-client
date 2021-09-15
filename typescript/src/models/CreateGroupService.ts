@@ -44,6 +44,10 @@ import {
     CustomMetadataFromJSON,
     CustomMetadataFromJSONTyped,
     CustomMetadataToJSON,
+    DynamicGroupRuleInfo,
+    DynamicGroupRuleInfoFromJSON,
+    DynamicGroupRuleInfoFromJSONTyped,
+    DynamicGroupRuleInfoToJSON,
     GroupIdConstructureSettings,
     GroupIdConstructureSettingsFromJSON,
     GroupIdConstructureSettingsFromJSONTyped,
@@ -160,6 +164,12 @@ export interface CreateGroupService {
      * @memberof CreateGroupService
      */
     enableSensitivity?: boolean;
+    /**
+     * 
+     * @type {Array<StringModel>}
+     * @memberof CreateGroupService
+     */
+    allSensitivities?: Array<StringModel> | null;
     /**
      * 
      * @type {boolean}
@@ -298,6 +308,18 @@ export interface CreateGroupService {
      * @memberof CreateGroupService
      */
     defaultMembers?: Array<ApiUser> | null;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof CreateGroupService
+     */
+    disableAddRemoveDynamicMembershipRules?: boolean;
+    /**
+     * 
+     * @type {Array<DynamicGroupRuleInfo>}
+     * @memberof CreateGroupService
+     */
+    dynamicMembershipRules?: Array<DynamicGroupRuleInfo> | null;
     /**
      * 
      * @type {string}
@@ -592,6 +614,7 @@ export function CreateGroupServiceFromJSONTyped(json: any, ignoreDiscriminator: 
         'enableClassification': !exists(json, 'enableClassification') ? undefined : json['enableClassification'],
         'preventDuplicateName': !exists(json, 'preventDuplicateName') ? undefined : json['preventDuplicateName'],
         'enableSensitivity': !exists(json, 'enableSensitivity') ? undefined : json['enableSensitivity'],
+        'allSensitivities': !exists(json, 'allSensitivities') ? undefined : (json['allSensitivities'] === null ? null : (json['allSensitivities'] as Array<any>).map(StringModelFromJSON)),
         'allowConfigureLeasePeriod': !exists(json, 'allowConfigureLeasePeriod') ? undefined : json['allowConfigureLeasePeriod'],
         'showNotebookLink': !exists(json, 'showNotebookLink') ? undefined : json['showNotebookLink'],
         'showConversationsLink': !exists(json, 'showConversationsLink') ? undefined : json['showConversationsLink'],
@@ -615,6 +638,8 @@ export function CreateGroupServiceFromJSONTyped(json: any, ignoreDiscriminator: 
         'defaultSecondaryContact': !exists(json, 'defaultSecondaryContact') ? undefined : ApiUserFromJSON(json['defaultSecondaryContact']),
         'defaultOwners': !exists(json, 'defaultOwners') ? undefined : (json['defaultOwners'] === null ? null : (json['defaultOwners'] as Array<any>).map(ApiUserFromJSON)),
         'defaultMembers': !exists(json, 'defaultMembers') ? undefined : (json['defaultMembers'] === null ? null : (json['defaultMembers'] as Array<any>).map(ApiUserFromJSON)),
+        'disableAddRemoveDynamicMembershipRules': !exists(json, 'disableAddRemoveDynamicMembershipRules') ? undefined : json['disableAddRemoveDynamicMembershipRules'],
+        'dynamicMembershipRules': !exists(json, 'dynamicMembershipRules') ? undefined : (json['dynamicMembershipRules'] === null ? null : (json['dynamicMembershipRules'] as Array<any>).map(DynamicGroupRuleInfoFromJSON)),
         'defaultPolicy': !exists(json, 'defaultPolicy') ? undefined : json['defaultPolicy'],
         'defaultClassification': !exists(json, 'defaultClassification') ? undefined : json['defaultClassification'],
         'defaultSensitivity': !exists(json, 'defaultSensitivity') ? undefined : json['defaultSensitivity'],
@@ -684,6 +709,7 @@ export function CreateGroupServiceToJSON(value?: CreateGroupService | null): any
         'enableClassification': value.enableClassification,
         'preventDuplicateName': value.preventDuplicateName,
         'enableSensitivity': value.enableSensitivity,
+        'allSensitivities': value.allSensitivities === undefined ? undefined : (value.allSensitivities === null ? null : (value.allSensitivities as Array<any>).map(StringModelToJSON)),
         'allowConfigureLeasePeriod': value.allowConfigureLeasePeriod,
         'showNotebookLink': value.showNotebookLink,
         'showConversationsLink': value.showConversationsLink,
@@ -707,6 +733,8 @@ export function CreateGroupServiceToJSON(value?: CreateGroupService | null): any
         'defaultSecondaryContact': ApiUserToJSON(value.defaultSecondaryContact),
         'defaultOwners': value.defaultOwners === undefined ? undefined : (value.defaultOwners === null ? null : (value.defaultOwners as Array<any>).map(ApiUserToJSON)),
         'defaultMembers': value.defaultMembers === undefined ? undefined : (value.defaultMembers === null ? null : (value.defaultMembers as Array<any>).map(ApiUserToJSON)),
+        'disableAddRemoveDynamicMembershipRules': value.disableAddRemoveDynamicMembershipRules,
+        'dynamicMembershipRules': value.dynamicMembershipRules === undefined ? undefined : (value.dynamicMembershipRules === null ? null : (value.dynamicMembershipRules as Array<any>).map(DynamicGroupRuleInfoToJSON)),
         'defaultPolicy': value.defaultPolicy,
         'defaultClassification': value.defaultClassification,
         'defaultSensitivity': value.defaultSensitivity,

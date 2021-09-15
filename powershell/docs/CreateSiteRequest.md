@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **SiteDesign** | [**StringModel**](StringModel.md) | Communication site design | [optional] 
 **TeamSiteDesign** | **String** | Team site design | [optional] 
 **Classification** | **String** | Communication site Classification | [optional] 
+**Sensitivity** | **String** | Sensitive lable | [optional] 
 **HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site setting | [optional] 
 **UserPermissions** | [**RequestUserWithPermissions[]**](RequestUserWithPermissions.md) | Granted user/group permission setting | [optional] 
 **GroupPermissions** | [**RequestGroupWithPermissions[]**](RequestGroupWithPermissions.md) | Site collection SharePoint group setting | [optional] 
@@ -64,6 +65,7 @@ $CreateSiteRequest = New-Cloud.Governance.ClientCreateSiteRequest  -SiteTitle nu
  -SiteDesign null `
  -TeamSiteDesign null `
  -Classification null `
+ -Sensitivity null `
  -HubSiteSettings null `
  -UserPermissions null `
  -GroupPermissions null `

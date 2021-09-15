@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **StorageUsed** | **double?** |  | [optional] 
 **SiteSharing** | **string** |  | [optional] 
 **GroupSharing** | **string** |  | [optional] 
+**SensitivityLable** | **string** |  | [optional] 
 **Classification** | **string** |  | [optional] 
 **ClaimStatus** | **string** |  | [optional] 
 **CreatedTime** | **DateTime** |  | [optional] 
@@ -44,7 +45,6 @@ Name | Type | Description | Notes
 **HasOngoingTasks** | **string** |  | [optional] 
 **LastRenewalTime** | **DateTime?** |  | [optional] 
 **LastRenewalBy** | **string** |  | [optional] 
-**LastRenewalByEmail** | **string** |  | [optional] 
 **LastRenewalByDisplayName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

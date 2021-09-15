@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **GroupObjectType** | **GroupObjectType** |  | [optional] 
 **GroupObjectId** | **string** |  | [optional] 
 **NetworkId** | **string** |  | [optional] 
+**Sensitivity** | **string** |  | [optional] 
 **Id** | **Guid** |  | [optional] 
 **Phase** | **AutoImportPhase** |  | [optional] 
 **PhaseStartTime** | **DateTime?** |  | [optional] 

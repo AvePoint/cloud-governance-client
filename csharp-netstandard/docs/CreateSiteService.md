@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] 
 **Classifications** | **List&lt;string&gt;** |  | [optional] 
 **Sensitivities** | **List&lt;string&gt;** |  | [optional] 
+**AllSensitivities** | [**List&lt;StringModel&gt;**](StringModel.md) |  | [optional] 
 **HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site settings model | [optional] 
 **EnabledCustomTemplate** | **bool** |  | [optional] [default to false]
 **CustomSiteTemplateListURL** | **string** |  | [optional] 

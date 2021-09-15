@@ -150,6 +150,24 @@ export interface GuestUserGridModel {
     inviteTime?: Date | null;
     /**
      * 
+     * @type {Date}
+     * @memberof GuestUserGridModel
+     */
+    lastRenewalTime?: Date | null;
+    /**
+     * 
+     * @type {Date}
+     * @memberof GuestUserGridModel
+     */
+    renewalStartTime?: Date | null;
+    /**
+     * 
+     * @type {Date}
+     * @memberof GuestUserGridModel
+     */
+    renewalDueDate?: Date | null;
+    /**
+     * 
      * @type {Array<ReportMetadata>}
      * @memberof GuestUserGridModel
      */
@@ -186,6 +204,9 @@ export function GuestUserGridModelFromJSONTyped(json: any, ignoreDiscriminator: 
         'externalUserStateDescription': !exists(json, 'externalUserStateDescription') ? undefined : json['externalUserStateDescription'],
         'lastSyncTime': !exists(json, 'lastSyncTime') ? undefined : (json['lastSyncTime'] === null ? null : new Date(json['lastSyncTime'])),
         'inviteTime': !exists(json, 'inviteTime') ? undefined : (json['inviteTime'] === null ? null : new Date(json['inviteTime'])),
+        'lastRenewalTime': !exists(json, 'lastRenewalTime') ? undefined : (json['lastRenewalTime'] === null ? null : new Date(json['lastRenewalTime'])),
+        'renewalStartTime': !exists(json, 'renewalStartTime') ? undefined : (json['renewalStartTime'] === null ? null : new Date(json['renewalStartTime'])),
+        'renewalDueDate': !exists(json, 'renewalDueDate') ? undefined : (json['renewalDueDate'] === null ? null : new Date(json['renewalDueDate'])),
         'metadata': !exists(json, 'metadata') ? undefined : (json['metadata'] === null ? null : (json['metadata'] as Array<any>).map(ReportMetadataFromJSON)),
     };
 }
@@ -219,6 +240,9 @@ export function GuestUserGridModelToJSON(value?: GuestUserGridModel | null): any
         'externalUserStateDescription': value.externalUserStateDescription,
         'lastSyncTime': value.lastSyncTime === undefined ? undefined : (value.lastSyncTime === null ? null : value.lastSyncTime.toISOString()),
         'inviteTime': value.inviteTime === undefined ? undefined : (value.inviteTime === null ? null : value.inviteTime.toISOString()),
+        'lastRenewalTime': value.lastRenewalTime === undefined ? undefined : (value.lastRenewalTime === null ? null : value.lastRenewalTime.toISOString()),
+        'renewalStartTime': value.renewalStartTime === undefined ? undefined : (value.renewalStartTime === null ? null : value.renewalStartTime.toISOString()),
+        'renewalDueDate': value.renewalDueDate === undefined ? undefined : (value.renewalDueDate === null ? null : value.renewalDueDate.toISOString()),
         'metadata': value.metadata === undefined ? undefined : (value.metadata === null ? null : (value.metadata as Array<any>).map(ReportMetadataToJSON)),
     };
 }

@@ -23,6 +23,9 @@ import {
     LockSiteParameter,
     LockSiteParameterFromJSON,
     LockSiteParameterToJSON,
+    SpecifyContactParameter,
+    SpecifyContactParameterFromJSON,
+    SpecifyContactParameterToJSON,
     WorksapceOngoingTasksModel,
     WorksapceOngoingTasksModelFromJSON,
     WorksapceOngoingTasksModelToJSON,
@@ -76,6 +79,10 @@ export interface LockWorkspacesRequest {
     lockSiteParameter?: LockSiteParameter;
 }
 
+export interface SpecifyContactsRequest {
+    specifyContactParameter?: SpecifyContactParameter;
+}
+
 export interface TriggerWorkspaceRenewalRequest {
     workspaceIdTypeModel?: Array<WorkspaceIdTypeModel>;
 }
@@ -107,7 +114,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/groups/policy`,
             method: 'POST',
@@ -144,7 +151,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/sites/policy`,
             method: 'POST',
@@ -181,7 +188,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/archive`,
             method: 'POST',
@@ -222,7 +229,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/renewal/complete`,
             method: 'POST',
@@ -259,7 +266,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace`,
             method: 'DELETE',
@@ -306,7 +313,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/{type}/ongoningtasks`.replace(`{${"type"}}`, encodeURIComponent(String(requestParameters.type))),
             method: 'GET',
@@ -365,7 +372,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace`,
             method: 'GET',
@@ -402,7 +409,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/lock`,
             method: 'POST',
@@ -419,6 +426,43 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
      */
     async lockWorkspaces(requestParameters: LockWorkspacesRequest): Promise<void> {
         await this.lockWorkspacesRaw(requestParameters);
+    }
+
+    /**
+     * sepcify cnotacts
+     */
+    async specifyContactsRaw(requestParameters: SpecifyContactsRequest): Promise<runtime.ApiResponse<void>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["clientSecret"] = this.configuration.apiKey("clientSecret"); // clientSecret authentication
+        }
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
+        }
+
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
+        const response = await this.request({
+            path: `/admin/directory/workspace/contacts`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: SpecifyContactParameterToJSON(requestParameters.specifyContactParameter),
+        });
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     * sepcify cnotacts
+     */
+    async specifyContacts(requestParameters: SpecifyContactsRequest): Promise<void> {
+        await this.specifyContactsRaw(requestParameters);
     }
 
     /**
@@ -439,7 +483,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/renewal/trigger`,
             method: 'POST',
@@ -476,7 +520,7 @@ export class WorkspacesAdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/directory/workspace/unlock`,
             method: 'POST',

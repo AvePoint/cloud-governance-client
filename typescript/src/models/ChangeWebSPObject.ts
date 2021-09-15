@@ -37,6 +37,12 @@ export interface ChangeWebSPObject {
      * @memberof ChangeWebSPObject
      */
     webId?: string;
+    /**
+     * Web Title
+     * @type {string}
+     * @memberof ChangeWebSPObject
+     */
+    webTitle?: string | null;
 }
 
 export function ChangeWebSPObjectFromJSON(json: any): ChangeWebSPObject {
@@ -53,6 +59,7 @@ export function ChangeWebSPObjectFromJSONTyped(json: any, ignoreDiscriminator: b
         'webUrl': !exists(json, 'webUrl') ? undefined : json['webUrl'],
         'siteId': !exists(json, 'siteId') ? undefined : json['siteId'],
         'webId': !exists(json, 'webId') ? undefined : json['webId'],
+        'webTitle': !exists(json, 'webTitle') ? undefined : json['webTitle'],
     };
 }
 
@@ -69,6 +76,7 @@ export function ChangeWebSPObjectToJSON(value?: ChangeWebSPObject | null): any {
         'webUrl': value.webUrl,
         'siteId': value.siteId,
         'webId': value.webId,
+        'webTitle': value.webTitle,
     };
 }
 

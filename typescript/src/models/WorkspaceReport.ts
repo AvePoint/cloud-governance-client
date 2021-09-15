@@ -210,6 +210,12 @@ export interface WorkspaceReport {
      * @type {string}
      * @memberof WorkspaceReport
      */
+    sensitivityLable?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof WorkspaceReport
+     */
     classification?: string | null;
     /**
      * 
@@ -264,12 +270,6 @@ export interface WorkspaceReport {
      * @type {string}
      * @memberof WorkspaceReport
      */
-    lastRenewalByEmail?: string | null;
-    /**
-     * 
-     * @type {string}
-     * @memberof WorkspaceReport
-     */
     lastRenewalByDisplayName?: string | null;
 }
 
@@ -315,6 +315,7 @@ export function WorkspaceReportFromJSONTyped(json: any, ignoreDiscriminator: boo
         'storageUsed': !exists(json, 'StorageUsed') ? undefined : json['StorageUsed'],
         'siteSharing': !exists(json, 'SiteSharing') ? undefined : json['SiteSharing'],
         'groupSharing': !exists(json, 'GroupSharing') ? undefined : json['GroupSharing'],
+        'sensitivityLable': !exists(json, 'SensitivityLable') ? undefined : json['SensitivityLable'],
         'classification': !exists(json, 'Classification') ? undefined : json['Classification'],
         'claimStatus': !exists(json, 'ClaimStatus') ? undefined : json['ClaimStatus'],
         'createdTime': !exists(json, 'CreatedTime') ? undefined : (new Date(json['CreatedTime'])),
@@ -324,7 +325,6 @@ export function WorkspaceReportFromJSONTyped(json: any, ignoreDiscriminator: boo
         'hasOngoingTasks': !exists(json, 'HasOngoingTasks') ? undefined : json['HasOngoingTasks'],
         'lastRenewalTime': !exists(json, 'LastRenewalTime') ? undefined : (json['LastRenewalTime'] === null ? null : new Date(json['LastRenewalTime'])),
         'lastRenewalBy': !exists(json, 'LastRenewalBy') ? undefined : json['LastRenewalBy'],
-        'lastRenewalByEmail': !exists(json, 'LastRenewalByEmail') ? undefined : json['LastRenewalByEmail'],
         'lastRenewalByDisplayName': !exists(json, 'LastRenewalByDisplayName') ? undefined : json['LastRenewalByDisplayName'],
     };
 }
@@ -370,6 +370,7 @@ export function WorkspaceReportToJSON(value?: WorkspaceReport | null): any {
         'StorageUsed': value.storageUsed,
         'SiteSharing': value.siteSharing,
         'GroupSharing': value.groupSharing,
+        'SensitivityLable': value.sensitivityLable,
         'Classification': value.classification,
         'ClaimStatus': value.claimStatus,
         'CreatedTime': value.createdTime === undefined ? undefined : (value.createdTime.toISOString()),
@@ -379,7 +380,6 @@ export function WorkspaceReportToJSON(value?: WorkspaceReport | null): any {
         'HasOngoingTasks': value.hasOngoingTasks,
         'LastRenewalTime': value.lastRenewalTime === undefined ? undefined : (value.lastRenewalTime === null ? null : value.lastRenewalTime.toISOString()),
         'LastRenewalBy': value.lastRenewalBy,
-        'LastRenewalByEmail': value.lastRenewalByEmail,
         'LastRenewalByDisplayName': value.lastRenewalByDisplayName,
     };
 }

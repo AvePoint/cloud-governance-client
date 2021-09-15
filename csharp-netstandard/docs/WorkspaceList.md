@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **StorageUsage** | **string** |  | [optional] 
 **Classification** | **string** |  | [optional] 
 **Privacy** | **bool?** |  | [optional] [default to false]
+**Sensitivity** | **string** |  | [optional] 
 **PrivacyDescription** | **string** |  | [optional] 
 **Metadata** | [**List&lt;EndUserReportMetadata&gt;**](EndUserReportMetadata.md) |  | [optional] 
 

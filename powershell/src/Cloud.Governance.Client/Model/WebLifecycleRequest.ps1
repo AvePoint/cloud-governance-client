@@ -21,6 +21,9 @@ function New-WebLifecycleRequest {
         ${WebRelativeUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${WebTitle},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${SiteId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -65,6 +68,7 @@ function New-WebLifecycleRequest {
             "WebId" = ${WebId}
             "WebUrl" = ${WebUrl}
             "WebRelativeUrl" = ${WebRelativeUrl}
+            "WebTitle" = ${WebTitle}
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
             "Action" = ${Action}
@@ -96,7 +100,7 @@ function ConvertFrom-JsonToWebLifecycleRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WebLifecycleRequest
-        $AllProperties = $("WebId", "WebUrl", "WebRelativeUrl", "SiteId", "SiteUrl", "Action", "ActionDescription", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("WebId", "WebUrl", "WebRelativeUrl", "WebTitle", "SiteId", "SiteUrl", "Action", "ActionDescription", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -119,6 +123,12 @@ function ConvertFrom-JsonToWebLifecycleRequest {
             $WebRelativeUrl = $null
         } else {
             $WebRelativeUrl = $JsonParameters.PSobject.Properties["WebRelativeUrl"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WebTitle"))) { #optional property not found
+            $WebTitle = $null
+        } else {
+            $WebTitle = $JsonParameters.PSobject.Properties["WebTitle"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "SiteId"))) { #optional property not found
@@ -263,6 +273,7 @@ function ConvertFrom-JsonToWebLifecycleRequest {
             "WebId" = ${WebId}
             "WebUrl" = ${WebUrl}
             "WebRelativeUrl" = ${WebRelativeUrl}
+            "WebTitle" = ${WebTitle}
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
             "Action" = ${Action}

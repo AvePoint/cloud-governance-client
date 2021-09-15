@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] 
 **Classifications** | **String[]** |  | [optional] 
 **Sensitivities** | **String[]** |  | [optional] 
+**AllSensitivities** | [**StringModel[]**](StringModel.md) |  | [optional] 
 **HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site settings model | [optional] 
 **EnabledCustomTemplate** | **Boolean** |  | [optional] [default to $false]
 **CustomSiteTemplateListURL** | **String** |  | [optional] 
@@ -98,6 +99,7 @@ $CreateSiteService = New-Cloud.Governance.ClientCreateSiteService  -ScopeSetting
  -YammerGroupSettings null `
  -Classifications null `
  -Sensitivities null `
+ -AllSensitivities null `
  -HubSiteSettings null `
  -EnabledCustomTemplate null `
  -CustomSiteTemplateListURL null `

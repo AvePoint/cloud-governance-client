@@ -51,7 +51,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="metadataDisplayValue">metadataDisplayValue.</param>
         /// <param name="metadataValueAzureUserType">metadataValueAzureUserType.</param>
         /// <param name="condition">condition.</param>
-        public DynamicGroupRuleInfo(Guid id = default(Guid), int order = 0, LogicalOperator? relation = default(LogicalOperator?), CategoryType? category = default(CategoryType?), Guid metadataId = default(Guid), string metadataName = default(string), string metadataValue = default(string), string metadataDisplayValue = default(string), string metadataValueAzureUserType = default(string), DynamicRuleCondition? condition = default(DynamicRuleCondition?))
+        /// <param name="disableEditRule">disableEditRule (default to false).</param>
+        /// <param name="disableEditRuleValue">disableEditRuleValue (default to false).</param>
+        public DynamicGroupRuleInfo(Guid id = default(Guid), int order = 0, LogicalOperator? relation = default(LogicalOperator?), CategoryType? category = default(CategoryType?), Guid metadataId = default(Guid), string metadataName = default(string), string metadataValue = default(string), string metadataDisplayValue = default(string), string metadataValueAzureUserType = default(string), DynamicRuleCondition? condition = default(DynamicRuleCondition?), bool disableEditRule = false, bool disableEditRuleValue = false)
         {
             this.Id = id;
             this.Order = order;
@@ -63,6 +65,8 @@ namespace Cloud.Governance.Client.Model
             this.MetadataDisplayValue = metadataDisplayValue;
             this.MetadataValueAzureUserType = metadataValueAzureUserType;
             this.Condition = condition;
+            this.DisableEditRule = disableEditRule;
+            this.DisableEditRuleValue = disableEditRuleValue;
         }
 
         /// <summary>
@@ -108,6 +112,18 @@ namespace Cloud.Governance.Client.Model
         public string MetadataValueAzureUserType { get; set; }
 
         /// <summary>
+        /// Gets or Sets DisableEditRule
+        /// </summary>
+        [DataMember(Name = "disableEditRule", EmitDefaultValue = false)]
+        public bool DisableEditRule { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisableEditRuleValue
+        /// </summary>
+        [DataMember(Name = "disableEditRuleValue", EmitDefaultValue = false)]
+        public bool DisableEditRuleValue { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -125,6 +141,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  MetadataDisplayValue: ").Append(MetadataDisplayValue).Append("\n");
             sb.Append("  MetadataValueAzureUserType: ").Append(MetadataValueAzureUserType).Append("\n");
             sb.Append("  Condition: ").Append(Condition).Append("\n");
+            sb.Append("  DisableEditRule: ").Append(DisableEditRule).Append("\n");
+            sb.Append("  DisableEditRuleValue: ").Append(DisableEditRuleValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,6 +222,14 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.Condition == input.Condition ||
                     this.Condition.Equals(input.Condition)
+                ) && 
+                (
+                    this.DisableEditRule == input.DisableEditRule ||
+                    this.DisableEditRule.Equals(input.DisableEditRule)
+                ) && 
+                (
+                    this.DisableEditRuleValue == input.DisableEditRuleValue ||
+                    this.DisableEditRuleValue.Equals(input.DisableEditRuleValue)
                 );
         }
 
@@ -232,6 +258,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.MetadataValueAzureUserType != null)
                     hashCode = hashCode * 59 + this.MetadataValueAzureUserType.GetHashCode();
                 hashCode = hashCode * 59 + this.Condition.GetHashCode();
+                hashCode = hashCode * 59 + this.DisableEditRule.GetHashCode();
+                hashCode = hashCode * 59 + this.DisableEditRuleValue.GetHashCode();
                 return hashCode;
             }
         }

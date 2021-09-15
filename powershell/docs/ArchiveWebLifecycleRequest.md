@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **WebId** | **String** |  | [optional] 
 **WebUrl** | **String** |  | [optional] 
 **WebRelativeUrl** | **String** |  | [optional] 
+**WebTitle** | **String** | Web Title | [optional] 
 **SiteId** | **String** |  | [optional] 
 **SiteUrl** | **String** |  | [optional] 
 **ActionDescription** | **String** |  | [optional] [readonly] 
@@ -38,6 +39,7 @@ $ArchiveWebLifecycleRequest = New-Cloud.Governance.ClientArchiveWebLifecycleRequ
  -WebId null `
  -WebUrl null `
  -WebRelativeUrl null `
+ -WebTitle null `
  -SiteId null `
  -SiteUrl null `
  -ActionDescription null `

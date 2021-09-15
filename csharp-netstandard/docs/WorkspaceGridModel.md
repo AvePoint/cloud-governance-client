@@ -50,6 +50,7 @@ Name | Type | Description | Notes
 **LastRenewalBy** | **string** |  | [optional] 
 **LastRenewalByEmail** | **string** |  | [optional] 
 **LastRenewalByDisplayName** | **string** |  | [optional] 
+**Sensitivity** | **string** |  | [optional] 
 **PhaseAssigneeDisplayNames** | **string** |  | [optional] 
 **PhaseAssignees** | **string** |  | [optional] 
 **PhaseProfileName** | **string** |  | [optional] 

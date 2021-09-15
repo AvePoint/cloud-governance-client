@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
 **GroupObjectId** | **String** |  | [optional] 
 **NetworkId** | **String** |  | [optional] 
+**Sensitivity** | **String** |  | [optional] 
 **Id** | **String** |  | [optional] 
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
@@ -67,6 +68,7 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -GroupObjectType null `
  -GroupObjectId null `
  -NetworkId null `
+ -Sensitivity null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `

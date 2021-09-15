@@ -57,6 +57,12 @@ export interface ArchiveWebLifecycleRequest {
      */
     webRelativeUrl?: string | null;
     /**
+     * Web Title
+     * @type {string}
+     * @memberof ArchiveWebLifecycleRequest
+     */
+    webTitle?: string | null;
+    /**
      * 
      * @type {string}
      * @memberof ArchiveWebLifecycleRequest
@@ -204,6 +210,7 @@ export function ArchiveWebLifecycleRequestFromJSONTyped(json: any, ignoreDiscrim
         'webId': !exists(json, 'webId') ? undefined : json['webId'],
         'webUrl': !exists(json, 'webUrl') ? undefined : json['webUrl'],
         'webRelativeUrl': !exists(json, 'webRelativeUrl') ? undefined : json['webRelativeUrl'],
+        'webTitle': !exists(json, 'webTitle') ? undefined : json['webTitle'],
         'siteId': !exists(json, 'siteId') ? undefined : json['siteId'],
         'siteUrl': !exists(json, 'siteUrl') ? undefined : json['siteUrl'],
         'actionDescription': !exists(json, 'actionDescription') ? undefined : json['actionDescription'],
@@ -241,6 +248,7 @@ export function ArchiveWebLifecycleRequestToJSON(value?: ArchiveWebLifecycleRequ
         'webId': value.webId,
         'webUrl': value.webUrl,
         'webRelativeUrl': value.webRelativeUrl,
+        'webTitle': value.webTitle,
         'siteId': value.siteId,
         'siteUrl': value.siteUrl,
         'id': value.id,

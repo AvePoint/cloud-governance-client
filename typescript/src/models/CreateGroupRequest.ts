@@ -161,7 +161,7 @@ export interface CreateGroupRequest {
      */
     classification?: string | null;
     /**
-     * Group sensitive lable, currently doesn't support
+     * Group sensitive lable
      * @type {string}
      * @memberof CreateGroupRequest
      */

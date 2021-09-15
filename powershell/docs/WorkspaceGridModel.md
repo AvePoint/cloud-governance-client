@@ -50,6 +50,7 @@ Name | Type | Description | Notes
 **LastRenewalBy** | **String** |  | [optional] 
 **LastRenewalByEmail** | **String** |  | [optional] 
 **LastRenewalByDisplayName** | **String** |  | [optional] 
+**Sensitivity** | **String** |  | [optional] 
 **PhaseAssigneeDisplayNames** | **String** |  | [optional] 
 **PhaseAssignees** | **String** |  | [optional] 
 **PhaseProfileName** | **String** |  | [optional] 
@@ -112,6 +113,7 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -LastRenewalBy null `
  -LastRenewalByEmail null `
  -LastRenewalByDisplayName null `
+ -Sensitivity null `
  -PhaseAssigneeDisplayNames null `
  -PhaseAssignees null `
  -PhaseProfileName null `

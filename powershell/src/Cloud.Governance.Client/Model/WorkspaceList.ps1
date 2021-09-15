@@ -102,6 +102,9 @@ function New-WorkspaceList {
         ${Privacy} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${Sensitivity},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${PrivacyDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
@@ -144,6 +147,7 @@ function New-WorkspaceList {
             "StorageUsage" = ${StorageUsage}
             "Classification" = ${Classification}
             "Privacy" = ${Privacy}
+            "Sensitivity" = ${Sensitivity}
             "PrivacyDescription" = ${PrivacyDescription}
             "Metadata" = ${Metadata}
         }
@@ -168,7 +172,7 @@ function ConvertFrom-JsonToWorkspaceList {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WorkspaceList
-        $AllProperties = $("Id", "Name", "Type", "SiteUrl", "GroupEmail", "TypeDescription", "PrimaryContact", "PrimaryContactEmail", "Phase", "PhaseDescription", "IsCurrentRenewer", "CreatedTime", "Status", "AutoImportProfileId", "PendingAction", "SecondaryContact", "SecondaryContactEmail", "Policy", "PolicyId", "Description", "PrimaryAdmin", "PrimaryAdminEmail", "AdditionalAdmin", "AdditionalAdminEmail", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsage", "Classification", "Privacy", "PrivacyDescription", "Metadata")
+        $AllProperties = $("Id", "Name", "Type", "SiteUrl", "GroupEmail", "TypeDescription", "PrimaryContact", "PrimaryContactEmail", "Phase", "PhaseDescription", "IsCurrentRenewer", "CreatedTime", "Status", "AutoImportProfileId", "PendingAction", "SecondaryContact", "SecondaryContactEmail", "Policy", "PolicyId", "Description", "PrimaryAdmin", "PrimaryAdminEmail", "AdditionalAdmin", "AdditionalAdminEmail", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsage", "Classification", "Privacy", "Sensitivity", "PrivacyDescription", "Metadata")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -355,6 +359,12 @@ function ConvertFrom-JsonToWorkspaceList {
             $Privacy = $JsonParameters.PSobject.Properties["Privacy"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Sensitivity"))) { #optional property not found
+            $Sensitivity = $null
+        } else {
+            $Sensitivity = $JsonParameters.PSobject.Properties["Sensitivity"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "PrivacyDescription"))) { #optional property not found
             $PrivacyDescription = $null
         } else {
@@ -398,6 +408,7 @@ function ConvertFrom-JsonToWorkspaceList {
             "StorageUsage" = ${StorageUsage}
             "Classification" = ${Classification}
             "Privacy" = ${Privacy}
+            "Sensitivity" = ${Sensitivity}
             "PrivacyDescription" = ${PrivacyDescription}
             "Metadata" = ${Metadata}
         }

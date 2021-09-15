@@ -74,6 +74,9 @@ function New-CreateSiteService {
         [String[]]
         ${Sensitivities},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${AllSensitivities},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${HubSiteSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -246,6 +249,7 @@ function New-CreateSiteService {
             "YammerGroupSettings" = ${YammerGroupSettings}
             "Classifications" = ${Classifications}
             "Sensitivities" = ${Sensitivities}
+            "AllSensitivities" = ${AllSensitivities}
             "HubSiteSettings" = ${HubSiteSettings}
             "EnabledCustomTemplate" = ${EnabledCustomTemplate}
             "CustomSiteTemplateListURL" = ${CustomSiteTemplateListURL}
@@ -316,7 +320,7 @@ function ConvertFrom-JsonToCreateSiteService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateSiteService
-        $AllProperties = $("ScopeSettings", "AdminCenterUrl", "SiteLanguages", "RootSiteAndManagedPaths", "SiteUrlSetting", "MultiGeoSetting", "SiteTitleSetting", "Policies", "DeploymentManagerPlanSettings", "PolicyIdsAndTemplates", "TemplateIdsAndPermissions", "PermissionSettings", "LeasePeriodSettings", "TimeZones", "SiteDesigns", "SiteDesign", "DefaultTeamSiteDesignId", "SiteDesignAssignBy", "YammerGroupSettings", "Classifications", "Sensitivities", "HubSiteSettings", "EnabledCustomTemplate", "CustomSiteTemplateListURL", "DefaultPrimaryAdmin", "DefaultAdditionalAdmins", "DefaultPrimaryAdminReal", "DefaultAdditionalAdminsReal", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultSiteLanguage", "DefaultRootSite", "DefaultManagedPath", "DefaultPolicy", "DefaultTemplate", "DefaultTimeZone", "DefaultClassification", "DefaultSensitivity", "DefaultDesignType", "SiteLanguageAssignBy", "TemplateAssignBy", "PolicyAssignBy", "PermissionAssignBy", "RootSiteAndManagedPathAssignBy", "TimeZoneAssignBy", "PrimaryAdminAssignBy", "AdditionalAdminAssignBy", "PrimaryContactAssignBy", "SecondaryContactAssignBy", "DesignTypeAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "HubSiteAssignBy", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("ScopeSettings", "AdminCenterUrl", "SiteLanguages", "RootSiteAndManagedPaths", "SiteUrlSetting", "MultiGeoSetting", "SiteTitleSetting", "Policies", "DeploymentManagerPlanSettings", "PolicyIdsAndTemplates", "TemplateIdsAndPermissions", "PermissionSettings", "LeasePeriodSettings", "TimeZones", "SiteDesigns", "SiteDesign", "DefaultTeamSiteDesignId", "SiteDesignAssignBy", "YammerGroupSettings", "Classifications", "Sensitivities", "AllSensitivities", "HubSiteSettings", "EnabledCustomTemplate", "CustomSiteTemplateListURL", "DefaultPrimaryAdmin", "DefaultAdditionalAdmins", "DefaultPrimaryAdminReal", "DefaultAdditionalAdminsReal", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultSiteLanguage", "DefaultRootSite", "DefaultManagedPath", "DefaultPolicy", "DefaultTemplate", "DefaultTimeZone", "DefaultClassification", "DefaultSensitivity", "DefaultDesignType", "SiteLanguageAssignBy", "TemplateAssignBy", "PolicyAssignBy", "PermissionAssignBy", "RootSiteAndManagedPathAssignBy", "TimeZoneAssignBy", "PrimaryAdminAssignBy", "AdditionalAdminAssignBy", "PrimaryContactAssignBy", "SecondaryContactAssignBy", "DesignTypeAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "HubSiteAssignBy", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -447,6 +451,12 @@ function ConvertFrom-JsonToCreateSiteService {
             $Sensitivities = $null
         } else {
             $Sensitivities = $JsonParameters.PSobject.Properties["Sensitivities"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AllSensitivities"))) { #optional property not found
+            $AllSensitivities = $null
+        } else {
+            $AllSensitivities = $JsonParameters.PSobject.Properties["AllSensitivities"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "HubSiteSettings"))) { #optional property not found
@@ -759,6 +769,7 @@ function ConvertFrom-JsonToCreateSiteService {
             "YammerGroupSettings" = ${YammerGroupSettings}
             "Classifications" = ${Classifications}
             "Sensitivities" = ${Sensitivities}
+            "AllSensitivities" = ${AllSensitivities}
             "HubSiteSettings" = ${HubSiteSettings}
             "EnabledCustomTemplate" = ${EnabledCustomTemplate}
             "CustomSiteTemplateListURL" = ${CustomSiteTemplateListURL}

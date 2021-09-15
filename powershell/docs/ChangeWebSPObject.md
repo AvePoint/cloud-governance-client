@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **WebUrl** | **String** |  | [optional] 
 **SiteId** | **String** |  | [optional] 
 **WebId** | **String** |  | [optional] 
+**WebTitle** | **String** | Web Title | [optional] 
 
 ## Examples
 
@@ -15,7 +16,8 @@ Name | Type | Description | Notes
 $ChangeWebSPObject = New-Cloud.Governance.ClientChangeWebSPObject  -SiteUrl null `
  -WebUrl null `
  -SiteId null `
- -WebId null
+ -WebId null `
+ -WebTitle null
 ```
 
 - Convert the resource to JSON

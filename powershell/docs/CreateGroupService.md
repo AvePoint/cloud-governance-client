@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **EnableClassification** | **Boolean** |  | [optional] [default to $false]
 **PreventDuplicateName** | **Boolean** |  | [optional] [default to $false]
 **EnableSensitivity** | **Boolean** |  | [optional] [default to $false]
+**AllSensitivities** | [**StringModel[]**](StringModel.md) |  | [optional] 
 **AllowConfigureLeasePeriod** | **Boolean** |  | [optional] [default to $false]
 **ShowNotebookLink** | **Boolean** |  | [optional] [default to $false]
 **ShowConversationsLink** | **Boolean** |  | [optional] [default to $false]
@@ -38,6 +39,8 @@ Name | Type | Description | Notes
 **DefaultSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **DefaultOwners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **DefaultMembers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**DisableAddRemoveDynamicMembershipRules** | **Boolean** |  | [optional] [default to $false]
+**DynamicMembershipRules** | [**DynamicGroupRuleInfo[]**](DynamicGroupRuleInfo.md) |  | [optional] 
 **DefaultPolicy** | **String** |  | [optional] 
 **DefaultClassification** | **String** |  | [optional] 
 **DefaultSensitivity** | **String** |  | [optional] 
@@ -100,6 +103,7 @@ $CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType 
  -EnableClassification null `
  -PreventDuplicateName null `
  -EnableSensitivity null `
+ -AllSensitivities null `
  -AllowConfigureLeasePeriod null `
  -ShowNotebookLink null `
  -ShowConversationsLink null `
@@ -123,6 +127,8 @@ $CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType 
  -DefaultSecondaryContact null `
  -DefaultOwners null `
  -DefaultMembers null `
+ -DisableAddRemoveDynamicMembershipRules null `
+ -DynamicMembershipRules null `
  -DefaultPolicy null `
  -DefaultClassification null `
  -DefaultSensitivity null `

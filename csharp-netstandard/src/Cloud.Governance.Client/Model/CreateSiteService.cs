@@ -132,6 +132,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="yammerGroupSettings">yammerGroupSettings.</param>
         /// <param name="classifications">classifications.</param>
         /// <param name="sensitivities">sensitivities.</param>
+        /// <param name="allSensitivities">allSensitivities.</param>
         /// <param name="hubSiteSettings">Hub site settings model.</param>
         /// <param name="enabledCustomTemplate">enabledCustomTemplate (default to false).</param>
         /// <param name="customSiteTemplateListURL">customSiteTemplateListURL.</param>
@@ -180,7 +181,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateSiteService(ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), string adminCenterUrl = default(string), List<IntModel> siteLanguages = default(List<IntModel>), List<RootSiteWithManagedPaths> rootSiteAndManagedPaths = default(List<RootSiteWithManagedPaths>), SiteUrlSetting siteUrlSetting = default(SiteUrlSetting), MultiGeoSerivceSetting multiGeoSetting = default(MultiGeoSerivceSetting), SiteTitleSetting siteTitleSetting = default(SiteTitleSetting), List<PolicyRef> policies = default(List<PolicyRef>), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), List<PolicyWithTemplates> policyIdsAndTemplates = default(List<PolicyWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), SiteLeasePeriodServiceSettings leasePeriodSettings = default(SiteLeasePeriodServiceSettings), List<IntModel> timeZones = default(List<IntModel>), List<StringModel> siteDesigns = default(List<StringModel>), GuidModel siteDesign = default(GuidModel), string defaultTeamSiteDesignId = default(string), AssignBy? siteDesignAssignBy = default(AssignBy?), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool enabledCustomTemplate = false, string customSiteTemplateListURL = default(string), ApiUser defaultPrimaryAdmin = default(ApiUser), List<ApiUser> defaultAdditionalAdmins = default(List<ApiUser>), ApiUser defaultPrimaryAdminReal = default(ApiUser), List<ApiUser> defaultAdditionalAdminsReal = default(List<ApiUser>), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), int defaultSiteLanguage = 0, string defaultRootSite = default(string), string defaultManagedPath = default(string), Guid defaultPolicy = default(Guid), string defaultTemplate = default(string), int defaultTimeZone = 0, string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultDesignType = default(string), AssignBy? siteLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), AssignBy? rootSiteAndManagedPathAssignBy = default(AssignBy?), AssignBy? timeZoneAssignBy = default(AssignBy?), AssignBy? primaryAdminAssignBy = default(AssignBy?), AssignBy? additionalAdminAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? designTypeAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), CreateSiteRequest requestTemplate = default(CreateSiteRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public CreateSiteService(ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), string adminCenterUrl = default(string), List<IntModel> siteLanguages = default(List<IntModel>), List<RootSiteWithManagedPaths> rootSiteAndManagedPaths = default(List<RootSiteWithManagedPaths>), SiteUrlSetting siteUrlSetting = default(SiteUrlSetting), MultiGeoSerivceSetting multiGeoSetting = default(MultiGeoSerivceSetting), SiteTitleSetting siteTitleSetting = default(SiteTitleSetting), List<PolicyRef> policies = default(List<PolicyRef>), DeploymentManagerPlanSettings deploymentManagerPlanSettings = default(DeploymentManagerPlanSettings), List<PolicyWithTemplates> policyIdsAndTemplates = default(List<PolicyWithTemplates>), List<TemplateWithPermissions> templateIdsAndPermissions = default(List<TemplateWithPermissions>), PermissionSettings permissionSettings = default(PermissionSettings), SiteLeasePeriodServiceSettings leasePeriodSettings = default(SiteLeasePeriodServiceSettings), List<IntModel> timeZones = default(List<IntModel>), List<StringModel> siteDesigns = default(List<StringModel>), GuidModel siteDesign = default(GuidModel), string defaultTeamSiteDesignId = default(string), AssignBy? siteDesignAssignBy = default(AssignBy?), YammerGroupServiceSettings yammerGroupSettings = default(YammerGroupServiceSettings), List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), List<StringModel> allSensitivities = default(List<StringModel>), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool enabledCustomTemplate = false, string customSiteTemplateListURL = default(string), ApiUser defaultPrimaryAdmin = default(ApiUser), List<ApiUser> defaultAdditionalAdmins = default(List<ApiUser>), ApiUser defaultPrimaryAdminReal = default(ApiUser), List<ApiUser> defaultAdditionalAdminsReal = default(List<ApiUser>), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), int defaultSiteLanguage = 0, string defaultRootSite = default(string), string defaultManagedPath = default(string), Guid defaultPolicy = default(Guid), string defaultTemplate = default(string), int defaultTimeZone = 0, string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultDesignType = default(string), AssignBy? siteLanguageAssignBy = default(AssignBy?), AssignBy? templateAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? permissionAssignBy = default(AssignBy?), AssignBy? rootSiteAndManagedPathAssignBy = default(AssignBy?), AssignBy? timeZoneAssignBy = default(AssignBy?), AssignBy? primaryAdminAssignBy = default(AssignBy?), AssignBy? additionalAdminAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? designTypeAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), CreateSiteRequest requestTemplate = default(CreateSiteRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.ScopeSettings = scopeSettings;
             this.AdminCenterUrl = adminCenterUrl;
@@ -203,6 +204,7 @@ namespace Cloud.Governance.Client.Model
             this.YammerGroupSettings = yammerGroupSettings;
             this.Classifications = classifications;
             this.Sensitivities = sensitivities;
+            this.AllSensitivities = allSensitivities;
             this.HubSiteSettings = hubSiteSettings;
             this.EnabledCustomTemplate = enabledCustomTemplate;
             this.CustomSiteTemplateListURL = customSiteTemplateListURL;
@@ -372,6 +374,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "sensitivities", EmitDefaultValue = true)]
         public List<string> Sensitivities { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AllSensitivities
+        /// </summary>
+        [DataMember(Name = "allSensitivities", EmitDefaultValue = true)]
+        public List<StringModel> AllSensitivities { get; set; }
 
         /// <summary>
         /// Hub site settings model
@@ -602,6 +610,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  YammerGroupSettings: ").Append(YammerGroupSettings).Append("\n");
             sb.Append("  Classifications: ").Append(Classifications).Append("\n");
             sb.Append("  Sensitivities: ").Append(Sensitivities).Append("\n");
+            sb.Append("  AllSensitivities: ").Append(AllSensitivities).Append("\n");
             sb.Append("  HubSiteSettings: ").Append(HubSiteSettings).Append("\n");
             sb.Append("  EnabledCustomTemplate: ").Append(EnabledCustomTemplate).Append("\n");
             sb.Append("  CustomSiteTemplateListURL: ").Append(CustomSiteTemplateListURL).Append("\n");
@@ -796,6 +805,12 @@ namespace Cloud.Governance.Client.Model
                     this.Sensitivities != null &&
                     input.Sensitivities != null &&
                     this.Sensitivities.SequenceEqual(input.Sensitivities)
+                ) && 
+                (
+                    this.AllSensitivities == input.AllSensitivities ||
+                    this.AllSensitivities != null &&
+                    input.AllSensitivities != null &&
+                    this.AllSensitivities.SequenceEqual(input.AllSensitivities)
                 ) && 
                 (
                     this.HubSiteSettings == input.HubSiteSettings ||
@@ -1069,6 +1084,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Classifications.GetHashCode();
                 if (this.Sensitivities != null)
                     hashCode = hashCode * 59 + this.Sensitivities.GetHashCode();
+                if (this.AllSensitivities != null)
+                    hashCode = hashCode * 59 + this.AllSensitivities.GetHashCode();
                 if (this.HubSiteSettings != null)
                     hashCode = hashCode * 59 + this.HubSiteSettings.GetHashCode();
                 hashCode = hashCode * 59 + this.EnabledCustomTemplate.GetHashCode();

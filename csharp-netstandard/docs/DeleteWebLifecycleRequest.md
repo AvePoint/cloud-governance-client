@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **WebId** | **Guid** |  | [optional] 
 **WebUrl** | **string** |  | [optional] 
 **WebRelativeUrl** | **string** |  | [optional] 
+**WebTitle** | **string** | Web Title | [optional] 
 **SiteId** | **Guid** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
 **ActionDescription** | **string** |  | [optional] [readonly] 

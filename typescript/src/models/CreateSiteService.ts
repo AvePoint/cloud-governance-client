@@ -235,6 +235,12 @@ export interface CreateSiteService {
      */
     sensitivities?: Array<string> | null;
     /**
+     * 
+     * @type {Array<StringModel>}
+     * @memberof CreateSiteService
+     */
+    allSensitivities?: Array<StringModel> | null;
+    /**
      * Hub site settings model
      * @type {HubSiteSettings}
      * @memberof CreateSiteService
@@ -555,6 +561,7 @@ export function CreateSiteServiceFromJSONTyped(json: any, ignoreDiscriminator: b
         'yammerGroupSettings': !exists(json, 'yammerGroupSettings') ? undefined : YammerGroupServiceSettingsFromJSON(json['yammerGroupSettings']),
         'classifications': !exists(json, 'classifications') ? undefined : json['classifications'],
         'sensitivities': !exists(json, 'sensitivities') ? undefined : json['sensitivities'],
+        'allSensitivities': !exists(json, 'allSensitivities') ? undefined : (json['allSensitivities'] === null ? null : (json['allSensitivities'] as Array<any>).map(StringModelFromJSON)),
         'hubSiteSettings': !exists(json, 'hubSiteSettings') ? undefined : HubSiteSettingsFromJSON(json['hubSiteSettings']),
         'enabledCustomTemplate': !exists(json, 'enabledCustomTemplate') ? undefined : json['enabledCustomTemplate'],
         'customSiteTemplateListURL': !exists(json, 'customSiteTemplateListURL') ? undefined : json['customSiteTemplateListURL'],
@@ -636,6 +643,7 @@ export function CreateSiteServiceToJSON(value?: CreateSiteService | null): any {
         'yammerGroupSettings': YammerGroupServiceSettingsToJSON(value.yammerGroupSettings),
         'classifications': value.classifications,
         'sensitivities': value.sensitivities,
+        'allSensitivities': value.allSensitivities === undefined ? undefined : (value.allSensitivities === null ? null : (value.allSensitivities as Array<any>).map(StringModelToJSON)),
         'hubSiteSettings': HubSiteSettingsToJSON(value.hubSiteSettings),
         'enabledCustomTemplate': value.enabledCustomTemplate,
         'customSiteTemplateListURL': value.customSiteTemplateListURL,

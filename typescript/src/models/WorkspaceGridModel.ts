@@ -339,6 +339,12 @@ export interface WorkspaceGridModel {
      * @type {string}
      * @memberof WorkspaceGridModel
      */
+    sensitivity?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof WorkspaceGridModel
+     */
     phaseAssigneeDisplayNames?: string | null;
     /**
      * 
@@ -453,6 +459,7 @@ export function WorkspaceGridModelFromJSONTyped(json: any, ignoreDiscriminator: 
         'lastRenewalBy': !exists(json, 'lastRenewalBy') ? undefined : json['lastRenewalBy'],
         'lastRenewalByEmail': !exists(json, 'lastRenewalByEmail') ? undefined : json['lastRenewalByEmail'],
         'lastRenewalByDisplayName': !exists(json, 'lastRenewalByDisplayName') ? undefined : json['lastRenewalByDisplayName'],
+        'sensitivity': !exists(json, 'sensitivity') ? undefined : json['sensitivity'],
         'phaseAssigneeDisplayNames': !exists(json, 'phaseAssigneeDisplayNames') ? undefined : json['phaseAssigneeDisplayNames'],
         'phaseAssignees': !exists(json, 'phaseAssignees') ? undefined : json['phaseAssignees'],
         'phaseProfileName': !exists(json, 'phaseProfileName') ? undefined : json['phaseProfileName'],
@@ -522,6 +529,7 @@ export function WorkspaceGridModelToJSON(value?: WorkspaceGridModel | null): any
         'lastRenewalBy': value.lastRenewalBy,
         'lastRenewalByEmail': value.lastRenewalByEmail,
         'lastRenewalByDisplayName': value.lastRenewalByDisplayName,
+        'sensitivity': value.sensitivity,
         'phaseAssigneeDisplayNames': value.phaseAssigneeDisplayNames,
         'phaseAssignees': value.phaseAssignees,
         'phaseProfileName': value.phaseProfileName,

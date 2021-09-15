@@ -155,6 +155,12 @@ export interface CreateSiteRequest {
      */
     classification?: string | null;
     /**
+     * Sensitive lable
+     * @type {string}
+     * @memberof CreateSiteRequest
+     */
+    sensitivity?: string | null;
+    /**
      * Hub site setting
      * @type {HubSiteSettings}
      * @memberof CreateSiteRequest
@@ -337,6 +343,7 @@ export function CreateSiteRequestFromJSONTyped(json: any, ignoreDiscriminator: b
         'siteDesign': !exists(json, 'siteDesign') ? undefined : StringModelFromJSON(json['siteDesign']),
         'teamSiteDesign': !exists(json, 'teamSiteDesign') ? undefined : json['teamSiteDesign'],
         'classification': !exists(json, 'classification') ? undefined : json['classification'],
+        'sensitivity': !exists(json, 'sensitivity') ? undefined : json['sensitivity'],
         'hubSiteSettings': !exists(json, 'hubSiteSettings') ? undefined : HubSiteSettingsFromJSON(json['hubSiteSettings']),
         'userPermissions': !exists(json, 'userPermissions') ? undefined : (json['userPermissions'] === null ? null : (json['userPermissions'] as Array<any>).map(RequestUserWithPermissionsFromJSON)),
         'groupPermissions': !exists(json, 'groupPermissions') ? undefined : (json['groupPermissions'] === null ? null : (json['groupPermissions'] as Array<any>).map(RequestGroupWithPermissionsFromJSON)),
@@ -390,6 +397,7 @@ export function CreateSiteRequestToJSON(value?: CreateSiteRequest | null): any {
         'siteDesign': StringModelToJSON(value.siteDesign),
         'teamSiteDesign': value.teamSiteDesign,
         'classification': value.classification,
+        'sensitivity': value.sensitivity,
         'hubSiteSettings': HubSiteSettingsToJSON(value.hubSiteSettings),
         'userPermissions': value.userPermissions === undefined ? undefined : (value.userPermissions === null ? null : (value.userPermissions as Array<any>).map(RequestUserWithPermissionsToJSON)),
         'groupPermissions': value.groupPermissions === undefined ? undefined : (value.groupPermissions === null ? null : (value.groupPermissions as Array<any>).map(RequestGroupWithPermissionsToJSON)),

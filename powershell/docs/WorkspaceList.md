@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **StorageUsage** | **String** |  | [optional] 
 **Classification** | **String** |  | [optional] 
 **Privacy** | **Boolean** |  | [optional] [default to $false]
+**Sensitivity** | **String** |  | [optional] 
 **PrivacyDescription** | **String** |  | [optional] 
 **Metadata** | [**EndUserReportMetadata[]**](EndUserReportMetadata.md) |  | [optional] 
 
@@ -70,6 +71,7 @@ $WorkspaceList = New-Cloud.Governance.ClientWorkspaceList  -Id null `
  -StorageUsage null `
  -Classification null `
  -Privacy null `
+ -Sensitivity null `
  -PrivacyDescription null `
  -Metadata null
 ```

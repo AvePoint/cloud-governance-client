@@ -20,6 +20,9 @@ function New-CreateGuestUserService {
         [System.Nullable[Boolean]]
         ${EnableInviteContactGroup} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableAddToGroups} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${PrimaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -47,8 +50,62 @@ function New-CreateGuestUserService {
         [PSCustomObject]
         ${OneTimeDurationType} = "Day",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${PeoplePickerFilterProfileId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableDomainList} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${DomainListType} = "AllowSpecificDomainList",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String[]]
+        ${Domains},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${UsageLocationAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${JobTitleAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${JobDepartmentAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${WelcomeEmailMessageAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${UsageLocation},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${JobTitle},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${JobDepartment},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${WelcomeEmailMessage},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${DisplayNameAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${FirstNameAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${LastNameAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${RequestTemplate},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableInviteMultiple} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${CompanyName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${CompanyNameAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
@@ -105,6 +162,7 @@ function New-CreateGuestUserService {
             "TenantId" = ${TenantId}
             "EnableInviteOwnersGroup" = ${EnableInviteOwnersGroup}
             "EnableInviteContactGroup" = ${EnableInviteContactGroup}
+            "EnableAddToGroups" = ${EnableAddToGroups}
             "PrimaryContact" = ${PrimaryContact}
             "PrimaryContactAssignBy" = ${PrimaryContactAssignBy}
             "SecondaryContact" = ${SecondaryContact}
@@ -114,7 +172,25 @@ function New-CreateGuestUserService {
             "EnableOnTimeRenewal" = ${EnableOnTimeRenewal}
             "OneTimeDuration" = ${OneTimeDuration}
             "OneTimeDurationType" = ${OneTimeDurationType}
+            "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
+            "EnableDomainList" = ${EnableDomainList}
+            "DomainListType" = ${DomainListType}
+            "Domains" = ${Domains}
+            "UsageLocationAssignBy" = ${UsageLocationAssignBy}
+            "JobTitleAssignBy" = ${JobTitleAssignBy}
+            "JobDepartmentAssignBy" = ${JobDepartmentAssignBy}
+            "WelcomeEmailMessageAssignBy" = ${WelcomeEmailMessageAssignBy}
+            "UsageLocation" = ${UsageLocation}
+            "JobTitle" = ${JobTitle}
+            "JobDepartment" = ${JobDepartment}
+            "WelcomeEmailMessage" = ${WelcomeEmailMessage}
+            "DisplayNameAssignBy" = ${DisplayNameAssignBy}
+            "FirstNameAssignBy" = ${FirstNameAssignBy}
+            "LastNameAssignBy" = ${LastNameAssignBy}
             "RequestTemplate" = ${RequestTemplate}
+            "EnableInviteMultiple" = ${EnableInviteMultiple}
+            "CompanyName" = ${CompanyName}
+            "CompanyNameAssignBy" = ${CompanyNameAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
@@ -152,7 +228,7 @@ function ConvertFrom-JsonToCreateGuestUserService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGuestUserService
-        $AllProperties = $("TenantId", "EnableInviteOwnersGroup", "EnableInviteContactGroup", "PrimaryContact", "PrimaryContactAssignBy", "SecondaryContact", "SecondaryContactAssignBy", "Manager", "ManagerAssignBy", "EnableOnTimeRenewal", "OneTimeDuration", "OneTimeDurationType", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("TenantId", "EnableInviteOwnersGroup", "EnableInviteContactGroup", "EnableAddToGroups", "PrimaryContact", "PrimaryContactAssignBy", "SecondaryContact", "SecondaryContactAssignBy", "Manager", "ManagerAssignBy", "EnableOnTimeRenewal", "OneTimeDuration", "OneTimeDurationType", "PeoplePickerFilterProfileId", "EnableDomainList", "DomainListType", "Domains", "UsageLocationAssignBy", "JobTitleAssignBy", "JobDepartmentAssignBy", "WelcomeEmailMessageAssignBy", "UsageLocation", "JobTitle", "JobDepartment", "WelcomeEmailMessage", "DisplayNameAssignBy", "FirstNameAssignBy", "LastNameAssignBy", "RequestTemplate", "EnableInviteMultiple", "CompanyName", "CompanyNameAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -175,6 +251,12 @@ function ConvertFrom-JsonToCreateGuestUserService {
             $EnableInviteContactGroup = $null
         } else {
             $EnableInviteContactGroup = $JsonParameters.PSobject.Properties["EnableInviteContactGroup"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableAddToGroups"))) { #optional property not found
+            $EnableAddToGroups = $null
+        } else {
+            $EnableAddToGroups = $JsonParameters.PSobject.Properties["EnableAddToGroups"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "PrimaryContact"))) { #optional property not found
@@ -231,10 +313,118 @@ function ConvertFrom-JsonToCreateGuestUserService {
             $OneTimeDurationType = $JsonParameters.PSobject.Properties["OneTimeDurationType"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "PeoplePickerFilterProfileId"))) { #optional property not found
+            $PeoplePickerFilterProfileId = $null
+        } else {
+            $PeoplePickerFilterProfileId = $JsonParameters.PSobject.Properties["PeoplePickerFilterProfileId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableDomainList"))) { #optional property not found
+            $EnableDomainList = $null
+        } else {
+            $EnableDomainList = $JsonParameters.PSobject.Properties["EnableDomainList"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DomainListType"))) { #optional property not found
+            $DomainListType = $null
+        } else {
+            $DomainListType = $JsonParameters.PSobject.Properties["DomainListType"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Domains"))) { #optional property not found
+            $Domains = $null
+        } else {
+            $Domains = $JsonParameters.PSobject.Properties["Domains"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "UsageLocationAssignBy"))) { #optional property not found
+            $UsageLocationAssignBy = $null
+        } else {
+            $UsageLocationAssignBy = $JsonParameters.PSobject.Properties["UsageLocationAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "JobTitleAssignBy"))) { #optional property not found
+            $JobTitleAssignBy = $null
+        } else {
+            $JobTitleAssignBy = $JsonParameters.PSobject.Properties["JobTitleAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "JobDepartmentAssignBy"))) { #optional property not found
+            $JobDepartmentAssignBy = $null
+        } else {
+            $JobDepartmentAssignBy = $JsonParameters.PSobject.Properties["JobDepartmentAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WelcomeEmailMessageAssignBy"))) { #optional property not found
+            $WelcomeEmailMessageAssignBy = $null
+        } else {
+            $WelcomeEmailMessageAssignBy = $JsonParameters.PSobject.Properties["WelcomeEmailMessageAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "UsageLocation"))) { #optional property not found
+            $UsageLocation = $null
+        } else {
+            $UsageLocation = $JsonParameters.PSobject.Properties["UsageLocation"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "JobTitle"))) { #optional property not found
+            $JobTitle = $null
+        } else {
+            $JobTitle = $JsonParameters.PSobject.Properties["JobTitle"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "JobDepartment"))) { #optional property not found
+            $JobDepartment = $null
+        } else {
+            $JobDepartment = $JsonParameters.PSobject.Properties["JobDepartment"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WelcomeEmailMessage"))) { #optional property not found
+            $WelcomeEmailMessage = $null
+        } else {
+            $WelcomeEmailMessage = $JsonParameters.PSobject.Properties["WelcomeEmailMessage"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayNameAssignBy"))) { #optional property not found
+            $DisplayNameAssignBy = $null
+        } else {
+            $DisplayNameAssignBy = $JsonParameters.PSobject.Properties["DisplayNameAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "FirstNameAssignBy"))) { #optional property not found
+            $FirstNameAssignBy = $null
+        } else {
+            $FirstNameAssignBy = $JsonParameters.PSobject.Properties["FirstNameAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastNameAssignBy"))) { #optional property not found
+            $LastNameAssignBy = $null
+        } else {
+            $LastNameAssignBy = $JsonParameters.PSobject.Properties["LastNameAssignBy"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "RequestTemplate"))) { #optional property not found
             $RequestTemplate = $null
         } else {
             $RequestTemplate = $JsonParameters.PSobject.Properties["RequestTemplate"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableInviteMultiple"))) { #optional property not found
+            $EnableInviteMultiple = $null
+        } else {
+            $EnableInviteMultiple = $JsonParameters.PSobject.Properties["EnableInviteMultiple"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CompanyName"))) { #optional property not found
+            $CompanyName = $null
+        } else {
+            $CompanyName = $JsonParameters.PSobject.Properties["CompanyName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CompanyNameAssignBy"))) { #optional property not found
+            $CompanyNameAssignBy = $null
+        } else {
+            $CompanyNameAssignBy = $JsonParameters.PSobject.Properties["CompanyNameAssignBy"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
@@ -331,6 +521,7 @@ function ConvertFrom-JsonToCreateGuestUserService {
             "TenantId" = ${TenantId}
             "EnableInviteOwnersGroup" = ${EnableInviteOwnersGroup}
             "EnableInviteContactGroup" = ${EnableInviteContactGroup}
+            "EnableAddToGroups" = ${EnableAddToGroups}
             "PrimaryContact" = ${PrimaryContact}
             "PrimaryContactAssignBy" = ${PrimaryContactAssignBy}
             "SecondaryContact" = ${SecondaryContact}
@@ -340,7 +531,25 @@ function ConvertFrom-JsonToCreateGuestUserService {
             "EnableOnTimeRenewal" = ${EnableOnTimeRenewal}
             "OneTimeDuration" = ${OneTimeDuration}
             "OneTimeDurationType" = ${OneTimeDurationType}
+            "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
+            "EnableDomainList" = ${EnableDomainList}
+            "DomainListType" = ${DomainListType}
+            "Domains" = ${Domains}
+            "UsageLocationAssignBy" = ${UsageLocationAssignBy}
+            "JobTitleAssignBy" = ${JobTitleAssignBy}
+            "JobDepartmentAssignBy" = ${JobDepartmentAssignBy}
+            "WelcomeEmailMessageAssignBy" = ${WelcomeEmailMessageAssignBy}
+            "UsageLocation" = ${UsageLocation}
+            "JobTitle" = ${JobTitle}
+            "JobDepartment" = ${JobDepartment}
+            "WelcomeEmailMessage" = ${WelcomeEmailMessage}
+            "DisplayNameAssignBy" = ${DisplayNameAssignBy}
+            "FirstNameAssignBy" = ${FirstNameAssignBy}
+            "LastNameAssignBy" = ${LastNameAssignBy}
             "RequestTemplate" = ${RequestTemplate}
+            "EnableInviteMultiple" = ${EnableInviteMultiple}
+            "CompanyName" = ${CompanyName}
+            "CompanyNameAssignBy" = ${CompanyNameAssignBy}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}

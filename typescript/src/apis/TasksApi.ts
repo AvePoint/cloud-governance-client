@@ -358,7 +358,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/approve`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -399,7 +399,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/archivegroup`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -440,7 +440,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/archivesite`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -481,7 +481,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/archiveweb`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -522,7 +522,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changegrouppolicy`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -563,7 +563,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changegroupquota`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -604,7 +604,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changegroup`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -645,7 +645,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changelistsetting`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -686,7 +686,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changepermission`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -727,7 +727,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changesite/adminorcontact`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -768,7 +768,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changesitepolicy`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -809,7 +809,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changesitequota`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -850,7 +850,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changesite/setting`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -891,7 +891,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changewebcontact`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -932,7 +932,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/changewebsettings`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -973,7 +973,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/clonepermission`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1014,7 +1014,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/contentmove`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1055,7 +1055,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/creategroup`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1096,7 +1096,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/createguestuser`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1137,7 +1137,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/createlist`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1178,7 +1178,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/createsite`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1219,7 +1219,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/createweb`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1260,7 +1260,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/custom`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1301,7 +1301,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/deletegroup`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1342,7 +1342,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/deletesite`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1383,7 +1383,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/deleteweb`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1424,7 +1424,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/extendgroup`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1465,7 +1465,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/extendsite`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1506,7 +1506,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/grantpermission`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1547,7 +1547,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/locksite`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1588,7 +1588,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/managepermission`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1629,7 +1629,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/restoregroup`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1670,7 +1670,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/unlocksite`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
@@ -1709,7 +1709,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/batchTasks`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1776,7 +1776,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/my/v2`,
             method: 'GET',
@@ -1815,7 +1815,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/my/{batchid}`.replace(`{${"batchid"}}`, encodeURIComponent(String(requestParameters.batchid))),
             method: 'GET',
@@ -1854,7 +1854,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
@@ -1897,7 +1897,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/reassignto/{user}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"user"}}`, encodeURIComponent(String(requestParameters.user))),
             method: 'POST',
@@ -1937,7 +1937,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/reject`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -1978,7 +1978,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/retry`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
@@ -2019,7 +2019,7 @@ export class TasksApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/tasks/{id}/skip`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',

@@ -21,6 +21,9 @@ function New-ArchiveSiteRequest {
         ${SiteUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${SiteTitle},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -56,6 +59,7 @@ function New-ArchiveSiteRequest {
             "Action" = ${Action}
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
+            "SiteTitle" = ${SiteTitle}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}
@@ -84,7 +88,7 @@ function ConvertFrom-JsonToArchiveSiteRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ArchiveSiteRequest
-        $AllProperties = $("Action", "ActionDescription", "SiteId", "SiteUrl", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("Action", "ActionDescription", "SiteId", "SiteUrl", "SiteTitle", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -113,6 +117,12 @@ function ConvertFrom-JsonToArchiveSiteRequest {
             $SiteUrl = $null
         } else {
             $SiteUrl = $JsonParameters.PSobject.Properties["SiteUrl"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SiteTitle"))) { #optional property not found
+            $SiteTitle = $null
+        } else {
+            $SiteTitle = $JsonParameters.PSobject.Properties["SiteTitle"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
@@ -234,6 +244,7 @@ function ConvertFrom-JsonToArchiveSiteRequest {
             "ActionDescription" = ${ActionDescription}
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
+            "SiteTitle" = ${SiteTitle}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}

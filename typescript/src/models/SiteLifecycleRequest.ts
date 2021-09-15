@@ -57,6 +57,12 @@ export interface SiteLifecycleRequest {
      */
     siteUrl?: string | null;
     /**
+     * Site Title
+     * @type {string}
+     * @memberof SiteLifecycleRequest
+     */
+    siteTitle?: string | null;
+    /**
      * Id of request.
      * @type {string}
      * @memberof SiteLifecycleRequest
@@ -186,6 +192,7 @@ export function SiteLifecycleRequestFromJSONTyped(json: any, ignoreDiscriminator
         'actionDescription': !exists(json, 'actionDescription') ? undefined : json['actionDescription'],
         'siteId': !exists(json, 'siteId') ? undefined : json['siteId'],
         'siteUrl': !exists(json, 'siteUrl') ? undefined : json['siteUrl'],
+        'siteTitle': !exists(json, 'siteTitle') ? undefined : json['siteTitle'],
         'id': !exists(json, 'id') ? undefined : json['id'],
         'serviceId': !exists(json, 'serviceId') ? undefined : json['serviceId'],
         'summary': !exists(json, 'summary') ? undefined : json['summary'],
@@ -220,6 +227,7 @@ export function SiteLifecycleRequestToJSON(value?: SiteLifecycleRequest | null):
         'action': SiteLifecycleActionTypeToJSON(value.action),
         'siteId': value.siteId,
         'siteUrl': value.siteUrl,
+        'siteTitle': value.siteTitle,
         'id': value.id,
         'serviceId': value.serviceId,
         'summary': value.summary,

@@ -58,6 +58,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="storageUsed">storageUsed.</param>
         /// <param name="siteSharing">siteSharing.</param>
         /// <param name="groupSharing">groupSharing.</param>
+        /// <param name="sensitivityLable">sensitivityLable.</param>
         /// <param name="classification">classification.</param>
         /// <param name="claimStatus">claimStatus.</param>
         /// <param name="createdTime">createdTime.</param>
@@ -67,9 +68,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="hasOngoingTasks">hasOngoingTasks.</param>
         /// <param name="lastRenewalTime">lastRenewalTime.</param>
         /// <param name="lastRenewalBy">lastRenewalBy.</param>
-        /// <param name="lastRenewalByEmail">lastRenewalByEmail.</param>
         /// <param name="lastRenewalByDisplayName">lastRenewalByDisplayName.</param>
-        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = 0, double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>), string hasOngoingTasks = default(string), DateTime? lastRenewalTime = default(DateTime?), string lastRenewalBy = default(string), string lastRenewalByEmail = default(string), string lastRenewalByDisplayName = default(string))
+        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = 0, double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string sensitivityLable = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>), string hasOngoingTasks = default(string), DateTime? lastRenewalTime = default(DateTime?), string lastRenewalBy = default(string), string lastRenewalByDisplayName = default(string))
         {
             this.Id = id;
             this.Name = name;
@@ -104,6 +104,7 @@ namespace Cloud.Governance.Client.Model
             this.StorageUsed = storageUsed;
             this.SiteSharing = siteSharing;
             this.GroupSharing = groupSharing;
+            this.SensitivityLable = sensitivityLable;
             this.Classification = classification;
             this.ClaimStatus = claimStatus;
             this.CreatedTime = createdTime;
@@ -113,7 +114,6 @@ namespace Cloud.Governance.Client.Model
             this.HasOngoingTasks = hasOngoingTasks;
             this.LastRenewalTime = lastRenewalTime;
             this.LastRenewalBy = lastRenewalBy;
-            this.LastRenewalByEmail = lastRenewalByEmail;
             this.LastRenewalByDisplayName = lastRenewalByDisplayName;
         }
 
@@ -310,6 +310,12 @@ namespace Cloud.Governance.Client.Model
         public string GroupSharing { get; set; }
 
         /// <summary>
+        /// Gets or Sets SensitivityLable
+        /// </summary>
+        [DataMember(Name = "SensitivityLable", EmitDefaultValue = true)]
+        public string SensitivityLable { get; set; }
+
+        /// <summary>
         /// Gets or Sets Classification
         /// </summary>
         [DataMember(Name = "Classification", EmitDefaultValue = true)]
@@ -364,12 +370,6 @@ namespace Cloud.Governance.Client.Model
         public string LastRenewalBy { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastRenewalByEmail
-        /// </summary>
-        [DataMember(Name = "LastRenewalByEmail", EmitDefaultValue = true)]
-        public string LastRenewalByEmail { get; set; }
-
-        /// <summary>
         /// Gets or Sets LastRenewalByDisplayName
         /// </summary>
         [DataMember(Name = "LastRenewalByDisplayName", EmitDefaultValue = true)]
@@ -415,6 +415,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  StorageUsed: ").Append(StorageUsed).Append("\n");
             sb.Append("  SiteSharing: ").Append(SiteSharing).Append("\n");
             sb.Append("  GroupSharing: ").Append(GroupSharing).Append("\n");
+            sb.Append("  SensitivityLable: ").Append(SensitivityLable).Append("\n");
             sb.Append("  Classification: ").Append(Classification).Append("\n");
             sb.Append("  ClaimStatus: ").Append(ClaimStatus).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
@@ -424,7 +425,6 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  HasOngoingTasks: ").Append(HasOngoingTasks).Append("\n");
             sb.Append("  LastRenewalTime: ").Append(LastRenewalTime).Append("\n");
             sb.Append("  LastRenewalBy: ").Append(LastRenewalBy).Append("\n");
-            sb.Append("  LastRenewalByEmail: ").Append(LastRenewalByEmail).Append("\n");
             sb.Append("  LastRenewalByDisplayName: ").Append(LastRenewalByDisplayName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -621,6 +621,11 @@ namespace Cloud.Governance.Client.Model
                     this.GroupSharing.Equals(input.GroupSharing))
                 ) && 
                 (
+                    this.SensitivityLable == input.SensitivityLable ||
+                    (this.SensitivityLable != null &&
+                    this.SensitivityLable.Equals(input.SensitivityLable))
+                ) && 
+                (
                     this.Classification == input.Classification ||
                     (this.Classification != null &&
                     this.Classification.Equals(input.Classification))
@@ -665,11 +670,6 @@ namespace Cloud.Governance.Client.Model
                     this.LastRenewalBy == input.LastRenewalBy ||
                     (this.LastRenewalBy != null &&
                     this.LastRenewalBy.Equals(input.LastRenewalBy))
-                ) && 
-                (
-                    this.LastRenewalByEmail == input.LastRenewalByEmail ||
-                    (this.LastRenewalByEmail != null &&
-                    this.LastRenewalByEmail.Equals(input.LastRenewalByEmail))
                 ) && 
                 (
                     this.LastRenewalByDisplayName == input.LastRenewalByDisplayName ||
@@ -751,6 +751,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.SiteSharing.GetHashCode();
                 if (this.GroupSharing != null)
                     hashCode = hashCode * 59 + this.GroupSharing.GetHashCode();
+                if (this.SensitivityLable != null)
+                    hashCode = hashCode * 59 + this.SensitivityLable.GetHashCode();
                 if (this.Classification != null)
                     hashCode = hashCode * 59 + this.Classification.GetHashCode();
                 if (this.ClaimStatus != null)
@@ -769,8 +771,6 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.LastRenewalTime.GetHashCode();
                 if (this.LastRenewalBy != null)
                     hashCode = hashCode * 59 + this.LastRenewalBy.GetHashCode();
-                if (this.LastRenewalByEmail != null)
-                    hashCode = hashCode * 59 + this.LastRenewalByEmail.GetHashCode();
                 if (this.LastRenewalByDisplayName != null)
                     hashCode = hashCode * 59 + this.LastRenewalByDisplayName.GetHashCode();
                 return hashCode;

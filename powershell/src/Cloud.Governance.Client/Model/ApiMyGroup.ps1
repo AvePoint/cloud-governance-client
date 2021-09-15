@@ -78,6 +78,9 @@ function New-ApiMyGroup {
         ${NetworkId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${Sensitivity},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
@@ -151,6 +154,7 @@ function New-ApiMyGroup {
             "GroupObjectType" = ${GroupObjectType}
             "GroupObjectId" = ${GroupObjectId}
             "NetworkId" = ${NetworkId}
+            "Sensitivity" = ${Sensitivity}
             "Id" = ${Id}
             "Phase" = ${Phase}
             "PhaseStartTime" = ${PhaseStartTime}
@@ -188,7 +192,7 @@ function ConvertFrom-JsonToApiMyGroup {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApiMyGroup
-        $AllProperties = $("ObjectId", "PolicyId", "TenantId", "GroupName", "Email", "Language", "ApplyPolicyStatus", "EnableTeamCollaboration", "GroupType", "CreatedTime", "Owners", "PreferredDataLocation", "PreferredDataLocationName", "EnableDynamicMembership", "GroupTeamSiteUrl", "TeamLink", "NoteBookLink", "PlannerLink", "Classification", "GroupObjectType", "GroupObjectId", "NetworkId", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
+        $AllProperties = $("ObjectId", "PolicyId", "TenantId", "GroupName", "Email", "Language", "ApplyPolicyStatus", "EnableTeamCollaboration", "GroupType", "CreatedTime", "Owners", "PreferredDataLocation", "PreferredDataLocationName", "EnableDynamicMembership", "GroupTeamSiteUrl", "TeamLink", "NoteBookLink", "PlannerLink", "Classification", "GroupObjectType", "GroupObjectId", "NetworkId", "Sensitivity", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -327,6 +331,12 @@ function ConvertFrom-JsonToApiMyGroup {
             $NetworkId = $JsonParameters.PSobject.Properties["NetworkId"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Sensitivity"))) { #optional property not found
+            $Sensitivity = $null
+        } else {
+            $Sensitivity = $JsonParameters.PSobject.Properties["Sensitivity"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
             $Id = $null
         } else {
@@ -440,6 +450,7 @@ function ConvertFrom-JsonToApiMyGroup {
             "GroupObjectType" = ${GroupObjectType}
             "GroupObjectId" = ${GroupObjectId}
             "NetworkId" = ${NetworkId}
+            "Sensitivity" = ${Sensitivity}
             "Id" = ${Id}
             "Phase" = ${Phase}
             "PhaseStartTime" = ${PhaseStartTime}

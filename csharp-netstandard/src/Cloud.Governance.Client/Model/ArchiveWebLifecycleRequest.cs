@@ -73,6 +73,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webId">webId.</param>
         /// <param name="webUrl">webUrl.</param>
         /// <param name="webRelativeUrl">webRelativeUrl.</param>
+        /// <param name="webTitle">Web Title.</param>
         /// <param name="siteId">siteId.</param>
         /// <param name="siteUrl">siteUrl.</param>
         /// <param name="id">Id of request..</param>
@@ -81,11 +82,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ArchiveWebLifecycleRequest(Guid webId = default(Guid), string webUrl = default(string), string webRelativeUrl = default(string), Guid siteId = default(Guid), string siteUrl = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ArchiveWebLifecycleRequest(Guid webId = default(Guid), string webUrl = default(string), string webRelativeUrl = default(string), string webTitle = default(string), Guid siteId = default(Guid), string siteUrl = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.WebId = webId;
             this.WebUrl = webUrl;
             this.WebRelativeUrl = webRelativeUrl;
+            this.WebTitle = webTitle;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.Id = id;
@@ -113,6 +115,13 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "webRelativeUrl", EmitDefaultValue = true)]
         public string WebRelativeUrl { get; set; }
+
+        /// <summary>
+        /// Web Title
+        /// </summary>
+        /// <value>Web Title</value>
+        [DataMember(Name = "webTitle", EmitDefaultValue = true)]
+        public string WebTitle { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteId
@@ -371,6 +380,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  WebId: ").Append(WebId).Append("\n");
             sb.Append("  WebUrl: ").Append(WebUrl).Append("\n");
             sb.Append("  WebRelativeUrl: ").Append(WebRelativeUrl).Append("\n");
+            sb.Append("  WebTitle: ").Append(WebTitle).Append("\n");
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
             sb.Append("  SiteUrl: ").Append(SiteUrl).Append("\n");
             sb.Append("  ActionDescription: ").Append(ActionDescription).Append("\n");
@@ -445,6 +455,11 @@ namespace Cloud.Governance.Client.Model
                     this.WebRelativeUrl == input.WebRelativeUrl ||
                     (this.WebRelativeUrl != null &&
                     this.WebRelativeUrl.Equals(input.WebRelativeUrl))
+                ) && 
+                (
+                    this.WebTitle == input.WebTitle ||
+                    (this.WebTitle != null &&
+                    this.WebTitle.Equals(input.WebTitle))
                 ) && 
                 (
                     this.SiteId == input.SiteId ||
@@ -572,6 +587,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.WebUrl.GetHashCode();
                 if (this.WebRelativeUrl != null)
                     hashCode = hashCode * 59 + this.WebRelativeUrl.GetHashCode();
+                if (this.WebTitle != null)
+                    hashCode = hashCode * 59 + this.WebTitle.GetHashCode();
                 if (this.SiteId != null)
                     hashCode = hashCode * 59 + this.SiteId.GetHashCode();
                 if (this.SiteUrl != null)

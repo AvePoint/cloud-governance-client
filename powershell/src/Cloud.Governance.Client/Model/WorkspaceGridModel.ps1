@@ -153,6 +153,9 @@ function New-WorkspaceGridModel {
         ${LastRenewalByDisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${Sensitivity},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${PhaseAssigneeDisplayNames},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -236,6 +239,7 @@ function New-WorkspaceGridModel {
             "LastRenewalBy" = ${LastRenewalBy}
             "LastRenewalByEmail" = ${LastRenewalByEmail}
             "LastRenewalByDisplayName" = ${LastRenewalByDisplayName}
+            "Sensitivity" = ${Sensitivity}
             "PhaseAssigneeDisplayNames" = ${PhaseAssigneeDisplayNames}
             "PhaseAssignees" = ${PhaseAssignees}
             "PhaseProfileName" = ${PhaseProfileName}
@@ -268,7 +272,7 @@ function ConvertFrom-JsonToWorkspaceGridModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WorkspaceGridModel
-        $AllProperties = $("Id", "Name", "Description", "Status", "StatusDescription", "Type", "TypeDescription", "Url", "Email", "Privacy", "PrivacyDescription", "PolicyName", "PolicyDisplay", "PolicyId", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "HubType", "AssociateHubTitle", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsed", "SiteSharing", "SiteSharingDescription", "GroupSharing", "GroupSharingDescription", "Classification", "ClaimStatus", "ClaimStatusDescription", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "LastRenewalTime", "ApplyPolicyStatus", "HasOngoingTasks", "HasOngoingTasksDescription", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseProfileId", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Phase", "PhaseDescription", "Metadata")
+        $AllProperties = $("Id", "Name", "Description", "Status", "StatusDescription", "Type", "TypeDescription", "Url", "Email", "Privacy", "PrivacyDescription", "PolicyName", "PolicyDisplay", "PolicyId", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "HubType", "AssociateHubTitle", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsed", "SiteSharing", "SiteSharingDescription", "GroupSharing", "GroupSharingDescription", "Classification", "ClaimStatus", "ClaimStatusDescription", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "LastRenewalTime", "ApplyPolicyStatus", "HasOngoingTasks", "HasOngoingTasksDescription", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName", "Sensitivity", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseProfileId", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Phase", "PhaseDescription", "Metadata")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -557,6 +561,12 @@ function ConvertFrom-JsonToWorkspaceGridModel {
             $LastRenewalByDisplayName = $JsonParameters.PSobject.Properties["LastRenewalByDisplayName"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Sensitivity"))) { #optional property not found
+            $Sensitivity = $null
+        } else {
+            $Sensitivity = $JsonParameters.PSobject.Properties["Sensitivity"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "PhaseAssigneeDisplayNames"))) { #optional property not found
             $PhaseAssigneeDisplayNames = $null
         } else {
@@ -665,6 +675,7 @@ function ConvertFrom-JsonToWorkspaceGridModel {
             "LastRenewalBy" = ${LastRenewalBy}
             "LastRenewalByEmail" = ${LastRenewalByEmail}
             "LastRenewalByDisplayName" = ${LastRenewalByDisplayName}
+            "Sensitivity" = ${Sensitivity}
             "PhaseAssigneeDisplayNames" = ${PhaseAssigneeDisplayNames}
             "PhaseAssignees" = ${PhaseAssignees}
             "PhaseProfileName" = ${PhaseProfileName}

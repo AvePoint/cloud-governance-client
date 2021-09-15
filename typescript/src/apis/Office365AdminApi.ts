@@ -61,7 +61,7 @@ export class Office365AdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/office365/web/usercustomactions`,
             method: 'POST',
@@ -112,7 +112,7 @@ export class Office365AdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/office365/web/usercustomactions`,
             method: 'DELETE',
@@ -154,7 +154,7 @@ export class Office365AdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/office365/azuread/{tenantId}/property/names/custom`.replace(`{${"tenantId"}}`, encodeURIComponent(String(requestParameters.tenantId))),
             method: 'GET',
@@ -197,7 +197,7 @@ export class Office365AdminApi extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/admin/office365/tenantid`,
             method: 'GET',

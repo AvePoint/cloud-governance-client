@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **AssignTo** | **string** |  | [optional] 
 **AssignToDisplayName** | **string** |  | [optional] 
 **ServiceAdmin** | **string** |  | [optional] 
+**ServiceAdminDisplayName** | **string** |  | [optional] 
 **ObjectUrl** | **string** |  | [optional] 
 **CreatedTime** | **string** |  | [optional] 
 

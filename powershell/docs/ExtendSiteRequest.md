@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **ActionDescription** | **String** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
 **SiteId** | **String** | Site collection ID | [optional] 
 **SiteUrl** | **String** | Site collection URL | [optional] 
+**SiteTitle** | **String** | Site Title | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -39,6 +40,7 @@ $ExtendSiteRequest = New-Cloud.Governance.ClientExtendSiteRequest  -ExtendDurati
  -ActionDescription null `
  -SiteId null `
  -SiteUrl null `
+ -SiteTitle null `
  -Id null `
  -ServiceId null `
  -Summary null `

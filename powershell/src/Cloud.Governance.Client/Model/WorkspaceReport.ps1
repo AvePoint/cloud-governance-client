@@ -108,6 +108,9 @@ function New-WorkspaceReport {
         ${GroupSharing},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${SensitivityLable},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${Classification},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -133,9 +136,6 @@ function New-WorkspaceReport {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LastRenewalBy},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${LastRenewalByEmail},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${LastRenewalByDisplayName}
@@ -179,6 +179,7 @@ function New-WorkspaceReport {
             "StorageUsed" = ${StorageUsed}
             "SiteSharing" = ${SiteSharing}
             "GroupSharing" = ${GroupSharing}
+            "SensitivityLable" = ${SensitivityLable}
             "Classification" = ${Classification}
             "ClaimStatus" = ${ClaimStatus}
             "CreatedTime" = ${CreatedTime}
@@ -188,7 +189,6 @@ function New-WorkspaceReport {
             "HasOngoingTasks" = ${HasOngoingTasks}
             "LastRenewalTime" = ${LastRenewalTime}
             "LastRenewalBy" = ${LastRenewalBy}
-            "LastRenewalByEmail" = ${LastRenewalByEmail}
             "LastRenewalByDisplayName" = ${LastRenewalByDisplayName}
         }
 
@@ -212,7 +212,7 @@ function ConvertFrom-JsonToWorkspaceReport {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WorkspaceReport
-        $AllProperties = $("Id", "Name", "Description", "Status", "Type", "Url", "Email", "PolicyName", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "Phase", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Privacy", "AssociateHubTitle", "GeoLocation", "StorageLimit", "StorageUsed", "SiteSharing", "GroupSharing", "Classification", "ClaimStatus", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "Metadata", "HasOngoingTasks", "LastRenewalTime", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName")
+        $AllProperties = $("Id", "Name", "Description", "Status", "Type", "Url", "Email", "PolicyName", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "Phase", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Privacy", "AssociateHubTitle", "GeoLocation", "StorageLimit", "StorageUsed", "SiteSharing", "GroupSharing", "SensitivityLable", "Classification", "ClaimStatus", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "Metadata", "HasOngoingTasks", "LastRenewalTime", "LastRenewalBy", "LastRenewalByDisplayName")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -411,6 +411,12 @@ function ConvertFrom-JsonToWorkspaceReport {
             $GroupSharing = $JsonParameters.PSobject.Properties["GroupSharing"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SensitivityLable"))) { #optional property not found
+            $SensitivityLable = $null
+        } else {
+            $SensitivityLable = $JsonParameters.PSobject.Properties["SensitivityLable"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Classification"))) { #optional property not found
             $Classification = $null
         } else {
@@ -465,12 +471,6 @@ function ConvertFrom-JsonToWorkspaceReport {
             $LastRenewalBy = $JsonParameters.PSobject.Properties["LastRenewalBy"].value
         }
 
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastRenewalByEmail"))) { #optional property not found
-            $LastRenewalByEmail = $null
-        } else {
-            $LastRenewalByEmail = $JsonParameters.PSobject.Properties["LastRenewalByEmail"].value
-        }
-
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastRenewalByDisplayName"))) { #optional property not found
             $LastRenewalByDisplayName = $null
         } else {
@@ -510,6 +510,7 @@ function ConvertFrom-JsonToWorkspaceReport {
             "StorageUsed" = ${StorageUsed}
             "SiteSharing" = ${SiteSharing}
             "GroupSharing" = ${GroupSharing}
+            "SensitivityLable" = ${SensitivityLable}
             "Classification" = ${Classification}
             "ClaimStatus" = ${ClaimStatus}
             "CreatedTime" = ${CreatedTime}
@@ -519,7 +520,6 @@ function ConvertFrom-JsonToWorkspaceReport {
             "HasOngoingTasks" = ${HasOngoingTasks}
             "LastRenewalTime" = ${LastRenewalTime}
             "LastRenewalBy" = ${LastRenewalBy}
-            "LastRenewalByEmail" = ${LastRenewalByEmail}
             "LastRenewalByDisplayName" = ${LastRenewalByDisplayName}
         }
 

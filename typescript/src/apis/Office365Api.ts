@@ -138,7 +138,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/securitygroups`,
             method: 'POST',
@@ -201,7 +201,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/groups/allmembers`,
             method: 'GET',
@@ -252,7 +252,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/groups/{email}/memberswithoutowner`.replace(`{${"email"}}`, encodeURIComponent(String(requestParameters.email))),
             method: 'GET',
@@ -303,7 +303,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/groups/{email}/owners`.replace(`{${"email"}}`, encodeURIComponent(String(requestParameters.email))),
             method: 'GET',
@@ -346,7 +346,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/hubsites`,
             method: 'GET',
@@ -381,7 +381,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/teams/my`,
             method: 'GET',
@@ -424,7 +424,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/permissions`,
             method: 'GET',
@@ -475,7 +475,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/roleassignment`,
             method: 'GET',
@@ -518,7 +518,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/sitedesigns`,
             method: 'GET',
@@ -561,7 +561,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/sites/permissionlevels`,
             method: 'GET',
@@ -604,7 +604,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/sites/sharepointgroups`,
             method: 'GET',
@@ -647,7 +647,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/sites/status`,
             method: 'GET',
@@ -694,7 +694,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/sites/templates/{languageid}`.replace(`{${"languageid"}}`, encodeURIComponent(String(requestParameters.languageid))),
             method: 'GET',
@@ -745,7 +745,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/sites/haspermission`,
             method: 'GET',
@@ -784,7 +784,7 @@ export class Office365Api extends runtime.BaseAPI {
             headerParameters["userPrincipalName"] = this.configuration.apiKey("userPrincipalName"); // userPrincipalName authentication
         }
 
-        headerParameters["User-Agent"]="(sdk/typescript/4.7.4)";
+        headerParameters["User-Agent"]="(sdk/typescript/4.9.3)";
         const response = await this.request({
             path: `/office365/securitygroups/{name}`.replace(`{${"name"}}`, encodeURIComponent(String(requestParameters.name))),
             method: 'DELETE',

@@ -12,6 +12,10 @@ import {
     ApiUserFromJSON,
     ApiUserFromJSONTyped,
     ApiUserToJSON,
+    CreateGuestUserSubRequest,
+    CreateGuestUserSubRequestFromJSON,
+    CreateGuestUserSubRequestFromJSONTyped,
+    CreateGuestUserSubRequestToJSON,
     GuestUserPropertyModel,
     GuestUserPropertyModelFromJSON,
     GuestUserPropertyModelFromJSONTyped,
@@ -76,6 +80,12 @@ export interface CreateGuestUserRequest {
      * @memberof CreateGuestUserRequest
      */
     oneTimeSettings?: GuestUserRequestOneTimeRenewalSettingModel | null;
+    /**
+     * 
+     * @type {Array<CreateGuestUserSubRequest>}
+     * @memberof CreateGuestUserRequest
+     */
+    subRequestInfos?: Array<CreateGuestUserSubRequest> | null;
     /**
      * Id of request.
      * @type {string}
@@ -208,6 +218,7 @@ export function CreateGuestUserRequestFromJSONTyped(json: any, ignoreDiscriminat
         'secondaryContact': !exists(json, 'secondaryContact') ? undefined : ApiUserFromJSON(json['secondaryContact']),
         'inviteGroups': !exists(json, 'inviteGroups') ? undefined : (json['inviteGroups'] === null ? null : (json['inviteGroups'] as Array<any>).map(ApiUserFromJSON)),
         'oneTimeSettings': !exists(json, 'oneTimeSettings') ? undefined : GuestUserRequestOneTimeRenewalSettingModelFromJSON(json['oneTimeSettings']),
+        'subRequestInfos': !exists(json, 'subRequestInfos') ? undefined : (json['subRequestInfos'] === null ? null : (json['subRequestInfos'] as Array<any>).map(CreateGuestUserSubRequestFromJSON)),
         'id': !exists(json, 'id') ? undefined : json['id'],
         'serviceId': !exists(json, 'serviceId') ? undefined : json['serviceId'],
         'summary': !exists(json, 'summary') ? undefined : json['summary'],
@@ -245,6 +256,7 @@ export function CreateGuestUserRequestToJSON(value?: CreateGuestUserRequest | nu
         'secondaryContact': ApiUserToJSON(value.secondaryContact),
         'inviteGroups': value.inviteGroups === undefined ? undefined : (value.inviteGroups === null ? null : (value.inviteGroups as Array<any>).map(ApiUserToJSON)),
         'oneTimeSettings': GuestUserRequestOneTimeRenewalSettingModelToJSON(value.oneTimeSettings),
+        'subRequestInfos': value.subRequestInfos === undefined ? undefined : (value.subRequestInfos === null ? null : (value.subRequestInfos as Array<any>).map(CreateGuestUserSubRequestToJSON)),
         'id': value.id,
         'serviceId': value.serviceId,
         'summary': value.summary,

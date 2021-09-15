@@ -51,6 +51,12 @@ export interface WebLifecycleRequest {
      */
     webRelativeUrl?: string | null;
     /**
+     * Web Title
+     * @type {string}
+     * @memberof WebLifecycleRequest
+     */
+    webTitle?: string | null;
+    /**
      * 
      * @type {string}
      * @memberof WebLifecycleRequest
@@ -203,6 +209,7 @@ export function WebLifecycleRequestFromJSONTyped(json: any, ignoreDiscriminator:
         'webId': !exists(json, 'webId') ? undefined : json['webId'],
         'webUrl': !exists(json, 'webUrl') ? undefined : json['webUrl'],
         'webRelativeUrl': !exists(json, 'webRelativeUrl') ? undefined : json['webRelativeUrl'],
+        'webTitle': !exists(json, 'webTitle') ? undefined : json['webTitle'],
         'siteId': !exists(json, 'siteId') ? undefined : json['siteId'],
         'siteUrl': !exists(json, 'siteUrl') ? undefined : json['siteUrl'],
         'action': !exists(json, 'action') ? undefined : WebLifecycleActionTypeFromJSON(json['action']),
@@ -241,6 +248,7 @@ export function WebLifecycleRequestToJSON(value?: WebLifecycleRequest | null): a
         'webId': value.webId,
         'webUrl': value.webUrl,
         'webRelativeUrl': value.webRelativeUrl,
+        'webTitle': value.webTitle,
         'siteId': value.siteId,
         'siteUrl': value.siteUrl,
         'action': WebLifecycleActionTypeToJSON(value.action),

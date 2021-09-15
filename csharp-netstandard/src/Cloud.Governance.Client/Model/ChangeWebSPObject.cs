@@ -30,12 +30,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="webUrl">webUrl.</param>
         /// <param name="siteId">siteId.</param>
         /// <param name="webId">webId.</param>
-        public ChangeWebSPObject(string siteUrl = default(string), string webUrl = default(string), Guid siteId = default(Guid), Guid webId = default(Guid))
+        /// <param name="webTitle">Web Title.</param>
+        public ChangeWebSPObject(string siteUrl = default(string), string webUrl = default(string), Guid siteId = default(Guid), Guid webId = default(Guid), string webTitle = default(string))
         {
             this.SiteUrl = siteUrl;
             this.WebUrl = webUrl;
             this.SiteId = siteId;
             this.WebId = webId;
+            this.WebTitle = webTitle;
         }
 
         /// <summary>
@@ -63,6 +65,13 @@ namespace Cloud.Governance.Client.Model
         public Guid WebId { get; set; }
 
         /// <summary>
+        /// Web Title
+        /// </summary>
+        /// <value>Web Title</value>
+        [DataMember(Name = "webTitle", EmitDefaultValue = true)]
+        public string WebTitle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,6 +83,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  WebUrl: ").Append(WebUrl).Append("\n");
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
             sb.Append("  WebId: ").Append(WebId).Append("\n");
+            sb.Append("  WebTitle: ").Append(WebTitle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -127,6 +137,11 @@ namespace Cloud.Governance.Client.Model
                     this.WebId == input.WebId ||
                     (this.WebId != null &&
                     this.WebId.Equals(input.WebId))
+                ) && 
+                (
+                    this.WebTitle == input.WebTitle ||
+                    (this.WebTitle != null &&
+                    this.WebTitle.Equals(input.WebTitle))
                 );
         }
 
@@ -147,6 +162,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.SiteId.GetHashCode();
                 if (this.WebId != null)
                     hashCode = hashCode * 59 + this.WebId.GetHashCode();
+                if (this.WebTitle != null)
+                    hashCode = hashCode * 59 + this.WebTitle.GetHashCode();
                 return hashCode;
             }
         }

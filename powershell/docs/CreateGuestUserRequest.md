@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **InviteGroups** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **OneTimeSettings** | [**GuestUserRequestOneTimeRenewalSettingModel**](GuestUserRequestOneTimeRenewalSettingModel.md) |  | [optional] 
+**SubRequestInfos** | [**CreateGuestUserSubRequest[]**](CreateGuestUserSubRequest.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -39,6 +40,7 @@ $CreateGuestUserRequest = New-Cloud.Governance.ClientCreateGuestUserRequest  -Us
  -SecondaryContact null `
  -InviteGroups null `
  -OneTimeSettings null `
+ -SubRequestInfos null `
  -Id null `
  -ServiceId null `
  -Summary null `

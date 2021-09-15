@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **StorageUsed** | **Double** |  | [optional] 
 **SiteSharing** | **String** |  | [optional] 
 **GroupSharing** | **String** |  | [optional] 
+**SensitivityLable** | **String** |  | [optional] 
 **Classification** | **String** |  | [optional] 
 **ClaimStatus** | **String** |  | [optional] 
 **CreatedTime** | **System.DateTime** |  | [optional] 
@@ -44,7 +45,6 @@ Name | Type | Description | Notes
 **HasOngoingTasks** | **String** |  | [optional] 
 **LastRenewalTime** | **System.DateTime** |  | [optional] 
 **LastRenewalBy** | **String** |  | [optional] 
-**LastRenewalByEmail** | **String** |  | [optional] 
 **LastRenewalByDisplayName** | **String** |  | [optional] 
 
 ## Examples
@@ -83,6 +83,7 @@ $WorkspaceReport = New-Cloud.Governance.ClientWorkspaceReport  -Id null `
  -StorageUsed null `
  -SiteSharing null `
  -GroupSharing null `
+ -SensitivityLable null `
  -Classification null `
  -ClaimStatus null `
  -CreatedTime null `
@@ -92,7 +93,6 @@ $WorkspaceReport = New-Cloud.Governance.ClientWorkspaceReport  -Id null `
  -HasOngoingTasks null `
  -LastRenewalTime null `
  -LastRenewalBy null `
- -LastRenewalByEmail null `
  -LastRenewalByDisplayName null
 ```
 

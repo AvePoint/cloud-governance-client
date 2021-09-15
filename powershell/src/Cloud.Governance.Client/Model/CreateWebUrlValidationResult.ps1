@@ -18,6 +18,9 @@ function New-CreateWebUrlValidationResult {
         ${ParentSiteUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
+        ${SitePrimaryAdmin},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
         ${SitePrimaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
@@ -41,6 +44,7 @@ function New-CreateWebUrlValidationResult {
         $PSO = [PSCustomObject]@{
             "ParentWebUrl" = ${ParentWebUrl}
             "ParentSiteUrl" = ${ParentSiteUrl}
+            "SitePrimaryAdmin" = ${SitePrimaryAdmin}
             "SitePrimaryContact" = ${SitePrimaryContact}
             "SiteSecondaryContact" = ${SiteSecondaryContact}
             "IsValid" = ${IsValid}
@@ -68,7 +72,7 @@ function ConvertFrom-JsonToCreateWebUrlValidationResult {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateWebUrlValidationResult
-        $AllProperties = $("ParentWebUrl", "ParentSiteUrl", "SitePrimaryContact", "SiteSecondaryContact", "IsValid", "ErrorMessage", "MessageCode")
+        $AllProperties = $("ParentWebUrl", "ParentSiteUrl", "SitePrimaryAdmin", "SitePrimaryContact", "SiteSecondaryContact", "IsValid", "ErrorMessage", "MessageCode")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -85,6 +89,12 @@ function ConvertFrom-JsonToCreateWebUrlValidationResult {
             $ParentSiteUrl = $null
         } else {
             $ParentSiteUrl = $JsonParameters.PSobject.Properties["ParentSiteUrl"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SitePrimaryAdmin"))) { #optional property not found
+            $SitePrimaryAdmin = $null
+        } else {
+            $SitePrimaryAdmin = $JsonParameters.PSobject.Properties["SitePrimaryAdmin"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "SitePrimaryContact"))) { #optional property not found
@@ -120,6 +130,7 @@ function ConvertFrom-JsonToCreateWebUrlValidationResult {
         $PSO = [PSCustomObject]@{
             "ParentWebUrl" = ${ParentWebUrl}
             "ParentSiteUrl" = ${ParentSiteUrl}
+            "SitePrimaryAdmin" = ${SitePrimaryAdmin}
             "SitePrimaryContact" = ${SitePrimaryContact}
             "SiteSecondaryContact" = ${SiteSecondaryContact}
             "IsValid" = ${IsValid}

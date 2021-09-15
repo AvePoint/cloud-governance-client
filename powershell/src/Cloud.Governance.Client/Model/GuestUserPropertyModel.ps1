@@ -27,13 +27,19 @@ function New-GuestUserPropertyModel {
         ${UsageLocation},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${UsageLocationDisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${JobTitle},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${JobDepartment},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Manager}
+        ${Manager},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${CompanyName}
     )
 
     Process {
@@ -47,9 +53,11 @@ function New-GuestUserPropertyModel {
             "LastName" = ${LastName}
             "UserName" = ${UserName}
             "UsageLocation" = ${UsageLocation}
+            "UsageLocationDisplayName" = ${UsageLocationDisplayName}
             "JobTitle" = ${JobTitle}
             "JobDepartment" = ${JobDepartment}
             "Manager" = ${Manager}
+            "CompanyName" = ${CompanyName}
         }
 
         return $PSO
@@ -72,7 +80,7 @@ function ConvertFrom-JsonToGuestUserPropertyModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in GuestUserPropertyModel
-        $AllProperties = $("DisplayName", "FirstName", "LastName", "UserName", "UsageLocation", "JobTitle", "JobDepartment", "Manager")
+        $AllProperties = $("DisplayName", "FirstName", "LastName", "UserName", "UsageLocation", "UsageLocationDisplayName", "JobTitle", "JobDepartment", "Manager", "CompanyName")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -109,6 +117,12 @@ function ConvertFrom-JsonToGuestUserPropertyModel {
             $UsageLocation = $JsonParameters.PSobject.Properties["UsageLocation"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "UsageLocationDisplayName"))) { #optional property not found
+            $UsageLocationDisplayName = $null
+        } else {
+            $UsageLocationDisplayName = $JsonParameters.PSobject.Properties["UsageLocationDisplayName"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "JobTitle"))) { #optional property not found
             $JobTitle = $null
         } else {
@@ -127,15 +141,23 @@ function ConvertFrom-JsonToGuestUserPropertyModel {
             $Manager = $JsonParameters.PSobject.Properties["Manager"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CompanyName"))) { #optional property not found
+            $CompanyName = $null
+        } else {
+            $CompanyName = $JsonParameters.PSobject.Properties["CompanyName"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "DisplayName" = ${DisplayName}
             "FirstName" = ${FirstName}
             "LastName" = ${LastName}
             "UserName" = ${UserName}
             "UsageLocation" = ${UsageLocation}
+            "UsageLocationDisplayName" = ${UsageLocationDisplayName}
             "JobTitle" = ${JobTitle}
             "JobDepartment" = ${JobDepartment}
             "Manager" = ${Manager}
+            "CompanyName" = ${CompanyName}
         }
 
         return $PSO

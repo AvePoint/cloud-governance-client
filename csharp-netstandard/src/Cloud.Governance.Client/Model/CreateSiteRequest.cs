@@ -71,6 +71,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="siteDesign">Communication site design.</param>
         /// <param name="teamSiteDesign">Team site design.</param>
         /// <param name="classification">Communication site Classification.</param>
+        /// <param name="sensitivity">Sensitive lable.</param>
         /// <param name="hubSiteSettings">Hub site setting.</param>
         /// <param name="userPermissions">Granted user/group permission setting.</param>
         /// <param name="groupPermissions">Site collection SharePoint group setting.</param>
@@ -84,7 +85,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = 0, int language = 0, string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = 0, int language = 0, string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), string sensitivity = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SiteTitle = siteTitle;
             this.SiteDescription = siteDescription;
@@ -102,6 +103,7 @@ namespace Cloud.Governance.Client.Model
             this.SiteDesign = siteDesign;
             this.TeamSiteDesign = teamSiteDesign;
             this.Classification = classification;
+            this.Sensitivity = sensitivity;
             this.HubSiteSettings = hubSiteSettings;
             this.UserPermissions = userPermissions;
             this.GroupPermissions = groupPermissions;
@@ -221,6 +223,13 @@ namespace Cloud.Governance.Client.Model
         /// <value>Communication site Classification</value>
         [DataMember(Name = "classification", EmitDefaultValue = true)]
         public string Classification { get; set; }
+
+        /// <summary>
+        /// Sensitive lable
+        /// </summary>
+        /// <value>Sensitive lable</value>
+        [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
+        public string Sensitivity { get; set; }
 
         /// <summary>
         /// Hub site setting
@@ -512,6 +521,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  SiteDesign: ").Append(SiteDesign).Append("\n");
             sb.Append("  TeamSiteDesign: ").Append(TeamSiteDesign).Append("\n");
             sb.Append("  Classification: ").Append(Classification).Append("\n");
+            sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
             sb.Append("  HubSiteSettings: ").Append(HubSiteSettings).Append("\n");
             sb.Append("  UserPermissions: ").Append(UserPermissions).Append("\n");
             sb.Append("  GroupPermissions: ").Append(GroupPermissions).Append("\n");
@@ -646,6 +656,11 @@ namespace Cloud.Governance.Client.Model
                     this.Classification == input.Classification ||
                     (this.Classification != null &&
                     this.Classification.Equals(input.Classification))
+                ) && 
+                (
+                    this.Sensitivity == input.Sensitivity ||
+                    (this.Sensitivity != null &&
+                    this.Sensitivity.Equals(input.Sensitivity))
                 ) && 
                 (
                     this.HubSiteSettings == input.HubSiteSettings ||
@@ -817,6 +832,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.TeamSiteDesign.GetHashCode();
                 if (this.Classification != null)
                     hashCode = hashCode * 59 + this.Classification.GetHashCode();
+                if (this.Sensitivity != null)
+                    hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
                 if (this.HubSiteSettings != null)
                     hashCode = hashCode * 59 + this.HubSiteSettings.GetHashCode();
                 if (this.UserPermissions != null)

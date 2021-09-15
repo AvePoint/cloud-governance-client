@@ -77,7 +77,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableTeamCollaboration">Enable a team for the group. (default to false).</param>
         /// <param name="language">The language of a group. You can get IDs and names of all available languages by invoking the GetCreateGroupServiceApi..</param>
         /// <param name="classification">Group classification.</param>
-        /// <param name="sensitivity">Group sensitive lable, currently doesn&#39;t support.</param>
+        /// <param name="sensitivity">Group sensitive lable.</param>
         /// <param name="leasePeriodSettings">Group lease period settings.</param>
         /// <param name="teamsSettings">Team members permission settings.</param>
         /// <param name="appliedSiteDesignId">The ID of the group team site design. You can get IDs and names of all group team sites by invoking the GetCreateGroupServiceApi..</param>
@@ -251,9 +251,9 @@ namespace Cloud.Governance.Client.Model
         public string Classification { get; set; }
 
         /// <summary>
-        /// Group sensitive lable, currently doesn&#39;t support
+        /// Group sensitive lable
         /// </summary>
-        /// <value>Group sensitive lable, currently doesn&#39;t support</value>
+        /// <value>Group sensitive lable</value>
         [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
         public string Sensitivity { get; set; }
 

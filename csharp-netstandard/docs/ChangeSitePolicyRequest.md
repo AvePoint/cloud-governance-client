@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **ActionDescription** | **string** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
 **SiteId** | **Guid** | Site collection ID | [optional] 
 **SiteUrl** | **string** | Site collection URL | [optional] 
+**SiteTitle** | **string** | Site Title | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 

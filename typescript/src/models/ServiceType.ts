@@ -145,7 +145,9 @@ export enum ServiceType {
     MPWelcomeEmailTemplate = 548,
     AutoImportYammerCommunity = 549,
     BulkApplyGuestRenewal = 550,
-    BulkSpecifyGuestContact = 551
+    BulkSpecifyGuestContact = 551,
+    BulkRestartGuestRenewal = 552,
+    BulkSpecifyGuestOneTimeRenewal = 553
 }
 
 export function ServiceTypeFromJSON(json: any): ServiceType {

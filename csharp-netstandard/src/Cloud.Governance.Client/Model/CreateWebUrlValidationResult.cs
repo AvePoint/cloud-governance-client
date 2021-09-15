@@ -33,15 +33,17 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="parentWebUrl">parentWebUrl.</param>
         /// <param name="parentSiteUrl">parentSiteUrl.</param>
+        /// <param name="sitePrimaryAdmin">ApiUser model.</param>
         /// <param name="sitePrimaryContact">ApiUser model.</param>
         /// <param name="siteSecondaryContact">ApiUser model.</param>
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public CreateWebUrlValidationResult(string parentWebUrl = default(string), string parentSiteUrl = default(string), ApiUser sitePrimaryContact = default(ApiUser), ApiUser siteSecondaryContact = default(ApiUser), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public CreateWebUrlValidationResult(string parentWebUrl = default(string), string parentSiteUrl = default(string), ApiUser sitePrimaryAdmin = default(ApiUser), ApiUser sitePrimaryContact = default(ApiUser), ApiUser siteSecondaryContact = default(ApiUser), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.ParentWebUrl = parentWebUrl;
             this.ParentSiteUrl = parentSiteUrl;
+            this.SitePrimaryAdmin = sitePrimaryAdmin;
             this.SitePrimaryContact = sitePrimaryContact;
             this.SiteSecondaryContact = siteSecondaryContact;
             this.IsValid = isValid;
@@ -60,6 +62,13 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "parentSiteUrl", EmitDefaultValue = true)]
         public string ParentSiteUrl { get; set; }
+
+        /// <summary>
+        /// ApiUser model
+        /// </summary>
+        /// <value>ApiUser model</value>
+        [DataMember(Name = "sitePrimaryAdmin", EmitDefaultValue = true)]
+        public ApiUser SitePrimaryAdmin { get; set; }
 
         /// <summary>
         /// ApiUser model
@@ -97,6 +106,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class CreateWebUrlValidationResult {\n");
             sb.Append("  ParentWebUrl: ").Append(ParentWebUrl).Append("\n");
             sb.Append("  ParentSiteUrl: ").Append(ParentSiteUrl).Append("\n");
+            sb.Append("  SitePrimaryAdmin: ").Append(SitePrimaryAdmin).Append("\n");
             sb.Append("  SitePrimaryContact: ").Append(SitePrimaryContact).Append("\n");
             sb.Append("  SiteSecondaryContact: ").Append(SiteSecondaryContact).Append("\n");
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
@@ -147,6 +157,11 @@ namespace Cloud.Governance.Client.Model
                     this.ParentSiteUrl.Equals(input.ParentSiteUrl))
                 ) && 
                 (
+                    this.SitePrimaryAdmin == input.SitePrimaryAdmin ||
+                    (this.SitePrimaryAdmin != null &&
+                    this.SitePrimaryAdmin.Equals(input.SitePrimaryAdmin))
+                ) && 
+                (
                     this.SitePrimaryContact == input.SitePrimaryContact ||
                     (this.SitePrimaryContact != null &&
                     this.SitePrimaryContact.Equals(input.SitePrimaryContact))
@@ -184,6 +199,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.ParentWebUrl.GetHashCode();
                 if (this.ParentSiteUrl != null)
                     hashCode = hashCode * 59 + this.ParentSiteUrl.GetHashCode();
+                if (this.SitePrimaryAdmin != null)
+                    hashCode = hashCode * 59 + this.SitePrimaryAdmin.GetHashCode();
                 if (this.SitePrimaryContact != null)
                     hashCode = hashCode * 59 + this.SitePrimaryContact.GetHashCode();
                 if (this.SiteSecondaryContact != null)

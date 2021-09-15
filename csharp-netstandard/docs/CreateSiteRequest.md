@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **SiteDesign** | [**StringModel**](StringModel.md) | Communication site design | [optional] 
 **TeamSiteDesign** | **string** | Team site design | [optional] 
 **Classification** | **string** | Communication site Classification | [optional] 
+**Sensitivity** | **string** | Sensitive lable | [optional] 
 **HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site setting | [optional] 
 **UserPermissions** | [**List&lt;RequestUserWithPermissions&gt;**](RequestUserWithPermissions.md) | Granted user/group permission setting | [optional] 
 **GroupPermissions** | [**List&lt;RequestGroupWithPermissions&gt;**](RequestGroupWithPermissions.md) | Site collection SharePoint group setting | [optional] 

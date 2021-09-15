@@ -41,6 +41,12 @@ export interface CreateWebUrlValidationResult {
      * @type {ApiUser}
      * @memberof CreateWebUrlValidationResult
      */
+    sitePrimaryAdmin?: ApiUser | null;
+    /**
+     * ApiUser model
+     * @type {ApiUser}
+     * @memberof CreateWebUrlValidationResult
+     */
     sitePrimaryContact?: ApiUser | null;
     /**
      * ApiUser model
@@ -80,6 +86,7 @@ export function CreateWebUrlValidationResultFromJSONTyped(json: any, ignoreDiscr
         
         'parentWebUrl': !exists(json, 'parentWebUrl') ? undefined : json['parentWebUrl'],
         'parentSiteUrl': !exists(json, 'parentSiteUrl') ? undefined : json['parentSiteUrl'],
+        'sitePrimaryAdmin': !exists(json, 'sitePrimaryAdmin') ? undefined : ApiUserFromJSON(json['sitePrimaryAdmin']),
         'sitePrimaryContact': !exists(json, 'sitePrimaryContact') ? undefined : ApiUserFromJSON(json['sitePrimaryContact']),
         'siteSecondaryContact': !exists(json, 'siteSecondaryContact') ? undefined : ApiUserFromJSON(json['siteSecondaryContact']),
         'isValid': !exists(json, 'isValid') ? undefined : json['isValid'],
@@ -99,6 +106,7 @@ export function CreateWebUrlValidationResultToJSON(value?: CreateWebUrlValidatio
         
         'parentWebUrl': value.parentWebUrl,
         'parentSiteUrl': value.parentSiteUrl,
+        'sitePrimaryAdmin': ApiUserToJSON(value.sitePrimaryAdmin),
         'sitePrimaryContact': ApiUserToJSON(value.sitePrimaryContact),
         'siteSecondaryContact': ApiUserToJSON(value.siteSecondaryContact),
         'isValid': value.isValid,

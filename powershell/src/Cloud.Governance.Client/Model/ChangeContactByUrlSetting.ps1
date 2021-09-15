@@ -39,7 +39,10 @@ function New-ChangeContactByUrlSetting {
         ${OriginalAdditionalAdministrators},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
-        ${NewAdditionalAdministrators}
+        ${NewAdditionalAdministrators},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${SiteTitle}
     )
 
     Process {
@@ -58,6 +61,7 @@ function New-ChangeContactByUrlSetting {
             "NewPrimaryAdministrator" = ${NewPrimaryAdministrator}
             "OriginalAdditionalAdministrators" = ${OriginalAdditionalAdministrators}
             "NewAdditionalAdministrators" = ${NewAdditionalAdministrators}
+            "SiteTitle" = ${SiteTitle}
         }
 
         return $PSO
@@ -80,7 +84,7 @@ function ConvertFrom-JsonToChangeContactByUrlSetting {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeContactByUrlSetting
-        $AllProperties = $("SiteId", "SiteUrl", "OriginalPrimaryContact", "NewPrimaryContact", "OriginalSecondaryContact", "NewSecondaryContact", "OriginalPrimaryAdministrator", "NewPrimaryAdministrator", "OriginalAdditionalAdministrators", "NewAdditionalAdministrators")
+        $AllProperties = $("SiteId", "SiteUrl", "OriginalPrimaryContact", "NewPrimaryContact", "OriginalSecondaryContact", "NewSecondaryContact", "OriginalPrimaryAdministrator", "NewPrimaryAdministrator", "OriginalAdditionalAdministrators", "NewAdditionalAdministrators", "SiteTitle")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -147,6 +151,12 @@ function ConvertFrom-JsonToChangeContactByUrlSetting {
             $NewAdditionalAdministrators = $JsonParameters.PSobject.Properties["NewAdditionalAdministrators"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SiteTitle"))) { #optional property not found
+            $SiteTitle = $null
+        } else {
+            $SiteTitle = $JsonParameters.PSobject.Properties["SiteTitle"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
@@ -158,6 +168,7 @@ function ConvertFrom-JsonToChangeContactByUrlSetting {
             "NewPrimaryAdministrator" = ${NewPrimaryAdministrator}
             "OriginalAdditionalAdministrators" = ${OriginalAdditionalAdministrators}
             "NewAdditionalAdministrators" = ${NewAdditionalAdministrators}
+            "SiteTitle" = ${SiteTitle}
         }
 
         return $PSO

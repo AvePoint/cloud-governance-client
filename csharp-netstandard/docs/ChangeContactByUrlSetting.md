@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **NewPrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **OriginalAdditionalAdministrators** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **NewAdditionalAdministrators** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**SiteTitle** | **string** | Site Title | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

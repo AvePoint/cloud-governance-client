@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 4.7.5
+- SDK version: 4.9.3
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -144,6 +144,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**Get-SiteLifecycleService**](docs/ServicesApi.md#Get-SiteLifecycleService) | **GET** /services/sitelifecycle/{id} | get site lifecycle service
 *ServicesApi* | [**Get-WebLifecycleService**](docs/ServicesApi.md#Get-WebLifecycleService) | **GET** /services/weblifecycle/{id} | get web lifecycle service
 *ServicesApi* | [**Resolve-EmailForCreateGuestUserService**](docs/ServicesApi.md#Resolve-EmailForCreateGuestUserService) | **GET** /services/createguestuser/{id}/email/validate | validate guest user email
+*ServicesApi* | [**Resolve-EmailsForCreateGuestUserService**](docs/ServicesApi.md#Resolve-EmailsForCreateGuestUserService) | **POST** /services/createguestuser/{id}/email/validate | validate guest user emails
 *ServicesApi* | [**Resolve-ForChangeGroupSettingService**](docs/ServicesApi.md#Resolve-ForChangeGroupSettingService) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
 *ServicesApi* | [**Resolve-ForChangeListSettingService**](docs/ServicesApi.md#Resolve-ForChangeListSettingService) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
 *ServicesApi* | [**Resolve-ForChangePermissionService**](docs/ServicesApi.md#Resolve-ForChangePermissionService) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
@@ -165,6 +166,7 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**Get-DynamicMembershipRuleItems**](docs/SettingsApi.md#Get-DynamicMembershipRuleItems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
 *SettingsApi* | [**Get-MyPersonalSettings**](docs/SettingsApi.md#Get-MyPersonalSettings) | **GET** /settings/my | get my personal settings
 *SettingsApi* | [**Get-ACGPermissionLevels**](docs/SettingsApi.md#get-acgpermissionlevels) | **GET** /settings/office365/permissionlevels | get permission levels
+*SystemSettingsAdminApi* | [**Get-HookMessageSamples**](docs/SystemSettingsAdminApi.md#Get-HookMessageSamples) | **GET** /admin/settings/system/hooks/messages/sample | 
 *TasksApi* | [**Approve-Task**](docs/TasksApi.md#Approve-Task) | **POST** /tasks/{id}/approve | approve task
 *TasksApi* | [**Edit-ArchiveGroupRequest**](docs/TasksApi.md#Edit-ArchiveGroupRequest) | **PUT** /tasks/{id}/archivegroup | edit archive group request in task
 *TasksApi* | [**Edit-ArchiveSiteRequest**](docs/TasksApi.md#Edit-ArchiveSiteRequest) | **PUT** /tasks/{id}/archivesite | edit archive site request in task
@@ -267,6 +269,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.AutoGenerateUrlSetting](docs/AutoGenerateUrlSetting.md)
  - [Cloud.Governance.Client\Model.AutoGenerateUrlType](docs/AutoGenerateUrlType.md)
  - [Cloud.Governance.Client\Model.AutoImportPhase](docs/AutoImportPhase.md)
+ - [Cloud.Governance.Client\Model.AutoImportProcessHookMessage](docs/AutoImportProcessHookMessage.md)
  - [Cloud.Governance.Client\Model.AzureAdMetadataSettings](docs/AzureAdMetadataSettings.md)
  - [Cloud.Governance.Client\Model.BackupEnvironmentSetting](docs/BackupEnvironmentSetting.md)
  - [Cloud.Governance.Client\Model.BooleanChangedProperty](docs/BooleanChangedProperty.md)
@@ -346,6 +349,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.CreateGroupType](docs/CreateGroupType.md)
  - [Cloud.Governance.Client\Model.CreateGuestUserRequest](docs/CreateGuestUserRequest.md)
  - [Cloud.Governance.Client\Model.CreateGuestUserService](docs/CreateGuestUserService.md)
+ - [Cloud.Governance.Client\Model.CreateGuestUserSubRequest](docs/CreateGuestUserSubRequest.md)
  - [Cloud.Governance.Client\Model.CreateGuestUserValidationResult](docs/CreateGuestUserValidationResult.md)
  - [Cloud.Governance.Client\Model.CreateListRequest](docs/CreateListRequest.md)
  - [Cloud.Governance.Client\Model.CreateListSPObject](docs/CreateListSPObject.md)
@@ -375,6 +379,8 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.DynamicGroupRuleInfo](docs/DynamicGroupRuleInfo.md)
  - [Cloud.Governance.Client\Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Cloud.Governance.Client\Model.DynamicRuleElement](docs/DynamicRuleElement.md)
+ - [Cloud.Governance.Client\Model.ElectionContact](docs/ElectionContact.md)
+ - [Cloud.Governance.Client\Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Cloud.Governance.Client\Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
  - [Cloud.Governance.Client\Model.ExecutionModel](docs/ExecutionModel.md)
  - [Cloud.Governance.Client\Model.ExecutionParameter](docs/ExecutionParameter.md)
@@ -384,6 +390,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ExtendSiteRequest](docs/ExtendSiteRequest.md)
  - [Cloud.Governance.Client\Model.ExtendSiteSetting](docs/ExtendSiteSetting.md)
  - [Cloud.Governance.Client\Model.ExtendType](docs/ExtendType.md)
+ - [Cloud.Governance.Client\Model.ExternalDomainListType](docs/ExternalDomainListType.md)
  - [Cloud.Governance.Client\Model.ExternalSharingOptions](docs/ExternalSharingOptions.md)
  - [Cloud.Governance.Client\Model.ExternalUserSharingSettings](docs/ExternalUserSharingSettings.md)
  - [Cloud.Governance.Client\Model.ExternalUserSharingType](docs/ExternalUserSharingType.md)
@@ -431,6 +438,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.GuidBooleanModel](docs/GuidBooleanModel.md)
  - [Cloud.Governance.Client\Model.GuidModel](docs/GuidModel.md)
  - [Cloud.Governance.Client\Model.HandleOngoingType](docs/HandleOngoingType.md)
+ - [Cloud.Governance.Client\Model.HookMessageList](docs/HookMessageList.md)
  - [Cloud.Governance.Client\Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
  - [Cloud.Governance.Client\Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Cloud.Governance.Client\Model.HubSiteType](docs/HubSiteType.md)
@@ -441,6 +449,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.LanguageWithTemplates](docs/LanguageWithTemplates.md)
  - [Cloud.Governance.Client\Model.LeaseDateType](docs/LeaseDateType.md)
  - [Cloud.Governance.Client\Model.LeaseStartDateType](docs/LeaseStartDateType.md)
+ - [Cloud.Governance.Client\Model.LifecycleHookMessage](docs/LifecycleHookMessage.md)
  - [Cloud.Governance.Client\Model.LifecycleRenewalSetting](docs/LifecycleRenewalSetting.md)
  - [Cloud.Governance.Client\Model.LinkMetadataSettings](docs/LinkMetadataSettings.md)
  - [Cloud.Governance.Client\Model.LinkValue](docs/LinkValue.md)
@@ -493,8 +502,10 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.PolicyRef](docs/PolicyRef.md)
  - [Cloud.Governance.Client\Model.PolicyWithTemplates](docs/PolicyWithTemplates.md)
  - [Cloud.Governance.Client\Model.PrincipalType](docs/PrincipalType.md)
+ - [Cloud.Governance.Client\Model.RenewalTaskHookMessage](docs/RenewalTaskHookMessage.md)
  - [Cloud.Governance.Client\Model.ReportMetadata](docs/ReportMetadata.md)
  - [Cloud.Governance.Client\Model.RequestGroupWithPermissions](docs/RequestGroupWithPermissions.md)
+ - [Cloud.Governance.Client\Model.RequestHookMessage](docs/RequestHookMessage.md)
  - [Cloud.Governance.Client\Model.RequestList](docs/RequestList.md)
  - [Cloud.Governance.Client\Model.RequestListPageResult](docs/RequestListPageResult.md)
  - [Cloud.Governance.Client\Model.RequestMetadata](docs/RequestMetadata.md)
@@ -556,6 +567,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TaskApprovalStatus](docs/TaskApprovalStatus.md)
  - [Cloud.Governance.Client\Model.TaskComment](docs/TaskComment.md)
  - [Cloud.Governance.Client\Model.TaskDynamicActions](docs/TaskDynamicActions.md)
+ - [Cloud.Governance.Client\Model.TaskHookMessage](docs/TaskHookMessage.md)
  - [Cloud.Governance.Client\Model.TaskList](docs/TaskList.md)
  - [Cloud.Governance.Client\Model.TaskListPageResult](docs/TaskListPageResult.md)
  - [Cloud.Governance.Client\Model.TaskPriority](docs/TaskPriority.md)
@@ -577,6 +589,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TreeNode](docs/TreeNode.md)
  - [Cloud.Governance.Client\Model.TreeNodeExtension](docs/TreeNodeExtension.md)
  - [Cloud.Governance.Client\Model.TreeNodeType](docs/TreeNodeType.md)
+ - [Cloud.Governance.Client\Model.TriggerType](docs/TriggerType.md)
  - [Cloud.Governance.Client\Model.UnlockSiteRequest](docs/UnlockSiteRequest.md)
  - [Cloud.Governance.Client\Model.UnlockSiteSetting](docs/UnlockSiteSetting.md)
  - [Cloud.Governance.Client\Model.UpdatableApiUser](docs/UpdatableApiUser.md)

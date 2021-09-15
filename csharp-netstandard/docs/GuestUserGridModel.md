@@ -23,6 +23,9 @@ Name | Type | Description | Notes
 **ExternalUserStateDescription** | **string** |  | [optional] 
 **LastSyncTime** | **DateTime?** |  | [optional] 
 **InviteTime** | **DateTime?** |  | [optional] 
+**LastRenewalTime** | **DateTime?** |  | [optional] 
+**RenewalStartTime** | **DateTime?** |  | [optional] 
+**RenewalDueDate** | **DateTime?** |  | [optional] 
 **Metadata** | [**List&lt;ReportMetadata&gt;**](ReportMetadata.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

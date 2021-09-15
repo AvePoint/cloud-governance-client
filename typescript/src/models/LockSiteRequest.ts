@@ -73,6 +73,12 @@ export interface LockSiteRequest {
      */
     siteUrl?: string | null;
     /**
+     * Site Title
+     * @type {string}
+     * @memberof LockSiteRequest
+     */
+    siteTitle?: string | null;
+    /**
      * Id of request.
      * @type {string}
      * @memberof LockSiteRequest
@@ -204,6 +210,7 @@ export function LockSiteRequestFromJSONTyped(json: any, ignoreDiscriminator: boo
         'actionDescription': !exists(json, 'actionDescription') ? undefined : json['actionDescription'],
         'siteId': !exists(json, 'siteId') ? undefined : json['siteId'],
         'siteUrl': !exists(json, 'siteUrl') ? undefined : json['siteUrl'],
+        'siteTitle': !exists(json, 'siteTitle') ? undefined : json['siteTitle'],
         'id': !exists(json, 'id') ? undefined : json['id'],
         'serviceId': !exists(json, 'serviceId') ? undefined : json['serviceId'],
         'summary': !exists(json, 'summary') ? undefined : json['summary'],
@@ -239,6 +246,7 @@ export function LockSiteRequestToJSON(value?: LockSiteRequest | null): any {
         'action': SiteLifecycleActionTypeToJSON(value.action),
         'siteId': value.siteId,
         'siteUrl': value.siteUrl,
+        'siteTitle': value.siteTitle,
         'id': value.id,
         'serviceId': value.serviceId,
         'summary': value.summary,

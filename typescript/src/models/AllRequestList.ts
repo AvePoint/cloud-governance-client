@@ -135,6 +135,12 @@ export interface AllRequestList {
      * @type {string}
      * @memberof AllRequestList
      */
+    serviceAdminDisplayName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof AllRequestList
+     */
     objectUrl?: string | null;
     /**
      * 
@@ -171,6 +177,7 @@ export function AllRequestListFromJSONTyped(json: any, ignoreDiscriminator: bool
         'assignTo': !exists(json, 'assignTo') ? undefined : json['assignTo'],
         'assignToDisplayName': !exists(json, 'assignToDisplayName') ? undefined : json['assignToDisplayName'],
         'serviceAdmin': !exists(json, 'serviceAdmin') ? undefined : json['serviceAdmin'],
+        'serviceAdminDisplayName': !exists(json, 'serviceAdminDisplayName') ? undefined : json['serviceAdminDisplayName'],
         'objectUrl': !exists(json, 'objectUrl') ? undefined : json['objectUrl'],
         'createdTime': !exists(json, 'createdTime') ? undefined : json['createdTime'],
     };
@@ -202,6 +209,7 @@ export function AllRequestListToJSON(value?: AllRequestList | null): any {
         'assignTo': value.assignTo,
         'assignToDisplayName': value.assignToDisplayName,
         'serviceAdmin': value.serviceAdmin,
+        'serviceAdminDisplayName': value.serviceAdminDisplayName,
         'objectUrl': value.objectUrl,
         'createdTime': value.createdTime,
     };

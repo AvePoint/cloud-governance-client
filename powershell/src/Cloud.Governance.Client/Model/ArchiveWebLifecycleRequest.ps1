@@ -21,6 +21,9 @@ function New-ArchiveWebLifecycleRequest {
         ${WebRelativeUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${WebTitle},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${SiteId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -62,6 +65,7 @@ function New-ArchiveWebLifecycleRequest {
             "WebId" = ${WebId}
             "WebUrl" = ${WebUrl}
             "WebRelativeUrl" = ${WebRelativeUrl}
+            "WebTitle" = ${WebTitle}
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
             "Id" = ${Id}
@@ -92,7 +96,7 @@ function ConvertFrom-JsonToArchiveWebLifecycleRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ArchiveWebLifecycleRequest
-        $AllProperties = $("Action", "WebId", "WebUrl", "WebRelativeUrl", "SiteId", "SiteUrl", "ActionDescription", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("Action", "WebId", "WebUrl", "WebRelativeUrl", "WebTitle", "SiteId", "SiteUrl", "ActionDescription", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -121,6 +125,12 @@ function ConvertFrom-JsonToArchiveWebLifecycleRequest {
             $WebRelativeUrl = $null
         } else {
             $WebRelativeUrl = $JsonParameters.PSobject.Properties["WebRelativeUrl"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WebTitle"))) { #optional property not found
+            $WebTitle = $null
+        } else {
+            $WebTitle = $JsonParameters.PSobject.Properties["WebTitle"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "SiteId"))) { #optional property not found
@@ -260,6 +270,7 @@ function ConvertFrom-JsonToArchiveWebLifecycleRequest {
             "WebId" = ${WebId}
             "WebUrl" = ${WebUrl}
             "WebRelativeUrl" = ${WebRelativeUrl}
+            "WebTitle" = ${WebTitle}
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
             "ActionDescription" = ${ActionDescription}

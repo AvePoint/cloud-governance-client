@@ -7,7 +7,7 @@
  */
 
 
-export const BASE_PATH = "https://go-api.avepointonlineservices.com".replace(/\/+$/, "");
+export const BASE_PATH = "{Cloud Governance Modern API Endpoint}".replace(/\/+$/, "");
 
 const isBlob = (value: any) => typeof Blob !== 'undefined' && value instanceof Blob;
 

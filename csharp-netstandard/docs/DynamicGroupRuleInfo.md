@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **MetadataDisplayValue** | **string** |  | [optional] 
 **MetadataValueAzureUserType** | **string** |  | [optional] 
 **Condition** | **DynamicRuleCondition** |  | [optional] 
+**DisableEditRule** | **bool** |  | [optional] [default to false]
+**DisableEditRuleValue** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

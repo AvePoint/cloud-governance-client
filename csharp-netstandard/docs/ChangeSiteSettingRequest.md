@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteId** | **Guid** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
+**SiteTitle** | **string** | Site title | [optional] 
 **SiteTitleSetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **SiteDescriptionSetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **EnableChangedMetadata** | **bool** |  | [optional] [readonly] [default to false]

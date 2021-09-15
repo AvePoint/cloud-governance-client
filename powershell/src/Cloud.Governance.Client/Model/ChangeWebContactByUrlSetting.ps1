@@ -23,6 +23,9 @@ function New-ChangeWebContactByUrlSetting {
         [String]
         ${WebUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${WebTitle},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${PrimaryContact},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -40,6 +43,7 @@ function New-ChangeWebContactByUrlSetting {
             "SiteUrl" = ${SiteUrl}
             "WebId" = ${WebId}
             "WebUrl" = ${WebUrl}
+            "WebTitle" = ${WebTitle}
             "PrimaryContact" = ${PrimaryContact}
             "SecondaryContact" = ${SecondaryContact}
         }
@@ -64,7 +68,7 @@ function ConvertFrom-JsonToChangeWebContactByUrlSetting {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeWebContactByUrlSetting
-        $AllProperties = $("SiteId", "SiteUrl", "WebId", "WebUrl", "PrimaryContact", "SecondaryContact")
+        $AllProperties = $("SiteId", "SiteUrl", "WebId", "WebUrl", "WebTitle", "PrimaryContact", "SecondaryContact")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -95,6 +99,12 @@ function ConvertFrom-JsonToChangeWebContactByUrlSetting {
             $WebUrl = $JsonParameters.PSobject.Properties["WebUrl"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WebTitle"))) { #optional property not found
+            $WebTitle = $null
+        } else {
+            $WebTitle = $JsonParameters.PSobject.Properties["WebTitle"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "PrimaryContact"))) { #optional property not found
             $PrimaryContact = $null
         } else {
@@ -112,6 +122,7 @@ function ConvertFrom-JsonToChangeWebContactByUrlSetting {
             "SiteUrl" = ${SiteUrl}
             "WebId" = ${WebId}
             "WebUrl" = ${WebUrl}
+            "WebTitle" = ${WebTitle}
             "PrimaryContact" = ${PrimaryContact}
             "SecondaryContact" = ${SecondaryContact}
         }

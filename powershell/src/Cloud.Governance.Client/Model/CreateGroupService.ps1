@@ -47,6 +47,9 @@ function New-CreateGroupService {
         [System.Nullable[Boolean]]
         ${EnableSensitivity} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${AllSensitivities},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${AllowConfigureLeasePeriod} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -115,6 +118,12 @@ function New-CreateGroupService {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${DefaultMembers},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${DisableAddRemoveDynamicMembershipRules} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${DynamicMembershipRules},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${DefaultPolicy},
@@ -267,6 +276,7 @@ function New-CreateGroupService {
             "EnableClassification" = ${EnableClassification}
             "PreventDuplicateName" = ${PreventDuplicateName}
             "EnableSensitivity" = ${EnableSensitivity}
+            "AllSensitivities" = ${AllSensitivities}
             "AllowConfigureLeasePeriod" = ${AllowConfigureLeasePeriod}
             "ShowNotebookLink" = ${ShowNotebookLink}
             "ShowConversationsLink" = ${ShowConversationsLink}
@@ -290,6 +300,8 @@ function New-CreateGroupService {
             "DefaultSecondaryContact" = ${DefaultSecondaryContact}
             "DefaultOwners" = ${DefaultOwners}
             "DefaultMembers" = ${DefaultMembers}
+            "DisableAddRemoveDynamicMembershipRules" = ${DisableAddRemoveDynamicMembershipRules}
+            "DynamicMembershipRules" = ${DynamicMembershipRules}
             "DefaultPolicy" = ${DefaultPolicy}
             "DefaultClassification" = ${DefaultClassification}
             "DefaultSensitivity" = ${DefaultSensitivity}
@@ -356,7 +368,7 @@ function ConvertFrom-JsonToCreateGroupService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGroupService
-        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "PreventDuplicateName", "EnableSensitivity", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "PreventDuplicateName", "EnableSensitivity", "AllSensitivities", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DisableAddRemoveDynamicMembershipRules", "DynamicMembershipRules", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -433,6 +445,12 @@ function ConvertFrom-JsonToCreateGroupService {
             $EnableSensitivity = $null
         } else {
             $EnableSensitivity = $JsonParameters.PSobject.Properties["EnableSensitivity"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AllSensitivities"))) { #optional property not found
+            $AllSensitivities = $null
+        } else {
+            $AllSensitivities = $JsonParameters.PSobject.Properties["AllSensitivities"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "AllowConfigureLeasePeriod"))) { #optional property not found
@@ -571,6 +589,18 @@ function ConvertFrom-JsonToCreateGroupService {
             $DefaultMembers = $null
         } else {
             $DefaultMembers = $JsonParameters.PSobject.Properties["DefaultMembers"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisableAddRemoveDynamicMembershipRules"))) { #optional property not found
+            $DisableAddRemoveDynamicMembershipRules = $null
+        } else {
+            $DisableAddRemoveDynamicMembershipRules = $JsonParameters.PSobject.Properties["DisableAddRemoveDynamicMembershipRules"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DynamicMembershipRules"))) { #optional property not found
+            $DynamicMembershipRules = $null
+        } else {
+            $DynamicMembershipRules = $JsonParameters.PSobject.Properties["DynamicMembershipRules"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "DefaultPolicy"))) { #optional property not found
@@ -856,6 +886,7 @@ function ConvertFrom-JsonToCreateGroupService {
             "EnableClassification" = ${EnableClassification}
             "PreventDuplicateName" = ${PreventDuplicateName}
             "EnableSensitivity" = ${EnableSensitivity}
+            "AllSensitivities" = ${AllSensitivities}
             "AllowConfigureLeasePeriod" = ${AllowConfigureLeasePeriod}
             "ShowNotebookLink" = ${ShowNotebookLink}
             "ShowConversationsLink" = ${ShowConversationsLink}
@@ -879,6 +910,8 @@ function ConvertFrom-JsonToCreateGroupService {
             "DefaultSecondaryContact" = ${DefaultSecondaryContact}
             "DefaultOwners" = ${DefaultOwners}
             "DefaultMembers" = ${DefaultMembers}
+            "DisableAddRemoveDynamicMembershipRules" = ${DisableAddRemoveDynamicMembershipRules}
+            "DynamicMembershipRules" = ${DynamicMembershipRules}
             "DefaultPolicy" = ${DefaultPolicy}
             "DefaultClassification" = ${DefaultClassification}
             "DefaultSensitivity" = ${DefaultSensitivity}

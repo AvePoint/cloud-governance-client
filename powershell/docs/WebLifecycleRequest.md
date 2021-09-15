@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **WebId** | **String** |  | [optional] 
 **WebUrl** | **String** |  | [optional] 
 **WebRelativeUrl** | **String** |  | [optional] 
+**WebTitle** | **String** | Web Title | [optional] 
 **SiteId** | **String** |  | [optional] 
 **SiteUrl** | **String** |  | [optional] 
 **Action** | [**WebLifecycleActionType**](WebLifecycleActionType.md) |  | [optional] 
@@ -37,6 +38,7 @@ Name | Type | Description | Notes
 $WebLifecycleRequest = New-Cloud.Governance.ClientWebLifecycleRequest  -WebId null `
  -WebUrl null `
  -WebRelativeUrl null `
+ -WebTitle null `
  -SiteId null `
  -SiteUrl null `
  -Action null `

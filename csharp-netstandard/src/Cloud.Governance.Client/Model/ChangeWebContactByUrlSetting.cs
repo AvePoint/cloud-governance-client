@@ -30,14 +30,16 @@ namespace Cloud.Governance.Client.Model
         /// <param name="siteUrl">siteUrl.</param>
         /// <param name="webId">webId.</param>
         /// <param name="webUrl">webUrl.</param>
+        /// <param name="webTitle">Web title.</param>
         /// <param name="primaryContact">primaryContact.</param>
         /// <param name="secondaryContact">secondaryContact.</param>
-        public ChangeWebContactByUrlSetting(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webUrl = default(string), ApiUserChangedProperty primaryContact = default(ApiUserChangedProperty), ApiUserChangedProperty secondaryContact = default(ApiUserChangedProperty))
+        public ChangeWebContactByUrlSetting(Guid siteId = default(Guid), string siteUrl = default(string), Guid webId = default(Guid), string webUrl = default(string), string webTitle = default(string), ApiUserChangedProperty primaryContact = default(ApiUserChangedProperty), ApiUserChangedProperty secondaryContact = default(ApiUserChangedProperty))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
             this.WebId = webId;
             this.WebUrl = webUrl;
+            this.WebTitle = webTitle;
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;
         }
@@ -67,6 +69,13 @@ namespace Cloud.Governance.Client.Model
         public string WebUrl { get; set; }
 
         /// <summary>
+        /// Web title
+        /// </summary>
+        /// <value>Web title</value>
+        [DataMember(Name = "webTitle", EmitDefaultValue = true)]
+        public string WebTitle { get; set; }
+
+        /// <summary>
         /// Gets or Sets PrimaryContact
         /// </summary>
         [DataMember(Name = "primaryContact", EmitDefaultValue = true)]
@@ -90,6 +99,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  SiteUrl: ").Append(SiteUrl).Append("\n");
             sb.Append("  WebId: ").Append(WebId).Append("\n");
             sb.Append("  WebUrl: ").Append(WebUrl).Append("\n");
+            sb.Append("  WebTitle: ").Append(WebTitle).Append("\n");
             sb.Append("  PrimaryContact: ").Append(PrimaryContact).Append("\n");
             sb.Append("  SecondaryContact: ").Append(SecondaryContact).Append("\n");
             sb.Append("}\n");
@@ -147,6 +157,11 @@ namespace Cloud.Governance.Client.Model
                     this.WebUrl.Equals(input.WebUrl))
                 ) && 
                 (
+                    this.WebTitle == input.WebTitle ||
+                    (this.WebTitle != null &&
+                    this.WebTitle.Equals(input.WebTitle))
+                ) && 
+                (
                     this.PrimaryContact == input.PrimaryContact ||
                     (this.PrimaryContact != null &&
                     this.PrimaryContact.Equals(input.PrimaryContact))
@@ -175,6 +190,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.WebId.GetHashCode();
                 if (this.WebUrl != null)
                     hashCode = hashCode * 59 + this.WebUrl.GetHashCode();
+                if (this.WebTitle != null)
+                    hashCode = hashCode * 59 + this.WebTitle.GetHashCode();
                 if (this.PrimaryContact != null)
                     hashCode = hashCode * 59 + this.PrimaryContact.GetHashCode();
                 if (this.SecondaryContact != null)

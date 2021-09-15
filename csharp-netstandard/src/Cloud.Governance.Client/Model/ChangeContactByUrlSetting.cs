@@ -36,7 +36,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="newPrimaryAdministrator">ApiUser model.</param>
         /// <param name="originalAdditionalAdministrators">originalAdditionalAdministrators.</param>
         /// <param name="newAdditionalAdministrators">newAdditionalAdministrators.</param>
-        public ChangeContactByUrlSetting(Guid siteId = default(Guid), string siteUrl = default(string), ApiUser originalPrimaryContact = default(ApiUser), ApiUser newPrimaryContact = default(ApiUser), ApiUser originalSecondaryContact = default(ApiUser), ApiUser newSecondaryContact = default(ApiUser), ApiUser originalPrimaryAdministrator = default(ApiUser), ApiUser newPrimaryAdministrator = default(ApiUser), List<ApiUser> originalAdditionalAdministrators = default(List<ApiUser>), List<ApiUser> newAdditionalAdministrators = default(List<ApiUser>))
+        /// <param name="siteTitle">Site Title.</param>
+        public ChangeContactByUrlSetting(Guid siteId = default(Guid), string siteUrl = default(string), ApiUser originalPrimaryContact = default(ApiUser), ApiUser newPrimaryContact = default(ApiUser), ApiUser originalSecondaryContact = default(ApiUser), ApiUser newSecondaryContact = default(ApiUser), ApiUser originalPrimaryAdministrator = default(ApiUser), ApiUser newPrimaryAdministrator = default(ApiUser), List<ApiUser> originalAdditionalAdministrators = default(List<ApiUser>), List<ApiUser> newAdditionalAdministrators = default(List<ApiUser>), string siteTitle = default(string))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
@@ -48,6 +49,7 @@ namespace Cloud.Governance.Client.Model
             this.NewPrimaryAdministrator = newPrimaryAdministrator;
             this.OriginalAdditionalAdministrators = originalAdditionalAdministrators;
             this.NewAdditionalAdministrators = newAdditionalAdministrators;
+            this.SiteTitle = siteTitle;
         }
 
         /// <summary>
@@ -117,6 +119,13 @@ namespace Cloud.Governance.Client.Model
         public List<ApiUser> NewAdditionalAdministrators { get; set; }
 
         /// <summary>
+        /// Site Title
+        /// </summary>
+        /// <value>Site Title</value>
+        [DataMember(Name = "siteTitle", EmitDefaultValue = true)]
+        public string SiteTitle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -134,6 +143,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  NewPrimaryAdministrator: ").Append(NewPrimaryAdministrator).Append("\n");
             sb.Append("  OriginalAdditionalAdministrators: ").Append(OriginalAdditionalAdministrators).Append("\n");
             sb.Append("  NewAdditionalAdministrators: ").Append(NewAdditionalAdministrators).Append("\n");
+            sb.Append("  SiteTitle: ").Append(SiteTitle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -219,6 +229,11 @@ namespace Cloud.Governance.Client.Model
                     this.NewAdditionalAdministrators != null &&
                     input.NewAdditionalAdministrators != null &&
                     this.NewAdditionalAdministrators.SequenceEqual(input.NewAdditionalAdministrators)
+                ) && 
+                (
+                    this.SiteTitle == input.SiteTitle ||
+                    (this.SiteTitle != null &&
+                    this.SiteTitle.Equals(input.SiteTitle))
                 );
         }
 
@@ -251,6 +266,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.OriginalAdditionalAdministrators.GetHashCode();
                 if (this.NewAdditionalAdministrators != null)
                     hashCode = hashCode * 59 + this.NewAdditionalAdministrators.GetHashCode();
+                if (this.SiteTitle != null)
+                    hashCode = hashCode * 59 + this.SiteTitle.GetHashCode();
                 return hashCode;
             }
         }

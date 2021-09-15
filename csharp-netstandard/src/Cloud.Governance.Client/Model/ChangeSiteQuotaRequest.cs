@@ -66,18 +66,20 @@ namespace Cloud.Governance.Client.Model
         /// <param name="action">Lifecycle management action type.</param>
         /// <param name="siteId">Site collection ID.</param>
         /// <param name="siteUrl">Site collection URL.</param>
+        /// <param name="siteTitle">Site Title.</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ChangeSiteQuotaRequest(int quotaSize = 0, SiteLifecycleActionType? action = default(SiteLifecycleActionType?), Guid siteId = default(Guid), string siteUrl = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ChangeSiteQuotaRequest(int quotaSize = 0, SiteLifecycleActionType? action = default(SiteLifecycleActionType?), Guid siteId = default(Guid), string siteUrl = default(string), string siteTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.QuotaSize = quotaSize;
             this.Action = action;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
+            this.SiteTitle = siteTitle;
             this.Id = id;
             this.ServiceId = serviceId;
             this.Summary = summary;
@@ -122,6 +124,13 @@ namespace Cloud.Governance.Client.Model
         /// <value>Site collection URL</value>
         [DataMember(Name = "siteUrl", EmitDefaultValue = true)]
         public string SiteUrl { get; set; }
+
+        /// <summary>
+        /// Site Title
+        /// </summary>
+        /// <value>Site Title</value>
+        [DataMember(Name = "siteTitle", EmitDefaultValue = true)]
+        public string SiteTitle { get; set; }
 
         /// <summary>
         /// Id of request.
@@ -354,6 +363,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ActionDescription: ").Append(ActionDescription).Append("\n");
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
             sb.Append("  SiteUrl: ").Append(SiteUrl).Append("\n");
+            sb.Append("  SiteTitle: ").Append(SiteTitle).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
@@ -429,6 +439,11 @@ namespace Cloud.Governance.Client.Model
                     this.SiteUrl == input.SiteUrl ||
                     (this.SiteUrl != null &&
                     this.SiteUrl.Equals(input.SiteUrl))
+                ) && 
+                (
+                    this.SiteTitle == input.SiteTitle ||
+                    (this.SiteTitle != null &&
+                    this.SiteTitle.Equals(input.SiteTitle))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -542,6 +557,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.SiteId.GetHashCode();
                 if (this.SiteUrl != null)
                     hashCode = hashCode * 59 + this.SiteUrl.GetHashCode();
+                if (this.SiteTitle != null)
+                    hashCode = hashCode * 59 + this.SiteTitle.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)

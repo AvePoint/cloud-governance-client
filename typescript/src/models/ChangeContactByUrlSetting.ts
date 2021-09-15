@@ -80,6 +80,12 @@ export interface ChangeContactByUrlSetting {
      * @memberof ChangeContactByUrlSetting
      */
     newAdditionalAdministrators?: Array<ApiUser> | null;
+    /**
+     * Site Title
+     * @type {string}
+     * @memberof ChangeContactByUrlSetting
+     */
+    siteTitle?: string | null;
 }
 
 export function ChangeContactByUrlSettingFromJSON(json: any): ChangeContactByUrlSetting {
@@ -102,6 +108,7 @@ export function ChangeContactByUrlSettingFromJSONTyped(json: any, ignoreDiscrimi
         'newPrimaryAdministrator': !exists(json, 'newPrimaryAdministrator') ? undefined : ApiUserFromJSON(json['newPrimaryAdministrator']),
         'originalAdditionalAdministrators': !exists(json, 'originalAdditionalAdministrators') ? undefined : (json['originalAdditionalAdministrators'] === null ? null : (json['originalAdditionalAdministrators'] as Array<any>).map(ApiUserFromJSON)),
         'newAdditionalAdministrators': !exists(json, 'newAdditionalAdministrators') ? undefined : (json['newAdditionalAdministrators'] === null ? null : (json['newAdditionalAdministrators'] as Array<any>).map(ApiUserFromJSON)),
+        'siteTitle': !exists(json, 'siteTitle') ? undefined : json['siteTitle'],
     };
 }
 
@@ -124,6 +131,7 @@ export function ChangeContactByUrlSettingToJSON(value?: ChangeContactByUrlSettin
         'newPrimaryAdministrator': ApiUserToJSON(value.newPrimaryAdministrator),
         'originalAdditionalAdministrators': value.originalAdditionalAdministrators === undefined ? undefined : (value.originalAdditionalAdministrators === null ? null : (value.originalAdditionalAdministrators as Array<any>).map(ApiUserToJSON)),
         'newAdditionalAdministrators': value.newAdditionalAdministrators === undefined ? undefined : (value.newAdditionalAdministrators === null ? null : (value.newAdditionalAdministrators as Array<any>).map(ApiUserToJSON)),
+        'siteTitle': value.siteTitle,
     };
 }
 

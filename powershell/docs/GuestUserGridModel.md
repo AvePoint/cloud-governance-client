@@ -23,6 +23,9 @@ Name | Type | Description | Notes
 **ExternalUserStateDescription** | **String** |  | [optional] 
 **LastSyncTime** | **System.DateTime** |  | [optional] 
 **InviteTime** | **System.DateTime** |  | [optional] 
+**LastRenewalTime** | **System.DateTime** |  | [optional] 
+**RenewalStartTime** | **System.DateTime** |  | [optional] 
+**RenewalDueDate** | **System.DateTime** |  | [optional] 
 **Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 
 ## Examples
@@ -49,6 +52,9 @@ $GuestUserGridModel = New-Cloud.Governance.ClientGuestUserGridModel  -Id null `
  -ExternalUserStateDescription null `
  -LastSyncTime null `
  -InviteTime null `
+ -LastRenewalTime null `
+ -RenewalStartTime null `
+ -RenewalDueDate null `
  -Metadata null
 ```
 

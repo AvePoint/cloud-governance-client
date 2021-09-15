@@ -45,7 +45,10 @@ function New-RequestMetadata {
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Action} = "NoChange"
+        ${Action} = "NoChange",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${AllowReferenceAsRoleInApprovalProcess} = $false
     )
 
     Process {
@@ -66,6 +69,7 @@ function New-RequestMetadata {
             "LookupListValue" = ${LookupListValue}
             "Value" = ${Value}
             "Action" = ${Action}
+            "AllowReferenceAsRoleInApprovalProcess" = ${AllowReferenceAsRoleInApprovalProcess}
         }
 
         return $PSO
@@ -88,7 +92,7 @@ function ConvertFrom-JsonToRequestMetadata {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in RequestMetadata
-        $AllProperties = $("Id", "Name", "BooleanValue", "SingleLineOrMultipleLineValue", "UpsOrAzureAdValue", "TermsValue", "UserValue", "LinkValue", "ChoiceValue", "LookupListValue", "Type", "ValueString", "Value", "Action")
+        $AllProperties = $("Id", "Name", "BooleanValue", "SingleLineOrMultipleLineValue", "UpsOrAzureAdValue", "TermsValue", "UserValue", "LinkValue", "ChoiceValue", "LookupListValue", "Type", "ValueString", "Value", "Action", "AllowReferenceAsRoleInApprovalProcess")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -179,6 +183,12 @@ function ConvertFrom-JsonToRequestMetadata {
             $Action = $JsonParameters.PSobject.Properties["Action"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "AllowReferenceAsRoleInApprovalProcess"))) { #optional property not found
+            $AllowReferenceAsRoleInApprovalProcess = $null
+        } else {
+            $AllowReferenceAsRoleInApprovalProcess = $JsonParameters.PSobject.Properties["AllowReferenceAsRoleInApprovalProcess"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
@@ -194,6 +204,7 @@ function ConvertFrom-JsonToRequestMetadata {
             "ValueString" = ${ValueString}
             "Value" = ${Value}
             "Action" = ${Action}
+            "AllowReferenceAsRoleInApprovalProcess" = ${AllowReferenceAsRoleInApprovalProcess}
         }
 
         return $PSO

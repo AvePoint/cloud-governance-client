@@ -8,9 +8,11 @@ Name | Type | Description | Notes
 **LastName** | **String** |  | [optional] 
 **UserName** | **String** |  | [optional] 
 **UsageLocation** | **String** |  | [optional] 
+**UsageLocationDisplayName** | **String** |  | [optional] 
 **JobTitle** | **String** |  | [optional] 
 **JobDepartment** | **String** |  | [optional] 
 **Manager** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**CompanyName** | **String** |  | [optional] 
 
 ## Examples
 
@@ -21,9 +23,11 @@ $GuestUserPropertyModel = New-Cloud.Governance.ClientGuestUserPropertyModel  -Di
  -LastName null `
  -UserName null `
  -UsageLocation null `
+ -UsageLocationDisplayName null `
  -JobTitle null `
  -JobDepartment null `
- -Manager null
+ -Manager null `
+ -CompanyName null
 ```
 
 - Convert the resource to JSON

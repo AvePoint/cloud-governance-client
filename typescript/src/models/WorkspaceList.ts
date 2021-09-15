@@ -217,6 +217,12 @@ export interface WorkspaceList {
      * @type {string}
      * @memberof WorkspaceList
      */
+    sensitivity?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof WorkspaceList
+     */
     privacyDescription?: string | null;
     /**
      * 
@@ -266,6 +272,7 @@ export function WorkspaceListFromJSONTyped(json: any, ignoreDiscriminator: boole
         'storageUsage': !exists(json, 'storageUsage') ? undefined : json['storageUsage'],
         'classification': !exists(json, 'classification') ? undefined : json['classification'],
         'privacy': !exists(json, 'privacy') ? undefined : json['privacy'],
+        'sensitivity': !exists(json, 'sensitivity') ? undefined : json['sensitivity'],
         'privacyDescription': !exists(json, 'privacyDescription') ? undefined : json['privacyDescription'],
         'metadata': !exists(json, 'metadata') ? undefined : (json['metadata'] === null ? null : (json['metadata'] as Array<any>).map(EndUserReportMetadataFromJSON)),
     };
@@ -310,6 +317,7 @@ export function WorkspaceListToJSON(value?: WorkspaceList | null): any {
         'storageUsage': value.storageUsage,
         'classification': value.classification,
         'privacy': value.privacy,
+        'sensitivity': value.sensitivity,
         'privacyDescription': value.privacyDescription,
         'metadata': value.metadata === undefined ? undefined : (value.metadata === null ? null : (value.metadata as Array<any>).map(EndUserReportMetadataToJSON)),
     };

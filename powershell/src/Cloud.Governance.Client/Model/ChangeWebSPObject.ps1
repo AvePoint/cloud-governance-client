@@ -21,7 +21,10 @@ function New-ChangeWebSPObject {
         ${SiteId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${WebId}
+        ${WebId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${WebTitle}
     )
 
     Process {
@@ -34,6 +37,7 @@ function New-ChangeWebSPObject {
             "WebUrl" = ${WebUrl}
             "SiteId" = ${SiteId}
             "WebId" = ${WebId}
+            "WebTitle" = ${WebTitle}
         }
 
         return $PSO
@@ -56,7 +60,7 @@ function ConvertFrom-JsonToChangeWebSPObject {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeWebSPObject
-        $AllProperties = $("SiteUrl", "WebUrl", "SiteId", "WebId")
+        $AllProperties = $("SiteUrl", "WebUrl", "SiteId", "WebId", "WebTitle")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -87,11 +91,18 @@ function ConvertFrom-JsonToChangeWebSPObject {
             $WebId = $JsonParameters.PSobject.Properties["WebId"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "WebTitle"))) { #optional property not found
+            $WebTitle = $null
+        } else {
+            $WebTitle = $JsonParameters.PSobject.Properties["WebTitle"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "SiteUrl" = ${SiteUrl}
             "WebUrl" = ${WebUrl}
             "SiteId" = ${SiteId}
             "WebId" = ${WebId}
+            "WebTitle" = ${WebTitle}
         }
 
         return $PSO

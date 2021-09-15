@@ -59,7 +59,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="lookupListValue">Value of Lookup to SharePoint library/list metadata..</param>
         /// <param name="value">Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot;.</param>
         /// <param name="action">Action of metadata, used in change workspace metadata service..</param>
-        public RequestMetadata(Guid id = default(Guid), string name = default(string), bool? booleanValue = false, string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), string value = default(string), MetadataActionType? action = default(MetadataActionType?))
+        /// <param name="allowReferenceAsRoleInApprovalProcess">Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process. (default to false).</param>
+        public RequestMetadata(Guid id = default(Guid), string name = default(string), bool? booleanValue = false, string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), string value = default(string), MetadataActionType? action = default(MetadataActionType?), bool allowReferenceAsRoleInApprovalProcess = false)
         {
             this.Id = id;
             this.Name = name;
@@ -74,6 +75,7 @@ namespace Cloud.Governance.Client.Model
             this.LookupListValue = lookupListValue;
             this.Value = value;
             this.Action = action;
+            this.AllowReferenceAsRoleInApprovalProcess = allowReferenceAsRoleInApprovalProcess;
         }
 
         /// <summary>
@@ -170,6 +172,13 @@ namespace Cloud.Governance.Client.Model
         public string Value { get; set; }
 
         /// <summary>
+        /// Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process.
+        /// </summary>
+        /// <value>Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process.</value>
+        [DataMember(Name = "allowReferenceAsRoleInApprovalProcess", EmitDefaultValue = false)]
+        public bool AllowReferenceAsRoleInApprovalProcess { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -191,6 +200,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ValueString: ").Append(ValueString).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
+            sb.Append("  AllowReferenceAsRoleInApprovalProcess: ").Append(AllowReferenceAsRoleInApprovalProcess).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -294,6 +304,10 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.Action == input.Action ||
                     this.Action.Equals(input.Action)
+                ) && 
+                (
+                    this.AllowReferenceAsRoleInApprovalProcess == input.AllowReferenceAsRoleInApprovalProcess ||
+                    this.AllowReferenceAsRoleInApprovalProcess.Equals(input.AllowReferenceAsRoleInApprovalProcess)
                 );
         }
 
@@ -332,6 +346,7 @@ namespace Cloud.Governance.Client.Model
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 hashCode = hashCode * 59 + this.Action.GetHashCode();
+                hashCode = hashCode * 59 + this.AllowReferenceAsRoleInApprovalProcess.GetHashCode();
                 return hashCode;
             }
         }

@@ -61,7 +61,7 @@ function Invoke-ApiClient {
     }
     $HeaderParameters["Accept-Encoding"]="gzip, deflate"
     $HeaderParameters["X-CLOUD-GOVERNANCE-JSONCONTRACT"]="PascalCase"
-    $HeaderParameters["User-Agent"]="(sdk/powershell/4.7.5)"
+    $HeaderParameters["User-Agent"]="(sdk/powershell/4.9.3)"
     $ContentType= SelectHeaders -Headers $ContentTypes
     if ($ContentType) {
         $HeaderParameters['Content-Type'] = $ContentType
@@ -94,7 +94,14 @@ function Invoke-ApiClient {
     }
 
     if ($Body -or $IsBodyNullable) {
-        $RequestBody = $Body
+		$utf8 = [System.Text.Encoding]::UTF8
+        $default = [System.Text.Encoding]::Default    
+        if($Body -and ($utf8 -ne $default)){
+            $RequestBody = [System.Text.Encoding]::Convert($default,$utf8,$default.GetBytes($Body))
+        }else{
+            $RequestBody=$Body
+        }
+
         if ([string]::IsNullOrEmpty($RequestBody) -and $IsBodyNullable -eq $true) {
             $RequestBody = "null"
         }

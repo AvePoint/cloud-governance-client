@@ -58,6 +58,7 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="siteId">siteId.</param>
         /// <param name="siteUrl">siteUrl.</param>
+        /// <param name="siteTitle">Site title.</param>
         /// <param name="siteTitleSetting">siteTitleSetting.</param>
         /// <param name="siteDescriptionSetting">siteDescriptionSetting.</param>
         /// <param name="changedMetadatas">changedMetadatas.</param>
@@ -69,10 +70,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ChangeSiteSettingRequest(Guid siteId = default(Guid), string siteUrl = default(string), StringChangedProperty siteTitleSetting = default(StringChangedProperty), StringChangedProperty siteDescriptionSetting = default(StringChangedProperty), List<RequestMetadata> changedMetadatas = default(List<RequestMetadata>), string deploymentPlanName = default(string), HubSiteChangedSettings hubSiteSettings = default(HubSiteChangedSettings), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ChangeSiteSettingRequest(Guid siteId = default(Guid), string siteUrl = default(string), string siteTitle = default(string), StringChangedProperty siteTitleSetting = default(StringChangedProperty), StringChangedProperty siteDescriptionSetting = default(StringChangedProperty), List<RequestMetadata> changedMetadatas = default(List<RequestMetadata>), string deploymentPlanName = default(string), HubSiteChangedSettings hubSiteSettings = default(HubSiteChangedSettings), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
+            this.SiteTitle = siteTitle;
             this.SiteTitleSetting = siteTitleSetting;
             this.SiteDescriptionSetting = siteDescriptionSetting;
             this.ChangedMetadatas = changedMetadatas;
@@ -97,6 +99,13 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "siteUrl", EmitDefaultValue = true)]
         public string SiteUrl { get; set; }
+
+        /// <summary>
+        /// Site title
+        /// </summary>
+        /// <value>Site title</value>
+        [DataMember(Name = "siteTitle", EmitDefaultValue = true)]
+        public string SiteTitle { get; set; }
 
         /// <summary>
         /// Gets or Sets SiteTitleSetting
@@ -386,6 +395,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class ChangeSiteSettingRequest {\n");
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
             sb.Append("  SiteUrl: ").Append(SiteUrl).Append("\n");
+            sb.Append("  SiteTitle: ").Append(SiteTitle).Append("\n");
             sb.Append("  SiteTitleSetting: ").Append(SiteTitleSetting).Append("\n");
             sb.Append("  SiteDescriptionSetting: ").Append(SiteDescriptionSetting).Append("\n");
             sb.Append("  EnableChangedMetadata: ").Append(EnableChangedMetadata).Append("\n");
@@ -455,6 +465,11 @@ namespace Cloud.Governance.Client.Model
                     this.SiteUrl == input.SiteUrl ||
                     (this.SiteUrl != null &&
                     this.SiteUrl.Equals(input.SiteUrl))
+                ) && 
+                (
+                    this.SiteTitle == input.SiteTitle ||
+                    (this.SiteTitle != null &&
+                    this.SiteTitle.Equals(input.SiteTitle))
                 ) && 
                 (
                     this.SiteTitleSetting == input.SiteTitleSetting ||
@@ -600,6 +615,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.SiteId.GetHashCode();
                 if (this.SiteUrl != null)
                     hashCode = hashCode * 59 + this.SiteUrl.GetHashCode();
+                if (this.SiteTitle != null)
+                    hashCode = hashCode * 59 + this.SiteTitle.GetHashCode();
                 if (this.SiteTitleSetting != null)
                     hashCode = hashCode * 59 + this.SiteTitleSetting.GetHashCode();
                 if (this.SiteDescriptionSetting != null)

@@ -286,7 +286,11 @@ namespace Cloud.Governance.Client.Model
 
         BulkApplyGuestRenewal = 550,
 
-        BulkSpecifyGuestContact = 551
+        BulkSpecifyGuestContact = 551,
+
+        BulkRestartGuestRenewal = 552,
+
+        BulkSpecifyGuestOneTimeRenewal = 553
 
     }
 

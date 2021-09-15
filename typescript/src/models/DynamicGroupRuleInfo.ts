@@ -88,6 +88,18 @@ export interface DynamicGroupRuleInfo {
      * @memberof DynamicGroupRuleInfo
      */
     condition?: DynamicRuleCondition;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof DynamicGroupRuleInfo
+     */
+    disableEditRule?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof DynamicGroupRuleInfo
+     */
+    disableEditRuleValue?: boolean;
 }
 
 export function DynamicGroupRuleInfoFromJSON(json: any): DynamicGroupRuleInfo {
@@ -110,6 +122,8 @@ export function DynamicGroupRuleInfoFromJSONTyped(json: any, ignoreDiscriminator
         'metadataDisplayValue': !exists(json, 'metadataDisplayValue') ? undefined : json['metadataDisplayValue'],
         'metadataValueAzureUserType': !exists(json, 'metadataValueAzureUserType') ? undefined : json['metadataValueAzureUserType'],
         'condition': !exists(json, 'condition') ? undefined : DynamicRuleConditionFromJSON(json['condition']),
+        'disableEditRule': !exists(json, 'disableEditRule') ? undefined : json['disableEditRule'],
+        'disableEditRuleValue': !exists(json, 'disableEditRuleValue') ? undefined : json['disableEditRuleValue'],
     };
 }
 
@@ -132,6 +146,8 @@ export function DynamicGroupRuleInfoToJSON(value?: DynamicGroupRuleInfo | null):
         'metadataDisplayValue': value.metadataDisplayValue,
         'metadataValueAzureUserType': value.metadataValueAzureUserType,
         'condition': DynamicRuleConditionToJSON(value.condition),
+        'disableEditRule': value.disableEditRule,
+        'disableEditRuleValue': value.disableEditRuleValue,
     };
 }
 

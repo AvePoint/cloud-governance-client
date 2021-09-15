@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **SiteUrl** | **String** |  | [optional] 
 **WebId** | **String** |  | [optional] 
 **WebUrl** | **String** |  | [optional] 
+**WebTitle** | **String** | Web title | [optional] 
 **PrimaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
 **SecondaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
 
@@ -18,6 +19,7 @@ $ChangeWebContactByUrlSetting = New-Cloud.Governance.ClientChangeWebContactByUrl
  -SiteUrl null `
  -WebId null `
  -WebUrl null `
+ -WebTitle null `
  -PrimaryContact null `
  -SecondaryContact null
 ```

@@ -58,6 +58,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupObjectType">groupObjectType.</param>
         /// <param name="groupObjectId">groupObjectId.</param>
         /// <param name="networkId">networkId.</param>
+        /// <param name="sensitivity">sensitivity.</param>
         /// <param name="id">id.</param>
         /// <param name="phase">phase.</param>
         /// <param name="phaseStartTime">phaseStartTime.</param>
@@ -73,7 +74,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContact">ApiUser model.</param>
         /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="errorMessage">errorMessage.</param>
-        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
+        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), string sensitivity = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
             this.ObjectId = objectId;
             this.PolicyId = policyId;
@@ -97,6 +98,7 @@ namespace Cloud.Governance.Client.Model
             this.GroupObjectType = groupObjectType;
             this.GroupObjectId = groupObjectId;
             this.NetworkId = networkId;
+            this.Sensitivity = sensitivity;
             this.Id = id;
             this.Phase = phase;
             this.PhaseStartTime = phaseStartTime;
@@ -241,6 +243,12 @@ namespace Cloud.Governance.Client.Model
         public string NetworkId { get; set; }
 
         /// <summary>
+        /// Gets or Sets Sensitivity
+        /// </summary>
+        [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
+        public string Sensitivity { get; set; }
+
+        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name = "id", EmitDefaultValue = false)]
@@ -356,6 +364,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  GroupObjectType: ").Append(GroupObjectType).Append("\n");
             sb.Append("  GroupObjectId: ").Append(GroupObjectId).Append("\n");
             sb.Append("  NetworkId: ").Append(NetworkId).Append("\n");
+            sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Phase: ").Append(Phase).Append("\n");
             sb.Append("  PhaseStartTime: ").Append(PhaseStartTime).Append("\n");
@@ -513,6 +522,11 @@ namespace Cloud.Governance.Client.Model
                     this.NetworkId.Equals(input.NetworkId))
                 ) && 
                 (
+                    this.Sensitivity == input.Sensitivity ||
+                    (this.Sensitivity != null &&
+                    this.Sensitivity.Equals(input.Sensitivity))
+                ) && 
+                (
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
@@ -638,6 +652,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.GroupObjectId.GetHashCode();
                 if (this.NetworkId != null)
                     hashCode = hashCode * 59 + this.NetworkId.GetHashCode();
+                if (this.Sensitivity != null)
+                    hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 hashCode = hashCode * 59 + this.Phase.GetHashCode();

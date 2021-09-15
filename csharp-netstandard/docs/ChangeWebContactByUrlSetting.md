@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **SiteUrl** | **string** |  | [optional] 
 **WebId** | **Guid** |  | [optional] 
 **WebUrl** | **string** |  | [optional] 
+**WebTitle** | **string** | Web title | [optional] 
 **PrimaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
 **SecondaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
 

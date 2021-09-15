@@ -39,7 +39,13 @@ function New-DynamicGroupRuleInfo {
         ${MetadataValueAzureUserType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${Condition} = "Equals"
+        ${Condition} = "Equals",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${DisableEditRule} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${DisableEditRuleValue} = $false
     )
 
     Process {
@@ -58,6 +64,8 @@ function New-DynamicGroupRuleInfo {
             "MetadataDisplayValue" = ${MetadataDisplayValue}
             "MetadataValueAzureUserType" = ${MetadataValueAzureUserType}
             "Condition" = ${Condition}
+            "DisableEditRule" = ${DisableEditRule}
+            "DisableEditRuleValue" = ${DisableEditRuleValue}
         }
 
         return $PSO
@@ -80,7 +88,7 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in DynamicGroupRuleInfo
-        $AllProperties = $("Id", "Order", "Relation", "Category", "MetadataId", "MetadataName", "MetadataValue", "MetadataDisplayValue", "MetadataValueAzureUserType", "Condition")
+        $AllProperties = $("Id", "Order", "Relation", "Category", "MetadataId", "MetadataName", "MetadataValue", "MetadataDisplayValue", "MetadataValueAzureUserType", "Condition", "DisableEditRule", "DisableEditRuleValue")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -147,6 +155,18 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
             $Condition = $JsonParameters.PSobject.Properties["Condition"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisableEditRule"))) { #optional property not found
+            $DisableEditRule = $null
+        } else {
+            $DisableEditRule = $JsonParameters.PSobject.Properties["DisableEditRule"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisableEditRuleValue"))) { #optional property not found
+            $DisableEditRuleValue = $null
+        } else {
+            $DisableEditRuleValue = $JsonParameters.PSobject.Properties["DisableEditRuleValue"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Order" = ${Order}
@@ -158,6 +178,8 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
             "MetadataDisplayValue" = ${MetadataDisplayValue}
             "MetadataValueAzureUserType" = ${MetadataValueAzureUserType}
             "Condition" = ${Condition}
+            "DisableEditRule" = ${DisableEditRule}
+            "DisableEditRuleValue" = ${DisableEditRuleValue}
         }
 
         return $PSO

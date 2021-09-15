@@ -136,6 +136,12 @@ export interface RequestMetadata {
      * @memberof RequestMetadata
      */
     action?: MetadataActionType;
+    /**
+     * Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process.
+     * @type {boolean}
+     * @memberof RequestMetadata
+     */
+    allowReferenceAsRoleInApprovalProcess?: boolean;
 }
 
 export function RequestMetadataFromJSON(json: any): RequestMetadata {
@@ -162,6 +168,7 @@ export function RequestMetadataFromJSONTyped(json: any, ignoreDiscriminator: boo
         'valueString': !exists(json, 'valueString') ? undefined : json['valueString'],
         'value': !exists(json, 'value') ? undefined : json['value'],
         'action': !exists(json, 'action') ? undefined : MetadataActionTypeFromJSON(json['action']),
+        'allowReferenceAsRoleInApprovalProcess': !exists(json, 'allowReferenceAsRoleInApprovalProcess') ? undefined : json['allowReferenceAsRoleInApprovalProcess'],
     };
 }
 
@@ -186,6 +193,7 @@ export function RequestMetadataToJSON(value?: RequestMetadata | null): any {
         'lookupListValue': LookupListValueToJSON(value.lookupListValue),
         'value': value.value,
         'action': MetadataActionTypeToJSON(value.action),
+        'allowReferenceAsRoleInApprovalProcess': value.allowReferenceAsRoleInApprovalProcess,
     };
 }
 

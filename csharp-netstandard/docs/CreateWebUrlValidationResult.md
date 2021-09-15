@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ParentWebUrl** | **string** |  | [optional] 
 **ParentSiteUrl** | **string** |  | [optional] 
+**SitePrimaryAdmin** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SitePrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SiteSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **IsValid** | **bool** |  | [optional] [default to false]

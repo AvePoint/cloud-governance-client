@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteId** | **String** |  | [optional] 
 **SiteUrl** | **String** |  | [optional] 
+**SiteTitle** | **String** | Site title | [optional] 
 **SiteTitleSetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **SiteDescriptionSetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **EnableChangedMetadata** | **Boolean** |  | [optional] [readonly] [default to $false]
@@ -38,6 +39,7 @@ Name | Type | Description | Notes
 ```powershell
 $ChangeSiteSettingRequest = New-Cloud.Governance.ClientChangeSiteSettingRequest  -SiteId null `
  -SiteUrl null `
+ -SiteTitle null `
  -SiteTitleSetting null `
  -SiteDescriptionSetting null `
  -EnableChangedMetadata null `

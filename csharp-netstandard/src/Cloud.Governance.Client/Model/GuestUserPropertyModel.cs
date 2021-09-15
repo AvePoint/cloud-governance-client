@@ -31,19 +31,23 @@ namespace Cloud.Governance.Client.Model
         /// <param name="lastName">lastName.</param>
         /// <param name="userName">userName.</param>
         /// <param name="usageLocation">usageLocation.</param>
+        /// <param name="usageLocationDisplayName">usageLocationDisplayName.</param>
         /// <param name="jobTitle">jobTitle.</param>
         /// <param name="jobDepartment">jobDepartment.</param>
         /// <param name="manager">ApiUser model.</param>
-        public GuestUserPropertyModel(string displayName = default(string), string firstName = default(string), string lastName = default(string), string userName = default(string), string usageLocation = default(string), string jobTitle = default(string), string jobDepartment = default(string), ApiUser manager = default(ApiUser))
+        /// <param name="companyName">companyName.</param>
+        public GuestUserPropertyModel(string displayName = default(string), string firstName = default(string), string lastName = default(string), string userName = default(string), string usageLocation = default(string), string usageLocationDisplayName = default(string), string jobTitle = default(string), string jobDepartment = default(string), ApiUser manager = default(ApiUser), string companyName = default(string))
         {
             this.DisplayName = displayName;
             this.FirstName = firstName;
             this.LastName = lastName;
             this.UserName = userName;
             this.UsageLocation = usageLocation;
+            this.UsageLocationDisplayName = usageLocationDisplayName;
             this.JobTitle = jobTitle;
             this.JobDepartment = jobDepartment;
             this.Manager = manager;
+            this.CompanyName = companyName;
         }
 
         /// <summary>
@@ -77,6 +81,12 @@ namespace Cloud.Governance.Client.Model
         public string UsageLocation { get; set; }
 
         /// <summary>
+        /// Gets or Sets UsageLocationDisplayName
+        /// </summary>
+        [DataMember(Name = "usageLocationDisplayName", EmitDefaultValue = true)]
+        public string UsageLocationDisplayName { get; set; }
+
+        /// <summary>
         /// Gets or Sets JobTitle
         /// </summary>
         [DataMember(Name = "jobTitle", EmitDefaultValue = true)]
@@ -96,6 +106,12 @@ namespace Cloud.Governance.Client.Model
         public ApiUser Manager { get; set; }
 
         /// <summary>
+        /// Gets or Sets CompanyName
+        /// </summary>
+        [DataMember(Name = "companyName", EmitDefaultValue = true)]
+        public string CompanyName { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -108,9 +124,11 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  UsageLocation: ").Append(UsageLocation).Append("\n");
+            sb.Append("  UsageLocationDisplayName: ").Append(UsageLocationDisplayName).Append("\n");
             sb.Append("  JobTitle: ").Append(JobTitle).Append("\n");
             sb.Append("  JobDepartment: ").Append(JobDepartment).Append("\n");
             sb.Append("  Manager: ").Append(Manager).Append("\n");
+            sb.Append("  CompanyName: ").Append(CompanyName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,6 +189,11 @@ namespace Cloud.Governance.Client.Model
                     this.UsageLocation.Equals(input.UsageLocation))
                 ) && 
                 (
+                    this.UsageLocationDisplayName == input.UsageLocationDisplayName ||
+                    (this.UsageLocationDisplayName != null &&
+                    this.UsageLocationDisplayName.Equals(input.UsageLocationDisplayName))
+                ) && 
+                (
                     this.JobTitle == input.JobTitle ||
                     (this.JobTitle != null &&
                     this.JobTitle.Equals(input.JobTitle))
@@ -184,6 +207,11 @@ namespace Cloud.Governance.Client.Model
                     this.Manager == input.Manager ||
                     (this.Manager != null &&
                     this.Manager.Equals(input.Manager))
+                ) && 
+                (
+                    this.CompanyName == input.CompanyName ||
+                    (this.CompanyName != null &&
+                    this.CompanyName.Equals(input.CompanyName))
                 );
         }
 
@@ -206,12 +234,16 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.UserName.GetHashCode();
                 if (this.UsageLocation != null)
                     hashCode = hashCode * 59 + this.UsageLocation.GetHashCode();
+                if (this.UsageLocationDisplayName != null)
+                    hashCode = hashCode * 59 + this.UsageLocationDisplayName.GetHashCode();
                 if (this.JobTitle != null)
                     hashCode = hashCode * 59 + this.JobTitle.GetHashCode();
                 if (this.JobDepartment != null)
                     hashCode = hashCode * 59 + this.JobDepartment.GetHashCode();
                 if (this.Manager != null)
                     hashCode = hashCode * 59 + this.Manager.GetHashCode();
+                if (this.CompanyName != null)
+                    hashCode = hashCode * 59 + this.CompanyName.GetHashCode();
                 return hashCode;
             }
         }

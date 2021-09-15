@@ -71,9 +71,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="storageUsage">storageUsage.</param>
         /// <param name="classification">classification.</param>
         /// <param name="privacy">privacy (default to false).</param>
+        /// <param name="sensitivity">sensitivity.</param>
         /// <param name="privacyDescription">privacyDescription.</param>
         /// <param name="metadata">metadata.</param>
-        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = false, DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = 0, string secondaryContact = default(string), string secondaryContactEmail = default(string), string policy = default(string), Guid policyId = default(Guid), string description = default(string), string primaryAdmin = default(string), string primaryAdminEmail = default(string), string additionalAdmin = default(string), string additionalAdminEmail = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), string storageLimit = default(string), string storageUsage = default(string), string classification = default(string), bool? privacy = false, string privacyDescription = default(string), List<EndUserReportMetadata> metadata = default(List<EndUserReportMetadata>))
+        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = false, DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = 0, string secondaryContact = default(string), string secondaryContactEmail = default(string), string policy = default(string), Guid policyId = default(Guid), string description = default(string), string primaryAdmin = default(string), string primaryAdminEmail = default(string), string additionalAdmin = default(string), string additionalAdminEmail = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), string storageLimit = default(string), string storageUsage = default(string), string classification = default(string), bool? privacy = false, string sensitivity = default(string), string privacyDescription = default(string), List<EndUserReportMetadata> metadata = default(List<EndUserReportMetadata>))
         {
             this.Id = id;
             this.Name = name;
@@ -106,6 +107,7 @@ namespace Cloud.Governance.Client.Model
             this.Classification = classification;
             // use default value if no "privacy" provided
             this.Privacy = privacy ?? false;
+            this.Sensitivity = sensitivity;
             this.PrivacyDescription = privacyDescription;
             this.Metadata = metadata;
         }
@@ -273,6 +275,12 @@ namespace Cloud.Governance.Client.Model
         public bool? Privacy { get; set; }
 
         /// <summary>
+        /// Gets or Sets Sensitivity
+        /// </summary>
+        [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
+        public string Sensitivity { get; set; }
+
+        /// <summary>
         /// Gets or Sets PrivacyDescription
         /// </summary>
         [DataMember(Name = "privacyDescription", EmitDefaultValue = true)]
@@ -322,6 +330,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  StorageUsage: ").Append(StorageUsage).Append("\n");
             sb.Append("  Classification: ").Append(Classification).Append("\n");
             sb.Append("  Privacy: ").Append(Privacy).Append("\n");
+            sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
             sb.Append("  PrivacyDescription: ").Append(PrivacyDescription).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
@@ -504,6 +513,11 @@ namespace Cloud.Governance.Client.Model
                     this.Privacy.Equals(input.Privacy))
                 ) && 
                 (
+                    this.Sensitivity == input.Sensitivity ||
+                    (this.Sensitivity != null &&
+                    this.Sensitivity.Equals(input.Sensitivity))
+                ) && 
+                (
                     this.PrivacyDescription == input.PrivacyDescription ||
                     (this.PrivacyDescription != null &&
                     this.PrivacyDescription.Equals(input.PrivacyDescription))
@@ -580,6 +594,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Classification.GetHashCode();
                 if (this.Privacy != null)
                     hashCode = hashCode * 59 + this.Privacy.GetHashCode();
+                if (this.Sensitivity != null)
+                    hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
                 if (this.PrivacyDescription != null)
                     hashCode = hashCode * 59 + this.PrivacyDescription.GetHashCode();
                 if (this.Metadata != null)

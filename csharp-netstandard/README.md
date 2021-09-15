@@ -197,6 +197,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**GetSiteLifecycleService**](docs/ServicesApi.md#getsitelifecycleservice) | **GET** /services/sitelifecycle/{id} | get site lifecycle service
 *ServicesApi* | [**GetWebLifecycleService**](docs/ServicesApi.md#getweblifecycleservice) | **GET** /services/weblifecycle/{id} | get web lifecycle service
 *ServicesApi* | [**ValidateEmailForCreateGuestUserService**](docs/ServicesApi.md#validateemailforcreateguestuserservice) | **GET** /services/createguestuser/{id}/email/validate | validate guest user email
+*ServicesApi* | [**ValidateEmailsForCreateGuestUserService**](docs/ServicesApi.md#validateemailsforcreateguestuserservice) | **POST** /services/createguestuser/{id}/email/validate | validate guest user emails
 *ServicesApi* | [**ValidateForChangeGroupSettingService**](docs/ServicesApi.md#validateforchangegroupsettingservice) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
 *ServicesApi* | [**ValidateForChangeListSettingService**](docs/ServicesApi.md#validateforchangelistsettingservice) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
 *ServicesApi* | [**ValidateForChangePermissionService**](docs/ServicesApi.md#validateforchangepermissionservice) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
@@ -218,6 +219,7 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**GetDynamicMembershipRuleItems**](docs/SettingsApi.md#getdynamicmembershipruleitems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
 *SettingsApi* | [**GetMyPersonalSettings**](docs/SettingsApi.md#getmypersonalsettings) | **GET** /settings/my | get my personal settings
 *SettingsApi* | [**GetPermissionLevels**](docs/SettingsApi.md#getpermissionlevels) | **GET** /settings/office365/permissionlevels | get permission levels
+*SystemSettingsAdminApi* | [**GetHookMessageSamples**](docs/SystemSettingsAdminApi.md#gethookmessagesamples) | **GET** /admin/settings/system/hooks/messages/sample | 
 *TasksApi* | [**ApproveTask**](docs/TasksApi.md#approvetask) | **POST** /tasks/{id}/approve | approve task
 *TasksApi* | [**EditArchiveGroupRequest**](docs/TasksApi.md#editarchivegrouprequest) | **PUT** /tasks/{id}/archivegroup | edit archive group request in task
 *TasksApi* | [**EditArchiveSiteRequest**](docs/TasksApi.md#editarchivesiterequest) | **PUT** /tasks/{id}/archivesite | edit archive site request in task
@@ -280,6 +282,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**GetOngoingTasks**](docs/WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
 *WorkspacesAdminApi* | [**GetWorkspaces**](docs/WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**LockWorkspaces**](docs/WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
+*WorkspacesAdminApi* | [**SpecifyContacts**](docs/WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | sepcify cnotacts
 *WorkspacesAdminApi* | [**TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#triggerworkspacerenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
 *WorkspacesAdminApi* | [**UnlockWorkspace**](docs/WorkspacesAdminApi.md#unlockworkspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
@@ -320,6 +323,7 @@ Class | Method | HTTP request | Description
  - [Model.AutoGenerateUrlSetting](docs/AutoGenerateUrlSetting.md)
  - [Model.AutoGenerateUrlType](docs/AutoGenerateUrlType.md)
  - [Model.AutoImportPhase](docs/AutoImportPhase.md)
+ - [Model.AutoImportProcessHookMessage](docs/AutoImportProcessHookMessage.md)
  - [Model.AzureAdMetadataSettings](docs/AzureAdMetadataSettings.md)
  - [Model.BackupEnvironmentSetting](docs/BackupEnvironmentSetting.md)
  - [Model.BooleanChangedProperty](docs/BooleanChangedProperty.md)
@@ -399,6 +403,7 @@ Class | Method | HTTP request | Description
  - [Model.CreateGroupType](docs/CreateGroupType.md)
  - [Model.CreateGuestUserRequest](docs/CreateGuestUserRequest.md)
  - [Model.CreateGuestUserService](docs/CreateGuestUserService.md)
+ - [Model.CreateGuestUserSubRequest](docs/CreateGuestUserSubRequest.md)
  - [Model.CreateGuestUserValidationResult](docs/CreateGuestUserValidationResult.md)
  - [Model.CreateListRequest](docs/CreateListRequest.md)
  - [Model.CreateListSPObject](docs/CreateListSPObject.md)
@@ -428,6 +433,8 @@ Class | Method | HTTP request | Description
  - [Model.DynamicGroupRuleInfo](docs/DynamicGroupRuleInfo.md)
  - [Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Model.DynamicRuleElement](docs/DynamicRuleElement.md)
+ - [Model.ElectionContact](docs/ElectionContact.md)
+ - [Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
  - [Model.ExecutionModel](docs/ExecutionModel.md)
  - [Model.ExecutionParameter](docs/ExecutionParameter.md)
@@ -437,6 +444,7 @@ Class | Method | HTTP request | Description
  - [Model.ExtendSiteRequest](docs/ExtendSiteRequest.md)
  - [Model.ExtendSiteSetting](docs/ExtendSiteSetting.md)
  - [Model.ExtendType](docs/ExtendType.md)
+ - [Model.ExternalDomainListType](docs/ExternalDomainListType.md)
  - [Model.ExternalSharingOptions](docs/ExternalSharingOptions.md)
  - [Model.ExternalUserSharingSettings](docs/ExternalUserSharingSettings.md)
  - [Model.ExternalUserSharingType](docs/ExternalUserSharingType.md)
@@ -484,6 +492,7 @@ Class | Method | HTTP request | Description
  - [Model.GuidBooleanModel](docs/GuidBooleanModel.md)
  - [Model.GuidModel](docs/GuidModel.md)
  - [Model.HandleOngoingType](docs/HandleOngoingType.md)
+ - [Model.HookMessageList](docs/HookMessageList.md)
  - [Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
  - [Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Model.HubSiteType](docs/HubSiteType.md)
@@ -494,6 +503,7 @@ Class | Method | HTTP request | Description
  - [Model.LanguageWithTemplates](docs/LanguageWithTemplates.md)
  - [Model.LeaseDateType](docs/LeaseDateType.md)
  - [Model.LeaseStartDateType](docs/LeaseStartDateType.md)
+ - [Model.LifecycleHookMessage](docs/LifecycleHookMessage.md)
  - [Model.LifecycleRenewalSetting](docs/LifecycleRenewalSetting.md)
  - [Model.LinkMetadataSettings](docs/LinkMetadataSettings.md)
  - [Model.LinkValue](docs/LinkValue.md)
@@ -546,8 +556,10 @@ Class | Method | HTTP request | Description
  - [Model.PolicyRef](docs/PolicyRef.md)
  - [Model.PolicyWithTemplates](docs/PolicyWithTemplates.md)
  - [Model.PrincipalType](docs/PrincipalType.md)
+ - [Model.RenewalTaskHookMessage](docs/RenewalTaskHookMessage.md)
  - [Model.ReportMetadata](docs/ReportMetadata.md)
  - [Model.RequestGroupWithPermissions](docs/RequestGroupWithPermissions.md)
+ - [Model.RequestHookMessage](docs/RequestHookMessage.md)
  - [Model.RequestList](docs/RequestList.md)
  - [Model.RequestListPageResult](docs/RequestListPageResult.md)
  - [Model.RequestMetadata](docs/RequestMetadata.md)
@@ -602,12 +614,14 @@ Class | Method | HTTP request | Description
  - [Model.SiteUrl](docs/SiteUrl.md)
  - [Model.SiteUrlSetting](docs/SiteUrlSetting.md)
  - [Model.SiteValidationParameter](docs/SiteValidationParameter.md)
+ - [Model.SpecifyContactParameter](docs/SpecifyContactParameter.md)
  - [Model.StartDateType](docs/StartDateType.md)
  - [Model.StringChangedProperty](docs/StringChangedProperty.md)
  - [Model.StringModel](docs/StringModel.md)
  - [Model.TaskApprovalStatus](docs/TaskApprovalStatus.md)
  - [Model.TaskComment](docs/TaskComment.md)
  - [Model.TaskDynamicActions](docs/TaskDynamicActions.md)
+ - [Model.TaskHookMessage](docs/TaskHookMessage.md)
  - [Model.TaskList](docs/TaskList.md)
  - [Model.TaskListPageResult](docs/TaskListPageResult.md)
  - [Model.TaskPriority](docs/TaskPriority.md)
@@ -629,6 +643,7 @@ Class | Method | HTTP request | Description
  - [Model.TreeNode](docs/TreeNode.md)
  - [Model.TreeNodeExtension](docs/TreeNodeExtension.md)
  - [Model.TreeNodeType](docs/TreeNodeType.md)
+ - [Model.TriggerType](docs/TriggerType.md)
  - [Model.UnlockSiteRequest](docs/UnlockSiteRequest.md)
  - [Model.UnlockSiteSetting](docs/UnlockSiteSetting.md)
  - [Model.UpdatableApiUser](docs/UpdatableApiUser.md)

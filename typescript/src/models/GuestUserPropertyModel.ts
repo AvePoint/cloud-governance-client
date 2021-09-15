@@ -55,6 +55,12 @@ export interface GuestUserPropertyModel {
      * @type {string}
      * @memberof GuestUserPropertyModel
      */
+    usageLocationDisplayName?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof GuestUserPropertyModel
+     */
     jobTitle?: string | null;
     /**
      * 
@@ -68,6 +74,12 @@ export interface GuestUserPropertyModel {
      * @memberof GuestUserPropertyModel
      */
     manager?: ApiUser | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof GuestUserPropertyModel
+     */
+    companyName?: string | null;
 }
 
 export function GuestUserPropertyModelFromJSON(json: any): GuestUserPropertyModel {
@@ -85,9 +97,11 @@ export function GuestUserPropertyModelFromJSONTyped(json: any, ignoreDiscriminat
         'lastName': !exists(json, 'lastName') ? undefined : json['lastName'],
         'userName': !exists(json, 'userName') ? undefined : json['userName'],
         'usageLocation': !exists(json, 'usageLocation') ? undefined : json['usageLocation'],
+        'usageLocationDisplayName': !exists(json, 'usageLocationDisplayName') ? undefined : json['usageLocationDisplayName'],
         'jobTitle': !exists(json, 'jobTitle') ? undefined : json['jobTitle'],
         'jobDepartment': !exists(json, 'jobDepartment') ? undefined : json['jobDepartment'],
         'manager': !exists(json, 'manager') ? undefined : ApiUserFromJSON(json['manager']),
+        'companyName': !exists(json, 'companyName') ? undefined : json['companyName'],
     };
 }
 
@@ -105,9 +119,11 @@ export function GuestUserPropertyModelToJSON(value?: GuestUserPropertyModel | nu
         'lastName': value.lastName,
         'userName': value.userName,
         'usageLocation': value.usageLocation,
+        'usageLocationDisplayName': value.usageLocationDisplayName,
         'jobTitle': value.jobTitle,
         'jobDepartment': value.jobDepartment,
         'manager': ApiUserToJSON(value.manager),
+        'companyName': value.companyName,
     };
 }
 

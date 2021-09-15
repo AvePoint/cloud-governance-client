@@ -62,13 +62,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="inviteGroups">inviteGroups.</param>
         /// <param name="oneTimeSettings">oneTimeSettings.</param>
+        /// <param name="subRequestInfos">subRequestInfos.</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public CreateGuestUserRequest(GuestUserPropertyModel userProperties = default(GuestUserPropertyModel), string welcomeEmailMessage = default(string), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), List<ApiUser> inviteGroups = default(List<ApiUser>), GuestUserRequestOneTimeRenewalSettingModel oneTimeSettings = default(GuestUserRequestOneTimeRenewalSettingModel), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public CreateGuestUserRequest(GuestUserPropertyModel userProperties = default(GuestUserPropertyModel), string welcomeEmailMessage = default(string), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), List<ApiUser> inviteGroups = default(List<ApiUser>), GuestUserRequestOneTimeRenewalSettingModel oneTimeSettings = default(GuestUserRequestOneTimeRenewalSettingModel), List<CreateGuestUserSubRequest> subRequestInfos = default(List<CreateGuestUserSubRequest>), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.UserProperties = userProperties;
             this.WelcomeEmailMessage = welcomeEmailMessage;
@@ -76,6 +77,7 @@ namespace Cloud.Governance.Client.Model
             this.SecondaryContact = secondaryContact;
             this.InviteGroups = inviteGroups;
             this.OneTimeSettings = oneTimeSettings;
+            this.SubRequestInfos = subRequestInfos;
             this.Id = id;
             this.ServiceId = serviceId;
             this.Summary = summary;
@@ -121,6 +123,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "oneTimeSettings", EmitDefaultValue = true)]
         public GuestUserRequestOneTimeRenewalSettingModel OneTimeSettings { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SubRequestInfos
+        /// </summary>
+        [DataMember(Name = "subRequestInfos", EmitDefaultValue = true)]
+        public List<CreateGuestUserSubRequest> SubRequestInfos { get; set; }
 
         /// <summary>
         /// Id of request.
@@ -354,6 +362,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  SecondaryContact: ").Append(SecondaryContact).Append("\n");
             sb.Append("  InviteGroups: ").Append(InviteGroups).Append("\n");
             sb.Append("  OneTimeSettings: ").Append(OneTimeSettings).Append("\n");
+            sb.Append("  SubRequestInfos: ").Append(SubRequestInfos).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
@@ -437,6 +446,12 @@ namespace Cloud.Governance.Client.Model
                     this.OneTimeSettings == input.OneTimeSettings ||
                     (this.OneTimeSettings != null &&
                     this.OneTimeSettings.Equals(input.OneTimeSettings))
+                ) && 
+                (
+                    this.SubRequestInfos == input.SubRequestInfos ||
+                    this.SubRequestInfos != null &&
+                    input.SubRequestInfos != null &&
+                    this.SubRequestInfos.SequenceEqual(input.SubRequestInfos)
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -554,6 +569,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.InviteGroups.GetHashCode();
                 if (this.OneTimeSettings != null)
                     hashCode = hashCode * 59 + this.OneTimeSettings.GetHashCode();
+                if (this.SubRequestInfos != null)
+                    hashCode = hashCode * 59 + this.SubRequestInfos.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)

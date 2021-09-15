@@ -58,9 +58,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="assignTo">assignTo.</param>
         /// <param name="assignToDisplayName">assignToDisplayName.</param>
         /// <param name="serviceAdmin">serviceAdmin.</param>
+        /// <param name="serviceAdminDisplayName">serviceAdminDisplayName.</param>
         /// <param name="objectUrl">objectUrl.</param>
         /// <param name="createdTime">createdTime.</param>
-        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), int ticketNumber = 0, string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), string serviceAdmin = default(string), string objectUrl = default(string), string createdTime = default(string))
+        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), int ticketNumber = 0, string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), string serviceAdmin = default(string), string serviceAdminDisplayName = default(string), string objectUrl = default(string), string createdTime = default(string))
         {
             this.Id = id;
             this.ServiceId = serviceId;
@@ -79,6 +80,7 @@ namespace Cloud.Governance.Client.Model
             this.AssignTo = assignTo;
             this.AssignToDisplayName = assignToDisplayName;
             this.ServiceAdmin = serviceAdmin;
+            this.ServiceAdminDisplayName = serviceAdminDisplayName;
             this.ObjectUrl = objectUrl;
             this.CreatedTime = createdTime;
         }
@@ -168,6 +170,12 @@ namespace Cloud.Governance.Client.Model
         public string ServiceAdmin { get; set; }
 
         /// <summary>
+        /// Gets or Sets ServiceAdminDisplayName
+        /// </summary>
+        [DataMember(Name = "serviceAdminDisplayName", EmitDefaultValue = true)]
+        public string ServiceAdminDisplayName { get; set; }
+
+        /// <summary>
         /// Gets or Sets ObjectUrl
         /// </summary>
         [DataMember(Name = "objectUrl", EmitDefaultValue = true)]
@@ -204,6 +212,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  AssignTo: ").Append(AssignTo).Append("\n");
             sb.Append("  AssignToDisplayName: ").Append(AssignToDisplayName).Append("\n");
             sb.Append("  ServiceAdmin: ").Append(ServiceAdmin).Append("\n");
+            sb.Append("  ServiceAdminDisplayName: ").Append(ServiceAdminDisplayName).Append("\n");
             sb.Append("  ObjectUrl: ").Append(ObjectUrl).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
             sb.Append("}\n");
@@ -322,6 +331,11 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceAdmin.Equals(input.ServiceAdmin))
                 ) && 
                 (
+                    this.ServiceAdminDisplayName == input.ServiceAdminDisplayName ||
+                    (this.ServiceAdminDisplayName != null &&
+                    this.ServiceAdminDisplayName.Equals(input.ServiceAdminDisplayName))
+                ) && 
+                (
                     this.ObjectUrl == input.ObjectUrl ||
                     (this.ObjectUrl != null &&
                     this.ObjectUrl.Equals(input.ObjectUrl))
@@ -372,6 +386,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.AssignToDisplayName.GetHashCode();
                 if (this.ServiceAdmin != null)
                     hashCode = hashCode * 59 + this.ServiceAdmin.GetHashCode();
+                if (this.ServiceAdminDisplayName != null)
+                    hashCode = hashCode * 59 + this.ServiceAdminDisplayName.GetHashCode();
                 if (this.ObjectUrl != null)
                     hashCode = hashCode * 59 + this.ObjectUrl.GetHashCode();
                 if (this.CreatedTime != null)

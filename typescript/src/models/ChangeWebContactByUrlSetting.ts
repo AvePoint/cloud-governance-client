@@ -45,6 +45,12 @@ export interface ChangeWebContactByUrlSetting {
      */
     webUrl?: string | null;
     /**
+     * Web title
+     * @type {string}
+     * @memberof ChangeWebContactByUrlSetting
+     */
+    webTitle?: string | null;
+    /**
      * 
      * @type {ApiUserChangedProperty}
      * @memberof ChangeWebContactByUrlSetting
@@ -72,6 +78,7 @@ export function ChangeWebContactByUrlSettingFromJSONTyped(json: any, ignoreDiscr
         'siteUrl': !exists(json, 'siteUrl') ? undefined : json['siteUrl'],
         'webId': !exists(json, 'webId') ? undefined : json['webId'],
         'webUrl': !exists(json, 'webUrl') ? undefined : json['webUrl'],
+        'webTitle': !exists(json, 'webTitle') ? undefined : json['webTitle'],
         'primaryContact': !exists(json, 'primaryContact') ? undefined : ApiUserChangedPropertyFromJSON(json['primaryContact']),
         'secondaryContact': !exists(json, 'secondaryContact') ? undefined : ApiUserChangedPropertyFromJSON(json['secondaryContact']),
     };
@@ -90,6 +97,7 @@ export function ChangeWebContactByUrlSettingToJSON(value?: ChangeWebContactByUrl
         'siteUrl': value.siteUrl,
         'webId': value.webId,
         'webUrl': value.webUrl,
+        'webTitle': value.webTitle,
         'primaryContact': ApiUserChangedPropertyToJSON(value.primaryContact),
         'secondaryContact': ApiUserChangedPropertyToJSON(value.secondaryContact),
     };

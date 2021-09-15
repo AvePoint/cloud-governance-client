@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **NewPrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **OriginalAdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **NewAdditionalAdministrators** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**SiteTitle** | **String** | Site Title | [optional] 
 
 ## Examples
 
@@ -27,7 +28,8 @@ $ChangeContactByUrlSetting = New-Cloud.Governance.ClientChangeContactByUrlSettin
  -OriginalPrimaryAdministrator null `
  -NewPrimaryAdministrator null `
  -OriginalAdditionalAdministrators null `
- -NewAdditionalAdministrators null
+ -NewAdditionalAdministrators null `
+ -SiteTitle null
 ```
 
 - Convert the resource to JSON

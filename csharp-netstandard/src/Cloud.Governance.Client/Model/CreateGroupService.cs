@@ -128,6 +128,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableClassification">enableClassification (default to false).</param>
         /// <param name="preventDuplicateName">preventDuplicateName (default to false).</param>
         /// <param name="enableSensitivity">enableSensitivity (default to false).</param>
+        /// <param name="allSensitivities">allSensitivities.</param>
         /// <param name="allowConfigureLeasePeriod">allowConfigureLeasePeriod (default to false).</param>
         /// <param name="showNotebookLink">showNotebookLink (default to false).</param>
         /// <param name="showConversationsLink">showConversationsLink (default to false).</param>
@@ -151,6 +152,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="defaultSecondaryContact">ApiUser model.</param>
         /// <param name="defaultOwners">defaultOwners.</param>
         /// <param name="defaultMembers">defaultMembers.</param>
+        /// <param name="disableAddRemoveDynamicMembershipRules">disableAddRemoveDynamicMembershipRules (default to false).</param>
+        /// <param name="dynamicMembershipRules">dynamicMembershipRules.</param>
         /// <param name="defaultPolicy">defaultPolicy.</param>
         /// <param name="defaultClassification">defaultClassification.</param>
         /// <param name="defaultSensitivity">defaultSensitivity.</param>
@@ -195,7 +198,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = false, bool isPrivate = false, bool enableSubscribe = false, bool enableApplySiteDesign = false, bool enableOutsideSender = false, bool enableHideGroupMembership = false, bool enableClassification = false, bool preventDuplicateName = false, bool enableSensitivity = false, bool allowConfigureLeasePeriod = false, bool showNotebookLink = false, bool showConversationsLink = false, bool showFilesLink = false, bool showTeamSiteLink = false, bool showPlannerLink = false, bool showYammerGroupLink = false, List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = false, bool enableInstallPanel = false, TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = false, AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = false, Guid? peoplePickerFilterProfileId = default(Guid?), CreateGroupRequest requestTemplate = default(CreateGroupRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = false, bool isPrivate = false, bool enableSubscribe = false, bool enableApplySiteDesign = false, bool enableOutsideSender = false, bool enableHideGroupMembership = false, bool enableClassification = false, bool preventDuplicateName = false, bool enableSensitivity = false, List<StringModel> allSensitivities = default(List<StringModel>), bool allowConfigureLeasePeriod = false, bool showNotebookLink = false, bool showConversationsLink = false, bool showFilesLink = false, bool showTeamSiteLink = false, bool showPlannerLink = false, bool showYammerGroupLink = false, List<string> classifications = default(List<string>), List<string> sensitivities = default(List<string>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = false, bool enableInstallPanel = false, TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), bool disableAddRemoveDynamicMembershipRules = false, List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = false, AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = false, Guid? peoplePickerFilterProfileId = default(Guid?), CreateGroupRequest requestTemplate = default(CreateGroupRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.GroupType = groupType;
             this.TenantId = tenantId;
@@ -209,6 +212,7 @@ namespace Cloud.Governance.Client.Model
             this.EnableClassification = enableClassification;
             this.PreventDuplicateName = preventDuplicateName;
             this.EnableSensitivity = enableSensitivity;
+            this.AllSensitivities = allSensitivities;
             this.AllowConfigureLeasePeriod = allowConfigureLeasePeriod;
             this.ShowNotebookLink = showNotebookLink;
             this.ShowConversationsLink = showConversationsLink;
@@ -232,6 +236,8 @@ namespace Cloud.Governance.Client.Model
             this.DefaultSecondaryContact = defaultSecondaryContact;
             this.DefaultOwners = defaultOwners;
             this.DefaultMembers = defaultMembers;
+            this.DisableAddRemoveDynamicMembershipRules = disableAddRemoveDynamicMembershipRules;
+            this.DynamicMembershipRules = dynamicMembershipRules;
             this.DefaultPolicy = defaultPolicy;
             this.DefaultClassification = defaultClassification;
             this.DefaultSensitivity = defaultSensitivity;
@@ -343,6 +349,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "enableSensitivity", EmitDefaultValue = false)]
         public bool EnableSensitivity { get; set; }
+
+        /// <summary>
+        /// Gets or Sets AllSensitivities
+        /// </summary>
+        [DataMember(Name = "allSensitivities", EmitDefaultValue = true)]
+        public List<StringModel> AllSensitivities { get; set; }
 
         /// <summary>
         /// Gets or Sets AllowConfigureLeasePeriod
@@ -477,6 +489,18 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "defaultMembers", EmitDefaultValue = true)]
         public List<ApiUser> DefaultMembers { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisableAddRemoveDynamicMembershipRules
+        /// </summary>
+        [DataMember(Name = "disableAddRemoveDynamicMembershipRules", EmitDefaultValue = false)]
+        public bool DisableAddRemoveDynamicMembershipRules { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DynamicMembershipRules
+        /// </summary>
+        [DataMember(Name = "dynamicMembershipRules", EmitDefaultValue = true)]
+        public List<DynamicGroupRuleInfo> DynamicMembershipRules { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultPolicy
@@ -687,6 +711,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  EnableClassification: ").Append(EnableClassification).Append("\n");
             sb.Append("  PreventDuplicateName: ").Append(PreventDuplicateName).Append("\n");
             sb.Append("  EnableSensitivity: ").Append(EnableSensitivity).Append("\n");
+            sb.Append("  AllSensitivities: ").Append(AllSensitivities).Append("\n");
             sb.Append("  AllowConfigureLeasePeriod: ").Append(AllowConfigureLeasePeriod).Append("\n");
             sb.Append("  ShowNotebookLink: ").Append(ShowNotebookLink).Append("\n");
             sb.Append("  ShowConversationsLink: ").Append(ShowConversationsLink).Append("\n");
@@ -710,6 +735,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  DefaultSecondaryContact: ").Append(DefaultSecondaryContact).Append("\n");
             sb.Append("  DefaultOwners: ").Append(DefaultOwners).Append("\n");
             sb.Append("  DefaultMembers: ").Append(DefaultMembers).Append("\n");
+            sb.Append("  DisableAddRemoveDynamicMembershipRules: ").Append(DisableAddRemoveDynamicMembershipRules).Append("\n");
+            sb.Append("  DynamicMembershipRules: ").Append(DynamicMembershipRules).Append("\n");
             sb.Append("  DefaultPolicy: ").Append(DefaultPolicy).Append("\n");
             sb.Append("  DefaultClassification: ").Append(DefaultClassification).Append("\n");
             sb.Append("  DefaultSensitivity: ").Append(DefaultSensitivity).Append("\n");
@@ -840,6 +867,12 @@ namespace Cloud.Governance.Client.Model
                     this.EnableSensitivity.Equals(input.EnableSensitivity)
                 ) && 
                 (
+                    this.AllSensitivities == input.AllSensitivities ||
+                    this.AllSensitivities != null &&
+                    input.AllSensitivities != null &&
+                    this.AllSensitivities.SequenceEqual(input.AllSensitivities)
+                ) && 
+                (
                     this.AllowConfigureLeasePeriod == input.AllowConfigureLeasePeriod ||
                     this.AllowConfigureLeasePeriod.Equals(input.AllowConfigureLeasePeriod)
                 ) && 
@@ -950,6 +983,16 @@ namespace Cloud.Governance.Client.Model
                     this.DefaultMembers != null &&
                     input.DefaultMembers != null &&
                     this.DefaultMembers.SequenceEqual(input.DefaultMembers)
+                ) && 
+                (
+                    this.DisableAddRemoveDynamicMembershipRules == input.DisableAddRemoveDynamicMembershipRules ||
+                    this.DisableAddRemoveDynamicMembershipRules.Equals(input.DisableAddRemoveDynamicMembershipRules)
+                ) && 
+                (
+                    this.DynamicMembershipRules == input.DynamicMembershipRules ||
+                    this.DynamicMembershipRules != null &&
+                    input.DynamicMembershipRules != null &&
+                    this.DynamicMembershipRules.SequenceEqual(input.DynamicMembershipRules)
                 ) && 
                 (
                     this.DefaultPolicy == input.DefaultPolicy ||
@@ -1181,6 +1224,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.EnableClassification.GetHashCode();
                 hashCode = hashCode * 59 + this.PreventDuplicateName.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableSensitivity.GetHashCode();
+                if (this.AllSensitivities != null)
+                    hashCode = hashCode * 59 + this.AllSensitivities.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowConfigureLeasePeriod.GetHashCode();
                 hashCode = hashCode * 59 + this.ShowNotebookLink.GetHashCode();
                 hashCode = hashCode * 59 + this.ShowConversationsLink.GetHashCode();
@@ -1217,6 +1262,9 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.DefaultOwners.GetHashCode();
                 if (this.DefaultMembers != null)
                     hashCode = hashCode * 59 + this.DefaultMembers.GetHashCode();
+                hashCode = hashCode * 59 + this.DisableAddRemoveDynamicMembershipRules.GetHashCode();
+                if (this.DynamicMembershipRules != null)
+                    hashCode = hashCode * 59 + this.DynamicMembershipRules.GetHashCode();
                 if (this.DefaultPolicy != null)
                     hashCode = hashCode * 59 + this.DefaultPolicy.GetHashCode();
                 if (this.DefaultClassification != null)

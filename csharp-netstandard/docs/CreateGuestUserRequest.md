@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **InviteGroups** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **OneTimeSettings** | [**GuestUserRequestOneTimeRenewalSettingModel**](GuestUserRequestOneTimeRenewalSettingModel.md) |  | [optional] 
+**SubRequestInfos** | [**List&lt;CreateGuestUserSubRequest&gt;**](CreateGuestUserSubRequest.md) |  | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 

@@ -49,6 +49,12 @@ export interface ChangeSiteSettingRequest {
      */
     siteUrl?: string | null;
     /**
+     * Site title
+     * @type {string}
+     * @memberof ChangeSiteSettingRequest
+     */
+    siteTitle?: string | null;
+    /**
      * 
      * @type {StringChangedProperty}
      * @memberof ChangeSiteSettingRequest
@@ -218,6 +224,7 @@ export function ChangeSiteSettingRequestFromJSONTyped(json: any, ignoreDiscrimin
         
         'siteId': !exists(json, 'siteId') ? undefined : json['siteId'],
         'siteUrl': !exists(json, 'siteUrl') ? undefined : json['siteUrl'],
+        'siteTitle': !exists(json, 'siteTitle') ? undefined : json['siteTitle'],
         'siteTitleSetting': !exists(json, 'siteTitleSetting') ? undefined : StringChangedPropertyFromJSON(json['siteTitleSetting']),
         'siteDescriptionSetting': !exists(json, 'siteDescriptionSetting') ? undefined : StringChangedPropertyFromJSON(json['siteDescriptionSetting']),
         'enableChangedMetadata': !exists(json, 'enableChangedMetadata') ? undefined : json['enableChangedMetadata'],
@@ -258,6 +265,7 @@ export function ChangeSiteSettingRequestToJSON(value?: ChangeSiteSettingRequest 
         
         'siteId': value.siteId,
         'siteUrl': value.siteUrl,
+        'siteTitle': value.siteTitle,
         'siteTitleSetting': StringChangedPropertyToJSON(value.siteTitleSetting),
         'siteDescriptionSetting': StringChangedPropertyToJSON(value.siteDescriptionSetting),
         'changedMetadatas': value.changedMetadatas === undefined ? undefined : (value.changedMetadatas === null ? null : (value.changedMetadatas as Array<any>).map(RequestMetadataToJSON)),

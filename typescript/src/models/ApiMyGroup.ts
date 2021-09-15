@@ -169,6 +169,12 @@ export interface ApiMyGroup {
      * @type {string}
      * @memberof ApiMyGroup
      */
+    sensitivity?: string | null;
+    /**
+     * 
+     * @type {string}
+     * @memberof ApiMyGroup
+     */
     id?: string;
     /**
      * 
@@ -288,6 +294,7 @@ export function ApiMyGroupFromJSONTyped(json: any, ignoreDiscriminator: boolean)
         'groupObjectType': !exists(json, 'groupObjectType') ? undefined : GroupObjectTypeFromJSON(json['groupObjectType']),
         'groupObjectId': !exists(json, 'groupObjectId') ? undefined : json['groupObjectId'],
         'networkId': !exists(json, 'networkId') ? undefined : json['networkId'],
+        'sensitivity': !exists(json, 'sensitivity') ? undefined : json['sensitivity'],
         'id': !exists(json, 'id') ? undefined : json['id'],
         'phase': !exists(json, 'phase') ? undefined : AutoImportPhaseFromJSON(json['phase']),
         'phaseStartTime': !exists(json, 'phaseStartTime') ? undefined : (json['phaseStartTime'] === null ? null : new Date(json['phaseStartTime'])),
@@ -337,6 +344,7 @@ export function ApiMyGroupToJSON(value?: ApiMyGroup | null): any {
         'groupObjectType': GroupObjectTypeToJSON(value.groupObjectType),
         'groupObjectId': value.groupObjectId,
         'networkId': value.networkId,
+        'sensitivity': value.sensitivity,
         'id': value.id,
         'phase': AutoImportPhaseToJSON(value.phase),
         'phaseStartTime': value.phaseStartTime === undefined ? undefined : (value.phaseStartTime === null ? null : value.phaseStartTime.toISOString()),

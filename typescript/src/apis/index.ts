@@ -11,6 +11,7 @@ export * from './RequestsAdminApi';
 export * from './ServicesApi';
 export * from './ServicesAdminApi';
 export * from './SettingsApi';
+export * from './SystemSettingsAdminApi';
 export * from './TasksApi';
 export * from './TasksAdminApi';
 export * from './UsersApi';

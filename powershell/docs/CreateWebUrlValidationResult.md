@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ParentWebUrl** | **String** |  | [optional] 
 **ParentSiteUrl** | **String** |  | [optional] 
+**SitePrimaryAdmin** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SitePrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SiteSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 ```powershell
 $CreateWebUrlValidationResult = New-Cloud.Governance.ClientCreateWebUrlValidationResult  -ParentWebUrl null `
  -ParentSiteUrl null `
+ -SitePrimaryAdmin null `
  -SitePrimaryContact null `
  -SiteSecondaryContact null `
  -IsValid null `
