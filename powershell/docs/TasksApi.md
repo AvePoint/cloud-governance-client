@@ -75,7 +75,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam =  = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # approve task
 try {
@@ -3199,7 +3199,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam =  = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # reject task
 try {
@@ -3260,7 +3260,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam =  = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # retry error task
 try {
@@ -3321,7 +3321,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam =  = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # skip error task
 try {
