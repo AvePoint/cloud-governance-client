@@ -36,7 +36,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$UserCustomAction = (Initialize-UserCustomAction -WebFullUrl "WebFullUrl_example" -Title "Title_example" -Sequence 123 -ScriptSrc "ScriptSrc_example" -ScriptBlock "ScriptBlock_example" -Name "Name_example" -Url "Url_example" -Location "Location_example" -Group "Group_example" -ImageUrl "ImageUrl_example" -Description "Description_example") # UserCustomAction | 
+$UserCustomAction = $UserCustomAction = New-UserCustomAction -WebFullUrl "MyWebFullUrl" -Title "MyTitle" -Sequence 0 -ScriptSrc "MyScriptSrc" -ScriptBlock "MyScriptBlock" -Name "MyName" -Url "MyUrl" -Location "MyLocation" -Group "MyGroup" -ImageUrl "MyImageUrl" -Description "MyDescription" # UserCustomAction | 
 
 # add user custom actions, if exists, will update the existing one.
 try {
@@ -95,8 +95,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WebFullUrl = "WebFullUrl_example" # String | 
-$Name = "Name_example" # String | 
+$WebFullUrl = "MyWebFullUrl" # String | 
+$Name = "MyName" # String | 
 
 # delete user custom actions by action name
 try {
@@ -156,8 +156,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$TenantId = "TenantId_example" # String | 
-$IsSearchUserProperty = true # Boolean |  (optional) (default to $false)
+$TenantId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$IsSearchUserProperty = $true # Boolean |  (optional) (default to $false)
 
 # get azure ad custom property names
 try {
@@ -216,7 +216,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Uri = "Uri_example" # String | 
+$Uri = "MyUri" # String | 
 
 # get tenant ids by url
 try {

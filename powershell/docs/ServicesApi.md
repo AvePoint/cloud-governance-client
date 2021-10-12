@@ -75,8 +75,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get change group setting service
 try {
@@ -136,8 +136,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get change list setting service
 try {
@@ -197,8 +197,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get change permission service
 try {
@@ -258,8 +258,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get change site contact service
 try {
@@ -319,8 +319,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get change site setting service
 try {
@@ -380,8 +380,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # validate permissions, scope for change web contact service
 try {
@@ -441,8 +441,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get change web setting service
 try {
@@ -502,8 +502,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get clone permission service
 try {
@@ -616,8 +616,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get content move service
 try {
@@ -677,8 +677,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get create group service
 try {
@@ -738,8 +738,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get create group service
 try {
@@ -799,8 +799,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get create list service
 try {
@@ -860,8 +860,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get create site service
 try {
@@ -921,8 +921,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get create web service
 try {
@@ -982,8 +982,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get custom service
 try {
@@ -1043,8 +1043,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get grant permission service
 try {
@@ -1104,8 +1104,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get group lifecycle service
 try {
@@ -1165,8 +1165,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get manage permission service
 try {
@@ -1225,7 +1225,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Search = "Search_example" # String |  (optional)
+$Search = "MySearch" # String |  (optional)
 
 # get services that can be used to start a request
 try {
@@ -1283,7 +1283,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Name = "Name_example" # String | service name, case insensitive
+$Name = "MyName" # String | service name, case insensitive
 
 # get service id by service name
 try {
@@ -1342,8 +1342,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get site lifecycle service
 try {
@@ -1403,8 +1403,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get web lifecycle service
 try {
@@ -1464,8 +1464,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$Email = "Email_example" # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Email = "MyEmail" # String | 
 
 # validate guest user email
 try {
@@ -1525,8 +1525,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$RequestBody = @("Property_example") # String[] |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$RequestBody = "MyRequestBody" # String[] |  (optional)
 
 # validate guest user emails
 try {
@@ -1586,8 +1586,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$ChangeGroupSettingValidationParameter = (Initialize-ChangeGroupSettingValidationParameter -GroupEmail "GroupEmail_example" -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$ChangeGroupSettingValidationParameter = $ChangeGroupSettingValidationParameter = New-ChangeGroupSettingValidationParameter -GroupEmail "MyGroupEmail" -GroupId "MyGroupId" -IsEditTask $false -IsFromQuestionnaire $false # ChangeGroupSettingValidationParameter |  (optional)
 
 # validate permissions, scope for change group setting service
 try {
@@ -1647,8 +1647,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter = (Initialize-SiteValidationParameter -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change list setting service
 try {
@@ -1708,8 +1708,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter = (Initialize-SiteValidationParameter -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change permission service
 try {
@@ -1769,8 +1769,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site contact service
 try {
@@ -1830,8 +1830,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site setting service
 try {
@@ -1891,8 +1891,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web contact service
 try {
@@ -1952,8 +1952,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web setting service
 try {
@@ -2013,8 +2013,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for clone permission service
 try {
@@ -2074,8 +2074,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for content move service
 try {
@@ -2136,9 +2136,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$RequestId = "RequestId_example" # String |  (optional)
-$ApiUser = @((Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType ))) # ApiUser[] |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$RequestId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$ApiUser = $ExternalUserType = New-ExternalUserType 
+$ApiUserType = New-ApiUserType 
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType # ApiUser[] |  (optional)
 
 # validate groups can invite
 try {
@@ -2199,8 +2201,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$ListValidationParameter = (Initialize-ListValidationParameter -ListUrl "ListUrl_example" -ParentUrl "ParentUrl_example" -ListTitle "ListTitle_example" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$ListValidationParameter = $ListValidationParameter = New-ListValidationParameter -ListUrl "MyListUrl" -ParentUrl "MyParentUrl" -ListTitle "MyListTitle" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false # ListValidationParameter |  (optional)
 
 # validate permissions, scope for create list service
 try {
@@ -2260,8 +2262,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$CreateWebValidationParameter = (Initialize-CreateWebValidationParameter -ParentUrl "ParentUrl_example" -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$CreateWebValidationParameter = $CreateWebValidationParameter = New-CreateWebValidationParameter -ParentUrl "MyParentUrl" -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # CreateWebValidationParameter |  (optional)
 
 # validate permissions, scope for create web service
 try {
@@ -2321,8 +2323,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for grant permission service
 try {
@@ -2382,8 +2384,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$GroupValidationParameter = (Initialize-GroupValidationParameter -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$GroupValidationParameter = $GroupValidationParameter = New-GroupValidationParameter -GroupId "MyGroupId" -IsEditTask $false -IsFromQuestionnaire $false # GroupValidationParameter |  (optional)
 
 # validate permissions, scope for group lifecycle service
 try {
@@ -2443,8 +2445,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for manage permission service
 try {
@@ -2504,8 +2506,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for site lifecycle service
 try {
@@ -2565,8 +2567,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
-$SiteValidationParameter =  # SiteValidationParameter |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for web lifecycle service
 try {

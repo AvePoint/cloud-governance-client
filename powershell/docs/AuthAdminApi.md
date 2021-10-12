@@ -33,7 +33,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApiCredential = (Initialize-ApiCredential -ClientSecret "ClientSecret_example" -UserPrincipalName "UserPrincipalName_example") # ApiCredential | 
+$ApiCredential = $ApiCredential = New-ApiCredential -ClientSecret "MyClientSecret" -UserPrincipalName "MyUserPrincipalName" # ApiCredential | 
 
 # delete token cache
 try {

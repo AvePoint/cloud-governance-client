@@ -47,7 +47,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$GroupSettingModel = (Initialize-GroupSettingModel -GroupName "GroupName_example" -GroupDescription "GroupDescription_example" -GroupEmailAddress "GroupEmailAddress_example" -Owners "Owners_example" -Members "Members_example" -GroupDuration 123 -EmailSubject "EmailSubject_example" -EmailBody "EmailBody_example") # GroupSettingModel | GroupName,GroupEmailAddress,Owners,Members (optional)
+$GroupSettingModel = $GroupSettingModel = New-GroupSettingModel -GroupName "MyGroupName" -GroupDescription "MyGroupDescription" -GroupEmailAddress "MyGroupEmailAddress" -Owners "MyOwners" -Members "MyMembers" -GroupDuration 0 -EmailSubject "MyEmailSubject" -EmailBody "MyEmailBody" # GroupSettingModel | GroupName,GroupEmailAddress,Owners,Members (optional)
 
 # Create mail-enabled security group
 try {
@@ -109,11 +109,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ObjectIdOrNameOrEmail = "ObjectIdOrNameOrEmail_example" # String | 
-$TenantId = "TenantId_example" # String | 
-$Top = 987 # Int32 |  (optional) (default to 0)
-$Skip = 987 # Int32 |  (optional) (default to 0)
-$Search = "Search_example" # String |  (optional)
+$ObjectIdOrNameOrEmail = "MyObjectIdOrNameOrEmail" # String | 
+$TenantId = "MyTenantId" # String | 
+$Top = 56 # Int32 |  (optional) (default to 0)
+$Skip = 56 # Int32 |  (optional) (default to 0)
+$Search = "MySearch" # String |  (optional)
 
 # get group members by group email
 try {
@@ -178,10 +178,10 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Email = "Email_example" # String | 
-$Top = 987 # Int32 |  (optional) (default to 0)
-$Skip = 987 # Int32 |  (optional) (default to 0)
-$Search = "Search_example" # String |  (optional)
+$Email = "MyEmail" # String | 
+$Top = 56 # Int32 |  (optional) (default to 0)
+$Skip = 56 # Int32 |  (optional) (default to 0)
+$Search = "MySearch" # String |  (optional)
 
 # get group members without owners by group email
 try {
@@ -245,10 +245,10 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Email = "Email_example" # String | 
-$Top = 987 # Int32 |  (optional) (default to 0)
-$Skip = 987 # Int32 |  (optional) (default to 0)
-$Search = "Search_example" # String |  (optional)
+$Email = "MyEmail" # String | 
+$Top = 56 # Int32 |  (optional) (default to 0)
+$Skip = 56 # Int32 |  (optional) (default to 0)
+$Search = "MySearch" # String |  (optional)
 
 # get group owners by group email
 try {
@@ -309,7 +309,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$SiteUrl = "SiteUrl_example" # String | any site url in your tenant
+$SiteUrl = "MySiteUrl" # String | any site url in your tenant
 
 # get all hubsites from site's tenant
 try {
@@ -420,7 +420,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WebUrl = "WebUrl_example" # String | 
+$WebUrl = "MyWebUrl" # String | 
 
 # get web permissions for creating list request by web url
 try {
@@ -479,8 +479,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Url = "Url_example" # String | 
-$Type = (Initialize-NodeType ) # NodeType | 
+$Url = "MyUrl" # String | 
+$Type = "2" # NodeType | 
 
 # get site permimssion role assignment
 try {
@@ -539,7 +539,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$SiteUrl = "SiteUrl_example" # String | 
+$SiteUrl = "MySiteUrl" # String | 
 
 # get site designs by site url
 try {
@@ -597,7 +597,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Uri = "Uri_example" # String | 
+$Uri = "MyUri" # String | 
 
 # get site permission levels
 try {
@@ -655,7 +655,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Uri = "Uri_example" # String | 
+$Uri = "MyUri" # String | 
 
 # get site sharePoint groups
 try {
@@ -713,7 +713,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$FullUrl = "FullUrl_example" # String | 
+$FullUrl = "MyFullUrl" # String | 
 
 # check site collection status by full url
 try {
@@ -772,8 +772,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Url = "Url_example" # String | 
-$Languageid = 987 # Int32 |  (default to 0)
+$Url = "MyUrl" # String | 
+$Languageid = 56 # Int32 |  (default to 0)
 
 # get site templates with language code identifier
 try {
@@ -833,8 +833,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Siteurl = "Siteurl_example" # String | 
-$Currentuser = "Currentuser_example" # String | 
+$Siteurl = "MySiteurl" # String | 
+$Currentuser = "MyCurrentuser" # String | 
 
 # whether user has permission on the site
 try {
@@ -893,7 +893,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Name = "Name_example" # String | group email address
+$Name = "MyName" # String | group email address
 
 # Remove mail-enabled security group by group name
 try {

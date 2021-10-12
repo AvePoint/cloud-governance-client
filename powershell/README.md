@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 4.9.3
+- SDK version: 4.9.4
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported

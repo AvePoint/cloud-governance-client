@@ -38,12 +38,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "Filter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName (optional)
-$Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName (optional)
-$Search = "Search_example" # String | Search for title (optional)
-$Top = 987 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
-$Skip = "Skip_example" # String |  Define the number of records you want to skip, default value is 0 (optional)
-$Nexttoken = "Nexttoken_example" # String |  Use the next token to get the next paging result (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, title, requester, requesterLoginName, requesterDisplayName, requestTicketNumber, dueDate, serviceType, createdTime, taskType, status, isApproveTask, assignee, assigneeLoginName, assigneeDisplayName (optional)
+$Search = "MySearch" # String | Search for title (optional)
+$Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
+$Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
+$Nexttoken = "MyNexttoken" # String |  Use the next token to get the next paging result (optional)
 
 # get all tasks
 try {
