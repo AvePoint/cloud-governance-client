@@ -163,6 +163,7 @@
     <Compile Include="Requests\SiteLifecycle\ExtendSiteCollection.cs" />
     <Compile Include="Requests\SiteLifecycle\LockSiteCollection.cs" />
     <Compile Include="Requests\SiteLifecycle\UnlockSiteCollection.cs" />
+    <Compile Include="Tasks\GetPendingInactivityTasks.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="TestData\Model\Admin\WorkspaceActionTestData.cs" />
     <Compile Include="TestData\Model\ApiConfig.cs" />
