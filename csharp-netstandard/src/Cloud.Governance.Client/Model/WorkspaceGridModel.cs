@@ -59,6 +59,11 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "applyPolicyStatus", EmitDefaultValue = false)]
         public ApplyPolicyStatus? ApplyPolicyStatus { get; set; }
         /// <summary>
+        /// Gets or Sets InsightsStatus
+        /// </summary>
+        [DataMember(Name = "insightsStatus", EmitDefaultValue = false)]
+        public InsightsStatus? InsightsStatus { get; set; }
+        /// <summary>
         /// Gets or Sets Phase
         /// </summary>
         [DataMember(Name = "phase", EmitDefaultValue = false)]
@@ -114,6 +119,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="lastRenewalByEmail">lastRenewalByEmail.</param>
         /// <param name="lastRenewalByDisplayName">lastRenewalByDisplayName.</param>
         /// <param name="sensitivity">sensitivity.</param>
+        /// <param name="insightsStatus">insightsStatus.</param>
         /// <param name="phaseAssigneeDisplayNames">phaseAssigneeDisplayNames.</param>
         /// <param name="phaseAssignees">phaseAssignees.</param>
         /// <param name="phaseProfileName">phaseProfileName.</param>
@@ -124,7 +130,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="phase">phase.</param>
         /// <param name="phaseDescription">phaseDescription.</param>
         /// <param name="metadata">metadata.</param>
-        public WorkspaceGridModel(Guid id = default(Guid), string name = default(string), string description = default(string), WorkspaceStatus? status = default(WorkspaceStatus?), string statusDescription = default(string), WorkspaceType? type = default(WorkspaceType?), string typeDescription = default(string), string url = default(string), string email = default(string), bool? privacy = false, string privacyDescription = default(string), string policyName = default(string), string policyDisplay = default(string), Guid? policyId = default(Guid?), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), HubSiteType? hubType = default(HubSiteType?), string associateHubTitle = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), long? storageLimit = 0, double? storageUsed = default(double?), SiteSharingStatus? siteSharing = default(SiteSharingStatus?), string siteSharingDescription = default(string), GroupEnableSharingStatus? groupSharing = default(GroupEnableSharingStatus?), string groupSharingDescription = default(string), string classification = default(string), ClaimStatus? claimStatus = default(ClaimStatus?), string claimStatusDescription = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), ApplyPolicyStatus? applyPolicyStatus = default(ApplyPolicyStatus?), bool hasOngoingTasks = false, string hasOngoingTasksDescription = default(string), string lastRenewalBy = default(string), string lastRenewalByEmail = default(string), string lastRenewalByDisplayName = default(string), string sensitivity = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), Guid? phaseProfileId = default(Guid?), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
+        public WorkspaceGridModel(Guid id = default(Guid), string name = default(string), string description = default(string), WorkspaceStatus? status = default(WorkspaceStatus?), string statusDescription = default(string), WorkspaceType? type = default(WorkspaceType?), string typeDescription = default(string), string url = default(string), string email = default(string), bool? privacy = false, string privacyDescription = default(string), string policyName = default(string), string policyDisplay = default(string), Guid? policyId = default(Guid?), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), HubSiteType? hubType = default(HubSiteType?), string associateHubTitle = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), long? storageLimit = 0, double? storageUsed = default(double?), SiteSharingStatus? siteSharing = default(SiteSharingStatus?), string siteSharingDescription = default(string), GroupEnableSharingStatus? groupSharing = default(GroupEnableSharingStatus?), string groupSharingDescription = default(string), string classification = default(string), ClaimStatus? claimStatus = default(ClaimStatus?), string claimStatusDescription = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), ApplyPolicyStatus? applyPolicyStatus = default(ApplyPolicyStatus?), bool hasOngoingTasks = false, string hasOngoingTasksDescription = default(string), string lastRenewalBy = default(string), string lastRenewalByEmail = default(string), string lastRenewalByDisplayName = default(string), string sensitivity = default(string), InsightsStatus? insightsStatus = default(InsightsStatus?), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), Guid? phaseProfileId = default(Guid?), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
         {
             this.Id = id;
             this.Name = name;
@@ -176,6 +182,7 @@ namespace Cloud.Governance.Client.Model
             this.LastRenewalByEmail = lastRenewalByEmail;
             this.LastRenewalByDisplayName = lastRenewalByDisplayName;
             this.Sensitivity = sensitivity;
+            this.InsightsStatus = insightsStatus;
             this.PhaseAssigneeDisplayNames = phaseAssigneeDisplayNames;
             this.PhaseAssignees = phaseAssignees;
             this.PhaseProfileName = phaseProfileName;
@@ -544,6 +551,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LastRenewalByEmail: ").Append(LastRenewalByEmail).Append("\n");
             sb.Append("  LastRenewalByDisplayName: ").Append(LastRenewalByDisplayName).Append("\n");
             sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
+            sb.Append("  InsightsStatus: ").Append(InsightsStatus).Append("\n");
             sb.Append("  PhaseAssigneeDisplayNames: ").Append(PhaseAssigneeDisplayNames).Append("\n");
             sb.Append("  PhaseAssignees: ").Append(PhaseAssignees).Append("\n");
             sb.Append("  PhaseProfileName: ").Append(PhaseProfileName).Append("\n");
@@ -821,6 +829,10 @@ namespace Cloud.Governance.Client.Model
                     this.Sensitivity.Equals(input.Sensitivity))
                 ) && 
                 (
+                    this.InsightsStatus == input.InsightsStatus ||
+                    this.InsightsStatus.Equals(input.InsightsStatus)
+                ) && 
+                (
                     this.PhaseAssigneeDisplayNames == input.PhaseAssigneeDisplayNames ||
                     (this.PhaseAssigneeDisplayNames != null &&
                     this.PhaseAssigneeDisplayNames.Equals(input.PhaseAssigneeDisplayNames))
@@ -969,6 +981,7 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.LastRenewalByDisplayName.GetHashCode();
                 if (this.Sensitivity != null)
                     hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
+                hashCode = hashCode * 59 + this.InsightsStatus.GetHashCode();
                 if (this.PhaseAssigneeDisplayNames != null)
                     hashCode = hashCode * 59 + this.PhaseAssigneeDisplayNames.GetHashCode();
                 if (this.PhaseAssignees != null)

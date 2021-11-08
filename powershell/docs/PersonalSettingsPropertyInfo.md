@@ -3,17 +3,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Theme** | [**ThemeType**](ThemeType.md) |  | [optional] 
 **SelectedLanguages** | **Int32[]** |  | [optional] 
 **IsUsingBrowserLanguage** | **Boolean** |  | [optional] [default to $false]
+**ThemeCode** | **String** |  | [optional] 
+**ThemeType** | [**ThemeSettingType**](ThemeSettingType.md) |  | [optional] [readonly] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-$PersonalSettingsPropertyInfo = New-Cloud.Governance.ClientPersonalSettingsPropertyInfo  -Theme null `
- -SelectedLanguages null `
- -IsUsingBrowserLanguage null
+$PersonalSettingsPropertyInfo = New-Cloud.Governance.ClientPersonalSettingsPropertyInfo  -SelectedLanguages null `
+ -IsUsingBrowserLanguage null `
+ -ThemeCode null `
+ -ThemeType null
 ```
 
 - Convert the resource to JSON

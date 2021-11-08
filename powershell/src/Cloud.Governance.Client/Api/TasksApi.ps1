@@ -3213,10 +3213,10 @@ No description available.
 No description available.
 
 .PARAMETER Filter
-Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus
+Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId
 
 .PARAMETER Orderby
-Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus
+Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId
 
 .PARAMETER Search
 Search for title

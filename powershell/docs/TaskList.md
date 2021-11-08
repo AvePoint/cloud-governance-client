@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **ProfileId** | **String** |  | [optional] 
 **AllowEdit** | **Boolean** |  | [optional] [default to $false]
 **ProgressStatus** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] 
+**BatchId** | **String** |  | [optional] 
 
 ## Examples
 
@@ -55,7 +56,8 @@ $TaskList = New-Cloud.Governance.ClientTaskList  -Id null `
  -ObjectId null `
  -ProfileId null `
  -AllowEdit null `
- -ProgressStatus null
+ -ProgressStatus null `
+ -BatchId null
 ```
 
 - Convert the resource to JSON

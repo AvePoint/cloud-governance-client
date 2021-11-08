@@ -2938,8 +2938,8 @@ namespace Example
             var apiInstance = new TasksApi(config);
 
             var taskApprovalStatus = ;  // TaskApprovalStatus | 
-            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional) 
-            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional) 
+            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId (optional) 
+            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId (optional) 
             var search = search_example;  // string | Search for title (optional) 
             var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
             var skip = skip_example;  // string |  Define the number of records you want to skip, default value is 0 (optional) 
@@ -2967,8 +2967,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskApprovalStatus** | **TaskApprovalStatus**|  | 
- **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus | [optional] 
- **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus | [optional] 
+ **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId | [optional] 
+ **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId | [optional] 
  **search** | **string**| Search for title | [optional] 
  **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **skip** | **string**|  Define the number of records you want to skip, default value is 0 | [optional] 

@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 **LastRenewalByEmail** | **string** |  | [optional] 
 **LastRenewalByDisplayName** | **string** |  | [optional] 
 **Sensitivity** | **string** |  | [optional] 
+**InsightsStatus** | **InsightsStatus** |  | [optional] 
 **PhaseAssigneeDisplayNames** | **string** |  | [optional] 
 **PhaseAssignees** | **string** |  | [optional] 
 **PhaseProfileName** | **string** |  | [optional] 

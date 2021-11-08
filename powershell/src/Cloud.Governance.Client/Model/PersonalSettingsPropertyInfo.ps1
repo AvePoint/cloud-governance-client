@@ -11,14 +11,14 @@ function New-PersonalSettingsPropertyInfo {
     [CmdletBinding()]
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [PSCustomObject]
-        ${Theme} = "None",
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [Int32[]]
         ${SelectedLanguages},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${IsUsingBrowserLanguage} = $false
+        ${IsUsingBrowserLanguage} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${ThemeCode}
     )
 
     Process {
@@ -27,9 +27,9 @@ function New-PersonalSettingsPropertyInfo {
 
         
         $PSO = [PSCustomObject]@{
-            "Theme" = ${Theme}
             "SelectedLanguages" = ${SelectedLanguages}
             "IsUsingBrowserLanguage" = ${IsUsingBrowserLanguage}
+            "ThemeCode" = ${ThemeCode}
         }
 
         return $PSO
@@ -52,17 +52,11 @@ function ConvertFrom-JsonToPersonalSettingsPropertyInfo {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in PersonalSettingsPropertyInfo
-        $AllProperties = $("Theme", "SelectedLanguages", "IsUsingBrowserLanguage")
+        $AllProperties = $("SelectedLanguages", "IsUsingBrowserLanguage", "ThemeCode", "ThemeType")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
             }
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Theme"))) { #optional property not found
-            $Theme = $null
-        } else {
-            $Theme = $JsonParameters.PSobject.Properties["Theme"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "SelectedLanguages"))) { #optional property not found
@@ -77,10 +71,23 @@ function ConvertFrom-JsonToPersonalSettingsPropertyInfo {
             $IsUsingBrowserLanguage = $JsonParameters.PSobject.Properties["IsUsingBrowserLanguage"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ThemeCode"))) { #optional property not found
+            $ThemeCode = $null
+        } else {
+            $ThemeCode = $JsonParameters.PSobject.Properties["ThemeCode"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ThemeType"))) { #optional property not found
+            $ThemeType = $null
+        } else {
+            $ThemeType = $JsonParameters.PSobject.Properties["ThemeType"].value
+        }
+
         $PSO = [PSCustomObject]@{
-            "Theme" = ${Theme}
             "SelectedLanguages" = ${SelectedLanguages}
             "IsUsingBrowserLanguage" = ${IsUsingBrowserLanguage}
+            "ThemeCode" = ${ThemeCode}
+            "ThemeType" = ${ThemeType}
         }
 
         return $PSO

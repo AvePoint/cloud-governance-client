@@ -275,6 +275,24 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of CreateListService</returns>
         ApiResponse<CreateListService> GetCreateListServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
         /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>CreatePrivateChannelService</returns>
+        CreatePrivateChannelService GetCreatePrivateChannelService(Guid id);
+
+        /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of CreatePrivateChannelService</returns>
+        ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id);
+        /// <summary>
         /// get create site service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -476,8 +494,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <returns>ObjectValidateResult</returns>
-        ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email);
+        ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email, Guid? requestId = default(Guid?));
 
         /// <summary>
         /// validate guest user email
@@ -488,8 +507,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <returns>ApiResponse of ObjectValidateResult</returns>
-        ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email);
+        ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email, Guid? requestId = default(Guid?));
         /// <summary>
         /// validate guest user emails
         /// </summary>
@@ -675,9 +695,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <returns>ContentMoveUrlValidationResult</returns>
-        ContentMoveUrlValidationResult ValidateForContentMoveService(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter));
+        ContentMoveUrlValidationResult ValidateForContentMoveService(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter));
 
         /// <summary>
         /// validate permissions, scope for content move service
@@ -687,9 +707,9 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <returns>ApiResponse of ContentMoveUrlValidationResult</returns>
-        ApiResponse<ContentMoveUrlValidationResult> ValidateForContentMoveServiceWithHttpInfo(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter));
+        ApiResponse<ContentMoveUrlValidationResult> ValidateForContentMoveServiceWithHttpInfo(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter));
         /// <summary>
         /// validate groups can invite
         /// </summary>
@@ -852,6 +872,26 @@ namespace Cloud.Governance.Client.Api
         /// <param name="siteValidationParameter"> (optional)</param>
         /// <returns>ApiResponse of WebLifecycleValidateResult</returns>
         ApiResponse<WebLifecycleValidateResult> ValidateForWebLifecycleServiceWithHttpInfo(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter));
+        /// <summary>
+        /// validate teams for create private channel service
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>CreatePrivateChannelCheckResult</returns>
+        CreatePrivateChannelCheckResult ValidateTeamForCreatePrivateChannelService(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter));
+
+        /// <summary>
+        /// validate teams for create private channel service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>ApiResponse of CreatePrivateChannelCheckResult</returns>
+        ApiResponse<CreatePrivateChannelCheckResult> ValidateTeamForCreatePrivateChannelServiceWithHttpInfo(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter));
         #endregion Synchronous Operations
     }
 
@@ -1183,6 +1223,29 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (CreateListService)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateListService>> GetCreateListServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreatePrivateChannelService</returns>
+        System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreatePrivateChannelService)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// get create site service
         /// </summary>
         /// <remarks>
@@ -1437,9 +1500,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectValidateResult</returns>
-        System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email, Guid? requestId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// validate guest user email
@@ -1450,9 +1514,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectValidateResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email, Guid? requestId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// validate guest user emails
         /// </summary>
@@ -1686,10 +1751,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContentMoveUrlValidationResult</returns>
-        System.Threading.Tasks.Task<ContentMoveUrlValidationResult> ValidateForContentMoveServiceAsync(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ContentMoveUrlValidationResult> ValidateForContentMoveServiceAsync(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// validate permissions, scope for content move service
@@ -1699,10 +1764,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContentMoveUrlValidationResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContentMoveUrlValidationResult>> ValidateForContentMoveServiceWithHttpInfoAsync(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ContentMoveUrlValidationResult>> ValidateForContentMoveServiceWithHttpInfoAsync(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// validate groups can invite
         /// </summary>
@@ -1905,6 +1970,31 @@ namespace Cloud.Governance.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebLifecycleValidateResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<WebLifecycleValidateResult>> ValidateForWebLifecycleServiceWithHttpInfoAsync(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// validate teams for create private channel service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreatePrivateChannelCheckResult</returns>
+        System.Threading.Tasks.Task<CreatePrivateChannelCheckResult> ValidateTeamForCreatePrivateChannelServiceAsync(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// validate teams for create private channel service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreatePrivateChannelCheckResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreatePrivateChannelCheckResult>> ValidateTeamForCreatePrivateChannelServiceWithHttpInfoAsync(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -3841,6 +3931,135 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>CreatePrivateChannelService</returns>
+        public CreatePrivateChannelService GetCreatePrivateChannelService(Guid id)
+        {
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = GetCreatePrivateChannelServiceWithHttpInfo(id);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of CreatePrivateChannelService</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id)
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CreatePrivateChannelService>("/services/createprivatechannel/{id}", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetCreatePrivateChannelService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreatePrivateChannelService</returns>
+        public async System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = await GetCreatePrivateChannelServiceWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreatePrivateChannelService)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CreatePrivateChannelService>("/services/createprivatechannel/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetCreatePrivateChannelService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// get create site service 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5246,10 +5465,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <returns>ObjectValidateResult</returns>
-        public ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email)
+        public ObjectValidateResult ValidateEmailForCreateGuestUserService(Guid id, string email, Guid? requestId = default(Guid?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = ValidateEmailForCreateGuestUserServiceWithHttpInfo(id, email);
+            Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = ValidateEmailForCreateGuestUserServiceWithHttpInfo(id, email, requestId);
             return localVarResponse.Data;
         }
 
@@ -5259,8 +5479,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <returns>ApiResponse of ObjectValidateResult</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email)
+        public Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceWithHttpInfo(Guid id, string email, Guid? requestId = default(Guid?))
         {
             // verify the required parameter 'email' is set
             if (email == null)
@@ -5285,6 +5506,10 @@ namespace Cloud.Governance.Client.Api
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
+            if (requestId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "requestId", requestId));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -5315,11 +5540,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ObjectValidateResult</returns>
-        public async System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ObjectValidateResult> ValidateEmailForCreateGuestUserServiceAsync(Guid id, string email, Guid? requestId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = await ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(id, email, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult> localVarResponse = await ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(id, email, requestId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5329,9 +5555,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="email"></param>
+        /// <param name="requestId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ObjectValidateResult)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ObjectValidateResult>> ValidateEmailForCreateGuestUserServiceWithHttpInfoAsync(Guid id, string email, Guid? requestId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'email' is set
             if (email == null)
@@ -5358,6 +5585,10 @@ namespace Cloud.Governance.Client.Api
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
             localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "email", email));
+            if (requestId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "requestId", requestId));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -6621,11 +6852,11 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <returns>ContentMoveUrlValidationResult</returns>
-        public ContentMoveUrlValidationResult ValidateForContentMoveService(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter))
+        public ContentMoveUrlValidationResult ValidateForContentMoveService(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult> localVarResponse = ValidateForContentMoveServiceWithHttpInfo(id, siteValidationParameter);
+            Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult> localVarResponse = ValidateForContentMoveServiceWithHttpInfo(id, contentMoveUrlValidationParameter);
             return localVarResponse.Data;
         }
 
@@ -6634,9 +6865,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <returns>ApiResponse of ContentMoveUrlValidationResult</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult> ValidateForContentMoveServiceWithHttpInfo(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter))
+        public Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult> ValidateForContentMoveServiceWithHttpInfo(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -6657,7 +6888,7 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = siteValidationParameter;
+            localVarRequestOptions.Data = contentMoveUrlValidationParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -6687,12 +6918,12 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContentMoveUrlValidationResult</returns>
-        public async System.Threading.Tasks.Task<ContentMoveUrlValidationResult> ValidateForContentMoveServiceAsync(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ContentMoveUrlValidationResult> ValidateForContentMoveServiceAsync(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult> localVarResponse = await ValidateForContentMoveServiceWithHttpInfoAsync(id, siteValidationParameter, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult> localVarResponse = await ValidateForContentMoveServiceWithHttpInfoAsync(id, contentMoveUrlValidationParameter, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -6701,10 +6932,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
-        /// <param name="siteValidationParameter"> (optional)</param>
+        /// <param name="contentMoveUrlValidationParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContentMoveUrlValidationResult)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult>> ValidateForContentMoveServiceWithHttpInfoAsync(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ContentMoveUrlValidationResult>> ValidateForContentMoveServiceWithHttpInfoAsync(Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = default(ContentMoveUrlValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -6727,7 +6958,7 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
-            localVarRequestOptions.Data = siteValidationParameter;
+            localVarRequestOptions.Data = contentMoveUrlValidationParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -7855,6 +8086,143 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ValidateForWebLifecycleService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// validate teams for create private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>CreatePrivateChannelCheckResult</returns>
+        public CreatePrivateChannelCheckResult ValidateTeamForCreatePrivateChannelService(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelCheckResult> localVarResponse = ValidateTeamForCreatePrivateChannelServiceWithHttpInfo(serviceId, createPrivateChannelValidationParameter);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// validate teams for create private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>ApiResponse of CreatePrivateChannelCheckResult</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelCheckResult> ValidateTeamForCreatePrivateChannelServiceWithHttpInfo(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("serviceId", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceId)); // path parameter
+            localVarRequestOptions.Data = createPrivateChannelValidationParameter;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<CreatePrivateChannelCheckResult>("/services/createprivatechannel/{serviceId}/team/validation", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateTeamForCreatePrivateChannelService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// validate teams for create private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreatePrivateChannelCheckResult</returns>
+        public async System.Threading.Tasks.Task<CreatePrivateChannelCheckResult> ValidateTeamForCreatePrivateChannelServiceAsync(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelCheckResult> localVarResponse = await ValidateTeamForCreatePrivateChannelServiceWithHttpInfoAsync(serviceId, createPrivateChannelValidationParameter, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// validate teams for create private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="createPrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreatePrivateChannelCheckResult)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelCheckResult>> ValidateTeamForCreatePrivateChannelServiceWithHttpInfoAsync(Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = default(CreatePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("serviceId", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceId)); // path parameter
+            localVarRequestOptions.Data = createPrivateChannelValidationParameter;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<CreatePrivateChannelCheckResult>("/services/createprivatechannel/{serviceId}/team/validation", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateTeamForCreatePrivateChannelService", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

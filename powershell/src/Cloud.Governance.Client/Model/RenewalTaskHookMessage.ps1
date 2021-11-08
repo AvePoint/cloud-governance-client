@@ -38,8 +38,8 @@ function New-RenewalTaskHookMessage {
         [String]
         ${ObjectType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${ObjectTypeEnum},
+        [PSCustomObject]
+        ${ObjectTypeEnum} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupEmail},

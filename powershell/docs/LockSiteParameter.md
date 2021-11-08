@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LockType** | [**LockSiteCollectionType**](LockSiteCollectionType.md) |  | [optional] 
+**IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
+**CancelEmailTemplateId** | **String** |  | [optional] 
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
 
 ## Examples
@@ -11,6 +13,8 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $LockSiteParameter = New-Cloud.Governance.ClientLockSiteParameter  -LockType null `
+ -IsSendCancelEmail null `
+ -CancelEmailTemplateId null `
  -Workspace null
 ```
 

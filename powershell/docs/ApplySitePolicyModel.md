@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **VarFilter** | **String** |  | [optional] 
 **SelectedObjects** | **String[]** |  | [optional] 
 **HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
+**IsApplyUniqueAccess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -37,7 +38,8 @@ $ApplySitePolicyModel = New-Cloud.Governance.ClientApplySitePolicyModel  -IsAppl
  -LifecycleRenewalSetting null `
  -VarFilter null `
  -SelectedObjects null `
- -HasOngoingTasks null
+ -HasOngoingTasks null `
+ -IsApplyUniqueAccess null
 ```
 
 - Convert the resource to JSON

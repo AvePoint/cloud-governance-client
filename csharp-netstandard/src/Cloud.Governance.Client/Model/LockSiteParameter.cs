@@ -32,12 +32,28 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="LockSiteParameter" /> class.
         /// </summary>
         /// <param name="lockType">lockType.</param>
+        /// <param name="isSendCancelEmail">isSendCancelEmail (default to false).</param>
+        /// <param name="cancelEmailTemplateId">cancelEmailTemplateId.</param>
         /// <param name="workspace">workspace.</param>
-        public LockSiteParameter(LockSiteCollectionType? lockType = default(LockSiteCollectionType?), List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>))
+        public LockSiteParameter(LockSiteCollectionType? lockType = default(LockSiteCollectionType?), bool isSendCancelEmail = false, Guid cancelEmailTemplateId = default(Guid), List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>))
         {
             this.LockType = lockType;
+            this.IsSendCancelEmail = isSendCancelEmail;
+            this.CancelEmailTemplateId = cancelEmailTemplateId;
             this.Workspace = workspace;
         }
+
+        /// <summary>
+        /// Gets or Sets IsSendCancelEmail
+        /// </summary>
+        [DataMember(Name = "isSendCancelEmail", EmitDefaultValue = false)]
+        public bool IsSendCancelEmail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CancelEmailTemplateId
+        /// </summary>
+        [DataMember(Name = "cancelEmailTemplateId", EmitDefaultValue = false)]
+        public Guid CancelEmailTemplateId { get; set; }
 
         /// <summary>
         /// Gets or Sets Workspace
@@ -54,6 +70,8 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class LockSiteParameter {\n");
             sb.Append("  LockType: ").Append(LockType).Append("\n");
+            sb.Append("  IsSendCancelEmail: ").Append(IsSendCancelEmail).Append("\n");
+            sb.Append("  CancelEmailTemplateId: ").Append(CancelEmailTemplateId).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -94,6 +112,15 @@ namespace Cloud.Governance.Client.Model
                     this.LockType.Equals(input.LockType)
                 ) && 
                 (
+                    this.IsSendCancelEmail == input.IsSendCancelEmail ||
+                    this.IsSendCancelEmail.Equals(input.IsSendCancelEmail)
+                ) && 
+                (
+                    this.CancelEmailTemplateId == input.CancelEmailTemplateId ||
+                    (this.CancelEmailTemplateId != null &&
+                    this.CancelEmailTemplateId.Equals(input.CancelEmailTemplateId))
+                ) && 
+                (
                     this.Workspace == input.Workspace ||
                     this.Workspace != null &&
                     input.Workspace != null &&
@@ -111,6 +138,9 @@ namespace Cloud.Governance.Client.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.LockType.GetHashCode();
+                hashCode = hashCode * 59 + this.IsSendCancelEmail.GetHashCode();
+                if (this.CancelEmailTemplateId != null)
+                    hashCode = hashCode * 59 + this.CancelEmailTemplateId.GetHashCode();
                 if (this.Workspace != null)
                     hashCode = hashCode * 59 + this.Workspace.GetHashCode();
                 return hashCode;

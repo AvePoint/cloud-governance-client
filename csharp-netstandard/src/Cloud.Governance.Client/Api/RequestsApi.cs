@@ -379,6 +379,24 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of CreateListRequest</returns>
         ApiResponse<CreateListRequest> GetCreateListRequestWithHttpInfo(Guid id);
         /// <summary>
+        /// get private channel request
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>CreatePrivateChannelRequest</returns>
+        CreatePrivateChannelRequest GetCreatePrivateChannelRequest(Guid id);
+
+        /// <summary>
+        /// get private channel request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of CreatePrivateChannelRequest</returns>
+        ApiResponse<CreatePrivateChannelRequest> GetCreatePrivateChannelRequestWithHttpInfo(Guid id);
+        /// <summary>
         /// get create site request
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -663,8 +681,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <returns>List&lt;ApiTask&gt;</returns>
-        List<ApiTask> GetTasks(Guid requestid);
+        List<ApiTask> GetTasks(Guid requestid, bool? includeCompleted = default(bool?));
 
         /// <summary>
         /// get task by request id
@@ -674,8 +693,9 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <returns>ApiResponse of List&lt;ApiTask&gt;</returns>
-        ApiResponse<List<ApiTask>> GetTasksWithHttpInfo(Guid requestid);
+        ApiResponse<List<ApiTask>> GetTasksWithHttpInfo(Guid requestid, bool? includeCompleted = default(bool?));
         /// <summary>
         /// get unlock site request
         /// </summary>
@@ -1056,6 +1076,24 @@ namespace Cloud.Governance.Client.Api
         /// <param name="createListRequest"> (optional)</param>
         /// <returns>ApiResponse of Guid</returns>
         ApiResponse<Guid> SubmitCreateListRequestWithHttpInfo(CreateListRequest createListRequest = default(CreateListRequest));
+        /// <summary>
+        /// submit private channel request
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <returns>Guid</returns>
+        Guid SubmitCreatePrivateChannelRequest(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest));
+
+        /// <summary>
+        /// submit private channel request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <returns>ApiResponse of Guid</returns>
+        ApiResponse<Guid> SubmitCreatePrivateChannelRequestWithHttpInfo(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest));
         /// <summary>
         /// submit create site collection request
         /// </summary>
@@ -1760,6 +1798,29 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (CreateListRequest)</returns>
         System.Threading.Tasks.Task<ApiResponse<CreateListRequest>> GetCreateListRequestWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// get private channel request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreatePrivateChannelRequest</returns>
+        System.Threading.Tasks.Task<CreatePrivateChannelRequest> GetCreatePrivateChannelRequestAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get private channel request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreatePrivateChannelRequest)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreatePrivateChannelRequest>> GetCreatePrivateChannelRequestWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// get create site request
         /// </summary>
         /// <remarks>
@@ -2122,9 +2183,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiTask&gt;</returns>
-        System.Threading.Tasks.Task<List<ApiTask>> GetTasksAsync(Guid requestid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ApiTask>> GetTasksAsync(Guid requestid, bool? includeCompleted = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get task by request id
@@ -2134,9 +2196,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiTask&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ApiTask>>> GetTasksWithHttpInfoAsync(Guid requestid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ApiTask>>> GetTasksWithHttpInfoAsync(Guid requestid, bool? includeCompleted = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get unlock site request
         /// </summary>
@@ -2622,6 +2685,29 @@ namespace Cloud.Governance.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (Guid)</returns>
         System.Threading.Tasks.Task<ApiResponse<Guid>> SubmitCreateListRequestWithHttpInfoAsync(CreateListRequest createListRequest = default(CreateListRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// submit private channel request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Guid</returns>
+        System.Threading.Tasks.Task<Guid> SubmitCreatePrivateChannelRequestAsync(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// submit private channel request
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Guid)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Guid>> SubmitCreatePrivateChannelRequestWithHttpInfoAsync(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// submit create site collection request
         /// </summary>
@@ -5618,6 +5704,135 @@ namespace Cloud.Governance.Client.Api
         }
 
         /// <summary>
+        /// get private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>CreatePrivateChannelRequest</returns>
+        public CreatePrivateChannelRequest GetCreatePrivateChannelRequest(Guid id)
+        {
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelRequest> localVarResponse = GetCreatePrivateChannelRequestWithHttpInfo(id);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <returns>ApiResponse of CreatePrivateChannelRequest</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelRequest> GetCreatePrivateChannelRequestWithHttpInfo(Guid id)
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<CreatePrivateChannelRequest>("/requests/createprivatechannel/{id}", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetCreatePrivateChannelRequest", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of CreatePrivateChannelRequest</returns>
+        public async System.Threading.Tasks.Task<CreatePrivateChannelRequest> GetCreatePrivateChannelRequestAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelRequest> localVarResponse = await GetCreatePrivateChannelRequestWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (CreatePrivateChannelRequest)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelRequest>> GetCreatePrivateChannelRequestWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<CreatePrivateChannelRequest>("/requests/createprivatechannel/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetCreatePrivateChannelRequest", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
         /// get create site request 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -7623,10 +7838,11 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <returns>List&lt;ApiTask&gt;</returns>
-        public List<ApiTask> GetTasks(Guid requestid)
+        public List<ApiTask> GetTasks(Guid requestid, bool? includeCompleted = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> localVarResponse = GetTasksWithHttpInfo(requestid);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> localVarResponse = GetTasksWithHttpInfo(requestid, includeCompleted);
             return localVarResponse.Data;
         }
 
@@ -7635,8 +7851,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <returns>ApiResponse of List&lt;ApiTask&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> GetTasksWithHttpInfo(Guid requestid)
+        public Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> GetTasksWithHttpInfo(Guid requestid, bool? includeCompleted = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -7656,6 +7873,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("requestid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(requestid)); // path parameter
+            if (includeCompleted != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "includeCompleted", includeCompleted));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -7685,11 +7906,12 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiTask&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ApiTask>> GetTasksAsync(Guid requestid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ApiTask>> GetTasksAsync(Guid requestid, bool? includeCompleted = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> localVarResponse = await GetTasksWithHttpInfoAsync(requestid, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>> localVarResponse = await GetTasksWithHttpInfoAsync(requestid, includeCompleted, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -7698,9 +7920,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="requestid"></param>
+        /// <param name="includeCompleted"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiTask&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>>> GetTasksWithHttpInfoAsync(Guid requestid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiTask>>> GetTasksWithHttpInfoAsync(Guid requestid, bool? includeCompleted = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -7722,6 +7945,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("requestid", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(requestid)); // path parameter
+            if (includeCompleted != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "includeCompleted", includeCompleted));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -10508,6 +10735,137 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SubmitCreateListRequest", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <returns>Guid</returns>
+        public Guid SubmitCreatePrivateChannelRequest(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<Guid> localVarResponse = SubmitCreatePrivateChannelRequestWithHttpInfo(createPrivateChannelRequest);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// submit private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <returns>ApiResponse of Guid</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Guid> SubmitCreatePrivateChannelRequestWithHttpInfo(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = createPrivateChannelRequest;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Guid>("/requests/createprivatechannel", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitCreatePrivateChannelRequest", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of Guid</returns>
+        public async System.Threading.Tasks.Task<Guid> SubmitCreatePrivateChannelRequestAsync(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<Guid> localVarResponse = await SubmitCreatePrivateChannelRequestWithHttpInfoAsync(createPrivateChannelRequest, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// submit private channel request 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createPrivateChannelRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (Guid)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Guid>> SubmitCreatePrivateChannelRequestWithHttpInfoAsync(CreatePrivateChannelRequest createPrivateChannelRequest = default(CreatePrivateChannelRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = createPrivateChannelRequest;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Guid>("/requests/createprivatechannel", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitCreatePrivateChannelRequest", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

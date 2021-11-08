@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 4.9.4
+- SDK version: 4.11.1
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -69,6 +69,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Get-CreateGroupRequest**](docs/RequestsApi.md#Get-CreateGroupRequest) | **GET** /requests/creategroup/{id} | get create group request
 *RequestsApi* | [**Get-CreateGuestUserRequest**](docs/RequestsApi.md#Get-CreateGuestUserRequest) | **GET** /requests/createguestuser/{id} | get create guest user request
 *RequestsApi* | [**Get-CreateListRequest**](docs/RequestsApi.md#Get-CreateListRequest) | **GET** /requests/createlist/{id} | get create list request
+*RequestsApi* | [**Get-CreatePrivateChannelRequest**](docs/RequestsApi.md#Get-CreatePrivateChannelRequest) | **GET** /requests/createprivatechannel/{id} | get private channel request
 *RequestsApi* | [**Get-CreateSiteRequest**](docs/RequestsApi.md#Get-CreateSiteRequest) | **GET** /requests/createsite/{id} | get create site request
 *RequestsApi* | [**Get-CreateWebRequest**](docs/RequestsApi.md#Get-CreateWebRequest) | **GET** /requests/createweb/{id} | get create web request
 *RequestsApi* | [**Get-CustomRequest**](docs/RequestsApi.md#Get-CustomRequest) | **GET** /requests/custom/{id} | get custom service request
@@ -106,6 +107,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Submit-CreateGroupRequest**](docs/RequestsApi.md#Submit-CreateGroupRequest) | **POST** /requests/creategroup | submit create group request
 *RequestsApi* | [**Submit-CreateGuestUserRequest**](docs/RequestsApi.md#Submit-CreateGuestUserRequest) | **POST** /requests/createguestuser | submit create guest user request
 *RequestsApi* | [**Submit-CreateListRequest**](docs/RequestsApi.md#Submit-CreateListRequest) | **POST** /requests/createlist | submit create list request
+*RequestsApi* | [**Submit-CreatePrivateChannelRequest**](docs/RequestsApi.md#Submit-CreatePrivateChannelRequest) | **POST** /requests/createprivatechannel | submit private channel request
 *RequestsApi* | [**Submit-CreateSiteRequest**](docs/RequestsApi.md#Submit-CreateSiteRequest) | **POST** /requests/createsite | submit create site collection request
 *RequestsApi* | [**Submit-CreateWebRequest**](docs/RequestsApi.md#Submit-CreateWebRequest) | **POST** /requests/createweb | submit create web request
 *RequestsApi* | [**Submit-CustomRequest**](docs/RequestsApi.md#Submit-CustomRequest) | **POST** /requests/custom | submit custom service request
@@ -133,6 +135,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**Get-CreateGroupService**](docs/ServicesApi.md#Get-CreateGroupService) | **GET** /services/creategroup/{id} | get create group service
 *ServicesApi* | [**Get-CreateGuestUserService**](docs/ServicesApi.md#Get-CreateGuestUserService) | **GET** /services/createguestuser/{id} | get create group service
 *ServicesApi* | [**Get-CreateListService**](docs/ServicesApi.md#Get-CreateListService) | **GET** /services/createlist/{id} | get create list service
+*ServicesApi* | [**Get-CreatePrivateChannelService**](docs/ServicesApi.md#Get-CreatePrivateChannelService) | **GET** /services/createprivatechannel/{id} | get private channel service detail
 *ServicesApi* | [**Get-CreateSiteService**](docs/ServicesApi.md#Get-CreateSiteService) | **GET** /services/createsite/{id} | get create site service
 *ServicesApi* | [**Get-CreateWebService**](docs/ServicesApi.md#Get-CreateWebService) | **GET** /services/createweb/{id} | get create web service
 *ServicesApi* | [**Get-CustomService**](docs/ServicesApi.md#Get-CustomService) | **GET** /services/custom/{id} | get custom service
@@ -162,6 +165,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**Resolve-ForManagePermissionService**](docs/ServicesApi.md#Resolve-ForManagePermissionService) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 *ServicesApi* | [**Resolve-ForSiteLifecycleService**](docs/ServicesApi.md#Resolve-ForSiteLifecycleService) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 *ServicesApi* | [**Resolve-ForWebLifecycleService**](docs/ServicesApi.md#Resolve-ForWebLifecycleService) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+*ServicesApi* | [**Resolve-TeamForCreatePrivateChannelService**](docs/ServicesApi.md#Resolve-TeamForCreatePrivateChannelService) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
 *ServicesAdminApi* | [**Get-Services**](docs/ServicesAdminApi.md#Get-Services) | **GET** /admin/services | get all services
 *SettingsApi* | [**Get-DynamicMembershipRuleItems**](docs/SettingsApi.md#Get-DynamicMembershipRuleItems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
 *SettingsApi* | [**Get-MyPersonalSettings**](docs/SettingsApi.md#Get-MyPersonalSettings) | **GET** /settings/my | get my personal settings
@@ -266,6 +270,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ArchiveWorkspaceParameter](docs/ArchiveWorkspaceParameter.md)
  - [Cloud.Governance.Client\Model.AssignBy](docs/AssignBy.md)
  - [Cloud.Governance.Client\Model.AuthenticationType](docs/AuthenticationType.md)
+ - [Cloud.Governance.Client\Model.AutoCompleteRenewalTaskParameter](docs/AutoCompleteRenewalTaskParameter.md)
  - [Cloud.Governance.Client\Model.AutoGenerateUrlSetting](docs/AutoGenerateUrlSetting.md)
  - [Cloud.Governance.Client\Model.AutoGenerateUrlType](docs/AutoGenerateUrlType.md)
  - [Cloud.Governance.Client\Model.AutoImportPhase](docs/AutoImportPhase.md)
@@ -339,6 +344,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ContentMoveSPObject](docs/ContentMoveSPObject.md)
  - [Cloud.Governance.Client\Model.ContentMoveSPObjectMapping](docs/ContentMoveSPObjectMapping.md)
  - [Cloud.Governance.Client\Model.ContentMoveService](docs/ContentMoveService.md)
+ - [Cloud.Governance.Client\Model.ContentMoveUrlValidationParameter](docs/ContentMoveUrlValidationParameter.md)
  - [Cloud.Governance.Client\Model.ContentMoveUrlValidationResult](docs/ContentMoveUrlValidationResult.md)
  - [Cloud.Governance.Client\Model.ContructUrlSetting](docs/ContructUrlSetting.md)
  - [Cloud.Governance.Client\Model.ConvertHubSiteActionType](docs/ConvertHubSiteActionType.md)
@@ -356,6 +362,10 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.CreateListService](docs/CreateListService.md)
  - [Cloud.Governance.Client\Model.CreateListUrlSettings](docs/CreateListUrlSettings.md)
  - [Cloud.Governance.Client\Model.CreateListUrlValidationResult](docs/CreateListUrlValidationResult.md)
+ - [Cloud.Governance.Client\Model.CreatePrivateChannelCheckResult](docs/CreatePrivateChannelCheckResult.md)
+ - [Cloud.Governance.Client\Model.CreatePrivateChannelRequest](docs/CreatePrivateChannelRequest.md)
+ - [Cloud.Governance.Client\Model.CreatePrivateChannelService](docs/CreatePrivateChannelService.md)
+ - [Cloud.Governance.Client\Model.CreatePrivateChannelValidationParameter](docs/CreatePrivateChannelValidationParameter.md)
  - [Cloud.Governance.Client\Model.CreateSiteRequest](docs/CreateSiteRequest.md)
  - [Cloud.Governance.Client\Model.CreateSiteService](docs/CreateSiteService.md)
  - [Cloud.Governance.Client\Model.CreateWebRequest](docs/CreateWebRequest.md)
@@ -371,6 +381,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.DeleteSiteRequest](docs/DeleteSiteRequest.md)
  - [Cloud.Governance.Client\Model.DeleteType](docs/DeleteType.md)
  - [Cloud.Governance.Client\Model.DeleteWebLifecycleRequest](docs/DeleteWebLifecycleRequest.md)
+ - [Cloud.Governance.Client\Model.DeleteWorkspaceParameter](docs/DeleteWorkspaceParameter.md)
  - [Cloud.Governance.Client\Model.DeploymentManagerPlanSettings](docs/DeploymentManagerPlanSettings.md)
  - [Cloud.Governance.Client\Model.DisplayInReportType](docs/DisplayInReportType.md)
  - [Cloud.Governance.Client\Model.DpmServiceSetting](docs/DpmServiceSetting.md)
@@ -439,10 +450,12 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.GuidModel](docs/GuidModel.md)
  - [Cloud.Governance.Client\Model.HandleOngoingType](docs/HandleOngoingType.md)
  - [Cloud.Governance.Client\Model.HookMessageList](docs/HookMessageList.md)
+ - [Cloud.Governance.Client\Model.HookMessageObjectType](docs/HookMessageObjectType.md)
  - [Cloud.Governance.Client\Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
  - [Cloud.Governance.Client\Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Cloud.Governance.Client\Model.HubSiteType](docs/HubSiteType.md)
  - [Cloud.Governance.Client\Model.InlineResponse200](docs/InlineResponse200.md)
+ - [Cloud.Governance.Client\Model.InsightsStatus](docs/InsightsStatus.md)
  - [Cloud.Governance.Client\Model.IntModel](docs/IntModel.md)
  - [Cloud.Governance.Client\Model.InviteType](docs/InviteType.md)
  - [Cloud.Governance.Client\Model.ItemConflictResolutionType](docs/ItemConflictResolutionType.md)
@@ -585,7 +598,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TermsValue](docs/TermsValue.md)
  - [Cloud.Governance.Client\Model.TextModel](docs/TextModel.md)
  - [Cloud.Governance.Client\Model.TextValidationRuleRef](docs/TextValidationRuleRef.md)
- - [Cloud.Governance.Client\Model.ThemeType](docs/ThemeType.md)
+ - [Cloud.Governance.Client\Model.ThemeSettingType](docs/ThemeSettingType.md)
  - [Cloud.Governance.Client\Model.TreeNode](docs/TreeNode.md)
  - [Cloud.Governance.Client\Model.TreeNodeExtension](docs/TreeNodeExtension.md)
  - [Cloud.Governance.Client\Model.TreeNodeType](docs/TreeNodeType.md)
@@ -616,6 +629,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.WorkerJobModel](docs/WorkerJobModel.md)
  - [Cloud.Governance.Client\Model.WorkerObjectType](docs/WorkerObjectType.md)
  - [Cloud.Governance.Client\Model.WorksapceOngoingTasksModel](docs/WorksapceOngoingTasksModel.md)
+ - [Cloud.Governance.Client\Model.WorkspaceActionParameter](docs/WorkspaceActionParameter.md)
  - [Cloud.Governance.Client\Model.WorkspaceArchivedType](docs/WorkspaceArchivedType.md)
  - [Cloud.Governance.Client\Model.WorkspaceGridModel](docs/WorkspaceGridModel.md)
  - [Cloud.Governance.Client\Model.WorkspaceGridModelPageResult](docs/WorkspaceGridModelPageResult.md)
@@ -624,6 +638,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.WorkspaceListPageResult](docs/WorkspaceListPageResult.md)
  - [Cloud.Governance.Client\Model.WorkspaceReport](docs/WorkspaceReport.md)
  - [Cloud.Governance.Client\Model.WorkspaceReportPageResult](docs/WorkspaceReportPageResult.md)
+ - [Cloud.Governance.Client\Model.WorkspaceSendCancelEmailParameter](docs/WorkspaceSendCancelEmailParameter.md)
  - [Cloud.Governance.Client\Model.WorkspaceStatus](docs/WorkspaceStatus.md)
  - [Cloud.Governance.Client\Model.WorkspaceType](docs/WorkspaceType.md)
  - [Cloud.Governance.Client\Model.YammerGroupJoinType](docs/YammerGroupJoinType.md)

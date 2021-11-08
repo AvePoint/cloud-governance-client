@@ -21,7 +21,16 @@ function New-LifecycleRenewalSetting {
         ${SpecifyStartDate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${HandleOngoingType} = "None"
+        ${HandleOngoingType} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsSendCancelEmail} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${CancelEmailTemplateId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${CancelEmailTemplateName}
     )
 
     Process {
@@ -34,6 +43,9 @@ function New-LifecycleRenewalSetting {
             "StartDateType" = ${StartDateType}
             "SpecifyStartDate" = ${SpecifyStartDate}
             "HandleOngoingType" = ${HandleOngoingType}
+            "IsSendCancelEmail" = ${IsSendCancelEmail}
+            "CancelEmailTemplateId" = ${CancelEmailTemplateId}
+            "CancelEmailTemplateName" = ${CancelEmailTemplateName}
         }
 
         return $PSO
@@ -56,7 +68,7 @@ function ConvertFrom-JsonToLifecycleRenewalSetting {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in LifecycleRenewalSetting
-        $AllProperties = $("LeaseDateType", "StartDateType", "SpecifyStartDate", "HandleOngoingType")
+        $AllProperties = $("LeaseDateType", "StartDateType", "SpecifyStartDate", "HandleOngoingType", "IsSendCancelEmail", "CancelEmailTemplateId", "CancelEmailTemplateName")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -87,11 +99,32 @@ function ConvertFrom-JsonToLifecycleRenewalSetting {
             $HandleOngoingType = $JsonParameters.PSobject.Properties["HandleOngoingType"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsSendCancelEmail"))) { #optional property not found
+            $IsSendCancelEmail = $null
+        } else {
+            $IsSendCancelEmail = $JsonParameters.PSobject.Properties["IsSendCancelEmail"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CancelEmailTemplateId"))) { #optional property not found
+            $CancelEmailTemplateId = $null
+        } else {
+            $CancelEmailTemplateId = $JsonParameters.PSobject.Properties["CancelEmailTemplateId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CancelEmailTemplateName"))) { #optional property not found
+            $CancelEmailTemplateName = $null
+        } else {
+            $CancelEmailTemplateName = $JsonParameters.PSobject.Properties["CancelEmailTemplateName"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "LeaseDateType" = ${LeaseDateType}
             "StartDateType" = ${StartDateType}
             "SpecifyStartDate" = ${SpecifyStartDate}
             "HandleOngoingType" = ${HandleOngoingType}
+            "IsSendCancelEmail" = ${IsSendCancelEmail}
+            "CancelEmailTemplateId" = ${CancelEmailTemplateId}
+            "CancelEmailTemplateName" = ${CancelEmailTemplateName}
         }
 
         return $PSO

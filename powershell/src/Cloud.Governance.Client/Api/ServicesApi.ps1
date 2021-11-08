@@ -1351,6 +1351,101 @@ function Get-CreateListService {
 <#
 .SYNOPSIS
 
+get private channel service detail
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Id
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CreatePrivateChannelService
+#>
+function Get-CreatePrivateChannelService {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${Id},
+        [String]
+        [ValidateSet("text/plain", "application/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Get-CreatePrivateChannelService' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/services/createprivatechannel/{id}'
+        if (!$Id) {
+            throw "Error! The required parameter `Id` missing when calling getCreatePrivateChannelService."
+        }
+        $LocalVarUri = $LocalVarUri.replace('{id}', $Id)
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CreatePrivateChannelService" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
 get create site service
 
 .DESCRIPTION
@@ -2394,6 +2489,9 @@ No description available.
 .PARAMETER Email
 No description available.
 
+.PARAMETER RequestId
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -2415,6 +2513,9 @@ function Resolve-EmailForCreateGuestUserService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [String]
         ${Email},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${RequestId},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -2454,6 +2555,10 @@ function Resolve-EmailForCreateGuestUserService {
             throw "Error! The required parameter `Email` missing when calling validateEmailForCreateGuestUserService."
         }
         $LocalVarQueryParameters['email'] = $Email
+
+        if ($RequestId) {
+            $LocalVarQueryParameters['requestId'] = $RequestId
+        }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -3451,7 +3556,7 @@ No description available.
 .PARAMETER Id
 No description available.
 
-.PARAMETER SiteValidationParameter
+.PARAMETER ContentMoveUrlValidationParameter
 No description available.
 
 .PARAMETER ReturnType
@@ -3474,7 +3579,7 @@ function Resolve-ForContentMoveService {
         ${Id},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
-        ${SiteValidationParameter},
+        ${ContentMoveUrlValidationParameter},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -3513,7 +3618,7 @@ function Resolve-ForContentMoveService {
         }
         $LocalVarUri = $LocalVarUri.replace('{id}', $Id)
 
-        $LocalVarBodyParameter = $SiteValidationParameter | ConvertTo-Json -Depth 100
+        $LocalVarBodyParameter = $ContentMoveUrlValidationParameter | ConvertTo-Json -Depth 100
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -4393,6 +4498,112 @@ function Resolve-ForWebLifecycleService {
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
                                 -ReturnType "WebLifecycleValidateResult" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+validate teams for create private channel service
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER ServiceId
+No description available.
+
+.PARAMETER CreatePrivateChannelValidationParameter
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CreatePrivateChannelCheckResult
+#>
+function Resolve-TeamForCreatePrivateChannelService {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${ServiceId},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${CreatePrivateChannelValidationParameter},
+        [String]
+        [ValidateSet("text/plain", "application/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Resolve-TeamForCreatePrivateChannelService' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        # HTTP header 'Content-Type'
+        $LocalVarContentTypes = @('application/json')
+
+        $LocalVarUri = '/services/createprivatechannel/{serviceId}/team/validation'
+        if (!$ServiceId) {
+            throw "Error! The required parameter `ServiceId` missing when calling validateTeamForCreatePrivateChannelService."
+        }
+        $LocalVarUri = $LocalVarUri.replace('{serviceId}', $ServiceId)
+
+        $LocalVarBodyParameter = $CreatePrivateChannelValidationParameter | ConvertTo-Json -Depth 100
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'POST' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CreatePrivateChannelCheckResult" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

@@ -7,6 +7,9 @@ Name | Type | Description | Notes
 **StartDateType** | [**LeaseStartDateType**](LeaseStartDateType.md) |  | [optional] 
 **SpecifyStartDate** | **System.DateTime** |  | [optional] 
 **HandleOngoingType** | [**HandleOngoingType**](HandleOngoingType.md) |  | [optional] 
+**IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
+**CancelEmailTemplateId** | **String** |  | [optional] 
+**CancelEmailTemplateName** | **String** |  | [optional] 
 
 ## Examples
 
@@ -15,7 +18,10 @@ Name | Type | Description | Notes
 $LifecycleRenewalSetting = New-Cloud.Governance.ClientLifecycleRenewalSetting  -LeaseDateType null `
  -StartDateType null `
  -SpecifyStartDate null `
- -HandleOngoingType null
+ -HandleOngoingType null `
+ -IsSendCancelEmail null `
+ -CancelEmailTemplateId null `
+ -CancelEmailTemplateName null
 ```
 
 - Convert the resource to JSON

@@ -324,6 +324,8 @@ namespace Cloud.Governance.Client.Model
 
         UnArchiveTeam = 561,
 
+        ApplyGroupExtension = 562,
+
         CreatingSite = 600,
 
         ApplyingCustomTemplate = 601,
@@ -447,6 +449,16 @@ namespace Cloud.Governance.Client.Model
         WelcomeEmail = 1054,
 
         FailedWithSubRequestException = 1055,
+
+        ValidatePrivateChannel = 1100,
+
+        CreatePrivateChannel = 1101,
+
+        AddUserToChannel = 1102,
+
+        AddChannelToDB = 1103,
+
+        ApplyPolicyToChannel = 1104,
 
         StartingProcess = 3000
 

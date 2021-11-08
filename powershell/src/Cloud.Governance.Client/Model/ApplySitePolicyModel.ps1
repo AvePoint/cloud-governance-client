@@ -54,7 +54,10 @@ function New-ApplySitePolicyModel {
         ${SelectedObjects},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HasOngoingTasks} = $false
+        ${HasOngoingTasks} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsApplyUniqueAccess} = $false
     )
 
     Process {
@@ -78,6 +81,7 @@ function New-ApplySitePolicyModel {
             "VarFilter" = ${VarFilter}
             "SelectedObjects" = ${SelectedObjects}
             "HasOngoingTasks" = ${HasOngoingTasks}
+            "IsApplyUniqueAccess" = ${IsApplyUniqueAccess}
         }
 
         return $PSO
@@ -100,7 +104,7 @@ function ConvertFrom-JsonToApplySitePolicyModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApplySitePolicyModel
-        $AllProperties = $("IsApplyDesigner", "IsApplySiteMaxDepth", "IsApplyPolicyIcon", "IsApplyAosPlans", "PolicyId", "IsApplyAllSetting", "IsApplyQuota", "IsApplySharing", "IsApplyQuotaThreshold", "IsApplyDeactivatedElection", "IsApplyLifecycle", "LifecycleRenewalSetting", "VarFilter", "SelectedObjects", "HasOngoingTasks")
+        $AllProperties = $("IsApplyDesigner", "IsApplySiteMaxDepth", "IsApplyPolicyIcon", "IsApplyAosPlans", "PolicyId", "IsApplyAllSetting", "IsApplyQuota", "IsApplySharing", "IsApplyQuotaThreshold", "IsApplyDeactivatedElection", "IsApplyLifecycle", "LifecycleRenewalSetting", "VarFilter", "SelectedObjects", "HasOngoingTasks", "IsApplyUniqueAccess")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -197,6 +201,12 @@ function ConvertFrom-JsonToApplySitePolicyModel {
             $HasOngoingTasks = $JsonParameters.PSobject.Properties["HasOngoingTasks"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsApplyUniqueAccess"))) { #optional property not found
+            $IsApplyUniqueAccess = $null
+        } else {
+            $IsApplyUniqueAccess = $JsonParameters.PSobject.Properties["IsApplyUniqueAccess"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "IsApplyDesigner" = ${IsApplyDesigner}
             "IsApplySiteMaxDepth" = ${IsApplySiteMaxDepth}
@@ -213,6 +223,7 @@ function ConvertFrom-JsonToApplySitePolicyModel {
             "VarFilter" = ${VarFilter}
             "SelectedObjects" = ${SelectedObjects}
             "HasOngoingTasks" = ${HasOngoingTasks}
+            "IsApplyUniqueAccess" = ${IsApplyUniqueAccess}
         }
 
         return $PSO

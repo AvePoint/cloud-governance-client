@@ -900,18 +900,6 @@ namespace Cloud.Governance.Client.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SiteDescription, length must be less than 1024.", new [] { "SiteDescription" });
             }
 
-            // Summary (string) maxLength
-            if(this.Summary != null && this.Summary.Length > 255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Summary, length must be less than 255.", new [] { "Summary" });
-            }
-
-            // NotesToApprovers (string) maxLength
-            if(this.NotesToApprovers != null && this.NotesToApprovers.Length > 1000)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NotesToApprovers, length must be less than 1000.", new [] { "NotesToApprovers" });
-            }
-
             yield break;
         }
     }

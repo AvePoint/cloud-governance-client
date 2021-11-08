@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **TaskLink** | **String** | Link of task  &lt;sample&gt;abc&lt;/sample&gt; | [optional] 
 **ObjectTitle** | **String** | Name of the workspace | [optional] 
 **ObjectType** | **String** | Type of the workspace | [optional] 
-**ObjectTypeEnum** | **String** | Type enum of the workspace, availabe values:SiteCollection,Group,Team,GuestUser,Yammer | [optional] 
+**ObjectTypeEnum** | [**HookMessageObjectType**](HookMessageObjectType.md) | Type enum of the workspace, availabe values:SiteCollection,Group,Team,GuestUser,Yammer | [optional] 
 **GroupEmail** | **String** | E-mail address of the workspace | [optional] 
 **TriggerType** | [**TriggerType**](TriggerType.md) | Event type that being triggered, available values and corresponding messages:    RequestSubmitted,RequestCompleted,RequestCancelled ----&gt; RequestHookMessage  TaskCreated,TaskApproved,TaskRejected,ErrorTaskCreated,TaskRetried,TaskSkipped ----&gt; TaskHookMessage  RenewalSuccess RenewalException,RenewalOverdue ----&gt; RenewalTaskHookMessage  FullyAutoImportSuccess,ConfirmDetailSuccess ----&gt; AutoImportProcessHookMessage  ElectionCompleted,ElectionOverdue ---&gt; ElectionHookMessage  LifecycleInactiveTaskCreated,LifecycleLeaseTaskCreated ----&gt; ElectionOverdue | [optional] 
 **TriggerTime** | **System.DateTime** | Time that the webhook is triggered | [optional] 

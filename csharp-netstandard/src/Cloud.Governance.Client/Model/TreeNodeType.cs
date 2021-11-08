@@ -60,6 +60,8 @@ namespace Cloud.Governance.Client.Model
 
         GuestUser = 601,
 
+        PrivateChannel = 602,
+
         All = 1000,
 
         WebApplication_D = -5,

@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**Get-CreateGroupRequest**](RequestsApi.md#Get-CreateGroupRequest) | **GET** /requests/creategroup/{id} | get create group request
 [**Get-CreateGuestUserRequest**](RequestsApi.md#Get-CreateGuestUserRequest) | **GET** /requests/createguestuser/{id} | get create guest user request
 [**Get-CreateListRequest**](RequestsApi.md#Get-CreateListRequest) | **GET** /requests/createlist/{id} | get create list request
+[**Get-CreatePrivateChannelRequest**](RequestsApi.md#Get-CreatePrivateChannelRequest) | **GET** /requests/createprivatechannel/{id} | get private channel request
 [**Get-CreateSiteRequest**](RequestsApi.md#Get-CreateSiteRequest) | **GET** /requests/createsite/{id} | get create site request
 [**Get-CreateWebRequest**](RequestsApi.md#Get-CreateWebRequest) | **GET** /requests/createweb/{id} | get create web request
 [**Get-CustomRequest**](RequestsApi.md#Get-CustomRequest) | **GET** /requests/custom/{id} | get custom service request
@@ -61,6 +62,7 @@ Method | HTTP request | Description
 [**Submit-CreateGroupRequest**](RequestsApi.md#Submit-CreateGroupRequest) | **POST** /requests/creategroup | submit create group request
 [**Submit-CreateGuestUserRequest**](RequestsApi.md#Submit-CreateGuestUserRequest) | **POST** /requests/createguestuser | submit create guest user request
 [**Submit-CreateListRequest**](RequestsApi.md#Submit-CreateListRequest) | **POST** /requests/createlist | submit create list request
+[**Submit-CreatePrivateChannelRequest**](RequestsApi.md#Submit-CreatePrivateChannelRequest) | **POST** /requests/createprivatechannel | submit private channel request
 [**Submit-CreateSiteRequest**](RequestsApi.md#Submit-CreateSiteRequest) | **POST** /requests/createsite | submit create site collection request
 [**Submit-CreateWebRequest**](RequestsApi.md#Submit-CreateWebRequest) | **POST** /requests/createweb | submit create web request
 [**Submit-CustomRequest**](RequestsApi.md#Submit-CustomRequest) | **POST** /requests/custom | submit custom service request
@@ -1224,6 +1226,64 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateListRequest**](CreateListRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-CreatePrivateChannelRequest"></a>
+# **Get-CreatePrivateChannelRequest**
+> CreatePrivateChannelRequest Get-CreatePrivateChannelRequest<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+get private channel request
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+
+# get private channel request
+try {
+     $Result = Get-CreatePrivateChannelRequest -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-CreatePrivateChannelRequest: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreatePrivateChannelRequest**](CreatePrivateChannelRequest.md)
 
 ### Authorization
 
@@ -3858,6 +3918,81 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **CreateListRequest** | [**CreateListRequest**](CreateListRequest.md)|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+**String**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Submit-CreatePrivateChannelRequest"></a>
+# **Submit-CreatePrivateChannelRequest**
+> String Submit-CreatePrivateChannelRequest<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CreatePrivateChannelRequest] <PSCustomObject><br>
+
+submit private channel request
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$CreatePrivateChannelRequest = $ExternalUserType = New-ExternalUserType 
+$ApiUserType = New-ApiUserType 
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$MetadataFieldType = New-MetadataFieldType 
+$MetadataActionType = New-MetadataActionType 
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false
+
+$ServiceType = New-ServiceType 
+$RequestStatus = New-RequestStatus 
+$CreatePrivateChannelRequest = New-CreatePrivateChannelRequest -Name "MyName" -ChannelDescription "MyChannelDescription" -Owners $ApiUser -Members $ApiUser -Team $ApiUser -ChannelWebUrl "MyChannelWebUrl" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" # CreatePrivateChannelRequest |  (optional)
+
+# submit private channel request
+try {
+     $Result = Submit-CreatePrivateChannelRequest -CreatePrivateChannelRequest $CreatePrivateChannelRequest
+} catch {
+    Write-Host ("Exception occured when calling Submit-CreatePrivateChannelRequest: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **CreatePrivateChannelRequest** | [**CreatePrivateChannelRequest**](CreatePrivateChannelRequest.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

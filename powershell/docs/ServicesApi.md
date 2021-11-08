@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**Get-CreateGroupService**](ServicesApi.md#Get-CreateGroupService) | **GET** /services/creategroup/{id} | get create group service
 [**Get-CreateGuestUserService**](ServicesApi.md#Get-CreateGuestUserService) | **GET** /services/createguestuser/{id} | get create group service
 [**Get-CreateListService**](ServicesApi.md#Get-CreateListService) | **GET** /services/createlist/{id} | get create list service
+[**Get-CreatePrivateChannelService**](ServicesApi.md#Get-CreatePrivateChannelService) | **GET** /services/createprivatechannel/{id} | get private channel service detail
 [**Get-CreateSiteService**](ServicesApi.md#Get-CreateSiteService) | **GET** /services/createsite/{id} | get create site service
 [**Get-CreateWebService**](ServicesApi.md#Get-CreateWebService) | **GET** /services/createweb/{id} | get create web service
 [**Get-CustomService**](ServicesApi.md#Get-CustomService) | **GET** /services/custom/{id} | get custom service
@@ -46,6 +47,7 @@ Method | HTTP request | Description
 [**Resolve-ForManagePermissionService**](ServicesApi.md#Resolve-ForManagePermissionService) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 [**Resolve-ForSiteLifecycleService**](ServicesApi.md#Resolve-ForSiteLifecycleService) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 [**Resolve-ForWebLifecycleService**](ServicesApi.md#Resolve-ForWebLifecycleService) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+[**Resolve-TeamForCreatePrivateChannelService**](ServicesApi.md#Resolve-TeamForCreatePrivateChannelService) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
 
 
 <a name="Get-ChangeGroupSettingService"></a>
@@ -833,6 +835,64 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-CreatePrivateChannelService"></a>
+# **Get-CreatePrivateChannelService**
+> CreatePrivateChannelService Get-CreatePrivateChannelService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+get private channel service detail
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+
+# get private channel service detail
+try {
+     $Result = Get-CreatePrivateChannelService -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-CreatePrivateChannelService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreatePrivateChannelService**](CreatePrivateChannelService.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-CreateSiteService"></a>
 # **Get-CreateSiteService**
 > CreateSiteService Get-CreateSiteService<br>
@@ -1442,6 +1502,7 @@ Name | Type | Description  | Notes
 > ObjectValidateResult Resolve-EmailForCreateGuestUserService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Email] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <PSCustomObject><br>
 
 validate guest user email
 
@@ -1466,10 +1527,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $Email = "MyEmail" # String | 
+$RequestId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # validate guest user email
 try {
-     $Result = Resolve-EmailForCreateGuestUserService -Id $Id -Email $Email
+     $Result = Resolve-EmailForCreateGuestUserService -Id $Id -Email $Email -RequestId $RequestId
 } catch {
     Write-Host ("Exception occured when calling Resolve-EmailForCreateGuestUserService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1482,6 +1544,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **Email** | **String**|  | 
+ **RequestId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -2051,7 +2114,7 @@ Name | Type | Description  | Notes
 # **Resolve-ForContentMoveService**
 > ContentMoveUrlValidationResult Resolve-ForContentMoveService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ContentMoveUrlValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for content move service
 
@@ -2075,11 +2138,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$ContentMoveUrlValidationParameter = $ContentMoveUrlValidationParameter = New-ContentMoveUrlValidationParameter -IsCheckSourceUrl $false -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # ContentMoveUrlValidationParameter |  (optional)
 
 # validate permissions, scope for content move service
 try {
-     $Result = Resolve-ForContentMoveService -Id $Id -SiteValidationParameter $SiteValidationParameter
+     $Result = Resolve-ForContentMoveService -Id $Id -ContentMoveUrlValidationParameter $ContentMoveUrlValidationParameter
 } catch {
     Write-Host ("Exception occured when calling Resolve-ForContentMoveService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -2091,7 +2154,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
- **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
+ **ContentMoveUrlValidationParameter** | [**ContentMoveUrlValidationParameter**](ContentMoveUrlValidationParameter.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -2589,6 +2652,67 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**WebLifecycleValidateResult**](WebLifecycleValidateResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Resolve-TeamForCreatePrivateChannelService"></a>
+# **Resolve-TeamForCreatePrivateChannelService**
+> CreatePrivateChannelCheckResult Resolve-TeamForCreatePrivateChannelService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ServiceId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CreatePrivateChannelValidationParameter] <PSCustomObject><br>
+
+validate teams for create private channel service
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$ServiceId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$CreatePrivateChannelValidationParameter = $CreatePrivateChannelValidationParameter = New-CreatePrivateChannelValidationParameter -TeamObjectId "MyTeamObjectId" -TenantId "MyTenantId" -IsEditTask $false -IsFromQuestionnaire $false # CreatePrivateChannelValidationParameter |  (optional)
+
+# validate teams for create private channel service
+try {
+     $Result = Resolve-TeamForCreatePrivateChannelService -ServiceId $ServiceId -CreatePrivateChannelValidationParameter $CreatePrivateChannelValidationParameter
+} catch {
+    Write-Host ("Exception occured when calling Resolve-TeamForCreatePrivateChannelService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ServiceId** | [**String**](String.md)|  | 
+ **CreatePrivateChannelValidationParameter** | [**CreatePrivateChannelValidationParameter**](CreatePrivateChannelValidationParameter.md)|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreatePrivateChannelCheckResult**](CreatePrivateChannelCheckResult.md)
 
 ### Authorization
 

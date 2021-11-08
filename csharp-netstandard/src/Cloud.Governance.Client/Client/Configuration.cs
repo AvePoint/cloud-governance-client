@@ -23,7 +23,7 @@ namespace Cloud.Governance.Client.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "4.9.3";
+        public const string Version = "4.11.1";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -91,7 +91,7 @@ namespace Cloud.Governance.Client.Client
         [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
         public Configuration()
         {
-            UserAgent = "sdk/csharp-netstandard/4.9.3";
+            UserAgent = "sdk/csharp-netstandard/4.11.1";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -352,7 +352,7 @@ namespace Cloud.Governance.Client.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 1.0\n";
-            report += "    SDK Package Version: 4.9.3\n";
+            report += "    SDK Package Version: 4.11.1\n";
 
             return report;
         }

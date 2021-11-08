@@ -107,14 +107,6 @@ function New-CreateSiteRequest {
             throw "invalid value for 'SiteDescription', the character length must be smaller than or equal to 1024."
         }
 
-        if (!$Summary -and $Summary.length -gt 255) {
-            throw "invalid value for 'Summary', the character length must be smaller than or equal to 255."
-        }
-
-        if (!$NotesToApprovers -and $NotesToApprovers.length -gt 1000) {
-            throw "invalid value for 'NotesToApprovers', the character length must be smaller than or equal to 1000."
-        }
-
         
         $PSO = [PSCustomObject]@{
             "SiteTitle" = ${SiteTitle}

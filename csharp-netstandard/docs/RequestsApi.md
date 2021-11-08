@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**GetCreateGroupRequest**](RequestsApi.md#getcreategrouprequest) | **GET** /requests/creategroup/{id} | get create group request
 [**GetCreateGuestUserRequest**](RequestsApi.md#getcreateguestuserrequest) | **GET** /requests/createguestuser/{id} | get create guest user request
 [**GetCreateListRequest**](RequestsApi.md#getcreatelistrequest) | **GET** /requests/createlist/{id} | get create list request
+[**GetCreatePrivateChannelRequest**](RequestsApi.md#getcreateprivatechannelrequest) | **GET** /requests/createprivatechannel/{id} | get private channel request
 [**GetCreateSiteRequest**](RequestsApi.md#getcreatesiterequest) | **GET** /requests/createsite/{id} | get create site request
 [**GetCreateWebRequest**](RequestsApi.md#getcreatewebrequest) | **GET** /requests/createweb/{id} | get create web request
 [**GetCustomRequest**](RequestsApi.md#getcustomrequest) | **GET** /requests/custom/{id} | get custom service request
@@ -61,6 +62,7 @@ Method | HTTP request | Description
 [**SubmitCreateGroupRequest**](RequestsApi.md#submitcreategrouprequest) | **POST** /requests/creategroup | submit create group request
 [**SubmitCreateGuestUserRequest**](RequestsApi.md#submitcreateguestuserrequest) | **POST** /requests/createguestuser | submit create guest user request
 [**SubmitCreateListRequest**](RequestsApi.md#submitcreatelistrequest) | **POST** /requests/createlist | submit create list request
+[**SubmitCreatePrivateChannelRequest**](RequestsApi.md#submitcreateprivatechannelrequest) | **POST** /requests/createprivatechannel | submit private channel request
 [**SubmitCreateSiteRequest**](RequestsApi.md#submitcreatesiterequest) | **POST** /requests/createsite | submit create site collection request
 [**SubmitCreateWebRequest**](RequestsApi.md#submitcreatewebrequest) | **POST** /requests/createweb | submit create web request
 [**SubmitCustomRequest**](RequestsApi.md#submitcustomrequest) | **POST** /requests/custom | submit custom service request
@@ -1735,6 +1737,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getcreateprivatechannelrequest"></a>
+# **GetCreatePrivateChannelRequest**
+> CreatePrivateChannelRequest GetCreatePrivateChannelRequest (Guid id)
+
+get private channel request
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetCreatePrivateChannelRequestExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+
+            try
+            {
+                // get private channel request
+                CreatePrivateChannelRequest result = apiInstance.GetCreatePrivateChannelRequest(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetCreatePrivateChannelRequest: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+
+### Return type
+
+[**CreatePrivateChannelRequest**](CreatePrivateChannelRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getcreatesiterequest"></a>
 # **GetCreateSiteRequest**
 > CreateSiteRequest GetCreateSiteRequest (Guid id)
@@ -2992,7 +3077,7 @@ Name | Type | Description  | Notes
 
 <a name="gettasks"></a>
 # **GetTasks**
-> List&lt;ApiTask&gt; GetTasks (Guid requestid)
+> List&lt;ApiTask&gt; GetTasks (Guid requestid, bool? includeCompleted = null)
 
 get task by request id
 
@@ -3026,11 +3111,12 @@ namespace Example
             var apiInstance = new RequestsApi(config);
 
             var requestid = new Guid(); // Guid | 
+            var includeCompleted = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get task by request id
-                List<ApiTask> result = apiInstance.GetTasks(requestid);
+                List<ApiTask> result = apiInstance.GetTasks(requestid, includeCompleted);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -3049,6 +3135,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **requestid** | [**Guid**](Guid.md)|  | 
+ **includeCompleted** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -4794,6 +4881,89 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **createListRequest** | [**CreateListRequest**](CreateListRequest.md)|  | [optional] 
+
+### Return type
+
+**Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitcreateprivatechannelrequest"></a>
+# **SubmitCreatePrivateChannelRequest**
+> Guid SubmitCreatePrivateChannelRequest (CreatePrivateChannelRequest createPrivateChannelRequest = null)
+
+submit private channel request
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitCreatePrivateChannelRequestExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var createPrivateChannelRequest = new CreatePrivateChannelRequest(); // CreatePrivateChannelRequest |  (optional) 
+
+            try
+            {
+                // submit private channel request
+                Guid result = apiInstance.SubmitCreatePrivateChannelRequest(createPrivateChannelRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitCreatePrivateChannelRequest: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createPrivateChannelRequest** | [**CreatePrivateChannelRequest**](CreatePrivateChannelRequest.md)|  | [optional] 
 
 ### Return type
 

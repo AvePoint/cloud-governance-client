@@ -45,12 +45,18 @@ namespace Cloud.Governance.Client.Model
         /// <param name="startDateType">startDateType.</param>
         /// <param name="specifyStartDate">specifyStartDate.</param>
         /// <param name="handleOngoingType">handleOngoingType.</param>
-        public LifecycleRenewalSetting(LeaseDateType? leaseDateType = default(LeaseDateType?), LeaseStartDateType? startDateType = default(LeaseStartDateType?), DateTime? specifyStartDate = default(DateTime?), HandleOngoingType? handleOngoingType = default(HandleOngoingType?))
+        /// <param name="isSendCancelEmail">isSendCancelEmail (default to false).</param>
+        /// <param name="cancelEmailTemplateId">cancelEmailTemplateId.</param>
+        /// <param name="cancelEmailTemplateName">cancelEmailTemplateName.</param>
+        public LifecycleRenewalSetting(LeaseDateType? leaseDateType = default(LeaseDateType?), LeaseStartDateType? startDateType = default(LeaseStartDateType?), DateTime? specifyStartDate = default(DateTime?), HandleOngoingType? handleOngoingType = default(HandleOngoingType?), bool isSendCancelEmail = false, Guid cancelEmailTemplateId = default(Guid), string cancelEmailTemplateName = default(string))
         {
             this.LeaseDateType = leaseDateType;
             this.StartDateType = startDateType;
             this.SpecifyStartDate = specifyStartDate;
             this.HandleOngoingType = handleOngoingType;
+            this.IsSendCancelEmail = isSendCancelEmail;
+            this.CancelEmailTemplateId = cancelEmailTemplateId;
+            this.CancelEmailTemplateName = cancelEmailTemplateName;
         }
 
         /// <summary>
@@ -58,6 +64,24 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "specifyStartDate", EmitDefaultValue = true)]
         public DateTime? SpecifyStartDate { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsSendCancelEmail
+        /// </summary>
+        [DataMember(Name = "isSendCancelEmail", EmitDefaultValue = false)]
+        public bool IsSendCancelEmail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CancelEmailTemplateId
+        /// </summary>
+        [DataMember(Name = "cancelEmailTemplateId", EmitDefaultValue = false)]
+        public Guid CancelEmailTemplateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CancelEmailTemplateName
+        /// </summary>
+        [DataMember(Name = "cancelEmailTemplateName", EmitDefaultValue = true)]
+        public string CancelEmailTemplateName { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,6 +95,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  StartDateType: ").Append(StartDateType).Append("\n");
             sb.Append("  SpecifyStartDate: ").Append(SpecifyStartDate).Append("\n");
             sb.Append("  HandleOngoingType: ").Append(HandleOngoingType).Append("\n");
+            sb.Append("  IsSendCancelEmail: ").Append(IsSendCancelEmail).Append("\n");
+            sb.Append("  CancelEmailTemplateId: ").Append(CancelEmailTemplateId).Append("\n");
+            sb.Append("  CancelEmailTemplateName: ").Append(CancelEmailTemplateName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,6 +148,20 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.HandleOngoingType == input.HandleOngoingType ||
                     this.HandleOngoingType.Equals(input.HandleOngoingType)
+                ) && 
+                (
+                    this.IsSendCancelEmail == input.IsSendCancelEmail ||
+                    this.IsSendCancelEmail.Equals(input.IsSendCancelEmail)
+                ) && 
+                (
+                    this.CancelEmailTemplateId == input.CancelEmailTemplateId ||
+                    (this.CancelEmailTemplateId != null &&
+                    this.CancelEmailTemplateId.Equals(input.CancelEmailTemplateId))
+                ) && 
+                (
+                    this.CancelEmailTemplateName == input.CancelEmailTemplateName ||
+                    (this.CancelEmailTemplateName != null &&
+                    this.CancelEmailTemplateName.Equals(input.CancelEmailTemplateName))
                 );
         }
 
@@ -138,6 +179,11 @@ namespace Cloud.Governance.Client.Model
                 if (this.SpecifyStartDate != null)
                     hashCode = hashCode * 59 + this.SpecifyStartDate.GetHashCode();
                 hashCode = hashCode * 59 + this.HandleOngoingType.GetHashCode();
+                hashCode = hashCode * 59 + this.IsSendCancelEmail.GetHashCode();
+                if (this.CancelEmailTemplateId != null)
+                    hashCode = hashCode * 59 + this.CancelEmailTemplateId.GetHashCode();
+                if (this.CancelEmailTemplateName != null)
+                    hashCode = hashCode * 59 + this.CancelEmailTemplateName.GetHashCode();
                 return hashCode;
             }
         }

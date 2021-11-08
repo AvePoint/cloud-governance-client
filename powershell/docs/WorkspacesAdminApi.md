@@ -48,9 +48,9 @@ $ApplyGroupPolicyModel = $GroupPolicySubType = New-GroupPolicySubType
 $LeaseDateType = New-LeaseDateType 
 $LeaseStartDateType = New-LeaseStartDateType 
 $HandleOngoingType = New-HandleOngoingType 
-$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType
+$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
 
-$ApplyGroupPolicyModel = New-ApplyGroupPolicyModel -SubType $GroupPolicySubType -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false # ApplyGroupPolicyModel | apply policy setting (optional)
+$ApplyGroupPolicyModel = New-ApplyGroupPolicyModel -SubType $GroupPolicySubType -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false # ApplyGroupPolicyModel | apply policy setting (optional)
 
 # apply groups policy
 try {
@@ -111,9 +111,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $ApplySitePolicyModel = $LeaseDateType = New-LeaseDateType 
 $LeaseStartDateType = New-LeaseStartDateType 
 $HandleOngoingType = New-HandleOngoingType 
-$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType
+$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
 
-$ApplySitePolicyModel = New-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false # ApplySitePolicyModel | apply policy setting (optional)
+$ApplySitePolicyModel = New-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false # ApplySitePolicyModel | apply policy setting (optional)
 
 # apply site policy
 try {
@@ -172,7 +172,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $ArchiveWorkspaceParameter = $WorkspaceArchivedType = New-WorkspaceArchivedType 
-$ArchiveWorkspaceParameter = New-ArchiveWorkspaceParameter -ArchiveProfile "MyArchiveProfile" -ObjectIds "MyObjectIds" -WorkspaceType $WorkspaceArchivedType # ArchiveWorkspaceParameter |  (optional)
+
+$WorkspaceType = New-WorkspaceType 
+$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
+
+$ArchiveWorkspaceParameter = New-ArchiveWorkspaceParameter -ArchiveProfile "MyArchiveProfile" -WorkspaceType $WorkspaceArchivedType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel # ArchiveWorkspaceParameter |  (optional)
 
 # archive workspace
 try {
@@ -207,8 +211,7 @@ void (empty response body)
 <a name="Complete-WorkspaceRenewalTask"></a>
 # **Complete-WorkspaceRenewalTask**
 > void Complete-WorkspaceRenewalTask<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-MarkAsCanceled] <System.Nullable[Boolean]><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceIdTypeModel] <PSCustomObject[]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-AutoCompleteRenewalTaskParameter] <PSCustomObject><br>
 
 completed renewal task
 
@@ -231,13 +234,14 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$MarkAsCanceled = $true # Boolean |  (optional) (default to $false)
-$WorkspaceIdTypeModel = $WorkspaceType = New-WorkspaceType 
-$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType # WorkspaceIdTypeModel[] |  (optional)
+$AutoCompleteRenewalTaskParameter = $WorkspaceType = New-WorkspaceType 
+$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
+
+$AutoCompleteRenewalTaskParameter = New-AutoCompleteRenewalTaskParameter -IsMarkAsCanceled $false -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel # AutoCompleteRenewalTaskParameter |  (optional)
 
 # completed renewal task
 try {
-     $Result = Complete-WorkspaceRenewalTask -MarkAsCanceled $MarkAsCanceled -WorkspaceIdTypeModel $WorkspaceIdTypeModel
+     $Result = Complete-WorkspaceRenewalTask -AutoCompleteRenewalTaskParameter $AutoCompleteRenewalTaskParameter
 } catch {
     Write-Host ("Exception occured when calling Complete-WorkspaceRenewalTask: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -248,8 +252,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **MarkAsCanceled** | **Boolean**|  | [optional] [default to $false]
- **WorkspaceIdTypeModel** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **AutoCompleteRenewalTaskParameter** | [**AutoCompleteRenewalTaskParameter**](AutoCompleteRenewalTaskParameter.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -269,7 +272,7 @@ void (empty response body)
 <a name="Invoke-DeleteWorkspaces"></a>
 # **Invoke-DeleteWorkspaces**
 > void Invoke-DeleteWorkspaces<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceIdTypeModel] <PSCustomObject[]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-DeleteWorkspaceParameter] <PSCustomObject><br>
 
 delete workspaces
 
@@ -292,12 +295,14 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceIdTypeModel = $WorkspaceType = New-WorkspaceType 
-$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType # WorkspaceIdTypeModel[] |  (optional)
+$DeleteWorkspaceParameter = $WorkspaceType = New-WorkspaceType 
+$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
+
+$DeleteWorkspaceParameter = New-DeleteWorkspaceParameter -EnableRemoveObject $false -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel # DeleteWorkspaceParameter |  (optional)
 
 # delete workspaces
 try {
-     $Result = Invoke-DeleteWorkspaces -WorkspaceIdTypeModel $WorkspaceIdTypeModel
+     $Result = Invoke-DeleteWorkspaces -DeleteWorkspaceParameter $DeleteWorkspaceParameter
 } catch {
     Write-Host ("Exception occured when calling Invoke-DeleteWorkspaces: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -308,7 +313,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **WorkspaceIdTypeModel** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **DeleteWorkspaceParameter** | [**DeleteWorkspaceParameter**](DeleteWorkspaceParameter.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -417,8 +422,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
-$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
 $Search = "MySearch" # String | Search for name (optional)
 $Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
 $Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
@@ -437,8 +442,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
  **Search** | **String**| Search for name | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -490,7 +495,7 @@ $LockSiteParameter = $LockSiteCollectionType = New-LockSiteCollectionType
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$LockSiteParameter = New-LockSiteParameter -LockType $LockSiteCollectionType -Workspace $WorkspaceIdTypeModel # LockSiteParameter |  (optional)
+$LockSiteParameter = New-LockSiteParameter -LockType $LockSiteCollectionType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel # LockSiteParameter |  (optional)
 
 # lock sites or Office365 group sites
 try {
@@ -590,7 +595,7 @@ void (empty response body)
 <a name="Invoke-TriggerWorkspaceRenewal"></a>
 # **Invoke-TriggerWorkspaceRenewal**
 > void Invoke-TriggerWorkspaceRenewal<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceIdTypeModel] <PSCustomObject[]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceSendCancelEmailParameter] <PSCustomObject><br>
 
 trigger workspace renewal
 
@@ -613,12 +618,14 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceIdTypeModel = $WorkspaceType = New-WorkspaceType 
-$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType # WorkspaceIdTypeModel[] |  (optional)
+$WorkspaceSendCancelEmailParameter = $WorkspaceType = New-WorkspaceType 
+$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
+
+$WorkspaceSendCancelEmailParameter = New-WorkspaceSendCancelEmailParameter -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel # WorkspaceSendCancelEmailParameter |  (optional)
 
 # trigger workspace renewal
 try {
-     $Result = Invoke-TriggerWorkspaceRenewal -WorkspaceIdTypeModel $WorkspaceIdTypeModel
+     $Result = Invoke-TriggerWorkspaceRenewal -WorkspaceSendCancelEmailParameter $WorkspaceSendCancelEmailParameter
 } catch {
     Write-Host ("Exception occured when calling Invoke-TriggerWorkspaceRenewal: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -629,7 +636,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **WorkspaceIdTypeModel** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **WorkspaceSendCancelEmailParameter** | [**WorkspaceSendCancelEmailParameter**](WorkspaceSendCancelEmailParameter.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -649,7 +656,7 @@ void (empty response body)
 <a name="Unlock-Workspace"></a>
 # **Unlock-Workspace**
 > void Unlock-Workspace<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceIdTypeModel] <PSCustomObject[]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceActionParameter] <PSCustomObject><br>
 
 unlock sites and Office365 group site
 
@@ -672,12 +679,14 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceIdTypeModel = $WorkspaceType = New-WorkspaceType 
-$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType # WorkspaceIdTypeModel[] |  (optional)
+$WorkspaceActionParameter = $WorkspaceType = New-WorkspaceType 
+$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
+
+$WorkspaceActionParameter = New-WorkspaceActionParameter -Workspace $WorkspaceIdTypeModel # WorkspaceActionParameter |  (optional)
 
 # unlock sites and Office365 group site
 try {
-     $Result = Unlock-Workspace -WorkspaceIdTypeModel $WorkspaceIdTypeModel
+     $Result = Unlock-Workspace -WorkspaceActionParameter $WorkspaceActionParameter
 } catch {
     Write-Host ("Exception occured when calling Unlock-Workspace: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -688,7 +697,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **WorkspaceIdTypeModel** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **WorkspaceActionParameter** | [**WorkspaceActionParameter**](WorkspaceActionParameter.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

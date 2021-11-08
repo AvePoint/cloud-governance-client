@@ -76,10 +76,9 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns></returns>
-        void CompleteWorkspaceRenewalTask(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        void CompleteWorkspaceRenewalTask(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter));
 
         /// <summary>
         /// completed renewal task
@@ -88,17 +87,16 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter));
         /// <summary>
         /// delete workspaces
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <returns></returns>
-        void DeleteWorkspaces(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        void DeleteWorkspaces(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter));
 
         /// <summary>
         /// delete workspaces
@@ -107,9 +105,9 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWorkspacesWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        ApiResponse<Object> DeleteWorkspacesWithHttpInfo(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter));
         /// <summary>
         /// get workspace ongoing tasks
         /// </summary>
@@ -134,8 +132,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -150,8 +148,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -198,9 +196,9 @@ namespace Cloud.Governance.Client.Api
         /// trigger workspace renewal
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns></returns>
-        void TriggerWorkspaceRenewal(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        void TriggerWorkspaceRenewal(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter));
 
         /// <summary>
         /// trigger workspace renewal
@@ -209,16 +207,16 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter));
         /// <summary>
         /// unlock sites and Office365 group site
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <returns></returns>
-        void UnlockWorkspace(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        void UnlockWorkspace(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter));
 
         /// <summary>
         /// unlock sites and Office365 group site
@@ -227,9 +225,9 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UnlockWorkspaceWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>));
+        ApiResponse<Object> UnlockWorkspaceWithHttpInfo(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter));
         #endregion Synchronous Operations
     }
 
@@ -315,11 +313,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// completed renewal task
@@ -328,11 +325,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// delete workspaces
         /// </summary>
@@ -340,10 +336,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWorkspacesAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteWorkspacesAsync(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// delete workspaces
@@ -352,10 +348,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWithHttpInfoAsync(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get workspace ongoing tasks
         /// </summary>
@@ -388,8 +384,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -405,8 +401,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -467,10 +463,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// trigger workspace renewal
@@ -479,10 +475,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// unlock sites and Office365 group site
         /// </summary>
@@ -490,10 +486,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UnlockWorkspaceAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task UnlockWorkspaceAsync(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// unlock sites and Office365 group site
@@ -502,10 +498,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UnlockWorkspaceWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnlockWorkspaceWithHttpInfoAsync(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1011,22 +1007,20 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns></returns>
-        public void CompleteWorkspaceRenewalTask(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public void CompleteWorkspaceRenewalTask(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter))
         {
-            CompleteWorkspaceRenewalTaskWithHttpInfo(markAsCanceled, workspaceIdTypeModel);
+            CompleteWorkspaceRenewalTaskWithHttpInfo(autoCompleteRenewalTaskParameter);
         }
 
         /// <summary>
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1045,11 +1039,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (markAsCanceled != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "markAsCanceled", markAsCanceled));
-            }
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = autoCompleteRenewalTaskParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -1078,24 +1068,22 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await CompleteWorkspaceRenewalTaskWithHttpInfoAsync(markAsCanceled, workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
+            await CompleteWorkspaceRenewalTaskWithHttpInfoAsync(autoCompleteRenewalTaskParameter, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="markAsCanceled"> (optional, default to false)</param>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(bool? markAsCanceled = default(bool?), List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1116,11 +1104,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            if (markAsCanceled != null)
-            {
-                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "markAsCanceled", markAsCanceled));
-            }
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = autoCompleteRenewalTaskParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -1150,20 +1134,20 @@ namespace Cloud.Governance.Client.Api
         /// delete workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <returns></returns>
-        public void DeleteWorkspaces(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public void DeleteWorkspaces(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter))
         {
-            DeleteWorkspacesWithHttpInfo(workspaceIdTypeModel);
+            DeleteWorkspacesWithHttpInfo(deleteWorkspaceParameter);
         }
 
         /// <summary>
         /// delete workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> DeleteWorkspacesWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> DeleteWorkspacesWithHttpInfo(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1182,7 +1166,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = deleteWorkspaceParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -1211,22 +1195,22 @@ namespace Cloud.Governance.Client.Api
         /// delete workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkspacesAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task DeleteWorkspacesAsync(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await DeleteWorkspacesWithHttpInfoAsync(workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
+            await DeleteWorkspacesWithHttpInfoAsync(deleteWorkspaceParameter, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// delete workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="deleteWorkspaceParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> DeleteWorkspacesWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> DeleteWorkspacesWithHttpInfoAsync(DeleteWorkspaceParameter deleteWorkspaceParameter = default(DeleteWorkspaceParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1247,7 +1231,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = deleteWorkspaceParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -1420,8 +1404,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -1437,8 +1421,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -1515,8 +1499,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -1533,8 +1517,8 @@ namespace Cloud.Governance.Client.Api
         /// get managed workspaces 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)</param>
         /// <param name="search">Search for name (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -1869,20 +1853,20 @@ namespace Cloud.Governance.Client.Api
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns></returns>
-        public void TriggerWorkspaceRenewal(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public void TriggerWorkspaceRenewal(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter))
         {
-            TriggerWorkspaceRenewalWithHttpInfo(workspaceIdTypeModel);
+            TriggerWorkspaceRenewalWithHttpInfo(workspaceSendCancelEmailParameter);
         }
 
         /// <summary>
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1901,7 +1885,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = workspaceSendCancelEmailParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -1930,22 +1914,22 @@ namespace Cloud.Governance.Client.Api
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await TriggerWorkspaceRenewalWithHttpInfoAsync(workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
+            await TriggerWorkspaceRenewalWithHttpInfoAsync(workspaceSendCancelEmailParameter, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1966,7 +1950,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = workspaceSendCancelEmailParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -1996,20 +1980,20 @@ namespace Cloud.Governance.Client.Api
         /// unlock sites and Office365 group site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <returns></returns>
-        public void UnlockWorkspace(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public void UnlockWorkspace(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter))
         {
-            UnlockWorkspaceWithHttpInfo(workspaceIdTypeModel);
+            UnlockWorkspaceWithHttpInfo(workspaceActionParameter);
         }
 
         /// <summary>
         /// unlock sites and Office365 group site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> UnlockWorkspaceWithHttpInfo(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> UnlockWorkspaceWithHttpInfo(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2028,7 +2012,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = workspaceActionParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -2057,22 +2041,22 @@ namespace Cloud.Governance.Client.Api
         /// unlock sites and Office365 group site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UnlockWorkspaceAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task UnlockWorkspaceAsync(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await UnlockWorkspaceWithHttpInfoAsync(workspaceIdTypeModel, cancellationToken).ConfigureAwait(false);
+            await UnlockWorkspaceWithHttpInfoAsync(workspaceActionParameter, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// unlock sites and Office365 group site 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="workspaceIdTypeModel"> (optional)</param>
+        /// <param name="workspaceActionParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> UnlockWorkspaceWithHttpInfoAsync(List<WorkspaceIdTypeModel> workspaceIdTypeModel = default(List<WorkspaceIdTypeModel>), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> UnlockWorkspaceWithHttpInfoAsync(WorkspaceActionParameter workspaceActionParameter = default(WorkspaceActionParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -2093,7 +2077,7 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
-            localVarRequestOptions.Data = workspaceIdTypeModel;
+            localVarRequestOptions.Data = workspaceActionParameter;
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))

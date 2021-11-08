@@ -24,21 +24,30 @@ namespace Cloud.Governance.Client.Model
     public partial class PersonalSettingsPropertyInfo : IEquatable<PersonalSettingsPropertyInfo>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets Theme
+        /// Gets or Sets ThemeType
         /// </summary>
-        [DataMember(Name = "theme", EmitDefaultValue = false)]
-        public ThemeType? Theme { get; set; }
+        [DataMember(Name = "themeType", EmitDefaultValue = false)]
+        public ThemeSettingType? ThemeType { get; set; }
+
+        /// <summary>
+        /// Returns false as ThemeType should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeThemeType()
+        {
+            return false;
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="PersonalSettingsPropertyInfo" /> class.
         /// </summary>
-        /// <param name="theme">theme.</param>
         /// <param name="selectedLanguages">selectedLanguages.</param>
         /// <param name="isUsingBrowserLanguage">isUsingBrowserLanguage (default to false).</param>
-        public PersonalSettingsPropertyInfo(ThemeType? theme = default(ThemeType?), List<int> selectedLanguages = default(List<int>), bool isUsingBrowserLanguage = false)
+        /// <param name="themeCode">themeCode.</param>
+        public PersonalSettingsPropertyInfo(List<int> selectedLanguages = default(List<int>), bool isUsingBrowserLanguage = false, string themeCode = default(string))
         {
-            this.Theme = theme;
             this.SelectedLanguages = selectedLanguages;
             this.IsUsingBrowserLanguage = isUsingBrowserLanguage;
+            this.ThemeCode = themeCode;
         }
 
         /// <summary>
@@ -54,6 +63,12 @@ namespace Cloud.Governance.Client.Model
         public bool IsUsingBrowserLanguage { get; set; }
 
         /// <summary>
+        /// Gets or Sets ThemeCode
+        /// </summary>
+        [DataMember(Name = "themeCode", EmitDefaultValue = true)]
+        public string ThemeCode { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -61,9 +76,10 @@ namespace Cloud.Governance.Client.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PersonalSettingsPropertyInfo {\n");
-            sb.Append("  Theme: ").Append(Theme).Append("\n");
             sb.Append("  SelectedLanguages: ").Append(SelectedLanguages).Append("\n");
             sb.Append("  IsUsingBrowserLanguage: ").Append(IsUsingBrowserLanguage).Append("\n");
+            sb.Append("  ThemeCode: ").Append(ThemeCode).Append("\n");
+            sb.Append("  ThemeType: ").Append(ThemeType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,10 +115,6 @@ namespace Cloud.Governance.Client.Model
 
             return 
                 (
-                    this.Theme == input.Theme ||
-                    this.Theme.Equals(input.Theme)
-                ) && 
-                (
                     this.SelectedLanguages == input.SelectedLanguages ||
                     this.SelectedLanguages != null &&
                     input.SelectedLanguages != null &&
@@ -111,6 +123,15 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.IsUsingBrowserLanguage == input.IsUsingBrowserLanguage ||
                     this.IsUsingBrowserLanguage.Equals(input.IsUsingBrowserLanguage)
+                ) && 
+                (
+                    this.ThemeCode == input.ThemeCode ||
+                    (this.ThemeCode != null &&
+                    this.ThemeCode.Equals(input.ThemeCode))
+                ) && 
+                (
+                    this.ThemeType == input.ThemeType ||
+                    this.ThemeType.Equals(input.ThemeType)
                 );
         }
 
@@ -123,10 +144,12 @@ namespace Cloud.Governance.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                hashCode = hashCode * 59 + this.Theme.GetHashCode();
                 if (this.SelectedLanguages != null)
                     hashCode = hashCode * 59 + this.SelectedLanguages.GetHashCode();
                 hashCode = hashCode * 59 + this.IsUsingBrowserLanguage.GetHashCode();
+                if (this.ThemeCode != null)
+                    hashCode = hashCode * 59 + this.ThemeCode.GetHashCode();
+                hashCode = hashCode * 59 + this.ThemeType.GetHashCode();
                 return hashCode;
             }
         }

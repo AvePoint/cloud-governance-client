@@ -81,7 +81,10 @@ function New-TaskList {
         ${AllowEdit} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ProgressStatus} = "None"
+        ${ProgressStatus} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${BatchId}
     )
 
     Process {
@@ -114,6 +117,7 @@ function New-TaskList {
             "ProfileId" = ${ProfileId}
             "AllowEdit" = ${AllowEdit}
             "ProgressStatus" = ${ProgressStatus}
+            "BatchId" = ${BatchId}
         }
 
         return $PSO
@@ -136,7 +140,7 @@ function ConvertFrom-JsonToTaskList {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in TaskList
-        $AllProperties = $("Id", "Title", "Requester", "RequestId", "RequestTicketNumber", "RequesterDisplayName", "RequesterEmail", "DueDate", "DueDateType", "ServiceType", "ServiceTypeDescription", "CreatedTime", "TaskType", "Status", "StatusDescription", "TaskFullPath", "LastUpdated", "Category", "CategoryDisplayName", "ServiceName", "ObjectId", "ProfileId", "AllowEdit", "ProgressStatus")
+        $AllProperties = $("Id", "Title", "Requester", "RequestId", "RequestTicketNumber", "RequesterDisplayName", "RequesterEmail", "DueDate", "DueDateType", "ServiceType", "ServiceTypeDescription", "CreatedTime", "TaskType", "Status", "StatusDescription", "TaskFullPath", "LastUpdated", "Category", "CategoryDisplayName", "ServiceName", "ObjectId", "ProfileId", "AllowEdit", "ProgressStatus", "BatchId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -287,6 +291,12 @@ function ConvertFrom-JsonToTaskList {
             $ProgressStatus = $JsonParameters.PSobject.Properties["ProgressStatus"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "BatchId"))) { #optional property not found
+            $BatchId = $null
+        } else {
+            $BatchId = $JsonParameters.PSobject.Properties["BatchId"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Title" = ${Title}
@@ -312,6 +322,7 @@ function ConvertFrom-JsonToTaskList {
             "ProfileId" = ${ProfileId}
             "AllowEdit" = ${AllowEdit}
             "ProgressStatus" = ${ProgressStatus}
+            "BatchId" = ${BatchId}
         }
 
         return $PSO

@@ -264,10 +264,7 @@ completed renewal task
 
 No description available.
 
-.PARAMETER MarkAsCanceled
-No description available.
-
-.PARAMETER WorkspaceIdTypeModel
+.PARAMETER AutoCompleteRenewalTaskParameter
 No description available.
 
 .PARAMETER WithHttpInfo
@@ -282,11 +279,8 @@ function Complete-WorkspaceRenewalTask {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [System.Nullable[Boolean]]
-        ${MarkAsCanceled},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [PSCustomObject[]]
-        ${WorkspaceIdTypeModel},
+        [PSCustomObject]
+        ${AutoCompleteRenewalTaskParameter},
         [Switch]
         $WithHttpInfo
     )
@@ -313,11 +307,7 @@ function Complete-WorkspaceRenewalTask {
 
         $LocalVarUri = '/admin/directory/workspace/renewal/complete'
 
-        if ($MarkAsCanceled) {
-            $LocalVarQueryParameters['markAsCanceled'] = $MarkAsCanceled
-        }
-
-        $LocalVarBodyParameter = $WorkspaceIdTypeModel | ConvertTo-Json -Depth 100
+        $LocalVarBodyParameter = $AutoCompleteRenewalTaskParameter | ConvertTo-Json -Depth 100
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -358,7 +348,7 @@ delete workspaces
 
 No description available.
 
-.PARAMETER WorkspaceIdTypeModel
+.PARAMETER DeleteWorkspaceParameter
 No description available.
 
 .PARAMETER WithHttpInfo
@@ -373,8 +363,8 @@ function Invoke-DeleteWorkspaces {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [PSCustomObject[]]
-        ${WorkspaceIdTypeModel},
+        [PSCustomObject]
+        ${DeleteWorkspaceParameter},
         [Switch]
         $WithHttpInfo
     )
@@ -401,7 +391,7 @@ function Invoke-DeleteWorkspaces {
 
         $LocalVarUri = '/admin/directory/workspace'
 
-        $LocalVarBodyParameter = $WorkspaceIdTypeModel | ConvertTo-Json -Depth 100
+        $LocalVarBodyParameter = $DeleteWorkspaceParameter | ConvertTo-Json -Depth 100
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -549,10 +539,10 @@ get managed workspaces
 No description available.
 
 .PARAMETER Filter
-Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase
+Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase
 
 .PARAMETER Orderby
-Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase
+Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase
 
 .PARAMETER Search
 Search for name
@@ -849,7 +839,7 @@ trigger workspace renewal
 
 No description available.
 
-.PARAMETER WorkspaceIdTypeModel
+.PARAMETER WorkspaceSendCancelEmailParameter
 No description available.
 
 .PARAMETER WithHttpInfo
@@ -864,8 +854,8 @@ function Invoke-TriggerWorkspaceRenewal {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [PSCustomObject[]]
-        ${WorkspaceIdTypeModel},
+        [PSCustomObject]
+        ${WorkspaceSendCancelEmailParameter},
         [Switch]
         $WithHttpInfo
     )
@@ -892,7 +882,7 @@ function Invoke-TriggerWorkspaceRenewal {
 
         $LocalVarUri = '/admin/directory/workspace/renewal/trigger'
 
-        $LocalVarBodyParameter = $WorkspaceIdTypeModel | ConvertTo-Json -Depth 100
+        $LocalVarBodyParameter = $WorkspaceSendCancelEmailParameter | ConvertTo-Json -Depth 100
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -933,7 +923,7 @@ unlock sites and Office365 group site
 
 No description available.
 
-.PARAMETER WorkspaceIdTypeModel
+.PARAMETER WorkspaceActionParameter
 No description available.
 
 .PARAMETER WithHttpInfo
@@ -948,8 +938,8 @@ function Unlock-Workspace {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
-        [PSCustomObject[]]
-        ${WorkspaceIdTypeModel},
+        [PSCustomObject]
+        ${WorkspaceActionParameter},
         [Switch]
         $WithHttpInfo
     )
@@ -976,7 +966,7 @@ function Unlock-Workspace {
 
         $LocalVarUri = '/admin/directory/workspace/unlock'
 
-        $LocalVarBodyParameter = $WorkspaceIdTypeModel | ConvertTo-Json -Depth 100
+        $LocalVarBodyParameter = $WorkspaceActionParameter | ConvertTo-Json -Depth 100
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]

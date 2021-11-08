@@ -4,16 +4,20 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ArchiveProfile** | **String** | WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id | [optional] 
-**ObjectIds** | **String[]** | workspace ids | [optional] 
 **WorkspaceType** | [**WorkspaceArchivedType**](WorkspaceArchivedType.md) | workspace type | [optional] 
+**IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
+**CancelEmailTemplateId** | **String** |  | [optional] 
+**Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
 $ArchiveWorkspaceParameter = New-Cloud.Governance.ClientArchiveWorkspaceParameter  -ArchiveProfile null `
- -ObjectIds null `
- -WorkspaceType null
+ -WorkspaceType null `
+ -IsSendCancelEmail null `
+ -CancelEmailTemplateId null `
+ -Workspace null
 ```
 
 - Convert the resource to JSON

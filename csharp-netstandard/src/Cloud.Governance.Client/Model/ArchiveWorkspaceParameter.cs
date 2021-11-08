@@ -33,13 +33,17 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ArchiveWorkspaceParameter" /> class.
         /// </summary>
         /// <param name="archiveProfile">WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id.</param>
-        /// <param name="objectIds">workspace ids.</param>
         /// <param name="workspaceType">workspace type.</param>
-        public ArchiveWorkspaceParameter(string archiveProfile = default(string), List<Guid> objectIds = default(List<Guid>), WorkspaceArchivedType? workspaceType = default(WorkspaceArchivedType?))
+        /// <param name="isSendCancelEmail">isSendCancelEmail (default to false).</param>
+        /// <param name="cancelEmailTemplateId">cancelEmailTemplateId.</param>
+        /// <param name="workspace">workspace.</param>
+        public ArchiveWorkspaceParameter(string archiveProfile = default(string), WorkspaceArchivedType? workspaceType = default(WorkspaceArchivedType?), bool isSendCancelEmail = false, Guid cancelEmailTemplateId = default(Guid), List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>))
         {
             this.ArchiveProfile = archiveProfile;
-            this.ObjectIds = objectIds;
             this.WorkspaceType = workspaceType;
+            this.IsSendCancelEmail = isSendCancelEmail;
+            this.CancelEmailTemplateId = cancelEmailTemplateId;
+            this.Workspace = workspace;
         }
 
         /// <summary>
@@ -50,11 +54,22 @@ namespace Cloud.Governance.Client.Model
         public string ArchiveProfile { get; set; }
 
         /// <summary>
-        /// workspace ids
+        /// Gets or Sets IsSendCancelEmail
         /// </summary>
-        /// <value>workspace ids</value>
-        [DataMember(Name = "objectIds", EmitDefaultValue = true)]
-        public List<Guid> ObjectIds { get; set; }
+        [DataMember(Name = "isSendCancelEmail", EmitDefaultValue = false)]
+        public bool IsSendCancelEmail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CancelEmailTemplateId
+        /// </summary>
+        [DataMember(Name = "cancelEmailTemplateId", EmitDefaultValue = false)]
+        public Guid CancelEmailTemplateId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Workspace
+        /// </summary>
+        [DataMember(Name = "workspace", EmitDefaultValue = true)]
+        public List<WorkspaceIdTypeModel> Workspace { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -65,8 +80,10 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class ArchiveWorkspaceParameter {\n");
             sb.Append("  ArchiveProfile: ").Append(ArchiveProfile).Append("\n");
-            sb.Append("  ObjectIds: ").Append(ObjectIds).Append("\n");
             sb.Append("  WorkspaceType: ").Append(WorkspaceType).Append("\n");
+            sb.Append("  IsSendCancelEmail: ").Append(IsSendCancelEmail).Append("\n");
+            sb.Append("  CancelEmailTemplateId: ").Append(CancelEmailTemplateId).Append("\n");
+            sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,14 +124,23 @@ namespace Cloud.Governance.Client.Model
                     this.ArchiveProfile.Equals(input.ArchiveProfile))
                 ) && 
                 (
-                    this.ObjectIds == input.ObjectIds ||
-                    this.ObjectIds != null &&
-                    input.ObjectIds != null &&
-                    this.ObjectIds.SequenceEqual(input.ObjectIds)
-                ) && 
-                (
                     this.WorkspaceType == input.WorkspaceType ||
                     this.WorkspaceType.Equals(input.WorkspaceType)
+                ) && 
+                (
+                    this.IsSendCancelEmail == input.IsSendCancelEmail ||
+                    this.IsSendCancelEmail.Equals(input.IsSendCancelEmail)
+                ) && 
+                (
+                    this.CancelEmailTemplateId == input.CancelEmailTemplateId ||
+                    (this.CancelEmailTemplateId != null &&
+                    this.CancelEmailTemplateId.Equals(input.CancelEmailTemplateId))
+                ) && 
+                (
+                    this.Workspace == input.Workspace ||
+                    this.Workspace != null &&
+                    input.Workspace != null &&
+                    this.Workspace.SequenceEqual(input.Workspace)
                 );
         }
 
@@ -129,9 +155,12 @@ namespace Cloud.Governance.Client.Model
                 int hashCode = 41;
                 if (this.ArchiveProfile != null)
                     hashCode = hashCode * 59 + this.ArchiveProfile.GetHashCode();
-                if (this.ObjectIds != null)
-                    hashCode = hashCode * 59 + this.ObjectIds.GetHashCode();
                 hashCode = hashCode * 59 + this.WorkspaceType.GetHashCode();
+                hashCode = hashCode * 59 + this.IsSendCancelEmail.GetHashCode();
+                if (this.CancelEmailTemplateId != null)
+                    hashCode = hashCode * 59 + this.CancelEmailTemplateId.GetHashCode();
+                if (this.Workspace != null)
+                    hashCode = hashCode * 59 + this.Workspace.GetHashCode();
                 return hashCode;
             }
         }

@@ -290,7 +290,15 @@ namespace Cloud.Governance.Client.Model
 
         BulkRestartGuestRenewal = 552,
 
-        BulkSpecifyGuestOneTimeRenewal = 553
+        BulkSpecifyGuestOneTimeRenewal = 553,
+
+        RemoveGuestUser = 554,
+
+        RemoveWorkspace = 555,
+
+        CreatePrivateChannel = 556,
+
+        BulkApplyGroupExtensions = 557
 
     }
 

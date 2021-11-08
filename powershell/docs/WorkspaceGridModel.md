@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 **LastRenewalByEmail** | **String** |  | [optional] 
 **LastRenewalByDisplayName** | **String** |  | [optional] 
 **Sensitivity** | **String** |  | [optional] 
+**InsightsStatus** | [**InsightsStatus**](InsightsStatus.md) |  | [optional] 
 **PhaseAssigneeDisplayNames** | **String** |  | [optional] 
 **PhaseAssignees** | **String** |  | [optional] 
 **PhaseProfileName** | **String** |  | [optional] 
@@ -114,6 +115,7 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -LastRenewalByEmail null `
  -LastRenewalByDisplayName null `
  -Sensitivity null `
+ -InsightsStatus null `
  -PhaseAssigneeDisplayNames null `
  -PhaseAssignees null `
  -PhaseProfileName null `

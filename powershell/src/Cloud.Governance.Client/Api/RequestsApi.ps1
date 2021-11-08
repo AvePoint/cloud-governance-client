@@ -1894,6 +1894,101 @@ function Get-CreateListRequest {
 <#
 .SYNOPSIS
 
+get private channel request
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Id
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+CreatePrivateChannelRequest
+#>
+function Get-CreatePrivateChannelRequest {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${Id},
+        [String]
+        [ValidateSet("text/plain", "application/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Get-CreatePrivateChannelRequest' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/requests/createprivatechannel/{id}'
+        if (!$Id) {
+            throw "Error! The required parameter `Id` missing when calling getCreatePrivateChannelRequest."
+        }
+        $LocalVarUri = $LocalVarUri.replace('{id}', $Id)
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "CreatePrivateChannelRequest" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
 get create site request
 
 .DESCRIPTION
@@ -3366,6 +3461,9 @@ No description available.
 .PARAMETER Requestid
 No description available.
 
+.PARAMETER IncludeCompleted
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -3384,6 +3482,9 @@ function Get-Tasks {
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${Requestid},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IncludeCompleted},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -3418,6 +3519,10 @@ function Get-Tasks {
             throw "Error! The required parameter `Requestid` missing when calling getTasks."
         }
         $LocalVarUri = $LocalVarUri.replace('{requestid}', $Requestid)
+
+        if ($IncludeCompleted) {
+            $LocalVarQueryParameters['includeCompleted'] = $IncludeCompleted
+        }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -5443,6 +5548,102 @@ function Submit-CreateListRequest {
         $LocalVarUri = '/requests/createlist'
 
         $LocalVarBodyParameter = $CreateListRequest | ConvertTo-Json -Depth 100
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'POST' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "String" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+submit private channel request
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER CreatePrivateChannelRequest
+No description available.
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+String
+#>
+function Submit-CreatePrivateChannelRequest {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${CreatePrivateChannelRequest},
+        [String]
+        [ValidateSet("text/plain", "application/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Submit-CreatePrivateChannelRequest' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        # HTTP header 'Content-Type'
+        $LocalVarContentTypes = @('application/json')
+
+        $LocalVarUri = '/requests/createprivatechannel'
+
+        $LocalVarBodyParameter = $CreatePrivateChannelRequest | ConvertTo-Json -Depth 100
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]

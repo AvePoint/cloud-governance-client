@@ -75,7 +75,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="profileId">profileId.</param>
         /// <param name="allowEdit">allowEdit (default to false).</param>
         /// <param name="progressStatus">progressStatus.</param>
-        public TaskList(Guid id = default(Guid), string title = default(string), string requester = default(string), Guid requestId = default(Guid), int requestTicketNumber = 0, string requesterDisplayName = default(string), string requesterEmail = default(string), DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string), string taskFullPath = default(string), DateTime lastUpdated = default(DateTime), Guid? category = default(Guid?), string categoryDisplayName = default(string), string serviceName = default(string), Guid? objectId = default(Guid?), Guid? profileId = default(Guid?), bool allowEdit = false, RequestProgressStatus? progressStatus = default(RequestProgressStatus?))
+        /// <param name="batchId">batchId.</param>
+        public TaskList(Guid id = default(Guid), string title = default(string), string requester = default(string), Guid requestId = default(Guid), int requestTicketNumber = 0, string requesterDisplayName = default(string), string requesterEmail = default(string), DateTime? dueDate = default(DateTime?), DueDateType? dueDateType = default(DueDateType?), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), DateTime createdTime = default(DateTime), TaskType? taskType = default(TaskType?), TaskResult? status = default(TaskResult?), string statusDescription = default(string), string taskFullPath = default(string), DateTime lastUpdated = default(DateTime), Guid? category = default(Guid?), string categoryDisplayName = default(string), string serviceName = default(string), Guid? objectId = default(Guid?), Guid? profileId = default(Guid?), bool allowEdit = false, RequestProgressStatus? progressStatus = default(RequestProgressStatus?), Guid batchId = default(Guid))
         {
             this.Id = id;
             this.Title = title;
@@ -101,6 +102,7 @@ namespace Cloud.Governance.Client.Model
             this.ProfileId = profileId;
             this.AllowEdit = allowEdit;
             this.ProgressStatus = progressStatus;
+            this.BatchId = batchId;
         }
 
         /// <summary>
@@ -218,6 +220,12 @@ namespace Cloud.Governance.Client.Model
         public bool AllowEdit { get; set; }
 
         /// <summary>
+        /// Gets or Sets BatchId
+        /// </summary>
+        [DataMember(Name = "batchId", EmitDefaultValue = false)]
+        public Guid BatchId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -249,6 +257,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ProfileId: ").Append(ProfileId).Append("\n");
             sb.Append("  AllowEdit: ").Append(AllowEdit).Append("\n");
             sb.Append("  ProgressStatus: ").Append(ProgressStatus).Append("\n");
+            sb.Append("  BatchId: ").Append(BatchId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -395,6 +404,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.ProgressStatus == input.ProgressStatus ||
                     this.ProgressStatus.Equals(input.ProgressStatus)
+                ) && 
+                (
+                    this.BatchId == input.BatchId ||
+                    (this.BatchId != null &&
+                    this.BatchId.Equals(input.BatchId))
                 );
         }
 
@@ -448,6 +462,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.ProfileId.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowEdit.GetHashCode();
                 hashCode = hashCode * 59 + this.ProgressStatus.GetHashCode();
+                if (this.BatchId != null)
+                    hashCode = hashCode * 59 + this.BatchId.GetHashCode();
                 return hashCode;
             }
         }

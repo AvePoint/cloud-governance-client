@@ -61,14 +61,6 @@ function New-CreateListRequest {
         'Creating PSCustomObject: Cloud.Governance.Client => CreateListRequest' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
-        if (!$Summary -and $Summary.length -gt 255) {
-            throw "invalid value for 'Summary', the character length must be smaller than or equal to 255."
-        }
-
-        if (!$NotesToApprovers -and $NotesToApprovers.length -gt 1000) {
-            throw "invalid value for 'NotesToApprovers', the character length must be smaller than or equal to 1000."
-        }
-
         
         $PSO = [PSCustomObject]@{
             "ListTitle" = ${ListTitle}

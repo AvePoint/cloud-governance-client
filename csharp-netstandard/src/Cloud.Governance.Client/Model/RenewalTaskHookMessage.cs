@@ -24,6 +24,12 @@ namespace Cloud.Governance.Client.Model
     public partial class RenewalTaskHookMessage : IEquatable<RenewalTaskHookMessage>, IValidatableObject
     {
         /// <summary>
+        /// Type enum of the workspace, availabe values:SiteCollection,Group,Team,GuestUser,Yammer
+        /// </summary>
+        /// <value>Type enum of the workspace, availabe values:SiteCollection,Group,Team,GuestUser,Yammer</value>
+        [DataMember(Name = "objectTypeEnum", EmitDefaultValue = false)]
+        public HookMessageObjectType? ObjectTypeEnum { get; set; }
+        /// <summary>
         /// Event type that being triggered, available values and corresponding messages:    RequestSubmitted,RequestCompleted,RequestCancelled - -- -&gt; RequestHookMessage  TaskCreated,TaskApproved,TaskRejected,ErrorTaskCreated,TaskRetried,TaskSkipped - -- -&gt; TaskHookMessage  RenewalSuccess RenewalException,RenewalOverdue - -- -&gt; RenewalTaskHookMessage  FullyAutoImportSuccess,ConfirmDetailSuccess - -- -&gt; AutoImportProcessHookMessage  ElectionCompleted,ElectionOverdue - --&gt; ElectionHookMessage  LifecycleInactiveTaskCreated,LifecycleLeaseTaskCreated - -- -&gt; ElectionOverdue
         /// </summary>
         /// <value>Event type that being triggered, available values and corresponding messages:    RequestSubmitted,RequestCompleted,RequestCancelled - -- -&gt; RequestHookMessage  TaskCreated,TaskApproved,TaskRejected,ErrorTaskCreated,TaskRetried,TaskSkipped - -- -&gt; TaskHookMessage  RenewalSuccess RenewalException,RenewalOverdue - -- -&gt; RenewalTaskHookMessage  FullyAutoImportSuccess,ConfirmDetailSuccess - -- -&gt; AutoImportProcessHookMessage  ElectionCompleted,ElectionOverdue - --&gt; ElectionHookMessage  LifecycleInactiveTaskCreated,LifecycleLeaseTaskCreated - -- -&gt; ElectionOverdue</value>
@@ -48,7 +54,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="objectUrl">URL of the workspace.</param>
         /// <param name="objectId">The unique ID of the workspace.</param>
         /// <param name="summary">Request or task summary.</param>
-        public RenewalTaskHookMessage(DateTime? phaseStartTime = default(DateTime?), string renewalProfileName = default(string), string message = default(string), DateTime? dueDate = default(DateTime?), string assigneeDisplayName = default(string), string assigneeIdentityName = default(string), string taskLink = default(string), string objectTitle = default(string), string objectType = default(string), string objectTypeEnum = default(string), string groupEmail = default(string), TriggerType? triggerType = default(TriggerType?), DateTime triggerTime = default(DateTime), string objectUrl = default(string), Guid? objectId = default(Guid?), string summary = default(string))
+        public RenewalTaskHookMessage(DateTime? phaseStartTime = default(DateTime?), string renewalProfileName = default(string), string message = default(string), DateTime? dueDate = default(DateTime?), string assigneeDisplayName = default(string), string assigneeIdentityName = default(string), string taskLink = default(string), string objectTitle = default(string), string objectType = default(string), HookMessageObjectType? objectTypeEnum = default(HookMessageObjectType?), string groupEmail = default(string), TriggerType? triggerType = default(TriggerType?), DateTime triggerTime = default(DateTime), string objectUrl = default(string), Guid? objectId = default(Guid?), string summary = default(string))
         {
             this.PhaseStartTime = phaseStartTime;
             this.RenewalProfileName = renewalProfileName;
@@ -130,13 +136,6 @@ namespace Cloud.Governance.Client.Model
         /// <value>Type of the workspace</value>
         [DataMember(Name = "objectType", EmitDefaultValue = true)]
         public string ObjectType { get; set; }
-
-        /// <summary>
-        /// Type enum of the workspace, availabe values:SiteCollection,Group,Team,GuestUser,Yammer
-        /// </summary>
-        /// <value>Type enum of the workspace, availabe values:SiteCollection,Group,Team,GuestUser,Yammer</value>
-        [DataMember(Name = "objectTypeEnum", EmitDefaultValue = true)]
-        public string ObjectTypeEnum { get; set; }
 
         /// <summary>
         /// E-mail address of the workspace
@@ -278,8 +277,7 @@ namespace Cloud.Governance.Client.Model
                 ) && 
                 (
                     this.ObjectTypeEnum == input.ObjectTypeEnum ||
-                    (this.ObjectTypeEnum != null &&
-                    this.ObjectTypeEnum.Equals(input.ObjectTypeEnum))
+                    this.ObjectTypeEnum.Equals(input.ObjectTypeEnum)
                 ) && 
                 (
                     this.GroupEmail == input.GroupEmail ||
@@ -339,8 +337,7 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.ObjectTitle.GetHashCode();
                 if (this.ObjectType != null)
                     hashCode = hashCode * 59 + this.ObjectType.GetHashCode();
-                if (this.ObjectTypeEnum != null)
-                    hashCode = hashCode * 59 + this.ObjectTypeEnum.GetHashCode();
+                hashCode = hashCode * 59 + this.ObjectTypeEnum.GetHashCode();
                 if (this.GroupEmail != null)
                     hashCode = hashCode * 59 + this.GroupEmail.GetHashCode();
                 hashCode = hashCode * 59 + this.TriggerType.GetHashCode();

@@ -43,7 +43,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="filter">filter.</param>
         /// <param name="selectedObjects">selectedObjects.</param>
         /// <param name="hasOngoingTasks">hasOngoingTasks (default to false).</param>
-        public ApplyGroupPolicyModel(GroupPolicySubType? subType = default(GroupPolicySubType?), Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false)
+        /// <param name="isApplyUniqueAccess">isApplyUniqueAccess (default to false).</param>
+        public ApplyGroupPolicyModel(GroupPolicySubType? subType = default(GroupPolicySubType?), Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false, bool isApplyUniqueAccess = false)
         {
             this.SubType = subType;
             this.PolicyId = policyId;
@@ -57,6 +58,7 @@ namespace Cloud.Governance.Client.Model
             this.Filter = filter;
             this.SelectedObjects = selectedObjects;
             this.HasOngoingTasks = hasOngoingTasks;
+            this.IsApplyUniqueAccess = isApplyUniqueAccess;
         }
 
         /// <summary>
@@ -126,6 +128,12 @@ namespace Cloud.Governance.Client.Model
         public bool HasOngoingTasks { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsApplyUniqueAccess
+        /// </summary>
+        [DataMember(Name = "isApplyUniqueAccess", EmitDefaultValue = false)]
+        public bool IsApplyUniqueAccess { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -145,6 +153,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             sb.Append("  SelectedObjects: ").Append(SelectedObjects).Append("\n");
             sb.Append("  HasOngoingTasks: ").Append(HasOngoingTasks).Append("\n");
+            sb.Append("  IsApplyUniqueAccess: ").Append(IsApplyUniqueAccess).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -231,6 +240,10 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.HasOngoingTasks == input.HasOngoingTasks ||
                     this.HasOngoingTasks.Equals(input.HasOngoingTasks)
+                ) && 
+                (
+                    this.IsApplyUniqueAccess == input.IsApplyUniqueAccess ||
+                    this.IsApplyUniqueAccess.Equals(input.IsApplyUniqueAccess)
                 );
         }
 
@@ -259,6 +272,7 @@ namespace Cloud.Governance.Client.Model
                 if (this.SelectedObjects != null)
                     hashCode = hashCode * 59 + this.SelectedObjects.GetHashCode();
                 hashCode = hashCode * 59 + this.HasOngoingTasks.GetHashCode();
+                hashCode = hashCode * 59 + this.IsApplyUniqueAccess.GetHashCode();
                 return hashCode;
             }
         }

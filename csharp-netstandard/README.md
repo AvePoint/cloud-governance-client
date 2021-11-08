@@ -47,12 +47,12 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
             
-            var workspaceIdTypeModel = new List<WorkspaceIdTypeModel>(); // List<WorkspaceIdTypeModel> |  (optional) 
+            var workspaceActionParameter = new WorkspaceActionParameter(); // WorkspaceActionParameter |  (optional) 
 
             try
             {
                 // unlock sites and Office365 group site
-                apiInstance.UnlockWorkspace(workspaceIdTypeModel);
+                apiInstance.UnlockWorkspace(workspaceActionParameter);
             }
             catch (ApiException e)
             {
@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetCreateGroupRequest**](docs/RequestsApi.md#getcreategrouprequest) | **GET** /requests/creategroup/{id} | get create group request
 *RequestsApi* | [**GetCreateGuestUserRequest**](docs/RequestsApi.md#getcreateguestuserrequest) | **GET** /requests/createguestuser/{id} | get create guest user request
 *RequestsApi* | [**GetCreateListRequest**](docs/RequestsApi.md#getcreatelistrequest) | **GET** /requests/createlist/{id} | get create list request
+*RequestsApi* | [**GetCreatePrivateChannelRequest**](docs/RequestsApi.md#getcreateprivatechannelrequest) | **GET** /requests/createprivatechannel/{id} | get private channel request
 *RequestsApi* | [**GetCreateSiteRequest**](docs/RequestsApi.md#getcreatesiterequest) | **GET** /requests/createsite/{id} | get create site request
 *RequestsApi* | [**GetCreateWebRequest**](docs/RequestsApi.md#getcreatewebrequest) | **GET** /requests/createweb/{id} | get create web request
 *RequestsApi* | [**GetCustomRequest**](docs/RequestsApi.md#getcustomrequest) | **GET** /requests/custom/{id} | get custom service request
@@ -159,6 +160,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**SubmitCreateGroupRequest**](docs/RequestsApi.md#submitcreategrouprequest) | **POST** /requests/creategroup | submit create group request
 *RequestsApi* | [**SubmitCreateGuestUserRequest**](docs/RequestsApi.md#submitcreateguestuserrequest) | **POST** /requests/createguestuser | submit create guest user request
 *RequestsApi* | [**SubmitCreateListRequest**](docs/RequestsApi.md#submitcreatelistrequest) | **POST** /requests/createlist | submit create list request
+*RequestsApi* | [**SubmitCreatePrivateChannelRequest**](docs/RequestsApi.md#submitcreateprivatechannelrequest) | **POST** /requests/createprivatechannel | submit private channel request
 *RequestsApi* | [**SubmitCreateSiteRequest**](docs/RequestsApi.md#submitcreatesiterequest) | **POST** /requests/createsite | submit create site collection request
 *RequestsApi* | [**SubmitCreateWebRequest**](docs/RequestsApi.md#submitcreatewebrequest) | **POST** /requests/createweb | submit create web request
 *RequestsApi* | [**SubmitCustomRequest**](docs/RequestsApi.md#submitcustomrequest) | **POST** /requests/custom | submit custom service request
@@ -186,6 +188,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**GetCreateGroupService**](docs/ServicesApi.md#getcreategroupservice) | **GET** /services/creategroup/{id} | get create group service
 *ServicesApi* | [**GetCreateGuestUserService**](docs/ServicesApi.md#getcreateguestuserservice) | **GET** /services/createguestuser/{id} | get create group service
 *ServicesApi* | [**GetCreateListService**](docs/ServicesApi.md#getcreatelistservice) | **GET** /services/createlist/{id} | get create list service
+*ServicesApi* | [**GetCreatePrivateChannelService**](docs/ServicesApi.md#getcreateprivatechannelservice) | **GET** /services/createprivatechannel/{id} | get private channel service detail
 *ServicesApi* | [**GetCreateSiteService**](docs/ServicesApi.md#getcreatesiteservice) | **GET** /services/createsite/{id} | get create site service
 *ServicesApi* | [**GetCreateWebService**](docs/ServicesApi.md#getcreatewebservice) | **GET** /services/createweb/{id} | get create web service
 *ServicesApi* | [**GetCustomService**](docs/ServicesApi.md#getcustomservice) | **GET** /services/custom/{id} | get custom service
@@ -215,6 +218,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**ValidateForManagePermissionService**](docs/ServicesApi.md#validateformanagepermissionservice) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 *ServicesApi* | [**ValidateForSiteLifecycleService**](docs/ServicesApi.md#validateforsitelifecycleservice) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 *ServicesApi* | [**ValidateForWebLifecycleService**](docs/ServicesApi.md#validateforweblifecycleservice) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+*ServicesApi* | [**ValidateTeamForCreatePrivateChannelService**](docs/ServicesApi.md#validateteamforcreateprivatechannelservice) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
 *ServicesAdminApi* | [**GetServices**](docs/ServicesAdminApi.md#getservices) | **GET** /admin/services | get all services
 *SettingsApi* | [**GetDynamicMembershipRuleItems**](docs/SettingsApi.md#getdynamicmembershipruleitems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
 *SettingsApi* | [**GetMyPersonalSettings**](docs/SettingsApi.md#getmypersonalsettings) | **GET** /settings/my | get my personal settings
@@ -320,6 +324,7 @@ Class | Method | HTTP request | Description
  - [Model.ArchiveWorkspaceParameter](docs/ArchiveWorkspaceParameter.md)
  - [Model.AssignBy](docs/AssignBy.md)
  - [Model.AuthenticationType](docs/AuthenticationType.md)
+ - [Model.AutoCompleteRenewalTaskParameter](docs/AutoCompleteRenewalTaskParameter.md)
  - [Model.AutoGenerateUrlSetting](docs/AutoGenerateUrlSetting.md)
  - [Model.AutoGenerateUrlType](docs/AutoGenerateUrlType.md)
  - [Model.AutoImportPhase](docs/AutoImportPhase.md)
@@ -393,6 +398,7 @@ Class | Method | HTTP request | Description
  - [Model.ContentMoveSPObject](docs/ContentMoveSPObject.md)
  - [Model.ContentMoveSPObjectMapping](docs/ContentMoveSPObjectMapping.md)
  - [Model.ContentMoveService](docs/ContentMoveService.md)
+ - [Model.ContentMoveUrlValidationParameter](docs/ContentMoveUrlValidationParameter.md)
  - [Model.ContentMoveUrlValidationResult](docs/ContentMoveUrlValidationResult.md)
  - [Model.ContructUrlSetting](docs/ContructUrlSetting.md)
  - [Model.ConvertHubSiteActionType](docs/ConvertHubSiteActionType.md)
@@ -410,6 +416,10 @@ Class | Method | HTTP request | Description
  - [Model.CreateListService](docs/CreateListService.md)
  - [Model.CreateListUrlSettings](docs/CreateListUrlSettings.md)
  - [Model.CreateListUrlValidationResult](docs/CreateListUrlValidationResult.md)
+ - [Model.CreatePrivateChannelCheckResult](docs/CreatePrivateChannelCheckResult.md)
+ - [Model.CreatePrivateChannelRequest](docs/CreatePrivateChannelRequest.md)
+ - [Model.CreatePrivateChannelService](docs/CreatePrivateChannelService.md)
+ - [Model.CreatePrivateChannelValidationParameter](docs/CreatePrivateChannelValidationParameter.md)
  - [Model.CreateSiteRequest](docs/CreateSiteRequest.md)
  - [Model.CreateSiteService](docs/CreateSiteService.md)
  - [Model.CreateWebRequest](docs/CreateWebRequest.md)
@@ -425,6 +435,7 @@ Class | Method | HTTP request | Description
  - [Model.DeleteSiteRequest](docs/DeleteSiteRequest.md)
  - [Model.DeleteType](docs/DeleteType.md)
  - [Model.DeleteWebLifecycleRequest](docs/DeleteWebLifecycleRequest.md)
+ - [Model.DeleteWorkspaceParameter](docs/DeleteWorkspaceParameter.md)
  - [Model.DeploymentManagerPlanSettings](docs/DeploymentManagerPlanSettings.md)
  - [Model.DisplayInReportType](docs/DisplayInReportType.md)
  - [Model.DpmServiceSetting](docs/DpmServiceSetting.md)
@@ -493,10 +504,12 @@ Class | Method | HTTP request | Description
  - [Model.GuidModel](docs/GuidModel.md)
  - [Model.HandleOngoingType](docs/HandleOngoingType.md)
  - [Model.HookMessageList](docs/HookMessageList.md)
+ - [Model.HookMessageObjectType](docs/HookMessageObjectType.md)
  - [Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
  - [Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Model.HubSiteType](docs/HubSiteType.md)
  - [Model.InlineResponse200](docs/InlineResponse200.md)
+ - [Model.InsightsStatus](docs/InsightsStatus.md)
  - [Model.IntModel](docs/IntModel.md)
  - [Model.InviteType](docs/InviteType.md)
  - [Model.ItemConflictResolutionType](docs/ItemConflictResolutionType.md)
@@ -639,7 +652,7 @@ Class | Method | HTTP request | Description
  - [Model.TermsValue](docs/TermsValue.md)
  - [Model.TextModel](docs/TextModel.md)
  - [Model.TextValidationRuleRef](docs/TextValidationRuleRef.md)
- - [Model.ThemeType](docs/ThemeType.md)
+ - [Model.ThemeSettingType](docs/ThemeSettingType.md)
  - [Model.TreeNode](docs/TreeNode.md)
  - [Model.TreeNodeExtension](docs/TreeNodeExtension.md)
  - [Model.TreeNodeType](docs/TreeNodeType.md)
@@ -670,6 +683,7 @@ Class | Method | HTTP request | Description
  - [Model.WorkerJobModel](docs/WorkerJobModel.md)
  - [Model.WorkerObjectType](docs/WorkerObjectType.md)
  - [Model.WorksapceOngoingTasksModel](docs/WorksapceOngoingTasksModel.md)
+ - [Model.WorkspaceActionParameter](docs/WorkspaceActionParameter.md)
  - [Model.WorkspaceArchivedType](docs/WorkspaceArchivedType.md)
  - [Model.WorkspaceGridModel](docs/WorkspaceGridModel.md)
  - [Model.WorkspaceGridModelPageResult](docs/WorkspaceGridModelPageResult.md)
@@ -678,6 +692,7 @@ Class | Method | HTTP request | Description
  - [Model.WorkspaceListPageResult](docs/WorkspaceListPageResult.md)
  - [Model.WorkspaceReport](docs/WorkspaceReport.md)
  - [Model.WorkspaceReportPageResult](docs/WorkspaceReportPageResult.md)
+ - [Model.WorkspaceSendCancelEmailParameter](docs/WorkspaceSendCancelEmailParameter.md)
  - [Model.WorkspaceStatus](docs/WorkspaceStatus.md)
  - [Model.WorkspaceType](docs/WorkspaceType.md)
  - [Model.YammerGroupJoinType](docs/YammerGroupJoinType.md)

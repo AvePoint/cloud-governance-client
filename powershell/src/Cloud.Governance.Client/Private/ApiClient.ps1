@@ -61,7 +61,7 @@ function Invoke-ApiClient {
     }
     $HeaderParameters["Accept-Encoding"]="gzip, deflate"
     $HeaderParameters["X-CLOUD-GOVERNANCE-JSONCONTRACT"]="PascalCase"
-    $HeaderParameters["User-Agent"]="(sdk/powershell/4.9.3)"
+    $HeaderParameters["User-Agent"]="(sdk/powershell/4.11.1)"
     $ContentType= SelectHeaders -Headers $ContentTypes
     if ($ContentType) {
         $HeaderParameters['Content-Type'] = $ContentType

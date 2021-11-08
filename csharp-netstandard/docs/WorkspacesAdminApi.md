@@ -265,7 +265,7 @@ void (empty response body)
 
 <a name="completeworkspacerenewaltask"></a>
 # **CompleteWorkspaceRenewalTask**
-> void CompleteWorkspaceRenewalTask (bool? markAsCanceled = null, List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
+> void CompleteWorkspaceRenewalTask (AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = null)
 
 completed renewal task
 
@@ -298,13 +298,12 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
-            var markAsCanceled = true;  // bool? |  (optional)  (default to false)
-            var workspaceIdTypeModel = new List<WorkspaceIdTypeModel>(); // List<WorkspaceIdTypeModel> |  (optional) 
+            var autoCompleteRenewalTaskParameter = new AutoCompleteRenewalTaskParameter(); // AutoCompleteRenewalTaskParameter |  (optional) 
 
             try
             {
                 // completed renewal task
-                apiInstance.CompleteWorkspaceRenewalTask(markAsCanceled, workspaceIdTypeModel);
+                apiInstance.CompleteWorkspaceRenewalTask(autoCompleteRenewalTaskParameter);
             }
             catch (ApiException  e)
             {
@@ -321,8 +320,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **markAsCanceled** | **bool?**|  | [optional] [default to false]
- **workspaceIdTypeModel** | [**List&lt;WorkspaceIdTypeModel&gt;**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **autoCompleteRenewalTaskParameter** | [**AutoCompleteRenewalTaskParameter**](AutoCompleteRenewalTaskParameter.md)|  | [optional] 
 
 ### Return type
 
@@ -349,7 +347,7 @@ void (empty response body)
 
 <a name="deleteworkspaces"></a>
 # **DeleteWorkspaces**
-> void DeleteWorkspaces (List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
+> void DeleteWorkspaces (DeleteWorkspaceParameter deleteWorkspaceParameter = null)
 
 delete workspaces
 
@@ -382,12 +380,12 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
-            var workspaceIdTypeModel = new List<WorkspaceIdTypeModel>(); // List<WorkspaceIdTypeModel> |  (optional) 
+            var deleteWorkspaceParameter = new DeleteWorkspaceParameter(); // DeleteWorkspaceParameter |  (optional) 
 
             try
             {
                 // delete workspaces
-                apiInstance.DeleteWorkspaces(workspaceIdTypeModel);
+                apiInstance.DeleteWorkspaces(deleteWorkspaceParameter);
             }
             catch (ApiException  e)
             {
@@ -404,7 +402,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspaceIdTypeModel** | [**List&lt;WorkspaceIdTypeModel&gt;**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **deleteWorkspaceParameter** | [**DeleteWorkspaceParameter**](DeleteWorkspaceParameter.md)|  | [optional] 
 
 ### Return type
 
@@ -549,8 +547,8 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
-            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional) 
-            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional) 
+            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional) 
+            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional) 
             var search = search_example;  // string | Search for name (optional) 
             var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
             var skip = skip_example;  // string |  Define the number of records you want to skip, default value is 0 (optional) 
@@ -577,8 +575,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
- **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
  **search** | **string**| Search for name | [optional] 
  **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **skip** | **string**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -773,7 +771,7 @@ void (empty response body)
 
 <a name="triggerworkspacerenewal"></a>
 # **TriggerWorkspaceRenewal**
-> void TriggerWorkspaceRenewal (List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
+> void TriggerWorkspaceRenewal (WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = null)
 
 trigger workspace renewal
 
@@ -806,12 +804,12 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
-            var workspaceIdTypeModel = new List<WorkspaceIdTypeModel>(); // List<WorkspaceIdTypeModel> |  (optional) 
+            var workspaceSendCancelEmailParameter = new WorkspaceSendCancelEmailParameter(); // WorkspaceSendCancelEmailParameter |  (optional) 
 
             try
             {
                 // trigger workspace renewal
-                apiInstance.TriggerWorkspaceRenewal(workspaceIdTypeModel);
+                apiInstance.TriggerWorkspaceRenewal(workspaceSendCancelEmailParameter);
             }
             catch (ApiException  e)
             {
@@ -828,7 +826,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspaceIdTypeModel** | [**List&lt;WorkspaceIdTypeModel&gt;**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **workspaceSendCancelEmailParameter** | [**WorkspaceSendCancelEmailParameter**](WorkspaceSendCancelEmailParameter.md)|  | [optional] 
 
 ### Return type
 
@@ -855,7 +853,7 @@ void (empty response body)
 
 <a name="unlockworkspace"></a>
 # **UnlockWorkspace**
-> void UnlockWorkspace (List<WorkspaceIdTypeModel> workspaceIdTypeModel = null)
+> void UnlockWorkspace (WorkspaceActionParameter workspaceActionParameter = null)
 
 unlock sites and Office365 group site
 
@@ -888,12 +886,12 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
-            var workspaceIdTypeModel = new List<WorkspaceIdTypeModel>(); // List<WorkspaceIdTypeModel> |  (optional) 
+            var workspaceActionParameter = new WorkspaceActionParameter(); // WorkspaceActionParameter |  (optional) 
 
             try
             {
                 // unlock sites and Office365 group site
-                apiInstance.UnlockWorkspace(workspaceIdTypeModel);
+                apiInstance.UnlockWorkspace(workspaceActionParameter);
             }
             catch (ApiException  e)
             {
@@ -910,7 +908,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workspaceIdTypeModel** | [**List&lt;WorkspaceIdTypeModel&gt;**](WorkspaceIdTypeModel.md)|  | [optional] 
+ **workspaceActionParameter** | [**WorkspaceActionParameter**](WorkspaceActionParameter.md)|  | [optional] 
 
 ### Return type
 

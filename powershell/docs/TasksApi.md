@@ -75,7 +75,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam =  New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # approve task
 try {
@@ -2951,8 +2951,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $TaskApprovalStatus = "0" # TaskApprovalStatus | 
-$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)
-$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId (optional)
 $Search = "MySearch" # String | Search for title (optional)
 $Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
 $Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
@@ -2972,8 +2972,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **TaskApprovalStatus** | [**TaskApprovalStatus**](TaskApprovalStatus.md)|  | 
- **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId | [optional] 
  **Search** | **String**| Search for title | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -3199,7 +3199,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam =  New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # reject task
 try {
@@ -3260,7 +3260,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam =  New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # retry error task
 try {
@@ -3321,7 +3321,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CommentsParam =  New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
+$CommentsParam = $CommentsParam = New-CommentsParam -Comments "MyComments" # CommentsParam |  (optional)
 
 # skip error task
 try {

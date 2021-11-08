@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**GetCreateGroupService**](ServicesApi.md#getcreategroupservice) | **GET** /services/creategroup/{id} | get create group service
 [**GetCreateGuestUserService**](ServicesApi.md#getcreateguestuserservice) | **GET** /services/createguestuser/{id} | get create group service
 [**GetCreateListService**](ServicesApi.md#getcreatelistservice) | **GET** /services/createlist/{id} | get create list service
+[**GetCreatePrivateChannelService**](ServicesApi.md#getcreateprivatechannelservice) | **GET** /services/createprivatechannel/{id} | get private channel service detail
 [**GetCreateSiteService**](ServicesApi.md#getcreatesiteservice) | **GET** /services/createsite/{id} | get create site service
 [**GetCreateWebService**](ServicesApi.md#getcreatewebservice) | **GET** /services/createweb/{id} | get create web service
 [**GetCustomService**](ServicesApi.md#getcustomservice) | **GET** /services/custom/{id} | get custom service
@@ -46,6 +47,7 @@ Method | HTTP request | Description
 [**ValidateForManagePermissionService**](ServicesApi.md#validateformanagepermissionservice) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 [**ValidateForSiteLifecycleService**](ServicesApi.md#validateforsitelifecycleservice) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 [**ValidateForWebLifecycleService**](ServicesApi.md#validateforweblifecycleservice) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+[**ValidateTeamForCreatePrivateChannelService**](ServicesApi.md#validateteamforcreateprivatechannelservice) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
 
 
 <a name="getchangegroupsettingservice"></a>
@@ -1147,6 +1149,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getcreateprivatechannelservice"></a>
+# **GetCreatePrivateChannelService**
+> CreatePrivateChannelService GetCreatePrivateChannelService (Guid id)
+
+get private channel service detail
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetCreatePrivateChannelServiceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var id = new Guid(); // Guid | 
+
+            try
+            {
+                // get private channel service detail
+                CreatePrivateChannelService result = apiInstance.GetCreatePrivateChannelService(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.GetCreatePrivateChannelService: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+
+### Return type
+
+[**CreatePrivateChannelService**](CreatePrivateChannelService.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getcreatesiteservice"></a>
 # **GetCreateSiteService**
 > CreateSiteService GetCreateSiteService (Guid id, Guid? questionnaireId = null)
@@ -1995,7 +2080,7 @@ Name | Type | Description  | Notes
 
 <a name="validateemailforcreateguestuserservice"></a>
 # **ValidateEmailForCreateGuestUserService**
-> ObjectValidateResult ValidateEmailForCreateGuestUserService (Guid id, string email)
+> ObjectValidateResult ValidateEmailForCreateGuestUserService (Guid id, string email, Guid? requestId = null)
 
 validate guest user email
 
@@ -2030,11 +2115,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var email = email_example;  // string | 
+            var requestId = new Guid?(); // Guid? |  (optional) 
 
             try
             {
                 // validate guest user email
-                ObjectValidateResult result = apiInstance.ValidateEmailForCreateGuestUserService(id, email);
+                ObjectValidateResult result = apiInstance.ValidateEmailForCreateGuestUserService(id, email, requestId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2054,6 +2140,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **email** | **string**|  | 
+ **requestId** | [**Guid?**](Guid?.md)|  | [optional] 
 
 ### Return type
 
@@ -2845,7 +2932,7 @@ Name | Type | Description  | Notes
 
 <a name="validateforcontentmoveservice"></a>
 # **ValidateForContentMoveService**
-> ContentMoveUrlValidationResult ValidateForContentMoveService (Guid id, SiteValidationParameter siteValidationParameter = null)
+> ContentMoveUrlValidationResult ValidateForContentMoveService (Guid id, ContentMoveUrlValidationParameter contentMoveUrlValidationParameter = null)
 
 validate permissions, scope for content move service
 
@@ -2879,12 +2966,12 @@ namespace Example
             var apiInstance = new ServicesApi(config);
 
             var id = new Guid(); // Guid | 
-            var siteValidationParameter = new SiteValidationParameter(); // SiteValidationParameter |  (optional) 
+            var contentMoveUrlValidationParameter = new ContentMoveUrlValidationParameter(); // ContentMoveUrlValidationParameter |  (optional) 
 
             try
             {
                 // validate permissions, scope for content move service
-                ContentMoveUrlValidationResult result = apiInstance.ValidateForContentMoveService(id, siteValidationParameter);
+                ContentMoveUrlValidationResult result = apiInstance.ValidateForContentMoveService(id, contentMoveUrlValidationParameter);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2903,7 +2990,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
- **siteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
+ **contentMoveUrlValidationParameter** | [**ContentMoveUrlValidationParameter**](ContentMoveUrlValidationParameter.md)|  | [optional] 
 
 ### Return type
 
@@ -3590,6 +3677,91 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WebLifecycleValidateResult**](WebLifecycleValidateResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateteamforcreateprivatechannelservice"></a>
+# **ValidateTeamForCreatePrivateChannelService**
+> CreatePrivateChannelCheckResult ValidateTeamForCreatePrivateChannelService (Guid serviceId, CreatePrivateChannelValidationParameter createPrivateChannelValidationParameter = null)
+
+validate teams for create private channel service
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateTeamForCreatePrivateChannelServiceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var createPrivateChannelValidationParameter = new CreatePrivateChannelValidationParameter(); // CreatePrivateChannelValidationParameter |  (optional) 
+
+            try
+            {
+                // validate teams for create private channel service
+                CreatePrivateChannelCheckResult result = apiInstance.ValidateTeamForCreatePrivateChannelService(serviceId, createPrivateChannelValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateTeamForCreatePrivateChannelService: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **createPrivateChannelValidationParameter** | [**CreatePrivateChannelValidationParameter**](CreatePrivateChannelValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**CreatePrivateChannelCheckResult**](CreatePrivateChannelCheckResult.md)
 
 ### Authorization
 
