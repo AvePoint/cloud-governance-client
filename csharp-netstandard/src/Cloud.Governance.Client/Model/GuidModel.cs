@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// GuidModel
+    /// GuidModel model
     /// </summary>
     [DataContract(Name = "GuidModel")]
     public partial class GuidModel : IEquatable<GuidModel>, IValidatableObject
@@ -26,9 +26,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GuidModel" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="description">description.</param>
+        /// <param name="id">Object ID.</param>
+        /// <param name="name">Object name.</param>
+        /// <param name="description">Object description.</param>
         public GuidModel(Guid id = default(Guid), string name = default(string), string description = default(string))
         {
             this.Id = id;
@@ -37,20 +37,23 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Object ID
         /// </summary>
+        /// <value>Object ID</value>
         [DataMember(Name = "id", EmitDefaultValue = false)]
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Object name
         /// </summary>
+        /// <value>Object name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Object description
         /// </summary>
+        /// <value>Object description</value>
         [DataMember(Name = "description", EmitDefaultValue = true)]
         public string Description { get; set; }
 

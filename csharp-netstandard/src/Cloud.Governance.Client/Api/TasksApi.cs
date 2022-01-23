@@ -842,6 +842,82 @@ namespace Cloud.Governance.Client.Api
         /// <param name="commentsParam"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SkipErrorTaskWithHttpInfo(Guid id, CommentsParam commentsParam = default(CommentsParam));
+        /// <summary>
+        /// submit group continue access auto task
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns></returns>
+        void SubmitContinueAccessGroupAutoTask(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam));
+
+        /// <summary>
+        /// submit group continue access auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SubmitContinueAccessGroupAutoTaskWithHttpInfo(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam));
+        /// <summary>
+        /// submit site continue access auto task
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns></returns>
+        void SubmitContinueAccessSiteAutoTask(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam));
+
+        /// <summary>
+        /// submit site continue access auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SubmitContinueAccessSiteAutoTaskWithHttpInfo(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam));
+        /// <summary>
+        /// submit extend group auto task
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns></returns>
+        void SubmitExtendGroupAutoTask(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest));
+
+        /// <summary>
+        /// submit extend group auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SubmitExtendGroupAutoTaskWithHttpInfo(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest));
+        /// <summary>
+        /// submit site extend auto task
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns></returns>
+        void SubmitExtendSiteAutoTask(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest));
+
+        /// <summary>
+        /// submit site extend auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SubmitExtendSiteAutoTaskWithHttpInfo(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest));
         #endregion Synchronous Operations
     }
 
@@ -1880,6 +1956,102 @@ namespace Cloud.Governance.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SkipErrorTaskWithHttpInfoAsync(Guid id, CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// submit group continue access auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SubmitContinueAccessGroupAutoTaskAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// submit group continue access auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SubmitContinueAccessGroupAutoTaskWithHttpInfoAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// submit site continue access auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SubmitContinueAccessSiteAutoTaskAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// submit site continue access auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SubmitContinueAccessSiteAutoTaskWithHttpInfoAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// submit extend group auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SubmitExtendGroupAutoTaskAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// submit extend group auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SubmitExtendGroupAutoTaskWithHttpInfoAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// submit site extend auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SubmitExtendSiteAutoTaskAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// submit site extend auto task
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SubmitExtendSiteAutoTaskWithHttpInfoAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -7509,6 +7681,538 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SkipErrorTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit group continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns></returns>
+        public void SubmitContinueAccessGroupAutoTask(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam))
+        {
+            SubmitContinueAccessGroupAutoTaskWithHttpInfo(id, commentsParam);
+        }
+
+        /// <summary>
+        /// submit group continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitContinueAccessGroupAutoTaskWithHttpInfo(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+            localVarRequestOptions.Data = commentsParam;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/tasks/continueaccessgroup", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitContinueAccessGroupAutoTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit group continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SubmitContinueAccessGroupAutoTaskAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await SubmitContinueAccessGroupAutoTaskWithHttpInfoAsync(id, commentsParam, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// submit group continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitContinueAccessGroupAutoTaskWithHttpInfoAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+            localVarRequestOptions.Data = commentsParam;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/tasks/continueaccessgroup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitContinueAccessGroupAutoTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit site continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns></returns>
+        public void SubmitContinueAccessSiteAutoTask(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam))
+        {
+            SubmitContinueAccessSiteAutoTaskWithHttpInfo(id, commentsParam);
+        }
+
+        /// <summary>
+        /// submit site continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitContinueAccessSiteAutoTaskWithHttpInfo(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+            localVarRequestOptions.Data = commentsParam;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/tasks/continueaccesssite", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitContinueAccessSiteAutoTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit site continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SubmitContinueAccessSiteAutoTaskAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await SubmitContinueAccessSiteAutoTaskWithHttpInfoAsync(id, commentsParam, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// submit site continue access auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"> (optional)</param>
+        /// <param name="commentsParam"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitContinueAccessSiteAutoTaskWithHttpInfoAsync(Guid? id = default(Guid?), CommentsParam commentsParam = default(CommentsParam), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (id != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "id", id));
+            }
+            localVarRequestOptions.Data = commentsParam;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/tasks/continueaccesssite", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitContinueAccessSiteAutoTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit extend group auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns></returns>
+        public void SubmitExtendGroupAutoTask(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest))
+        {
+            SubmitExtendGroupAutoTaskWithHttpInfo(autoTaskExtendRequest);
+        }
+
+        /// <summary>
+        /// submit extend group auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitExtendGroupAutoTaskWithHttpInfo(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = autoTaskExtendRequest;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/tasks/extendgroup", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitExtendGroupAutoTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit extend group auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SubmitExtendGroupAutoTaskAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await SubmitExtendGroupAutoTaskWithHttpInfoAsync(autoTaskExtendRequest, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// submit extend group auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitExtendGroupAutoTaskWithHttpInfoAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = autoTaskExtendRequest;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/tasks/extendgroup", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitExtendGroupAutoTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit site extend auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns></returns>
+        public void SubmitExtendSiteAutoTask(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest))
+        {
+            SubmitExtendSiteAutoTaskWithHttpInfo(autoTaskExtendRequest);
+        }
+
+        /// <summary>
+        /// submit site extend auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<Object> SubmitExtendSiteAutoTaskWithHttpInfo(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = autoTaskExtendRequest;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<Object>("/tasks/extendsite", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitExtendSiteAutoTask", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// submit site extend auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SubmitExtendSiteAutoTaskAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            await SubmitExtendSiteAutoTaskWithHttpInfoAsync(autoTaskExtendRequest, cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// submit site extend auto task 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="autoTaskExtendRequest"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SubmitExtendSiteAutoTaskWithHttpInfoAsync(AutoTaskExtendRequest autoTaskExtendRequest = default(AutoTaskExtendRequest), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.Data = autoTaskExtendRequest;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<Object>("/tasks/extendsite", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("SubmitExtendSiteAutoTask", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

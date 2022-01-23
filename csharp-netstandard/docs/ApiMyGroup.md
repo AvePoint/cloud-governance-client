@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **PreferredDataLocationName** | **string** |  | [optional] 
 **EnableDynamicMembership** | **bool** |  | [optional] [default to false]
 **GroupTeamSiteUrl** | **string** |  | [optional] 
+**QuotaSize** | **long** |  | [optional] [default to 0]
+**StorageUsed** | **string** |  | [optional] 
 **TeamLink** | **string** |  | [optional] 
 **NoteBookLink** | **string** |  | [optional] 
 **PlannerLink** | **string** |  | [optional] 

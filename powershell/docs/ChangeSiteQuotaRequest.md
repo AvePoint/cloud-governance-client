@@ -4,6 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **QuotaSize** | **Int32** | The new site collection quota size | [optional] [default to 0]
+**SharePointSiteSize** | **Double** | sharepoint site size | [optional] 
+**CurrentQuota** | **Double** | CurrentQuota | [optional] 
 **Action** | [**SiteLifecycleActionType**](SiteLifecycleActionType.md) | Lifecycle management action type | [optional] 
 **ActionDescription** | **String** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
 **SiteId** | **String** | Site collection ID | [optional] 
@@ -34,6 +36,8 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $ChangeSiteQuotaRequest = New-Cloud.Governance.ClientChangeSiteQuotaRequest  -QuotaSize null `
+ -SharePointSiteSize null `
+ -CurrentQuota null `
  -Action null `
  -ActionDescription null `
  -SiteId null `

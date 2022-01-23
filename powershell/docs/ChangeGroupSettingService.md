@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **EnableChangeClassification** | **Boolean** |  | [optional] [default to $false]
 **ClassificationList** | **String[]** |  | [optional] 
 **EnableChangeSensitivity** | **Boolean** |  | [optional] [default to $false]
-**SensitivityList** | **String[]** |  | [optional] 
+**SensitivityList** | [**StringModel[]**](StringModel.md) |  | [optional] 
 **EnableChangeMetadata** | **Boolean** |  | [optional] [default to $false]
 **EnableAddOrDeleteMetadata** | **Boolean** |  | [optional] [default to $false]
 **MetadataList** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 

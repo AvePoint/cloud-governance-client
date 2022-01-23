@@ -41,7 +41,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeSitePolicySetting" /> class.
         /// </summary>
-        /// <param name="currentPolicy">currentPolicy.</param>
+        /// <param name="currentPolicy">GuidModel model.</param>
         /// <param name="allPolicies">allPolicies.</param>
         /// <param name="changePolicyAssignBy">changePolicyAssignBy.</param>
         /// <param name="startDateType">startDateType.</param>
@@ -66,8 +66,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets CurrentPolicy
+        /// GuidModel model
         /// </summary>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "currentPolicy", EmitDefaultValue = true)]
         public GuidModel CurrentPolicy { get; set; }
 

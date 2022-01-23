@@ -26,6 +26,9 @@ function New-PersonalSettings {
         [System.Nullable[Boolean]]
         ${IsAdjustDaylight} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsDelegateAdmin} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Properties}
     )
@@ -41,6 +44,7 @@ function New-PersonalSettings {
             "LanguageID" = ${LanguageID}
             "TimeZoneID" = ${TimeZoneID}
             "IsAdjustDaylight" = ${IsAdjustDaylight}
+            "IsDelegateAdmin" = ${IsDelegateAdmin}
             "Properties" = ${Properties}
         }
 
@@ -64,7 +68,7 @@ function ConvertFrom-JsonToPersonalSettings {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in PersonalSettings
-        $AllProperties = $("Id", "UserID", "LanguageID", "TimeZoneID", "IsAdjustDaylight", "Properties")
+        $AllProperties = $("Id", "UserID", "LanguageID", "TimeZoneID", "IsAdjustDaylight", "IsDelegateAdmin", "Properties")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -101,6 +105,12 @@ function ConvertFrom-JsonToPersonalSettings {
             $IsAdjustDaylight = $JsonParameters.PSobject.Properties["IsAdjustDaylight"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsDelegateAdmin"))) { #optional property not found
+            $IsDelegateAdmin = $null
+        } else {
+            $IsDelegateAdmin = $JsonParameters.PSobject.Properties["IsDelegateAdmin"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Properties"))) { #optional property not found
             $Properties = $null
         } else {
@@ -113,6 +123,7 @@ function ConvertFrom-JsonToPersonalSettings {
             "LanguageID" = ${LanguageID}
             "TimeZoneID" = ${TimeZoneID}
             "IsAdjustDaylight" = ${IsAdjustDaylight}
+            "IsDelegateAdmin" = ${IsDelegateAdmin}
             "Properties" = ${Properties}
         }
 

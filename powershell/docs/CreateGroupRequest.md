@@ -19,7 +19,8 @@ Name | Type | Description | Notes
 **EnableTeamCollaboration** | **Boolean** | Enable a team for the group. | [optional] [default to $false]
 **Language** | **String** | The language of a group. You can get IDs and names of all available languages by invoking the GetCreateGroupServiceApi. | [optional] 
 **Classification** | **String** | Group classification | [optional] 
-**Sensitivity** | **String** | Group sensitive lable | [optional] 
+**Sensitivity** | **String** | Group sensitive lable id | [optional] 
+**SensitivityName** | **String** | Group sensitive lable name | [optional] 
 **Links** | [**GroupLinks**](GroupLinks.md) | Links of the group related objects. You can get IDs and names of all group related objects by invoking the GetCreateGroupServiceApi. | [optional] [readonly] 
 **LeasePeriodSettings** | [**GroupLeasePeriodSettings**](GroupLeasePeriodSettings.md) | Group lease period settings | [optional] 
 **TeamsSettings** | [**RequestTeamsSettings**](RequestTeamsSettings.md) | Team members permission settings | [optional] 
@@ -75,6 +76,7 @@ $CreateGroupRequest = New-Cloud.Governance.ClientCreateGroupRequest  -GroupType 
  -Language null `
  -Classification null `
  -Sensitivity null `
+ -SensitivityName null `
  -Links null `
  -LeasePeriodSettings null `
  -TeamsSettings null `

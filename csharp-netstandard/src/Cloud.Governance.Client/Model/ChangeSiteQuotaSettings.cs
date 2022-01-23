@@ -30,12 +30,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="minQuotaSize">minQuotaSize (default to 0).</param>
         /// <param name="maxQuotaSize">maxQuotaSize (default to 0).</param>
         /// <param name="currentQuotaSize">currentQuotaSize (default to 0).</param>
-        public ChangeSiteQuotaSettings(bool allowedAnySize = false, long minQuotaSize = 0, long maxQuotaSize = 0, long currentQuotaSize = 0)
+        /// <param name="sharePointSiteSize">sharepoint site size.</param>
+        public ChangeSiteQuotaSettings(bool allowedAnySize = false, long minQuotaSize = 0, long maxQuotaSize = 0, long currentQuotaSize = 0, double? sharePointSiteSize = default(double?))
         {
             this.AllowedAnySize = allowedAnySize;
             this.MinQuotaSize = minQuotaSize;
             this.MaxQuotaSize = maxQuotaSize;
             this.CurrentQuotaSize = currentQuotaSize;
+            this.SharePointSiteSize = sharePointSiteSize;
         }
 
         /// <summary>
@@ -63,6 +65,13 @@ namespace Cloud.Governance.Client.Model
         public long CurrentQuotaSize { get; set; }
 
         /// <summary>
+        /// sharepoint site size
+        /// </summary>
+        /// <value>sharepoint site size</value>
+        [DataMember(Name = "sharePointSiteSize", EmitDefaultValue = true)]
+        public double? SharePointSiteSize { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -74,6 +83,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  MinQuotaSize: ").Append(MinQuotaSize).Append("\n");
             sb.Append("  MaxQuotaSize: ").Append(MaxQuotaSize).Append("\n");
             sb.Append("  CurrentQuotaSize: ").Append(CurrentQuotaSize).Append("\n");
+            sb.Append("  SharePointSiteSize: ").Append(SharePointSiteSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +133,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.CurrentQuotaSize == input.CurrentQuotaSize ||
                     this.CurrentQuotaSize.Equals(input.CurrentQuotaSize)
+                ) && 
+                (
+                    this.SharePointSiteSize == input.SharePointSiteSize ||
+                    (this.SharePointSiteSize != null &&
+                    this.SharePointSiteSize.Equals(input.SharePointSiteSize))
                 );
         }
 
@@ -139,6 +154,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.MinQuotaSize.GetHashCode();
                 hashCode = hashCode * 59 + this.MaxQuotaSize.GetHashCode();
                 hashCode = hashCode * 59 + this.CurrentQuotaSize.GetHashCode();
+                if (this.SharePointSiteSize != null)
+                    hashCode = hashCode * 59 + this.SharePointSiteSize.GetHashCode();
                 return hashCode;
             }
         }

@@ -26,6 +26,12 @@ function New-ChangeSiteSettingService {
         [System.Nullable[Boolean]]
         ${EnableChangeHubSite} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableChangeSensitivity} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${SensitivityList},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ScopeSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -89,6 +95,8 @@ function New-ChangeSiteSettingService {
             "ChangeMetadataSettings" = ${ChangeMetadataSettings}
             "DeploymentManagerPlanSettings" = ${DeploymentManagerPlanSettings}
             "EnableChangeHubSite" = ${EnableChangeHubSite}
+            "EnableChangeSensitivity" = ${EnableChangeSensitivity}
+            "SensitivityList" = ${SensitivityList}
             "ScopeSettings" = ${ScopeSettings}
             "RequestTemplate" = ${RequestTemplate}
             "Metadatas" = ${Metadatas}
@@ -128,7 +136,7 @@ function ConvertFrom-JsonToChangeSiteSettingService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeSiteSettingService
-        $AllProperties = $("EnableChangeTitle", "EnableChangeDescription", "ChangeMetadataSettings", "DeploymentManagerPlanSettings", "EnableChangeHubSite", "ScopeSettings", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("EnableChangeTitle", "EnableChangeDescription", "ChangeMetadataSettings", "DeploymentManagerPlanSettings", "EnableChangeHubSite", "EnableChangeSensitivity", "SensitivityList", "ScopeSettings", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -163,6 +171,18 @@ function ConvertFrom-JsonToChangeSiteSettingService {
             $EnableChangeHubSite = $null
         } else {
             $EnableChangeHubSite = $JsonParameters.PSobject.Properties["EnableChangeHubSite"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableChangeSensitivity"))) { #optional property not found
+            $EnableChangeSensitivity = $null
+        } else {
+            $EnableChangeSensitivity = $JsonParameters.PSobject.Properties["EnableChangeSensitivity"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SensitivityList"))) { #optional property not found
+            $SensitivityList = $null
+        } else {
+            $SensitivityList = $JsonParameters.PSobject.Properties["SensitivityList"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ScopeSettings"))) { #optional property not found
@@ -273,6 +293,8 @@ function ConvertFrom-JsonToChangeSiteSettingService {
             "ChangeMetadataSettings" = ${ChangeMetadataSettings}
             "DeploymentManagerPlanSettings" = ${DeploymentManagerPlanSettings}
             "EnableChangeHubSite" = ${EnableChangeHubSite}
+            "EnableChangeSensitivity" = ${EnableChangeSensitivity}
+            "SensitivityList" = ${SensitivityList}
             "ScopeSettings" = ${ScopeSettings}
             "RequestTemplate" = ${RequestTemplate}
             "Metadatas" = ${Metadatas}

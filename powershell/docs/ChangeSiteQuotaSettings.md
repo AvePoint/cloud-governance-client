@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **MinQuotaSize** | **Int64** |  | [optional] [default to 0]
 **MaxQuotaSize** | **Int64** |  | [optional] [default to 0]
 **CurrentQuotaSize** | **Int64** |  | [optional] [default to 0]
+**SharePointSiteSize** | **Double** | sharepoint site size | [optional] 
 
 ## Examples
 
@@ -15,7 +16,8 @@ Name | Type | Description | Notes
 $ChangeSiteQuotaSettings = New-Cloud.Governance.ClientChangeSiteQuotaSettings  -AllowedAnySize null `
  -MinQuotaSize null `
  -MaxQuotaSize null `
- -CurrentQuotaSize null
+ -CurrentQuotaSize null `
+ -SharePointSiteSize null
 ```
 
 - Convert the resource to JSON

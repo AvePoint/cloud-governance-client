@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **LeaseExpirationTime** | **System.DateTime** |  | [optional] 
 **InactivityThresholdTime** | **System.DateTime** |  | [optional] 
 **LastRenewalTime** | **System.DateTime** |  | [optional] 
+**LastAccessedTime** | **System.DateTime** |  | [optional] 
 **ApplyPolicyStatus** | [**ApplyPolicyStatus**](ApplyPolicyStatus.md) |  | [optional] 
 **HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **HasOngoingTasksDescription** | **String** |  | [optional] 
@@ -108,6 +109,7 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -LeaseExpirationTime null `
  -InactivityThresholdTime null `
  -LastRenewalTime null `
+ -LastAccessedTime null `
  -ApplyPolicyStatus null `
  -HasOngoingTasks null `
  -HasOngoingTasksDescription null `

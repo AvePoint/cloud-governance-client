@@ -45,6 +45,10 @@ Method | HTTP request | Description
 [**RejectTask**](TasksApi.md#rejecttask) | **POST** /tasks/{id}/reject | reject task
 [**RetryErrorTask**](TasksApi.md#retryerrortask) | **POST** /tasks/{id}/retry | retry error task
 [**SkipErrorTask**](TasksApi.md#skiperrortask) | **POST** /tasks/{id}/skip | skip error task
+[**SubmitContinueAccessGroupAutoTask**](TasksApi.md#submitcontinueaccessgroupautotask) | **POST** /tasks/continueaccessgroup | submit group continue access auto task
+[**SubmitContinueAccessSiteAutoTask**](TasksApi.md#submitcontinueaccesssiteautotask) | **POST** /tasks/continueaccesssite | submit site continue access auto task
+[**SubmitExtendGroupAutoTask**](TasksApi.md#submitextendgroupautotask) | **POST** /tasks/extendgroup | submit extend group auto task
+[**SubmitExtendSiteAutoTask**](TasksApi.md#submitextendsiteautotask) | **POST** /tasks/extendsite | submit site extend auto task
 
 
 <a name="approvetask"></a>
@@ -3475,6 +3479,338 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **commentsParam** | [**CommentsParam**](CommentsParam.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitcontinueaccessgroupautotask"></a>
+# **SubmitContinueAccessGroupAutoTask**
+> void SubmitContinueAccessGroupAutoTask (Guid? id = null, CommentsParam commentsParam = null)
+
+submit group continue access auto task
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitContinueAccessGroupAutoTaskExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new TasksApi(config);
+
+            var id = new Guid?(); // Guid? |  (optional) 
+            var commentsParam = new CommentsParam(); // CommentsParam |  (optional) 
+
+            try
+            {
+                // submit group continue access auto task
+                apiInstance.SubmitContinueAccessGroupAutoTask(id, commentsParam);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling TasksApi.SubmitContinueAccessGroupAutoTask: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid?**](Guid?.md)|  | [optional] 
+ **commentsParam** | [**CommentsParam**](CommentsParam.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitcontinueaccesssiteautotask"></a>
+# **SubmitContinueAccessSiteAutoTask**
+> void SubmitContinueAccessSiteAutoTask (Guid? id = null, CommentsParam commentsParam = null)
+
+submit site continue access auto task
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitContinueAccessSiteAutoTaskExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new TasksApi(config);
+
+            var id = new Guid?(); // Guid? |  (optional) 
+            var commentsParam = new CommentsParam(); // CommentsParam |  (optional) 
+
+            try
+            {
+                // submit site continue access auto task
+                apiInstance.SubmitContinueAccessSiteAutoTask(id, commentsParam);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling TasksApi.SubmitContinueAccessSiteAutoTask: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid?**](Guid?.md)|  | [optional] 
+ **commentsParam** | [**CommentsParam**](CommentsParam.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitextendgroupautotask"></a>
+# **SubmitExtendGroupAutoTask**
+> void SubmitExtendGroupAutoTask (AutoTaskExtendRequest autoTaskExtendRequest = null)
+
+submit extend group auto task
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitExtendGroupAutoTaskExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new TasksApi(config);
+
+            var autoTaskExtendRequest = new AutoTaskExtendRequest(); // AutoTaskExtendRequest |  (optional) 
+
+            try
+            {
+                // submit extend group auto task
+                apiInstance.SubmitExtendGroupAutoTask(autoTaskExtendRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling TasksApi.SubmitExtendGroupAutoTask: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autoTaskExtendRequest** | [**AutoTaskExtendRequest**](AutoTaskExtendRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitextendsiteautotask"></a>
+# **SubmitExtendSiteAutoTask**
+> void SubmitExtendSiteAutoTask (AutoTaskExtendRequest autoTaskExtendRequest = null)
+
+submit site extend auto task
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitExtendSiteAutoTaskExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new TasksApi(config);
+
+            var autoTaskExtendRequest = new AutoTaskExtendRequest(); // AutoTaskExtendRequest |  (optional) 
+
+            try
+            {
+                // submit site extend auto task
+                apiInstance.SubmitExtendSiteAutoTask(autoTaskExtendRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling TasksApi.SubmitExtendSiteAutoTask: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **autoTaskExtendRequest** | [**AutoTaskExtendRequest**](AutoTaskExtendRequest.md)|  | [optional] 
 
 ### Return type
 

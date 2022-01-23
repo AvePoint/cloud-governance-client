@@ -298,7 +298,11 @@ namespace Cloud.Governance.Client.Model
 
         CreatePrivateChannel = 556,
 
-        BulkApplyGroupExtensions = 557
+        BulkApplyGroupExtensions = 557,
+
+        BulkReassignRenewalTask = 558,
+
+        BulkReassignAutoImportTask = 559
 
     }
 

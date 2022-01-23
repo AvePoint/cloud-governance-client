@@ -18,6 +18,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -39,6 +42,9 @@ function Get-ChangeGroupSettingService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -76,6 +82,10 @@ function Get-ChangeGroupSettingService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -123,6 +133,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -144,6 +157,9 @@ function Get-ChangeListSettingService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -181,6 +197,10 @@ function Get-ChangeListSettingService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -228,6 +248,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -249,6 +272,9 @@ function Get-ChangePermissionService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -286,6 +312,10 @@ function Get-ChangePermissionService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -333,6 +363,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -354,6 +387,9 @@ function Get-ChangeSiteContactService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -391,6 +427,10 @@ function Get-ChangeSiteContactService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -438,6 +478,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -459,6 +502,9 @@ function Get-ChangeSiteSettingService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -496,6 +542,10 @@ function Get-ChangeSiteSettingService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -543,6 +593,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -564,6 +617,9 @@ function Get-ChangeWebContactService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -601,6 +657,10 @@ function Get-ChangeWebContactService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -648,6 +708,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -669,6 +732,9 @@ function Get-ChangeWebSettingsService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -706,6 +772,10 @@ function Get-ChangeWebSettingsService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -753,6 +823,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -774,6 +847,9 @@ function Get-ClonePermissionService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -811,6 +887,10 @@ function Get-ClonePermissionService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -943,6 +1023,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -964,6 +1047,9 @@ function Get-ContentMoveService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1001,6 +1087,10 @@ function Get-ContentMoveService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1048,6 +1138,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1069,6 +1162,9 @@ function Get-CreateGroupService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1106,6 +1202,10 @@ function Get-CreateGroupService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1153,6 +1253,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1174,6 +1277,9 @@ function Get-CreateGuestUserService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1211,6 +1317,10 @@ function Get-CreateGuestUserService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1258,6 +1368,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1279,6 +1392,9 @@ function Get-CreateListService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1316,6 +1432,10 @@ function Get-CreateListService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1360,6 +1480,9 @@ No description available.
 .PARAMETER Id
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1378,6 +1501,9 @@ function Get-CreatePrivateChannelService {
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${Id},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1412,6 +1538,10 @@ function Get-CreatePrivateChannelService {
             throw "Error! The required parameter `Id` missing when calling getCreatePrivateChannelService."
         }
         $LocalVarUri = $LocalVarUri.replace('{id}', $Id)
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
+        }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
@@ -1458,6 +1588,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1479,6 +1612,9 @@ function Get-CreateSiteService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1516,6 +1652,10 @@ function Get-CreateSiteService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1563,6 +1703,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1584,6 +1727,9 @@ function Get-CreateWebService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1621,6 +1767,10 @@ function Get-CreateWebService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1668,6 +1818,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1689,6 +1842,9 @@ function Get-CustomService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1726,6 +1882,10 @@ function Get-CustomService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1773,6 +1933,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1794,6 +1957,9 @@ function Get-GrantPermissionService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1831,6 +1997,10 @@ function Get-GrantPermissionService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1878,6 +2048,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -1899,6 +2072,9 @@ function Get-GroupLifecycleService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -1936,6 +2112,10 @@ function Get-GroupLifecycleService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -1983,6 +2163,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -2004,6 +2187,9 @@ function Get-ManagePermissionService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -2041,6 +2227,10 @@ function Get-ManagePermissionService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -2279,6 +2469,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -2300,6 +2493,9 @@ function Get-SiteLifecycleService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -2337,6 +2533,10 @@ function Get-SiteLifecycleService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
@@ -2384,6 +2584,9 @@ No description available.
 .PARAMETER QuestionnaireId
 No description available.
 
+.PARAMETER IsValidatePermission
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -2405,6 +2608,9 @@ function Get-WebLifecycleService {
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${QuestionnaireId},
+        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsValidatePermission},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -2442,6 +2648,10 @@ function Get-WebLifecycleService {
 
         if ($QuestionnaireId) {
             $LocalVarQueryParameters['questionnaireId'] = $QuestionnaireId
+        }
+
+        if ($IsValidatePermission) {
+            $LocalVarQueryParameters['isValidatePermission'] = $IsValidatePermission
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {

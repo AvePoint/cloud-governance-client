@@ -265,6 +265,10 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**RejectTask**](docs/TasksApi.md#rejecttask) | **POST** /tasks/{id}/reject | reject task
 *TasksApi* | [**RetryErrorTask**](docs/TasksApi.md#retryerrortask) | **POST** /tasks/{id}/retry | retry error task
 *TasksApi* | [**SkipErrorTask**](docs/TasksApi.md#skiperrortask) | **POST** /tasks/{id}/skip | skip error task
+*TasksApi* | [**SubmitContinueAccessGroupAutoTask**](docs/TasksApi.md#submitcontinueaccessgroupautotask) | **POST** /tasks/continueaccessgroup | submit group continue access auto task
+*TasksApi* | [**SubmitContinueAccessSiteAutoTask**](docs/TasksApi.md#submitcontinueaccesssiteautotask) | **POST** /tasks/continueaccesssite | submit site continue access auto task
+*TasksApi* | [**SubmitExtendGroupAutoTask**](docs/TasksApi.md#submitextendgroupautotask) | **POST** /tasks/extendgroup | submit extend group auto task
+*TasksApi* | [**SubmitExtendSiteAutoTask**](docs/TasksApi.md#submitextendsiteautotask) | **POST** /tasks/extendsite | submit site extend auto task
 *TasksAdminApi* | [**GetAllTasks**](docs/TasksAdminApi.md#getalltasks) | **GET** /admin/directory/tasks | get all tasks
 *UsersApi* | [**FilterUsersByAttribute**](docs/UsersApi.md#filterusersbyattribute) | **GET** /users/filter | filter users by property value
 *UsersApi* | [**GetAzureAdUserPropertyValue**](docs/UsersApi.md#getazureaduserpropertyvalue) | **GET** /users/{username}/azuread/property | get Azure Ad user's property value
@@ -286,7 +290,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**GetOngoingTasks**](docs/WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
 *WorkspacesAdminApi* | [**GetWorkspaces**](docs/WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**LockWorkspaces**](docs/WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
-*WorkspacesAdminApi* | [**SpecifyContacts**](docs/WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | sepcify cnotacts
+*WorkspacesAdminApi* | [**SpecifyContacts**](docs/WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 *WorkspacesAdminApi* | [**TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#triggerworkspacerenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
 *WorkspacesAdminApi* | [**UnlockWorkspace**](docs/WorkspacesAdminApi.md#unlockworkspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
@@ -329,6 +333,7 @@ Class | Method | HTTP request | Description
  - [Model.AutoGenerateUrlType](docs/AutoGenerateUrlType.md)
  - [Model.AutoImportPhase](docs/AutoImportPhase.md)
  - [Model.AutoImportProcessHookMessage](docs/AutoImportProcessHookMessage.md)
+ - [Model.AutoTaskExtendRequest](docs/AutoTaskExtendRequest.md)
  - [Model.AzureAdMetadataSettings](docs/AzureAdMetadataSettings.md)
  - [Model.BackupEnvironmentSetting](docs/BackupEnvironmentSetting.md)
  - [Model.BooleanChangedProperty](docs/BooleanChangedProperty.md)
@@ -516,6 +521,7 @@ Class | Method | HTTP request | Description
  - [Model.LanguageWithTemplates](docs/LanguageWithTemplates.md)
  - [Model.LeaseDateType](docs/LeaseDateType.md)
  - [Model.LeaseStartDateType](docs/LeaseStartDateType.md)
+ - [Model.LifecycleAction](docs/LifecycleAction.md)
  - [Model.LifecycleHookMessage](docs/LifecycleHookMessage.md)
  - [Model.LifecycleRenewalSetting](docs/LifecycleRenewalSetting.md)
  - [Model.LinkMetadataSettings](docs/LinkMetadataSettings.md)
@@ -596,6 +602,7 @@ Class | Method | HTTP request | Description
  - [Model.SPRoleAssignment](docs/SPRoleAssignment.md)
  - [Model.SPUserManagementModel](docs/SPUserManagementModel.md)
  - [Model.ScopeType](docs/ScopeType.md)
+ - [Model.SensitivityLabelModel](docs/SensitivityLabelModel.md)
  - [Model.ServiceForRequest](docs/ServiceForRequest.md)
  - [Model.ServiceGridModel](docs/ServiceGridModel.md)
  - [Model.ServiceGridModelPageResult](docs/ServiceGridModelPageResult.md)

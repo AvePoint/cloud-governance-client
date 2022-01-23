@@ -69,7 +69,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="lastRenewalTime">lastRenewalTime.</param>
         /// <param name="lastRenewalBy">lastRenewalBy.</param>
         /// <param name="lastRenewalByDisplayName">lastRenewalByDisplayName.</param>
-        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = 0, double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string sensitivityLable = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>), string hasOngoingTasks = default(string), DateTime? lastRenewalTime = default(DateTime?), string lastRenewalBy = default(string), string lastRenewalByDisplayName = default(string))
+        /// <param name="lastAccessedTime">lastAccessedTime.</param>
+        public WorkspaceReport(string id = default(string), string name = default(string), string description = default(string), string status = default(string), string type = default(string), string url = default(string), string email = default(string), string policyName = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string phase = default(string), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), string privacy = default(string), string associateHubTitle = default(string), string geoLocation = default(string), long? storageLimit = 0, double? storageUsed = default(double?), string siteSharing = default(string), string groupSharing = default(string), string sensitivityLable = default(string), string classification = default(string), string claimStatus = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), Dictionary<string, string> metadata = default(Dictionary<string, string>), string hasOngoingTasks = default(string), DateTime? lastRenewalTime = default(DateTime?), string lastRenewalBy = default(string), string lastRenewalByDisplayName = default(string), DateTime? lastAccessedTime = default(DateTime?))
         {
             this.Id = id;
             this.Name = name;
@@ -115,6 +116,7 @@ namespace Cloud.Governance.Client.Model
             this.LastRenewalTime = lastRenewalTime;
             this.LastRenewalBy = lastRenewalBy;
             this.LastRenewalByDisplayName = lastRenewalByDisplayName;
+            this.LastAccessedTime = lastAccessedTime;
         }
 
         /// <summary>
@@ -376,6 +378,12 @@ namespace Cloud.Governance.Client.Model
         public string LastRenewalByDisplayName { get; set; }
 
         /// <summary>
+        /// Gets or Sets LastAccessedTime
+        /// </summary>
+        [DataMember(Name = "LastAccessedTime", EmitDefaultValue = true)]
+        public DateTime? LastAccessedTime { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -426,6 +434,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LastRenewalTime: ").Append(LastRenewalTime).Append("\n");
             sb.Append("  LastRenewalBy: ").Append(LastRenewalBy).Append("\n");
             sb.Append("  LastRenewalByDisplayName: ").Append(LastRenewalByDisplayName).Append("\n");
+            sb.Append("  LastAccessedTime: ").Append(LastAccessedTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -675,6 +684,11 @@ namespace Cloud.Governance.Client.Model
                     this.LastRenewalByDisplayName == input.LastRenewalByDisplayName ||
                     (this.LastRenewalByDisplayName != null &&
                     this.LastRenewalByDisplayName.Equals(input.LastRenewalByDisplayName))
+                ) && 
+                (
+                    this.LastAccessedTime == input.LastAccessedTime ||
+                    (this.LastAccessedTime != null &&
+                    this.LastAccessedTime.Equals(input.LastAccessedTime))
                 );
         }
 
@@ -773,6 +787,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.LastRenewalBy.GetHashCode();
                 if (this.LastRenewalByDisplayName != null)
                     hashCode = hashCode * 59 + this.LastRenewalByDisplayName.GetHashCode();
+                if (this.LastAccessedTime != null)
+                    hashCode = hashCode * 59 + this.LastAccessedTime.GetHashCode();
                 return hashCode;
             }
         }

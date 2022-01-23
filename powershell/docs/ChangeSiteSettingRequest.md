@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **OriginalSiteMetadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] [readonly] 
 **DeploymentPlanName** | **String** |  | [optional] 
 **HubSiteSettings** | [**HubSiteChangedSettings**](HubSiteChangedSettings.md) |  | [optional] 
+**SiteSensitivitySetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -47,6 +48,7 @@ $ChangeSiteSettingRequest = New-Cloud.Governance.ClientChangeSiteSettingRequest 
  -OriginalSiteMetadatas null `
  -DeploymentPlanName null `
  -HubSiteSettings null `
+ -SiteSensitivitySetting null `
  -Id null `
  -ServiceId null `
  -Summary null `

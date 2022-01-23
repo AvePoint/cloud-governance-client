@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **ChangeMetadataSettings** | [**ChangeMetadataActionSetting**](ChangeMetadataActionSetting.md) |  | [optional] 
 **DeploymentManagerPlanSettings** | [**DpmServiceSetting**](DpmServiceSetting.md) |  | [optional] 
 **EnableChangeHubSite** | **Boolean** |  | [optional] [default to $false]
+**EnableChangeSensitivity** | **Boolean** |  | [optional] [default to $false]
+**SensitivityList** | [**SensitivityLabelModel[]**](SensitivityLabelModel.md) |  | [optional] 
 **ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **RequestTemplate** | [**ChangeSiteSettingRequest**](ChangeSiteSettingRequest.md) |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
@@ -35,6 +37,8 @@ $ChangeSiteSettingService = New-Cloud.Governance.ClientChangeSiteSettingService 
  -ChangeMetadataSettings null `
  -DeploymentManagerPlanSettings null `
  -EnableChangeHubSite null `
+ -EnableChangeSensitivity null `
+ -SensitivityList null `
  -ScopeSettings null `
  -RequestTemplate null `
  -Metadatas null `

@@ -4,9 +4,9 @@ Value of Managed metadata metadata.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TermStore** | [**GuidModel**](GuidModel.md) | Id and name of term store. | [optional] [readonly] 
-**TermGroup** | [**GuidModel**](GuidModel.md) | Id and name of term group. | [optional] [readonly] 
-**TermSet** | [**GuidModel**](GuidModel.md) | Id and name of term set. | [optional] [readonly] 
+**TermStore** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] [readonly] 
+**TermGroup** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] [readonly] 
+**TermSet** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] [readonly] 
 **Value** | [**List&lt;GuidModel&gt;**](GuidModel.md) | Id and name collection of terms. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

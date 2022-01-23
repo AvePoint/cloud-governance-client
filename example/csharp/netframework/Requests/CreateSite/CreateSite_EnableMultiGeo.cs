@@ -1,5 +1,4 @@
-﻿
-namespace NetFramework
+﻿namespace NetFramework
 {
     using Cloud.Governance.Client.Api;
     using Cloud.Governance.Client.Client;
@@ -8,7 +7,7 @@ namespace NetFramework
     using System.Linq;
     using System.Collections.Generic;
 
-    public class CreateSite_EnableMultiGeo : TestBase
+    public class CreateSite_EnableMultiGeo : ExampleBase
     {
         public CreateSite_EnableMultiGeo(ApiConfig config) : base(config) { }
 
@@ -17,10 +16,11 @@ namespace NetFramework
 
             try
             {
-                
+                var requestApi = new RequestsApi(Configuration.Default);
+                var serviceApi = new ServicesApi(Configuration.Default);
 
-                var serviceName = this.ServicesApi.GetServiceId(data.ServiceName);
-                var service = this.ServicesApi.GetCreateSiteService(serviceName);
+                var serviceName = serviceApi.GetServiceId(data.ServiceName);
+                var service = serviceApi.GetCreateSiteService(serviceName);
                 var request = service.RequestTemplate;
 
                 request.SiteUrl.Name = $"Api_{DateTime.Now}";
@@ -30,10 +30,10 @@ namespace NetFramework
                 request.SecondaryContact = new ApiUser { LoginName = data.SecondaryContactLoginName };
 
                 var allLocations = service.MultiGeoSetting.AllLocations;
-                var location= allLocations.First(l => l.DisplayName.Equals(data.MultiGeoLocatioinName, StringComparison.CurrentCultureIgnoreCase));
+                var location= allLocations.First(l => l.DisplayName.EqualsIgnoreCase(data.MultiGeoLocatioinName));
                 request.MultiGeoLocation = new GeoLocationBase(name: location.Name);
 
-                var result = this.RequestsApi.SubmitCreateSiteRequest(request);
+                var result = requestApi.SubmitCreateSiteRequest(request);
                 Console.WriteLine(result);
             }
             catch (ApiException e)

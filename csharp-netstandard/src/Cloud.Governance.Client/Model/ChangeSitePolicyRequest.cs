@@ -74,7 +74,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeSitePolicyRequest" /> class.
         /// </summary>
-        /// <param name="policy">The new site collection policy information settings.</param>
+        /// <param name="policy">GuidModel model.</param>
         /// <param name="isLeaseEnabled">Whether to enable the site collection lease extension. (default to false).</param>
         /// <param name="changePolicyConfig">Set how to assign the site collection policy..</param>
         /// <param name="startDateType">Site collection lease start date configuration after a policy change.</param>
@@ -109,16 +109,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// The new site collection policy information settings
+        /// GuidModel model
         /// </summary>
-        /// <value>The new site collection policy information settings</value>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "policy", EmitDefaultValue = true)]
         public GuidModel Policy { get; set; }
 
         /// <summary>
-        /// The original site collection policy information settings
+        /// GuidModel model
         /// </summary>
-        /// <value>The original site collection policy information settings</value>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "originalPolicy", EmitDefaultValue = true)]
         public GuidModel OriginalPolicy { get; private set; }
 

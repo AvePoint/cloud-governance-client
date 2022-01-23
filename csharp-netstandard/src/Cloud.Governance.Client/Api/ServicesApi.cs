@@ -24,8 +24,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeGroupSettingService</returns>
-        ChangeGroupSettingService GetChangeGroupSettingService(Guid id, Guid? questionnaireId = default(Guid?));
+        ChangeGroupSettingService GetChangeGroupSettingService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get change group setting service
@@ -36,16 +37,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeGroupSettingService</returns>
-        ApiResponse<ChangeGroupSettingService> GetChangeGroupSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ChangeGroupSettingService> GetChangeGroupSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get change list setting service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeListSettingService</returns>
-        ChangeListSettingService GetChangeListSettingService(Guid id, Guid? questionnaireId = default(Guid?));
+        ChangeListSettingService GetChangeListSettingService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get change list setting service
@@ -56,16 +59,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeListSettingService</returns>
-        ApiResponse<ChangeListSettingService> GetChangeListSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ChangeListSettingService> GetChangeListSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get change permission service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangePermissionService</returns>
-        ChangePermissionService GetChangePermissionService(Guid id, Guid? questionnaireId = default(Guid?));
+        ChangePermissionService GetChangePermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get change permission service
@@ -76,16 +81,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangePermissionService</returns>
-        ApiResponse<ChangePermissionService> GetChangePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ChangePermissionService> GetChangePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get change site contact service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeSiteContactService</returns>
-        ChangeSiteContactService GetChangeSiteContactService(Guid id, Guid? questionnaireId = default(Guid?));
+        ChangeSiteContactService GetChangeSiteContactService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get change site contact service
@@ -96,16 +103,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeSiteContactService</returns>
-        ApiResponse<ChangeSiteContactService> GetChangeSiteContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ChangeSiteContactService> GetChangeSiteContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get change site setting service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeSiteSettingService</returns>
-        ChangeSiteSettingService GetChangeSiteSettingService(Guid id, Guid? questionnaireId = default(Guid?));
+        ChangeSiteSettingService GetChangeSiteSettingService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get change site setting service
@@ -116,16 +125,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeSiteSettingService</returns>
-        ApiResponse<ChangeSiteSettingService> GetChangeSiteSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ChangeSiteSettingService> GetChangeSiteSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// validate permissions, scope for change web contact service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeWebContactService</returns>
-        ChangeWebContactService GetChangeWebContactService(Guid id, Guid? questionnaireId = default(Guid?));
+        ChangeWebContactService GetChangeWebContactService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// validate permissions, scope for change web contact service
@@ -136,16 +147,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeWebContactService</returns>
-        ApiResponse<ChangeWebContactService> GetChangeWebContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ChangeWebContactService> GetChangeWebContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get change web setting service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeWebSettingService</returns>
-        ChangeWebSettingService GetChangeWebSettingsService(Guid id, Guid? questionnaireId = default(Guid?));
+        ChangeWebSettingService GetChangeWebSettingsService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get change web setting service
@@ -156,16 +169,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeWebSettingService</returns>
-        ApiResponse<ChangeWebSettingService> GetChangeWebSettingsServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ChangeWebSettingService> GetChangeWebSettingsServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get clone permission service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ClonePermissionService</returns>
-        ClonePermissionService GetClonePermissionService(Guid id, Guid? questionnaireId = default(Guid?));
+        ClonePermissionService GetClonePermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get clone permission service
@@ -176,8 +191,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ClonePermissionService</returns>
-        ApiResponse<ClonePermissionService> GetClonePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ClonePermissionService> GetClonePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get content move profiles from cloud management
         /// </summary>
@@ -200,8 +216,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ContentMoveService</returns>
-        ContentMoveService GetContentMoveService(Guid id, Guid? questionnaireId = default(Guid?));
+        ContentMoveService GetContentMoveService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get content move service
@@ -212,16 +229,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ContentMoveService</returns>
-        ApiResponse<ContentMoveService> GetContentMoveServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ContentMoveService> GetContentMoveServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get create group service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateGroupService</returns>
-        CreateGroupService GetCreateGroupService(Guid id, Guid? questionnaireId = default(Guid?));
+        CreateGroupService GetCreateGroupService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get create group service
@@ -232,16 +251,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateGroupService</returns>
-        ApiResponse<CreateGroupService> GetCreateGroupServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<CreateGroupService> GetCreateGroupServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get create group service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateGuestUserService</returns>
-        CreateGuestUserService GetCreateGuestUserService(Guid id, Guid? questionnaireId = default(Guid?));
+        CreateGuestUserService GetCreateGuestUserService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get create group service
@@ -252,16 +273,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateGuestUserService</returns>
-        ApiResponse<CreateGuestUserService> GetCreateGuestUserServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<CreateGuestUserService> GetCreateGuestUserServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get create list service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateListService</returns>
-        CreateListService GetCreateListService(Guid id, Guid? questionnaireId = default(Guid?));
+        CreateListService GetCreateListService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get create list service
@@ -272,15 +295,17 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateListService</returns>
-        ApiResponse<CreateListService> GetCreateListServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<CreateListService> GetCreateListServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get private channel service detail
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreatePrivateChannelService</returns>
-        CreatePrivateChannelService GetCreatePrivateChannelService(Guid id);
+        CreatePrivateChannelService GetCreatePrivateChannelService(Guid id, bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get private channel service detail
@@ -290,16 +315,18 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreatePrivateChannelService</returns>
-        ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id);
+        ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id, bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get create site service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateSiteService</returns>
-        CreateSiteService GetCreateSiteService(Guid id, Guid? questionnaireId = default(Guid?));
+        CreateSiteService GetCreateSiteService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get create site service
@@ -310,16 +337,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateSiteService</returns>
-        ApiResponse<CreateSiteService> GetCreateSiteServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<CreateSiteService> GetCreateSiteServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get create web service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateWebService</returns>
-        CreateWebService GetCreateWebService(Guid id, Guid? questionnaireId = default(Guid?));
+        CreateWebService GetCreateWebService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get create web service
@@ -330,16 +359,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateWebService</returns>
-        ApiResponse<CreateWebService> GetCreateWebServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<CreateWebService> GetCreateWebServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get custom service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ServiceForRequest</returns>
-        ServiceForRequest GetCustomService(Guid id, Guid? questionnaireId = default(Guid?));
+        ServiceForRequest GetCustomService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get custom service
@@ -350,16 +381,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ServiceForRequest</returns>
-        ApiResponse<ServiceForRequest> GetCustomServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ServiceForRequest> GetCustomServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get grant permission service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>GrantPermissionService</returns>
-        GrantPermissionService GetGrantPermissionService(Guid id, Guid? questionnaireId = default(Guid?));
+        GrantPermissionService GetGrantPermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get grant permission service
@@ -370,16 +403,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of GrantPermissionService</returns>
-        ApiResponse<GrantPermissionService> GetGrantPermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<GrantPermissionService> GetGrantPermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get group lifecycle service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>GroupLifecycleService</returns>
-        GroupLifecycleService GetGroupLifecycleService(Guid id, Guid? questionnaireId = default(Guid?));
+        GroupLifecycleService GetGroupLifecycleService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get group lifecycle service
@@ -390,16 +425,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of GroupLifecycleService</returns>
-        ApiResponse<GroupLifecycleService> GetGroupLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<GroupLifecycleService> GetGroupLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get manage permission service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ManagePermissionService</returns>
-        ManagePermissionService GetManagePermissionService(Guid id, Guid? questionnaireId = default(Guid?));
+        ManagePermissionService GetManagePermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get manage permission service
@@ -410,8 +447,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ManagePermissionService</returns>
-        ApiResponse<ManagePermissionService> GetManagePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<ManagePermissionService> GetManagePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get services that can be used to start a request
         /// </summary>
@@ -454,8 +492,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>SiteLifecycleService</returns>
-        SiteLifecycleService GetSiteLifecycleService(Guid id, Guid? questionnaireId = default(Guid?));
+        SiteLifecycleService GetSiteLifecycleService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get site lifecycle service
@@ -466,16 +505,18 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of SiteLifecycleService</returns>
-        ApiResponse<SiteLifecycleService> GetSiteLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<SiteLifecycleService> GetSiteLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get web lifecycle service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>WebLifecycleService</returns>
-        WebLifecycleService GetWebLifecycleService(Guid id, Guid? questionnaireId = default(Guid?));
+        WebLifecycleService GetWebLifecycleService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get web lifecycle service
@@ -486,8 +527,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of WebLifecycleService</returns>
-        ApiResponse<WebLifecycleService> GetWebLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?));
+        ApiResponse<WebLifecycleService> GetWebLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// validate guest user email
         /// </summary>
@@ -910,9 +952,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeGroupSettingService</returns>
-        System.Threading.Tasks.Task<ChangeGroupSettingService> GetChangeGroupSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChangeGroupSettingService> GetChangeGroupSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get change group setting service
@@ -923,9 +966,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeGroupSettingService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChangeGroupSettingService>> GetChangeGroupSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ChangeGroupSettingService>> GetChangeGroupSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get change list setting service
         /// </summary>
@@ -935,9 +979,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeListSettingService</returns>
-        System.Threading.Tasks.Task<ChangeListSettingService> GetChangeListSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChangeListSettingService> GetChangeListSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get change list setting service
@@ -948,9 +993,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeListSettingService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChangeListSettingService>> GetChangeListSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ChangeListSettingService>> GetChangeListSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get change permission service
         /// </summary>
@@ -960,9 +1006,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangePermissionService</returns>
-        System.Threading.Tasks.Task<ChangePermissionService> GetChangePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChangePermissionService> GetChangePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get change permission service
@@ -973,9 +1020,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangePermissionService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChangePermissionService>> GetChangePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ChangePermissionService>> GetChangePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get change site contact service
         /// </summary>
@@ -985,9 +1033,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeSiteContactService</returns>
-        System.Threading.Tasks.Task<ChangeSiteContactService> GetChangeSiteContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChangeSiteContactService> GetChangeSiteContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get change site contact service
@@ -998,9 +1047,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeSiteContactService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChangeSiteContactService>> GetChangeSiteContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ChangeSiteContactService>> GetChangeSiteContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get change site setting service
         /// </summary>
@@ -1010,9 +1060,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeSiteSettingService</returns>
-        System.Threading.Tasks.Task<ChangeSiteSettingService> GetChangeSiteSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChangeSiteSettingService> GetChangeSiteSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get change site setting service
@@ -1023,9 +1074,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeSiteSettingService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChangeSiteSettingService>> GetChangeSiteSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ChangeSiteSettingService>> GetChangeSiteSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// validate permissions, scope for change web contact service
         /// </summary>
@@ -1035,9 +1087,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeWebContactService</returns>
-        System.Threading.Tasks.Task<ChangeWebContactService> GetChangeWebContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChangeWebContactService> GetChangeWebContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// validate permissions, scope for change web contact service
@@ -1048,9 +1101,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeWebContactService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChangeWebContactService>> GetChangeWebContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ChangeWebContactService>> GetChangeWebContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get change web setting service
         /// </summary>
@@ -1060,9 +1114,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeWebSettingService</returns>
-        System.Threading.Tasks.Task<ChangeWebSettingService> GetChangeWebSettingsServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChangeWebSettingService> GetChangeWebSettingsServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get change web setting service
@@ -1073,9 +1128,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeWebSettingService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChangeWebSettingService>> GetChangeWebSettingsServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ChangeWebSettingService>> GetChangeWebSettingsServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get clone permission service
         /// </summary>
@@ -1085,9 +1141,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ClonePermissionService</returns>
-        System.Threading.Tasks.Task<ClonePermissionService> GetClonePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ClonePermissionService> GetClonePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get clone permission service
@@ -1098,9 +1155,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ClonePermissionService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ClonePermissionService>> GetClonePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ClonePermissionService>> GetClonePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get content move profiles from cloud management
         /// </summary>
@@ -1131,9 +1189,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContentMoveService</returns>
-        System.Threading.Tasks.Task<ContentMoveService> GetContentMoveServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ContentMoveService> GetContentMoveServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get content move service
@@ -1144,9 +1203,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContentMoveService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContentMoveService>> GetContentMoveServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ContentMoveService>> GetContentMoveServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get create group service
         /// </summary>
@@ -1156,9 +1216,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateGroupService</returns>
-        System.Threading.Tasks.Task<CreateGroupService> GetCreateGroupServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateGroupService> GetCreateGroupServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get create group service
@@ -1169,9 +1230,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateGroupService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateGroupService>> GetCreateGroupServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateGroupService>> GetCreateGroupServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get create group service
         /// </summary>
@@ -1181,9 +1243,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateGuestUserService</returns>
-        System.Threading.Tasks.Task<CreateGuestUserService> GetCreateGuestUserServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateGuestUserService> GetCreateGuestUserServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get create group service
@@ -1194,9 +1257,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateGuestUserService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateGuestUserService>> GetCreateGuestUserServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateGuestUserService>> GetCreateGuestUserServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get create list service
         /// </summary>
@@ -1206,9 +1270,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateListService</returns>
-        System.Threading.Tasks.Task<CreateListService> GetCreateListServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateListService> GetCreateListServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get create list service
@@ -1219,9 +1284,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateListService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateListService>> GetCreateListServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateListService>> GetCreateListServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get private channel service detail
         /// </summary>
@@ -1230,9 +1296,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreatePrivateChannelService</returns>
-        System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get private channel service detail
@@ -1242,9 +1309,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreatePrivateChannelService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get create site service
         /// </summary>
@@ -1254,9 +1322,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSiteService</returns>
-        System.Threading.Tasks.Task<CreateSiteService> GetCreateSiteServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateSiteService> GetCreateSiteServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get create site service
@@ -1267,9 +1336,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSiteService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateSiteService>> GetCreateSiteServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateSiteService>> GetCreateSiteServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get create web service
         /// </summary>
@@ -1279,9 +1349,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateWebService</returns>
-        System.Threading.Tasks.Task<CreateWebService> GetCreateWebServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateWebService> GetCreateWebServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get create web service
@@ -1292,9 +1363,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateWebService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateWebService>> GetCreateWebServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateWebService>> GetCreateWebServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get custom service
         /// </summary>
@@ -1304,9 +1376,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ServiceForRequest</returns>
-        System.Threading.Tasks.Task<ServiceForRequest> GetCustomServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ServiceForRequest> GetCustomServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get custom service
@@ -1317,9 +1390,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ServiceForRequest)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServiceForRequest>> GetCustomServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ServiceForRequest>> GetCustomServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get grant permission service
         /// </summary>
@@ -1329,9 +1403,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GrantPermissionService</returns>
-        System.Threading.Tasks.Task<GrantPermissionService> GetGrantPermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GrantPermissionService> GetGrantPermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get grant permission service
@@ -1342,9 +1417,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GrantPermissionService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GrantPermissionService>> GetGrantPermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GrantPermissionService>> GetGrantPermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get group lifecycle service
         /// </summary>
@@ -1354,9 +1430,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GroupLifecycleService</returns>
-        System.Threading.Tasks.Task<GroupLifecycleService> GetGroupLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GroupLifecycleService> GetGroupLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get group lifecycle service
@@ -1367,9 +1444,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GroupLifecycleService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupLifecycleService>> GetGroupLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GroupLifecycleService>> GetGroupLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get manage permission service
         /// </summary>
@@ -1379,9 +1457,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ManagePermissionService</returns>
-        System.Threading.Tasks.Task<ManagePermissionService> GetManagePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ManagePermissionService> GetManagePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get manage permission service
@@ -1392,9 +1471,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ManagePermissionService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagePermissionService>> GetManagePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ManagePermissionService>> GetManagePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get services that can be used to start a request
         /// </summary>
@@ -1450,9 +1530,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SiteLifecycleService</returns>
-        System.Threading.Tasks.Task<SiteLifecycleService> GetSiteLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SiteLifecycleService> GetSiteLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get site lifecycle service
@@ -1463,9 +1544,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SiteLifecycleService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SiteLifecycleService>> GetSiteLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SiteLifecycleService>> GetSiteLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get web lifecycle service
         /// </summary>
@@ -1475,9 +1557,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebLifecycleService</returns>
-        System.Threading.Tasks.Task<WebLifecycleService> GetWebLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WebLifecycleService> GetWebLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get web lifecycle service
@@ -1488,9 +1571,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebLifecycleService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WebLifecycleService>> GetWebLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WebLifecycleService>> GetWebLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// validate guest user email
         /// </summary>
@@ -2121,10 +2205,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeGroupSettingService</returns>
-        public ChangeGroupSettingService GetChangeGroupSettingService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ChangeGroupSettingService GetChangeGroupSettingService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService> localVarResponse = GetChangeGroupSettingServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService> localVarResponse = GetChangeGroupSettingServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -2134,8 +2219,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeGroupSettingService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService> GetChangeGroupSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService> GetChangeGroupSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2158,6 +2244,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2189,11 +2279,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeGroupSettingService</returns>
-        public async System.Threading.Tasks.Task<ChangeGroupSettingService> GetChangeGroupSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ChangeGroupSettingService> GetChangeGroupSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService> localVarResponse = await GetChangeGroupSettingServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService> localVarResponse = await GetChangeGroupSettingServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2203,9 +2294,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeGroupSettingService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService>> GetChangeGroupSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeGroupSettingService>> GetChangeGroupSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -2230,6 +2322,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2262,10 +2358,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeListSettingService</returns>
-        public ChangeListSettingService GetChangeListSettingService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ChangeListSettingService GetChangeListSettingService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService> localVarResponse = GetChangeListSettingServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService> localVarResponse = GetChangeListSettingServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -2275,8 +2372,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeListSettingService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService> GetChangeListSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService> GetChangeListSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2299,6 +2397,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2330,11 +2432,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeListSettingService</returns>
-        public async System.Threading.Tasks.Task<ChangeListSettingService> GetChangeListSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ChangeListSettingService> GetChangeListSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService> localVarResponse = await GetChangeListSettingServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService> localVarResponse = await GetChangeListSettingServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2344,9 +2447,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeListSettingService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService>> GetChangeListSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeListSettingService>> GetChangeListSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -2371,6 +2475,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2403,10 +2511,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangePermissionService</returns>
-        public ChangePermissionService GetChangePermissionService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ChangePermissionService GetChangePermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService> localVarResponse = GetChangePermissionServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService> localVarResponse = GetChangePermissionServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -2416,8 +2525,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangePermissionService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService> GetChangePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService> GetChangePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2440,6 +2550,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2471,11 +2585,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangePermissionService</returns>
-        public async System.Threading.Tasks.Task<ChangePermissionService> GetChangePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ChangePermissionService> GetChangePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService> localVarResponse = await GetChangePermissionServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService> localVarResponse = await GetChangePermissionServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2485,9 +2600,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangePermissionService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService>> GetChangePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangePermissionService>> GetChangePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -2512,6 +2628,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2544,10 +2664,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeSiteContactService</returns>
-        public ChangeSiteContactService GetChangeSiteContactService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ChangeSiteContactService GetChangeSiteContactService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService> localVarResponse = GetChangeSiteContactServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService> localVarResponse = GetChangeSiteContactServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -2557,8 +2678,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeSiteContactService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService> GetChangeSiteContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService> GetChangeSiteContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2581,6 +2703,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2612,11 +2738,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeSiteContactService</returns>
-        public async System.Threading.Tasks.Task<ChangeSiteContactService> GetChangeSiteContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ChangeSiteContactService> GetChangeSiteContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService> localVarResponse = await GetChangeSiteContactServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService> localVarResponse = await GetChangeSiteContactServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2626,9 +2753,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeSiteContactService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService>> GetChangeSiteContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeSiteContactService>> GetChangeSiteContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -2653,6 +2781,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2685,10 +2817,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeSiteSettingService</returns>
-        public ChangeSiteSettingService GetChangeSiteSettingService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ChangeSiteSettingService GetChangeSiteSettingService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService> localVarResponse = GetChangeSiteSettingServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService> localVarResponse = GetChangeSiteSettingServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -2698,8 +2831,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeSiteSettingService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService> GetChangeSiteSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService> GetChangeSiteSettingServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2722,6 +2856,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2753,11 +2891,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeSiteSettingService</returns>
-        public async System.Threading.Tasks.Task<ChangeSiteSettingService> GetChangeSiteSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ChangeSiteSettingService> GetChangeSiteSettingServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService> localVarResponse = await GetChangeSiteSettingServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService> localVarResponse = await GetChangeSiteSettingServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2767,9 +2906,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeSiteSettingService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService>> GetChangeSiteSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeSiteSettingService>> GetChangeSiteSettingServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -2794,6 +2934,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2826,10 +2970,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeWebContactService</returns>
-        public ChangeWebContactService GetChangeWebContactService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ChangeWebContactService GetChangeWebContactService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService> localVarResponse = GetChangeWebContactServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService> localVarResponse = GetChangeWebContactServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -2839,8 +2984,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeWebContactService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService> GetChangeWebContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService> GetChangeWebContactServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -2863,6 +3009,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2894,11 +3044,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeWebContactService</returns>
-        public async System.Threading.Tasks.Task<ChangeWebContactService> GetChangeWebContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ChangeWebContactService> GetChangeWebContactServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService> localVarResponse = await GetChangeWebContactServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService> localVarResponse = await GetChangeWebContactServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2908,9 +3059,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeWebContactService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService>> GetChangeWebContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeWebContactService>> GetChangeWebContactServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -2935,6 +3087,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -2967,10 +3123,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ChangeWebSettingService</returns>
-        public ChangeWebSettingService GetChangeWebSettingsService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ChangeWebSettingService GetChangeWebSettingsService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService> localVarResponse = GetChangeWebSettingsServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService> localVarResponse = GetChangeWebSettingsServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -2980,8 +3137,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ChangeWebSettingService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService> GetChangeWebSettingsServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService> GetChangeWebSettingsServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3004,6 +3162,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3035,11 +3197,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ChangeWebSettingService</returns>
-        public async System.Threading.Tasks.Task<ChangeWebSettingService> GetChangeWebSettingsServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ChangeWebSettingService> GetChangeWebSettingsServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService> localVarResponse = await GetChangeWebSettingsServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService> localVarResponse = await GetChangeWebSettingsServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3049,9 +3212,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangeWebSettingService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService>> GetChangeWebSettingsServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangeWebSettingService>> GetChangeWebSettingsServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -3076,6 +3240,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3108,10 +3276,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ClonePermissionService</returns>
-        public ClonePermissionService GetClonePermissionService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ClonePermissionService GetClonePermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService> localVarResponse = GetClonePermissionServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService> localVarResponse = GetClonePermissionServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -3121,8 +3290,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ClonePermissionService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService> GetClonePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService> GetClonePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3145,6 +3315,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3176,11 +3350,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ClonePermissionService</returns>
-        public async System.Threading.Tasks.Task<ClonePermissionService> GetClonePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ClonePermissionService> GetClonePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService> localVarResponse = await GetClonePermissionServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService> localVarResponse = await GetClonePermissionServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3190,9 +3365,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ClonePermissionService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService>> GetClonePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ClonePermissionService>> GetClonePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -3217,6 +3393,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3372,10 +3552,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ContentMoveService</returns>
-        public ContentMoveService GetContentMoveService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ContentMoveService GetContentMoveService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ContentMoveService> localVarResponse = GetContentMoveServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ContentMoveService> localVarResponse = GetContentMoveServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -3385,8 +3566,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ContentMoveService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ContentMoveService> GetContentMoveServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ContentMoveService> GetContentMoveServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3409,6 +3591,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3440,11 +3626,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ContentMoveService</returns>
-        public async System.Threading.Tasks.Task<ContentMoveService> GetContentMoveServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ContentMoveService> GetContentMoveServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ContentMoveService> localVarResponse = await GetContentMoveServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ContentMoveService> localVarResponse = await GetContentMoveServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3454,9 +3641,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ContentMoveService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ContentMoveService>> GetContentMoveServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ContentMoveService>> GetContentMoveServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -3481,6 +3669,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3513,10 +3705,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateGroupService</returns>
-        public CreateGroupService GetCreateGroupService(Guid id, Guid? questionnaireId = default(Guid?))
+        public CreateGroupService GetCreateGroupService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateGroupService> localVarResponse = GetCreateGroupServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<CreateGroupService> localVarResponse = GetCreateGroupServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -3526,8 +3719,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateGroupService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<CreateGroupService> GetCreateGroupServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<CreateGroupService> GetCreateGroupServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3550,6 +3744,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3581,11 +3779,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateGroupService</returns>
-        public async System.Threading.Tasks.Task<CreateGroupService> GetCreateGroupServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateGroupService> GetCreateGroupServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateGroupService> localVarResponse = await GetCreateGroupServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<CreateGroupService> localVarResponse = await GetCreateGroupServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3595,9 +3794,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateGroupService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateGroupService>> GetCreateGroupServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateGroupService>> GetCreateGroupServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -3622,6 +3822,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3654,10 +3858,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateGuestUserService</returns>
-        public CreateGuestUserService GetCreateGuestUserService(Guid id, Guid? questionnaireId = default(Guid?))
+        public CreateGuestUserService GetCreateGuestUserService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService> localVarResponse = GetCreateGuestUserServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService> localVarResponse = GetCreateGuestUserServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -3667,8 +3872,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateGuestUserService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService> GetCreateGuestUserServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService> GetCreateGuestUserServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3691,6 +3897,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3722,11 +3932,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateGuestUserService</returns>
-        public async System.Threading.Tasks.Task<CreateGuestUserService> GetCreateGuestUserServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateGuestUserService> GetCreateGuestUserServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService> localVarResponse = await GetCreateGuestUserServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService> localVarResponse = await GetCreateGuestUserServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3736,9 +3947,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateGuestUserService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService>> GetCreateGuestUserServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateGuestUserService>> GetCreateGuestUserServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -3763,6 +3975,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3795,10 +4011,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateListService</returns>
-        public CreateListService GetCreateListService(Guid id, Guid? questionnaireId = default(Guid?))
+        public CreateListService GetCreateListService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateListService> localVarResponse = GetCreateListServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<CreateListService> localVarResponse = GetCreateListServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -3808,8 +4025,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateListService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<CreateListService> GetCreateListServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<CreateListService> GetCreateListServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3832,6 +4050,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3863,11 +4085,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateListService</returns>
-        public async System.Threading.Tasks.Task<CreateListService> GetCreateListServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateListService> GetCreateListServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateListService> localVarResponse = await GetCreateListServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<CreateListService> localVarResponse = await GetCreateListServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3877,9 +4100,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateListService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateListService>> GetCreateListServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateListService>> GetCreateListServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -3904,6 +4128,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -3935,10 +4163,11 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreatePrivateChannelService</returns>
-        public CreatePrivateChannelService GetCreatePrivateChannelService(Guid id)
+        public CreatePrivateChannelService GetCreatePrivateChannelService(Guid id, bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = GetCreatePrivateChannelServiceWithHttpInfo(id);
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = GetCreatePrivateChannelServiceWithHttpInfo(id, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -3947,8 +4176,9 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreatePrivateChannelService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id)
+        public Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id, bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -3968,6 +4198,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -3997,11 +4231,12 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreatePrivateChannelService</returns>
-        public async System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = await GetCreatePrivateChannelServiceWithHttpInfoAsync(id, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = await GetCreatePrivateChannelServiceWithHttpInfoAsync(id, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4010,9 +4245,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreatePrivateChannelService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4034,6 +4270,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
+            }
 
             // authentication (clientSecret) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
@@ -4065,10 +4305,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateSiteService</returns>
-        public CreateSiteService GetCreateSiteService(Guid id, Guid? questionnaireId = default(Guid?))
+        public CreateSiteService GetCreateSiteService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateSiteService> localVarResponse = GetCreateSiteServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<CreateSiteService> localVarResponse = GetCreateSiteServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -4078,8 +4319,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateSiteService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<CreateSiteService> GetCreateSiteServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<CreateSiteService> GetCreateSiteServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4102,6 +4344,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4133,11 +4379,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSiteService</returns>
-        public async System.Threading.Tasks.Task<CreateSiteService> GetCreateSiteServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateSiteService> GetCreateSiteServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateSiteService> localVarResponse = await GetCreateSiteServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<CreateSiteService> localVarResponse = await GetCreateSiteServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4147,9 +4394,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSiteService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateSiteService>> GetCreateSiteServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateSiteService>> GetCreateSiteServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4174,6 +4422,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4206,10 +4458,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreateWebService</returns>
-        public CreateWebService GetCreateWebService(Guid id, Guid? questionnaireId = default(Guid?))
+        public CreateWebService GetCreateWebService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateWebService> localVarResponse = GetCreateWebServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<CreateWebService> localVarResponse = GetCreateWebServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -4219,8 +4472,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreateWebService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<CreateWebService> GetCreateWebServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<CreateWebService> GetCreateWebServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4243,6 +4497,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4274,11 +4532,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateWebService</returns>
-        public async System.Threading.Tasks.Task<CreateWebService> GetCreateWebServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateWebService> GetCreateWebServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreateWebService> localVarResponse = await GetCreateWebServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<CreateWebService> localVarResponse = await GetCreateWebServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4288,9 +4547,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateWebService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateWebService>> GetCreateWebServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreateWebService>> GetCreateWebServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4315,6 +4575,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4347,10 +4611,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ServiceForRequest</returns>
-        public ServiceForRequest GetCustomService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ServiceForRequest GetCustomService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest> localVarResponse = GetCustomServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest> localVarResponse = GetCustomServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -4360,8 +4625,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ServiceForRequest</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest> GetCustomServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest> GetCustomServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4384,6 +4650,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4415,11 +4685,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ServiceForRequest</returns>
-        public async System.Threading.Tasks.Task<ServiceForRequest> GetCustomServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ServiceForRequest> GetCustomServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest> localVarResponse = await GetCustomServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest> localVarResponse = await GetCustomServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4429,9 +4700,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ServiceForRequest)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest>> GetCustomServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ServiceForRequest>> GetCustomServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4456,6 +4728,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4488,10 +4764,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>GrantPermissionService</returns>
-        public GrantPermissionService GetGrantPermissionService(Guid id, Guid? questionnaireId = default(Guid?))
+        public GrantPermissionService GetGrantPermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService> localVarResponse = GetGrantPermissionServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService> localVarResponse = GetGrantPermissionServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -4501,8 +4778,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of GrantPermissionService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService> GetGrantPermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService> GetGrantPermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4525,6 +4803,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4556,11 +4838,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GrantPermissionService</returns>
-        public async System.Threading.Tasks.Task<GrantPermissionService> GetGrantPermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GrantPermissionService> GetGrantPermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService> localVarResponse = await GetGrantPermissionServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService> localVarResponse = await GetGrantPermissionServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4570,9 +4853,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GrantPermissionService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService>> GetGrantPermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<GrantPermissionService>> GetGrantPermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4597,6 +4881,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4629,10 +4917,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>GroupLifecycleService</returns>
-        public GroupLifecycleService GetGroupLifecycleService(Guid id, Guid? questionnaireId = default(Guid?))
+        public GroupLifecycleService GetGroupLifecycleService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService> localVarResponse = GetGroupLifecycleServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService> localVarResponse = GetGroupLifecycleServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -4642,8 +4931,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of GroupLifecycleService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService> GetGroupLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService> GetGroupLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4666,6 +4956,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4697,11 +4991,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GroupLifecycleService</returns>
-        public async System.Threading.Tasks.Task<GroupLifecycleService> GetGroupLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GroupLifecycleService> GetGroupLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService> localVarResponse = await GetGroupLifecycleServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService> localVarResponse = await GetGroupLifecycleServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4711,9 +5006,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GroupLifecycleService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService>> GetGroupLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<GroupLifecycleService>> GetGroupLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4738,6 +5034,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4770,10 +5070,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ManagePermissionService</returns>
-        public ManagePermissionService GetManagePermissionService(Guid id, Guid? questionnaireId = default(Guid?))
+        public ManagePermissionService GetManagePermissionService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService> localVarResponse = GetManagePermissionServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService> localVarResponse = GetManagePermissionServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -4783,8 +5084,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of ManagePermissionService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService> GetManagePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService> GetManagePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4807,6 +5109,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -4838,11 +5144,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ManagePermissionService</returns>
-        public async System.Threading.Tasks.Task<ManagePermissionService> GetManagePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ManagePermissionService> GetManagePermissionServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService> localVarResponse = await GetManagePermissionServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService> localVarResponse = await GetManagePermissionServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4852,9 +5159,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ManagePermissionService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService>> GetManagePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ManagePermissionService>> GetManagePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4879,6 +5187,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -5183,10 +5495,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>SiteLifecycleService</returns>
-        public SiteLifecycleService GetSiteLifecycleService(Guid id, Guid? questionnaireId = default(Guid?))
+        public SiteLifecycleService GetSiteLifecycleService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService> localVarResponse = GetSiteLifecycleServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService> localVarResponse = GetSiteLifecycleServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -5196,8 +5509,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of SiteLifecycleService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService> GetSiteLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService> GetSiteLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5220,6 +5534,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -5251,11 +5569,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SiteLifecycleService</returns>
-        public async System.Threading.Tasks.Task<SiteLifecycleService> GetSiteLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SiteLifecycleService> GetSiteLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService> localVarResponse = await GetSiteLifecycleServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService> localVarResponse = await GetSiteLifecycleServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5265,9 +5584,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SiteLifecycleService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService>> GetSiteLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<SiteLifecycleService>> GetSiteLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -5292,6 +5612,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -5324,10 +5648,11 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>WebLifecycleService</returns>
-        public WebLifecycleService GetWebLifecycleService(Guid id, Guid? questionnaireId = default(Guid?))
+        public WebLifecycleService GetWebLifecycleService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService> localVarResponse = GetWebLifecycleServiceWithHttpInfo(id, questionnaireId);
+            Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService> localVarResponse = GetWebLifecycleServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -5337,8 +5662,9 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of WebLifecycleService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService> GetWebLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService> GetWebLifecycleServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -5361,6 +5687,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required
@@ -5392,11 +5722,12 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WebLifecycleService</returns>
-        public async System.Threading.Tasks.Task<WebLifecycleService> GetWebLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WebLifecycleService> GetWebLifecycleServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService> localVarResponse = await GetWebLifecycleServiceWithHttpInfoAsync(id, questionnaireId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService> localVarResponse = await GetWebLifecycleServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5406,9 +5737,10 @@ namespace Cloud.Governance.Client.Api
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
         /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WebLifecycleService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService>> GetWebLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<WebLifecycleService>> GetWebLifecycleServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -5433,6 +5765,10 @@ namespace Cloud.Governance.Client.Api
             if (questionnaireId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
             }
 
             // authentication (clientSecret) required

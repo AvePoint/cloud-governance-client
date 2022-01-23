@@ -4,8 +4,8 @@ Change site collection policy request model
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) | The new site collection policy information settings | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original site collection policy information settings | [optional] [readonly] 
+**Policy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] [readonly] 
 **IsLeaseEnabled** | **bool** | Whether to enable the site collection lease extension. | [optional] [default to false]
 **ChangePolicyConfig** | **AssignBy** | Set how to assign the site collection policy. | [optional] 
 **StartDateType** | **StartDateType** | Site collection lease start date configuration after a policy change | [optional] 

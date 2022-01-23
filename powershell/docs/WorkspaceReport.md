@@ -46,6 +46,7 @@ Name | Type | Description | Notes
 **LastRenewalTime** | **System.DateTime** |  | [optional] 
 **LastRenewalBy** | **String** |  | [optional] 
 **LastRenewalByDisplayName** | **String** |  | [optional] 
+**LastAccessedTime** | **System.DateTime** |  | [optional] 
 
 ## Examples
 
@@ -93,7 +94,8 @@ $WorkspaceReport = New-Cloud.Governance.ClientWorkspaceReport  -Id null `
  -HasOngoingTasks null `
  -LastRenewalTime null `
  -LastRenewalBy null `
- -LastRenewalByDisplayName null
+ -LastRenewalByDisplayName null `
+ -LastAccessedTime null
 ```
 
 - Convert the resource to JSON

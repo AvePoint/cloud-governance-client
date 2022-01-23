@@ -29,10 +29,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="allowMultiple">allowMultiple (default to false).</param>
         /// <param name="adminCenter">adminCenter.</param>
         /// <param name="value">value.</param>
-        /// <param name="termStore">termStore.</param>
-        /// <param name="termGroup">termGroup.</param>
-        /// <param name="termSet">termSet.</param>
-        /// <param name="scope">scope.</param>
+        /// <param name="termStore">GuidModel model.</param>
+        /// <param name="termGroup">GuidModel model.</param>
+        /// <param name="termSet">GuidModel model.</param>
+        /// <param name="scope">GuidModel model.</param>
         /// <param name="tree">tree.</param>
         /// <param name="isValid">isValid (default to false).</param>
         public TermsMetadataSettings(bool allowMultiple = false, string adminCenter = default(string), List<GuidModel> value = default(List<GuidModel>), GuidModel termStore = default(GuidModel), GuidModel termGroup = default(GuidModel), GuidModel termSet = default(GuidModel), GuidModel scope = default(GuidModel), TermTreeModel tree = default(TermTreeModel), bool isValid = false)
@@ -67,26 +67,30 @@ namespace Cloud.Governance.Client.Model
         public List<GuidModel> Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets TermStore
+        /// GuidModel model
         /// </summary>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "termStore", EmitDefaultValue = true)]
         public GuidModel TermStore { get; set; }
 
         /// <summary>
-        /// Gets or Sets TermGroup
+        /// GuidModel model
         /// </summary>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "termGroup", EmitDefaultValue = true)]
         public GuidModel TermGroup { get; set; }
 
         /// <summary>
-        /// Gets or Sets TermSet
+        /// GuidModel model
         /// </summary>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "termSet", EmitDefaultValue = true)]
         public GuidModel TermSet { get; set; }
 
         /// <summary>
-        /// Gets or Sets Scope
+        /// GuidModel model
         /// </summary>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "scope", EmitDefaultValue = true)]
         public GuidModel Scope { get; set; }
 

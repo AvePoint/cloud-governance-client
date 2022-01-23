@@ -31,14 +31,16 @@ namespace Cloud.Governance.Client.Model
         /// <param name="languageID">languageID (default to 0).</param>
         /// <param name="timeZoneID">timeZoneID (default to 0).</param>
         /// <param name="isAdjustDaylight">isAdjustDaylight (default to false).</param>
+        /// <param name="isDelegateAdmin">isDelegateAdmin (default to false).</param>
         /// <param name="properties">properties.</param>
-        public PersonalSettings(Guid id = default(Guid), int userID = 0, int languageID = 0, int timeZoneID = 0, bool isAdjustDaylight = false, PersonalSettingsPropertyInfo properties = default(PersonalSettingsPropertyInfo))
+        public PersonalSettings(Guid id = default(Guid), int userID = 0, int languageID = 0, int timeZoneID = 0, bool isAdjustDaylight = false, bool isDelegateAdmin = false, PersonalSettingsPropertyInfo properties = default(PersonalSettingsPropertyInfo))
         {
             this.Id = id;
             this.UserID = userID;
             this.LanguageID = languageID;
             this.TimeZoneID = timeZoneID;
             this.IsAdjustDaylight = isAdjustDaylight;
+            this.IsDelegateAdmin = isDelegateAdmin;
             this.Properties = properties;
         }
 
@@ -73,6 +75,12 @@ namespace Cloud.Governance.Client.Model
         public bool IsAdjustDaylight { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsDelegateAdmin
+        /// </summary>
+        [DataMember(Name = "isDelegateAdmin", EmitDefaultValue = false)]
+        public bool IsDelegateAdmin { get; set; }
+
+        /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name = "properties", EmitDefaultValue = true)]
@@ -91,6 +99,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LanguageID: ").Append(LanguageID).Append("\n");
             sb.Append("  TimeZoneID: ").Append(TimeZoneID).Append("\n");
             sb.Append("  IsAdjustDaylight: ").Append(IsAdjustDaylight).Append("\n");
+            sb.Append("  IsDelegateAdmin: ").Append(IsDelegateAdmin).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -148,6 +157,10 @@ namespace Cloud.Governance.Client.Model
                     this.IsAdjustDaylight.Equals(input.IsAdjustDaylight)
                 ) && 
                 (
+                    this.IsDelegateAdmin == input.IsDelegateAdmin ||
+                    this.IsDelegateAdmin.Equals(input.IsDelegateAdmin)
+                ) && 
+                (
                     this.Properties == input.Properties ||
                     (this.Properties != null &&
                     this.Properties.Equals(input.Properties))
@@ -169,6 +182,7 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.LanguageID.GetHashCode();
                 hashCode = hashCode * 59 + this.TimeZoneID.GetHashCode();
                 hashCode = hashCode * 59 + this.IsAdjustDaylight.GetHashCode();
+                hashCode = hashCode * 59 + this.IsDelegateAdmin.GetHashCode();
                 if (this.Properties != null)
                     hashCode = hashCode * 59 + this.Properties.GetHashCode();
                 return hashCode;

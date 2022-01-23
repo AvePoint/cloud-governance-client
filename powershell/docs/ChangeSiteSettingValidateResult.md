@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **PrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**TenantId** | **String** |  | [optional] 
+**Sensitivity** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
@@ -35,6 +37,8 @@ $ChangeSiteSettingValidateResult = New-Cloud.Governance.ClientChangeSiteSettingV
  -PrimaryContact null `
  -SecondaryContact null `
  -PrimaryAdministrator null `
+ -TenantId null `
+ -Sensitivity null `
  -IsValid null `
  -ErrorMessage null `
  -MessageCode null

@@ -47,6 +47,12 @@ function New-ChangeSiteSettingValidateResult {
         [PSCustomObject]
         ${PrimaryAdministrator},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${TenantId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${Sensitivity},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -75,6 +81,8 @@ function New-ChangeSiteSettingValidateResult {
             "PrimaryContact" = ${PrimaryContact}
             "SecondaryContact" = ${SecondaryContact}
             "PrimaryAdministrator" = ${PrimaryAdministrator}
+            "TenantId" = ${TenantId}
+            "Sensitivity" = ${Sensitivity}
             "IsValid" = ${IsValid}
             "ErrorMessage" = ${ErrorMessage}
             "MessageCode" = ${MessageCode}
@@ -100,7 +108,7 @@ function ConvertFrom-JsonToChangeSiteSettingValidateResult {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeSiteSettingValidateResult
-        $AllProperties = $("SiteUrl", "SiteId", "SiteTitle", "SiteDescription", "IsEnableChangeHubSite", "IsModernSite", "IsHubSite", "AssociatedHubSiteId", "Metadatas", "PrimaryContact", "SecondaryContact", "PrimaryAdministrator", "IsValid", "ErrorMessage", "MessageCode")
+        $AllProperties = $("SiteUrl", "SiteId", "SiteTitle", "SiteDescription", "IsEnableChangeHubSite", "IsModernSite", "IsHubSite", "AssociatedHubSiteId", "Metadatas", "PrimaryContact", "SecondaryContact", "PrimaryAdministrator", "TenantId", "Sensitivity", "IsValid", "ErrorMessage", "MessageCode")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -179,6 +187,18 @@ function ConvertFrom-JsonToChangeSiteSettingValidateResult {
             $PrimaryAdministrator = $JsonParameters.PSobject.Properties["PrimaryAdministrator"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TenantId"))) { #optional property not found
+            $TenantId = $null
+        } else {
+            $TenantId = $JsonParameters.PSobject.Properties["TenantId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Sensitivity"))) { #optional property not found
+            $Sensitivity = $null
+        } else {
+            $Sensitivity = $JsonParameters.PSobject.Properties["Sensitivity"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsValid"))) { #optional property not found
             $IsValid = $null
         } else {
@@ -210,6 +230,8 @@ function ConvertFrom-JsonToChangeSiteSettingValidateResult {
             "PrimaryContact" = ${PrimaryContact}
             "SecondaryContact" = ${SecondaryContact}
             "PrimaryAdministrator" = ${PrimaryAdministrator}
+            "TenantId" = ${TenantId}
+            "Sensitivity" = ${Sensitivity}
             "IsValid" = ${IsValid}
             "ErrorMessage" = ${ErrorMessage}
             "MessageCode" = ${MessageCode}

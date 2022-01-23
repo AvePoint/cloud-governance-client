@@ -14,6 +14,9 @@ function New-ChangeGroupQuotaRequest {
         [System.Nullable[Int64]]
         ${GroupQuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Double]]
+        ${SharePointSiteSize},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -46,6 +49,7 @@ function New-ChangeGroupQuotaRequest {
         
         $PSO = [PSCustomObject]@{
             "GroupQuotaSize" = ${GroupQuotaSize}
+            "SharePointSiteSize" = ${SharePointSiteSize}
             "GroupId" = ${GroupId}
             "GroupObjectType" = ${GroupObjectType}
             "Id" = ${Id}
@@ -76,7 +80,7 @@ function ConvertFrom-JsonToChangeGroupQuotaRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupQuotaRequest
-        $AllProperties = $("GroupQuotaSize", "OriginalQuotaSize", "GroupId", "GroupName", "GroupEmail", "GroupObjectType", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("GroupQuotaSize", "OriginalQuotaSize", "SharePointSiteSize", "GroupId", "GroupName", "GroupEmail", "GroupObjectType", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -93,6 +97,12 @@ function ConvertFrom-JsonToChangeGroupQuotaRequest {
             $OriginalQuotaSize = $null
         } else {
             $OriginalQuotaSize = $JsonParameters.PSobject.Properties["OriginalQuotaSize"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SharePointSiteSize"))) { #optional property not found
+            $SharePointSiteSize = $null
+        } else {
+            $SharePointSiteSize = $JsonParameters.PSobject.Properties["SharePointSiteSize"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "GroupId"))) { #optional property not found
@@ -236,6 +246,7 @@ function ConvertFrom-JsonToChangeGroupQuotaRequest {
         $PSO = [PSCustomObject]@{
             "GroupQuotaSize" = ${GroupQuotaSize}
             "OriginalQuotaSize" = ${OriginalQuotaSize}
+            "SharePointSiteSize" = ${SharePointSiteSize}
             "GroupId" = ${GroupId}
             "GroupName" = ${GroupName}
             "GroupEmail" = ${GroupEmail}

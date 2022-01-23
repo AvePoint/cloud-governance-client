@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **ChangeMetadataSettings** | [**ChangeMetadataActionSetting**](ChangeMetadataActionSetting.md) |  | [optional] 
 **DeploymentManagerPlanSettings** | [**DpmServiceSetting**](DpmServiceSetting.md) |  | [optional] 
 **EnableChangeHubSite** | **bool** |  | [optional] [default to false]
+**EnableChangeSensitivity** | **bool** |  | [optional] [default to false]
+**SensitivityList** | [**List&lt;SensitivityLabelModel&gt;**](SensitivityLabelModel.md) |  | [optional] 
 **ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **RequestTemplate** | [**ChangeSiteSettingRequest**](ChangeSiteSettingRequest.md) |  | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 

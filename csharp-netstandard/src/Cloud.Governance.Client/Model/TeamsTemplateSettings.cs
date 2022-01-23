@@ -29,8 +29,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableCreateTeamFromScratch">Whether to allow business users to create a team from scratch. (default to false).</param>
         /// <param name="enableCreateTeamFromExistTeam">Whether to allow business users to create a team from an existing team. (default to false).</param>
         /// <param name="enableCreateTeamFromTeamTemplate">Whether to allow business users to create a team using a team template. (default to false).</param>
-        /// <param name="selectedTemplate">The selected custom team template.</param>
-        /// <param name="selectedMSTemplate">The selected built-in team template.</param>
+        /// <param name="selectedTemplate">GuidModel model.</param>
+        /// <param name="selectedMSTemplate">StringModel model.</param>
         /// <param name="teamTemplates">All team templates.</param>
         /// <param name="enableCloneChannels">Set whether copying channels from the team is enabled. (default to false).</param>
         /// <param name="enableCloneApps">Set whether copying apps from the team is enabled. (default to false).</param>
@@ -78,16 +78,16 @@ namespace Cloud.Governance.Client.Model
         public bool EnableCreateTeamFromTeamTemplate { get; set; }
 
         /// <summary>
-        /// The selected custom team template
+        /// GuidModel model
         /// </summary>
-        /// <value>The selected custom team template</value>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "selectedTemplate", EmitDefaultValue = true)]
         public GuidModel SelectedTemplate { get; set; }
 
         /// <summary>
-        /// The selected built-in team template
+        /// StringModel model
         /// </summary>
-        /// <value>The selected built-in team template</value>
+        /// <value>StringModel model</value>
         [DataMember(Name = "selectedMSTemplate", EmitDefaultValue = true)]
         public StringModel SelectedMSTemplate { get; set; }
 

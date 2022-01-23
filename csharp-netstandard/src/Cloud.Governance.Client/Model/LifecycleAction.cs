@@ -18,25 +18,25 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     
-    public enum ThemeType
+    public enum LifecycleAction
     {
         None = 0,
 
-        NavyBlue = 1,
+        Extend = 1,
 
-        LightBlack = 2,
+        Delete = 2,
 
-        LightBlue = 3,
+        Archive = 3,
 
-        Orange = 4,
+        Policy = 4,
 
-        GrassGreen = 5,
+        Unlock = 5,
 
-        Pink = 6,
+        Continue = 6,
 
-        EmeraldGreen = 7,
+        Lock = 7,
 
-        Lilac = 8
+        Quota = 8
 
     }
 

@@ -3909,3 +3909,359 @@ function Skip-ErrorTask {
     }
 }
 
+<#
+.SYNOPSIS
+
+submit group continue access auto task
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Id
+No description available.
+
+.PARAMETER CommentsParam
+No description available.
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+None
+#>
+function Submit-ContinueAccessGroupAutoTask {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${Id},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${CommentsParam},
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Submit-ContinueAccessGroupAutoTask' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('application/json')
+
+        # HTTP header 'Content-Type'
+        $LocalVarContentTypes = @('application/json')
+
+        $LocalVarUri = '/tasks/continueaccessgroup'
+
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
+
+        $LocalVarBodyParameter = $CommentsParam | ConvertTo-Json -Depth 100
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'POST' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+submit site continue access auto task
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Id
+No description available.
+
+.PARAMETER CommentsParam
+No description available.
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+None
+#>
+function Submit-ContinueAccessSiteAutoTask {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${Id},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${CommentsParam},
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Submit-ContinueAccessSiteAutoTask' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('application/json')
+
+        # HTTP header 'Content-Type'
+        $LocalVarContentTypes = @('application/json')
+
+        $LocalVarUri = '/tasks/continueaccesssite'
+
+        if ($Id) {
+            $LocalVarQueryParameters['id'] = $Id
+        }
+
+        $LocalVarBodyParameter = $CommentsParam | ConvertTo-Json -Depth 100
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'POST' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+submit extend group auto task
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER AutoTaskExtendRequest
+No description available.
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+None
+#>
+function Submit-ExtendGroupAutoTask {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${AutoTaskExtendRequest},
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Submit-ExtendGroupAutoTask' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('application/json')
+
+        # HTTP header 'Content-Type'
+        $LocalVarContentTypes = @('application/json')
+
+        $LocalVarUri = '/tasks/extendgroup'
+
+        $LocalVarBodyParameter = $AutoTaskExtendRequest | ConvertTo-Json -Depth 100
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'POST' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+submit site extend auto task
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER AutoTaskExtendRequest
+No description available.
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+None
+#>
+function Submit-ExtendSiteAutoTask {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [PSCustomObject]
+        ${AutoTaskExtendRequest},
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Submit-ExtendSiteAutoTask' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('application/json')
+
+        # HTTP header 'Content-Type'
+        $LocalVarContentTypes = @('application/json')
+
+        $LocalVarUri = '/tasks/extendsite'
+
+        $LocalVarBodyParameter = $AutoTaskExtendRequest | ConvertTo-Json -Depth 100
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'POST' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+

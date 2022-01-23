@@ -1,5 +1,4 @@
-﻿
-namespace NetFramework
+﻿namespace NetFramework
 {
     using Cloud.Governance.Client.Api;
     using Cloud.Governance.Client.Client;
@@ -9,7 +8,7 @@ namespace NetFramework
     using System.Diagnostics;
     using System.Linq;
 
-    public class CreateSite_Basic : TestBase
+    public class CreateSite_Basic : ExampleBase
     {
         public CreateSite_Basic(ApiConfig config) : base(config) { }
 
@@ -18,19 +17,19 @@ namespace NetFramework
 
             try
             {
-                
+                var requestApi = new RequestsApi(Configuration.Default);
+                var serviceApi = new ServicesApi(Configuration.Default);
 
-                var serviceName = this.ServicesApi.GetServiceId(data.ServiceName);
-                var service = this.ServicesApi.GetCreateSiteService(serviceName);
+                var serviceName = serviceApi.GetServiceId(data.ServiceName);
+                var service = serviceApi.GetCreateSiteService(serviceName);
                 var request = service.RequestTemplate;
 
-                request.SiteUrl.Name = $"Api{DateTime.Now.Ticks}";
+                request.SiteUrl.Name = $"Api_{DateTime.Now}";
                 request.Summary = $"Summary_{DateTime.Now}";
                 request.SiteTitle = $"Title_{DateTime.Now}";
-                //request.Department = data.Department;
                 request.PrimaryContact = new ApiUser { LoginName = data.PrimaryContactLoginName };
                 request.SecondaryContact = new ApiUser { LoginName = data.SecondaryContactLoginName };
-                return this.RequestsApi.SubmitCreateSiteRequest(request);
+                return requestApi.SubmitCreateSiteRequest(request);
 
             }
             catch (ApiException e)

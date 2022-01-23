@@ -68,7 +68,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="additionalAdmins">Additional site collection administrator.</param>
         /// <param name="primaryContact">Primary site collection contact.</param>
         /// <param name="secondaryContact">Secondary site collection contact.</param>
-        /// <param name="siteDesign">Communication site design.</param>
+        /// <param name="siteDesign">StringModel model.</param>
         /// <param name="teamSiteDesign">Team site design.</param>
         /// <param name="classification">Communication site Classification.</param>
         /// <param name="sensitivity">Sensitive lable.</param>
@@ -204,9 +204,9 @@ namespace Cloud.Governance.Client.Model
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
-        /// Communication site design
+        /// StringModel model
         /// </summary>
-        /// <value>Communication site design</value>
+        /// <value>StringModel model</value>
         [DataMember(Name = "siteDesign", EmitDefaultValue = true)]
         public StringModel SiteDesign { get; set; }
 

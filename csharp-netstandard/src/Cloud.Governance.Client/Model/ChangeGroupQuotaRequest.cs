@@ -63,6 +63,7 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ChangeGroupQuotaRequest" /> class.
         /// </summary>
         /// <param name="groupQuotaSize">The new group team site quota size (default to 0).</param>
+        /// <param name="sharePointSiteSize">sharepoint site size.</param>
         /// <param name="groupId">Object ID.</param>
         /// <param name="groupObjectType">Group type.</param>
         /// <param name="id">Id of request..</param>
@@ -71,9 +72,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ChangeGroupQuotaRequest(long groupQuotaSize = 0, Guid groupId = default(Guid), GroupObjectType? groupObjectType = default(GroupObjectType?), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ChangeGroupQuotaRequest(long groupQuotaSize = 0, double? sharePointSiteSize = default(double?), Guid groupId = default(Guid), GroupObjectType? groupObjectType = default(GroupObjectType?), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.GroupQuotaSize = groupQuotaSize;
+            this.SharePointSiteSize = sharePointSiteSize;
             this.GroupId = groupId;
             this.GroupObjectType = groupObjectType;
             this.Id = id;
@@ -106,6 +108,13 @@ namespace Cloud.Governance.Client.Model
         {
             return false;
         }
+
+        /// <summary>
+        /// sharepoint site size
+        /// </summary>
+        /// <value>sharepoint site size</value>
+        [DataMember(Name = "sharePointSiteSize", EmitDefaultValue = true)]
+        public double? SharePointSiteSize { get; set; }
 
         /// <summary>
         /// Object ID
@@ -374,6 +383,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class ChangeGroupQuotaRequest {\n");
             sb.Append("  GroupQuotaSize: ").Append(GroupQuotaSize).Append("\n");
             sb.Append("  OriginalQuotaSize: ").Append(OriginalQuotaSize).Append("\n");
+            sb.Append("  SharePointSiteSize: ").Append(SharePointSiteSize).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  GroupName: ").Append(GroupName).Append("\n");
             sb.Append("  GroupEmail: ").Append(GroupEmail).Append("\n");
@@ -438,6 +448,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.OriginalQuotaSize == input.OriginalQuotaSize ||
                     this.OriginalQuotaSize.Equals(input.OriginalQuotaSize)
+                ) && 
+                (
+                    this.SharePointSiteSize == input.SharePointSiteSize ||
+                    (this.SharePointSiteSize != null &&
+                    this.SharePointSiteSize.Equals(input.SharePointSiteSize))
                 ) && 
                 (
                     this.GroupId == input.GroupId ||
@@ -564,6 +579,8 @@ namespace Cloud.Governance.Client.Model
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.GroupQuotaSize.GetHashCode();
                 hashCode = hashCode * 59 + this.OriginalQuotaSize.GetHashCode();
+                if (this.SharePointSiteSize != null)
+                    hashCode = hashCode * 59 + this.SharePointSiteSize.GetHashCode();
                 if (this.GroupId != null)
                     hashCode = hashCode * 59 + this.GroupId.GetHashCode();
                 if (this.GroupName != null)

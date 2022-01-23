@@ -14,6 +14,12 @@ function New-ChangeSiteQuotaRequest {
         [System.Nullable[Int32]]
         ${QuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Double]]
+        ${SharePointSiteSize},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Double]]
+        ${CurrentQuota},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -52,6 +58,8 @@ function New-ChangeSiteQuotaRequest {
         
         $PSO = [PSCustomObject]@{
             "QuotaSize" = ${QuotaSize}
+            "SharePointSiteSize" = ${SharePointSiteSize}
+            "CurrentQuota" = ${CurrentQuota}
             "Action" = ${Action}
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
@@ -84,7 +92,7 @@ function ConvertFrom-JsonToChangeSiteQuotaRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeSiteQuotaRequest
-        $AllProperties = $("QuotaSize", "Action", "ActionDescription", "SiteId", "SiteUrl", "SiteTitle", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("QuotaSize", "SharePointSiteSize", "CurrentQuota", "Action", "ActionDescription", "SiteId", "SiteUrl", "SiteTitle", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -95,6 +103,18 @@ function ConvertFrom-JsonToChangeSiteQuotaRequest {
             $QuotaSize = $null
         } else {
             $QuotaSize = $JsonParameters.PSobject.Properties["QuotaSize"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SharePointSiteSize"))) { #optional property not found
+            $SharePointSiteSize = $null
+        } else {
+            $SharePointSiteSize = $JsonParameters.PSobject.Properties["SharePointSiteSize"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CurrentQuota"))) { #optional property not found
+            $CurrentQuota = $null
+        } else {
+            $CurrentQuota = $JsonParameters.PSobject.Properties["CurrentQuota"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Action"))) { #optional property not found
@@ -243,6 +263,8 @@ function ConvertFrom-JsonToChangeSiteQuotaRequest {
 
         $PSO = [PSCustomObject]@{
             "QuotaSize" = ${QuotaSize}
+            "SharePointSiteSize" = ${SharePointSiteSize}
+            "CurrentQuota" = ${CurrentQuota}
             "Action" = ${Action}
             "ActionDescription" = ${ActionDescription}
             "SiteId" = ${SiteId}

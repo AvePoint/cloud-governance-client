@@ -42,7 +42,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="azureUserType">azureUserType.</param>
         /// <param name="action">action.</param>
         /// <param name="externalUserType">externalUserType.</param>
-        public SPUserManagementModel(string identityName = default(string), string displayName = default(string), bool isGroup = false, string azureUserType = default(string), ManagePermissionAction? action = default(ManagePermissionAction?), ExternalUserType? externalUserType = default(ExternalUserType?))
+        /// <param name="email">email.</param>
+        public SPUserManagementModel(string identityName = default(string), string displayName = default(string), bool isGroup = false, string azureUserType = default(string), ManagePermissionAction? action = default(ManagePermissionAction?), ExternalUserType? externalUserType = default(ExternalUserType?), string email = default(string))
         {
             this.IdentityName = identityName;
             this.DisplayName = displayName;
@@ -50,6 +51,7 @@ namespace Cloud.Governance.Client.Model
             this.AzureUserType = azureUserType;
             this.Action = action;
             this.ExternalUserType = externalUserType;
+            this.Email = email;
         }
 
         /// <summary>
@@ -77,6 +79,12 @@ namespace Cloud.Governance.Client.Model
         public string AzureUserType { get; set; }
 
         /// <summary>
+        /// Gets or Sets Email
+        /// </summary>
+        [DataMember(Name = "email", EmitDefaultValue = true)]
+        public string Email { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -90,6 +98,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  AzureUserType: ").Append(AzureUserType).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ExternalUserType: ").Append(ExternalUserType).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,6 +159,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.ExternalUserType == input.ExternalUserType ||
                     this.ExternalUserType.Equals(input.ExternalUserType)
+                ) && 
+                (
+                    this.Email == input.Email ||
+                    (this.Email != null &&
+                    this.Email.Equals(input.Email))
                 );
         }
 
@@ -171,6 +185,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.AzureUserType.GetHashCode();
                 hashCode = hashCode * 59 + this.Action.GetHashCode();
                 hashCode = hashCode * 59 + this.ExternalUserType.GetHashCode();
+                if (this.Email != null)
+                    hashCode = hashCode * 59 + this.Email.GetHashCode();
                 return hashCode;
             }
         }

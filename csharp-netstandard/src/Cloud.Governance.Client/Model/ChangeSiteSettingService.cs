@@ -41,6 +41,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="changeMetadataSettings">changeMetadataSettings.</param>
         /// <param name="deploymentManagerPlanSettings">deploymentManagerPlanSettings.</param>
         /// <param name="enableChangeHubSite">enableChangeHubSite (default to false).</param>
+        /// <param name="enableChangeSensitivity">enableChangeSensitivity (default to false).</param>
+        /// <param name="sensitivityList">sensitivityList.</param>
         /// <param name="scopeSettings">scopeSettings.</param>
         /// <param name="requestTemplate">requestTemplate.</param>
         /// <param name="metadatas">metadatas.</param>
@@ -58,13 +60,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public ChangeSiteSettingService(bool enableChangeTitle = false, bool enableChangeDescription = false, ChangeMetadataActionSetting changeMetadataSettings = default(ChangeMetadataActionSetting), DpmServiceSetting deploymentManagerPlanSettings = default(DpmServiceSetting), bool enableChangeHubSite = false, ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), ChangeSiteSettingRequest requestTemplate = default(ChangeSiteSettingRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public ChangeSiteSettingService(bool enableChangeTitle = false, bool enableChangeDescription = false, ChangeMetadataActionSetting changeMetadataSettings = default(ChangeMetadataActionSetting), DpmServiceSetting deploymentManagerPlanSettings = default(DpmServiceSetting), bool enableChangeHubSite = false, bool enableChangeSensitivity = false, List<SensitivityLabelModel> sensitivityList = default(List<SensitivityLabelModel>), ServiceScopeSettings scopeSettings = default(ServiceScopeSettings), ChangeSiteSettingRequest requestTemplate = default(ChangeSiteSettingRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.EnableChangeTitle = enableChangeTitle;
             this.EnableChangeDescription = enableChangeDescription;
             this.ChangeMetadataSettings = changeMetadataSettings;
             this.DeploymentManagerPlanSettings = deploymentManagerPlanSettings;
             this.EnableChangeHubSite = enableChangeHubSite;
+            this.EnableChangeSensitivity = enableChangeSensitivity;
+            this.SensitivityList = sensitivityList;
             this.ScopeSettings = scopeSettings;
             this.RequestTemplate = requestTemplate;
             this.Metadatas = metadatas;
@@ -113,6 +117,18 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "enableChangeHubSite", EmitDefaultValue = false)]
         public bool EnableChangeHubSite { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableChangeSensitivity
+        /// </summary>
+        [DataMember(Name = "enableChangeSensitivity", EmitDefaultValue = false)]
+        public bool EnableChangeSensitivity { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SensitivityList
+        /// </summary>
+        [DataMember(Name = "sensitivityList", EmitDefaultValue = true)]
+        public List<SensitivityLabelModel> SensitivityList { get; set; }
 
         /// <summary>
         /// Gets or Sets ScopeSettings
@@ -219,6 +235,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ChangeMetadataSettings: ").Append(ChangeMetadataSettings).Append("\n");
             sb.Append("  DeploymentManagerPlanSettings: ").Append(DeploymentManagerPlanSettings).Append("\n");
             sb.Append("  EnableChangeHubSite: ").Append(EnableChangeHubSite).Append("\n");
+            sb.Append("  EnableChangeSensitivity: ").Append(EnableChangeSensitivity).Append("\n");
+            sb.Append("  SensitivityList: ").Append(SensitivityList).Append("\n");
             sb.Append("  ScopeSettings: ").Append(ScopeSettings).Append("\n");
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
@@ -291,6 +309,16 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.EnableChangeHubSite == input.EnableChangeHubSite ||
                     this.EnableChangeHubSite.Equals(input.EnableChangeHubSite)
+                ) && 
+                (
+                    this.EnableChangeSensitivity == input.EnableChangeSensitivity ||
+                    this.EnableChangeSensitivity.Equals(input.EnableChangeSensitivity)
+                ) && 
+                (
+                    this.SensitivityList == input.SensitivityList ||
+                    this.SensitivityList != null &&
+                    input.SensitivityList != null &&
+                    this.SensitivityList.SequenceEqual(input.SensitivityList)
                 ) && 
                 (
                     this.ScopeSettings == input.ScopeSettings ||
@@ -390,6 +418,9 @@ namespace Cloud.Governance.Client.Model
                 if (this.DeploymentManagerPlanSettings != null)
                     hashCode = hashCode * 59 + this.DeploymentManagerPlanSettings.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableChangeHubSite.GetHashCode();
+                hashCode = hashCode * 59 + this.EnableChangeSensitivity.GetHashCode();
+                if (this.SensitivityList != null)
+                    hashCode = hashCode * 59 + this.SensitivityList.GetHashCode();
                 if (this.ScopeSettings != null)
                     hashCode = hashCode * 59 + this.ScopeSettings.GetHashCode();
                 if (this.RequestTemplate != null)

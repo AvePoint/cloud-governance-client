@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **ShowPlannerLink** | **bool** |  | [optional] [default to false]
 **ShowYammerGroupLink** | **bool** |  | [optional] [default to false]
 **Classifications** | **List&lt;string&gt;** |  | [optional] 
-**Sensitivities** | **List&lt;string&gt;** |  | [optional] 
+**Sensitivities** | [**List&lt;StringModel&gt;**](StringModel.md) |  | [optional] 
 **SiteDesigns** | [**List&lt;GuidModel&gt;**](GuidModel.md) |  | [optional] 
 **AddGroupMemberType** | **AddGroupMemberType** |  | [optional] 
 **SelectedPolicies** | [**List&lt;BriefGroupPolicy&gt;**](BriefGroupPolicy.md) |  | [optional] 

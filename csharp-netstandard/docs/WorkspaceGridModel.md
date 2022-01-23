@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **LeaseExpirationTime** | **DateTime?** |  | [optional] 
 **InactivityThresholdTime** | **DateTime?** |  | [optional] 
 **LastRenewalTime** | **DateTime?** |  | [optional] 
+**LastAccessedTime** | **DateTime?** |  | [optional] 
 **ApplyPolicyStatus** | **ApplyPolicyStatus** |  | [optional] 
 **HasOngoingTasks** | **bool** |  | [optional] [default to false]
 **HasOngoingTasksDescription** | **string** |  | [optional] 

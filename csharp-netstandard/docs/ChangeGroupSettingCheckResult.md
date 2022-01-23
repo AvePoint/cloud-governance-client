@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **IsEnableSubscribeMembers** | **bool** |  | [optional] [default to false]
 **IsEnableOutsideSender** | **bool** |  | [optional] [default to false]
 **Classification** | **string** |  | [optional] 
+**Sensitivity** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
 **IsTeamsEnabled** | **bool** |  | [optional] [default to false]
 **EnableManageGroupSharing** | **bool** |  | [optional] [default to false]
 **EnableInviteAuthorizedGuestUser** | **bool** |  | [optional] [default to false]

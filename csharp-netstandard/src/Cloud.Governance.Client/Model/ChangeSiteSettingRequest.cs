@@ -64,13 +64,14 @@ namespace Cloud.Governance.Client.Model
         /// <param name="changedMetadatas">changedMetadatas.</param>
         /// <param name="deploymentPlanName">deploymentPlanName.</param>
         /// <param name="hubSiteSettings">hubSiteSettings.</param>
+        /// <param name="siteSensitivitySetting">siteSensitivitySetting.</param>
         /// <param name="id">Id of request..</param>
         /// <param name="serviceId">Id of service..</param>
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ChangeSiteSettingRequest(Guid siteId = default(Guid), string siteUrl = default(string), string siteTitle = default(string), StringChangedProperty siteTitleSetting = default(StringChangedProperty), StringChangedProperty siteDescriptionSetting = default(StringChangedProperty), List<RequestMetadata> changedMetadatas = default(List<RequestMetadata>), string deploymentPlanName = default(string), HubSiteChangedSettings hubSiteSettings = default(HubSiteChangedSettings), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ChangeSiteSettingRequest(Guid siteId = default(Guid), string siteUrl = default(string), string siteTitle = default(string), StringChangedProperty siteTitleSetting = default(StringChangedProperty), StringChangedProperty siteDescriptionSetting = default(StringChangedProperty), List<RequestMetadata> changedMetadatas = default(List<RequestMetadata>), string deploymentPlanName = default(string), HubSiteChangedSettings hubSiteSettings = default(HubSiteChangedSettings), StringChangedProperty siteSensitivitySetting = default(StringChangedProperty), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
@@ -80,6 +81,7 @@ namespace Cloud.Governance.Client.Model
             this.ChangedMetadatas = changedMetadatas;
             this.DeploymentPlanName = deploymentPlanName;
             this.HubSiteSettings = hubSiteSettings;
+            this.SiteSensitivitySetting = siteSensitivitySetting;
             this.Id = id;
             this.ServiceId = serviceId;
             this.Summary = summary;
@@ -166,6 +168,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "hubSiteSettings", EmitDefaultValue = true)]
         public HubSiteChangedSettings HubSiteSettings { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SiteSensitivitySetting
+        /// </summary>
+        [DataMember(Name = "siteSensitivitySetting", EmitDefaultValue = true)]
+        public StringChangedProperty SiteSensitivitySetting { get; set; }
 
         /// <summary>
         /// Id of request.
@@ -403,6 +411,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  OriginalSiteMetadatas: ").Append(OriginalSiteMetadatas).Append("\n");
             sb.Append("  DeploymentPlanName: ").Append(DeploymentPlanName).Append("\n");
             sb.Append("  HubSiteSettings: ").Append(HubSiteSettings).Append("\n");
+            sb.Append("  SiteSensitivitySetting: ").Append(SiteSensitivitySetting).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ServiceId: ").Append(ServiceId).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
@@ -506,6 +515,11 @@ namespace Cloud.Governance.Client.Model
                     this.HubSiteSettings == input.HubSiteSettings ||
                     (this.HubSiteSettings != null &&
                     this.HubSiteSettings.Equals(input.HubSiteSettings))
+                ) && 
+                (
+                    this.SiteSensitivitySetting == input.SiteSensitivitySetting ||
+                    (this.SiteSensitivitySetting != null &&
+                    this.SiteSensitivitySetting.Equals(input.SiteSensitivitySetting))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -630,6 +644,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.DeploymentPlanName.GetHashCode();
                 if (this.HubSiteSettings != null)
                     hashCode = hashCode * 59 + this.HubSiteSettings.GetHashCode();
+                if (this.SiteSensitivitySetting != null)
+                    hashCode = hashCode * 59 + this.SiteSensitivitySetting.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ServiceId != null)

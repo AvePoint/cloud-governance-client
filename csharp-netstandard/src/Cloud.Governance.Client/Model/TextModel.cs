@@ -27,8 +27,8 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="TextModel" /> class.
         /// </summary>
         /// <param name="description">description.</param>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
+        /// <param name="id">StringModel ID.</param>
+        /// <param name="name">StringModel name.</param>
         public TextModel(string description = default(string), string id = default(string), string name = default(string))
         {
             this.Description = description;
@@ -43,14 +43,16 @@ namespace Cloud.Governance.Client.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// StringModel ID
         /// </summary>
+        /// <value>StringModel ID</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// StringModel name
         /// </summary>
+        /// <value>StringModel name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 

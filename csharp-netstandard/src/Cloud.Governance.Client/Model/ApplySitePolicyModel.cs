@@ -42,7 +42,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="selectedObjects">selectedObjects.</param>
         /// <param name="hasOngoingTasks">hasOngoingTasks (default to false).</param>
         /// <param name="isApplyUniqueAccess">isApplyUniqueAccess (default to false).</param>
-        public ApplySitePolicyModel(bool isApplyDesigner = false, bool isApplySiteMaxDepth = false, bool isApplyPolicyIcon = false, bool isApplyAosPlans = false, Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false, bool isApplyUniqueAccess = false)
+        public ApplySitePolicyModel(bool isApplyDesigner = false, bool isApplySiteMaxDepth = false, bool isApplyPolicyIcon = false, bool isApplyAosPlans = false, Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false, bool? isApplyUniqueAccess = false)
         {
             this.IsApplyDesigner = isApplyDesigner;
             this.IsApplySiteMaxDepth = isApplySiteMaxDepth;
@@ -59,7 +59,8 @@ namespace Cloud.Governance.Client.Model
             this.Filter = filter;
             this.SelectedObjects = selectedObjects;
             this.HasOngoingTasks = hasOngoingTasks;
-            this.IsApplyUniqueAccess = isApplyUniqueAccess;
+            // use default value if no "isApplyUniqueAccess" provided
+            this.IsApplyUniqueAccess = isApplyUniqueAccess ?? false;
         }
 
         /// <summary>
@@ -155,8 +156,8 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets IsApplyUniqueAccess
         /// </summary>
-        [DataMember(Name = "isApplyUniqueAccess", EmitDefaultValue = false)]
-        public bool IsApplyUniqueAccess { get; set; }
+        [DataMember(Name = "isApplyUniqueAccess", EmitDefaultValue = true)]
+        public bool? IsApplyUniqueAccess { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -283,7 +284,8 @@ namespace Cloud.Governance.Client.Model
                 ) && 
                 (
                     this.IsApplyUniqueAccess == input.IsApplyUniqueAccess ||
-                    this.IsApplyUniqueAccess.Equals(input.IsApplyUniqueAccess)
+                    (this.IsApplyUniqueAccess != null &&
+                    this.IsApplyUniqueAccess.Equals(input.IsApplyUniqueAccess))
                 );
         }
 
@@ -315,7 +317,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.SelectedObjects != null)
                     hashCode = hashCode * 59 + this.SelectedObjects.GetHashCode();
                 hashCode = hashCode * 59 + this.HasOngoingTasks.GetHashCode();
-                hashCode = hashCode * 59 + this.IsApplyUniqueAccess.GetHashCode();
+                if (this.IsApplyUniqueAccess != null)
+                    hashCode = hashCode * 59 + this.IsApplyUniqueAccess.GetHashCode();
                 return hashCode;
             }
         }

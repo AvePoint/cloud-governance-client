@@ -326,6 +326,8 @@ namespace Cloud.Governance.Client.Model
 
         ApplyGroupExtension = 562,
 
+        ChangeTeamPrivateChannelSiteQuota = 563,
+
         CreatingSite = 600,
 
         ApplyingCustomTemplate = 601,
@@ -423,6 +425,8 @@ namespace Cloud.Governance.Client.Model
         ConnectingToHubSite = 834,
 
         UnregisteringHubSite = 835,
+
+        ChangingSensitivity = 836,
 
         ChangingWebTitleAndDescription = 850,
 

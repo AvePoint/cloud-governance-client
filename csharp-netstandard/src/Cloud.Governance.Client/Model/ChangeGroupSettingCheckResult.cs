@@ -45,6 +45,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isEnableSubscribeMembers">isEnableSubscribeMembers (default to false).</param>
         /// <param name="isEnableOutsideSender">isEnableOutsideSender (default to false).</param>
         /// <param name="classification">classification.</param>
+        /// <param name="sensitivity">StringModel model.</param>
         /// <param name="isTeamsEnabled">isTeamsEnabled (default to false).</param>
         /// <param name="enableManageGroupSharing">enableManageGroupSharing (default to false).</param>
         /// <param name="enableInviteAuthorizedGuestUser">enableInviteAuthorizedGuestUser (default to false).</param>
@@ -63,7 +64,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeGroupSettingCheckResult(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string groupId = default(string), string groupName = default(string), string groupEmail = default(string), string groupDescription = default(string), bool isEnableSubscribeMembers = false, bool isEnableOutsideSender = false, string classification = default(string), bool isTeamsEnabled = false, bool enableManageGroupSharing = false, bool enableInviteAuthorizedGuestUser = false, bool enableInviteGuestUser = false, bool enableDynamicMembership = false, bool enableTeamCollaboration = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool enableChangeMembershipType = false, string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeGroupSettingCheckResult(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string groupId = default(string), string groupName = default(string), string groupEmail = default(string), string groupDescription = default(string), bool isEnableSubscribeMembers = false, bool isEnableOutsideSender = false, string classification = default(string), StringModel sensitivity = default(StringModel), bool isTeamsEnabled = false, bool enableManageGroupSharing = false, bool enableInviteAuthorizedGuestUser = false, bool enableInviteGuestUser = false, bool enableDynamicMembership = false, bool enableTeamCollaboration = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool enableChangeMembershipType = false, string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;
@@ -74,6 +75,7 @@ namespace Cloud.Governance.Client.Model
             this.IsEnableSubscribeMembers = isEnableSubscribeMembers;
             this.IsEnableOutsideSender = isEnableOutsideSender;
             this.Classification = classification;
+            this.Sensitivity = sensitivity;
             this.IsTeamsEnabled = isTeamsEnabled;
             this.EnableManageGroupSharing = enableManageGroupSharing;
             this.EnableInviteAuthorizedGuestUser = enableInviteAuthorizedGuestUser;
@@ -149,6 +151,13 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "classification", EmitDefaultValue = true)]
         public string Classification { get; set; }
+
+        /// <summary>
+        /// StringModel model
+        /// </summary>
+        /// <value>StringModel model</value>
+        [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
+        public StringModel Sensitivity { get; set; }
 
         /// <summary>
         /// Gets or Sets IsTeamsEnabled
@@ -263,6 +272,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsEnableSubscribeMembers: ").Append(IsEnableSubscribeMembers).Append("\n");
             sb.Append("  IsEnableOutsideSender: ").Append(IsEnableOutsideSender).Append("\n");
             sb.Append("  Classification: ").Append(Classification).Append("\n");
+            sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
             sb.Append("  IsTeamsEnabled: ").Append(IsTeamsEnabled).Append("\n");
             sb.Append("  EnableManageGroupSharing: ").Append(EnableManageGroupSharing).Append("\n");
             sb.Append("  EnableInviteAuthorizedGuestUser: ").Append(EnableInviteAuthorizedGuestUser).Append("\n");
@@ -357,6 +367,11 @@ namespace Cloud.Governance.Client.Model
                     this.Classification == input.Classification ||
                     (this.Classification != null &&
                     this.Classification.Equals(input.Classification))
+                ) && 
+                (
+                    this.Sensitivity == input.Sensitivity ||
+                    (this.Sensitivity != null &&
+                    this.Sensitivity.Equals(input.Sensitivity))
                 ) && 
                 (
                     this.IsTeamsEnabled == input.IsTeamsEnabled ||
@@ -466,6 +481,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.IsEnableOutsideSender.GetHashCode();
                 if (this.Classification != null)
                     hashCode = hashCode * 59 + this.Classification.GetHashCode();
+                if (this.Sensitivity != null)
+                    hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
                 hashCode = hashCode * 59 + this.IsTeamsEnabled.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableManageGroupSharing.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableInviteAuthorizedGuestUser.GetHashCode();

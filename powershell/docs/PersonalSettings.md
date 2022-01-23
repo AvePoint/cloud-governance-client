@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **LanguageID** | **Int32** |  | [optional] [default to 0]
 **TimeZoneID** | **Int32** |  | [optional] [default to 0]
 **IsAdjustDaylight** | **Boolean** |  | [optional] [default to $false]
+**IsDelegateAdmin** | **Boolean** |  | [optional] [default to $false]
 **Properties** | [**PersonalSettingsPropertyInfo**](PersonalSettingsPropertyInfo.md) |  | [optional] 
 
 ## Examples
@@ -19,6 +20,7 @@ $PersonalSettings = New-Cloud.Governance.ClientPersonalSettings  -Id null `
  -LanguageID null `
  -TimeZoneID null `
  -IsAdjustDaylight null `
+ -IsDelegateAdmin null `
  -Properties null
 ```
 

@@ -55,6 +55,7 @@ Method | HTTP request | Description
 > ChangeGroupSettingService Get-ChangeGroupSettingService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change group setting service
 
@@ -77,12 +78,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get change group setting service
 try {
-     $Result = Get-ChangeGroupSettingService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeGroupSettingService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ChangeGroupSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -95,6 +97,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -116,6 +119,7 @@ Name | Type | Description  | Notes
 > ChangeListSettingService Get-ChangeListSettingService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change list setting service
 
@@ -138,12 +142,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get change list setting service
 try {
-     $Result = Get-ChangeListSettingService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeListSettingService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ChangeListSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -156,6 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -177,6 +183,7 @@ Name | Type | Description  | Notes
 > ChangePermissionService Get-ChangePermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change permission service
 
@@ -199,12 +206,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get change permission service
 try {
-     $Result = Get-ChangePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangePermissionService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ChangePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -217,6 +225,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -238,6 +247,7 @@ Name | Type | Description  | Notes
 > ChangeSiteContactService Get-ChangeSiteContactService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change site contact service
 
@@ -260,12 +270,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get change site contact service
 try {
-     $Result = Get-ChangeSiteContactService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeSiteContactService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ChangeSiteContactService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -278,6 +289,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -299,6 +311,7 @@ Name | Type | Description  | Notes
 > ChangeSiteSettingService Get-ChangeSiteSettingService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change site setting service
 
@@ -321,12 +334,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get change site setting service
 try {
-     $Result = Get-ChangeSiteSettingService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeSiteSettingService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ChangeSiteSettingService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -339,6 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -360,6 +375,7 @@ Name | Type | Description  | Notes
 > ChangeWebContactService Get-ChangeWebContactService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 validate permissions, scope for change web contact service
 
@@ -382,12 +398,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # validate permissions, scope for change web contact service
 try {
-     $Result = Get-ChangeWebContactService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeWebContactService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ChangeWebContactService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -400,6 +417,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -421,6 +439,7 @@ Name | Type | Description  | Notes
 > ChangeWebSettingService Get-ChangeWebSettingsService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change web setting service
 
@@ -443,12 +462,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get change web setting service
 try {
-     $Result = Get-ChangeWebSettingsService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ChangeWebSettingsService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ChangeWebSettingsService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -461,6 +481,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -482,6 +503,7 @@ Name | Type | Description  | Notes
 > ClonePermissionService Get-ClonePermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get clone permission service
 
@@ -504,12 +526,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get clone permission service
 try {
-     $Result = Get-ClonePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ClonePermissionService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ClonePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -522,6 +545,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -596,6 +620,7 @@ This endpoint does not need any parameter.
 > ContentMoveService Get-ContentMoveService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get content move service
 
@@ -618,12 +643,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get content move service
 try {
-     $Result = Get-ContentMoveService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ContentMoveService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ContentMoveService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -636,6 +662,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -657,6 +684,7 @@ Name | Type | Description  | Notes
 > CreateGroupService Get-CreateGroupService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create group service
 
@@ -679,12 +707,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get create group service
 try {
-     $Result = Get-CreateGroupService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateGroupService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CreateGroupService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -697,6 +726,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -718,6 +748,7 @@ Name | Type | Description  | Notes
 > CreateGuestUserService Get-CreateGuestUserService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create group service
 
@@ -740,12 +771,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get create group service
 try {
-     $Result = Get-CreateGuestUserService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateGuestUserService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CreateGuestUserService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -758,6 +790,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -779,6 +812,7 @@ Name | Type | Description  | Notes
 > CreateListService Get-CreateListService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create list service
 
@@ -801,12 +835,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get create list service
 try {
-     $Result = Get-CreateListService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateListService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CreateListService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -819,6 +854,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -839,6 +875,7 @@ Name | Type | Description  | Notes
 # **Get-CreatePrivateChannelService**
 > CreatePrivateChannelService Get-CreatePrivateChannelService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get private channel service detail
 
@@ -861,11 +898,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = "Id_example" # String | 
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get private channel service detail
 try {
-     $Result = Get-CreatePrivateChannelService -Id $Id
+     $Result = Get-CreatePrivateChannelService -Id $Id -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CreatePrivateChannelService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -877,6 +915,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -898,6 +937,7 @@ Name | Type | Description  | Notes
 > CreateSiteService Get-CreateSiteService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create site service
 
@@ -920,12 +960,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get create site service
 try {
-     $Result = Get-CreateSiteService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateSiteService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CreateSiteService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -938,6 +979,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -959,6 +1001,7 @@ Name | Type | Description  | Notes
 > CreateWebService Get-CreateWebService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create web service
 
@@ -981,12 +1024,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get create web service
 try {
-     $Result = Get-CreateWebService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CreateWebService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CreateWebService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -999,6 +1043,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1020,6 +1065,7 @@ Name | Type | Description  | Notes
 > ServiceForRequest Get-CustomService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get custom service
 
@@ -1042,12 +1088,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get custom service
 try {
-     $Result = Get-CustomService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-CustomService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CustomService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1060,6 +1107,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1081,6 +1129,7 @@ Name | Type | Description  | Notes
 > GrantPermissionService Get-GrantPermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get grant permission service
 
@@ -1103,12 +1152,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get grant permission service
 try {
-     $Result = Get-GrantPermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-GrantPermissionService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-GrantPermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1121,6 +1171,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1142,6 +1193,7 @@ Name | Type | Description  | Notes
 > GroupLifecycleService Get-GroupLifecycleService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get group lifecycle service
 
@@ -1164,12 +1216,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get group lifecycle service
 try {
-     $Result = Get-GroupLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-GroupLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-GroupLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1182,6 +1235,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1203,6 +1257,7 @@ Name | Type | Description  | Notes
 > ManagePermissionService Get-ManagePermissionService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get manage permission service
 
@@ -1225,12 +1280,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get manage permission service
 try {
-     $Result = Get-ManagePermissionService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-ManagePermissionService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-ManagePermissionService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1243,6 +1299,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1285,7 +1342,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Search = "MySearch" # String |  (optional)
+$Search = "Search_example" # String |  (optional)
 
 # get services that can be used to start a request
 try {
@@ -1343,7 +1400,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Name = "MyName" # String | service name, case insensitive
+$Name = "Name_example" # String | service name, case insensitive
 
 # get service id by service name
 try {
@@ -1380,6 +1437,7 @@ Name | Type | Description  | Notes
 > SiteLifecycleService Get-SiteLifecycleService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get site lifecycle service
 
@@ -1402,12 +1460,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get site lifecycle service
 try {
-     $Result = Get-SiteLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-SiteLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-SiteLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1420,6 +1479,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1441,6 +1501,7 @@ Name | Type | Description  | Notes
 > WebLifecycleService Get-WebLifecycleService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get web lifecycle service
 
@@ -1463,12 +1524,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get web lifecycle service
 try {
-     $Result = Get-WebLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId
+     $Result = Get-WebLifecycleService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-WebLifecycleService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -1481,6 +1543,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
  **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1525,9 +1588,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$Email = "MyEmail" # String | 
-$RequestId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Id = "Id_example" # String | 
+$Email = "Email_example" # String | 
+$RequestId = "RequestId_example" # String |  (optional)
 
 # validate guest user email
 try {
@@ -1588,8 +1651,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$RequestBody = "MyRequestBody" # String[] |  (optional)
+$Id = "Id_example" # String | 
+$RequestBody = @("Property_example") # String[] |  (optional)
 
 # validate guest user emails
 try {
@@ -1649,8 +1712,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$ChangeGroupSettingValidationParameter = $ChangeGroupSettingValidationParameter = New-ChangeGroupSettingValidationParameter -GroupEmail "MyGroupEmail" -GroupId "MyGroupId" -IsEditTask $false -IsFromQuestionnaire $false # ChangeGroupSettingValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$ChangeGroupSettingValidationParameter = (Initialize-ChangeGroupSettingValidationParameter -GroupEmail "GroupEmail_example" -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangeGroupSettingValidationParameter |  (optional)
 
 # validate permissions, scope for change group setting service
 try {
@@ -1710,8 +1773,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter = (Initialize-SiteValidationParameter -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change list setting service
 try {
@@ -1771,8 +1834,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter = (Initialize-SiteValidationParameter -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change permission service
 try {
@@ -1832,8 +1895,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site contact service
 try {
@@ -1893,8 +1956,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site setting service
 try {
@@ -1954,8 +2017,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web contact service
 try {
@@ -2015,8 +2078,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web setting service
 try {
@@ -2076,8 +2139,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for clone permission service
 try {
@@ -2137,8 +2200,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$ContentMoveUrlValidationParameter = $ContentMoveUrlValidationParameter = New-ContentMoveUrlValidationParameter -IsCheckSourceUrl $false -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # ContentMoveUrlValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$ContentMoveUrlValidationParameter = (Initialize-ContentMoveUrlValidationParameter -IsCheckSourceUrl $false -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # ContentMoveUrlValidationParameter |  (optional)
 
 # validate permissions, scope for content move service
 try {
@@ -2199,11 +2262,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$RequestId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
-$ApiUser = $ExternalUserType = New-ExternalUserType 
-$ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType # ApiUser[] |  (optional)
+$Id = "Id_example" # String | 
+$RequestId = "RequestId_example" # String |  (optional)
+$ApiUser = @((Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType ))) # ApiUser[] |  (optional)
 
 # validate groups can invite
 try {
@@ -2264,8 +2325,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$ListValidationParameter = $ListValidationParameter = New-ListValidationParameter -ListUrl "MyListUrl" -ParentUrl "MyParentUrl" -ListTitle "MyListTitle" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false # ListValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$ListValidationParameter = (Initialize-ListValidationParameter -ListUrl "ListUrl_example" -ParentUrl "ParentUrl_example" -ListTitle "ListTitle_example" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false) # ListValidationParameter |  (optional)
 
 # validate permissions, scope for create list service
 try {
@@ -2325,8 +2386,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CreateWebValidationParameter = $CreateWebValidationParameter = New-CreateWebValidationParameter -ParentUrl "MyParentUrl" -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # CreateWebValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$CreateWebValidationParameter = (Initialize-CreateWebValidationParameter -ParentUrl "ParentUrl_example" -Uri "Uri_example" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false) # CreateWebValidationParameter |  (optional)
 
 # validate permissions, scope for create web service
 try {
@@ -2386,8 +2447,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for grant permission service
 try {
@@ -2447,8 +2508,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$GroupValidationParameter = $GroupValidationParameter = New-GroupValidationParameter -GroupId "MyGroupId" -IsEditTask $false -IsFromQuestionnaire $false # GroupValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$GroupValidationParameter = (Initialize-GroupValidationParameter -GroupId "GroupId_example" -IsEditTask $false -IsFromQuestionnaire $false) # GroupValidationParameter |  (optional)
 
 # validate permissions, scope for group lifecycle service
 try {
@@ -2508,8 +2569,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for manage permission service
 try {
@@ -2569,8 +2630,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for site lifecycle service
 try {
@@ -2630,8 +2691,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
+$Id = "Id_example" # String | 
+$SiteValidationParameter =  # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for web lifecycle service
 try {
@@ -2691,8 +2752,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ServiceId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
-$CreatePrivateChannelValidationParameter = $CreatePrivateChannelValidationParameter = New-CreatePrivateChannelValidationParameter -TeamObjectId "MyTeamObjectId" -TenantId "MyTenantId" -IsEditTask $false -IsFromQuestionnaire $false # CreatePrivateChannelValidationParameter |  (optional)
+$ServiceId = "ServiceId_example" # String | 
+$CreatePrivateChannelValidationParameter = (Initialize-CreatePrivateChannelValidationParameter -TeamObjectId "TeamObjectId_example" -TenantId "TenantId_example" -IsEditTask $false -IsFromQuestionnaire $false) # CreatePrivateChannelValidationParameter |  (optional)
 
 # validate teams for create private channel service
 try {

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GroupQuotaSize** | **Int64** | The new group team site quota size | [optional] [default to 0]
 **OriginalQuotaSize** | **Int64** | The original group team site quota size | [optional] [readonly] [default to 0]
+**SharePointSiteSize** | **Double** | sharepoint site size | [optional] 
 **GroupId** | **String** | Object ID | [optional] 
 **GroupName** | **String** | Group name | [optional] [readonly] 
 **GroupEmail** | **String** | Group e-mail address | [optional] [readonly] 
@@ -35,6 +36,7 @@ Name | Type | Description | Notes
 ```powershell
 $ChangeGroupQuotaRequest = New-Cloud.Governance.ClientChangeGroupQuotaRequest  -GroupQuotaSize null `
  -OriginalQuotaSize null `
+ -SharePointSiteSize null `
  -GroupId null `
  -GroupName null `
  -GroupEmail null `

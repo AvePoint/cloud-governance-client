@@ -43,10 +43,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContact">ApiUser model.</param>
         /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="primaryAdministrator">ApiUser model.</param>
+        /// <param name="tenantId">tenantId.</param>
+        /// <param name="sensitivity">StringModel model.</param>
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeSiteSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string siteTitle = default(string), string siteDescription = default(string), bool isEnableChangeHubSite = false, bool isModernSite = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeSiteSettingValidateResult(string siteUrl = default(string), Guid siteId = default(Guid), string siteTitle = default(string), string siteDescription = default(string), bool isEnableChangeHubSite = false, bool isModernSite = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), ApiUser primaryAdministrator = default(ApiUser), Guid tenantId = default(Guid), StringModel sensitivity = default(StringModel), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.SiteUrl = siteUrl;
             this.SiteId = siteId;
@@ -60,6 +62,8 @@ namespace Cloud.Governance.Client.Model
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;
             this.PrimaryAdministrator = primaryAdministrator;
+            this.TenantId = tenantId;
+            this.Sensitivity = sensitivity;
             this.IsValid = isValid;
             this.ErrorMessage = errorMessage;
             this.MessageCode = messageCode;
@@ -141,6 +145,19 @@ namespace Cloud.Governance.Client.Model
         public ApiUser PrimaryAdministrator { get; set; }
 
         /// <summary>
+        /// Gets or Sets TenantId
+        /// </summary>
+        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        public Guid TenantId { get; set; }
+
+        /// <summary>
+        /// StringModel model
+        /// </summary>
+        /// <value>StringModel model</value>
+        [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
+        public StringModel Sensitivity { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsValid
         /// </summary>
         [DataMember(Name = "isValid", EmitDefaultValue = false)]
@@ -172,6 +189,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PrimaryContact: ").Append(PrimaryContact).Append("\n");
             sb.Append("  SecondaryContact: ").Append(SecondaryContact).Append("\n");
             sb.Append("  PrimaryAdministrator: ").Append(PrimaryAdministrator).Append("\n");
+            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
+            sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  MessageCode: ").Append(MessageCode).Append("\n");
@@ -268,6 +287,16 @@ namespace Cloud.Governance.Client.Model
                     this.PrimaryAdministrator.Equals(input.PrimaryAdministrator))
                 ) && 
                 (
+                    this.TenantId == input.TenantId ||
+                    (this.TenantId != null &&
+                    this.TenantId.Equals(input.TenantId))
+                ) && 
+                (
+                    this.Sensitivity == input.Sensitivity ||
+                    (this.Sensitivity != null &&
+                    this.Sensitivity.Equals(input.Sensitivity))
+                ) && 
+                (
                     this.IsValid == input.IsValid ||
                     this.IsValid.Equals(input.IsValid)
                 ) && 
@@ -312,6 +341,10 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.SecondaryContact.GetHashCode();
                 if (this.PrimaryAdministrator != null)
                     hashCode = hashCode * 59 + this.PrimaryAdministrator.GetHashCode();
+                if (this.TenantId != null)
+                    hashCode = hashCode * 59 + this.TenantId.GetHashCode();
+                if (this.Sensitivity != null)
+                    hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
                 hashCode = hashCode * 59 + this.IsValid.GetHashCode();
                 if (this.ErrorMessage != null)
                     hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();

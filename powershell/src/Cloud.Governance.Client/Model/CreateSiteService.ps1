@@ -71,7 +71,7 @@ function New-CreateSiteService {
         [String[]]
         ${Classifications},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String[]]
+        [PSCustomObject[]]
         ${Sensitivities},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]

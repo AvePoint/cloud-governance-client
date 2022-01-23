@@ -1,5 +1,4 @@
-﻿
-//namespace NetFramework
+﻿//namespace NetFramework
 //{
 //    using Cloud.Governance.Client.Api;
 //    using Cloud.Governance.Client.Client;

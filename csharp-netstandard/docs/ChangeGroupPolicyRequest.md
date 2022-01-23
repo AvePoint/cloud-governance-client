@@ -4,8 +4,8 @@ Change group policy request model
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) | The new policy information settings | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original policy information settings | [optional] [readonly] 
+**Policy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] [readonly] 
 **IsLeaseEnabled** | **bool** | Whether to enable the group/team lease extension. | [optional] [default to false]
 **ChangePolicyConfig** | **AssignBy** | Set how to assign the group policy. | [optional] 
 **StartDateType** | **StartDateType** | Group lease start date configuration after a policy change | [optional] 

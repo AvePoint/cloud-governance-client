@@ -77,7 +77,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="enableTeamCollaboration">Enable a team for the group. (default to false).</param>
         /// <param name="language">The language of a group. You can get IDs and names of all available languages by invoking the GetCreateGroupServiceApi..</param>
         /// <param name="classification">Group classification.</param>
-        /// <param name="sensitivity">Group sensitive lable.</param>
+        /// <param name="sensitivity">Group sensitive lable id.</param>
+        /// <param name="sensitivityName">Group sensitive lable name.</param>
         /// <param name="leasePeriodSettings">Group lease period settings.</param>
         /// <param name="teamsSettings">Team members permission settings.</param>
         /// <param name="appliedSiteDesignId">The ID of the group team site design. You can get IDs and names of all group team sites by invoking the GetCreateGroupServiceApi..</param>
@@ -97,7 +98,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public CreateGroupRequest(CreateGroupType? groupType = default(CreateGroupType?), string groupId = default(string), string groupIdWithoutPrefixSuffix = default(string), string groupName = default(string), string groupNameWithoutPrefixSuffix = default(string), Guid policy = default(Guid), string groupDescription = default(string), List<ApiUser> owners = default(List<ApiUser>), List<ApiUser> members = default(List<ApiUser>), bool privacy = false, bool subscribe = false, bool outsideSender = false, bool enableTeamCollaboration = false, string language = default(string), string classification = default(string), string sensitivity = default(string), GroupLeasePeriodSettings leasePeriodSettings = default(GroupLeasePeriodSettings), RequestTeamsSettings teamsSettings = default(RequestTeamsSettings), Guid? appliedSiteDesignId = default(Guid?), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), bool enableGroupMembershipHidden = false, bool enableAssignedMembership = false, bool enableDynamicMembership = false, TeamsTemplateSettings templateSettings = default(TeamsTemplateSettings), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), GeoLocationBase multiGeoLocation = default(GeoLocationBase), HubSiteSettings hubSiteSettings = default(HubSiteSettings), string yammerGroupInfo = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public CreateGroupRequest(CreateGroupType? groupType = default(CreateGroupType?), string groupId = default(string), string groupIdWithoutPrefixSuffix = default(string), string groupName = default(string), string groupNameWithoutPrefixSuffix = default(string), Guid policy = default(Guid), string groupDescription = default(string), List<ApiUser> owners = default(List<ApiUser>), List<ApiUser> members = default(List<ApiUser>), bool privacy = false, bool subscribe = false, bool outsideSender = false, bool enableTeamCollaboration = false, string language = default(string), string classification = default(string), string sensitivity = default(string), string sensitivityName = default(string), GroupLeasePeriodSettings leasePeriodSettings = default(GroupLeasePeriodSettings), RequestTeamsSettings teamsSettings = default(RequestTeamsSettings), Guid? appliedSiteDesignId = default(Guid?), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), bool enableGroupMembershipHidden = false, bool enableAssignedMembership = false, bool enableDynamicMembership = false, TeamsTemplateSettings templateSettings = default(TeamsTemplateSettings), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), GeoLocationBase multiGeoLocation = default(GeoLocationBase), HubSiteSettings hubSiteSettings = default(HubSiteSettings), string yammerGroupInfo = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.GroupType = groupType;
             this.GroupId = groupId;
@@ -115,6 +116,7 @@ namespace Cloud.Governance.Client.Model
             this.Language = language;
             this.Classification = classification;
             this.Sensitivity = sensitivity;
+            this.SensitivityName = sensitivityName;
             this.LeasePeriodSettings = leasePeriodSettings;
             this.TeamsSettings = teamsSettings;
             this.AppliedSiteDesignId = appliedSiteDesignId;
@@ -251,11 +253,18 @@ namespace Cloud.Governance.Client.Model
         public string Classification { get; set; }
 
         /// <summary>
-        /// Group sensitive lable
+        /// Group sensitive lable id
         /// </summary>
-        /// <value>Group sensitive lable</value>
+        /// <value>Group sensitive lable id</value>
         [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
         public string Sensitivity { get; set; }
+
+        /// <summary>
+        /// Group sensitive lable name
+        /// </summary>
+        /// <value>Group sensitive lable name</value>
+        [DataMember(Name = "sensitivityName", EmitDefaultValue = true)]
+        public string SensitivityName { get; set; }
 
         /// <summary>
         /// Links of the group related objects. You can get IDs and names of all group related objects by invoking the GetCreateGroupServiceApi.
@@ -607,6 +616,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  Classification: ").Append(Classification).Append("\n");
             sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
+            sb.Append("  SensitivityName: ").Append(SensitivityName).Append("\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  LeasePeriodSettings: ").Append(LeasePeriodSettings).Append("\n");
             sb.Append("  TeamsSettings: ").Append(TeamsSettings).Append("\n");
@@ -755,6 +765,11 @@ namespace Cloud.Governance.Client.Model
                     this.Sensitivity == input.Sensitivity ||
                     (this.Sensitivity != null &&
                     this.Sensitivity.Equals(input.Sensitivity))
+                ) && 
+                (
+                    this.SensitivityName == input.SensitivityName ||
+                    (this.SensitivityName != null &&
+                    this.SensitivityName.Equals(input.SensitivityName))
                 ) && 
                 (
                     this.Links == input.Links ||
@@ -957,6 +972,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Classification.GetHashCode();
                 if (this.Sensitivity != null)
                     hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
+                if (this.SensitivityName != null)
+                    hashCode = hashCode * 59 + this.SensitivityName.GetHashCode();
                 if (this.Links != null)
                     hashCode = hashCode * 59 + this.Links.GetHashCode();
                 if (this.LeasePeriodSettings != null)

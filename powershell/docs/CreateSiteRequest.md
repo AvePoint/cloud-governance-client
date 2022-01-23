@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **AdditionalAdmins** | [**ApiUser[]**](ApiUser.md) | Additional site collection administrator | [optional] 
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | Primary site collection contact | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | Secondary site collection contact | [optional] 
-**SiteDesign** | [**StringModel**](StringModel.md) | Communication site design | [optional] 
+**SiteDesign** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
 **TeamSiteDesign** | **String** | Team site design | [optional] 
 **Classification** | **String** | Communication site Classification | [optional] 
 **Sensitivity** | **String** | Sensitive lable | [optional] 

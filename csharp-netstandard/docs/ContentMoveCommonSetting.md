@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ProfileMappings** | [**ContentMoveProfileMappings**](ContentMoveProfileMappings.md) |  | [optional] 
 **BackupSettings** | [**BackupEnvironmentSetting**](BackupEnvironmentSetting.md) |  | [optional] 
 **ConflictResolutionSettings** | [**ConflictResolutionSetting**](ConflictResolutionSetting.md) |  | [optional] 
-**FilterPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**FilterPolicy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
 **DeleteType** | **DeleteType** |  | [optional] 
 **IsDeleteCheckedFiles** | **bool** |  | [optional] [default to false]
 

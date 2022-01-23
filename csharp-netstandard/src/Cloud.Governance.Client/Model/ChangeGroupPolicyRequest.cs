@@ -74,7 +74,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ChangeGroupPolicyRequest" /> class.
         /// </summary>
-        /// <param name="policy">The new policy information settings.</param>
+        /// <param name="policy">GuidModel model.</param>
         /// <param name="isLeaseEnabled">Whether to enable the group/team lease extension. (default to false).</param>
         /// <param name="changePolicyConfig">Set how to assign the group policy..</param>
         /// <param name="startDateType">Group lease start date configuration after a policy change.</param>
@@ -105,16 +105,16 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// The new policy information settings
+        /// GuidModel model
         /// </summary>
-        /// <value>The new policy information settings</value>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "policy", EmitDefaultValue = true)]
         public GuidModel Policy { get; set; }
 
         /// <summary>
-        /// The original policy information settings
+        /// GuidModel model
         /// </summary>
-        /// <value>The original policy information settings</value>
+        /// <value>GuidModel model</value>
         [DataMember(Name = "originalPolicy", EmitDefaultValue = true)]
         public GuidModel OriginalPolicy { get; private set; }
 

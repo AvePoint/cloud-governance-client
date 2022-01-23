@@ -35,7 +35,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Tenantid = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Tenantid = "Tenantid_example" # String | 
 
 # get group/teams dynamic membership rules
 try {

@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 4.11.1
+- SDK version: 5.1.1
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -212,6 +212,10 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**Deny-Task**](docs/TasksApi.md#Deny-Task) | **POST** /tasks/{id}/reject | reject task
 *TasksApi* | [**Invoke-RetryErrorTask**](docs/TasksApi.md#Invoke-RetryErrorTask) | **POST** /tasks/{id}/retry | retry error task
 *TasksApi* | [**Skip-ErrorTask**](docs/TasksApi.md#Skip-ErrorTask) | **POST** /tasks/{id}/skip | skip error task
+*TasksApi* | [**Submit-ContinueAccessGroupAutoTask**](docs/TasksApi.md#Submit-ContinueAccessGroupAutoTask) | **POST** /tasks/continueaccessgroup | submit group continue access auto task
+*TasksApi* | [**Submit-ContinueAccessSiteAutoTask**](docs/TasksApi.md#Submit-ContinueAccessSiteAutoTask) | **POST** /tasks/continueaccesssite | submit site continue access auto task
+*TasksApi* | [**Submit-ExtendGroupAutoTask**](docs/TasksApi.md#Submit-ExtendGroupAutoTask) | **POST** /tasks/extendgroup | submit extend group auto task
+*TasksApi* | [**Submit-ExtendSiteAutoTask**](docs/TasksApi.md#Submit-ExtendSiteAutoTask) | **POST** /tasks/extendsite | submit site extend auto task
 *TasksAdminApi* | [**Get-AllTasks**](docs/TasksAdminApi.md#Get-AllTasks) | **GET** /admin/directory/tasks | get all tasks
 *UsersApi* | [**Invoke-FilterUsersByAttribute**](docs/UsersApi.md#Invoke-FilterUsersByAttribute) | **GET** /users/filter | filter users by property value
 *UsersApi* | [**Get-AzureAdUserPropertyValue**](docs/UsersApi.md#Get-AzureAdUserPropertyValue) | **GET** /users/{username}/azuread/property | get Azure Ad user's property value
@@ -233,7 +237,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**Get-OngoingTasks**](docs/WorkspacesAdminApi.md#Get-OngoingTasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
 *WorkspacesAdminApi* | [**Get-Workspaces**](docs/WorkspacesAdminApi.md#Get-Workspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**Lock-Workspaces**](docs/WorkspacesAdminApi.md#Lock-Workspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
-*WorkspacesAdminApi* | [**Invoke-SpecifyContacts**](docs/WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | sepcify cnotacts
+*WorkspacesAdminApi* | [**Invoke-SpecifyContacts**](docs/WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 *WorkspacesAdminApi* | [**Invoke-TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#Invoke-TriggerWorkspaceRenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
 *WorkspacesAdminApi* | [**Unlock-Workspace**](docs/WorkspacesAdminApi.md#Unlock-Workspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
@@ -275,6 +279,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.AutoGenerateUrlType](docs/AutoGenerateUrlType.md)
  - [Cloud.Governance.Client\Model.AutoImportPhase](docs/AutoImportPhase.md)
  - [Cloud.Governance.Client\Model.AutoImportProcessHookMessage](docs/AutoImportProcessHookMessage.md)
+ - [Cloud.Governance.Client\Model.AutoTaskExtendRequest](docs/AutoTaskExtendRequest.md)
  - [Cloud.Governance.Client\Model.AzureAdMetadataSettings](docs/AzureAdMetadataSettings.md)
  - [Cloud.Governance.Client\Model.BackupEnvironmentSetting](docs/BackupEnvironmentSetting.md)
  - [Cloud.Governance.Client\Model.BooleanChangedProperty](docs/BooleanChangedProperty.md)
@@ -462,6 +467,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.LanguageWithTemplates](docs/LanguageWithTemplates.md)
  - [Cloud.Governance.Client\Model.LeaseDateType](docs/LeaseDateType.md)
  - [Cloud.Governance.Client\Model.LeaseStartDateType](docs/LeaseStartDateType.md)
+ - [Cloud.Governance.Client\Model.LifecycleAction](docs/LifecycleAction.md)
  - [Cloud.Governance.Client\Model.LifecycleHookMessage](docs/LifecycleHookMessage.md)
  - [Cloud.Governance.Client\Model.LifecycleRenewalSetting](docs/LifecycleRenewalSetting.md)
  - [Cloud.Governance.Client\Model.LinkMetadataSettings](docs/LinkMetadataSettings.md)
@@ -542,6 +548,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.SPRoleAssignment](docs/SPRoleAssignment.md)
  - [Cloud.Governance.Client\Model.SPUserManagementModel](docs/SPUserManagementModel.md)
  - [Cloud.Governance.Client\Model.ScopeType](docs/ScopeType.md)
+ - [Cloud.Governance.Client\Model.SensitivityLabelModel](docs/SensitivityLabelModel.md)
  - [Cloud.Governance.Client\Model.ServiceForRequest](docs/ServiceForRequest.md)
  - [Cloud.Governance.Client\Model.ServiceGridModel](docs/ServiceGridModel.md)
  - [Cloud.Governance.Client\Model.ServiceGridModelPageResult](docs/ServiceGridModelPageResult.md)

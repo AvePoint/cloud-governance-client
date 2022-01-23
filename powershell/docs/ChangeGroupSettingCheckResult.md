@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **IsEnableSubscribeMembers** | **Boolean** |  | [optional] [default to $false]
 **IsEnableOutsideSender** | **Boolean** |  | [optional] [default to $false]
 **Classification** | **String** |  | [optional] 
+**Sensitivity** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
 **IsTeamsEnabled** | **Boolean** |  | [optional] [default to $false]
 **EnableManageGroupSharing** | **Boolean** |  | [optional] [default to $false]
 **EnableInviteAuthorizedGuestUser** | **Boolean** |  | [optional] [default to $false]
@@ -44,6 +45,7 @@ $ChangeGroupSettingCheckResult = New-Cloud.Governance.ClientChangeGroupSettingCh
  -IsEnableSubscribeMembers null `
  -IsEnableOutsideSender null `
  -Classification null `
+ -Sensitivity null `
  -IsTeamsEnabled null `
  -EnableManageGroupSharing null `
  -EnableInviteAuthorizedGuestUser null `

@@ -56,6 +56,12 @@ function New-ApiMyGroup {
         [String]
         ${GroupTeamSiteUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Int64]]
+        ${QuotaSize} = 0,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${StorageUsed},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${TeamLink},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -147,6 +153,8 @@ function New-ApiMyGroup {
             "PreferredDataLocationName" = ${PreferredDataLocationName}
             "EnableDynamicMembership" = ${EnableDynamicMembership}
             "GroupTeamSiteUrl" = ${GroupTeamSiteUrl}
+            "QuotaSize" = ${QuotaSize}
+            "StorageUsed" = ${StorageUsed}
             "TeamLink" = ${TeamLink}
             "NoteBookLink" = ${NoteBookLink}
             "PlannerLink" = ${PlannerLink}
@@ -192,7 +200,7 @@ function ConvertFrom-JsonToApiMyGroup {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApiMyGroup
-        $AllProperties = $("ObjectId", "PolicyId", "TenantId", "GroupName", "Email", "Language", "ApplyPolicyStatus", "EnableTeamCollaboration", "GroupType", "CreatedTime", "Owners", "PreferredDataLocation", "PreferredDataLocationName", "EnableDynamicMembership", "GroupTeamSiteUrl", "TeamLink", "NoteBookLink", "PlannerLink", "Classification", "GroupObjectType", "GroupObjectId", "NetworkId", "Sensitivity", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
+        $AllProperties = $("ObjectId", "PolicyId", "TenantId", "GroupName", "Email", "Language", "ApplyPolicyStatus", "EnableTeamCollaboration", "GroupType", "CreatedTime", "Owners", "PreferredDataLocation", "PreferredDataLocationName", "EnableDynamicMembership", "GroupTeamSiteUrl", "QuotaSize", "StorageUsed", "TeamLink", "NoteBookLink", "PlannerLink", "Classification", "GroupObjectType", "GroupObjectId", "NetworkId", "Sensitivity", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -287,6 +295,18 @@ function ConvertFrom-JsonToApiMyGroup {
             $GroupTeamSiteUrl = $null
         } else {
             $GroupTeamSiteUrl = $JsonParameters.PSobject.Properties["GroupTeamSiteUrl"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "QuotaSize"))) { #optional property not found
+            $QuotaSize = $null
+        } else {
+            $QuotaSize = $JsonParameters.PSobject.Properties["QuotaSize"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "StorageUsed"))) { #optional property not found
+            $StorageUsed = $null
+        } else {
+            $StorageUsed = $JsonParameters.PSobject.Properties["StorageUsed"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "TeamLink"))) { #optional property not found
@@ -443,6 +463,8 @@ function ConvertFrom-JsonToApiMyGroup {
             "PreferredDataLocationName" = ${PreferredDataLocationName}
             "EnableDynamicMembership" = ${EnableDynamicMembership}
             "GroupTeamSiteUrl" = ${GroupTeamSiteUrl}
+            "QuotaSize" = ${QuotaSize}
+            "StorageUsed" = ${StorageUsed}
             "TeamLink" = ${TeamLink}
             "NoteBookLink" = ${NoteBookLink}
             "PlannerLink" = ${PlannerLink}

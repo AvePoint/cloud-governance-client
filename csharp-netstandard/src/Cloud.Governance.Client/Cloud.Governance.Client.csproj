@@ -10,9 +10,9 @@
     <Company>AvePoint,Inc.</Company>
     <AssemblyTitle>Cloud Governance API Client</AssemblyTitle>
     <Description>A C# Client library for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.</Description>
-    <Copyright>Copyright © 2021 AvePoint® Inc. All Rights Reserved.</Copyright>
+    <Copyright>Copyright © 2022 AvePoint® Inc. All Rights Reserved.</Copyright>
     <RootNamespace>Cloud.Governance.Client</RootNamespace>
-    <Version>4.11.1</Version>
+    <Version>5.1.1</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\Cloud.Governance.Client.xml</DocumentationFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/AvePoint/cloud-governance-client</RepositoryUrl>

@@ -35,6 +35,9 @@ function New-ChangeSiteSettingRequest {
         [PSCustomObject]
         ${HubSiteSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${SiteSensitivitySetting},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -68,6 +71,7 @@ function New-ChangeSiteSettingRequest {
             "ChangedMetadatas" = ${ChangedMetadatas}
             "DeploymentPlanName" = ${DeploymentPlanName}
             "HubSiteSettings" = ${HubSiteSettings}
+            "SiteSensitivitySetting" = ${SiteSensitivitySetting}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}
@@ -96,7 +100,7 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeSiteSettingRequest
-        $AllProperties = $("SiteId", "SiteUrl", "SiteTitle", "SiteTitleSetting", "SiteDescriptionSetting", "EnableChangedMetadata", "ChangedMetadatas", "OriginalSiteMetadatas", "DeploymentPlanName", "HubSiteSettings", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("SiteId", "SiteUrl", "SiteTitle", "SiteTitleSetting", "SiteDescriptionSetting", "EnableChangedMetadata", "ChangedMetadatas", "OriginalSiteMetadatas", "DeploymentPlanName", "HubSiteSettings", "SiteSensitivitySetting", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -161,6 +165,12 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
             $HubSiteSettings = $null
         } else {
             $HubSiteSettings = $JsonParameters.PSobject.Properties["HubSiteSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SiteSensitivitySetting"))) { #optional property not found
+            $SiteSensitivitySetting = $null
+        } else {
+            $SiteSensitivitySetting = $JsonParameters.PSobject.Properties["SiteSensitivitySetting"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
@@ -288,6 +298,7 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
             "OriginalSiteMetadatas" = ${OriginalSiteMetadatas}
             "DeploymentPlanName" = ${DeploymentPlanName}
             "HubSiteSettings" = ${HubSiteSettings}
+            "SiteSensitivitySetting" = ${SiteSensitivitySetting}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}

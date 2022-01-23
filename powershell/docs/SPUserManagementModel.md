@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **AzureUserType** | **String** |  | [optional] 
 **Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] 
 **ExternalUserType** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
+**Email** | **String** |  | [optional] 
 
 ## Examples
 
@@ -19,7 +20,8 @@ $SPUserManagementModel = New-Cloud.Governance.ClientSPUserManagementModel  -Iden
  -IsGroup null `
  -AzureUserType null `
  -Action null `
- -ExternalUserType null
+ -ExternalUserType null `
+ -Email null
 ```
 
 - Convert the resource to JSON

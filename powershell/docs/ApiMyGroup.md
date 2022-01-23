@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **PreferredDataLocationName** | **String** |  | [optional] 
 **EnableDynamicMembership** | **Boolean** |  | [optional] [default to $false]
 **GroupTeamSiteUrl** | **String** |  | [optional] 
+**QuotaSize** | **Int64** |  | [optional] [default to 0]
+**StorageUsed** | **String** |  | [optional] 
 **TeamLink** | **String** |  | [optional] 
 **NoteBookLink** | **String** |  | [optional] 
 **PlannerLink** | **String** |  | [optional] 
@@ -61,6 +63,8 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -PreferredDataLocationName null `
  -EnableDynamicMembership null `
  -GroupTeamSiteUrl null `
+ -QuotaSize null `
+ -StorageUsed null `
  -TeamLink null `
  -NoteBookLink null `
  -PlannerLink null `

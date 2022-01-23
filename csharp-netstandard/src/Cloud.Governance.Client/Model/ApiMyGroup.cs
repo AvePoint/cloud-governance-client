@@ -51,6 +51,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="preferredDataLocationName">preferredDataLocationName.</param>
         /// <param name="enableDynamicMembership">enableDynamicMembership (default to false).</param>
         /// <param name="groupTeamSiteUrl">groupTeamSiteUrl.</param>
+        /// <param name="quotaSize">quotaSize (default to 0).</param>
+        /// <param name="storageUsed">storageUsed.</param>
         /// <param name="teamLink">teamLink.</param>
         /// <param name="noteBookLink">noteBookLink.</param>
         /// <param name="plannerLink">plannerLink.</param>
@@ -74,7 +76,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContact">ApiUser model.</param>
         /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="errorMessage">errorMessage.</param>
-        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), string sensitivity = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
+        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), long quotaSize = 0, string storageUsed = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), string sensitivity = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
             this.ObjectId = objectId;
             this.PolicyId = policyId;
@@ -91,6 +93,8 @@ namespace Cloud.Governance.Client.Model
             this.PreferredDataLocationName = preferredDataLocationName;
             this.EnableDynamicMembership = enableDynamicMembership;
             this.GroupTeamSiteUrl = groupTeamSiteUrl;
+            this.QuotaSize = quotaSize;
+            this.StorageUsed = storageUsed;
             this.TeamLink = teamLink;
             this.NoteBookLink = noteBookLink;
             this.PlannerLink = plannerLink;
@@ -205,6 +209,18 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "groupTeamSiteUrl", EmitDefaultValue = true)]
         public string GroupTeamSiteUrl { get; set; }
+
+        /// <summary>
+        /// Gets or Sets QuotaSize
+        /// </summary>
+        [DataMember(Name = "quotaSize", EmitDefaultValue = false)]
+        public long QuotaSize { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StorageUsed
+        /// </summary>
+        [DataMember(Name = "storageUsed", EmitDefaultValue = true)]
+        public string StorageUsed { get; set; }
 
         /// <summary>
         /// Gets or Sets TeamLink
@@ -357,6 +373,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PreferredDataLocationName: ").Append(PreferredDataLocationName).Append("\n");
             sb.Append("  EnableDynamicMembership: ").Append(EnableDynamicMembership).Append("\n");
             sb.Append("  GroupTeamSiteUrl: ").Append(GroupTeamSiteUrl).Append("\n");
+            sb.Append("  QuotaSize: ").Append(QuotaSize).Append("\n");
+            sb.Append("  StorageUsed: ").Append(StorageUsed).Append("\n");
             sb.Append("  TeamLink: ").Append(TeamLink).Append("\n");
             sb.Append("  NoteBookLink: ").Append(NoteBookLink).Append("\n");
             sb.Append("  PlannerLink: ").Append(PlannerLink).Append("\n");
@@ -486,6 +504,15 @@ namespace Cloud.Governance.Client.Model
                     this.GroupTeamSiteUrl == input.GroupTeamSiteUrl ||
                     (this.GroupTeamSiteUrl != null &&
                     this.GroupTeamSiteUrl.Equals(input.GroupTeamSiteUrl))
+                ) && 
+                (
+                    this.QuotaSize == input.QuotaSize ||
+                    this.QuotaSize.Equals(input.QuotaSize)
+                ) && 
+                (
+                    this.StorageUsed == input.StorageUsed ||
+                    (this.StorageUsed != null &&
+                    this.StorageUsed.Equals(input.StorageUsed))
                 ) && 
                 (
                     this.TeamLink == input.TeamLink ||
@@ -639,6 +666,9 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.EnableDynamicMembership.GetHashCode();
                 if (this.GroupTeamSiteUrl != null)
                     hashCode = hashCode * 59 + this.GroupTeamSiteUrl.GetHashCode();
+                hashCode = hashCode * 59 + this.QuotaSize.GetHashCode();
+                if (this.StorageUsed != null)
+                    hashCode = hashCode * 59 + this.StorageUsed.GetHashCode();
                 if (this.TeamLink != null)
                     hashCode = hashCode * 59 + this.TeamLink.GetHashCode();
                 if (this.NoteBookLink != null)

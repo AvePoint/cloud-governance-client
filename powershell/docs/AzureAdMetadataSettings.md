@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Office365Tenant** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**Office365Tenant** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
 **UseBuiltInProperty** | **Boolean** |  | [optional] [default to $false]
 **Value** | [**LookupValue**](LookupValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
 **Property** | **String** |  | [optional] 

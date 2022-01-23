@@ -1,11 +1,11 @@
-﻿
-namespace NetFramework
+﻿namespace NetFramework
 {
+    using Cloud.Governance.Client.Api;
     using Cloud.Governance.Client.Client;
     using Cloud.Governance.Client.Model;
     using System;
 
-    public class Library_InheritParentPermission : TestBase
+    public class Library_InheritParentPermission : ExampleBase
     {
         public Library_InheritParentPermission(ApiConfig authData) : base(authData) { }
 
@@ -13,11 +13,20 @@ namespace NetFramework
         {
             try
             {
-                var serviceId = this.ServicesApi.GetServiceId(data.ServiceName);
-                var service = this.ServicesApi.GetManagePermissionService(serviceId);
+                var requestApi = new RequestsApi(Configuration.Default);
+                var serviceApi = new ServicesApi(Configuration.Default);
+
+                var serviceId = serviceApi.GetServiceId(data.ServiceName);
+                var service = serviceApi.GetManagePermissionService(serviceId);
                 var request = service.RequestTemplate;
 
-                request.Summary = $"Api_Sample_ManagePermission_InheritPermissionForLibrary_Request_{DateTime.Now}";
+                //uncomment below to show the validation result of current url
+                //var validateResult = serviceApi.ValidateForManagePermissionService(serviceId, new SiteValidationParameter
+                //{
+                //    Uri = data.ObjectUrl
+                //});
+
+                request.Summary = $"Summary_{DateTime.Now}";
                 request.ObjectUrl = data.ObjectUrl;
                 request.ObjectType = NodeType.DocumentLibrary;
                 var userPermissions = new PermissionManagementModel
@@ -26,7 +35,7 @@ namespace NetFramework
                     IsPermissionInheritanceChanged = true
                 };
                 request.PermissionManagement = userPermissions;
-                var id = this.RequestsApi.SubmitManagePermissionRequest(request);
+                var id = requestApi.SubmitManagePermissionRequest(request);
                 return id;
             }
             catch (ApiException e)

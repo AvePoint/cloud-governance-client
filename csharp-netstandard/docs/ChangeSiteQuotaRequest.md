@@ -5,6 +5,8 @@ Change site collection quota request model
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **QuotaSize** | **int** | The new site collection quota size | [optional] [default to 0]
+**SharePointSiteSize** | **double?** | sharepoint site size | [optional] 
+**CurrentQuota** | **double?** | CurrentQuota | [optional] 
 **Action** | **SiteLifecycleActionType** | Lifecycle management action type | [optional] 
 **ActionDescription** | **string** | Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api. | [optional] [readonly] 
 **SiteId** | **Guid** | Site collection ID | [optional] 

@@ -77,7 +77,7 @@ function New-ChangeGroupSettingService {
         [System.Nullable[Boolean]]
         ${EnableChangeSensitivity} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String[]]
+        [PSCustomObject[]]
         ${SensitivityList},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]

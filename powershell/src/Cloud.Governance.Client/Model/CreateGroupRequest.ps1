@@ -59,6 +59,9 @@ function New-CreateGroupRequest {
         [String]
         ${Sensitivity},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${SensitivityName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${LeasePeriodSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -139,6 +142,7 @@ function New-CreateGroupRequest {
             "Language" = ${Language}
             "Classification" = ${Classification}
             "Sensitivity" = ${Sensitivity}
+            "SensitivityName" = ${SensitivityName}
             "LeasePeriodSettings" = ${LeasePeriodSettings}
             "TeamsSettings" = ${TeamsSettings}
             "AppliedSiteDesignId" = ${AppliedSiteDesignId}
@@ -180,7 +184,7 @@ function ConvertFrom-JsonToCreateGroupRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGroupRequest
-        $AllProperties = $("GroupType", "GroupId", "GroupIdWithoutPrefixSuffix", "GroupName", "GroupNameWithoutPrefixSuffix", "GroupEmail", "Policy", "GroupDescription", "Owners", "Members", "Privacy", "Subscribe", "OutsideSender", "EnableTeamCollaboration", "Language", "Classification", "Sensitivity", "Links", "LeasePeriodSettings", "TeamsSettings", "AppliedSiteDesignId", "PrimaryContact", "SecondaryContact", "EnableGroupMembershipHidden", "EnableAssignedMembership", "EnableDynamicMembership", "TemplateSettings", "DynamicMembershipRules", "MultiGeoLocation", "HubSiteSettings", "YammerGroupInfo", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("GroupType", "GroupId", "GroupIdWithoutPrefixSuffix", "GroupName", "GroupNameWithoutPrefixSuffix", "GroupEmail", "Policy", "GroupDescription", "Owners", "Members", "Privacy", "Subscribe", "OutsideSender", "EnableTeamCollaboration", "Language", "Classification", "Sensitivity", "SensitivityName", "Links", "LeasePeriodSettings", "TeamsSettings", "AppliedSiteDesignId", "PrimaryContact", "SecondaryContact", "EnableGroupMembershipHidden", "EnableAssignedMembership", "EnableDynamicMembership", "TemplateSettings", "DynamicMembershipRules", "MultiGeoLocation", "HubSiteSettings", "YammerGroupInfo", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -287,6 +291,12 @@ function ConvertFrom-JsonToCreateGroupRequest {
             $Sensitivity = $null
         } else {
             $Sensitivity = $JsonParameters.PSobject.Properties["Sensitivity"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SensitivityName"))) { #optional property not found
+            $SensitivityName = $null
+        } else {
+            $SensitivityName = $JsonParameters.PSobject.Properties["SensitivityName"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Links"))) { #optional property not found
@@ -505,6 +515,7 @@ function ConvertFrom-JsonToCreateGroupRequest {
             "Language" = ${Language}
             "Classification" = ${Classification}
             "Sensitivity" = ${Sensitivity}
+            "SensitivityName" = ${SensitivityName}
             "Links" = ${Links}
             "LeasePeriodSettings" = ${LeasePeriodSettings}
             "TeamsSettings" = ${TeamsSettings}

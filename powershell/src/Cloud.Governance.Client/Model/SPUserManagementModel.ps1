@@ -27,7 +27,10 @@ function New-SPUserManagementModel {
         ${Action} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
-        ${ExternalUserType} = "None"
+        ${ExternalUserType} = "None",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${Email}
     )
 
     Process {
@@ -42,6 +45,7 @@ function New-SPUserManagementModel {
             "AzureUserType" = ${AzureUserType}
             "Action" = ${Action}
             "ExternalUserType" = ${ExternalUserType}
+            "Email" = ${Email}
         }
 
         return $PSO
@@ -64,7 +68,7 @@ function ConvertFrom-JsonToSPUserManagementModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in SPUserManagementModel
-        $AllProperties = $("IdentityName", "DisplayName", "IsGroup", "AzureUserType", "Action", "ExternalUserType")
+        $AllProperties = $("IdentityName", "DisplayName", "IsGroup", "AzureUserType", "Action", "ExternalUserType", "Email")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -107,6 +111,12 @@ function ConvertFrom-JsonToSPUserManagementModel {
             $ExternalUserType = $JsonParameters.PSobject.Properties["ExternalUserType"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Email"))) { #optional property not found
+            $Email = $null
+        } else {
+            $Email = $JsonParameters.PSobject.Properties["Email"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "IdentityName" = ${IdentityName}
             "DisplayName" = ${DisplayName}
@@ -114,6 +124,7 @@ function ConvertFrom-JsonToSPUserManagementModel {
             "AzureUserType" = ${AzureUserType}
             "Action" = ${Action}
             "ExternalUserType" = ${ExternalUserType}
+            "Email" = ${Email}
         }
 
         return $PSO

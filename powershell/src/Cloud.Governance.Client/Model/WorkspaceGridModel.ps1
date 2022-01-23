@@ -134,6 +134,9 @@ function New-WorkspaceGridModel {
         [System.Nullable[System.DateTime]]
         ${LastRenewalTime},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[System.DateTime]]
+        ${LastAccessedTime},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${ApplyPolicyStatus} = "None",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -236,6 +239,7 @@ function New-WorkspaceGridModel {
             "LeaseExpirationTime" = ${LeaseExpirationTime}
             "InactivityThresholdTime" = ${InactivityThresholdTime}
             "LastRenewalTime" = ${LastRenewalTime}
+            "LastAccessedTime" = ${LastAccessedTime}
             "ApplyPolicyStatus" = ${ApplyPolicyStatus}
             "HasOngoingTasks" = ${HasOngoingTasks}
             "HasOngoingTasksDescription" = ${HasOngoingTasksDescription}
@@ -276,7 +280,7 @@ function ConvertFrom-JsonToWorkspaceGridModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WorkspaceGridModel
-        $AllProperties = $("Id", "Name", "Description", "Status", "StatusDescription", "Type", "TypeDescription", "Url", "Email", "Privacy", "PrivacyDescription", "PolicyName", "PolicyDisplay", "PolicyId", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "HubType", "AssociateHubTitle", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsed", "SiteSharing", "SiteSharingDescription", "GroupSharing", "GroupSharingDescription", "Classification", "ClaimStatus", "ClaimStatusDescription", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "LastRenewalTime", "ApplyPolicyStatus", "HasOngoingTasks", "HasOngoingTasksDescription", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName", "Sensitivity", "InsightsStatus", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseProfileId", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Phase", "PhaseDescription", "Metadata")
+        $AllProperties = $("Id", "Name", "Description", "Status", "StatusDescription", "Type", "TypeDescription", "Url", "Email", "Privacy", "PrivacyDescription", "PolicyName", "PolicyDisplay", "PolicyId", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "HubType", "AssociateHubTitle", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsed", "SiteSharing", "SiteSharingDescription", "GroupSharing", "GroupSharingDescription", "Classification", "ClaimStatus", "ClaimStatusDescription", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "LastRenewalTime", "LastAccessedTime", "ApplyPolicyStatus", "HasOngoingTasks", "HasOngoingTasksDescription", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName", "Sensitivity", "InsightsStatus", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseProfileId", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Phase", "PhaseDescription", "Metadata")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -529,6 +533,12 @@ function ConvertFrom-JsonToWorkspaceGridModel {
             $LastRenewalTime = $JsonParameters.PSobject.Properties["LastRenewalTime"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LastAccessedTime"))) { #optional property not found
+            $LastAccessedTime = $null
+        } else {
+            $LastAccessedTime = $JsonParameters.PSobject.Properties["LastAccessedTime"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApplyPolicyStatus"))) { #optional property not found
             $ApplyPolicyStatus = $null
         } else {
@@ -679,6 +689,7 @@ function ConvertFrom-JsonToWorkspaceGridModel {
             "LeaseExpirationTime" = ${LeaseExpirationTime}
             "InactivityThresholdTime" = ${InactivityThresholdTime}
             "LastRenewalTime" = ${LastRenewalTime}
+            "LastAccessedTime" = ${LastAccessedTime}
             "ApplyPolicyStatus" = ${ApplyPolicyStatus}
             "HasOngoingTasks" = ${HasOngoingTasks}
             "HasOngoingTasksDescription" = ${HasOngoingTasksDescription}

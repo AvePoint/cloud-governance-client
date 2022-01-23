@@ -21,7 +21,10 @@ function New-ChangeSiteQuotaSettings {
         ${MaxQuotaSize} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int64]]
-        ${CurrentQuotaSize} = 0
+        ${CurrentQuotaSize} = 0,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Double]]
+        ${SharePointSiteSize}
     )
 
     Process {
@@ -34,6 +37,7 @@ function New-ChangeSiteQuotaSettings {
             "MinQuotaSize" = ${MinQuotaSize}
             "MaxQuotaSize" = ${MaxQuotaSize}
             "CurrentQuotaSize" = ${CurrentQuotaSize}
+            "SharePointSiteSize" = ${SharePointSiteSize}
         }
 
         return $PSO
@@ -56,7 +60,7 @@ function ConvertFrom-JsonToChangeSiteQuotaSettings {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeSiteQuotaSettings
-        $AllProperties = $("AllowedAnySize", "MinQuotaSize", "MaxQuotaSize", "CurrentQuotaSize")
+        $AllProperties = $("AllowedAnySize", "MinQuotaSize", "MaxQuotaSize", "CurrentQuotaSize", "SharePointSiteSize")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -87,11 +91,18 @@ function ConvertFrom-JsonToChangeSiteQuotaSettings {
             $CurrentQuotaSize = $JsonParameters.PSobject.Properties["CurrentQuotaSize"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "SharePointSiteSize"))) { #optional property not found
+            $SharePointSiteSize = $null
+        } else {
+            $SharePointSiteSize = $JsonParameters.PSobject.Properties["SharePointSiteSize"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "AllowedAnySize" = ${AllowedAnySize}
             "MinQuotaSize" = ${MinQuotaSize}
             "MaxQuotaSize" = ${MaxQuotaSize}
             "CurrentQuotaSize" = ${CurrentQuotaSize}
+            "SharePointSiteSize" = ${SharePointSiteSize}
         }
 
         return $PSO

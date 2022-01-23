@@ -63,6 +63,8 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="ChangeSiteQuotaRequest" /> class.
         /// </summary>
         /// <param name="quotaSize">The new site collection quota size (default to 0).</param>
+        /// <param name="sharePointSiteSize">sharepoint site size.</param>
+        /// <param name="currentQuota">CurrentQuota.</param>
         /// <param name="action">Lifecycle management action type.</param>
         /// <param name="siteId">Site collection ID.</param>
         /// <param name="siteUrl">Site collection URL.</param>
@@ -73,9 +75,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public ChangeSiteQuotaRequest(int quotaSize = 0, SiteLifecycleActionType? action = default(SiteLifecycleActionType?), Guid siteId = default(Guid), string siteUrl = default(string), string siteTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public ChangeSiteQuotaRequest(int quotaSize = 0, double? sharePointSiteSize = default(double?), double? currentQuota = default(double?), SiteLifecycleActionType? action = default(SiteLifecycleActionType?), Guid siteId = default(Guid), string siteUrl = default(string), string siteTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.QuotaSize = quotaSize;
+            this.SharePointSiteSize = sharePointSiteSize;
+            this.CurrentQuota = currentQuota;
             this.Action = action;
             this.SiteId = siteId;
             this.SiteUrl = siteUrl;
@@ -94,6 +98,20 @@ namespace Cloud.Governance.Client.Model
         /// <value>The new site collection quota size</value>
         [DataMember(Name = "quotaSize", EmitDefaultValue = false)]
         public int QuotaSize { get; set; }
+
+        /// <summary>
+        /// sharepoint site size
+        /// </summary>
+        /// <value>sharepoint site size</value>
+        [DataMember(Name = "sharePointSiteSize", EmitDefaultValue = true)]
+        public double? SharePointSiteSize { get; set; }
+
+        /// <summary>
+        /// CurrentQuota
+        /// </summary>
+        /// <value>CurrentQuota</value>
+        [DataMember(Name = "currentQuota", EmitDefaultValue = true)]
+        public double? CurrentQuota { get; set; }
 
         /// <summary>
         /// Description of lifecycle management actions. You can get all available description of lifecycle management actions by invoking the GetSiteLifecycleService api.
@@ -359,6 +377,8 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class ChangeSiteQuotaRequest {\n");
             sb.Append("  QuotaSize: ").Append(QuotaSize).Append("\n");
+            sb.Append("  SharePointSiteSize: ").Append(SharePointSiteSize).Append("\n");
+            sb.Append("  CurrentQuota: ").Append(CurrentQuota).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ActionDescription: ").Append(ActionDescription).Append("\n");
             sb.Append("  SiteId: ").Append(SiteId).Append("\n");
@@ -420,6 +440,16 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.QuotaSize == input.QuotaSize ||
                     this.QuotaSize.Equals(input.QuotaSize)
+                ) && 
+                (
+                    this.SharePointSiteSize == input.SharePointSiteSize ||
+                    (this.SharePointSiteSize != null &&
+                    this.SharePointSiteSize.Equals(input.SharePointSiteSize))
+                ) && 
+                (
+                    this.CurrentQuota == input.CurrentQuota ||
+                    (this.CurrentQuota != null &&
+                    this.CurrentQuota.Equals(input.CurrentQuota))
                 ) && 
                 (
                     this.Action == input.Action ||
@@ -550,6 +580,10 @@ namespace Cloud.Governance.Client.Model
             {
                 int hashCode = 41;
                 hashCode = hashCode * 59 + this.QuotaSize.GetHashCode();
+                if (this.SharePointSiteSize != null)
+                    hashCode = hashCode * 59 + this.SharePointSiteSize.GetHashCode();
+                if (this.CurrentQuota != null)
+                    hashCode = hashCode * 59 + this.CurrentQuota.GetHashCode();
                 hashCode = hashCode * 59 + this.Action.GetHashCode();
                 if (this.ActionDescription != null)
                     hashCode = hashCode * 59 + this.ActionDescription.GetHashCode();

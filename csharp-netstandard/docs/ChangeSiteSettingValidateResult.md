@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **PrimaryAdministrator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**TenantId** | **Guid** |  | [optional] 
+**Sensitivity** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
 **IsValid** | **bool** |  | [optional] [default to false]
 **ErrorMessage** | **string** |  | [optional] 
 **MessageCode** | **MessageCode** |  | [optional] 

@@ -52,7 +52,7 @@ Method | HTTP request | Description
 
 <a name="getchangegroupsettingservice"></a>
 # **GetChangeGroupSettingService**
-> ChangeGroupSettingService GetChangeGroupSettingService (Guid id, Guid? questionnaireId = null)
+> ChangeGroupSettingService GetChangeGroupSettingService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get change group setting service
 
@@ -87,11 +87,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get change group setting service
-                ChangeGroupSettingService result = apiInstance.GetChangeGroupSettingService(id, questionnaireId);
+                ChangeGroupSettingService result = apiInstance.GetChangeGroupSettingService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -111,6 +112,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -137,7 +139,7 @@ Name | Type | Description  | Notes
 
 <a name="getchangelistsettingservice"></a>
 # **GetChangeListSettingService**
-> ChangeListSettingService GetChangeListSettingService (Guid id, Guid? questionnaireId = null)
+> ChangeListSettingService GetChangeListSettingService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get change list setting service
 
@@ -172,11 +174,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get change list setting service
-                ChangeListSettingService result = apiInstance.GetChangeListSettingService(id, questionnaireId);
+                ChangeListSettingService result = apiInstance.GetChangeListSettingService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -196,6 +199,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -222,7 +226,7 @@ Name | Type | Description  | Notes
 
 <a name="getchangepermissionservice"></a>
 # **GetChangePermissionService**
-> ChangePermissionService GetChangePermissionService (Guid id, Guid? questionnaireId = null)
+> ChangePermissionService GetChangePermissionService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get change permission service
 
@@ -257,11 +261,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get change permission service
-                ChangePermissionService result = apiInstance.GetChangePermissionService(id, questionnaireId);
+                ChangePermissionService result = apiInstance.GetChangePermissionService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -281,6 +286,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -307,7 +313,7 @@ Name | Type | Description  | Notes
 
 <a name="getchangesitecontactservice"></a>
 # **GetChangeSiteContactService**
-> ChangeSiteContactService GetChangeSiteContactService (Guid id, Guid? questionnaireId = null)
+> ChangeSiteContactService GetChangeSiteContactService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get change site contact service
 
@@ -342,11 +348,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get change site contact service
-                ChangeSiteContactService result = apiInstance.GetChangeSiteContactService(id, questionnaireId);
+                ChangeSiteContactService result = apiInstance.GetChangeSiteContactService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -366,6 +373,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -392,7 +400,7 @@ Name | Type | Description  | Notes
 
 <a name="getchangesitesettingservice"></a>
 # **GetChangeSiteSettingService**
-> ChangeSiteSettingService GetChangeSiteSettingService (Guid id, Guid? questionnaireId = null)
+> ChangeSiteSettingService GetChangeSiteSettingService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get change site setting service
 
@@ -427,11 +435,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get change site setting service
-                ChangeSiteSettingService result = apiInstance.GetChangeSiteSettingService(id, questionnaireId);
+                ChangeSiteSettingService result = apiInstance.GetChangeSiteSettingService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -451,6 +460,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -477,7 +487,7 @@ Name | Type | Description  | Notes
 
 <a name="getchangewebcontactservice"></a>
 # **GetChangeWebContactService**
-> ChangeWebContactService GetChangeWebContactService (Guid id, Guid? questionnaireId = null)
+> ChangeWebContactService GetChangeWebContactService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 validate permissions, scope for change web contact service
 
@@ -512,11 +522,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // validate permissions, scope for change web contact service
-                ChangeWebContactService result = apiInstance.GetChangeWebContactService(id, questionnaireId);
+                ChangeWebContactService result = apiInstance.GetChangeWebContactService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -536,6 +547,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -562,7 +574,7 @@ Name | Type | Description  | Notes
 
 <a name="getchangewebsettingsservice"></a>
 # **GetChangeWebSettingsService**
-> ChangeWebSettingService GetChangeWebSettingsService (Guid id, Guid? questionnaireId = null)
+> ChangeWebSettingService GetChangeWebSettingsService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get change web setting service
 
@@ -597,11 +609,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get change web setting service
-                ChangeWebSettingService result = apiInstance.GetChangeWebSettingsService(id, questionnaireId);
+                ChangeWebSettingService result = apiInstance.GetChangeWebSettingsService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -621,6 +634,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -647,7 +661,7 @@ Name | Type | Description  | Notes
 
 <a name="getclonepermissionservice"></a>
 # **GetClonePermissionService**
-> ClonePermissionService GetClonePermissionService (Guid id, Guid? questionnaireId = null)
+> ClonePermissionService GetClonePermissionService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get clone permission service
 
@@ -682,11 +696,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get clone permission service
-                ClonePermissionService result = apiInstance.GetClonePermissionService(id, questionnaireId);
+                ClonePermissionService result = apiInstance.GetClonePermissionService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -706,6 +721,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -811,7 +827,7 @@ This endpoint does not need any parameter.
 
 <a name="getcontentmoveservice"></a>
 # **GetContentMoveService**
-> ContentMoveService GetContentMoveService (Guid id, Guid? questionnaireId = null)
+> ContentMoveService GetContentMoveService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get content move service
 
@@ -846,11 +862,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get content move service
-                ContentMoveService result = apiInstance.GetContentMoveService(id, questionnaireId);
+                ContentMoveService result = apiInstance.GetContentMoveService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -870,6 +887,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -896,7 +914,7 @@ Name | Type | Description  | Notes
 
 <a name="getcreategroupservice"></a>
 # **GetCreateGroupService**
-> CreateGroupService GetCreateGroupService (Guid id, Guid? questionnaireId = null)
+> CreateGroupService GetCreateGroupService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get create group service
 
@@ -931,11 +949,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get create group service
-                CreateGroupService result = apiInstance.GetCreateGroupService(id, questionnaireId);
+                CreateGroupService result = apiInstance.GetCreateGroupService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -955,6 +974,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -981,7 +1001,7 @@ Name | Type | Description  | Notes
 
 <a name="getcreateguestuserservice"></a>
 # **GetCreateGuestUserService**
-> CreateGuestUserService GetCreateGuestUserService (Guid id, Guid? questionnaireId = null)
+> CreateGuestUserService GetCreateGuestUserService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get create group service
 
@@ -1016,11 +1036,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get create group service
-                CreateGuestUserService result = apiInstance.GetCreateGuestUserService(id, questionnaireId);
+                CreateGuestUserService result = apiInstance.GetCreateGuestUserService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1040,6 +1061,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1066,7 +1088,7 @@ Name | Type | Description  | Notes
 
 <a name="getcreatelistservice"></a>
 # **GetCreateListService**
-> CreateListService GetCreateListService (Guid id, Guid? questionnaireId = null)
+> CreateListService GetCreateListService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get create list service
 
@@ -1101,11 +1123,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get create list service
-                CreateListService result = apiInstance.GetCreateListService(id, questionnaireId);
+                CreateListService result = apiInstance.GetCreateListService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1125,6 +1148,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1151,7 +1175,7 @@ Name | Type | Description  | Notes
 
 <a name="getcreateprivatechannelservice"></a>
 # **GetCreatePrivateChannelService**
-> CreatePrivateChannelService GetCreatePrivateChannelService (Guid id)
+> CreatePrivateChannelService GetCreatePrivateChannelService (Guid id, bool? isValidatePermission = null)
 
 get private channel service detail
 
@@ -1185,11 +1209,12 @@ namespace Example
             var apiInstance = new ServicesApi(config);
 
             var id = new Guid(); // Guid | 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get private channel service detail
-                CreatePrivateChannelService result = apiInstance.GetCreatePrivateChannelService(id);
+                CreatePrivateChannelService result = apiInstance.GetCreatePrivateChannelService(id, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1208,6 +1233,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1234,7 +1260,7 @@ Name | Type | Description  | Notes
 
 <a name="getcreatesiteservice"></a>
 # **GetCreateSiteService**
-> CreateSiteService GetCreateSiteService (Guid id, Guid? questionnaireId = null)
+> CreateSiteService GetCreateSiteService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get create site service
 
@@ -1269,11 +1295,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get create site service
-                CreateSiteService result = apiInstance.GetCreateSiteService(id, questionnaireId);
+                CreateSiteService result = apiInstance.GetCreateSiteService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1293,6 +1320,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1319,7 +1347,7 @@ Name | Type | Description  | Notes
 
 <a name="getcreatewebservice"></a>
 # **GetCreateWebService**
-> CreateWebService GetCreateWebService (Guid id, Guid? questionnaireId = null)
+> CreateWebService GetCreateWebService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get create web service
 
@@ -1354,11 +1382,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get create web service
-                CreateWebService result = apiInstance.GetCreateWebService(id, questionnaireId);
+                CreateWebService result = apiInstance.GetCreateWebService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1378,6 +1407,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1404,7 +1434,7 @@ Name | Type | Description  | Notes
 
 <a name="getcustomservice"></a>
 # **GetCustomService**
-> ServiceForRequest GetCustomService (Guid id, Guid? questionnaireId = null)
+> ServiceForRequest GetCustomService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get custom service
 
@@ -1439,11 +1469,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get custom service
-                ServiceForRequest result = apiInstance.GetCustomService(id, questionnaireId);
+                ServiceForRequest result = apiInstance.GetCustomService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1463,6 +1494,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1489,7 +1521,7 @@ Name | Type | Description  | Notes
 
 <a name="getgrantpermissionservice"></a>
 # **GetGrantPermissionService**
-> GrantPermissionService GetGrantPermissionService (Guid id, Guid? questionnaireId = null)
+> GrantPermissionService GetGrantPermissionService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get grant permission service
 
@@ -1524,11 +1556,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get grant permission service
-                GrantPermissionService result = apiInstance.GetGrantPermissionService(id, questionnaireId);
+                GrantPermissionService result = apiInstance.GetGrantPermissionService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1548,6 +1581,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1574,7 +1608,7 @@ Name | Type | Description  | Notes
 
 <a name="getgrouplifecycleservice"></a>
 # **GetGroupLifecycleService**
-> GroupLifecycleService GetGroupLifecycleService (Guid id, Guid? questionnaireId = null)
+> GroupLifecycleService GetGroupLifecycleService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get group lifecycle service
 
@@ -1609,11 +1643,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get group lifecycle service
-                GroupLifecycleService result = apiInstance.GetGroupLifecycleService(id, questionnaireId);
+                GroupLifecycleService result = apiInstance.GetGroupLifecycleService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1633,6 +1668,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1659,7 +1695,7 @@ Name | Type | Description  | Notes
 
 <a name="getmanagepermissionservice"></a>
 # **GetManagePermissionService**
-> ManagePermissionService GetManagePermissionService (Guid id, Guid? questionnaireId = null)
+> ManagePermissionService GetManagePermissionService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get manage permission service
 
@@ -1694,11 +1730,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get manage permission service
-                ManagePermissionService result = apiInstance.GetManagePermissionService(id, questionnaireId);
+                ManagePermissionService result = apiInstance.GetManagePermissionService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1718,6 +1755,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1910,7 +1948,7 @@ Name | Type | Description  | Notes
 
 <a name="getsitelifecycleservice"></a>
 # **GetSiteLifecycleService**
-> SiteLifecycleService GetSiteLifecycleService (Guid id, Guid? questionnaireId = null)
+> SiteLifecycleService GetSiteLifecycleService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get site lifecycle service
 
@@ -1945,11 +1983,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get site lifecycle service
-                SiteLifecycleService result = apiInstance.GetSiteLifecycleService(id, questionnaireId);
+                SiteLifecycleService result = apiInstance.GetSiteLifecycleService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -1969,6 +2008,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1995,7 +2035,7 @@ Name | Type | Description  | Notes
 
 <a name="getweblifecycleservice"></a>
 # **GetWebLifecycleService**
-> WebLifecycleService GetWebLifecycleService (Guid id, Guid? questionnaireId = null)
+> WebLifecycleService GetWebLifecycleService (Guid id, Guid? questionnaireId = null, bool? isValidatePermission = null)
 
 get web lifecycle service
 
@@ -2030,11 +2070,12 @@ namespace Example
 
             var id = new Guid(); // Guid | 
             var questionnaireId = new Guid?(); // Guid? |  (optional) 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get web lifecycle service
-                WebLifecycleService result = apiInstance.GetWebLifecycleService(id, questionnaireId);
+                WebLifecycleService result = apiInstance.GetWebLifecycleService(id, questionnaireId, isValidatePermission);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -2054,6 +2095,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
  **questionnaireId** | [**Guid?**](Guid?.md)|  | [optional] 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 

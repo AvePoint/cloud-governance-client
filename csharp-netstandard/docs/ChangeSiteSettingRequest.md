@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **OriginalSiteMetadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] [readonly] 
 **DeploymentPlanName** | **string** |  | [optional] 
 **HubSiteSettings** | [**HubSiteChangedSettings**](HubSiteChangedSettings.md) |  | [optional] 
+**SiteSensitivitySetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 

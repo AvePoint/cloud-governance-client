@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GroupQuotaSize** | **long** | The new group team site quota size | [optional] [default to 0]
 **OriginalQuotaSize** | **long** | The original group team site quota size | [optional] [readonly] [default to 0]
+**SharePointSiteSize** | **double?** | sharepoint site size | [optional] 
 **GroupId** | **Guid** | Object ID | [optional] 
 **GroupName** | **string** | Group name | [optional] [readonly] 
 **GroupEmail** | **string** | Group e-mail address | [optional] [readonly] 

@@ -38,6 +38,9 @@ function New-ChangeGroupSettingCheckResult {
         [String]
         ${Classification},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${Sensitivity},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${IsTeamsEnabled} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -108,6 +111,7 @@ function New-ChangeGroupSettingCheckResult {
             "IsEnableSubscribeMembers" = ${IsEnableSubscribeMembers}
             "IsEnableOutsideSender" = ${IsEnableOutsideSender}
             "Classification" = ${Classification}
+            "Sensitivity" = ${Sensitivity}
             "IsTeamsEnabled" = ${IsTeamsEnabled}
             "EnableManageGroupSharing" = ${EnableManageGroupSharing}
             "EnableInviteAuthorizedGuestUser" = ${EnableInviteAuthorizedGuestUser}
@@ -148,7 +152,7 @@ function ConvertFrom-JsonToChangeGroupSettingCheckResult {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupSettingCheckResult
-        $AllProperties = $("PrimaryContact", "SecondaryContact", "GroupId", "GroupName", "GroupEmail", "GroupDescription", "IsEnableSubscribeMembers", "IsEnableOutsideSender", "Classification", "IsTeamsEnabled", "EnableManageGroupSharing", "EnableInviteAuthorizedGuestUser", "EnableInviteGuestUser", "EnableDynamicMembership", "EnableTeamCollaboration", "IsHubSite", "AssociatedHubSiteId", "DynamicMembershipRules", "Metadatas", "EnableChangeMembershipType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "IsValid", "ErrorMessage", "MessageCode")
+        $AllProperties = $("PrimaryContact", "SecondaryContact", "GroupId", "GroupName", "GroupEmail", "GroupDescription", "IsEnableSubscribeMembers", "IsEnableOutsideSender", "Classification", "Sensitivity", "IsTeamsEnabled", "EnableManageGroupSharing", "EnableInviteAuthorizedGuestUser", "EnableInviteGuestUser", "EnableDynamicMembership", "EnableTeamCollaboration", "IsHubSite", "AssociatedHubSiteId", "DynamicMembershipRules", "Metadatas", "EnableChangeMembershipType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "IsValid", "ErrorMessage", "MessageCode")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -207,6 +211,12 @@ function ConvertFrom-JsonToChangeGroupSettingCheckResult {
             $Classification = $null
         } else {
             $Classification = $JsonParameters.PSobject.Properties["Classification"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Sensitivity"))) { #optional property not found
+            $Sensitivity = $null
+        } else {
+            $Sensitivity = $JsonParameters.PSobject.Properties["Sensitivity"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsTeamsEnabled"))) { #optional property not found
@@ -327,6 +337,7 @@ function ConvertFrom-JsonToChangeGroupSettingCheckResult {
             "IsEnableSubscribeMembers" = ${IsEnableSubscribeMembers}
             "IsEnableOutsideSender" = ${IsEnableOutsideSender}
             "Classification" = ${Classification}
+            "Sensitivity" = ${Sensitivity}
             "IsTeamsEnabled" = ${IsTeamsEnabled}
             "EnableManageGroupSharing" = ${EnableManageGroupSharing}
             "EnableInviteAuthorizedGuestUser" = ${EnableInviteAuthorizedGuestUser}

@@ -37,7 +37,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = "Id_example" # String | 
 
 # get group/teams metadata
 try {
@@ -95,7 +95,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = "Id_example" # String | 
 
 # get O365 group/teams information
 try {
@@ -153,7 +153,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = "Id_example" # String | 
 
 # get site information
 try {
@@ -211,7 +211,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Url = "MyUrl" # String | 
+$Url = "Url_example" # String | 
 
 # get site metadata
 try {
@@ -274,12 +274,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity (optional)
-$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity (optional)
-$Search = "MySearch" # String | Search for name (optional)
-$Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
-$Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
-$Nexttoken = "MyNexttoken" # String |  Use the next token to get the next paging result (optional)
+$Filter = "Filter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity (optional)
+$Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity (optional)
+$Search = "Search_example" # String | Search for name (optional)
+$Top = 987 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
+$Skip = "Skip_example" # String |  Define the number of records you want to skip, default value is 0 (optional)
+$Nexttoken = "Nexttoken_example" # String |  Use the next token to get the next paging result (optional)
 
 # get my workspace items
 try {

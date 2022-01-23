@@ -41,9 +41,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$AttributeName = "MyAttributeName" # String | azure ad attribute name
-$AttributeValue = "MyAttributeValue" # String | value of attribute name
-$Office365TenantId = "MyOffice365TenantId" # String | office 365 tenant id, optional, if not specified, only return the first tenant's result which is not empty (optional)
+$AttributeName = "AttributeName_example" # String | azure ad attribute name
+$AttributeValue = "AttributeValue_example" # String | value of attribute name
+$Office365TenantId = "Office365TenantId_example" # String | office 365 tenant id, optional, if not specified, only return the first tenant's result which is not empty (optional)
 
 # filter users by property value
 try {
@@ -104,8 +104,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Username = "MyUsername" # String | 
-$PropertyName = "MyPropertyName" # String | 
+$Username = "Username_example" # String | 
+$PropertyName = "PropertyName_example" # String | 
 
 # get Azure Ad user's property value
 try {
@@ -164,7 +164,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Username = "MyUsername" # String | 
+$Username = "Username_example" # String | 
 
 # get user's extension property value from azure ad
 try {
@@ -223,8 +223,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Userprincipalname = "MyUserprincipalname" # String | 
-$Groupid = "MyGroupid" # String | 
+$Userprincipalname = "Userprincipalname_example" # String | 
+$Groupid = "Groupid_example" # String | 
 
 # Is Member Of Group
 try {
@@ -288,12 +288,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Keyword = "MyKeyword" # String | 
-$UserType = "1" # ApiUserType | 
-$UserSource = "0" # UserSource | 
-$SharingOptions = "0" # ExternalSharingOptions | 
-$SiteUrlOrTenantId = "MySiteUrlOrTenantId" # String |  (optional) (default to "")
-$PeopleFilterProfileId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Keyword = "Keyword_example" # String | 
+$UserType = (Initialize-ApiUserType ) # ApiUserType | 
+$UserSource = (Initialize-UserSource ) # UserSource | 
+$SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
+$SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
+$PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
 # resolve users
 try {
@@ -361,12 +361,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Keyword = "MyKeyword" # String | 
-$UserType = "1" # ApiUserType | 
-$UserSource = "0" # UserSource | 
-$SharingOptions = "0" # ExternalSharingOptions | 
-$SiteUrlOrTenantId = "MySiteUrlOrTenantId" # String |  (optional) (default to "")
-$PeopleFilterProfileId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$Keyword = "Keyword_example" # String | 
+$UserType = (Initialize-ApiUserType ) # ApiUserType | 
+$UserSource = (Initialize-UserSource ) # UserSource | 
+$SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
+$SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
+$PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
 # search users
 try {
@@ -429,10 +429,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$UpdatableApiUser = $ApiUserType = New-ApiUserType 
-$UserSource = New-UserSource 
-$ExternalUserType = New-ExternalUserType 
-$UpdatableApiUser = New-UpdatableApiUser -Email "MyEmail" -JobTitle "MyJobTitle" -TenantId "MyTenantId" -PeopleFilterProfileId "MyPeopleFilterProfileId" -ApiUserType $ApiUserType -UserSource $UserSource -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -AdditionalData @{ key_example =  } # UpdatableApiUser |  (optional)
+$UpdatableApiUser = (Initialize-UpdatableApiUser -Email "Email_example" -JobTitle "JobTitle_example" -TenantId "TenantId_example" -PeopleFilterProfileId "PeopleFilterProfileId_example" -ApiUserType  -UserSource  -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -AdditionalData "TODO") # UpdatableApiUser |  (optional)
 
 # add users or update user information
 try {
