@@ -7,7 +7,7 @@
     using System.Linq;
     using System.Collections.Generic;
 
-    public class CreateSite_EnableMultiGeo : ExampleBase
+    public class CreateSite_EnableMultiGeo : TestBase
     {
         public CreateSite_EnableMultiGeo(ApiConfig config) : base(config) { }
 

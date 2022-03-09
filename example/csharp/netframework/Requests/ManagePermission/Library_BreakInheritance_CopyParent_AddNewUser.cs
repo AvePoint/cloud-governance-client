@@ -6,7 +6,7 @@
     using System;
     using System.Collections.Generic;
 
-    public class Library_BreakInheritance_CopyParent_AddNewUser : ExampleBase
+    public class Library_BreakInheritance_CopyParent_AddNewUser : TestBase
     {
         public Library_BreakInheritance_CopyParent_AddNewUser(ApiConfig authData) : base(authData) { }
 

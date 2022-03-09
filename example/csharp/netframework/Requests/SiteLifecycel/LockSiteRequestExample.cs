@@ -8,7 +8,7 @@
     using System.Diagnostics;
 
 
-    public class LockSiteRequestExample : ExampleBase
+    public class LockSiteRequestExample : TestBase
     {
         public LockSiteRequestExample(ApiConfig authData) : base(authData) { }
 

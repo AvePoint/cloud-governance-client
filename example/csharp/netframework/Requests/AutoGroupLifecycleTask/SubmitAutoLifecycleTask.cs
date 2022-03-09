@@ -8,7 +8,7 @@
     using System.Diagnostics;
 
 
-    public class SubmitAutoLifecyceTask : ExampleBase
+    public class SubmitAutoLifecyceTask : TestBase
     {
         public SubmitAutoLifecyceTask(ApiConfig authData) : base(authData) { }
 

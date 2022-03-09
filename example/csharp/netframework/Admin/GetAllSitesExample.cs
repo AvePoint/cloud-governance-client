@@ -8,7 +8,7 @@
     using System.Diagnostics;
 
 
-    public class GetAllSitesExample : ExampleBase
+    public class GetAllSitesExample : TestBase
     {
         public GetAllSitesExample(ApiConfig authData) : base(authData) { }
 

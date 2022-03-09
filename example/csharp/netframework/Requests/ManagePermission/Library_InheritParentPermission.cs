@@ -5,7 +5,7 @@
     using Cloud.Governance.Client.Model;
     using System;
 
-    public class Library_InheritParentPermission : ExampleBase
+    public class Library_InheritParentPermission : TestBase
     {
         public Library_InheritParentPermission(ApiConfig authData) : base(authData) { }
 

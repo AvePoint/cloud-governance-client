@@ -8,7 +8,7 @@
     using System.Diagnostics;
     using System.Linq;
 
-    public class CreateSite_Basic : ExampleBase
+    public class CreateSite_Basic : TestBase
     {
         public CreateSite_Basic(ApiConfig config) : base(config) { }
 

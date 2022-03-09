@@ -24,7 +24,11 @@ namespace NetFramework
                 var markAsCancel = true;
 
                 var apiInstance = new WorkspacesAdminApi(Configuration.Default);
-                apiInstance.CompleteWorkspaceRenewalTask(markAsCancel, new List<WorkspaceIdTypeModel> { workspace });
+                apiInstance.CompleteWorkspaceRenewalTask(new AutoCompleteRenewalTaskParameter 
+                { 
+                    IsMarkAsCanceled = markAsCancel,
+                     Workspace = new List<WorkspaceIdTypeModel> { workspace }
+                });
             }
             catch (ApiException e)
             {
