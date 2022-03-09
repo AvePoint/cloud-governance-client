@@ -13,10 +13,10 @@ get all requests
 No description available.
 
 .PARAMETER Filter
-Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, ticketNumber, summary, requester, detailStatus, progressStatus, modified, assignTo, serviceAdmin, objectUrl, createdTime
+Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, categoryName, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest
 
 .PARAMETER Orderby
-Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, ticketNumber, summary, requester, detailStatus, progressStatus, modified, assignTo, serviceAdmin, objectUrl, createdTime
+Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, categoryName, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest
 
 .PARAMETER Search
 Search for summary

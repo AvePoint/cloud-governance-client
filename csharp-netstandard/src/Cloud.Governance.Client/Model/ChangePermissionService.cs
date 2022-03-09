@@ -58,7 +58,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="permissionChangedTypeAssignBy">permissionChangedTypeAssignBy.</param>
         /// <param name="enabledExcludePermissions">enabledExcludePermissions (default to false).</param>
         /// <param name="excludedPermissions">excludedPermissions.</param>
-        /// <param name="reviewTaskEmailTemplate">GuidModel model.</param>
+        /// <param name="reviewTaskEmailTemplate">reviewTaskEmailTemplate.</param>
         /// <param name="scopeSettings">scopeSettings.</param>
         /// <param name="stageCount">stageCount (default to 0).</param>
         /// <param name="requestTemplate">requestTemplate.</param>
@@ -132,9 +132,8 @@ namespace Cloud.Governance.Client.Model
         public List<PermissionLevel> ExcludedPermissions { get; set; }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets ReviewTaskEmailTemplate
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "reviewTaskEmailTemplate", EmitDefaultValue = true)]
         public GuidModel ReviewTaskEmailTemplate { get; set; }
 

@@ -86,6 +86,12 @@ function New-ChangeGroupSettingCheckResult {
         [String]
         ${GroupObjectId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${TimeZoneSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${LocaleSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${IsValid} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -127,6 +133,8 @@ function New-ChangeGroupSettingCheckResult {
             "GroupObjectType" = ${GroupObjectType}
             "NetworkId" = ${NetworkId}
             "GroupObjectId" = ${GroupObjectId}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
             "IsValid" = ${IsValid}
             "ErrorMessage" = ${ErrorMessage}
             "MessageCode" = ${MessageCode}
@@ -152,7 +160,7 @@ function ConvertFrom-JsonToChangeGroupSettingCheckResult {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupSettingCheckResult
-        $AllProperties = $("PrimaryContact", "SecondaryContact", "GroupId", "GroupName", "GroupEmail", "GroupDescription", "IsEnableSubscribeMembers", "IsEnableOutsideSender", "Classification", "Sensitivity", "IsTeamsEnabled", "EnableManageGroupSharing", "EnableInviteAuthorizedGuestUser", "EnableInviteGuestUser", "EnableDynamicMembership", "EnableTeamCollaboration", "IsHubSite", "AssociatedHubSiteId", "DynamicMembershipRules", "Metadatas", "EnableChangeMembershipType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "IsValid", "ErrorMessage", "MessageCode")
+        $AllProperties = $("PrimaryContact", "SecondaryContact", "GroupId", "GroupName", "GroupEmail", "GroupDescription", "IsEnableSubscribeMembers", "IsEnableOutsideSender", "Classification", "Sensitivity", "IsTeamsEnabled", "EnableManageGroupSharing", "EnableInviteAuthorizedGuestUser", "EnableInviteGuestUser", "EnableDynamicMembership", "EnableTeamCollaboration", "IsHubSite", "AssociatedHubSiteId", "DynamicMembershipRules", "Metadatas", "EnableChangeMembershipType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "TimeZoneSettings", "LocaleSettings", "IsValid", "ErrorMessage", "MessageCode")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -309,6 +317,18 @@ function ConvertFrom-JsonToChangeGroupSettingCheckResult {
             $GroupObjectId = $JsonParameters.PSobject.Properties["GroupObjectId"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TimeZoneSettings"))) { #optional property not found
+            $TimeZoneSettings = $null
+        } else {
+            $TimeZoneSettings = $JsonParameters.PSobject.Properties["TimeZoneSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LocaleSettings"))) { #optional property not found
+            $LocaleSettings = $null
+        } else {
+            $LocaleSettings = $JsonParameters.PSobject.Properties["LocaleSettings"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsValid"))) { #optional property not found
             $IsValid = $null
         } else {
@@ -353,6 +373,8 @@ function ConvertFrom-JsonToChangeGroupSettingCheckResult {
             "GroupObjectType" = ${GroupObjectType}
             "NetworkId" = ${NetworkId}
             "GroupObjectId" = ${GroupObjectId}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
             "IsValid" = ${IsValid}
             "ErrorMessage" = ${ErrorMessage}
             "MessageCode" = ${MessageCode}

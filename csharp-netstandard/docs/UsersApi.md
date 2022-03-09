@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 <a name="resolveusers"></a>
 # **ResolveUsers**
-> List&lt;ApiUser&gt; ResolveUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, Guid? peopleFilterProfileId = null)
+> List&lt;ApiUser&gt; ResolveUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null)
 
 resolve users
 
@@ -393,12 +393,13 @@ namespace Example
             var userSource = ;  // UserSource | 
             var sharingOptions = ;  // ExternalSharingOptions | 
             var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string |  (optional)  (default to "")
+            var groupEmail = groupEmail_example;  // string |  (optional)  (default to "")
             var peopleFilterProfileId = new Guid?(); // Guid? |  (optional) 
 
             try
             {
                 // resolve users
-                List<ApiUser> result = apiInstance.ResolveUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId);
+                List<ApiUser> result = apiInstance.ResolveUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -421,6 +422,7 @@ Name | Type | Description  | Notes
  **userSource** | **UserSource**|  | 
  **sharingOptions** | **ExternalSharingOptions**|  | 
  **siteUrlOrTenantId** | **string**|  | [optional] [default to &quot;&quot;]
+ **groupEmail** | **string**|  | [optional] [default to &quot;&quot;]
  **peopleFilterProfileId** | [**Guid?**](Guid?.md)|  | [optional] 
 
 ### Return type
@@ -448,7 +450,7 @@ Name | Type | Description  | Notes
 
 <a name="searchusers"></a>
 # **SearchUsers**
-> List&lt;ApiUser&gt; SearchUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, Guid? peopleFilterProfileId = null)
+> List&lt;ApiUser&gt; SearchUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null)
 
 search users
 
@@ -486,12 +488,13 @@ namespace Example
             var userSource = ;  // UserSource | 
             var sharingOptions = ;  // ExternalSharingOptions | 
             var siteUrlOrTenantId = siteUrlOrTenantId_example;  // string |  (optional)  (default to "")
+            var groupEmail = groupEmail_example;  // string |  (optional)  (default to "")
             var peopleFilterProfileId = new Guid?(); // Guid? |  (optional) 
 
             try
             {
                 // search users
-                List<ApiUser> result = apiInstance.SearchUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId);
+                List<ApiUser> result = apiInstance.SearchUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -514,6 +517,7 @@ Name | Type | Description  | Notes
  **userSource** | **UserSource**|  | 
  **sharingOptions** | **ExternalSharingOptions**|  | 
  **siteUrlOrTenantId** | **string**|  | [optional] [default to &quot;&quot;]
+ **groupEmail** | **string**|  | [optional] [default to &quot;&quot;]
  **peopleFilterProfileId** | [**Guid?**](Guid?.md)|  | [optional] 
 
 ### Return type

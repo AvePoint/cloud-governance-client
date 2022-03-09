@@ -101,6 +101,7 @@ Class | Method | HTTP request | Description
 *Office365AdminApi* | [**GetAzureAdCustomPropertyNames**](docs/Office365AdminApi.md#getazureadcustompropertynames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
 *Office365AdminApi* | [**GetTenantIdByUrl**](docs/Office365AdminApi.md#gettenantidbyurl) | **GET** /admin/office365/tenantid | get tenant ids by url
 *ReportAdminApi* | [**GeTaskReport**](docs/ReportAdminApi.md#getaskreport) | **GET** /admin/report/tasks | get all tasks report
+*ReportAdminApi* | [**GetRequestReport**](docs/ReportAdminApi.md#getrequestreport) | **GET** /admin/report/requests | get requests report
 *ReportAdminApi* | [**GetWorkspaceReport**](docs/ReportAdminApi.md#getworkspacereport) | **GET** /admin/report/workspaces | get workspaces report
 *RequestsApi* | [**CancelRequest**](docs/RequestsApi.md#cancelrequest) | **GET** /requests/{id}/cancel | cancel request
 *RequestsApi* | [**GetArchiveGroupRequest**](docs/RequestsApi.md#getarchivegrouprequest) | **GET** /requests/archivegroup/{id} | get archive group request
@@ -111,6 +112,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetChangeGroupSettingRequest**](docs/RequestsApi.md#getchangegroupsettingrequest) | **GET** /requests/changegroup/{id} | get change group settings request
 *RequestsApi* | [**GetChangeListSettingRequest**](docs/RequestsApi.md#getchangelistsettingrequest) | **GET** /requests/changelistsetting/{id} | get change list settings request
 *RequestsApi* | [**GetChangePermissionRequest**](docs/RequestsApi.md#getchangepermissionrequest) | **GET** /requests/changepermission/{id} | get change permission request
+*RequestsApi* | [**GetChangePrivateChannelRequest**](docs/RequestsApi.md#getchangeprivatechannelrequest) | **GET** /requests/changeprivatechannel/{id} | get change private channel request
 *RequestsApi* | [**GetChangeSiteContactRequest**](docs/RequestsApi.md#getchangesitecontactrequest) | **GET** /requests/changesite/adminorcontact/{id} | get change site administrator or contact request
 *RequestsApi* | [**GetChangeSitePolicyRequest**](docs/RequestsApi.md#getchangesitepolicyrequest) | **GET** /requests/changesitepolicy/{id} | get change site policy request
 *RequestsApi* | [**GetChangeSiteQuotaRequest**](docs/RequestsApi.md#getchangesitequotarequest) | **GET** /requests/changesitequota/{id} | get change site quota request
@@ -149,6 +151,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**SubmitChangeGroupSettingRequest**](docs/RequestsApi.md#submitchangegroupsettingrequest) | **POST** /requests/changegroup | submit change group settings request
 *RequestsApi* | [**SubmitChangeListSettingRequest**](docs/RequestsApi.md#submitchangelistsettingrequest) | **POST** /requests/changelistsetting | submit change list settings request
 *RequestsApi* | [**SubmitChangePermissionRequest**](docs/RequestsApi.md#submitchangepermissionrequest) | **POST** /requests/changepermission | submit change permission request
+*RequestsApi* | [**SubmitChangePrivateChannelRequest**](docs/RequestsApi.md#submitchangeprivatechannelrequest) | **POST** /requests/changeprivatechannel | submit change private channel request
 *RequestsApi* | [**SubmitChangeSiteContactRequest**](docs/RequestsApi.md#submitchangesitecontactrequest) | **POST** /requests/changesite/adminorcontact | submit change site administrator or contact request
 *RequestsApi* | [**SubmitChangeSitePolicyRequest**](docs/RequestsApi.md#submitchangesitepolicyrequest) | **POST** /requests/changesitepolicy | submit change site policy request
 *RequestsApi* | [**SubmitChangeSiteQuotaRequest**](docs/RequestsApi.md#submitchangesitequotarequest) | **POST** /requests/changesitequota | submit change site quota request
@@ -178,6 +181,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**GetChangeGroupSettingService**](docs/ServicesApi.md#getchangegroupsettingservice) | **GET** /services/changegroupsetting/{id} | get change group setting service
 *ServicesApi* | [**GetChangeListSettingService**](docs/ServicesApi.md#getchangelistsettingservice) | **GET** /services/changelistsetting/{id} | get change list setting service
 *ServicesApi* | [**GetChangePermissionService**](docs/ServicesApi.md#getchangepermissionservice) | **GET** /services/changepermission/{id} | get change permission service
+*ServicesApi* | [**GetChangePrivateChannelService**](docs/ServicesApi.md#getchangeprivatechannelservice) | **GET** /services/changeprivatechannel/{id} | get private channel service detail
 *ServicesApi* | [**GetChangeSiteContactService**](docs/ServicesApi.md#getchangesitecontactservice) | **GET** /services/changesitecontact/{id} | get change site contact service
 *ServicesApi* | [**GetChangeSiteSettingService**](docs/ServicesApi.md#getchangesitesettingservice) | **GET** /services/changesitesetting/{id} | get change site setting service
 *ServicesApi* | [**GetChangeWebContactService**](docs/ServicesApi.md#getchangewebcontactservice) | **GET** /services/changewebcontact/{id} | validate permissions, scope for change web contact service
@@ -218,6 +222,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**ValidateForManagePermissionService**](docs/ServicesApi.md#validateformanagepermissionservice) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 *ServicesApi* | [**ValidateForSiteLifecycleService**](docs/ServicesApi.md#validateforsitelifecycleservice) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 *ServicesApi* | [**ValidateForWebLifecycleService**](docs/ServicesApi.md#validateforweblifecycleservice) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+*ServicesApi* | [**ValidateTeamForChangePrivateChannelService**](docs/ServicesApi.md#validateteamforchangeprivatechannelservice) | **POST** /services/changeprivatechannel/{serviceId}/team/validation | validate teams for change private channel service
 *ServicesApi* | [**ValidateTeamForCreatePrivateChannelService**](docs/ServicesApi.md#validateteamforcreateprivatechannelservice) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
 *ServicesAdminApi* | [**GetServices**](docs/ServicesAdminApi.md#getservices) | **GET** /admin/services | get all services
 *SettingsApi* | [**GetDynamicMembershipRuleItems**](docs/SettingsApi.md#getdynamicmembershipruleitems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
@@ -299,6 +304,8 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.AddGroupMemberType](docs/AddGroupMemberType.md)
+ - [Model.AllRequestDetails](docs/AllRequestDetails.md)
+ - [Model.AllRequestDetailsPageResult](docs/AllRequestDetailsPageResult.md)
  - [Model.AllRequestList](docs/AllRequestList.md)
  - [Model.AllRequestListPageResult](docs/AllRequestListPageResult.md)
  - [Model.AllTaskList](docs/AllTaskList.md)
@@ -316,6 +323,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiTaskDynamicProperties](docs/ApiTaskDynamicProperties.md)
  - [Model.ApiUser](docs/ApiUser.md)
  - [Model.ApiUserChangedProperty](docs/ApiUserChangedProperty.md)
+ - [Model.ApiUserIListChangedProperty](docs/ApiUserIListChangedProperty.md)
  - [Model.ApiUserPageResult](docs/ApiUserPageResult.md)
  - [Model.ApiUserType](docs/ApiUserType.md)
  - [Model.AppSettings](docs/AppSettings.md)
@@ -361,6 +369,12 @@ Class | Method | HTTP request | Description
  - [Model.ChangePermissionService](docs/ChangePermissionService.md)
  - [Model.ChangePermissionValidateResult](docs/ChangePermissionValidateResult.md)
  - [Model.ChangePolicyActionSetting](docs/ChangePolicyActionSetting.md)
+ - [Model.ChangePrivateChannelCheckResult](docs/ChangePrivateChannelCheckResult.md)
+ - [Model.ChangePrivateChannelFieldModel](docs/ChangePrivateChannelFieldModel.md)
+ - [Model.ChangePrivateChannelFieldName](docs/ChangePrivateChannelFieldName.md)
+ - [Model.ChangePrivateChannelRequest](docs/ChangePrivateChannelRequest.md)
+ - [Model.ChangePrivateChannelService](docs/ChangePrivateChannelService.md)
+ - [Model.ChangePrivateChannelValidationParameter](docs/ChangePrivateChannelValidationParameter.md)
  - [Model.ChangeSiteContactRequest](docs/ChangeSiteContactRequest.md)
  - [Model.ChangeSiteContactService](docs/ChangeSiteContactService.md)
  - [Model.ChangeSiteContactSubRequest](docs/ChangeSiteContactSubRequest.md)
@@ -447,6 +461,7 @@ Class | Method | HTTP request | Description
  - [Model.DueDateType](docs/DueDateType.md)
  - [Model.DurationDateType](docs/DurationDateType.md)
  - [Model.DynamicGroupRuleInfo](docs/DynamicGroupRuleInfo.md)
+ - [Model.DynamicGroupRuleModel](docs/DynamicGroupRuleModel.md)
  - [Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Model.DynamicRuleElement](docs/DynamicRuleElement.md)
  - [Model.ElectionContact](docs/ElectionContact.md)
@@ -533,6 +548,7 @@ Class | Method | HTTP request | Description
  - [Model.ListValidationParameter](docs/ListValidationParameter.md)
  - [Model.ListVersionSettings](docs/ListVersionSettings.md)
  - [Model.ListVersionSettingsChangedProperty](docs/ListVersionSettingsChangedProperty.md)
+ - [Model.LocaleSettings](docs/LocaleSettings.md)
  - [Model.LockSiteCollectionType](docs/LockSiteCollectionType.md)
  - [Model.LockSiteParameter](docs/LockSiteParameter.md)
  - [Model.LockSiteRequest](docs/LockSiteRequest.md)
@@ -572,9 +588,9 @@ Class | Method | HTTP request | Description
  - [Model.PermissionSettings](docs/PermissionSettings.md)
  - [Model.PersonalSettings](docs/PersonalSettings.md)
  - [Model.PersonalSettingsPropertyInfo](docs/PersonalSettingsPropertyInfo.md)
- - [Model.PolicyRef](docs/PolicyRef.md)
  - [Model.PolicyWithTemplates](docs/PolicyWithTemplates.md)
  - [Model.PrincipalType](docs/PrincipalType.md)
+ - [Model.QuestionAnswerResponse](docs/QuestionAnswerResponse.md)
  - [Model.RenewalTaskHookMessage](docs/RenewalTaskHookMessage.md)
  - [Model.ReportMetadata](docs/ReportMetadata.md)
  - [Model.RequestGroupWithPermissions](docs/RequestGroupWithPermissions.md)
@@ -626,6 +642,7 @@ Class | Method | HTTP request | Description
  - [Model.SiteLifecycleService](docs/SiteLifecycleService.md)
  - [Model.SiteLifecycleValidateResult](docs/SiteLifecycleValidateResult.md)
  - [Model.SiteLockType](docs/SiteLockType.md)
+ - [Model.SitePolicyRef](docs/SitePolicyRef.md)
  - [Model.SiteSharingStatus](docs/SiteSharingStatus.md)
  - [Model.SiteStatus](docs/SiteStatus.md)
  - [Model.SiteTemplate](docs/SiteTemplate.md)
@@ -660,6 +677,7 @@ Class | Method | HTTP request | Description
  - [Model.TextModel](docs/TextModel.md)
  - [Model.TextValidationRuleRef](docs/TextValidationRuleRef.md)
  - [Model.ThemeSettingType](docs/ThemeSettingType.md)
+ - [Model.TimeZoneSettings](docs/TimeZoneSettings.md)
  - [Model.TreeNode](docs/TreeNode.md)
  - [Model.TreeNodeExtension](docs/TreeNodeExtension.md)
  - [Model.TreeNodeType](docs/TreeNodeType.md)

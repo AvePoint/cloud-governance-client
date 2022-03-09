@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **String** | StringModel ID | [optional] 
-**Name** | **String** | StringModel name | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
 
 ## Examples
 

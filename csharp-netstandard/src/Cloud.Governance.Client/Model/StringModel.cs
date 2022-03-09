@@ -18,7 +18,7 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// StringModel model
+    /// StringModel
     /// </summary>
     [DataContract(Name = "StringModel")]
     public partial class StringModel : IEquatable<StringModel>, IValidatableObject
@@ -26,8 +26,8 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StringModel" /> class.
         /// </summary>
-        /// <param name="id">StringModel ID.</param>
-        /// <param name="name">StringModel name.</param>
+        /// <param name="id">id.</param>
+        /// <param name="name">name.</param>
         public StringModel(string id = default(string), string name = default(string))
         {
             this.Id = id;
@@ -35,16 +35,14 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// StringModel ID
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>StringModel ID</value>
         [DataMember(Name = "id", EmitDefaultValue = true)]
         public string Id { get; set; }
 
         /// <summary>
-        /// StringModel name
+        /// Gets or Sets Name
         /// </summary>
-        /// <value>StringModel name</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
 

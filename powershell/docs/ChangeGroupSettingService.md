@@ -35,6 +35,8 @@ Name | Type | Description | Notes
 **ScopePeoplePickerFilterProfileId** | **String** |  | [optional] 
 **PeoplePickerFilterProfileId** | **String** |  | [optional] 
 **RequestTemplate** | [**ChangeGroupSettingRequest**](ChangeGroupSettingRequest.md) |  | [optional] 
+**IsChangeTimeZoneEnabled** | **Boolean** |  | [optional] [default to $false]
+**IsChangeLocaleEnabled** | **Boolean** |  | [optional] [default to $false]
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
@@ -87,6 +89,8 @@ $ChangeGroupSettingService = New-Cloud.Governance.ClientChangeGroupSettingServic
  -ScopePeoplePickerFilterProfileId null `
  -PeoplePickerFilterProfileId null `
  -RequestTemplate null `
+ -IsChangeTimeZoneEnabled null `
+ -IsChangeLocaleEnabled null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `

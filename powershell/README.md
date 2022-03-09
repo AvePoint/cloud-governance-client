@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 5.1.1
+- SDK version: 5.3.0
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -48,6 +48,7 @@ Class | Method | HTTP request | Description
 *Office365AdminApi* | [**Get-AzureAdCustomPropertyNames**](docs/Office365AdminApi.md#Get-AzureAdCustomPropertyNames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
 *Office365AdminApi* | [**Get-TenantIdByUrl**](docs/Office365AdminApi.md#Get-TenantIdByUrl) | **GET** /admin/office365/tenantid | get tenant ids by url
 *ReportAdminApi* | [**Invoke-GeTaskReport**](docs/ReportAdminApi.md#Invoke-GeTaskReport) | **GET** /admin/report/tasks | get all tasks report
+*ReportAdminApi* | [**Get-RequestReport**](docs/ReportAdminApi.md#Get-RequestReport) | **GET** /admin/report/requests | get requests report
 *ReportAdminApi* | [**Get-WorkspaceReport**](docs/ReportAdminApi.md#Get-WorkspaceReport) | **GET** /admin/report/workspaces | get workspaces report
 *RequestsApi* | [**Stop-Request**](docs/RequestsApi.md#Stop-Request) | **GET** /requests/{id}/cancel | cancel request
 *RequestsApi* | [**Get-ArchiveGroupRequest**](docs/RequestsApi.md#Get-ArchiveGroupRequest) | **GET** /requests/archivegroup/{id} | get archive group request
@@ -58,6 +59,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Get-ChangeGroupSettingRequest**](docs/RequestsApi.md#Get-ChangeGroupSettingRequest) | **GET** /requests/changegroup/{id} | get change group settings request
 *RequestsApi* | [**Get-ChangeListSettingRequest**](docs/RequestsApi.md#Get-ChangeListSettingRequest) | **GET** /requests/changelistsetting/{id} | get change list settings request
 *RequestsApi* | [**Get-ChangePermissionRequest**](docs/RequestsApi.md#Get-ChangePermissionRequest) | **GET** /requests/changepermission/{id} | get change permission request
+*RequestsApi* | [**Get-ChangePrivateChannelRequest**](docs/RequestsApi.md#Get-ChangePrivateChannelRequest) | **GET** /requests/changeprivatechannel/{id} | get change private channel request
 *RequestsApi* | [**Get-ChangeSiteContactRequest**](docs/RequestsApi.md#Get-ChangeSiteContactRequest) | **GET** /requests/changesite/adminorcontact/{id} | get change site administrator or contact request
 *RequestsApi* | [**Get-ChangeSitePolicyRequest**](docs/RequestsApi.md#Get-ChangeSitePolicyRequest) | **GET** /requests/changesitepolicy/{id} | get change site policy request
 *RequestsApi* | [**Get-ChangeSiteQuotaRequest**](docs/RequestsApi.md#Get-ChangeSiteQuotaRequest) | **GET** /requests/changesitequota/{id} | get change site quota request
@@ -96,6 +98,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Submit-ChangeGroupSettingRequest**](docs/RequestsApi.md#Submit-ChangeGroupSettingRequest) | **POST** /requests/changegroup | submit change group settings request
 *RequestsApi* | [**Submit-ChangeListSettingRequest**](docs/RequestsApi.md#Submit-ChangeListSettingRequest) | **POST** /requests/changelistsetting | submit change list settings request
 *RequestsApi* | [**Submit-ChangePermissionRequest**](docs/RequestsApi.md#Submit-ChangePermissionRequest) | **POST** /requests/changepermission | submit change permission request
+*RequestsApi* | [**Submit-ChangePrivateChannelRequest**](docs/RequestsApi.md#Submit-ChangePrivateChannelRequest) | **POST** /requests/changeprivatechannel | submit change private channel request
 *RequestsApi* | [**Submit-ChangeSiteContactRequest**](docs/RequestsApi.md#Submit-ChangeSiteContactRequest) | **POST** /requests/changesite/adminorcontact | submit change site administrator or contact request
 *RequestsApi* | [**Submit-ChangeSitePolicyRequest**](docs/RequestsApi.md#Submit-ChangeSitePolicyRequest) | **POST** /requests/changesitepolicy | submit change site policy request
 *RequestsApi* | [**Submit-ChangeSiteQuotaRequest**](docs/RequestsApi.md#Submit-ChangeSiteQuotaRequest) | **POST** /requests/changesitequota | submit change site quota request
@@ -125,6 +128,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**Get-ChangeGroupSettingService**](docs/ServicesApi.md#Get-ChangeGroupSettingService) | **GET** /services/changegroupsetting/{id} | get change group setting service
 *ServicesApi* | [**Get-ChangeListSettingService**](docs/ServicesApi.md#Get-ChangeListSettingService) | **GET** /services/changelistsetting/{id} | get change list setting service
 *ServicesApi* | [**Get-ChangePermissionService**](docs/ServicesApi.md#Get-ChangePermissionService) | **GET** /services/changepermission/{id} | get change permission service
+*ServicesApi* | [**Get-ChangePrivateChannelService**](docs/ServicesApi.md#Get-ChangePrivateChannelService) | **GET** /services/changeprivatechannel/{id} | get private channel service detail
 *ServicesApi* | [**Get-ChangeSiteContactService**](docs/ServicesApi.md#Get-ChangeSiteContactService) | **GET** /services/changesitecontact/{id} | get change site contact service
 *ServicesApi* | [**Get-ChangeSiteSettingService**](docs/ServicesApi.md#Get-ChangeSiteSettingService) | **GET** /services/changesitesetting/{id} | get change site setting service
 *ServicesApi* | [**Get-ChangeWebContactService**](docs/ServicesApi.md#Get-ChangeWebContactService) | **GET** /services/changewebcontact/{id} | validate permissions, scope for change web contact service
@@ -165,6 +169,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**Resolve-ForManagePermissionService**](docs/ServicesApi.md#Resolve-ForManagePermissionService) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 *ServicesApi* | [**Resolve-ForSiteLifecycleService**](docs/ServicesApi.md#Resolve-ForSiteLifecycleService) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 *ServicesApi* | [**Resolve-ForWebLifecycleService**](docs/ServicesApi.md#Resolve-ForWebLifecycleService) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+*ServicesApi* | [**Resolve-TeamForChangePrivateChannelService**](docs/ServicesApi.md#Resolve-TeamForChangePrivateChannelService) | **POST** /services/changeprivatechannel/{serviceId}/team/validation | validate teams for change private channel service
 *ServicesApi* | [**Resolve-TeamForCreatePrivateChannelService**](docs/ServicesApi.md#Resolve-TeamForCreatePrivateChannelService) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
 *ServicesAdminApi* | [**Get-Services**](docs/ServicesAdminApi.md#Get-Services) | **GET** /admin/services | get all services
 *SettingsApi* | [**Get-DynamicMembershipRuleItems**](docs/SettingsApi.md#Get-DynamicMembershipRuleItems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
@@ -245,6 +250,8 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Cloud.Governance.Client\Model.AddGroupMemberType](docs/AddGroupMemberType.md)
+ - [Cloud.Governance.Client\Model.AllRequestDetails](docs/AllRequestDetails.md)
+ - [Cloud.Governance.Client\Model.AllRequestDetailsPageResult](docs/AllRequestDetailsPageResult.md)
  - [Cloud.Governance.Client\Model.AllRequestList](docs/AllRequestList.md)
  - [Cloud.Governance.Client\Model.AllRequestListPageResult](docs/AllRequestListPageResult.md)
  - [Cloud.Governance.Client\Model.AllTaskList](docs/AllTaskList.md)
@@ -262,6 +269,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ApiTaskDynamicProperties](docs/ApiTaskDynamicProperties.md)
  - [Cloud.Governance.Client\Model.ApiUser](docs/ApiUser.md)
  - [Cloud.Governance.Client\Model.ApiUserChangedProperty](docs/ApiUserChangedProperty.md)
+ - [Cloud.Governance.Client\Model.ApiUserIListChangedProperty](docs/ApiUserIListChangedProperty.md)
  - [Cloud.Governance.Client\Model.ApiUserPageResult](docs/ApiUserPageResult.md)
  - [Cloud.Governance.Client\Model.ApiUserType](docs/ApiUserType.md)
  - [Cloud.Governance.Client\Model.AppSettings](docs/AppSettings.md)
@@ -307,6 +315,12 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ChangePermissionService](docs/ChangePermissionService.md)
  - [Cloud.Governance.Client\Model.ChangePermissionValidateResult](docs/ChangePermissionValidateResult.md)
  - [Cloud.Governance.Client\Model.ChangePolicyActionSetting](docs/ChangePolicyActionSetting.md)
+ - [Cloud.Governance.Client\Model.ChangePrivateChannelCheckResult](docs/ChangePrivateChannelCheckResult.md)
+ - [Cloud.Governance.Client\Model.ChangePrivateChannelFieldModel](docs/ChangePrivateChannelFieldModel.md)
+ - [Cloud.Governance.Client\Model.ChangePrivateChannelFieldName](docs/ChangePrivateChannelFieldName.md)
+ - [Cloud.Governance.Client\Model.ChangePrivateChannelRequest](docs/ChangePrivateChannelRequest.md)
+ - [Cloud.Governance.Client\Model.ChangePrivateChannelService](docs/ChangePrivateChannelService.md)
+ - [Cloud.Governance.Client\Model.ChangePrivateChannelValidationParameter](docs/ChangePrivateChannelValidationParameter.md)
  - [Cloud.Governance.Client\Model.ChangeSiteContactRequest](docs/ChangeSiteContactRequest.md)
  - [Cloud.Governance.Client\Model.ChangeSiteContactService](docs/ChangeSiteContactService.md)
  - [Cloud.Governance.Client\Model.ChangeSiteContactSubRequest](docs/ChangeSiteContactSubRequest.md)
@@ -393,6 +407,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.DueDateType](docs/DueDateType.md)
  - [Cloud.Governance.Client\Model.DurationDateType](docs/DurationDateType.md)
  - [Cloud.Governance.Client\Model.DynamicGroupRuleInfo](docs/DynamicGroupRuleInfo.md)
+ - [Cloud.Governance.Client\Model.DynamicGroupRuleModel](docs/DynamicGroupRuleModel.md)
  - [Cloud.Governance.Client\Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Cloud.Governance.Client\Model.DynamicRuleElement](docs/DynamicRuleElement.md)
  - [Cloud.Governance.Client\Model.ElectionContact](docs/ElectionContact.md)
@@ -479,6 +494,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ListValidationParameter](docs/ListValidationParameter.md)
  - [Cloud.Governance.Client\Model.ListVersionSettings](docs/ListVersionSettings.md)
  - [Cloud.Governance.Client\Model.ListVersionSettingsChangedProperty](docs/ListVersionSettingsChangedProperty.md)
+ - [Cloud.Governance.Client\Model.LocaleSettings](docs/LocaleSettings.md)
  - [Cloud.Governance.Client\Model.LockSiteCollectionType](docs/LockSiteCollectionType.md)
  - [Cloud.Governance.Client\Model.LockSiteParameter](docs/LockSiteParameter.md)
  - [Cloud.Governance.Client\Model.LockSiteRequest](docs/LockSiteRequest.md)
@@ -518,9 +534,9 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.PermissionSettings](docs/PermissionSettings.md)
  - [Cloud.Governance.Client\Model.PersonalSettings](docs/PersonalSettings.md)
  - [Cloud.Governance.Client\Model.PersonalSettingsPropertyInfo](docs/PersonalSettingsPropertyInfo.md)
- - [Cloud.Governance.Client\Model.PolicyRef](docs/PolicyRef.md)
  - [Cloud.Governance.Client\Model.PolicyWithTemplates](docs/PolicyWithTemplates.md)
  - [Cloud.Governance.Client\Model.PrincipalType](docs/PrincipalType.md)
+ - [Cloud.Governance.Client\Model.QuestionAnswerResponse](docs/QuestionAnswerResponse.md)
  - [Cloud.Governance.Client\Model.RenewalTaskHookMessage](docs/RenewalTaskHookMessage.md)
  - [Cloud.Governance.Client\Model.ReportMetadata](docs/ReportMetadata.md)
  - [Cloud.Governance.Client\Model.RequestGroupWithPermissions](docs/RequestGroupWithPermissions.md)
@@ -572,6 +588,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.SiteLifecycleService](docs/SiteLifecycleService.md)
  - [Cloud.Governance.Client\Model.SiteLifecycleValidateResult](docs/SiteLifecycleValidateResult.md)
  - [Cloud.Governance.Client\Model.SiteLockType](docs/SiteLockType.md)
+ - [Cloud.Governance.Client\Model.SitePolicyRef](docs/SitePolicyRef.md)
  - [Cloud.Governance.Client\Model.SiteSharingStatus](docs/SiteSharingStatus.md)
  - [Cloud.Governance.Client\Model.SiteStatus](docs/SiteStatus.md)
  - [Cloud.Governance.Client\Model.SiteTemplate](docs/SiteTemplate.md)
@@ -606,6 +623,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TextModel](docs/TextModel.md)
  - [Cloud.Governance.Client\Model.TextValidationRuleRef](docs/TextValidationRuleRef.md)
  - [Cloud.Governance.Client\Model.ThemeSettingType](docs/ThemeSettingType.md)
+ - [Cloud.Governance.Client\Model.TimeZoneSettings](docs/TimeZoneSettings.md)
  - [Cloud.Governance.Client\Model.TreeNode](docs/TreeNode.md)
  - [Cloud.Governance.Client\Model.TreeNodeExtension](docs/TreeNodeExtension.md)
  - [Cloud.Governance.Client\Model.TreeNodeType](docs/TreeNodeType.md)

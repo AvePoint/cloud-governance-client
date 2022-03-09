@@ -73,8 +73,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="privacy">privacy (default to false).</param>
         /// <param name="sensitivity">sensitivity.</param>
         /// <param name="privacyDescription">privacyDescription.</param>
+        /// <param name="enableDynamicMembership">enableDynamicMembership (default to false).</param>
+        /// <param name="enableDynamicMembershipDescription">enableDynamicMembershipDescription.</param>
         /// <param name="metadata">metadata.</param>
-        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = false, DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = 0, string secondaryContact = default(string), string secondaryContactEmail = default(string), string policy = default(string), Guid policyId = default(Guid), string description = default(string), string primaryAdmin = default(string), string primaryAdminEmail = default(string), string additionalAdmin = default(string), string additionalAdminEmail = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), string storageLimit = default(string), string storageUsage = default(string), string classification = default(string), bool? privacy = false, string sensitivity = default(string), string privacyDescription = default(string), List<EndUserReportMetadata> metadata = default(List<EndUserReportMetadata>))
+        public WorkspaceList(Guid id = default(Guid), string name = default(string), WorkspaceType? type = default(WorkspaceType?), string siteUrl = default(string), string groupEmail = default(string), string typeDescription = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), bool isCurrentRenewer = false, DateTime createdTime = default(DateTime), SiteStatus? status = default(SiteStatus?), Guid autoImportProfileId = default(Guid), int pendingAction = 0, string secondaryContact = default(string), string secondaryContactEmail = default(string), string policy = default(string), Guid policyId = default(Guid), string description = default(string), string primaryAdmin = default(string), string primaryAdminEmail = default(string), string additionalAdmin = default(string), string additionalAdminEmail = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), string storageLimit = default(string), string storageUsage = default(string), string classification = default(string), bool? privacy = false, string sensitivity = default(string), string privacyDescription = default(string), bool? enableDynamicMembership = false, string enableDynamicMembershipDescription = default(string), List<EndUserReportMetadata> metadata = default(List<EndUserReportMetadata>))
         {
             this.Id = id;
             this.Name = name;
@@ -109,6 +111,9 @@ namespace Cloud.Governance.Client.Model
             this.Privacy = privacy ?? false;
             this.Sensitivity = sensitivity;
             this.PrivacyDescription = privacyDescription;
+            // use default value if no "enableDynamicMembership" provided
+            this.EnableDynamicMembership = enableDynamicMembership ?? false;
+            this.EnableDynamicMembershipDescription = enableDynamicMembershipDescription;
             this.Metadata = metadata;
         }
 
@@ -287,6 +292,18 @@ namespace Cloud.Governance.Client.Model
         public string PrivacyDescription { get; set; }
 
         /// <summary>
+        /// Gets or Sets EnableDynamicMembership
+        /// </summary>
+        [DataMember(Name = "enableDynamicMembership", EmitDefaultValue = true)]
+        public bool? EnableDynamicMembership { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableDynamicMembershipDescription
+        /// </summary>
+        [DataMember(Name = "enableDynamicMembershipDescription", EmitDefaultValue = true)]
+        public string EnableDynamicMembershipDescription { get; set; }
+
+        /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
@@ -332,6 +349,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Privacy: ").Append(Privacy).Append("\n");
             sb.Append("  Sensitivity: ").Append(Sensitivity).Append("\n");
             sb.Append("  PrivacyDescription: ").Append(PrivacyDescription).Append("\n");
+            sb.Append("  EnableDynamicMembership: ").Append(EnableDynamicMembership).Append("\n");
+            sb.Append("  EnableDynamicMembershipDescription: ").Append(EnableDynamicMembershipDescription).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -523,6 +542,16 @@ namespace Cloud.Governance.Client.Model
                     this.PrivacyDescription.Equals(input.PrivacyDescription))
                 ) && 
                 (
+                    this.EnableDynamicMembership == input.EnableDynamicMembership ||
+                    (this.EnableDynamicMembership != null &&
+                    this.EnableDynamicMembership.Equals(input.EnableDynamicMembership))
+                ) && 
+                (
+                    this.EnableDynamicMembershipDescription == input.EnableDynamicMembershipDescription ||
+                    (this.EnableDynamicMembershipDescription != null &&
+                    this.EnableDynamicMembershipDescription.Equals(input.EnableDynamicMembershipDescription))
+                ) && 
+                (
                     this.Metadata == input.Metadata ||
                     this.Metadata != null &&
                     input.Metadata != null &&
@@ -598,6 +627,10 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Sensitivity.GetHashCode();
                 if (this.PrivacyDescription != null)
                     hashCode = hashCode * 59 + this.PrivacyDescription.GetHashCode();
+                if (this.EnableDynamicMembership != null)
+                    hashCode = hashCode * 59 + this.EnableDynamicMembership.GetHashCode();
+                if (this.EnableDynamicMembershipDescription != null)
+                    hashCode = hashCode * 59 + this.EnableDynamicMembershipDescription.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;

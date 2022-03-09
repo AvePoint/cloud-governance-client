@@ -12,7 +12,7 @@
 RootModule = 'Cloud.Governance.Client.psm1'
 
 # Version number of this module.
-ModuleVersion = '4.11.1'
+ModuleVersion = '4.9.3'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()

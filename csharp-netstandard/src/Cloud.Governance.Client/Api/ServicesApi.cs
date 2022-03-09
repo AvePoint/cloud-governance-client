@@ -85,6 +85,28 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of ChangePermissionService</returns>
         ApiResponse<ChangePermissionService> GetChangePermissionServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <returns>ChangePrivateChannelService</returns>
+        ChangePrivateChannelService GetChangePrivateChannelService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
+
+        /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <returns>ApiResponse of ChangePrivateChannelService</returns>
+        ApiResponse<ChangePrivateChannelService> GetChangePrivateChannelServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
+        /// <summary>
         /// get change site contact service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -303,9 +325,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreatePrivateChannelService</returns>
-        CreatePrivateChannelService GetCreatePrivateChannelService(Guid id, bool? isValidatePermission = default(bool?));
+        CreatePrivateChannelService GetCreatePrivateChannelService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
 
         /// <summary>
         /// get private channel service detail
@@ -315,9 +338,10 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreatePrivateChannelService</returns>
-        ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id, bool? isValidatePermission = default(bool?));
+        ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?));
         /// <summary>
         /// get create site service
         /// </summary>
@@ -915,6 +939,26 @@ namespace Cloud.Governance.Client.Api
         /// <returns>ApiResponse of WebLifecycleValidateResult</returns>
         ApiResponse<WebLifecycleValidateResult> ValidateForWebLifecycleServiceWithHttpInfo(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter));
         /// <summary>
+        /// validate teams for change private channel service
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>ChangePrivateChannelCheckResult</returns>
+        ChangePrivateChannelCheckResult ValidateTeamForChangePrivateChannelService(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter));
+
+        /// <summary>
+        /// validate teams for change private channel service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>ApiResponse of ChangePrivateChannelCheckResult</returns>
+        ApiResponse<ChangePrivateChannelCheckResult> ValidateTeamForChangePrivateChannelServiceWithHttpInfo(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter));
+        /// <summary>
         /// validate teams for create private channel service
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1024,6 +1068,33 @@ namespace Cloud.Governance.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ChangePermissionService)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChangePermissionService>> GetChangePermissionServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ChangePrivateChannelService</returns>
+        System.Threading.Tasks.Task<ChangePrivateChannelService> GetChangePrivateChannelServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get private channel service detail
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ChangePrivateChannelService)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChangePrivateChannelService>> GetChangePrivateChannelServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get change site contact service
         /// </summary>
@@ -1296,10 +1367,11 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreatePrivateChannelService</returns>
-        System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get private channel service detail
@@ -1309,10 +1381,11 @@ namespace Cloud.Governance.Client.Api
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreatePrivateChannelService)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get create site service
         /// </summary>
@@ -2055,6 +2128,31 @@ namespace Cloud.Governance.Client.Api
         /// <returns>Task of ApiResponse (WebLifecycleValidateResult)</returns>
         System.Threading.Tasks.Task<ApiResponse<WebLifecycleValidateResult>> ValidateForWebLifecycleServiceWithHttpInfoAsync(Guid id, SiteValidationParameter siteValidationParameter = default(SiteValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
+        /// validate teams for change private channel service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ChangePrivateChannelCheckResult</returns>
+        System.Threading.Tasks.Task<ChangePrivateChannelCheckResult> ValidateTeamForChangePrivateChannelServiceAsync(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// validate teams for change private channel service
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ChangePrivateChannelCheckResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ChangePrivateChannelCheckResult>> ValidateTeamForChangePrivateChannelServiceWithHttpInfoAsync(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
         /// validate teams for create private channel service
         /// </summary>
         /// <remarks>
@@ -2652,6 +2750,159 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetChangePermissionService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <returns>ChangePrivateChannelService</returns>
+        public ChangePrivateChannelService GetChangePrivateChannelService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelService> localVarResponse = GetChangePrivateChannelServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <returns>ApiResponse of ChangePrivateChannelService</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelService> GetChangePrivateChannelServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (questionnaireId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<ChangePrivateChannelService>("/services/changeprivatechannel/{id}", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetChangePrivateChannelService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ChangePrivateChannelService</returns>
+        public async System.Threading.Tasks.Task<ChangePrivateChannelService> GetChangePrivateChannelServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelService> localVarResponse = await GetChangePrivateChannelServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get private channel service detail 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
+        /// <param name="isValidatePermission"> (optional, default to false)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ChangePrivateChannelService)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelService>> GetChangePrivateChannelServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (questionnaireId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
+            if (isValidatePermission != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ChangePrivateChannelService>("/services/changeprivatechannel/{id}", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetChangePrivateChannelService", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -4163,11 +4414,12 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>CreatePrivateChannelService</returns>
-        public CreatePrivateChannelService GetCreatePrivateChannelService(Guid id, bool? isValidatePermission = default(bool?))
+        public CreatePrivateChannelService GetCreatePrivateChannelService(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = GetCreatePrivateChannelServiceWithHttpInfo(id, isValidatePermission);
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = GetCreatePrivateChannelServiceWithHttpInfo(id, questionnaireId, isValidatePermission);
             return localVarResponse.Data;
         }
 
@@ -4176,9 +4428,10 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <returns>ApiResponse of CreatePrivateChannelService</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id, bool? isValidatePermission = default(bool?))
+        public Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> GetCreatePrivateChannelServiceWithHttpInfo(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -4198,6 +4451,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (questionnaireId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
             if (isValidatePermission != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
@@ -4231,12 +4488,13 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreatePrivateChannelService</returns>
-        public async System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreatePrivateChannelService> GetCreatePrivateChannelServiceAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = await GetCreatePrivateChannelServiceWithHttpInfoAsync(id, isValidatePermission, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService> localVarResponse = await GetCreatePrivateChannelServiceWithHttpInfoAsync(id, questionnaireId, isValidatePermission, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4245,10 +4503,11 @@ namespace Cloud.Governance.Client.Api
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id"></param>
+        /// <param name="questionnaireId"> (optional)</param>
         /// <param name="isValidatePermission"> (optional, default to false)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreatePrivateChannelService)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<CreatePrivateChannelService>> GetCreatePrivateChannelServiceWithHttpInfoAsync(Guid id, Guid? questionnaireId = default(Guid?), bool? isValidatePermission = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -4270,6 +4529,10 @@ namespace Cloud.Governance.Client.Api
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.PathParameters.Add("id", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(id)); // path parameter
+            if (questionnaireId != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "questionnaireId", questionnaireId));
+            }
             if (isValidatePermission != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "isValidatePermission", isValidatePermission));
@@ -8422,6 +8685,143 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ValidateForWebLifecycleService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// validate teams for change private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>ChangePrivateChannelCheckResult</returns>
+        public ChangePrivateChannelCheckResult ValidateTeamForChangePrivateChannelService(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelCheckResult> localVarResponse = ValidateTeamForChangePrivateChannelServiceWithHttpInfo(serviceId, changePrivateChannelValidationParameter);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// validate teams for change private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <returns>ApiResponse of ChangePrivateChannelCheckResult</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelCheckResult> ValidateTeamForChangePrivateChannelServiceWithHttpInfo(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("serviceId", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceId)); // path parameter
+            localVarRequestOptions.Data = changePrivateChannelValidationParameter;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Post<ChangePrivateChannelCheckResult>("/services/changeprivatechannel/{serviceId}/team/validation", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateTeamForChangePrivateChannelService", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// validate teams for change private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ChangePrivateChannelCheckResult</returns>
+        public async System.Threading.Tasks.Task<ChangePrivateChannelCheckResult> ValidateTeamForChangePrivateChannelServiceAsync(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelCheckResult> localVarResponse = await ValidateTeamForChangePrivateChannelServiceWithHttpInfoAsync(serviceId, changePrivateChannelValidationParameter, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// validate teams for change private channel service 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serviceId"></param>
+        /// <param name="changePrivateChannelValidationParameter"> (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (ChangePrivateChannelCheckResult)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<ChangePrivateChannelCheckResult>> ValidateTeamForChangePrivateChannelServiceWithHttpInfoAsync(Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = default(ChangePrivateChannelValidationParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+                "application/json"
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            localVarRequestOptions.PathParameters.Add("serviceId", Cloud.Governance.Client.Client.ClientUtils.ParameterToString(serviceId)); // path parameter
+            localVarRequestOptions.Data = changePrivateChannelValidationParameter;
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.PostAsync<ChangePrivateChannelCheckResult>("/services/changeprivatechannel/{serviceId}/team/validation", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("ValidateTeamForChangePrivateChannelService", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 

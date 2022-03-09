@@ -8,6 +8,10 @@ Name | Type | Description | Notes
 **ServiceName** | **String** |  | [optional] 
 **ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **ServiceTypeDescription** | **String** |  | [optional] 
+**CategoryName** | **String** |  | [optional] 
+**ApprovalStageName** | **String** |  | [optional] 
+**Participants** | **String** |  | [optional] 
+**ParticipantDisplayName** | **String** |  | [optional] 
 **TicketNumber** | **Int32** |  | [optional] [default to 0]
 **Summary** | **String** |  | [optional] 
 **Requester** | **String** |  | [optional] 
@@ -22,7 +26,9 @@ Name | Type | Description | Notes
 **ServiceAdmin** | **String** |  | [optional] 
 **ServiceAdminDisplayName** | **String** |  | [optional] 
 **ObjectUrl** | **String** |  | [optional] 
+**ObjectID** | **String** |  | [optional] 
 **CreatedTime** | **String** |  | [optional] 
+**HasSubRequest** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -33,6 +39,10 @@ $AllRequestList = New-Cloud.Governance.ClientAllRequestList  -Id null `
  -ServiceName null `
  -ServiceType null `
  -ServiceTypeDescription null `
+ -CategoryName null `
+ -ApprovalStageName null `
+ -Participants null `
+ -ParticipantDisplayName null `
  -TicketNumber null `
  -Summary null `
  -Requester null `
@@ -47,7 +57,9 @@ $AllRequestList = New-Cloud.Governance.ClientAllRequestList  -Id null `
  -ServiceAdmin null `
  -ServiceAdminDisplayName null `
  -ObjectUrl null `
- -CreatedTime null
+ -ObjectID null `
+ -CreatedTime null `
+ -HasSubRequest null
 ```
 
 - Convert the resource to JSON

@@ -107,9 +107,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        List<ApiUser> ResolveUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
+        List<ApiUser> ResolveUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?));
 
         /// <summary>
         /// resolve users
@@ -123,9 +124,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
+        ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?));
         /// <summary>
         /// search users
         /// </summary>
@@ -135,9 +137,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        List<ApiUser> SearchUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
+        List<ApiUser> SearchUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?));
 
         /// <summary>
         /// search users
@@ -151,9 +154,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?));
+        ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?));
         /// <summary>
         /// add users or update user information
         /// </summary>
@@ -293,10 +297,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// resolve users
@@ -310,10 +315,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// search users
         /// </summary>
@@ -326,10 +332,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// search users
@@ -343,10 +350,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// add users or update user information
         /// </summary>
@@ -1101,11 +1109,12 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        public List<ApiUser> ResolveUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
+        public List<ApiUser> ResolveUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = ResolveUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = ResolveUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId);
             return localVarResponse.Data;
         }
 
@@ -1118,9 +1127,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> ResolveUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1150,6 +1160,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (groupEmail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "groupEmail", groupEmail));
             }
             if (peopleFilterProfileId != null)
             {
@@ -1188,12 +1202,13 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ApiUser>> ResolveUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await ResolveUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await ResolveUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1206,10 +1221,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> ResolveUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1241,6 +1257,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (groupEmail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "groupEmail", groupEmail));
             }
             if (peopleFilterProfileId != null)
             {
@@ -1280,11 +1300,12 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>List&lt;ApiUser&gt;</returns>
-        public List<ApiUser> SearchUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
+        public List<ApiUser> SearchUsers(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = SearchUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = SearchUsersWithHttpInfo(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId);
             return localVarResponse.Data;
         }
 
@@ -1297,9 +1318,10 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ApiUser&gt;</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?))
+        public Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> SearchUsersWithHttpInfo(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1329,6 +1351,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (groupEmail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "groupEmail", groupEmail));
             }
             if (peopleFilterProfileId != null)
             {
@@ -1367,12 +1393,13 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;ApiUser&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<ApiUser>> SearchUsersAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await SearchUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, peopleFilterProfileId, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>> localVarResponse = await SearchUsersWithHttpInfoAsync(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1385,10 +1412,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="userSource"></param>
         /// <param name="sharingOptions"></param>
         /// <param name="siteUrlOrTenantId"> (optional, default to &quot;&quot;)</param>
+        /// <param name="groupEmail"> (optional, default to &quot;&quot;)</param>
         /// <param name="peopleFilterProfileId"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;ApiUser&gt;)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<ApiUser>>> SearchUsersWithHttpInfoAsync(string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = default(string), string groupEmail = default(string), Guid? peopleFilterProfileId = default(Guid?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
             // verify the required parameter 'keyword' is set
             if (keyword == null)
@@ -1420,6 +1448,10 @@ namespace Cloud.Governance.Client.Api
             if (siteUrlOrTenantId != null)
             {
                 localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "siteUrlOrTenantId", siteUrlOrTenantId));
+            }
+            if (groupEmail != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "groupEmail", groupEmail));
             }
             if (peopleFilterProfileId != null)
             {

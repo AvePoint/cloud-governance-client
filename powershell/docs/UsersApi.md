@@ -265,6 +265,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-UserSource] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SharingOptions] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrlOrTenantId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupEmail] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <PSCustomObject><br>
 
 resolve users
@@ -293,11 +294,12 @@ $UserType = (Initialize-ApiUserType ) # ApiUserType |
 $UserSource = (Initialize-UserSource ) # UserSource | 
 $SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
+$GroupEmail = "GroupEmail_example" # String |  (optional) (default to "")
 $PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
 # resolve users
 try {
-     $Result = Resolve-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -PeopleFilterProfileId $PeopleFilterProfileId
+     $Result = Resolve-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -GroupEmail $GroupEmail -PeopleFilterProfileId $PeopleFilterProfileId
 } catch {
     Write-Host ("Exception occured when calling Resolve-ACGUsers: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -313,6 +315,7 @@ Name | Type | Description  | Notes
  **UserSource** | [**UserSource**](UserSource.md)|  | 
  **SharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
  **SiteUrlOrTenantId** | **String**|  | [optional] [default to &quot;&quot;]
+ **GroupEmail** | **String**|  | [optional] [default to &quot;&quot;]
  **PeopleFilterProfileId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
@@ -338,6 +341,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-UserSource] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SharingOptions] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrlOrTenantId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupEmail] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <PSCustomObject><br>
 
 search users
@@ -366,11 +370,12 @@ $UserType = (Initialize-ApiUserType ) # ApiUserType |
 $UserSource = (Initialize-UserSource ) # UserSource | 
 $SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
+$GroupEmail = "GroupEmail_example" # String |  (optional) (default to "")
 $PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
 
 # search users
 try {
-     $Result = Search-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -PeopleFilterProfileId $PeopleFilterProfileId
+     $Result = Search-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -GroupEmail $GroupEmail -PeopleFilterProfileId $PeopleFilterProfileId
 } catch {
     Write-Host ("Exception occured when calling Search-ACGUsers: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -386,6 +391,7 @@ Name | Type | Description  | Notes
  **UserSource** | [**UserSource**](UserSource.md)|  | 
  **SharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
  **SiteUrlOrTenantId** | **String**|  | [optional] [default to &quot;&quot;]
+ **GroupEmail** | **String**|  | [optional] [default to &quot;&quot;]
  **PeopleFilterProfileId** | [**String**](String.md)|  | [optional] 
 
 ### Return type

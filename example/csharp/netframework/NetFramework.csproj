@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cloud.Governance.Client, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Cloud.Governance.Client.5.1.1\lib\netstandard2.0\Cloud.Governance.Client.dll</HintPath>
+      <HintPath>..\packages\Cloud.Governance.Client.5.3.0\lib\netstandard2.0\Cloud.Governance.Client.dll</HintPath>
     </Reference>
     <Reference Include="JsonSubTypes, Version=1.7.0.0, Culture=neutral, PublicKeyToken=ee75fc290dbc1176, processorArchitecture=MSIL">
       <HintPath>..\packages\JsonSubTypes.1.7.0\lib\net47\JsonSubTypes.dll</HintPath>
@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Admin\GetAllRequestsExample.cs" />
     <Compile Include="Extension\StringExtension.cs" />
+    <Compile Include="Requests\AutoGroupLifecycleTask\SubmitAutoLifecycleTask.cs" />
     <Compile Include="Requests\CreateSite\CreateSite_Basic.cs" />
     <Compile Include="Requests\CreateSite\CreateSite_EnableMultiGeo.cs" />
     <Compile Include="ExampleBase.cs" />
@@ -72,13 +73,12 @@
     <Compile Include="Requests\ManagePermission\Library_BreakInheritance_CopyParent_AddNewUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests\AutoGroupLifecycleTask\SubmitAutoLifecycleTask.cs" />
     <Compile Include="Requests\SiteLifecycel\LockSiteRequestExample.cs" />
     <Compile Include="TestData\ApiConfig.cs" />
-    <Compile Include="TestData\SubmitAutoLifecycleTaskTestData.cs" />
     <Compile Include="TestData\ManagePermissionTestData.cs" />
     <Compile Include="TestData\MetadataTestData.cs" />
     <Compile Include="TestData\CreateSiteTestData.cs" />
+    <Compile Include="TestData\SubmitAutoLifecycleTaskTestData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

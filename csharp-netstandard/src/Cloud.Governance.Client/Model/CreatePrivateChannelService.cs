@@ -41,9 +41,9 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreatePrivateChannelService" /> class.
         /// </summary>
-        /// <param name="tenantId">tenantId.</param>
         /// <param name="owners">owners.</param>
         /// <param name="ownersAssignBy">ownersAssignBy.</param>
+        /// <param name="tenantId">Tenant id.</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
@@ -60,11 +60,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
         /// <param name="requestTemplate">Base model of request..</param>
-        public CreatePrivateChannelService(Guid tenantId = default(Guid), List<ApiUser> owners = default(List<ApiUser>), AssignBy? ownersAssignBy = default(AssignBy?), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string), ApiRequest requestTemplate = default(ApiRequest))
+        public CreatePrivateChannelService(List<ApiUser> owners = default(List<ApiUser>), AssignBy? ownersAssignBy = default(AssignBy?), Guid tenantId = default(Guid), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string), ApiRequest requestTemplate = default(ApiRequest))
         {
-            this.TenantId = tenantId;
             this.Owners = owners;
             this.OwnersAssignBy = ownersAssignBy;
+            this.TenantId = tenantId;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
             this.Id = id;
@@ -84,16 +84,17 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// Gets or Sets TenantId
-        /// </summary>
-        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
-        public Guid TenantId { get; set; }
-
-        /// <summary>
         /// Gets or Sets Owners
         /// </summary>
         [DataMember(Name = "owners", EmitDefaultValue = true)]
         public List<ApiUser> Owners { get; set; }
+
+        /// <summary>
+        /// Tenant id
+        /// </summary>
+        /// <value>Tenant id</value>
+        [DataMember(Name = "tenantId", EmitDefaultValue = false)]
+        public Guid TenantId { get; set; }
 
         /// <summary>
         /// Gets or Sets Metadatas
@@ -190,9 +191,9 @@ namespace Cloud.Governance.Client.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreatePrivateChannelService {\n");
-            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  Owners: ").Append(Owners).Append("\n");
             sb.Append("  OwnersAssignBy: ").Append(OwnersAssignBy).Append("\n");
+            sb.Append("  TenantId: ").Append(TenantId).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -244,11 +245,6 @@ namespace Cloud.Governance.Client.Model
 
             return 
                 (
-                    this.TenantId == input.TenantId ||
-                    (this.TenantId != null &&
-                    this.TenantId.Equals(input.TenantId))
-                ) && 
-                (
                     this.Owners == input.Owners ||
                     this.Owners != null &&
                     input.Owners != null &&
@@ -257,6 +253,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.OwnersAssignBy == input.OwnersAssignBy ||
                     this.OwnersAssignBy.Equals(input.OwnersAssignBy)
+                ) && 
+                (
+                    this.TenantId == input.TenantId ||
+                    (this.TenantId != null &&
+                    this.TenantId.Equals(input.TenantId))
                 ) && 
                 (
                     this.Metadatas == input.Metadatas ||
@@ -344,11 +345,11 @@ namespace Cloud.Governance.Client.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.TenantId != null)
-                    hashCode = hashCode * 59 + this.TenantId.GetHashCode();
                 if (this.Owners != null)
                     hashCode = hashCode * 59 + this.Owners.GetHashCode();
                 hashCode = hashCode * 59 + this.OwnersAssignBy.GetHashCode();
+                if (this.TenantId != null)
+                    hashCode = hashCode * 59 + this.TenantId.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
                 hashCode = hashCode * 59 + this.HideRequestSummary.GetHashCode();

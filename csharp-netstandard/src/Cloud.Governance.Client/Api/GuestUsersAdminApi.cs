@@ -22,8 +22,8 @@ namespace Cloud.Governance.Client.Api
         /// get all managed guest users
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -38,8 +38,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -62,8 +62,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -79,8 +79,8 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -212,8 +212,8 @@ namespace Cloud.Governance.Client.Api
         /// get all managed guest users 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -229,8 +229,8 @@ namespace Cloud.Governance.Client.Api
         /// get all managed guest users 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -307,8 +307,8 @@ namespace Cloud.Governance.Client.Api
         /// get all managed guest users 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
@@ -325,8 +325,8 @@ namespace Cloud.Governance.Client.Api
         /// get all managed guest users 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
-        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate (optional)</param>
+        /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
+        /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)</param>
         /// <param name="search">Search for displayName (optional)</param>
         /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>

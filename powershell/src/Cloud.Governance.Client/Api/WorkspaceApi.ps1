@@ -394,10 +394,10 @@ get my workspace items
 No description available.
 
 .PARAMETER Filter
-Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity
+Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership
 
 .PARAMETER Orderby
-Order by one field, supported fields:<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity
+Order by one field, supported fields:<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership
 
 .PARAMETER Search
 Search for name

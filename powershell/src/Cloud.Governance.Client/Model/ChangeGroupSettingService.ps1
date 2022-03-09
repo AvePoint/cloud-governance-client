@@ -107,6 +107,12 @@ function New-ChangeGroupSettingService {
         [PSCustomObject]
         ${RequestTemplate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsChangeTimeZoneEnabled} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsChangeLocaleEnabled} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -191,6 +197,8 @@ function New-ChangeGroupSettingService {
             "ScopePeoplePickerFilterProfileId" = ${ScopePeoplePickerFilterProfileId}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}
+            "IsChangeTimeZoneEnabled" = ${IsChangeTimeZoneEnabled}
+            "IsChangeLocaleEnabled" = ${IsChangeLocaleEnabled}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
@@ -228,7 +236,7 @@ function ConvertFrom-JsonToChangeGroupSettingService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupSettingService
-        $AllProperties = $("TenantId", "NetworkId", "GroupRestriction", "EnableChangeName", "PreventDuplicateName", "EnableChangeDescription", "EnableChangeMemberSubscription", "EnableChangeOutsideSenders", "EnableChangePrimaryContact", "EnableChangeSecondaryContact", "EnableAddOwners", "AddOwnerRestriction", "EnableRemoveOwners", "EnableAddMembers", "AddMemberRestriction", "EnableRemoveMembers", "EnableChangeDynamicMembershipRules", "EnableChangeTeamCollaboration", "EnableChangeHubSite", "EnableChangeClassification", "ClassificationList", "EnableChangeSensitivity", "SensitivityList", "EnableChangeMetadata", "EnableAddOrDeleteMetadata", "MetadataList", "EnableChangeMembershipType", "GroupObjectType", "EnableChangeYammerGroupInfo", "ScopePeoplePickerFilterProfileId", "PeoplePickerFilterProfileId", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("TenantId", "NetworkId", "GroupRestriction", "EnableChangeName", "PreventDuplicateName", "EnableChangeDescription", "EnableChangeMemberSubscription", "EnableChangeOutsideSenders", "EnableChangePrimaryContact", "EnableChangeSecondaryContact", "EnableAddOwners", "AddOwnerRestriction", "EnableRemoveOwners", "EnableAddMembers", "AddMemberRestriction", "EnableRemoveMembers", "EnableChangeDynamicMembershipRules", "EnableChangeTeamCollaboration", "EnableChangeHubSite", "EnableChangeClassification", "ClassificationList", "EnableChangeSensitivity", "SensitivityList", "EnableChangeMetadata", "EnableAddOrDeleteMetadata", "MetadataList", "EnableChangeMembershipType", "GroupObjectType", "EnableChangeYammerGroupInfo", "ScopePeoplePickerFilterProfileId", "PeoplePickerFilterProfileId", "RequestTemplate", "IsChangeTimeZoneEnabled", "IsChangeLocaleEnabled", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -427,6 +435,18 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             $RequestTemplate = $JsonParameters.PSobject.Properties["RequestTemplate"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsChangeTimeZoneEnabled"))) { #optional property not found
+            $IsChangeTimeZoneEnabled = $null
+        } else {
+            $IsChangeTimeZoneEnabled = $JsonParameters.PSobject.Properties["IsChangeTimeZoneEnabled"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsChangeLocaleEnabled"))) { #optional property not found
+            $IsChangeLocaleEnabled = $null
+        } else {
+            $IsChangeLocaleEnabled = $JsonParameters.PSobject.Properties["IsChangeLocaleEnabled"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
             $Metadatas = $null
         } else {
@@ -550,6 +570,8 @@ function ConvertFrom-JsonToChangeGroupSettingService {
             "ScopePeoplePickerFilterProfileId" = ${ScopePeoplePickerFilterProfileId}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}
+            "IsChangeTimeZoneEnabled" = ${IsChangeTimeZoneEnabled}
+            "IsChangeLocaleEnabled" = ${IsChangeLocaleEnabled}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}

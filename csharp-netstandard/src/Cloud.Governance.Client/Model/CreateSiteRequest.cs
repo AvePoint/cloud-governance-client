@@ -68,7 +68,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="additionalAdmins">Additional site collection administrator.</param>
         /// <param name="primaryContact">Primary site collection contact.</param>
         /// <param name="secondaryContact">Secondary site collection contact.</param>
-        /// <param name="siteDesign">StringModel model.</param>
+        /// <param name="siteDesign">Communication site design.</param>
         /// <param name="teamSiteDesign">Team site design.</param>
         /// <param name="classification">Communication site Classification.</param>
         /// <param name="sensitivity">Sensitive lable.</param>
@@ -84,8 +84,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="summary">Summary of request..</param>
         /// <param name="notesToApprovers">Notes to approvers..</param>
         /// <param name="questionnaireId">Id of questionnaire.</param>
+        /// <param name="questionnaireResponse">Questionnaire question and answer of request..</param>
         /// <param name="metadatas">Metadata of request..</param>
-        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = 0, int language = 0, string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), string sensitivity = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
+        public CreateSiteRequest(string siteTitle = default(string), string siteDescription = default(string), SiteUrl siteUrl = default(SiteUrl), Guid? policyId = default(Guid?), int? timeZone = 0, int language = 0, string template = default(string), string deploymentManagerPlanName = default(string), ApiUser primaryAdmin = default(ApiUser), List<ApiUser> additionalAdmins = default(List<ApiUser>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), StringModel siteDesign = default(StringModel), string teamSiteDesign = default(string), string classification = default(string), string sensitivity = default(string), HubSiteSettings hubSiteSettings = default(HubSiteSettings), List<RequestUserWithPermissions> userPermissions = default(List<RequestUserWithPermissions>), List<RequestGroupWithPermissions> groupPermissions = default(List<RequestGroupWithPermissions>), YammerGroupRequestSettings yammerGroupSettings = default(YammerGroupRequestSettings), SiteLeasePeriodRequestSettings leasePeriodSettings = default(SiteLeasePeriodRequestSettings), GeoLocationBase multiGeoLocation = default(GeoLocationBase), string inputTitle = default(string), Guid? id = default(Guid?), Guid serviceId = default(Guid), string summary = default(string), string notesToApprovers = default(string), Guid? questionnaireId = default(Guid?), List<QuestionAnswerResponse> questionnaireResponse = default(List<QuestionAnswerResponse>), List<RequestMetadata> metadatas = default(List<RequestMetadata>))
         {
             this.SiteTitle = siteTitle;
             this.SiteDescription = siteDescription;
@@ -116,6 +117,7 @@ namespace Cloud.Governance.Client.Model
             this.Summary = summary;
             this.NotesToApprovers = notesToApprovers;
             this.QuestionnaireId = questionnaireId;
+            this.QuestionnaireResponse = questionnaireResponse;
             this.Metadatas = metadatas;
         }
 
@@ -204,9 +206,9 @@ namespace Cloud.Governance.Client.Model
         public ApiUser SecondaryContact { get; set; }
 
         /// <summary>
-        /// StringModel model
+        /// Communication site design
         /// </summary>
-        /// <value>StringModel model</value>
+        /// <value>Communication site design</value>
         [DataMember(Name = "siteDesign", EmitDefaultValue = true)]
         public StringModel SiteDesign { get; set; }
 
@@ -314,6 +316,13 @@ namespace Cloud.Governance.Client.Model
         /// <value>Id of questionnaire</value>
         [DataMember(Name = "questionnaireId", EmitDefaultValue = true)]
         public Guid? QuestionnaireId { get; set; }
+
+        /// <summary>
+        /// Questionnaire question and answer of request.
+        /// </summary>
+        /// <value>Questionnaire question and answer of request.</value>
+        [DataMember(Name = "questionnaireResponse", EmitDefaultValue = true)]
+        public List<QuestionAnswerResponse> QuestionnaireResponse { get; set; }
 
         /// <summary>
         /// Metadata of request.
@@ -499,6 +508,54 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
+        /// Approval stage name of request.
+        /// </summary>
+        /// <value>Approval stage name of request.</value>
+        [DataMember(Name = "approvalStageName", EmitDefaultValue = true)]
+        public string ApprovalStageName { get; private set; }
+
+        /// <summary>
+        /// Returns false as ApprovalStageName should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeApprovalStageName()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Participants of request.
+        /// </summary>
+        /// <value>Participants of request.</value>
+        [DataMember(Name = "participants", EmitDefaultValue = true)]
+        public string Participants { get; private set; }
+
+        /// <summary>
+        /// Returns false as Participants should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeParticipants()
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// Object full path/email/private channel of request.
+        /// </summary>
+        /// <value>Object full path/email/private channel of request.</value>
+        [DataMember(Name = "objectID", EmitDefaultValue = true)]
+        public string ObjectID { get; private set; }
+
+        /// <summary>
+        /// Returns false as ObjectID should not be serialized given that it's read-only.
+        /// </summary>
+        /// <returns>false (boolean)</returns>
+        public bool ShouldSerializeObjectID()
+        {
+            return false;
+        }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -534,6 +591,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  NotesToApprovers: ").Append(NotesToApprovers).Append("\n");
             sb.Append("  QuestionnaireId: ").Append(QuestionnaireId).Append("\n");
+            sb.Append("  QuestionnaireResponse: ").Append(QuestionnaireResponse).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  TicketNumber: ").Append(TicketNumber).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -548,6 +606,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
             sb.Append("  AssignTo: ").Append(AssignTo).Append("\n");
             sb.Append("  FullPath: ").Append(FullPath).Append("\n");
+            sb.Append("  ApprovalStageName: ").Append(ApprovalStageName).Append("\n");
+            sb.Append("  Participants: ").Append(Participants).Append("\n");
+            sb.Append("  ObjectID: ").Append(ObjectID).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -725,6 +786,12 @@ namespace Cloud.Governance.Client.Model
                     this.QuestionnaireId.Equals(input.QuestionnaireId))
                 ) && 
                 (
+                    this.QuestionnaireResponse == input.QuestionnaireResponse ||
+                    this.QuestionnaireResponse != null &&
+                    input.QuestionnaireResponse != null &&
+                    this.QuestionnaireResponse.SequenceEqual(input.QuestionnaireResponse)
+                ) && 
+                (
                     this.Metadatas == input.Metadatas ||
                     this.Metadatas != null &&
                     input.Metadatas != null &&
@@ -791,6 +858,21 @@ namespace Cloud.Governance.Client.Model
                     this.FullPath == input.FullPath ||
                     (this.FullPath != null &&
                     this.FullPath.Equals(input.FullPath))
+                ) && 
+                (
+                    this.ApprovalStageName == input.ApprovalStageName ||
+                    (this.ApprovalStageName != null &&
+                    this.ApprovalStageName.Equals(input.ApprovalStageName))
+                ) && 
+                (
+                    this.Participants == input.Participants ||
+                    (this.Participants != null &&
+                    this.Participants.Equals(input.Participants))
+                ) && 
+                (
+                    this.ObjectID == input.ObjectID ||
+                    (this.ObjectID != null &&
+                    this.ObjectID.Equals(input.ObjectID))
                 );
         }
 
@@ -858,6 +940,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.NotesToApprovers.GetHashCode();
                 if (this.QuestionnaireId != null)
                     hashCode = hashCode * 59 + this.QuestionnaireId.GetHashCode();
+                if (this.QuestionnaireResponse != null)
+                    hashCode = hashCode * 59 + this.QuestionnaireResponse.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
                 if (this.TicketNumber != null)
@@ -883,6 +967,12 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.AssignTo.GetHashCode();
                 if (this.FullPath != null)
                     hashCode = hashCode * 59 + this.FullPath.GetHashCode();
+                if (this.ApprovalStageName != null)
+                    hashCode = hashCode * 59 + this.ApprovalStageName.GetHashCode();
+                if (this.Participants != null)
+                    hashCode = hashCode * 59 + this.Participants.GetHashCode();
+                if (this.ObjectID != null)
+                    hashCode = hashCode * 59 + this.ObjectID.GetHashCode();
                 return hashCode;
             }
         }

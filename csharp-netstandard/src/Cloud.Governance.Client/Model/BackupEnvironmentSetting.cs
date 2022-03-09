@@ -28,7 +28,7 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="isBackupSource">isBackupSource (default to false).</param>
         /// <param name="isBackupDestination">isBackupDestination (default to false).</param>
-        /// <param name="storagePolicy">GuidModel model.</param>
+        /// <param name="storagePolicy">storagePolicy.</param>
         public BackupEnvironmentSetting(bool isBackupSource = false, bool isBackupDestination = false, GuidModel storagePolicy = default(GuidModel))
         {
             this.IsBackupSource = isBackupSource;
@@ -49,9 +49,8 @@ namespace Cloud.Governance.Client.Model
         public bool IsBackupDestination { get; set; }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets StoragePolicy
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "storagePolicy", EmitDefaultValue = true)]
         public GuidModel StoragePolicy { get; set; }
 

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **Condition** | [**DynamicRuleCondition**](DynamicRuleCondition.md) |  | [optional] 
 **DisableEditRule** | **Boolean** |  | [optional] [default to $false]
 **DisableEditRuleValue** | **Boolean** |  | [optional] [default to $false]
+**MetadataUserList** | [**UserInfo[]**](UserInfo.md) |  | [optional] 
 
 ## Examples
 
@@ -31,7 +32,8 @@ $DynamicGroupRuleInfo = New-Cloud.Governance.ClientDynamicGroupRuleInfo  -Id nul
  -MetadataValueAzureUserType null `
  -Condition null `
  -DisableEditRule null `
- -DisableEditRuleValue null
+ -DisableEditRuleValue null `
+ -MetadataUserList null
 ```
 
 - Convert the resource to JSON

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**Get-ChangeGroupSettingService**](ServicesApi.md#Get-ChangeGroupSettingService) | **GET** /services/changegroupsetting/{id} | get change group setting service
 [**Get-ChangeListSettingService**](ServicesApi.md#Get-ChangeListSettingService) | **GET** /services/changelistsetting/{id} | get change list setting service
 [**Get-ChangePermissionService**](ServicesApi.md#Get-ChangePermissionService) | **GET** /services/changepermission/{id} | get change permission service
+[**Get-ChangePrivateChannelService**](ServicesApi.md#Get-ChangePrivateChannelService) | **GET** /services/changeprivatechannel/{id} | get private channel service detail
 [**Get-ChangeSiteContactService**](ServicesApi.md#Get-ChangeSiteContactService) | **GET** /services/changesitecontact/{id} | get change site contact service
 [**Get-ChangeSiteSettingService**](ServicesApi.md#Get-ChangeSiteSettingService) | **GET** /services/changesitesetting/{id} | get change site setting service
 [**Get-ChangeWebContactService**](ServicesApi.md#Get-ChangeWebContactService) | **GET** /services/changewebcontact/{id} | validate permissions, scope for change web contact service
@@ -47,6 +48,7 @@ Method | HTTP request | Description
 [**Resolve-ForManagePermissionService**](ServicesApi.md#Resolve-ForManagePermissionService) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 [**Resolve-ForSiteLifecycleService**](ServicesApi.md#Resolve-ForSiteLifecycleService) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 [**Resolve-ForWebLifecycleService**](ServicesApi.md#Resolve-ForWebLifecycleService) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+[**Resolve-TeamForChangePrivateChannelService**](ServicesApi.md#Resolve-TeamForChangePrivateChannelService) | **POST** /services/changeprivatechannel/{serviceId}/team/validation | validate teams for change private channel service
 [**Resolve-TeamForCreatePrivateChannelService**](ServicesApi.md#Resolve-TeamForCreatePrivateChannelService) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
 
 
@@ -230,6 +232,70 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangePermissionService**](ChangePermissionService.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-ChangePrivateChannelService"></a>
+# **Get-ChangePrivateChannelService**
+> ChangePrivateChannelService Get-ChangePrivateChannelService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
+
+get private channel service detail
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
+
+# get private channel service detail
+try {
+     $Result = Get-ChangePrivateChannelService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
+} catch {
+    Write-Host ("Exception occured when calling Get-ChangePrivateChannelService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ChangePrivateChannelService**](ChangePrivateChannelService.md)
 
 ### Authorization
 
@@ -875,6 +941,7 @@ Name | Type | Description  | Notes
 # **Get-CreatePrivateChannelService**
 > CreatePrivateChannelService Get-CreatePrivateChannelService<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get private channel service detail
@@ -899,11 +966,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Id = "Id_example" # String | 
+$QuestionnaireId = "QuestionnaireId_example" # String |  (optional)
 $IsValidatePermission = true # Boolean |  (optional) (default to $false)
 
 # get private channel service detail
 try {
-     $Result = Get-CreatePrivateChannelService -Id $Id -IsValidatePermission $IsValidatePermission
+     $Result = Get-CreatePrivateChannelService -Id $Id -QuestionnaireId $QuestionnaireId -IsValidatePermission $IsValidatePermission
 } catch {
     Write-Host ("Exception occured when calling Get-CreatePrivateChannelService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -915,6 +983,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Id** | [**String**](String.md)|  | 
+ **QuestionnaireId** | [**String**](String.md)|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -2713,6 +2782,67 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**WebLifecycleValidateResult**](WebLifecycleValidateResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Resolve-TeamForChangePrivateChannelService"></a>
+# **Resolve-TeamForChangePrivateChannelService**
+> ChangePrivateChannelCheckResult Resolve-TeamForChangePrivateChannelService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ServiceId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChangePrivateChannelValidationParameter] <PSCustomObject><br>
+
+validate teams for change private channel service
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$ServiceId = "ServiceId_example" # String | 
+$ChangePrivateChannelValidationParameter = (Initialize-ChangePrivateChannelValidationParameter -TeamObjectId "TeamObjectId_example" -TenantId "TenantId_example" -TaskId "TaskId_example" -IsEditTask $false -IsFromQuestionnaire $false) # ChangePrivateChannelValidationParameter |  (optional)
+
+# validate teams for change private channel service
+try {
+     $Result = Resolve-TeamForChangePrivateChannelService -ServiceId $ServiceId -ChangePrivateChannelValidationParameter $ChangePrivateChannelValidationParameter
+} catch {
+    Write-Host ("Exception occured when calling Resolve-TeamForChangePrivateChannelService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ServiceId** | [**String**](String.md)|  | 
+ **ChangePrivateChannelValidationParameter** | [**ChangePrivateChannelValidationParameter**](ChangePrivateChannelValidationParameter.md)|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ChangePrivateChannelCheckResult**](ChangePrivateChannelCheckResult.md)
 
 ### Authorization
 

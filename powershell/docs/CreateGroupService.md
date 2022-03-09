@@ -65,9 +65,13 @@ Name | Type | Description | Notes
 **PolicyAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **SiteDesignAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **HubSiteAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**TimeZoneAssignBy** | [**AssignBy**](AssignBy.md) | TimeZoneAssignBy | [optional] 
+**LocaleAssignBy** | [**AssignBy**](AssignBy.md) | LocaleAssignBy | [optional] 
 **MultiGeoSetting** | [**MultiGeoSetting**](MultiGeoSetting.md) |  | [optional] 
 **IsShowHubSiteSection** | **Boolean** |  | [optional] [readonly] [default to $false]
 **HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site settings model | [optional] 
+**TimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | TimeZoneSettings | [optional] 
+**LocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | LocaleSettings | [optional] 
 **HasImpernastionUsers** | **Boolean** |  | [optional] [default to $false]
 **PeoplePickerFilterProfileId** | **String** |  | [optional] 
 **RequestTemplate** | [**CreateGroupRequest**](CreateGroupRequest.md) | Create group request model | [optional] 
@@ -153,9 +157,13 @@ $CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType 
  -PolicyAssignBy null `
  -SiteDesignAssignBy null `
  -HubSiteAssignBy null `
+ -TimeZoneAssignBy null `
+ -LocaleAssignBy null `
  -MultiGeoSetting null `
  -IsShowHubSiteSection null `
  -HubSiteSettings null `
+ -TimeZoneSettings null `
+ -LocaleSettings null `
  -HasImpernastionUsers null `
  -PeoplePickerFilterProfileId null `
  -RequestTemplate null `

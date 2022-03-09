@@ -35,6 +35,9 @@ function New-ApiMyGroup {
         [System.Nullable[Boolean]]
         ${EnableTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${DynamicGroupRules},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${GroupType},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -146,6 +149,7 @@ function New-ApiMyGroup {
             "Language" = ${Language}
             "ApplyPolicyStatus" = ${ApplyPolicyStatus}
             "EnableTeamCollaboration" = ${EnableTeamCollaboration}
+            "DynamicGroupRules" = ${DynamicGroupRules}
             "GroupType" = ${GroupType}
             "CreatedTime" = ${CreatedTime}
             "Owners" = ${Owners}
@@ -200,7 +204,7 @@ function ConvertFrom-JsonToApiMyGroup {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApiMyGroup
-        $AllProperties = $("ObjectId", "PolicyId", "TenantId", "GroupName", "Email", "Language", "ApplyPolicyStatus", "EnableTeamCollaboration", "GroupType", "CreatedTime", "Owners", "PreferredDataLocation", "PreferredDataLocationName", "EnableDynamicMembership", "GroupTeamSiteUrl", "QuotaSize", "StorageUsed", "TeamLink", "NoteBookLink", "PlannerLink", "Classification", "GroupObjectType", "GroupObjectId", "NetworkId", "Sensitivity", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
+        $AllProperties = $("ObjectId", "PolicyId", "TenantId", "GroupName", "Email", "Language", "ApplyPolicyStatus", "EnableTeamCollaboration", "DynamicGroupRules", "GroupType", "CreatedTime", "Owners", "PreferredDataLocation", "PreferredDataLocationName", "EnableDynamicMembership", "GroupTeamSiteUrl", "QuotaSize", "StorageUsed", "TeamLink", "NoteBookLink", "PlannerLink", "Classification", "GroupObjectType", "GroupObjectId", "NetworkId", "Sensitivity", "Id", "Phase", "PhaseStartTime", "PhaseDescription", "AutoImportProfileId", "AutoImportProfileName", "PolicyName", "PolicyDescription", "IsCurrentRenewer", "PhaseAssignees", "PhaseDueDate", "Metadatas", "PrimaryContact", "SecondaryContact", "ErrorMessage")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -253,6 +257,12 @@ function ConvertFrom-JsonToApiMyGroup {
             $EnableTeamCollaboration = $null
         } else {
             $EnableTeamCollaboration = $JsonParameters.PSobject.Properties["EnableTeamCollaboration"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DynamicGroupRules"))) { #optional property not found
+            $DynamicGroupRules = $null
+        } else {
+            $DynamicGroupRules = $JsonParameters.PSobject.Properties["DynamicGroupRules"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "GroupType"))) { #optional property not found
@@ -456,6 +466,7 @@ function ConvertFrom-JsonToApiMyGroup {
             "Language" = ${Language}
             "ApplyPolicyStatus" = ${ApplyPolicyStatus}
             "EnableTeamCollaboration" = ${EnableTeamCollaboration}
+            "DynamicGroupRules" = ${DynamicGroupRules}
             "GroupType" = ${GroupType}
             "CreatedTime" = ${CreatedTime}
             "Owners" = ${Owners}

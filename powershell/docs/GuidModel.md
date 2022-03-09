@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **String** | Object ID | [optional] 
-**Name** | **String** | Object name | [optional] 
-**Description** | **String** | Object description | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
 
 ## Examples
 

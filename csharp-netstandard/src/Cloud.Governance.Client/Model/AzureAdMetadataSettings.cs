@@ -26,7 +26,7 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureAdMetadataSettings" /> class.
         /// </summary>
-        /// <param name="office365Tenant">GuidModel model.</param>
+        /// <param name="office365Tenant">office365Tenant.</param>
         /// <param name="useBuiltInProperty">useBuiltInProperty (default to false).</param>
         /// <param name="value">Value of Lookup to SharePoint library/list metadata..</param>
         /// <param name="property">property.</param>
@@ -41,9 +41,8 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets Office365Tenant
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "office365Tenant", EmitDefaultValue = true)]
         public GuidModel Office365Tenant { get; set; }
 

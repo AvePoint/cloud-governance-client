@@ -35,6 +35,8 @@ Name | Type | Description | Notes
 **ScopePeoplePickerFilterProfileId** | **Guid?** |  | [optional] 
 **PeoplePickerFilterProfileId** | **Guid?** |  | [optional] 
 **RequestTemplate** | [**ChangeGroupSettingRequest**](ChangeGroupSettingRequest.md) |  | [optional] 
+**IsChangeTimeZoneEnabled** | **bool** |  | [optional] [default to false]
+**IsChangeLocaleEnabled** | **bool** |  | [optional] [default to false]
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] [default to false]
 **Id** | **Guid** |  | [optional] 

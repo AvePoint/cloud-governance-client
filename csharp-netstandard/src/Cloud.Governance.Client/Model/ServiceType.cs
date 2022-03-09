@@ -302,7 +302,15 @@ namespace Cloud.Governance.Client.Model
 
         BulkReassignRenewalTask = 558,
 
-        BulkReassignAutoImportTask = 559
+        BulkReassignAutoImportTask = 559,
+
+        GuestAutoElection = 560,
+
+        BulkApplyGuestElection = 561,
+
+        ChangePrivateChannel = 562,
+
+        RequestReportAction = 563
 
     }
 

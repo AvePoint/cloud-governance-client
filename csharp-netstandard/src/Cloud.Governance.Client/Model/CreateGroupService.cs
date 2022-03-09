@@ -104,6 +104,18 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "hubSiteAssignBy", EmitDefaultValue = false)]
         public AssignBy? HubSiteAssignBy { get; set; }
         /// <summary>
+        /// TimeZoneAssignBy
+        /// </summary>
+        /// <value>TimeZoneAssignBy</value>
+        [DataMember(Name = "timeZoneAssignBy", EmitDefaultValue = false)]
+        public AssignBy? TimeZoneAssignBy { get; set; }
+        /// <summary>
+        /// LocaleAssignBy
+        /// </summary>
+        /// <value>LocaleAssignBy</value>
+        [DataMember(Name = "localeAssignBy", EmitDefaultValue = false)]
+        public AssignBy? LocaleAssignBy { get; set; }
+        /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name = "type", EmitDefaultValue = false)]
@@ -178,8 +190,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="policyAssignBy">policyAssignBy.</param>
         /// <param name="siteDesignAssignBy">siteDesignAssignBy.</param>
         /// <param name="hubSiteAssignBy">hubSiteAssignBy.</param>
+        /// <param name="timeZoneAssignBy">TimeZoneAssignBy.</param>
+        /// <param name="localeAssignBy">LocaleAssignBy.</param>
         /// <param name="multiGeoSetting">multiGeoSetting.</param>
         /// <param name="hubSiteSettings">Hub site settings model.</param>
+        /// <param name="timeZoneSettings">TimeZoneSettings.</param>
+        /// <param name="localeSettings">LocaleSettings.</param>
         /// <param name="hasImpernastionUsers">hasImpernastionUsers (default to false).</param>
         /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
         /// <param name="requestTemplate">Create group request model.</param>
@@ -198,7 +214,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = false, bool isPrivate = false, bool enableSubscribe = false, bool enableApplySiteDesign = false, bool enableOutsideSender = false, bool enableHideGroupMembership = false, bool enableClassification = false, bool preventDuplicateName = false, bool enableSensitivity = false, List<StringModel> allSensitivities = default(List<StringModel>), bool allowConfigureLeasePeriod = false, bool showNotebookLink = false, bool showConversationsLink = false, bool showFilesLink = false, bool showTeamSiteLink = false, bool showPlannerLink = false, bool showYammerGroupLink = false, List<string> classifications = default(List<string>), List<StringModel> sensitivities = default(List<StringModel>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = false, bool enableInstallPanel = false, TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), bool disableAddRemoveDynamicMembershipRules = false, List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = false, AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), bool hasImpernastionUsers = false, Guid? peoplePickerFilterProfileId = default(Guid?), CreateGroupRequest requestTemplate = default(CreateGroupRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public CreateGroupService(CreateGroupType? groupType = default(CreateGroupType?), Guid tenantId = default(Guid), string networkId = default(string), bool enableTeams = false, bool isPrivate = false, bool enableSubscribe = false, bool enableApplySiteDesign = false, bool enableOutsideSender = false, bool enableHideGroupMembership = false, bool enableClassification = false, bool preventDuplicateName = false, bool enableSensitivity = false, List<StringModel> allSensitivities = default(List<StringModel>), bool allowConfigureLeasePeriod = false, bool showNotebookLink = false, bool showConversationsLink = false, bool showFilesLink = false, bool showTeamSiteLink = false, bool showPlannerLink = false, bool showYammerGroupLink = false, List<string> classifications = default(List<string>), List<StringModel> sensitivities = default(List<StringModel>), List<GuidModel> siteDesigns = default(List<GuidModel>), AddGroupMemberType? addGroupMemberType = default(AddGroupMemberType?), List<BriefGroupPolicy> selectedPolicies = default(List<BriefGroupPolicy>), List<StringModel> selectedLanguages = default(List<StringModel>), ServiceTeamsSettings teamsSettings = default(ServiceTeamsSettings), GroupNameConstructureSettings groupNameConstructureSettings = default(GroupNameConstructureSettings), GroupIdConstructureSettings groupIdConstructureSettings = default(GroupIdConstructureSettings), bool enableInstallApp = false, bool enableInstallPanel = false, TeamsTemplateServiceSettings templateSettings = default(TeamsTemplateServiceSettings), ApiUser defaultPrimaryContact = default(ApiUser), ApiUser defaultSecondaryContact = default(ApiUser), List<ApiUser> defaultOwners = default(List<ApiUser>), List<ApiUser> defaultMembers = default(List<ApiUser>), bool disableAddRemoveDynamicMembershipRules = false, List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), Guid defaultPolicy = default(Guid), string defaultClassification = default(string), string defaultSensitivity = default(string), string defaultLanguage = default(string), Guid? defaultSiteDesign = default(Guid?), List<ApiUser> defaultOwnersReal = default(List<ApiUser>), List<ApiUser> defaultMembersReal = default(List<ApiUser>), ApiUser defaultPrimaryContactReal = default(ApiUser), ApiUser defaultSecondaryContactReal = default(ApiUser), AssignBy? memberAssignBy = default(AssignBy?), AssignBy? ownerAssignBy = default(AssignBy?), AssignBy? privacyAssignBy = default(AssignBy?), AssignBy? subscribeAssignBy = default(AssignBy?), AssignBy? outsideSenderAssignBy = default(AssignBy?), AssignBy? classificationAssignBy = default(AssignBy?), AssignBy? sensitivityAssignBy = default(AssignBy?), AssignBy? languageAssignBy = default(AssignBy?), AssignBy? secondaryContactAssignBy = default(AssignBy?), AssignBy? primaryContactAssignBy = default(AssignBy?), bool enableDynamicMembership = false, AssignBy? hideGroupMembershipAssignBy = default(AssignBy?), AssignBy? policyAssignBy = default(AssignBy?), AssignBy? siteDesignAssignBy = default(AssignBy?), AssignBy? hubSiteAssignBy = default(AssignBy?), AssignBy? timeZoneAssignBy = default(AssignBy?), AssignBy? localeAssignBy = default(AssignBy?), MultiGeoSetting multiGeoSetting = default(MultiGeoSetting), HubSiteSettings hubSiteSettings = default(HubSiteSettings), TimeZoneSettings timeZoneSettings = default(TimeZoneSettings), LocaleSettings localeSettings = default(LocaleSettings), bool hasImpernastionUsers = false, Guid? peoplePickerFilterProfileId = default(Guid?), CreateGroupRequest requestTemplate = default(CreateGroupRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.GroupType = groupType;
             this.TenantId = tenantId;
@@ -262,8 +278,12 @@ namespace Cloud.Governance.Client.Model
             this.PolicyAssignBy = policyAssignBy;
             this.SiteDesignAssignBy = siteDesignAssignBy;
             this.HubSiteAssignBy = hubSiteAssignBy;
+            this.TimeZoneAssignBy = timeZoneAssignBy;
+            this.LocaleAssignBy = localeAssignBy;
             this.MultiGeoSetting = multiGeoSetting;
             this.HubSiteSettings = hubSiteSettings;
+            this.TimeZoneSettings = timeZoneSettings;
+            this.LocaleSettings = localeSettings;
             this.HasImpernastionUsers = hasImpernastionUsers;
             this.PeoplePickerFilterProfileId = peoplePickerFilterProfileId;
             this.RequestTemplate = requestTemplate;
@@ -593,6 +613,20 @@ namespace Cloud.Governance.Client.Model
         public HubSiteSettings HubSiteSettings { get; set; }
 
         /// <summary>
+        /// TimeZoneSettings
+        /// </summary>
+        /// <value>TimeZoneSettings</value>
+        [DataMember(Name = "timeZoneSettings", EmitDefaultValue = true)]
+        public TimeZoneSettings TimeZoneSettings { get; set; }
+
+        /// <summary>
+        /// LocaleSettings
+        /// </summary>
+        /// <value>LocaleSettings</value>
+        [DataMember(Name = "localeSettings", EmitDefaultValue = true)]
+        public LocaleSettings LocaleSettings { get; set; }
+
+        /// <summary>
         /// Gets or Sets HasImpernastionUsers
         /// </summary>
         [DataMember(Name = "hasImpernastionUsers", EmitDefaultValue = false)]
@@ -761,9 +795,13 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PolicyAssignBy: ").Append(PolicyAssignBy).Append("\n");
             sb.Append("  SiteDesignAssignBy: ").Append(SiteDesignAssignBy).Append("\n");
             sb.Append("  HubSiteAssignBy: ").Append(HubSiteAssignBy).Append("\n");
+            sb.Append("  TimeZoneAssignBy: ").Append(TimeZoneAssignBy).Append("\n");
+            sb.Append("  LocaleAssignBy: ").Append(LocaleAssignBy).Append("\n");
             sb.Append("  MultiGeoSetting: ").Append(MultiGeoSetting).Append("\n");
             sb.Append("  IsShowHubSiteSection: ").Append(IsShowHubSiteSection).Append("\n");
             sb.Append("  HubSiteSettings: ").Append(HubSiteSettings).Append("\n");
+            sb.Append("  TimeZoneSettings: ").Append(TimeZoneSettings).Append("\n");
+            sb.Append("  LocaleSettings: ").Append(LocaleSettings).Append("\n");
             sb.Append("  HasImpernastionUsers: ").Append(HasImpernastionUsers).Append("\n");
             sb.Append("  PeoplePickerFilterProfileId: ").Append(PeoplePickerFilterProfileId).Append("\n");
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
@@ -1102,6 +1140,14 @@ namespace Cloud.Governance.Client.Model
                     this.HubSiteAssignBy.Equals(input.HubSiteAssignBy)
                 ) && 
                 (
+                    this.TimeZoneAssignBy == input.TimeZoneAssignBy ||
+                    this.TimeZoneAssignBy.Equals(input.TimeZoneAssignBy)
+                ) && 
+                (
+                    this.LocaleAssignBy == input.LocaleAssignBy ||
+                    this.LocaleAssignBy.Equals(input.LocaleAssignBy)
+                ) && 
+                (
                     this.MultiGeoSetting == input.MultiGeoSetting ||
                     (this.MultiGeoSetting != null &&
                     this.MultiGeoSetting.Equals(input.MultiGeoSetting))
@@ -1114,6 +1160,16 @@ namespace Cloud.Governance.Client.Model
                     this.HubSiteSettings == input.HubSiteSettings ||
                     (this.HubSiteSettings != null &&
                     this.HubSiteSettings.Equals(input.HubSiteSettings))
+                ) && 
+                (
+                    this.TimeZoneSettings == input.TimeZoneSettings ||
+                    (this.TimeZoneSettings != null &&
+                    this.TimeZoneSettings.Equals(input.TimeZoneSettings))
+                ) && 
+                (
+                    this.LocaleSettings == input.LocaleSettings ||
+                    (this.LocaleSettings != null &&
+                    this.LocaleSettings.Equals(input.LocaleSettings))
                 ) && 
                 (
                     this.HasImpernastionUsers == input.HasImpernastionUsers ||
@@ -1298,11 +1354,17 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.PolicyAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.SiteDesignAssignBy.GetHashCode();
                 hashCode = hashCode * 59 + this.HubSiteAssignBy.GetHashCode();
+                hashCode = hashCode * 59 + this.TimeZoneAssignBy.GetHashCode();
+                hashCode = hashCode * 59 + this.LocaleAssignBy.GetHashCode();
                 if (this.MultiGeoSetting != null)
                     hashCode = hashCode * 59 + this.MultiGeoSetting.GetHashCode();
                 hashCode = hashCode * 59 + this.IsShowHubSiteSection.GetHashCode();
                 if (this.HubSiteSettings != null)
                     hashCode = hashCode * 59 + this.HubSiteSettings.GetHashCode();
+                if (this.TimeZoneSettings != null)
+                    hashCode = hashCode * 59 + this.TimeZoneSettings.GetHashCode();
+                if (this.LocaleSettings != null)
+                    hashCode = hashCode * 59 + this.LocaleSettings.GetHashCode();
                 hashCode = hashCode * 59 + this.HasImpernastionUsers.GetHashCode();
                 if (this.PeoplePickerFilterProfileId != null)
                     hashCode = hashCode * 59 + this.PeoplePickerFilterProfileId.GetHashCode();

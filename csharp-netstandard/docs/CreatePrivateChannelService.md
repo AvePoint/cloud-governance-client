@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | **Guid** |  | [optional] 
 **Owners** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **OwnersAssignBy** | **AssignBy** |  | [optional] 
+**TenantId** | **Guid** | Tenant id | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] [default to false]
 **Id** | **Guid** |  | [optional] 

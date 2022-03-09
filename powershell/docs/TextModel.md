@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Description** | **String** |  | [optional] 
-**Id** | **String** | StringModel ID | [optional] 
-**Name** | **String** | StringModel name | [optional] 
+**Id** | **String** |  | [optional] 
+**Name** | **String** |  | [optional] 
 
 ## Examples
 

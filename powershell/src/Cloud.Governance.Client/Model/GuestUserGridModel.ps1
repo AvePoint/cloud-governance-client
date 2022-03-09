@@ -80,6 +80,9 @@ function New-GuestUserGridModel {
         [System.Nullable[System.DateTime]]
         ${RenewalDueDate},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${ElectionProfileName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadata}
     )
@@ -113,6 +116,7 @@ function New-GuestUserGridModel {
             "LastRenewalTime" = ${LastRenewalTime}
             "RenewalStartTime" = ${RenewalStartTime}
             "RenewalDueDate" = ${RenewalDueDate}
+            "ElectionProfileName" = ${ElectionProfileName}
             "Metadata" = ${Metadata}
         }
 
@@ -136,7 +140,7 @@ function ConvertFrom-JsonToGuestUserGridModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in GuestUserGridModel
-        $AllProperties = $("Id", "DisplayName", "Mail", "PrimaryContact", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactDisplayName", "Status", "StatusDescription", "ProfileName", "TenantId", "NextRenewalDate", "RenewalAssignees", "RenewalAssigneeDisplayNames", "LastRenewalBy", "LastRenewalByDisplayName", "ExternalUserState", "ExternalUserStateDescription", "LastSyncTime", "InviteTime", "LastRenewalTime", "RenewalStartTime", "RenewalDueDate", "Metadata")
+        $AllProperties = $("Id", "DisplayName", "Mail", "PrimaryContact", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactDisplayName", "Status", "StatusDescription", "ProfileName", "TenantId", "NextRenewalDate", "RenewalAssignees", "RenewalAssigneeDisplayNames", "LastRenewalBy", "LastRenewalByDisplayName", "ExternalUserState", "ExternalUserStateDescription", "LastSyncTime", "InviteTime", "LastRenewalTime", "RenewalStartTime", "RenewalDueDate", "ElectionProfileName", "Metadata")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -281,6 +285,12 @@ function ConvertFrom-JsonToGuestUserGridModel {
             $RenewalDueDate = $JsonParameters.PSobject.Properties["RenewalDueDate"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ElectionProfileName"))) { #optional property not found
+            $ElectionProfileName = $null
+        } else {
+            $ElectionProfileName = $JsonParameters.PSobject.Properties["ElectionProfileName"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadata"))) { #optional property not found
             $Metadata = $null
         } else {
@@ -311,6 +321,7 @@ function ConvertFrom-JsonToGuestUserGridModel {
             "LastRenewalTime" = ${LastRenewalTime}
             "RenewalStartTime" = ${RenewalStartTime}
             "RenewalDueDate" = ${RenewalDueDate}
+            "ElectionProfileName" = ${ElectionProfileName}
             "Metadata" = ${Metadata}
         }
 

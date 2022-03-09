@@ -107,6 +107,12 @@ function New-WorkspaceList {
         [String]
         ${PrivacyDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableDynamicMembership} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${EnableDynamicMembershipDescription},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadata}
     )
@@ -149,6 +155,8 @@ function New-WorkspaceList {
             "Privacy" = ${Privacy}
             "Sensitivity" = ${Sensitivity}
             "PrivacyDescription" = ${PrivacyDescription}
+            "EnableDynamicMembership" = ${EnableDynamicMembership}
+            "EnableDynamicMembershipDescription" = ${EnableDynamicMembershipDescription}
             "Metadata" = ${Metadata}
         }
 
@@ -172,7 +180,7 @@ function ConvertFrom-JsonToWorkspaceList {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WorkspaceList
-        $AllProperties = $("Id", "Name", "Type", "SiteUrl", "GroupEmail", "TypeDescription", "PrimaryContact", "PrimaryContactEmail", "Phase", "PhaseDescription", "IsCurrentRenewer", "CreatedTime", "Status", "AutoImportProfileId", "PendingAction", "SecondaryContact", "SecondaryContactEmail", "Policy", "PolicyId", "Description", "PrimaryAdmin", "PrimaryAdminEmail", "AdditionalAdmin", "AdditionalAdminEmail", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsage", "Classification", "Privacy", "Sensitivity", "PrivacyDescription", "Metadata")
+        $AllProperties = $("Id", "Name", "Type", "SiteUrl", "GroupEmail", "TypeDescription", "PrimaryContact", "PrimaryContactEmail", "Phase", "PhaseDescription", "IsCurrentRenewer", "CreatedTime", "Status", "AutoImportProfileId", "PendingAction", "SecondaryContact", "SecondaryContactEmail", "Policy", "PolicyId", "Description", "PrimaryAdmin", "PrimaryAdminEmail", "AdditionalAdmin", "AdditionalAdminEmail", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsage", "Classification", "Privacy", "Sensitivity", "PrivacyDescription", "EnableDynamicMembership", "EnableDynamicMembershipDescription", "Metadata")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -371,6 +379,18 @@ function ConvertFrom-JsonToWorkspaceList {
             $PrivacyDescription = $JsonParameters.PSobject.Properties["PrivacyDescription"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableDynamicMembership"))) { #optional property not found
+            $EnableDynamicMembership = $null
+        } else {
+            $EnableDynamicMembership = $JsonParameters.PSobject.Properties["EnableDynamicMembership"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableDynamicMembershipDescription"))) { #optional property not found
+            $EnableDynamicMembershipDescription = $null
+        } else {
+            $EnableDynamicMembershipDescription = $JsonParameters.PSobject.Properties["EnableDynamicMembershipDescription"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadata"))) { #optional property not found
             $Metadata = $null
         } else {
@@ -410,6 +430,8 @@ function ConvertFrom-JsonToWorkspaceList {
             "Privacy" = ${Privacy}
             "Sensitivity" = ${Sensitivity}
             "PrivacyDescription" = ${PrivacyDescription}
+            "EnableDynamicMembership" = ${EnableDynamicMembership}
+            "EnableDynamicMembershipDescription" = ${EnableDynamicMembershipDescription}
             "Metadata" = ${Metadata}
         }
 

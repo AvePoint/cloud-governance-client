@@ -33,6 +33,9 @@ function New-GroupLifecycleRequest {
         ${QuestionnaireId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
+        ${QuestionnaireResponse},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
         ${Metadatas}
     )
 
@@ -49,6 +52,7 @@ function New-GroupLifecycleRequest {
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
         }
 
@@ -72,7 +76,7 @@ function ConvertFrom-JsonToGroupLifecycleRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in GroupLifecycleRequest
-        $AllProperties = $("GroupId", "GroupName", "GroupEmail", "GroupObjectType", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("GroupId", "GroupName", "GroupEmail", "GroupObjectType", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "QuestionnaireResponse", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath", "ApprovalStageName", "Participants", "ObjectID")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -131,6 +135,12 @@ function ConvertFrom-JsonToGroupLifecycleRequest {
             $QuestionnaireId = $null
         } else {
             $QuestionnaireId = $JsonParameters.PSobject.Properties["QuestionnaireId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "QuestionnaireResponse"))) { #optional property not found
+            $QuestionnaireResponse = $null
+        } else {
+            $QuestionnaireResponse = $JsonParameters.PSobject.Properties["QuestionnaireResponse"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
@@ -217,6 +227,24 @@ function ConvertFrom-JsonToGroupLifecycleRequest {
             $FullPath = $JsonParameters.PSobject.Properties["FullPath"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApprovalStageName"))) { #optional property not found
+            $ApprovalStageName = $null
+        } else {
+            $ApprovalStageName = $JsonParameters.PSobject.Properties["ApprovalStageName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Participants"))) { #optional property not found
+            $Participants = $null
+        } else {
+            $Participants = $JsonParameters.PSobject.Properties["Participants"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ObjectID"))) { #optional property not found
+            $ObjectID = $null
+        } else {
+            $ObjectID = $JsonParameters.PSobject.Properties["ObjectID"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "GroupId" = ${GroupId}
             "GroupName" = ${GroupName}
@@ -227,6 +255,7 @@ function ConvertFrom-JsonToGroupLifecycleRequest {
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
             "TicketNumber" = ${TicketNumber}
             "Type" = ${Type}
@@ -241,6 +270,9 @@ function ConvertFrom-JsonToGroupLifecycleRequest {
             "CreatedTime" = ${CreatedTime}
             "AssignTo" = ${AssignTo}
             "FullPath" = ${FullPath}
+            "ApprovalStageName" = ${ApprovalStageName}
+            "Participants" = ${Participants}
+            "ObjectID" = ${ObjectID}
         }
 
         return $PSO

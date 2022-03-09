@@ -11,14 +11,14 @@ function New-CreatePrivateChannelService {
     [CmdletBinding()]
     Param (
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${TenantId},
-        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Owners},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${OwnersAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${TenantId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas},
@@ -75,9 +75,9 @@ function New-CreatePrivateChannelService {
 
         
         $PSO = [PSCustomObject]@{
-            "TenantId" = ${TenantId}
             "Owners" = ${Owners}
             "OwnersAssignBy" = ${OwnersAssignBy}
+            "TenantId" = ${TenantId}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}
@@ -116,17 +116,11 @@ function ConvertFrom-JsonToCreatePrivateChannelService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreatePrivateChannelService
-        $AllProperties = $("TenantId", "Owners", "OwnersAssignBy", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "RequestTemplate")
+        $AllProperties = $("Owners", "OwnersAssignBy", "TenantId", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId", "RequestTemplate")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
             }
-        }
-
-        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TenantId"))) { #optional property not found
-            $TenantId = $null
-        } else {
-            $TenantId = $JsonParameters.PSobject.Properties["TenantId"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Owners"))) { #optional property not found
@@ -139,6 +133,12 @@ function ConvertFrom-JsonToCreatePrivateChannelService {
             $OwnersAssignBy = $null
         } else {
             $OwnersAssignBy = $JsonParameters.PSobject.Properties["OwnersAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TenantId"))) { #optional property not found
+            $TenantId = $null
+        } else {
+            $TenantId = $JsonParameters.PSobject.Properties["TenantId"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
@@ -238,9 +238,9 @@ function ConvertFrom-JsonToCreatePrivateChannelService {
         }
 
         $PSO = [PSCustomObject]@{
-            "TenantId" = ${TenantId}
             "Owners" = ${Owners}
             "OwnersAssignBy" = ${OwnersAssignBy}
+            "TenantId" = ${TenantId}
             "Metadatas" = ${Metadatas}
             "HideRequestSummary" = ${HideRequestSummary}
             "Id" = ${Id}

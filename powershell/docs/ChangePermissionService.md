@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **PermissionChangedTypeAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **EnabledExcludePermissions** | **Boolean** |  | [optional] [default to $false]
 **ExcludedPermissions** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
-**ReviewTaskEmailTemplate** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**ReviewTaskEmailTemplate** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **ScopeSettings** | [**ServiceScopeSettings**](ServiceScopeSettings.md) |  | [optional] 
 **StageCount** | **Int32** |  | [optional] [default to 0]
 **RequestTemplate** | [**ChangePermissionRequest**](ChangePermissionRequest.md) |  | [optional] 

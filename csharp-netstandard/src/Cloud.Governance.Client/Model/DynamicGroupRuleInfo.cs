@@ -53,7 +53,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="condition">condition.</param>
         /// <param name="disableEditRule">disableEditRule (default to false).</param>
         /// <param name="disableEditRuleValue">disableEditRuleValue (default to false).</param>
-        public DynamicGroupRuleInfo(Guid id = default(Guid), int order = 0, LogicalOperator? relation = default(LogicalOperator?), CategoryType? category = default(CategoryType?), Guid metadataId = default(Guid), string metadataName = default(string), string metadataValue = default(string), string metadataDisplayValue = default(string), string metadataValueAzureUserType = default(string), DynamicRuleCondition? condition = default(DynamicRuleCondition?), bool disableEditRule = false, bool disableEditRuleValue = false)
+        /// <param name="metadataUserList">metadataUserList.</param>
+        public DynamicGroupRuleInfo(Guid id = default(Guid), int order = 0, LogicalOperator? relation = default(LogicalOperator?), CategoryType? category = default(CategoryType?), Guid metadataId = default(Guid), string metadataName = default(string), string metadataValue = default(string), string metadataDisplayValue = default(string), string metadataValueAzureUserType = default(string), DynamicRuleCondition? condition = default(DynamicRuleCondition?), bool disableEditRule = false, bool disableEditRuleValue = false, List<UserInfo> metadataUserList = default(List<UserInfo>))
         {
             this.Id = id;
             this.Order = order;
@@ -67,6 +68,7 @@ namespace Cloud.Governance.Client.Model
             this.Condition = condition;
             this.DisableEditRule = disableEditRule;
             this.DisableEditRuleValue = disableEditRuleValue;
+            this.MetadataUserList = metadataUserList;
         }
 
         /// <summary>
@@ -124,6 +126,12 @@ namespace Cloud.Governance.Client.Model
         public bool DisableEditRuleValue { get; set; }
 
         /// <summary>
+        /// Gets or Sets MetadataUserList
+        /// </summary>
+        [DataMember(Name = "metadataUserList", EmitDefaultValue = true)]
+        public List<UserInfo> MetadataUserList { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -143,6 +151,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Condition: ").Append(Condition).Append("\n");
             sb.Append("  DisableEditRule: ").Append(DisableEditRule).Append("\n");
             sb.Append("  DisableEditRuleValue: ").Append(DisableEditRuleValue).Append("\n");
+            sb.Append("  MetadataUserList: ").Append(MetadataUserList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -230,6 +239,12 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.DisableEditRuleValue == input.DisableEditRuleValue ||
                     this.DisableEditRuleValue.Equals(input.DisableEditRuleValue)
+                ) && 
+                (
+                    this.MetadataUserList == input.MetadataUserList ||
+                    this.MetadataUserList != null &&
+                    input.MetadataUserList != null &&
+                    this.MetadataUserList.SequenceEqual(input.MetadataUserList)
                 );
         }
 
@@ -260,6 +275,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.Condition.GetHashCode();
                 hashCode = hashCode * 59 + this.DisableEditRule.GetHashCode();
                 hashCode = hashCode * 59 + this.DisableEditRuleValue.GetHashCode();
+                if (this.MetadataUserList != null)
+                    hashCode = hashCode * 59 + this.MetadataUserList.GetHashCode();
                 return hashCode;
             }
         }

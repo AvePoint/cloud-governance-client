@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **LastRenewalTime** | **System.DateTime** |  | [optional] 
 **RenewalStartTime** | **System.DateTime** |  | [optional] 
 **RenewalDueDate** | **System.DateTime** |  | [optional] 
+**ElectionProfileName** | **String** |  | [optional] 
 **Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 
 ## Examples
@@ -55,6 +56,7 @@ $GuestUserGridModel = New-Cloud.Governance.ClientGuestUserGridModel  -Id null `
  -LastRenewalTime null `
  -RenewalStartTime null `
  -RenewalDueDate null `
+ -ElectionProfileName null `
  -Metadata null
 ```
 

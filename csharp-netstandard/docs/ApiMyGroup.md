@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Language** | **string** |  | [optional] 
 **ApplyPolicyStatus** | **int** |  | [optional] [default to 0]
 **EnableTeamCollaboration** | **bool** |  | [optional] [default to false]
+**DynamicGroupRules** | [**List&lt;DynamicGroupRuleModel&gt;**](DynamicGroupRuleModel.md) |  | [optional] 
 **GroupType** | **string** |  | [optional] 
 **CreatedTime** | **DateTime?** |  | [optional] 
 **Owners** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 

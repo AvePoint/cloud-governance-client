@@ -39,7 +39,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="profileMappings">profileMappings.</param>
         /// <param name="backupSettings">backupSettings.</param>
         /// <param name="conflictResolutionSettings">conflictResolutionSettings.</param>
-        /// <param name="filterPolicy">GuidModel model.</param>
+        /// <param name="filterPolicy">filterPolicy.</param>
         /// <param name="deleteType">deleteType.</param>
         /// <param name="isDeleteCheckedFiles">isDeleteCheckedFiles (default to false).</param>
         public ContentMoveCommonSetting(bool isIncludeVersions = false, bool isIncludeWorkflowDefinition = false, bool isDisableInformationRightsManagement = false, bool isPreserveNullColumnValues = false, bool isKeepModifiedByAndModifiedTime = false, ContentMoveProfileMappings profileMappings = default(ContentMoveProfileMappings), BackupEnvironmentSetting backupSettings = default(BackupEnvironmentSetting), ConflictResolutionSetting conflictResolutionSettings = default(ConflictResolutionSetting), GuidModel filterPolicy = default(GuidModel), DeleteType? deleteType = default(DeleteType?), bool isDeleteCheckedFiles = false)
@@ -106,9 +106,8 @@ namespace Cloud.Governance.Client.Model
         public ConflictResolutionSetting ConflictResolutionSettings { get; set; }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets FilterPolicy
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "filterPolicy", EmitDefaultValue = true)]
         public GuidModel FilterPolicy { get; set; }
 

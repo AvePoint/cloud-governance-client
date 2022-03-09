@@ -53,6 +53,12 @@ function New-WorkspaceGridModel {
         [String]
         ${PolicyId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${EnableDynamicMembership} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${EnableDynamicMembershipDescription},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${PrimaryAdministrators},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -212,6 +218,8 @@ function New-WorkspaceGridModel {
             "PolicyName" = ${PolicyName}
             "PolicyDisplay" = ${PolicyDisplay}
             "PolicyId" = ${PolicyId}
+            "EnableDynamicMembership" = ${EnableDynamicMembership}
+            "EnableDynamicMembershipDescription" = ${EnableDynamicMembershipDescription}
             "PrimaryAdministrators" = ${PrimaryAdministrators}
             "PrimaryAdministratorDisplayNames" = ${PrimaryAdministratorDisplayNames}
             "AdditionalAdministrators" = ${AdditionalAdministrators}
@@ -280,7 +288,7 @@ function ConvertFrom-JsonToWorkspaceGridModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in WorkspaceGridModel
-        $AllProperties = $("Id", "Name", "Description", "Status", "StatusDescription", "Type", "TypeDescription", "Url", "Email", "Privacy", "PrivacyDescription", "PolicyName", "PolicyDisplay", "PolicyId", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "HubType", "AssociateHubTitle", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsed", "SiteSharing", "SiteSharingDescription", "GroupSharing", "GroupSharingDescription", "Classification", "ClaimStatus", "ClaimStatusDescription", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "LastRenewalTime", "LastAccessedTime", "ApplyPolicyStatus", "HasOngoingTasks", "HasOngoingTasksDescription", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName", "Sensitivity", "InsightsStatus", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseProfileId", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Phase", "PhaseDescription", "Metadata")
+        $AllProperties = $("Id", "Name", "Description", "Status", "StatusDescription", "Type", "TypeDescription", "Url", "Email", "Privacy", "PrivacyDescription", "PolicyName", "PolicyDisplay", "PolicyId", "EnableDynamicMembership", "EnableDynamicMembershipDescription", "PrimaryAdministrators", "PrimaryAdministratorDisplayNames", "AdditionalAdministrators", "AdditionalAdministratorDisplayNames", "PrimaryContact", "PrimaryContactEmail", "PrimaryContactDisplayName", "SecondaryContact", "SecondaryContactEmail", "SecondaryContactDisplayName", "HubType", "AssociateHubTitle", "GeoLocation", "GeoLocationDescription", "StorageLimit", "StorageUsed", "SiteSharing", "SiteSharingDescription", "GroupSharing", "GroupSharingDescription", "Classification", "ClaimStatus", "ClaimStatusDescription", "CreatedTime", "LeaseExpirationTime", "InactivityThresholdTime", "LastRenewalTime", "LastAccessedTime", "ApplyPolicyStatus", "HasOngoingTasks", "HasOngoingTasksDescription", "LastRenewalBy", "LastRenewalByEmail", "LastRenewalByDisplayName", "Sensitivity", "InsightsStatus", "PhaseAssigneeDisplayNames", "PhaseAssignees", "PhaseProfileName", "PhaseProfileId", "PhaseStartTime", "RenewalDueDate", "NextRenewalDate", "Phase", "PhaseDescription", "Metadata")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -369,6 +377,18 @@ function ConvertFrom-JsonToWorkspaceGridModel {
             $PolicyId = $null
         } else {
             $PolicyId = $JsonParameters.PSobject.Properties["PolicyId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableDynamicMembership"))) { #optional property not found
+            $EnableDynamicMembership = $null
+        } else {
+            $EnableDynamicMembership = $JsonParameters.PSobject.Properties["EnableDynamicMembership"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "EnableDynamicMembershipDescription"))) { #optional property not found
+            $EnableDynamicMembershipDescription = $null
+        } else {
+            $EnableDynamicMembershipDescription = $JsonParameters.PSobject.Properties["EnableDynamicMembershipDescription"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "PrimaryAdministrators"))) { #optional property not found
@@ -662,6 +682,8 @@ function ConvertFrom-JsonToWorkspaceGridModel {
             "PolicyName" = ${PolicyName}
             "PolicyDisplay" = ${PolicyDisplay}
             "PolicyId" = ${PolicyId}
+            "EnableDynamicMembership" = ${EnableDynamicMembership}
+            "EnableDynamicMembershipDescription" = ${EnableDynamicMembershipDescription}
             "PrimaryAdministrators" = ${PrimaryAdministrators}
             "PrimaryAdministratorDisplayNames" = ${PrimaryAdministratorDisplayNames}
             "AdditionalAdministrators" = ${AdditionalAdministrators}

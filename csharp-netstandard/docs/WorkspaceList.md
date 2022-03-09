@@ -35,6 +35,8 @@ Name | Type | Description | Notes
 **Privacy** | **bool?** |  | [optional] [default to false]
 **Sensitivity** | **string** |  | [optional] 
 **PrivacyDescription** | **string** |  | [optional] 
+**EnableDynamicMembership** | **bool?** |  | [optional] [default to false]
+**EnableDynamicMembershipDescription** | **string** |  | [optional] 
 **Metadata** | [**List&lt;EndUserReportMetadata&gt;**](EndUserReportMetadata.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

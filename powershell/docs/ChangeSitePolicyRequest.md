@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] [readonly] 
+**Policy** | [**GuidModel**](GuidModel.md) | The new site collection policy information settings | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original site collection policy information settings | [optional] [readonly] 
 **IsLeaseEnabled** | **Boolean** | Whether to enable the site collection lease extension. | [optional] [default to $false]
 **ChangePolicyConfig** | [**AssignBy**](AssignBy.md) | Set how to assign the site collection policy. | [optional] 
 **StartDateType** | [**StartDateType**](StartDateType.md) | Site collection lease start date configuration after a policy change | [optional] 
@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
+**QuestionnaireResponse** | [**QuestionAnswerResponse[]**](QuestionAnswerResponse.md) | Questionnaire question and answer of request. | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) | Metadata of request. | [optional] 
 **TicketNumber** | **Int32** | Ticket number of request. | [optional] [readonly] [default to 0]
 **Type** | [**ServiceType**](ServiceType.md) | Service type of request. | [optional] [readonly] 
@@ -33,6 +34,9 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **AssignTo** | **String** | Task assignee of request. | [optional] [readonly] 
 **FullPath** | **String** | Object full path of request. | [optional] [readonly] 
+**ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
+**Participants** | **String** | Participants of request. | [optional] [readonly] 
+**ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
 
 ## Examples
 
@@ -54,6 +58,7 @@ $ChangeSitePolicyRequest = New-Cloud.Governance.ClientChangeSitePolicyRequest  -
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `
+ -QuestionnaireResponse null `
  -Metadatas null `
  -TicketNumber null `
  -Type null `
@@ -67,7 +72,10 @@ $ChangeSitePolicyRequest = New-Cloud.Governance.ClientChangeSitePolicyRequest  -
  -LastUpdated null `
  -CreatedTime null `
  -AssignTo null `
- -FullPath null
+ -FullPath null `
+ -ApprovalStageName null `
+ -Participants null `
+ -ObjectID null
 ```
 
 - Convert the resource to JSON

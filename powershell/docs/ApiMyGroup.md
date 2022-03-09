@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Language** | **String** |  | [optional] 
 **ApplyPolicyStatus** | **Int32** |  | [optional] [default to 0]
 **EnableTeamCollaboration** | **Boolean** |  | [optional] [default to $false]
+**DynamicGroupRules** | [**DynamicGroupRuleModel[]**](DynamicGroupRuleModel.md) |  | [optional] 
 **GroupType** | **String** |  | [optional] 
 **CreatedTime** | **System.DateTime** |  | [optional] 
 **Owners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
@@ -56,6 +57,7 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -Language null `
  -ApplyPolicyStatus null `
  -EnableTeamCollaboration null `
+ -DynamicGroupRules null `
  -GroupType null `
  -CreatedTime null `
  -Owners null `

@@ -46,6 +46,10 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceName">serviceName.</param>
         /// <param name="serviceType">serviceType.</param>
         /// <param name="serviceTypeDescription">serviceTypeDescription.</param>
+        /// <param name="categoryName">categoryName.</param>
+        /// <param name="approvalStageName">approvalStageName.</param>
+        /// <param name="participants">participants.</param>
+        /// <param name="participantDisplayName">participantDisplayName.</param>
         /// <param name="ticketNumber">ticketNumber (default to 0).</param>
         /// <param name="summary">summary.</param>
         /// <param name="requester">requester.</param>
@@ -60,14 +64,20 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceAdmin">serviceAdmin.</param>
         /// <param name="serviceAdminDisplayName">serviceAdminDisplayName.</param>
         /// <param name="objectUrl">objectUrl.</param>
+        /// <param name="objectID">objectID.</param>
         /// <param name="createdTime">createdTime.</param>
-        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), int ticketNumber = 0, string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), string serviceAdmin = default(string), string serviceAdminDisplayName = default(string), string objectUrl = default(string), string createdTime = default(string))
+        /// <param name="hasSubRequest">hasSubRequest (default to false).</param>
+        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string categoryName = default(string), string approvalStageName = default(string), string participants = default(string), string participantDisplayName = default(string), int ticketNumber = 0, string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), string serviceAdmin = default(string), string serviceAdminDisplayName = default(string), string objectUrl = default(string), string objectID = default(string), string createdTime = default(string), bool hasSubRequest = false)
         {
             this.Id = id;
             this.ServiceId = serviceId;
             this.ServiceName = serviceName;
             this.ServiceType = serviceType;
             this.ServiceTypeDescription = serviceTypeDescription;
+            this.CategoryName = categoryName;
+            this.ApprovalStageName = approvalStageName;
+            this.Participants = participants;
+            this.ParticipantDisplayName = participantDisplayName;
             this.TicketNumber = ticketNumber;
             this.Summary = summary;
             this.Requester = requester;
@@ -82,7 +92,9 @@ namespace Cloud.Governance.Client.Model
             this.ServiceAdmin = serviceAdmin;
             this.ServiceAdminDisplayName = serviceAdminDisplayName;
             this.ObjectUrl = objectUrl;
+            this.ObjectID = objectID;
             this.CreatedTime = createdTime;
+            this.HasSubRequest = hasSubRequest;
         }
 
         /// <summary>
@@ -108,6 +120,30 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "serviceTypeDescription", EmitDefaultValue = true)]
         public string ServiceTypeDescription { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CategoryName
+        /// </summary>
+        [DataMember(Name = "categoryName", EmitDefaultValue = true)]
+        public string CategoryName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ApprovalStageName
+        /// </summary>
+        [DataMember(Name = "approvalStageName", EmitDefaultValue = true)]
+        public string ApprovalStageName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Participants
+        /// </summary>
+        [DataMember(Name = "participants", EmitDefaultValue = true)]
+        public string Participants { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ParticipantDisplayName
+        /// </summary>
+        [DataMember(Name = "participantDisplayName", EmitDefaultValue = true)]
+        public string ParticipantDisplayName { get; set; }
 
         /// <summary>
         /// Gets or Sets TicketNumber
@@ -182,10 +218,22 @@ namespace Cloud.Governance.Client.Model
         public string ObjectUrl { get; set; }
 
         /// <summary>
+        /// Gets or Sets ObjectID
+        /// </summary>
+        [DataMember(Name = "objectID", EmitDefaultValue = true)]
+        public string ObjectID { get; set; }
+
+        /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
         [DataMember(Name = "createdTime", EmitDefaultValue = true)]
         public string CreatedTime { get; set; }
+
+        /// <summary>
+        /// Gets or Sets HasSubRequest
+        /// </summary>
+        [DataMember(Name = "hasSubRequest", EmitDefaultValue = false)]
+        public bool HasSubRequest { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -200,6 +248,10 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
             sb.Append("  ServiceType: ").Append(ServiceType).Append("\n");
             sb.Append("  ServiceTypeDescription: ").Append(ServiceTypeDescription).Append("\n");
+            sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
+            sb.Append("  ApprovalStageName: ").Append(ApprovalStageName).Append("\n");
+            sb.Append("  Participants: ").Append(Participants).Append("\n");
+            sb.Append("  ParticipantDisplayName: ").Append(ParticipantDisplayName).Append("\n");
             sb.Append("  TicketNumber: ").Append(TicketNumber).Append("\n");
             sb.Append("  Summary: ").Append(Summary).Append("\n");
             sb.Append("  Requester: ").Append(Requester).Append("\n");
@@ -214,7 +266,9 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ServiceAdmin: ").Append(ServiceAdmin).Append("\n");
             sb.Append("  ServiceAdminDisplayName: ").Append(ServiceAdminDisplayName).Append("\n");
             sb.Append("  ObjectUrl: ").Append(ObjectUrl).Append("\n");
+            sb.Append("  ObjectID: ").Append(ObjectID).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
+            sb.Append("  HasSubRequest: ").Append(HasSubRequest).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -272,6 +326,26 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceTypeDescription == input.ServiceTypeDescription ||
                     (this.ServiceTypeDescription != null &&
                     this.ServiceTypeDescription.Equals(input.ServiceTypeDescription))
+                ) && 
+                (
+                    this.CategoryName == input.CategoryName ||
+                    (this.CategoryName != null &&
+                    this.CategoryName.Equals(input.CategoryName))
+                ) && 
+                (
+                    this.ApprovalStageName == input.ApprovalStageName ||
+                    (this.ApprovalStageName != null &&
+                    this.ApprovalStageName.Equals(input.ApprovalStageName))
+                ) && 
+                (
+                    this.Participants == input.Participants ||
+                    (this.Participants != null &&
+                    this.Participants.Equals(input.Participants))
+                ) && 
+                (
+                    this.ParticipantDisplayName == input.ParticipantDisplayName ||
+                    (this.ParticipantDisplayName != null &&
+                    this.ParticipantDisplayName.Equals(input.ParticipantDisplayName))
                 ) && 
                 (
                     this.TicketNumber == input.TicketNumber ||
@@ -341,9 +415,18 @@ namespace Cloud.Governance.Client.Model
                     this.ObjectUrl.Equals(input.ObjectUrl))
                 ) && 
                 (
+                    this.ObjectID == input.ObjectID ||
+                    (this.ObjectID != null &&
+                    this.ObjectID.Equals(input.ObjectID))
+                ) && 
+                (
                     this.CreatedTime == input.CreatedTime ||
                     (this.CreatedTime != null &&
                     this.CreatedTime.Equals(input.CreatedTime))
+                ) && 
+                (
+                    this.HasSubRequest == input.HasSubRequest ||
+                    this.HasSubRequest.Equals(input.HasSubRequest)
                 );
         }
 
@@ -365,6 +448,14 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.ServiceType.GetHashCode();
                 if (this.ServiceTypeDescription != null)
                     hashCode = hashCode * 59 + this.ServiceTypeDescription.GetHashCode();
+                if (this.CategoryName != null)
+                    hashCode = hashCode * 59 + this.CategoryName.GetHashCode();
+                if (this.ApprovalStageName != null)
+                    hashCode = hashCode * 59 + this.ApprovalStageName.GetHashCode();
+                if (this.Participants != null)
+                    hashCode = hashCode * 59 + this.Participants.GetHashCode();
+                if (this.ParticipantDisplayName != null)
+                    hashCode = hashCode * 59 + this.ParticipantDisplayName.GetHashCode();
                 hashCode = hashCode * 59 + this.TicketNumber.GetHashCode();
                 if (this.Summary != null)
                     hashCode = hashCode * 59 + this.Summary.GetHashCode();
@@ -390,8 +481,11 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.ServiceAdminDisplayName.GetHashCode();
                 if (this.ObjectUrl != null)
                     hashCode = hashCode * 59 + this.ObjectUrl.GetHashCode();
+                if (this.ObjectID != null)
+                    hashCode = hashCode * 59 + this.ObjectID.GetHashCode();
                 if (this.CreatedTime != null)
                     hashCode = hashCode * 59 + this.CreatedTime.GetHashCode();
+                hashCode = hashCode * 59 + this.HasSubRequest.GetHashCode();
                 return hashCode;
             }
         }

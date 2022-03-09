@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **LastModifiedTime** | **DateTime** |  | [optional] 
 **TaskType** | **TaskType** |  | [optional] 
 **AllowReassign** | **bool** |  | [optional] [default to false]
+**Assignee** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **AllowEdit** | **bool** |  | [optional] [default to false]
 **RequestTicketNumber** | **int** |  | [optional] [default to 0]
 **DynamicActions** | [**List&lt;TaskDynamicActions&gt;**](TaskDynamicActions.md) |  | [optional] 

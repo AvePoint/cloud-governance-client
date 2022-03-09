@@ -54,6 +54,9 @@ function New-ChangeSiteSettingRequest {
         ${QuestionnaireId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
+        ${QuestionnaireResponse},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
         ${Metadatas}
     )
 
@@ -77,6 +80,7 @@ function New-ChangeSiteSettingRequest {
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
         }
 
@@ -100,7 +104,7 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeSiteSettingRequest
-        $AllProperties = $("SiteId", "SiteUrl", "SiteTitle", "SiteTitleSetting", "SiteDescriptionSetting", "EnableChangedMetadata", "ChangedMetadatas", "OriginalSiteMetadatas", "DeploymentPlanName", "HubSiteSettings", "SiteSensitivitySetting", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("SiteId", "SiteUrl", "SiteTitle", "SiteTitleSetting", "SiteDescriptionSetting", "EnableChangedMetadata", "ChangedMetadatas", "OriginalSiteMetadatas", "DeploymentPlanName", "HubSiteSettings", "SiteSensitivitySetting", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "QuestionnaireResponse", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath", "ApprovalStageName", "Participants", "ObjectID")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -203,6 +207,12 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
             $QuestionnaireId = $JsonParameters.PSobject.Properties["QuestionnaireId"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "QuestionnaireResponse"))) { #optional property not found
+            $QuestionnaireResponse = $null
+        } else {
+            $QuestionnaireResponse = $JsonParameters.PSobject.Properties["QuestionnaireResponse"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
             $Metadatas = $null
         } else {
@@ -287,6 +297,24 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
             $FullPath = $JsonParameters.PSobject.Properties["FullPath"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApprovalStageName"))) { #optional property not found
+            $ApprovalStageName = $null
+        } else {
+            $ApprovalStageName = $JsonParameters.PSobject.Properties["ApprovalStageName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Participants"))) { #optional property not found
+            $Participants = $null
+        } else {
+            $Participants = $JsonParameters.PSobject.Properties["Participants"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ObjectID"))) { #optional property not found
+            $ObjectID = $null
+        } else {
+            $ObjectID = $JsonParameters.PSobject.Properties["ObjectID"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "SiteId" = ${SiteId}
             "SiteUrl" = ${SiteUrl}
@@ -304,6 +332,7 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
             "TicketNumber" = ${TicketNumber}
             "Type" = ${Type}
@@ -318,6 +347,9 @@ function ConvertFrom-JsonToChangeSiteSettingRequest {
             "CreatedTime" = ${CreatedTime}
             "AssignTo" = ${AssignTo}
             "FullPath" = ${FullPath}
+            "ApprovalStageName" = ${ApprovalStageName}
+            "Participants" = ${Participants}
+            "ObjectID" = ${ObjectID}
         }
 
         return $PSO

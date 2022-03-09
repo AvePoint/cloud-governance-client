@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **LastModifiedTime** | **System.DateTime** |  | [optional] 
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
 **AllowReassign** | **Boolean** |  | [optional] [default to $false]
+**Assignee** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **AllowEdit** | **Boolean** |  | [optional] [default to $false]
 **RequestTicketNumber** | **Int32** |  | [optional] [default to 0]
 **DynamicActions** | [**TaskDynamicActions[]**](TaskDynamicActions.md) |  | [optional] 
@@ -41,6 +42,7 @@ $ApiTask = New-Cloud.Governance.ClientApiTask  -DynamicProperties null `
  -LastModifiedTime null `
  -TaskType null `
  -AllowReassign null `
+ -Assignee null `
  -AllowEdit null `
  -RequestTicketNumber null `
  -DynamicActions null

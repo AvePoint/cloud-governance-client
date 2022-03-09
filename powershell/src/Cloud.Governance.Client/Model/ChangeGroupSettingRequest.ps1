@@ -119,6 +119,18 @@ function New-ChangeGroupSettingRequest {
         [System.Nullable[Boolean]]
         ${EnableTeamCollaboration} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${TimeZoneSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${OriginalTimeZoneSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${LocaleSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${OriginalLocaleSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${Id},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -133,6 +145,9 @@ function New-ChangeGroupSettingRequest {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${QuestionnaireId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${QuestionnaireResponse},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas}
@@ -180,11 +195,16 @@ function New-ChangeGroupSettingRequest {
             "NetworkId" = ${NetworkId}
             "GroupObjectId" = ${GroupObjectId}
             "EnableTeamCollaboration" = ${EnableTeamCollaboration}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "OriginalTimeZoneSettings" = ${OriginalTimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
+            "OriginalLocaleSettings" = ${OriginalLocaleSettings}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
         }
 
@@ -208,7 +228,7 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ChangeGroupSettingRequest
-        $AllProperties = $("GroupId", "GroupEmail", "GroupName", "OriginalGroupName", "GroupDescription", "OriginalGroupDescription", "OriginalYammerGroupInfo", "PrimaryContact", "OriginalPrimaryContact", "SecondaryContact", "OriginalSecondaryContact", "GroupOwners", "GroupMembers", "IsDynamicMembership", "DynamicMembershipRules", "EnabledSubscribe", "OriginalEnabledSubscribe", "EnabledOutsideSender", "OriginalEnabledOutsideSender", "HubSiteActionType", "AssociateHubSiteId", "AssociateHubSiteTitle", "Classification", "OriginalClassification", "Sensitivity", "OriginalSensitivity", "EnableTeams", "OriginalEnableTeams", "GroupMetadatas", "OriginalGroupMetadata", "ChangedDynamicGroupType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "EnableTeamCollaboration", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("GroupId", "GroupEmail", "GroupName", "OriginalGroupName", "GroupDescription", "OriginalGroupDescription", "OriginalYammerGroupInfo", "PrimaryContact", "OriginalPrimaryContact", "SecondaryContact", "OriginalSecondaryContact", "GroupOwners", "GroupMembers", "IsDynamicMembership", "DynamicMembershipRules", "EnabledSubscribe", "OriginalEnabledSubscribe", "EnabledOutsideSender", "OriginalEnabledOutsideSender", "HubSiteActionType", "AssociateHubSiteId", "AssociateHubSiteTitle", "Classification", "OriginalClassification", "Sensitivity", "OriginalSensitivity", "EnableTeams", "OriginalEnableTeams", "GroupMetadatas", "OriginalGroupMetadata", "ChangedDynamicGroupType", "YammerGroupInfo", "GroupObjectType", "NetworkId", "GroupObjectId", "EnableTeamCollaboration", "TimeZoneSettings", "OriginalTimeZoneSettings", "LocaleSettings", "OriginalLocaleSettings", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "QuestionnaireResponse", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath", "ApprovalStageName", "Participants", "ObjectID")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -431,6 +451,30 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
             $EnableTeamCollaboration = $JsonParameters.PSobject.Properties["EnableTeamCollaboration"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TimeZoneSettings"))) { #optional property not found
+            $TimeZoneSettings = $null
+        } else {
+            $TimeZoneSettings = $JsonParameters.PSobject.Properties["TimeZoneSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "OriginalTimeZoneSettings"))) { #optional property not found
+            $OriginalTimeZoneSettings = $null
+        } else {
+            $OriginalTimeZoneSettings = $JsonParameters.PSobject.Properties["OriginalTimeZoneSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LocaleSettings"))) { #optional property not found
+            $LocaleSettings = $null
+        } else {
+            $LocaleSettings = $JsonParameters.PSobject.Properties["LocaleSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "OriginalLocaleSettings"))) { #optional property not found
+            $OriginalLocaleSettings = $null
+        } else {
+            $OriginalLocaleSettings = $JsonParameters.PSobject.Properties["OriginalLocaleSettings"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Id"))) { #optional property not found
             $Id = $null
         } else {
@@ -459,6 +503,12 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
             $QuestionnaireId = $null
         } else {
             $QuestionnaireId = $JsonParameters.PSobject.Properties["QuestionnaireId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "QuestionnaireResponse"))) { #optional property not found
+            $QuestionnaireResponse = $null
+        } else {
+            $QuestionnaireResponse = $JsonParameters.PSobject.Properties["QuestionnaireResponse"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
@@ -545,6 +595,24 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
             $FullPath = $JsonParameters.PSobject.Properties["FullPath"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApprovalStageName"))) { #optional property not found
+            $ApprovalStageName = $null
+        } else {
+            $ApprovalStageName = $JsonParameters.PSobject.Properties["ApprovalStageName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Participants"))) { #optional property not found
+            $Participants = $null
+        } else {
+            $Participants = $JsonParameters.PSobject.Properties["Participants"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ObjectID"))) { #optional property not found
+            $ObjectID = $null
+        } else {
+            $ObjectID = $JsonParameters.PSobject.Properties["ObjectID"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "GroupId" = ${GroupId}
             "GroupEmail" = ${GroupEmail}
@@ -582,11 +650,16 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
             "NetworkId" = ${NetworkId}
             "GroupObjectId" = ${GroupObjectId}
             "EnableTeamCollaboration" = ${EnableTeamCollaboration}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "OriginalTimeZoneSettings" = ${OriginalTimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
+            "OriginalLocaleSettings" = ${OriginalLocaleSettings}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
             "TicketNumber" = ${TicketNumber}
             "Type" = ${Type}
@@ -601,6 +674,9 @@ function ConvertFrom-JsonToChangeGroupSettingRequest {
             "CreatedTime" = ${CreatedTime}
             "AssignTo" = ${AssignTo}
             "FullPath" = ${FullPath}
+            "ApprovalStageName" = ${ApprovalStageName}
+            "Participants" = ${Participants}
+            "ObjectID" = ${ObjectID}
         }
 
         return $PSO

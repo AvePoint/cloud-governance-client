@@ -56,6 +56,9 @@ function New-ApiTask {
         [System.Nullable[Boolean]]
         ${AllowReassign} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${Assignee},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${AllowEdit} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -87,6 +90,7 @@ function New-ApiTask {
             "LastModifiedTime" = ${LastModifiedTime}
             "TaskType" = ${TaskType}
             "AllowReassign" = ${AllowReassign}
+            "Assignee" = ${Assignee}
             "AllowEdit" = ${AllowEdit}
             "RequestTicketNumber" = ${RequestTicketNumber}
             "DynamicActions" = ${DynamicActions}
@@ -112,7 +116,7 @@ function ConvertFrom-JsonToApiTask {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApiTask
-        $AllProperties = $("DynamicProperties", "Id", "Title", "Description", "RequestGuid", "Status", "StatusDescription", "ServiceType", "ServiceTypeDescription", "Comments", "AllComments", "ErrorMessage", "LastModifiedTime", "TaskType", "AllowReassign", "AllowEdit", "RequestTicketNumber", "DynamicActions")
+        $AllProperties = $("DynamicProperties", "Id", "Title", "Description", "RequestGuid", "Status", "StatusDescription", "ServiceType", "ServiceTypeDescription", "Comments", "AllComments", "ErrorMessage", "LastModifiedTime", "TaskType", "AllowReassign", "Assignee", "AllowEdit", "RequestTicketNumber", "DynamicActions")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -209,6 +213,12 @@ function ConvertFrom-JsonToApiTask {
             $AllowReassign = $JsonParameters.PSobject.Properties["AllowReassign"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Assignee"))) { #optional property not found
+            $Assignee = $null
+        } else {
+            $Assignee = $JsonParameters.PSobject.Properties["Assignee"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "AllowEdit"))) { #optional property not found
             $AllowEdit = $null
         } else {
@@ -243,6 +253,7 @@ function ConvertFrom-JsonToApiTask {
             "LastModifiedTime" = ${LastModifiedTime}
             "TaskType" = ${TaskType}
             "AllowReassign" = ${AllowReassign}
+            "Assignee" = ${Assignee}
             "AllowEdit" = ${AllowEdit}
             "RequestTicketNumber" = ${RequestTicketNumber}
             "DynamicActions" = ${DynamicActions}

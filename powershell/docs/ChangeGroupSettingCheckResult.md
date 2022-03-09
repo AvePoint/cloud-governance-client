@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **IsEnableSubscribeMembers** | **Boolean** |  | [optional] [default to $false]
 **IsEnableOutsideSender** | **Boolean** |  | [optional] [default to $false]
 **Classification** | **String** |  | [optional] 
-**Sensitivity** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
+**Sensitivity** | [**StringModel**](StringModel.md) |  | [optional] 
 **IsTeamsEnabled** | **Boolean** |  | [optional] [default to $false]
 **EnableManageGroupSharing** | **Boolean** |  | [optional] [default to $false]
 **EnableInviteAuthorizedGuestUser** | **Boolean** |  | [optional] [default to $false]
@@ -28,6 +28,8 @@ Name | Type | Description | Notes
 **GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
 **NetworkId** | **String** |  | [optional] 
 **GroupObjectId** | **String** |  | [optional] 
+**TimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | timezone settings | [optional] 
+**LocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | Locale settings | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
@@ -61,6 +63,8 @@ $ChangeGroupSettingCheckResult = New-Cloud.Governance.ClientChangeGroupSettingCh
  -GroupObjectType null `
  -NetworkId null `
  -GroupObjectId null `
+ -TimeZoneSettings null `
+ -LocaleSettings null `
  -IsValid null `
  -ErrorMessage null `
  -MessageCode null

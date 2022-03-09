@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TenantId** | **String** |  | [optional] 
 **Owners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **OwnersAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**TenantId** | **String** | Tenant id | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
@@ -27,9 +27,9 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-$CreatePrivateChannelService = New-Cloud.Governance.ClientCreatePrivateChannelService  -TenantId null `
- -Owners null `
+$CreatePrivateChannelService = New-Cloud.Governance.ClientCreatePrivateChannelService  -Owners null `
  -OwnersAssignBy null `
+ -TenantId null `
  -Metadatas null `
  -HideRequestSummary null `
  -Id null `

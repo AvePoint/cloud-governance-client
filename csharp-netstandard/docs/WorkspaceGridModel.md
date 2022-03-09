@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **PolicyName** | **string** |  | [optional] 
 **PolicyDisplay** | **string** |  | [optional] 
 **PolicyId** | **Guid?** |  | [optional] 
+**EnableDynamicMembership** | **bool?** |  | [optional] [default to false]
+**EnableDynamicMembershipDescription** | **string** |  | [optional] 
 **PrimaryAdministrators** | **string** |  | [optional] 
 **PrimaryAdministratorDisplayNames** | **string** |  | [optional] 
 **AdditionalAdministrators** | **string** |  | [optional] 

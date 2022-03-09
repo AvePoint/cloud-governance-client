@@ -85,6 +85,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="policyName">policyName.</param>
         /// <param name="policyDisplay">policyDisplay.</param>
         /// <param name="policyId">policyId.</param>
+        /// <param name="enableDynamicMembership">enableDynamicMembership (default to false).</param>
+        /// <param name="enableDynamicMembershipDescription">enableDynamicMembershipDescription.</param>
         /// <param name="primaryAdministrators">primaryAdministrators.</param>
         /// <param name="primaryAdministratorDisplayNames">primaryAdministratorDisplayNames.</param>
         /// <param name="additionalAdministrators">additionalAdministrators.</param>
@@ -131,7 +133,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="phase">phase.</param>
         /// <param name="phaseDescription">phaseDescription.</param>
         /// <param name="metadata">metadata.</param>
-        public WorkspaceGridModel(Guid id = default(Guid), string name = default(string), string description = default(string), WorkspaceStatus? status = default(WorkspaceStatus?), string statusDescription = default(string), WorkspaceType? type = default(WorkspaceType?), string typeDescription = default(string), string url = default(string), string email = default(string), bool? privacy = false, string privacyDescription = default(string), string policyName = default(string), string policyDisplay = default(string), Guid? policyId = default(Guid?), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), HubSiteType? hubType = default(HubSiteType?), string associateHubTitle = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), long? storageLimit = 0, double? storageUsed = default(double?), SiteSharingStatus? siteSharing = default(SiteSharingStatus?), string siteSharingDescription = default(string), GroupEnableSharingStatus? groupSharing = default(GroupEnableSharingStatus?), string groupSharingDescription = default(string), string classification = default(string), ClaimStatus? claimStatus = default(ClaimStatus?), string claimStatusDescription = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), DateTime? lastAccessedTime = default(DateTime?), ApplyPolicyStatus? applyPolicyStatus = default(ApplyPolicyStatus?), bool hasOngoingTasks = false, string hasOngoingTasksDescription = default(string), string lastRenewalBy = default(string), string lastRenewalByEmail = default(string), string lastRenewalByDisplayName = default(string), string sensitivity = default(string), InsightsStatus? insightsStatus = default(InsightsStatus?), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), Guid? phaseProfileId = default(Guid?), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
+        public WorkspaceGridModel(Guid id = default(Guid), string name = default(string), string description = default(string), WorkspaceStatus? status = default(WorkspaceStatus?), string statusDescription = default(string), WorkspaceType? type = default(WorkspaceType?), string typeDescription = default(string), string url = default(string), string email = default(string), bool? privacy = false, string privacyDescription = default(string), string policyName = default(string), string policyDisplay = default(string), Guid? policyId = default(Guid?), bool? enableDynamicMembership = false, string enableDynamicMembershipDescription = default(string), string primaryAdministrators = default(string), string primaryAdministratorDisplayNames = default(string), string additionalAdministrators = default(string), string additionalAdministratorDisplayNames = default(string), string primaryContact = default(string), string primaryContactEmail = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactEmail = default(string), string secondaryContactDisplayName = default(string), HubSiteType? hubType = default(HubSiteType?), string associateHubTitle = default(string), string geoLocation = default(string), string geoLocationDescription = default(string), long? storageLimit = 0, double? storageUsed = default(double?), SiteSharingStatus? siteSharing = default(SiteSharingStatus?), string siteSharingDescription = default(string), GroupEnableSharingStatus? groupSharing = default(GroupEnableSharingStatus?), string groupSharingDescription = default(string), string classification = default(string), ClaimStatus? claimStatus = default(ClaimStatus?), string claimStatusDescription = default(string), DateTime createdTime = default(DateTime), DateTime? leaseExpirationTime = default(DateTime?), DateTime? inactivityThresholdTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), DateTime? lastAccessedTime = default(DateTime?), ApplyPolicyStatus? applyPolicyStatus = default(ApplyPolicyStatus?), bool hasOngoingTasks = false, string hasOngoingTasksDescription = default(string), string lastRenewalBy = default(string), string lastRenewalByEmail = default(string), string lastRenewalByDisplayName = default(string), string sensitivity = default(string), InsightsStatus? insightsStatus = default(InsightsStatus?), string phaseAssigneeDisplayNames = default(string), string phaseAssignees = default(string), string phaseProfileName = default(string), Guid? phaseProfileId = default(Guid?), DateTime? phaseStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), DateTime? nextRenewalDate = default(DateTime?), AutoImportPhase? phase = default(AutoImportPhase?), string phaseDescription = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
         {
             this.Id = id;
             this.Name = name;
@@ -148,6 +150,9 @@ namespace Cloud.Governance.Client.Model
             this.PolicyName = policyName;
             this.PolicyDisplay = policyDisplay;
             this.PolicyId = policyId;
+            // use default value if no "enableDynamicMembership" provided
+            this.EnableDynamicMembership = enableDynamicMembership ?? false;
+            this.EnableDynamicMembershipDescription = enableDynamicMembershipDescription;
             this.PrimaryAdministrators = primaryAdministrators;
             this.PrimaryAdministratorDisplayNames = primaryAdministratorDisplayNames;
             this.AdditionalAdministrators = additionalAdministrators;
@@ -268,6 +273,18 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "policyId", EmitDefaultValue = true)]
         public Guid? PolicyId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableDynamicMembership
+        /// </summary>
+        [DataMember(Name = "enableDynamicMembership", EmitDefaultValue = true)]
+        public bool? EnableDynamicMembership { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EnableDynamicMembershipDescription
+        /// </summary>
+        [DataMember(Name = "enableDynamicMembershipDescription", EmitDefaultValue = true)]
+        public string EnableDynamicMembershipDescription { get; set; }
 
         /// <summary>
         /// Gets or Sets PrimaryAdministrators
@@ -525,6 +542,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
             sb.Append("  PolicyDisplay: ").Append(PolicyDisplay).Append("\n");
             sb.Append("  PolicyId: ").Append(PolicyId).Append("\n");
+            sb.Append("  EnableDynamicMembership: ").Append(EnableDynamicMembership).Append("\n");
+            sb.Append("  EnableDynamicMembershipDescription: ").Append(EnableDynamicMembershipDescription).Append("\n");
             sb.Append("  PrimaryAdministrators: ").Append(PrimaryAdministrators).Append("\n");
             sb.Append("  PrimaryAdministratorDisplayNames: ").Append(PrimaryAdministratorDisplayNames).Append("\n");
             sb.Append("  AdditionalAdministrators: ").Append(AdditionalAdministrators).Append("\n");
@@ -672,6 +691,16 @@ namespace Cloud.Governance.Client.Model
                     this.PolicyId == input.PolicyId ||
                     (this.PolicyId != null &&
                     this.PolicyId.Equals(input.PolicyId))
+                ) && 
+                (
+                    this.EnableDynamicMembership == input.EnableDynamicMembership ||
+                    (this.EnableDynamicMembership != null &&
+                    this.EnableDynamicMembership.Equals(input.EnableDynamicMembership))
+                ) && 
+                (
+                    this.EnableDynamicMembershipDescription == input.EnableDynamicMembershipDescription ||
+                    (this.EnableDynamicMembershipDescription != null &&
+                    this.EnableDynamicMembershipDescription.Equals(input.EnableDynamicMembershipDescription))
                 ) && 
                 (
                     this.PrimaryAdministrators == input.PrimaryAdministrators ||
@@ -933,6 +962,10 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.PolicyDisplay.GetHashCode();
                 if (this.PolicyId != null)
                     hashCode = hashCode * 59 + this.PolicyId.GetHashCode();
+                if (this.EnableDynamicMembership != null)
+                    hashCode = hashCode * 59 + this.EnableDynamicMembership.GetHashCode();
+                if (this.EnableDynamicMembershipDescription != null)
+                    hashCode = hashCode * 59 + this.EnableDynamicMembershipDescription.GetHashCode();
                 if (this.PrimaryAdministrators != null)
                     hashCode = hashCode * 59 + this.PrimaryAdministrators.GetHashCode();
                 if (this.PrimaryAdministratorDisplayNames != null)

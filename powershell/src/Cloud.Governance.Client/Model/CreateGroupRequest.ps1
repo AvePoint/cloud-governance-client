@@ -98,6 +98,12 @@ function New-CreateGroupRequest {
         [PSCustomObject]
         ${HubSiteSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${TimeZoneSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${LocaleSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${YammerGroupInfo},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -115,6 +121,9 @@ function New-CreateGroupRequest {
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${QuestionnaireId},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${QuestionnaireResponse},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
         ${Metadatas}
@@ -155,12 +164,15 @@ function New-CreateGroupRequest {
             "DynamicMembershipRules" = ${DynamicMembershipRules}
             "MultiGeoLocation" = ${MultiGeoLocation}
             "HubSiteSettings" = ${HubSiteSettings}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
             "YammerGroupInfo" = ${YammerGroupInfo}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
         }
 
@@ -184,7 +196,7 @@ function ConvertFrom-JsonToCreateGroupRequest {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGroupRequest
-        $AllProperties = $("GroupType", "GroupId", "GroupIdWithoutPrefixSuffix", "GroupName", "GroupNameWithoutPrefixSuffix", "GroupEmail", "Policy", "GroupDescription", "Owners", "Members", "Privacy", "Subscribe", "OutsideSender", "EnableTeamCollaboration", "Language", "Classification", "Sensitivity", "SensitivityName", "Links", "LeasePeriodSettings", "TeamsSettings", "AppliedSiteDesignId", "PrimaryContact", "SecondaryContact", "EnableGroupMembershipHidden", "EnableAssignedMembership", "EnableDynamicMembership", "TemplateSettings", "DynamicMembershipRules", "MultiGeoLocation", "HubSiteSettings", "YammerGroupInfo", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath")
+        $AllProperties = $("GroupType", "GroupId", "GroupIdWithoutPrefixSuffix", "GroupName", "GroupNameWithoutPrefixSuffix", "GroupEmail", "Policy", "GroupDescription", "Owners", "Members", "Privacy", "Subscribe", "OutsideSender", "EnableTeamCollaboration", "Language", "Classification", "Sensitivity", "SensitivityName", "Links", "LeasePeriodSettings", "TeamsSettings", "AppliedSiteDesignId", "PrimaryContact", "SecondaryContact", "EnableGroupMembershipHidden", "EnableAssignedMembership", "EnableDynamicMembership", "TemplateSettings", "DynamicMembershipRules", "MultiGeoLocation", "HubSiteSettings", "TimeZoneSettings", "LocaleSettings", "YammerGroupInfo", "Id", "ServiceId", "Summary", "NotesToApprovers", "QuestionnaireId", "QuestionnaireResponse", "Metadatas", "TicketNumber", "Type", "TypeDescription", "Requester", "RequesterLoginName", "Status", "ProgressStatus", "ProgressStatusDescription", "SubmittedTime", "LastUpdated", "CreatedTime", "AssignTo", "FullPath", "ApprovalStageName", "Participants", "ObjectID")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -377,6 +389,18 @@ function ConvertFrom-JsonToCreateGroupRequest {
             $HubSiteSettings = $JsonParameters.PSobject.Properties["HubSiteSettings"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TimeZoneSettings"))) { #optional property not found
+            $TimeZoneSettings = $null
+        } else {
+            $TimeZoneSettings = $JsonParameters.PSobject.Properties["TimeZoneSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LocaleSettings"))) { #optional property not found
+            $LocaleSettings = $null
+        } else {
+            $LocaleSettings = $JsonParameters.PSobject.Properties["LocaleSettings"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "YammerGroupInfo"))) { #optional property not found
             $YammerGroupInfo = $null
         } else {
@@ -411,6 +435,12 @@ function ConvertFrom-JsonToCreateGroupRequest {
             $QuestionnaireId = $null
         } else {
             $QuestionnaireId = $JsonParameters.PSobject.Properties["QuestionnaireId"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "QuestionnaireResponse"))) { #optional property not found
+            $QuestionnaireResponse = $null
+        } else {
+            $QuestionnaireResponse = $JsonParameters.PSobject.Properties["QuestionnaireResponse"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadatas"))) { #optional property not found
@@ -497,6 +527,24 @@ function ConvertFrom-JsonToCreateGroupRequest {
             $FullPath = $JsonParameters.PSobject.Properties["FullPath"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApprovalStageName"))) { #optional property not found
+            $ApprovalStageName = $null
+        } else {
+            $ApprovalStageName = $JsonParameters.PSobject.Properties["ApprovalStageName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Participants"))) { #optional property not found
+            $Participants = $null
+        } else {
+            $Participants = $JsonParameters.PSobject.Properties["Participants"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ObjectID"))) { #optional property not found
+            $ObjectID = $null
+        } else {
+            $ObjectID = $JsonParameters.PSobject.Properties["ObjectID"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "GroupType" = ${GroupType}
             "GroupId" = ${GroupId}
@@ -529,12 +577,15 @@ function ConvertFrom-JsonToCreateGroupRequest {
             "DynamicMembershipRules" = ${DynamicMembershipRules}
             "MultiGeoLocation" = ${MultiGeoLocation}
             "HubSiteSettings" = ${HubSiteSettings}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
             "YammerGroupInfo" = ${YammerGroupInfo}
             "Id" = ${Id}
             "ServiceId" = ${ServiceId}
             "Summary" = ${Summary}
             "NotesToApprovers" = ${NotesToApprovers}
             "QuestionnaireId" = ${QuestionnaireId}
+            "QuestionnaireResponse" = ${QuestionnaireResponse}
             "Metadatas" = ${Metadatas}
             "TicketNumber" = ${TicketNumber}
             "Type" = ${Type}
@@ -549,6 +600,9 @@ function ConvertFrom-JsonToCreateGroupRequest {
             "CreatedTime" = ${CreatedTime}
             "AssignTo" = ${AssignTo}
             "FullPath" = ${FullPath}
+            "ApprovalStageName" = ${ApprovalStageName}
+            "Participants" = ${Participants}
+            "ObjectID" = ${ObjectID}
         }
 
         return $PSO

@@ -51,7 +51,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approver">approver.</param>
         /// <param name="approvalHistory">approvalHistory.</param>
         /// <param name="currentTaskAction">currentTaskAction.</param>
-        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object isYammer = default(Object), Object groupOwnersStr = default(Object), Object tenantId = default(Object), Object approver = default(Object), Object approvalHistory = default(Object), Object currentTaskAction = default(Object))
+        /// <param name="guestUserId">guestUserId.</param>
+        /// <param name="guestUserMail">guestUserMail.</param>
+        /// <param name="guestUserName">guestUserName.</param>
+        /// <param name="manager">manager.</param>
+        /// <param name="electionProfile">electionProfile.</param>
+        public ApiTaskDynamicProperties(Object none = default(Object), Object primaryContact = default(Object), Object secondaryContact = default(Object), Object siteId = default(Object), Object siteUrl = default(Object), Object groupName = default(Object), Object expirationDate = default(Object), Object groupOwners = default(Object), Object autoTaskActionHistories = default(Object), Object inactivityThresholdDate = default(Object), Object groupEmail = default(Object), Object groupId = default(Object), Object policyName = default(Object), Object primaryAdministrator = default(Object), Object siteTemplate = default(Object), Object siteTitle = default(Object), Object siteDescription = default(Object), Object requester = default(Object), Object isTeam = default(Object), Object isYammer = default(Object), Object groupOwnersStr = default(Object), Object tenantId = default(Object), Object approver = default(Object), Object approvalHistory = default(Object), Object currentTaskAction = default(Object), Object guestUserId = default(Object), Object guestUserMail = default(Object), Object guestUserName = default(Object), Object manager = default(Object), Object electionProfile = default(Object))
         {
             this.None = none;
             this.PrimaryContact = primaryContact;
@@ -78,6 +83,11 @@ namespace Cloud.Governance.Client.Model
             this.Approver = approver;
             this.ApprovalHistory = approvalHistory;
             this.CurrentTaskAction = currentTaskAction;
+            this.GuestUserId = guestUserId;
+            this.GuestUserMail = guestUserMail;
+            this.GuestUserName = guestUserName;
+            this.Manager = manager;
+            this.ElectionProfile = electionProfile;
         }
 
         /// <summary>
@@ -231,6 +241,36 @@ namespace Cloud.Governance.Client.Model
         public Object CurrentTaskAction { get; set; }
 
         /// <summary>
+        /// Gets or Sets GuestUserId
+        /// </summary>
+        [DataMember(Name = "GuestUserId", EmitDefaultValue = true)]
+        public Object GuestUserId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GuestUserMail
+        /// </summary>
+        [DataMember(Name = "GuestUserMail", EmitDefaultValue = true)]
+        public Object GuestUserMail { get; set; }
+
+        /// <summary>
+        /// Gets or Sets GuestUserName
+        /// </summary>
+        [DataMember(Name = "GuestUserName", EmitDefaultValue = true)]
+        public Object GuestUserName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Manager
+        /// </summary>
+        [DataMember(Name = "Manager", EmitDefaultValue = true)]
+        public Object Manager { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ElectionProfile
+        /// </summary>
+        [DataMember(Name = "ElectionProfile", EmitDefaultValue = true)]
+        public Object ElectionProfile { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -263,6 +303,11 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Approver: ").Append(Approver).Append("\n");
             sb.Append("  ApprovalHistory: ").Append(ApprovalHistory).Append("\n");
             sb.Append("  CurrentTaskAction: ").Append(CurrentTaskAction).Append("\n");
+            sb.Append("  GuestUserId: ").Append(GuestUserId).Append("\n");
+            sb.Append("  GuestUserMail: ").Append(GuestUserMail).Append("\n");
+            sb.Append("  GuestUserName: ").Append(GuestUserName).Append("\n");
+            sb.Append("  Manager: ").Append(Manager).Append("\n");
+            sb.Append("  ElectionProfile: ").Append(ElectionProfile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -421,6 +466,31 @@ namespace Cloud.Governance.Client.Model
                     this.CurrentTaskAction == input.CurrentTaskAction ||
                     (this.CurrentTaskAction != null &&
                     this.CurrentTaskAction.Equals(input.CurrentTaskAction))
+                ) && 
+                (
+                    this.GuestUserId == input.GuestUserId ||
+                    (this.GuestUserId != null &&
+                    this.GuestUserId.Equals(input.GuestUserId))
+                ) && 
+                (
+                    this.GuestUserMail == input.GuestUserMail ||
+                    (this.GuestUserMail != null &&
+                    this.GuestUserMail.Equals(input.GuestUserMail))
+                ) && 
+                (
+                    this.GuestUserName == input.GuestUserName ||
+                    (this.GuestUserName != null &&
+                    this.GuestUserName.Equals(input.GuestUserName))
+                ) && 
+                (
+                    this.Manager == input.Manager ||
+                    (this.Manager != null &&
+                    this.Manager.Equals(input.Manager))
+                ) && 
+                (
+                    this.ElectionProfile == input.ElectionProfile ||
+                    (this.ElectionProfile != null &&
+                    this.ElectionProfile.Equals(input.ElectionProfile))
                 );
         }
 
@@ -483,6 +553,16 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.ApprovalHistory.GetHashCode();
                 if (this.CurrentTaskAction != null)
                     hashCode = hashCode * 59 + this.CurrentTaskAction.GetHashCode();
+                if (this.GuestUserId != null)
+                    hashCode = hashCode * 59 + this.GuestUserId.GetHashCode();
+                if (this.GuestUserMail != null)
+                    hashCode = hashCode * 59 + this.GuestUserMail.GetHashCode();
+                if (this.GuestUserName != null)
+                    hashCode = hashCode * 59 + this.GuestUserName.GetHashCode();
+                if (this.Manager != null)
+                    hashCode = hashCode * 59 + this.Manager.GetHashCode();
+                if (this.ElectionProfile != null)
+                    hashCode = hashCode * 59 + this.ElectionProfile.GetHashCode();
                 return hashCode;
             }
         }

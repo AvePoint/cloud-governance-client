@@ -59,8 +59,9 @@ namespace Cloud.Governance.Client.Model
         /// <param name="lastRenewalTime">lastRenewalTime.</param>
         /// <param name="renewalStartTime">renewalStartTime.</param>
         /// <param name="renewalDueDate">renewalDueDate.</param>
+        /// <param name="electionProfileName">electionProfileName.</param>
         /// <param name="metadata">metadata.</param>
-        public GuestUserGridModel(Guid id = default(Guid), string displayName = default(string), string mail = default(string), string primaryContact = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactDisplayName = default(string), GuestUserStatus? status = default(GuestUserStatus?), string statusDescription = default(string), string profileName = default(string), Guid tenantId = default(Guid), DateTime? nextRenewalDate = default(DateTime?), string renewalAssignees = default(string), string renewalAssigneeDisplayNames = default(string), string lastRenewalBy = default(string), string lastRenewalByDisplayName = default(string), ExternalUserState? externalUserState = default(ExternalUserState?), string externalUserStateDescription = default(string), DateTime? lastSyncTime = default(DateTime?), DateTime? inviteTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), DateTime? renewalStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), List<ReportMetadata> metadata = default(List<ReportMetadata>))
+        public GuestUserGridModel(Guid id = default(Guid), string displayName = default(string), string mail = default(string), string primaryContact = default(string), string primaryContactDisplayName = default(string), string secondaryContact = default(string), string secondaryContactDisplayName = default(string), GuestUserStatus? status = default(GuestUserStatus?), string statusDescription = default(string), string profileName = default(string), Guid tenantId = default(Guid), DateTime? nextRenewalDate = default(DateTime?), string renewalAssignees = default(string), string renewalAssigneeDisplayNames = default(string), string lastRenewalBy = default(string), string lastRenewalByDisplayName = default(string), ExternalUserState? externalUserState = default(ExternalUserState?), string externalUserStateDescription = default(string), DateTime? lastSyncTime = default(DateTime?), DateTime? inviteTime = default(DateTime?), DateTime? lastRenewalTime = default(DateTime?), DateTime? renewalStartTime = default(DateTime?), DateTime? renewalDueDate = default(DateTime?), string electionProfileName = default(string), List<ReportMetadata> metadata = default(List<ReportMetadata>))
         {
             this.Id = id;
             this.DisplayName = displayName;
@@ -85,6 +86,7 @@ namespace Cloud.Governance.Client.Model
             this.LastRenewalTime = lastRenewalTime;
             this.RenewalStartTime = renewalStartTime;
             this.RenewalDueDate = renewalDueDate;
+            this.ElectionProfileName = electionProfileName;
             this.Metadata = metadata;
         }
 
@@ -215,6 +217,12 @@ namespace Cloud.Governance.Client.Model
         public DateTime? RenewalDueDate { get; set; }
 
         /// <summary>
+        /// Gets or Sets ElectionProfileName
+        /// </summary>
+        [DataMember(Name = "electionProfileName", EmitDefaultValue = true)]
+        public string ElectionProfileName { get; set; }
+
+        /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name = "metadata", EmitDefaultValue = true)]
@@ -251,6 +259,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LastRenewalTime: ").Append(LastRenewalTime).Append("\n");
             sb.Append("  RenewalStartTime: ").Append(RenewalStartTime).Append("\n");
             sb.Append("  RenewalDueDate: ").Append(RenewalDueDate).Append("\n");
+            sb.Append("  ElectionProfileName: ").Append(ElectionProfileName).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -400,6 +409,11 @@ namespace Cloud.Governance.Client.Model
                     this.RenewalDueDate.Equals(input.RenewalDueDate))
                 ) && 
                 (
+                    this.ElectionProfileName == input.ElectionProfileName ||
+                    (this.ElectionProfileName != null &&
+                    this.ElectionProfileName.Equals(input.ElectionProfileName))
+                ) && 
+                (
                     this.Metadata == input.Metadata ||
                     this.Metadata != null &&
                     input.Metadata != null &&
@@ -460,6 +474,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.RenewalStartTime.GetHashCode();
                 if (this.RenewalDueDate != null)
                     hashCode = hashCode * 59 + this.RenewalDueDate.GetHashCode();
+                if (this.ElectionProfileName != null)
+                    hashCode = hashCode * 59 + this.ElectionProfileName.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;

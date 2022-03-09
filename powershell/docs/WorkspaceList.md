@@ -35,6 +35,8 @@ Name | Type | Description | Notes
 **Privacy** | **Boolean** |  | [optional] [default to $false]
 **Sensitivity** | **String** |  | [optional] 
 **PrivacyDescription** | **String** |  | [optional] 
+**EnableDynamicMembership** | **Boolean** |  | [optional] [default to $false]
+**EnableDynamicMembershipDescription** | **String** |  | [optional] 
 **Metadata** | [**EndUserReportMetadata[]**](EndUserReportMetadata.md) |  | [optional] 
 
 ## Examples
@@ -73,6 +75,8 @@ $WorkspaceList = New-Cloud.Governance.ClientWorkspaceList  -Id null `
  -Privacy null `
  -Sensitivity null `
  -PrivacyDescription null `
+ -EnableDynamicMembership null `
+ -EnableDynamicMembershipDescription null `
  -Metadata null
 ```
 

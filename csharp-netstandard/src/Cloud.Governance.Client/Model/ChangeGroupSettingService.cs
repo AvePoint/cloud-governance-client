@@ -88,6 +88,8 @@ namespace Cloud.Governance.Client.Model
         /// <param name="scopePeoplePickerFilterProfileId">scopePeoplePickerFilterProfileId.</param>
         /// <param name="peoplePickerFilterProfileId">peoplePickerFilterProfileId.</param>
         /// <param name="requestTemplate">requestTemplate.</param>
+        /// <param name="isChangeTimeZoneEnabled">isChangeTimeZoneEnabled (default to false).</param>
+        /// <param name="isChangeLocaleEnabled">isChangeLocaleEnabled (default to false).</param>
         /// <param name="metadatas">metadatas.</param>
         /// <param name="hideRequestSummary">hideRequestSummary (default to false).</param>
         /// <param name="id">id.</param>
@@ -103,7 +105,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="approvalProcessId">approvalProcessId.</param>
         /// <param name="languageId">languageId (default to 0).</param>
         /// <param name="categoryId">categoryId.</param>
-        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = false, bool preventDuplicateName = false, bool enableChangeDescription = false, bool enableChangeMemberSubscription = false, bool enableChangeOutsideSenders = false, bool enableChangePrimaryContact = false, bool enableChangeSecondaryContact = false, bool enableAddOwners = false, UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = false, bool enableAddMembers = false, UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = false, bool enableChangeDynamicMembershipRules = false, bool enableChangeTeamCollaboration = false, bool enableChangeHubSite = false, bool enableChangeClassification = false, List<string> classificationList = default(List<string>), bool enableChangeSensitivity = false, List<StringModel> sensitivityList = default(List<StringModel>), bool enableChangeMetadata = false, bool enableAddOrDeleteMetadata = false, List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = false, GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = false, Guid? scopePeoplePickerFilterProfileId = default(Guid?), Guid? peoplePickerFilterProfileId = default(Guid?), ChangeGroupSettingRequest requestTemplate = default(ChangeGroupSettingRequest), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
+        public ChangeGroupSettingService(Guid tenantId = default(Guid), string networkId = default(string), GroupRestrictionType? groupRestriction = default(GroupRestrictionType?), bool enableChangeName = false, bool preventDuplicateName = false, bool enableChangeDescription = false, bool enableChangeMemberSubscription = false, bool enableChangeOutsideSenders = false, bool enableChangePrimaryContact = false, bool enableChangeSecondaryContact = false, bool enableAddOwners = false, UserLevelRestrictionType? addOwnerRestriction = default(UserLevelRestrictionType?), bool enableRemoveOwners = false, bool enableAddMembers = false, UserLevelRestrictionType? addMemberRestriction = default(UserLevelRestrictionType?), bool enableRemoveMembers = false, bool enableChangeDynamicMembershipRules = false, bool enableChangeTeamCollaboration = false, bool enableChangeHubSite = false, bool enableChangeClassification = false, List<string> classificationList = default(List<string>), bool enableChangeSensitivity = false, List<StringModel> sensitivityList = default(List<StringModel>), bool enableChangeMetadata = false, bool enableAddOrDeleteMetadata = false, List<CustomMetadata> metadataList = default(List<CustomMetadata>), bool enableChangeMembershipType = false, GroupObjectType? groupObjectType = default(GroupObjectType?), bool enableChangeYammerGroupInfo = false, Guid? scopePeoplePickerFilterProfileId = default(Guid?), Guid? peoplePickerFilterProfileId = default(Guid?), ChangeGroupSettingRequest requestTemplate = default(ChangeGroupSettingRequest), bool isChangeTimeZoneEnabled = false, bool isChangeLocaleEnabled = false, List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool hideRequestSummary = false, Guid id = default(Guid), string name = default(string), string description = default(string), ServiceType? type = default(ServiceType?), ApiUser serviceContact = default(ApiUser), ApiUser serviceAdminContact = default(ApiUser), bool approversContainManagerRole = false, CommonStatus? status = default(CommonStatus?), bool showServiceInCatalog = false, CustomActionSettings customActions = default(CustomActionSettings), Guid approvalProcessId = default(Guid), int languageId = 0, string categoryId = default(string))
         {
             this.TenantId = tenantId;
             this.NetworkId = networkId;
@@ -137,6 +139,8 @@ namespace Cloud.Governance.Client.Model
             this.ScopePeoplePickerFilterProfileId = scopePeoplePickerFilterProfileId;
             this.PeoplePickerFilterProfileId = peoplePickerFilterProfileId;
             this.RequestTemplate = requestTemplate;
+            this.IsChangeTimeZoneEnabled = isChangeTimeZoneEnabled;
+            this.IsChangeLocaleEnabled = isChangeLocaleEnabled;
             this.Metadatas = metadatas;
             this.HideRequestSummary = hideRequestSummary;
             this.Id = id;
@@ -323,6 +327,18 @@ namespace Cloud.Governance.Client.Model
         public ChangeGroupSettingRequest RequestTemplate { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsChangeTimeZoneEnabled
+        /// </summary>
+        [DataMember(Name = "isChangeTimeZoneEnabled", EmitDefaultValue = false)]
+        public bool IsChangeTimeZoneEnabled { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsChangeLocaleEnabled
+        /// </summary>
+        [DataMember(Name = "isChangeLocaleEnabled", EmitDefaultValue = false)]
+        public bool IsChangeLocaleEnabled { get; set; }
+
+        /// <summary>
         /// Gets or Sets Metadatas
         /// </summary>
         [DataMember(Name = "metadatas", EmitDefaultValue = true)]
@@ -442,6 +458,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ScopePeoplePickerFilterProfileId: ").Append(ScopePeoplePickerFilterProfileId).Append("\n");
             sb.Append("  PeoplePickerFilterProfileId: ").Append(PeoplePickerFilterProfileId).Append("\n");
             sb.Append("  RequestTemplate: ").Append(RequestTemplate).Append("\n");
+            sb.Append("  IsChangeTimeZoneEnabled: ").Append(IsChangeTimeZoneEnabled).Append("\n");
+            sb.Append("  IsChangeLocaleEnabled: ").Append(IsChangeLocaleEnabled).Append("\n");
             sb.Append("  Metadatas: ").Append(Metadatas).Append("\n");
             sb.Append("  HideRequestSummary: ").Append(HideRequestSummary).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -631,6 +649,14 @@ namespace Cloud.Governance.Client.Model
                     this.RequestTemplate.Equals(input.RequestTemplate))
                 ) && 
                 (
+                    this.IsChangeTimeZoneEnabled == input.IsChangeTimeZoneEnabled ||
+                    this.IsChangeTimeZoneEnabled.Equals(input.IsChangeTimeZoneEnabled)
+                ) && 
+                (
+                    this.IsChangeLocaleEnabled == input.IsChangeLocaleEnabled ||
+                    this.IsChangeLocaleEnabled.Equals(input.IsChangeLocaleEnabled)
+                ) && 
+                (
                     this.Metadatas == input.Metadatas ||
                     this.Metadatas != null &&
                     input.Metadatas != null &&
@@ -751,6 +777,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.PeoplePickerFilterProfileId.GetHashCode();
                 if (this.RequestTemplate != null)
                     hashCode = hashCode * 59 + this.RequestTemplate.GetHashCode();
+                hashCode = hashCode * 59 + this.IsChangeTimeZoneEnabled.GetHashCode();
+                hashCode = hashCode * 59 + this.IsChangeLocaleEnabled.GetHashCode();
                 if (this.Metadatas != null)
                     hashCode = hashCode * 59 + this.Metadatas.GetHashCode();
                 hashCode = hashCode * 59 + this.HideRequestSummary.GetHashCode();

@@ -26,6 +26,18 @@ function New-AllRequestList {
         [String]
         ${ServiceTypeDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${CategoryName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${ApprovalStageName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${Participants},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${ParticipantDisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Int32]]
         ${TicketNumber} = 0,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -69,7 +81,13 @@ function New-AllRequestList {
         ${ObjectUrl},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${CreatedTime}
+        ${ObjectID},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${CreatedTime},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${HasSubRequest} = $false
     )
 
     Process {
@@ -83,6 +101,10 @@ function New-AllRequestList {
             "ServiceName" = ${ServiceName}
             "ServiceType" = ${ServiceType}
             "ServiceTypeDescription" = ${ServiceTypeDescription}
+            "CategoryName" = ${CategoryName}
+            "ApprovalStageName" = ${ApprovalStageName}
+            "Participants" = ${Participants}
+            "ParticipantDisplayName" = ${ParticipantDisplayName}
             "TicketNumber" = ${TicketNumber}
             "Summary" = ${Summary}
             "Requester" = ${Requester}
@@ -97,7 +119,9 @@ function New-AllRequestList {
             "ServiceAdmin" = ${ServiceAdmin}
             "ServiceAdminDisplayName" = ${ServiceAdminDisplayName}
             "ObjectUrl" = ${ObjectUrl}
+            "ObjectID" = ${ObjectID}
             "CreatedTime" = ${CreatedTime}
+            "HasSubRequest" = ${HasSubRequest}
         }
 
         return $PSO
@@ -120,7 +144,7 @@ function ConvertFrom-JsonToAllRequestList {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in AllRequestList
-        $AllProperties = $("Id", "ServiceId", "ServiceName", "ServiceType", "ServiceTypeDescription", "TicketNumber", "Summary", "Requester", "RequesterDisplayName", "DetailStatus", "DetailStatusDescription", "ProgressStatus", "ProgressStatusDescription", "Modified", "AssignTo", "AssignToDisplayName", "ServiceAdmin", "ServiceAdminDisplayName", "ObjectUrl", "CreatedTime")
+        $AllProperties = $("Id", "ServiceId", "ServiceName", "ServiceType", "ServiceTypeDescription", "CategoryName", "ApprovalStageName", "Participants", "ParticipantDisplayName", "TicketNumber", "Summary", "Requester", "RequesterDisplayName", "DetailStatus", "DetailStatusDescription", "ProgressStatus", "ProgressStatusDescription", "Modified", "AssignTo", "AssignToDisplayName", "ServiceAdmin", "ServiceAdminDisplayName", "ObjectUrl", "ObjectID", "CreatedTime", "HasSubRequest")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -155,6 +179,30 @@ function ConvertFrom-JsonToAllRequestList {
             $ServiceTypeDescription = $null
         } else {
             $ServiceTypeDescription = $JsonParameters.PSobject.Properties["ServiceTypeDescription"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "CategoryName"))) { #optional property not found
+            $CategoryName = $null
+        } else {
+            $CategoryName = $JsonParameters.PSobject.Properties["CategoryName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ApprovalStageName"))) { #optional property not found
+            $ApprovalStageName = $null
+        } else {
+            $ApprovalStageName = $JsonParameters.PSobject.Properties["ApprovalStageName"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Participants"))) { #optional property not found
+            $Participants = $null
+        } else {
+            $Participants = $JsonParameters.PSobject.Properties["Participants"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ParticipantDisplayName"))) { #optional property not found
+            $ParticipantDisplayName = $null
+        } else {
+            $ParticipantDisplayName = $JsonParameters.PSobject.Properties["ParticipantDisplayName"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "TicketNumber"))) { #optional property not found
@@ -241,10 +289,22 @@ function ConvertFrom-JsonToAllRequestList {
             $ObjectUrl = $JsonParameters.PSobject.Properties["ObjectUrl"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ObjectID"))) { #optional property not found
+            $ObjectID = $null
+        } else {
+            $ObjectID = $JsonParameters.PSobject.Properties["ObjectID"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "CreatedTime"))) { #optional property not found
             $CreatedTime = $null
         } else {
             $CreatedTime = $JsonParameters.PSobject.Properties["CreatedTime"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "HasSubRequest"))) { #optional property not found
+            $HasSubRequest = $null
+        } else {
+            $HasSubRequest = $JsonParameters.PSobject.Properties["HasSubRequest"].value
         }
 
         $PSO = [PSCustomObject]@{
@@ -253,6 +313,10 @@ function ConvertFrom-JsonToAllRequestList {
             "ServiceName" = ${ServiceName}
             "ServiceType" = ${ServiceType}
             "ServiceTypeDescription" = ${ServiceTypeDescription}
+            "CategoryName" = ${CategoryName}
+            "ApprovalStageName" = ${ApprovalStageName}
+            "Participants" = ${Participants}
+            "ParticipantDisplayName" = ${ParticipantDisplayName}
             "TicketNumber" = ${TicketNumber}
             "Summary" = ${Summary}
             "Requester" = ${Requester}
@@ -267,7 +331,9 @@ function ConvertFrom-JsonToAllRequestList {
             "ServiceAdmin" = ${ServiceAdmin}
             "ServiceAdminDisplayName" = ${ServiceAdminDisplayName}
             "ObjectUrl" = ${ObjectUrl}
+            "ObjectID" = ${ObjectID}
             "CreatedTime" = ${CreatedTime}
+            "HasSubRequest" = ${HasSubRequest}
         }
 
         return $PSO

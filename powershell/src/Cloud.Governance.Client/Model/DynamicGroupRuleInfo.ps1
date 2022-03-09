@@ -45,7 +45,10 @@ function New-DynamicGroupRuleInfo {
         ${DisableEditRule} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${DisableEditRuleValue} = $false
+        ${DisableEditRuleValue} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${MetadataUserList}
     )
 
     Process {
@@ -66,6 +69,7 @@ function New-DynamicGroupRuleInfo {
             "Condition" = ${Condition}
             "DisableEditRule" = ${DisableEditRule}
             "DisableEditRuleValue" = ${DisableEditRuleValue}
+            "MetadataUserList" = ${MetadataUserList}
         }
 
         return $PSO
@@ -88,7 +92,7 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in DynamicGroupRuleInfo
-        $AllProperties = $("Id", "Order", "Relation", "Category", "MetadataId", "MetadataName", "MetadataValue", "MetadataDisplayValue", "MetadataValueAzureUserType", "Condition", "DisableEditRule", "DisableEditRuleValue")
+        $AllProperties = $("Id", "Order", "Relation", "Category", "MetadataId", "MetadataName", "MetadataValue", "MetadataDisplayValue", "MetadataValueAzureUserType", "Condition", "DisableEditRule", "DisableEditRuleValue", "MetadataUserList")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -167,6 +171,12 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
             $DisableEditRuleValue = $JsonParameters.PSobject.Properties["DisableEditRuleValue"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "MetadataUserList"))) { #optional property not found
+            $MetadataUserList = $null
+        } else {
+            $MetadataUserList = $JsonParameters.PSobject.Properties["MetadataUserList"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Order" = ${Order}
@@ -180,6 +190,7 @@ function ConvertFrom-JsonToDynamicGroupRuleInfo {
             "Condition" = ${Condition}
             "DisableEditRule" = ${DisableEditRule}
             "DisableEditRuleValue" = ${DisableEditRuleValue}
+            "MetadataUserList" = ${MetadataUserList}
         }
 
         return $PSO

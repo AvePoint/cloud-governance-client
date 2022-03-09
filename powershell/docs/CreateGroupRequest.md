@@ -34,12 +34,15 @@ Name | Type | Description | Notes
 **DynamicMembershipRules** | [**DynamicGroupRuleInfo[]**](DynamicGroupRuleInfo.md) | Dynamic group membership rules | [optional] 
 **MultiGeoLocation** | [**GeoLocationBase**](GeoLocationBase.md) | Multi-geo locations settings | [optional] 
 **HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site settings | [optional] 
+**TimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | TimeZone Settings | [optional] 
+**LocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | Locale Settings | [optional] 
 **YammerGroupInfo** | **String** | Yammer community info | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
 **NotesToApprovers** | **String** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **String** | Id of questionnaire | [optional] 
+**QuestionnaireResponse** | [**QuestionAnswerResponse[]**](QuestionAnswerResponse.md) | Questionnaire question and answer of request. | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) | Metadata of request. | [optional] 
 **TicketNumber** | **Int32** | Ticket number of request. | [optional] [readonly] [default to 0]
 **Type** | [**ServiceType**](ServiceType.md) | Service type of request. | [optional] [readonly] 
@@ -54,6 +57,9 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **AssignTo** | **String** | Task assignee of request. | [optional] [readonly] 
 **FullPath** | **String** | Object full path of request. | [optional] [readonly] 
+**ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
+**Participants** | **String** | Participants of request. | [optional] [readonly] 
+**ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
 
 ## Examples
 
@@ -90,12 +96,15 @@ $CreateGroupRequest = New-Cloud.Governance.ClientCreateGroupRequest  -GroupType 
  -DynamicMembershipRules null `
  -MultiGeoLocation null `
  -HubSiteSettings null `
+ -TimeZoneSettings null `
+ -LocaleSettings null `
  -YammerGroupInfo null `
  -Id null `
  -ServiceId null `
  -Summary null `
  -NotesToApprovers null `
  -QuestionnaireId null `
+ -QuestionnaireResponse null `
  -Metadatas null `
  -TicketNumber null `
  -Type null `
@@ -109,7 +118,10 @@ $CreateGroupRequest = New-Cloud.Governance.ClientCreateGroupRequest  -GroupType 
  -LastUpdated null `
  -CreatedTime null `
  -AssignTo null `
- -FullPath null
+ -FullPath null `
+ -ApprovalStageName null `
+ -Participants null `
+ -ObjectID null
 ```
 
 - Convert the resource to JSON

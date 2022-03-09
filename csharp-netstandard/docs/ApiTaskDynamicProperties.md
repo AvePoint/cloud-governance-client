@@ -28,6 +28,11 @@ Name | Type | Description | Notes
 **Approver** | **Object** |  | [optional] 
 **ApprovalHistory** | **Object** |  | [optional] 
 **CurrentTaskAction** | **Object** |  | [optional] 
+**GuestUserId** | **Object** |  | [optional] 
+**GuestUserMail** | **Object** |  | [optional] 
+**GuestUserName** | **Object** |  | [optional] 
+**Manager** | **Object** |  | [optional] 
+**ElectionProfile** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

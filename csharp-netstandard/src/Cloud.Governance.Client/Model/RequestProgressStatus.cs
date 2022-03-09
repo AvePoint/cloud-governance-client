@@ -378,6 +378,8 @@ namespace Cloud.Governance.Client.Model
 
         ApplyGuestUserRenewal = 624,
 
+        ApplyGuestUserElection = 625,
+
         CreatingWeb = 700,
 
         ApplyingSecuritySettingsToWeb = 701,
@@ -463,6 +465,20 @@ namespace Cloud.Governance.Client.Model
         AddChannelToDB = 1103,
 
         ApplyPolicyToChannel = 1104,
+
+        ChangeChannelName = 1200,
+
+        ChangeChannelDescription = 1201,
+
+        ChangeChannelMembers = 1202,
+
+        ChangeChannelOwners = 1203,
+
+        ChangeChannelToDB = 1204,
+
+        RegistingSiteToAos = 2000,
+
+        RegistingGroupToAos = 2001,
 
         StartingProcess = 3000
 

@@ -44,7 +44,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="primaryAdministrator">ApiUser model.</param>
         /// <param name="tenantId">tenantId.</param>
-        /// <param name="sensitivity">StringModel model.</param>
+        /// <param name="sensitivity">sensitivity.</param>
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
@@ -151,9 +151,8 @@ namespace Cloud.Governance.Client.Model
         public Guid TenantId { get; set; }
 
         /// <summary>
-        /// StringModel model
+        /// Gets or Sets Sensitivity
         /// </summary>
-        /// <value>StringModel model</value>
         [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
         public StringModel Sensitivity { get; set; }
 

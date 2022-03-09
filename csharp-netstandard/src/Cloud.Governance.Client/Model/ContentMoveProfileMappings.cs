@@ -26,10 +26,10 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentMoveProfileMappings" /> class.
         /// </summary>
-        /// <param name="columnMapping">GuidModel model.</param>
-        /// <param name="contentTypeMapping">GuidModel model.</param>
-        /// <param name="userMapping">GuidModel model.</param>
-        /// <param name="languageMapping">GuidModel model.</param>
+        /// <param name="columnMapping">columnMapping.</param>
+        /// <param name="contentTypeMapping">contentTypeMapping.</param>
+        /// <param name="userMapping">userMapping.</param>
+        /// <param name="languageMapping">languageMapping.</param>
         public ContentMoveProfileMappings(GuidModel columnMapping = default(GuidModel), GuidModel contentTypeMapping = default(GuidModel), GuidModel userMapping = default(GuidModel), GuidModel languageMapping = default(GuidModel))
         {
             this.ColumnMapping = columnMapping;
@@ -39,30 +39,26 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets ColumnMapping
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "columnMapping", EmitDefaultValue = true)]
         public GuidModel ColumnMapping { get; set; }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets ContentTypeMapping
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "contentTypeMapping", EmitDefaultValue = true)]
         public GuidModel ContentTypeMapping { get; set; }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets UserMapping
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "userMapping", EmitDefaultValue = true)]
         public GuidModel UserMapping { get; set; }
 
         /// <summary>
-        /// GuidModel model
+        /// Gets or Sets LanguageMapping
         /// </summary>
-        /// <value>GuidModel model</value>
         [DataMember(Name = "languageMapping", EmitDefaultValue = true)]
         public GuidModel LanguageMapping { get; set; }
 

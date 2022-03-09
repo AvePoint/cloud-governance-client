@@ -450,6 +450,9 @@ No description available.
 .PARAMETER SiteUrlOrTenantId
 No description available.
 
+.PARAMETER GroupEmail
+No description available.
+
 .PARAMETER PeopleFilterProfileId
 No description available.
 
@@ -484,6 +487,9 @@ function Resolve-ACGUsers {
         [String]
         ${SiteUrlOrTenantId},
         [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${GroupEmail},
+        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${PeopleFilterProfileId},
         [String]
@@ -539,6 +545,10 @@ function Resolve-ACGUsers {
 
         if ($SiteUrlOrTenantId) {
             $LocalVarQueryParameters['siteUrlOrTenantId'] = $SiteUrlOrTenantId
+        }
+
+        if ($GroupEmail) {
+            $LocalVarQueryParameters['groupEmail'] = $GroupEmail
         }
 
         if ($PeopleFilterProfileId) {
@@ -599,6 +609,9 @@ No description available.
 .PARAMETER SiteUrlOrTenantId
 No description available.
 
+.PARAMETER GroupEmail
+No description available.
+
 .PARAMETER PeopleFilterProfileId
 No description available.
 
@@ -633,6 +646,9 @@ function Search-ACGUsers {
         [String]
         ${SiteUrlOrTenantId},
         [Parameter(Position = 5, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${GroupEmail},
+        [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${PeopleFilterProfileId},
         [String]
@@ -688,6 +704,10 @@ function Search-ACGUsers {
 
         if ($SiteUrlOrTenantId) {
             $LocalVarQueryParameters['siteUrlOrTenantId'] = $SiteUrlOrTenantId
+        }
+
+        if ($GroupEmail) {
+            $LocalVarQueryParameters['groupEmail'] = $GroupEmail
         }
 
         if ($PeopleFilterProfileId) {

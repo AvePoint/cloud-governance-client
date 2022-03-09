@@ -44,6 +44,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="language">language.</param>
         /// <param name="applyPolicyStatus">applyPolicyStatus (default to 0).</param>
         /// <param name="enableTeamCollaboration">enableTeamCollaboration (default to false).</param>
+        /// <param name="dynamicGroupRules">dynamicGroupRules.</param>
         /// <param name="groupType">groupType.</param>
         /// <param name="createdTime">createdTime.</param>
         /// <param name="owners">owners.</param>
@@ -76,7 +77,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContact">ApiUser model.</param>
         /// <param name="secondaryContact">ApiUser model.</param>
         /// <param name="errorMessage">errorMessage.</param>
-        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), long quotaSize = 0, string storageUsed = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), string sensitivity = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
+        public ApiMyGroup(string objectId = default(string), Guid policyId = default(Guid), Guid tenantId = default(Guid), string groupName = default(string), string email = default(string), string language = default(string), int applyPolicyStatus = 0, bool enableTeamCollaboration = false, List<DynamicGroupRuleModel> dynamicGroupRules = default(List<DynamicGroupRuleModel>), string groupType = default(string), DateTime? createdTime = default(DateTime?), List<ApiUser> owners = default(List<ApiUser>), string preferredDataLocation = default(string), string preferredDataLocationName = default(string), bool enableDynamicMembership = false, string groupTeamSiteUrl = default(string), long quotaSize = 0, string storageUsed = default(string), string teamLink = default(string), string noteBookLink = default(string), string plannerLink = default(string), string classification = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string groupObjectId = default(string), string networkId = default(string), string sensitivity = default(string), Guid id = default(Guid), AutoImportPhase? phase = default(AutoImportPhase?), DateTime? phaseStartTime = default(DateTime?), string phaseDescription = default(string), Guid? autoImportProfileId = default(Guid?), string autoImportProfileName = default(string), string policyName = default(string), string policyDescription = default(string), bool isCurrentRenewer = false, List<ApiUser> phaseAssignees = default(List<ApiUser>), DateTime? phaseDueDate = default(DateTime?), List<RequestMetadata> metadatas = default(List<RequestMetadata>), ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string errorMessage = default(string))
         {
             this.ObjectId = objectId;
             this.PolicyId = policyId;
@@ -86,6 +87,7 @@ namespace Cloud.Governance.Client.Model
             this.Language = language;
             this.ApplyPolicyStatus = applyPolicyStatus;
             this.EnableTeamCollaboration = enableTeamCollaboration;
+            this.DynamicGroupRules = dynamicGroupRules;
             this.GroupType = groupType;
             this.CreatedTime = createdTime;
             this.Owners = owners;
@@ -167,6 +169,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "enableTeamCollaboration", EmitDefaultValue = false)]
         public bool EnableTeamCollaboration { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DynamicGroupRules
+        /// </summary>
+        [DataMember(Name = "dynamicGroupRules", EmitDefaultValue = true)]
+        public List<DynamicGroupRuleModel> DynamicGroupRules { get; set; }
 
         /// <summary>
         /// Gets or Sets GroupType
@@ -366,6 +374,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  ApplyPolicyStatus: ").Append(ApplyPolicyStatus).Append("\n");
             sb.Append("  EnableTeamCollaboration: ").Append(EnableTeamCollaboration).Append("\n");
+            sb.Append("  DynamicGroupRules: ").Append(DynamicGroupRules).Append("\n");
             sb.Append("  GroupType: ").Append(GroupType).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
             sb.Append("  Owners: ").Append(Owners).Append("\n");
@@ -469,6 +478,12 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.EnableTeamCollaboration == input.EnableTeamCollaboration ||
                     this.EnableTeamCollaboration.Equals(input.EnableTeamCollaboration)
+                ) && 
+                (
+                    this.DynamicGroupRules == input.DynamicGroupRules ||
+                    this.DynamicGroupRules != null &&
+                    input.DynamicGroupRules != null &&
+                    this.DynamicGroupRules.SequenceEqual(input.DynamicGroupRules)
                 ) && 
                 (
                     this.GroupType == input.GroupType ||
@@ -653,6 +668,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Language.GetHashCode();
                 hashCode = hashCode * 59 + this.ApplyPolicyStatus.GetHashCode();
                 hashCode = hashCode * 59 + this.EnableTeamCollaboration.GetHashCode();
+                if (this.DynamicGroupRules != null)
+                    hashCode = hashCode * 59 + this.DynamicGroupRules.GetHashCode();
                 if (this.GroupType != null)
                     hashCode = hashCode * 59 + this.GroupType.GetHashCode();
                 if (this.CreatedTime != null)

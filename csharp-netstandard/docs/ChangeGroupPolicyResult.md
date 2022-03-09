@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CurrentPolicy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**CurrentPolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **AllPolicies** | [**List&lt;GuidModel&gt;**](GuidModel.md) |  | [optional] 
 **ChangePolicyAssignBy** | **AssignBy** |  | [optional] 
 **StartDateType** | **StartDateType** |  | [optional] 

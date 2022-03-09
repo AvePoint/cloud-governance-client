@@ -28,6 +28,11 @@ Name | Type | Description | Notes
 **Approver** | [**AnyType**](.md) |  | [optional] 
 **ApprovalHistory** | [**AnyType**](.md) |  | [optional] 
 **CurrentTaskAction** | [**AnyType**](.md) |  | [optional] 
+**GuestUserId** | [**AnyType**](.md) |  | [optional] 
+**GuestUserMail** | [**AnyType**](.md) |  | [optional] 
+**GuestUserName** | [**AnyType**](.md) |  | [optional] 
+**Manager** | [**AnyType**](.md) |  | [optional] 
+**ElectionProfile** | [**AnyType**](.md) |  | [optional] 
 
 ## Examples
 
@@ -57,7 +62,12 @@ $ApiTaskDynamicProperties = New-Cloud.Governance.ClientApiTaskDynamicProperties 
  -TenantId null `
  -Approver null `
  -ApprovalHistory null `
- -CurrentTaskAction null
+ -CurrentTaskAction null `
+ -GuestUserId null `
+ -GuestUserMail null `
+ -GuestUserName null `
+ -Manager null `
+ -ElectionProfile null
 ```
 
 - Convert the resource to JSON

@@ -23,9 +23,9 @@ try {
 
 $CommentsParam =  New-CommentsParam -Comments "test"
 
-$AutoTaskExtendRequest = (New-AutoTaskExtendRequest -Action 1 -ExtendDuration 11 -TaskId "6469647d-4e05-46a2-bf30-ef0fceb12daa"  -Comments $CommentsParam)
+#$AutoTaskExtendRequest = (New-AutoTaskExtendRequest -Action 1 -ExtendDuration 11 -TaskId "6469647d-4e05-46a2-bf30-ef0fceb12daa"  -Comments $CommentsParam)
  
-Submit-ExtendGroupAutoTask -AutoTaskExtendRequest $AutoTaskExtendRequest
+#Submit-ExtendGroupAutoTask -AutoTaskExtendRequest $AutoTaskExtendRequest
 
 #Submit-ExtendSiteAutoTask -AutoTaskExtendRequest $AutoTaskExtendRequest
 

@@ -44,7 +44,9 @@ namespace Cloud.Governance.Client.Model
 
         AutoImportTaskException = 11,
 
-        AutoImportComplete = 12
+        AutoImportComplete = 12,
+
+        ElectionDisabled = 13
 
     }
 

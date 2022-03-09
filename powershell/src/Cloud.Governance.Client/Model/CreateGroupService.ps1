@@ -198,10 +198,22 @@ function New-CreateGroupService {
         ${HubSiteAssignBy} = "BusinessUser",
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
+        ${TimeZoneAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${LocaleAssignBy} = "BusinessUser",
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
         ${MultiGeoSetting},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
         ${HubSiteSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${TimeZoneSettings},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${LocaleSettings},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${HasImpernastionUsers} = $false,
@@ -326,8 +338,12 @@ function New-CreateGroupService {
             "PolicyAssignBy" = ${PolicyAssignBy}
             "SiteDesignAssignBy" = ${SiteDesignAssignBy}
             "HubSiteAssignBy" = ${HubSiteAssignBy}
+            "TimeZoneAssignBy" = ${TimeZoneAssignBy}
+            "LocaleAssignBy" = ${LocaleAssignBy}
             "MultiGeoSetting" = ${MultiGeoSetting}
             "HubSiteSettings" = ${HubSiteSettings}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
             "HasImpernastionUsers" = ${HasImpernastionUsers}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}
@@ -368,7 +384,7 @@ function ConvertFrom-JsonToCreateGroupService {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CreateGroupService
-        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "PreventDuplicateName", "EnableSensitivity", "AllSensitivities", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DisableAddRemoveDynamicMembershipRules", "DynamicMembershipRules", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
+        $AllProperties = $("GroupType", "TenantId", "NetworkId", "EnableTeams", "IsPrivate", "EnableSubscribe", "EnableApplySiteDesign", "EnableOutsideSender", "EnableHideGroupMembership", "EnableClassification", "PreventDuplicateName", "EnableSensitivity", "AllSensitivities", "AllowConfigureLeasePeriod", "ShowNotebookLink", "ShowConversationsLink", "ShowFilesLink", "ShowTeamSiteLink", "ShowPlannerLink", "ShowYammerGroupLink", "Classifications", "Sensitivities", "SiteDesigns", "AddGroupMemberType", "SelectedPolicies", "SelectedLanguages", "TeamsSettings", "GroupNameConstructureSettings", "GroupIdConstructureSettings", "EnableInstallApp", "EnableInstallPanel", "TemplateSettings", "DefaultPrimaryContact", "DefaultSecondaryContact", "DefaultOwners", "DefaultMembers", "DisableAddRemoveDynamicMembershipRules", "DynamicMembershipRules", "DefaultPolicy", "DefaultClassification", "DefaultSensitivity", "DefaultLanguage", "DefaultSiteDesign", "DefaultOwnersReal", "DefaultMembersReal", "DefaultPrimaryContactReal", "DefaultSecondaryContactReal", "MemberAssignBy", "OwnerAssignBy", "PrivacyAssignBy", "SubscribeAssignBy", "OutsideSenderAssignBy", "ClassificationAssignBy", "SensitivityAssignBy", "LanguageAssignBy", "SecondaryContactAssignBy", "PrimaryContactAssignBy", "EnableDynamicMembership", "HideGroupMembershipAssignBy", "PolicyAssignBy", "SiteDesignAssignBy", "HubSiteAssignBy", "TimeZoneAssignBy", "LocaleAssignBy", "MultiGeoSetting", "IsShowHubSiteSection", "HubSiteSettings", "TimeZoneSettings", "LocaleSettings", "HasImpernastionUsers", "PeoplePickerFilterProfileId", "RequestTemplate", "Metadatas", "HideRequestSummary", "Id", "Name", "Description", "Type", "ServiceContact", "ServiceAdminContact", "ApproversContainManagerRole", "Status", "ShowServiceInCatalog", "CustomActions", "ApprovalProcessId", "LanguageId", "CategoryId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -747,6 +763,18 @@ function ConvertFrom-JsonToCreateGroupService {
             $HubSiteAssignBy = $JsonParameters.PSobject.Properties["HubSiteAssignBy"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TimeZoneAssignBy"))) { #optional property not found
+            $TimeZoneAssignBy = $null
+        } else {
+            $TimeZoneAssignBy = $JsonParameters.PSobject.Properties["TimeZoneAssignBy"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LocaleAssignBy"))) { #optional property not found
+            $LocaleAssignBy = $null
+        } else {
+            $LocaleAssignBy = $JsonParameters.PSobject.Properties["LocaleAssignBy"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "MultiGeoSetting"))) { #optional property not found
             $MultiGeoSetting = $null
         } else {
@@ -763,6 +791,18 @@ function ConvertFrom-JsonToCreateGroupService {
             $HubSiteSettings = $null
         } else {
             $HubSiteSettings = $JsonParameters.PSobject.Properties["HubSiteSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TimeZoneSettings"))) { #optional property not found
+            $TimeZoneSettings = $null
+        } else {
+            $TimeZoneSettings = $JsonParameters.PSobject.Properties["TimeZoneSettings"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "LocaleSettings"))) { #optional property not found
+            $LocaleSettings = $null
+        } else {
+            $LocaleSettings = $JsonParameters.PSobject.Properties["LocaleSettings"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "HasImpernastionUsers"))) { #optional property not found
@@ -936,9 +976,13 @@ function ConvertFrom-JsonToCreateGroupService {
             "PolicyAssignBy" = ${PolicyAssignBy}
             "SiteDesignAssignBy" = ${SiteDesignAssignBy}
             "HubSiteAssignBy" = ${HubSiteAssignBy}
+            "TimeZoneAssignBy" = ${TimeZoneAssignBy}
+            "LocaleAssignBy" = ${LocaleAssignBy}
             "MultiGeoSetting" = ${MultiGeoSetting}
             "IsShowHubSiteSection" = ${IsShowHubSiteSection}
             "HubSiteSettings" = ${HubSiteSettings}
+            "TimeZoneSettings" = ${TimeZoneSettings}
+            "LocaleSettings" = ${LocaleSettings}
             "HasImpernastionUsers" = ${HasImpernastionUsers}
             "PeoplePickerFilterProfileId" = ${PeoplePickerFilterProfileId}
             "RequestTemplate" = ${RequestTemplate}

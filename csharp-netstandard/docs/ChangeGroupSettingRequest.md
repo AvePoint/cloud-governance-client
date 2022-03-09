@@ -39,11 +39,16 @@ Name | Type | Description | Notes
 **NetworkId** | **string** |  | [optional] 
 **GroupObjectId** | **string** |  | [optional] 
 **EnableTeamCollaboration** | **bool** |  | [optional] [default to false]
+**TimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | TimeZoneSettings | [optional] 
+**OriginalTimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | OriginalTimeZoneSettings | [optional] 
+**LocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | LocaleSettings | [optional] 
+**OriginalLocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | OriginalLocaleSettings | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 
 **NotesToApprovers** | **string** | Notes to approvers. | [optional] 
 **QuestionnaireId** | **Guid?** | Id of questionnaire | [optional] 
+**QuestionnaireResponse** | [**List&lt;QuestionAnswerResponse&gt;**](QuestionAnswerResponse.md) | Questionnaire question and answer of request. | [optional] 
 **Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) | Metadata of request. | [optional] 
 **TicketNumber** | **int?** | Ticket number of request. | [optional] [readonly] [default to 0]
 **Type** | **ServiceType** | Service type of request. | [optional] [readonly] 
@@ -58,6 +63,9 @@ Name | Type | Description | Notes
 **CreatedTime** | **DateTime?** | Created time of request. | [optional] [readonly] 
 **AssignTo** | **string** | Task assignee of request. | [optional] [readonly] 
 **FullPath** | **string** | Object full path of request. | [optional] [readonly] 
+**ApprovalStageName** | **string** | Approval stage name of request. | [optional] [readonly] 
+**Participants** | **string** | Participants of request. | [optional] [readonly] 
+**ObjectID** | **string** | Object full path/email/private channel of request. | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

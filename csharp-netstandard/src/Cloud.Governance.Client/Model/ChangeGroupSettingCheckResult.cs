@@ -45,7 +45,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isEnableSubscribeMembers">isEnableSubscribeMembers (default to false).</param>
         /// <param name="isEnableOutsideSender">isEnableOutsideSender (default to false).</param>
         /// <param name="classification">classification.</param>
-        /// <param name="sensitivity">StringModel model.</param>
+        /// <param name="sensitivity">sensitivity.</param>
         /// <param name="isTeamsEnabled">isTeamsEnabled (default to false).</param>
         /// <param name="enableManageGroupSharing">enableManageGroupSharing (default to false).</param>
         /// <param name="enableInviteAuthorizedGuestUser">enableInviteAuthorizedGuestUser (default to false).</param>
@@ -61,10 +61,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="groupObjectType">groupObjectType.</param>
         /// <param name="networkId">networkId.</param>
         /// <param name="groupObjectId">groupObjectId.</param>
+        /// <param name="timeZoneSettings">timezone settings.</param>
+        /// <param name="localeSettings">Locale settings.</param>
         /// <param name="isValid">isValid (default to false).</param>
         /// <param name="errorMessage">errorMessage.</param>
         /// <param name="messageCode">messageCode.</param>
-        public ChangeGroupSettingCheckResult(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string groupId = default(string), string groupName = default(string), string groupEmail = default(string), string groupDescription = default(string), bool isEnableSubscribeMembers = false, bool isEnableOutsideSender = false, string classification = default(string), StringModel sensitivity = default(StringModel), bool isTeamsEnabled = false, bool enableManageGroupSharing = false, bool enableInviteAuthorizedGuestUser = false, bool enableInviteGuestUser = false, bool enableDynamicMembership = false, bool enableTeamCollaboration = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool enableChangeMembershipType = false, string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
+        public ChangeGroupSettingCheckResult(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), string groupId = default(string), string groupName = default(string), string groupEmail = default(string), string groupDescription = default(string), bool isEnableSubscribeMembers = false, bool isEnableOutsideSender = false, string classification = default(string), StringModel sensitivity = default(StringModel), bool isTeamsEnabled = false, bool enableManageGroupSharing = false, bool enableInviteAuthorizedGuestUser = false, bool enableInviteGuestUser = false, bool enableDynamicMembership = false, bool enableTeamCollaboration = false, bool isHubSite = false, Guid? associatedHubSiteId = default(Guid?), List<DynamicGroupRuleInfo> dynamicMembershipRules = default(List<DynamicGroupRuleInfo>), List<CustomMetadata> metadatas = default(List<CustomMetadata>), bool enableChangeMembershipType = false, string yammerGroupInfo = default(string), GroupObjectType? groupObjectType = default(GroupObjectType?), string networkId = default(string), string groupObjectId = default(string), TimeZoneSettings timeZoneSettings = default(TimeZoneSettings), LocaleSettings localeSettings = default(LocaleSettings), bool isValid = false, string errorMessage = default(string), MessageCode? messageCode = default(MessageCode?))
         {
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;
@@ -91,6 +93,8 @@ namespace Cloud.Governance.Client.Model
             this.GroupObjectType = groupObjectType;
             this.NetworkId = networkId;
             this.GroupObjectId = groupObjectId;
+            this.TimeZoneSettings = timeZoneSettings;
+            this.LocaleSettings = localeSettings;
             this.IsValid = isValid;
             this.ErrorMessage = errorMessage;
             this.MessageCode = messageCode;
@@ -153,9 +157,8 @@ namespace Cloud.Governance.Client.Model
         public string Classification { get; set; }
 
         /// <summary>
-        /// StringModel model
+        /// Gets or Sets Sensitivity
         /// </summary>
-        /// <value>StringModel model</value>
         [DataMember(Name = "sensitivity", EmitDefaultValue = true)]
         public StringModel Sensitivity { get; set; }
 
@@ -244,6 +247,20 @@ namespace Cloud.Governance.Client.Model
         public string GroupObjectId { get; set; }
 
         /// <summary>
+        /// timezone settings
+        /// </summary>
+        /// <value>timezone settings</value>
+        [DataMember(Name = "timeZoneSettings", EmitDefaultValue = true)]
+        public TimeZoneSettings TimeZoneSettings { get; set; }
+
+        /// <summary>
+        /// Locale settings
+        /// </summary>
+        /// <value>Locale settings</value>
+        [DataMember(Name = "localeSettings", EmitDefaultValue = true)]
+        public LocaleSettings LocaleSettings { get; set; }
+
+        /// <summary>
         /// Gets or Sets IsValid
         /// </summary>
         [DataMember(Name = "isValid", EmitDefaultValue = false)]
@@ -288,6 +305,8 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  GroupObjectType: ").Append(GroupObjectType).Append("\n");
             sb.Append("  NetworkId: ").Append(NetworkId).Append("\n");
             sb.Append("  GroupObjectId: ").Append(GroupObjectId).Append("\n");
+            sb.Append("  TimeZoneSettings: ").Append(TimeZoneSettings).Append("\n");
+            sb.Append("  LocaleSettings: ").Append(LocaleSettings).Append("\n");
             sb.Append("  IsValid: ").Append(IsValid).Append("\n");
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  MessageCode: ").Append(MessageCode).Append("\n");
@@ -442,6 +461,16 @@ namespace Cloud.Governance.Client.Model
                     this.GroupObjectId.Equals(input.GroupObjectId))
                 ) && 
                 (
+                    this.TimeZoneSettings == input.TimeZoneSettings ||
+                    (this.TimeZoneSettings != null &&
+                    this.TimeZoneSettings.Equals(input.TimeZoneSettings))
+                ) && 
+                (
+                    this.LocaleSettings == input.LocaleSettings ||
+                    (this.LocaleSettings != null &&
+                    this.LocaleSettings.Equals(input.LocaleSettings))
+                ) && 
+                (
                     this.IsValid == input.IsValid ||
                     this.IsValid.Equals(input.IsValid)
                 ) && 
@@ -504,6 +533,10 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.NetworkId.GetHashCode();
                 if (this.GroupObjectId != null)
                     hashCode = hashCode * 59 + this.GroupObjectId.GetHashCode();
+                if (this.TimeZoneSettings != null)
+                    hashCode = hashCode * 59 + this.TimeZoneSettings.GetHashCode();
+                if (this.LocaleSettings != null)
+                    hashCode = hashCode * 59 + this.LocaleSettings.GetHashCode();
                 hashCode = hashCode * 59 + this.IsValid.GetHashCode();
                 if (this.ErrorMessage != null)
                     hashCode = hashCode * 59 + this.ErrorMessage.GetHashCode();

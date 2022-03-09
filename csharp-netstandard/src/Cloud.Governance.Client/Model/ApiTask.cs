@@ -56,10 +56,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="lastModifiedTime">lastModifiedTime.</param>
         /// <param name="taskType">taskType.</param>
         /// <param name="allowReassign">allowReassign (default to false).</param>
+        /// <param name="assignee">ApiUser model.</param>
         /// <param name="allowEdit">allowEdit (default to false).</param>
         /// <param name="requestTicketNumber">requestTicketNumber (default to 0).</param>
         /// <param name="dynamicActions">dynamicActions.</param>
-        public ApiTask(ApiTaskDynamicProperties dynamicProperties = default(ApiTaskDynamicProperties), Guid id = default(Guid), string title = default(string), string description = default(string), Guid requestGuid = default(Guid), TaskResult? status = default(TaskResult?), string statusDescription = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string comments = default(string), List<TaskComment> allComments = default(List<TaskComment>), string errorMessage = default(string), DateTime lastModifiedTime = default(DateTime), TaskType? taskType = default(TaskType?), bool allowReassign = false, bool allowEdit = false, int requestTicketNumber = 0, List<TaskDynamicActions> dynamicActions = default(List<TaskDynamicActions>))
+        public ApiTask(ApiTaskDynamicProperties dynamicProperties = default(ApiTaskDynamicProperties), Guid id = default(Guid), string title = default(string), string description = default(string), Guid requestGuid = default(Guid), TaskResult? status = default(TaskResult?), string statusDescription = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string comments = default(string), List<TaskComment> allComments = default(List<TaskComment>), string errorMessage = default(string), DateTime lastModifiedTime = default(DateTime), TaskType? taskType = default(TaskType?), bool allowReassign = false, ApiUser assignee = default(ApiUser), bool allowEdit = false, int requestTicketNumber = 0, List<TaskDynamicActions> dynamicActions = default(List<TaskDynamicActions>))
         {
             this.DynamicProperties = dynamicProperties;
             this.Id = id;
@@ -76,6 +77,7 @@ namespace Cloud.Governance.Client.Model
             this.LastModifiedTime = lastModifiedTime;
             this.TaskType = taskType;
             this.AllowReassign = allowReassign;
+            this.Assignee = assignee;
             this.AllowEdit = allowEdit;
             this.RequestTicketNumber = requestTicketNumber;
             this.DynamicActions = dynamicActions;
@@ -154,6 +156,13 @@ namespace Cloud.Governance.Client.Model
         public bool AllowReassign { get; set; }
 
         /// <summary>
+        /// ApiUser model
+        /// </summary>
+        /// <value>ApiUser model</value>
+        [DataMember(Name = "assignee", EmitDefaultValue = true)]
+        public ApiUser Assignee { get; set; }
+
+        /// <summary>
         /// Gets or Sets AllowEdit
         /// </summary>
         [DataMember(Name = "allowEdit", EmitDefaultValue = false)]
@@ -194,6 +203,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LastModifiedTime: ").Append(LastModifiedTime).Append("\n");
             sb.Append("  TaskType: ").Append(TaskType).Append("\n");
             sb.Append("  AllowReassign: ").Append(AllowReassign).Append("\n");
+            sb.Append("  Assignee: ").Append(Assignee).Append("\n");
             sb.Append("  AllowEdit: ").Append(AllowEdit).Append("\n");
             sb.Append("  RequestTicketNumber: ").Append(RequestTicketNumber).Append("\n");
             sb.Append("  DynamicActions: ").Append(DynamicActions).Append("\n");
@@ -304,6 +314,11 @@ namespace Cloud.Governance.Client.Model
                     this.AllowReassign.Equals(input.AllowReassign)
                 ) && 
                 (
+                    this.Assignee == input.Assignee ||
+                    (this.Assignee != null &&
+                    this.Assignee.Equals(input.Assignee))
+                ) && 
+                (
                     this.AllowEdit == input.AllowEdit ||
                     this.AllowEdit.Equals(input.AllowEdit)
                 ) && 
@@ -354,6 +369,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.LastModifiedTime.GetHashCode();
                 hashCode = hashCode * 59 + this.TaskType.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowReassign.GetHashCode();
+                if (this.Assignee != null)
+                    hashCode = hashCode * 59 + this.Assignee.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowEdit.GetHashCode();
                 hashCode = hashCode * 59 + this.RequestTicketNumber.GetHashCode();
                 if (this.DynamicActions != null)

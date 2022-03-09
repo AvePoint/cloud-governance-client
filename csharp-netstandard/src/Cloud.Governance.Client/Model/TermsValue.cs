@@ -33,9 +33,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// GuidModel model
+        /// Id and name of term store.
         /// </summary>
-        /// <value>GuidModel model</value>
+        /// <value>Id and name of term store.</value>
         [DataMember(Name = "termStore", EmitDefaultValue = true)]
         public GuidModel TermStore { get; private set; }
 
@@ -49,9 +49,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// GuidModel model
+        /// Id and name of term group.
         /// </summary>
-        /// <value>GuidModel model</value>
+        /// <value>Id and name of term group.</value>
         [DataMember(Name = "termGroup", EmitDefaultValue = true)]
         public GuidModel TermGroup { get; private set; }
 
@@ -65,9 +65,9 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
-        /// GuidModel model
+        /// Id and name of term set.
         /// </summary>
-        /// <value>GuidModel model</value>
+        /// <value>Id and name of term set.</value>
         [DataMember(Name = "termSet", EmitDefaultValue = true)]
         public GuidModel TermSet { get; private set; }
 

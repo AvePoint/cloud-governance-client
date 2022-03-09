@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **PolicyName** | **String** |  | [optional] 
 **PolicyDisplay** | **String** |  | [optional] 
 **PolicyId** | **String** |  | [optional] 
+**EnableDynamicMembership** | **Boolean** |  | [optional] [default to $false]
+**EnableDynamicMembershipDescription** | **String** |  | [optional] 
 **PrimaryAdministrators** | **String** |  | [optional] 
 **PrimaryAdministratorDisplayNames** | **String** |  | [optional] 
 **AdditionalAdministrators** | **String** |  | [optional] 
@@ -82,6 +84,8 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -PolicyName null `
  -PolicyDisplay null `
  -PolicyId null `
+ -EnableDynamicMembership null `
+ -EnableDynamicMembershipDescription null `
  -PrimaryAdministrators null `
  -PrimaryAdministratorDisplayNames null `
  -AdditionalAdministrators null `
