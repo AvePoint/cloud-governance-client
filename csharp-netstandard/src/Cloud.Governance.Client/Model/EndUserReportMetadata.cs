@@ -33,13 +33,15 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
+        /// <param name="displayName">displayName.</param>
         /// <param name="value">value.</param>
         /// <param name="displayValue">displayValue.</param>
         /// <param name="type">type.</param>
-        public EndUserReportMetadata(string id = default(string), string name = default(string), string value = default(string), string displayValue = default(string), MetadataFieldType? type = default(MetadataFieldType?))
+        public EndUserReportMetadata(string id = default(string), string name = default(string), string displayName = default(string), string value = default(string), string displayValue = default(string), MetadataFieldType? type = default(MetadataFieldType?))
         {
             this.Id = id;
             this.Name = name;
+            this.DisplayName = displayName;
             this.Value = value;
             this.DisplayValue = displayValue;
             this.Type = type;
@@ -56,6 +58,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisplayName
+        /// </summary>
+        [DataMember(Name = "displayName", EmitDefaultValue = true)]
+        public string DisplayName { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
@@ -79,6 +87,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class EndUserReportMetadata {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  DisplayValue: ").Append(DisplayValue).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -127,6 +136,11 @@ namespace Cloud.Governance.Client.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.DisplayName == input.DisplayName ||
+                    (this.DisplayName != null &&
+                    this.DisplayName.Equals(input.DisplayName))
+                ) && 
+                (
                     this.Value == input.Value ||
                     (this.Value != null &&
                     this.Value.Equals(input.Value))
@@ -155,6 +169,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.DisplayName != null)
+                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 if (this.DisplayValue != null)

@@ -31,13 +31,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="primaryContactNotifiedEmail">primaryContactNotifiedEmail.</param>
         /// <param name="secondaryContactNotifiedEmail">secondaryContactNotifiedEmail.</param>
         /// <param name="workspace">workspace.</param>
-        public SpecifyContactParameter(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), Guid primaryContactNotifiedEmail = default(Guid), Guid secondaryContactNotifiedEmail = default(Guid), List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>))
+        /// <param name="isSelectAllWorkspace">isSelectAllWorkspace (default to false).</param>
+        public SpecifyContactParameter(ApiUser primaryContact = default(ApiUser), ApiUser secondaryContact = default(ApiUser), Guid primaryContactNotifiedEmail = default(Guid), Guid secondaryContactNotifiedEmail = default(Guid), List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>), bool isSelectAllWorkspace = false)
         {
             this.PrimaryContact = primaryContact;
             this.SecondaryContact = secondaryContact;
             this.PrimaryContactNotifiedEmail = primaryContactNotifiedEmail;
             this.SecondaryContactNotifiedEmail = secondaryContactNotifiedEmail;
             this.Workspace = workspace;
+            this.IsSelectAllWorkspace = isSelectAllWorkspace;
         }
 
         /// <summary>
@@ -73,6 +75,12 @@ namespace Cloud.Governance.Client.Model
         public List<WorkspaceIdTypeModel> Workspace { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsSelectAllWorkspace
+        /// </summary>
+        [DataMember(Name = "isSelectAllWorkspace", EmitDefaultValue = false)]
+        public bool IsSelectAllWorkspace { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -85,6 +93,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  PrimaryContactNotifiedEmail: ").Append(PrimaryContactNotifiedEmail).Append("\n");
             sb.Append("  SecondaryContactNotifiedEmail: ").Append(SecondaryContactNotifiedEmail).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
+            sb.Append("  IsSelectAllWorkspace: ").Append(IsSelectAllWorkspace).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -144,6 +153,10 @@ namespace Cloud.Governance.Client.Model
                     this.Workspace != null &&
                     input.Workspace != null &&
                     this.Workspace.SequenceEqual(input.Workspace)
+                ) && 
+                (
+                    this.IsSelectAllWorkspace == input.IsSelectAllWorkspace ||
+                    this.IsSelectAllWorkspace.Equals(input.IsSelectAllWorkspace)
                 );
         }
 
@@ -166,6 +179,7 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.SecondaryContactNotifiedEmail.GetHashCode();
                 if (this.Workspace != null)
                     hashCode = hashCode * 59 + this.Workspace.GetHashCode();
+                hashCode = hashCode * 59 + this.IsSelectAllWorkspace.GetHashCode();
                 return hashCode;
             }
         }

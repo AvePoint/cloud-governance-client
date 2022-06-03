@@ -18,6 +18,9 @@ function New-EndUserReportMetadata {
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${DisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -35,6 +38,7 @@ function New-EndUserReportMetadata {
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
+            "DisplayName" = ${DisplayName}
             "Value" = ${Value}
             "DisplayValue" = ${DisplayValue}
             "Type" = ${Type}
@@ -60,7 +64,7 @@ function ConvertFrom-JsonToEndUserReportMetadata {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in EndUserReportMetadata
-        $AllProperties = $("Id", "Name", "Value", "DisplayValue", "Type")
+        $AllProperties = $("Id", "Name", "DisplayName", "Value", "DisplayValue", "Type")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -77,6 +81,12 @@ function ConvertFrom-JsonToEndUserReportMetadata {
             $Name = $null
         } else {
             $Name = $JsonParameters.PSobject.Properties["Name"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayName"))) { #optional property not found
+            $DisplayName = $null
+        } else {
+            $DisplayName = $JsonParameters.PSobject.Properties["DisplayName"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Value"))) { #optional property not found
@@ -100,6 +110,7 @@ function ConvertFrom-JsonToEndUserReportMetadata {
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
+            "DisplayName" = ${DisplayName}
             "Value" = ${Value}
             "DisplayValue" = ${DisplayValue}
             "Type" = ${Type}

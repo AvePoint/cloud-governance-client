@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getallmetadata"></a>
 # **GetAllMetadata**
-> MetadataGridModelPageResult GetAllMetadata (string filter = null, string orderby = null, string search = null, int? top = null, string skip = null, string nexttoken = null)
+> OldMetadataGridModelPageResult GetAllMetadata (string filter = null, string orderby = null, string search = null, int? top = null, string skip = null, string nexttoken = null)
 
 get all metadata
 
@@ -46,14 +46,14 @@ namespace Example
             var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional) 
             var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional) 
             var search = search_example;  // string | Search for name (optional) 
-            var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
+            var top = 56;  // int? |  Define the number of records you want to return, max value is 2000, default value is 200 (optional) 
             var skip = skip_example;  // string |  Define the number of records you want to skip, default value is 0 (optional) 
             var nexttoken = nexttoken_example;  // string |  Use the next token to get the next paging result (optional) 
 
             try
             {
                 // get all metadata
-                MetadataGridModelPageResult result = apiInstance.GetAllMetadata(filter, orderby, search, top, skip, nexttoken);
+                OldMetadataGridModelPageResult result = apiInstance.GetAllMetadata(filter, orderby, search, top, skip, nexttoken);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -74,13 +74,13 @@ Name | Type | Description  | Notes
  **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime | [optional] 
  **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime | [optional] 
  **search** | **string**| Search for name | [optional] 
- **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **top** | **int?**|  Define the number of records you want to return, max value is 2000, default value is 200 | [optional] 
  **skip** | **string**|  Define the number of records you want to skip, default value is 0 | [optional] 
  **nexttoken** | **string**|  Use the next token to get the next paging result | [optional] 
 
 ### Return type
 
-[**MetadataGridModelPageResult**](MetadataGridModelPageResult.md)
+[**OldMetadataGridModelPageResult**](OldMetadataGridModelPageResult.md)
 
 ### Authorization
 

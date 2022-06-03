@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **PrimaryContactNotifiedEmail** | **String** |  | [optional] 
 **SecondaryContactNotifiedEmail** | **String** |  | [optional] 
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
+**IsSelectAllWorkspace** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -17,7 +18,8 @@ $SpecifyContactParameter = New-Cloud.Governance.ClientSpecifyContactParameter  -
  -SecondaryContact null `
  -PrimaryContactNotifiedEmail null `
  -SecondaryContactNotifiedEmail null `
- -Workspace null
+ -Workspace null `
+ -IsSelectAllWorkspace null
 ```
 
 - Convert the resource to JSON

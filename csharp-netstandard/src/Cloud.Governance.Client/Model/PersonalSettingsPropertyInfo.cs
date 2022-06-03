@@ -43,11 +43,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="selectedLanguages">selectedLanguages.</param>
         /// <param name="isUsingBrowserLanguage">isUsingBrowserLanguage (default to false).</param>
         /// <param name="themeCode">themeCode.</param>
-        public PersonalSettingsPropertyInfo(List<int> selectedLanguages = default(List<int>), bool isUsingBrowserLanguage = false, string themeCode = default(string))
+        /// <param name="isEnabledInTeamsApp">isEnabledInTeamsApp (default to false).</param>
+        public PersonalSettingsPropertyInfo(List<int> selectedLanguages = default(List<int>), bool isUsingBrowserLanguage = false, string themeCode = default(string), bool isEnabledInTeamsApp = false)
         {
             this.SelectedLanguages = selectedLanguages;
             this.IsUsingBrowserLanguage = isUsingBrowserLanguage;
             this.ThemeCode = themeCode;
+            this.IsEnabledInTeamsApp = isEnabledInTeamsApp;
         }
 
         /// <summary>
@@ -69,6 +71,12 @@ namespace Cloud.Governance.Client.Model
         public string ThemeCode { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsEnabledInTeamsApp
+        /// </summary>
+        [DataMember(Name = "isEnabledInTeamsApp", EmitDefaultValue = false)]
+        public bool IsEnabledInTeamsApp { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -80,6 +88,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsUsingBrowserLanguage: ").Append(IsUsingBrowserLanguage).Append("\n");
             sb.Append("  ThemeCode: ").Append(ThemeCode).Append("\n");
             sb.Append("  ThemeType: ").Append(ThemeType).Append("\n");
+            sb.Append("  IsEnabledInTeamsApp: ").Append(IsEnabledInTeamsApp).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +141,10 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.ThemeType == input.ThemeType ||
                     this.ThemeType.Equals(input.ThemeType)
+                ) && 
+                (
+                    this.IsEnabledInTeamsApp == input.IsEnabledInTeamsApp ||
+                    this.IsEnabledInTeamsApp.Equals(input.IsEnabledInTeamsApp)
                 );
         }
 
@@ -150,6 +163,7 @@ namespace Cloud.Governance.Client.Model
                 if (this.ThemeCode != null)
                     hashCode = hashCode * 59 + this.ThemeCode.GetHashCode();
                 hashCode = hashCode * 59 + this.ThemeType.GetHashCode();
+                hashCode = hashCode * 59 + this.IsEnabledInTeamsApp.GetHashCode();
                 return hashCode;
             }
         }

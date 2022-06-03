@@ -46,6 +46,7 @@ namespace Cloud.Governance.Client.Model
         /// <param name="serviceName">serviceName.</param>
         /// <param name="serviceType">serviceType.</param>
         /// <param name="serviceTypeDescription">serviceTypeDescription.</param>
+        /// <param name="category">category.</param>
         /// <param name="categoryName">categoryName.</param>
         /// <param name="approvalStageName">approvalStageName.</param>
         /// <param name="participants">participants.</param>
@@ -61,19 +62,22 @@ namespace Cloud.Governance.Client.Model
         /// <param name="modified">modified.</param>
         /// <param name="assignTo">assignTo.</param>
         /// <param name="assignToDisplayName">assignToDisplayName.</param>
+        /// <param name="assignees">assignees.</param>
         /// <param name="serviceAdmin">serviceAdmin.</param>
         /// <param name="serviceAdminDisplayName">serviceAdminDisplayName.</param>
         /// <param name="objectUrl">objectUrl.</param>
         /// <param name="objectID">objectID.</param>
         /// <param name="createdTime">createdTime.</param>
         /// <param name="hasSubRequest">hasSubRequest (default to false).</param>
-        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), string categoryName = default(string), string approvalStageName = default(string), string participants = default(string), string participantDisplayName = default(string), int ticketNumber = 0, string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), string serviceAdmin = default(string), string serviceAdminDisplayName = default(string), string objectUrl = default(string), string objectID = default(string), string createdTime = default(string), bool hasSubRequest = false)
+        /// <param name="metadata">metadata.</param>
+        public AllRequestList(Guid id = default(Guid), Guid serviceId = default(Guid), string serviceName = default(string), ServiceType? serviceType = default(ServiceType?), string serviceTypeDescription = default(string), Guid category = default(Guid), string categoryName = default(string), string approvalStageName = default(string), string participants = default(string), string participantDisplayName = default(string), int ticketNumber = 0, string summary = default(string), string requester = default(string), string requesterDisplayName = default(string), RequestProgressStatus? detailStatus = default(RequestProgressStatus?), string detailStatusDescription = default(string), ApiRequestProgressStatus? progressStatus = default(ApiRequestProgressStatus?), string progressStatusDescription = default(string), DateTime modified = default(DateTime), string assignTo = default(string), string assignToDisplayName = default(string), List<ApiUser> assignees = default(List<ApiUser>), string serviceAdmin = default(string), string serviceAdminDisplayName = default(string), string objectUrl = default(string), string objectID = default(string), DateTime createdTime = default(DateTime), bool hasSubRequest = false, List<ReportMetadata> metadata = default(List<ReportMetadata>))
         {
             this.Id = id;
             this.ServiceId = serviceId;
             this.ServiceName = serviceName;
             this.ServiceType = serviceType;
             this.ServiceTypeDescription = serviceTypeDescription;
+            this.Category = category;
             this.CategoryName = categoryName;
             this.ApprovalStageName = approvalStageName;
             this.Participants = participants;
@@ -89,12 +93,14 @@ namespace Cloud.Governance.Client.Model
             this.Modified = modified;
             this.AssignTo = assignTo;
             this.AssignToDisplayName = assignToDisplayName;
+            this.Assignees = assignees;
             this.ServiceAdmin = serviceAdmin;
             this.ServiceAdminDisplayName = serviceAdminDisplayName;
             this.ObjectUrl = objectUrl;
             this.ObjectID = objectID;
             this.CreatedTime = createdTime;
             this.HasSubRequest = hasSubRequest;
+            this.Metadata = metadata;
         }
 
         /// <summary>
@@ -120,6 +126,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "serviceTypeDescription", EmitDefaultValue = true)]
         public string ServiceTypeDescription { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Category
+        /// </summary>
+        [DataMember(Name = "category", EmitDefaultValue = false)]
+        public Guid Category { get; set; }
 
         /// <summary>
         /// Gets or Sets CategoryName
@@ -200,6 +212,12 @@ namespace Cloud.Governance.Client.Model
         public string AssignToDisplayName { get; set; }
 
         /// <summary>
+        /// Gets or Sets Assignees
+        /// </summary>
+        [DataMember(Name = "assignees", EmitDefaultValue = true)]
+        public List<ApiUser> Assignees { get; set; }
+
+        /// <summary>
         /// Gets or Sets ServiceAdmin
         /// </summary>
         [DataMember(Name = "serviceAdmin", EmitDefaultValue = true)]
@@ -226,14 +244,20 @@ namespace Cloud.Governance.Client.Model
         /// <summary>
         /// Gets or Sets CreatedTime
         /// </summary>
-        [DataMember(Name = "createdTime", EmitDefaultValue = true)]
-        public string CreatedTime { get; set; }
+        [DataMember(Name = "createdTime", EmitDefaultValue = false)]
+        public DateTime CreatedTime { get; set; }
 
         /// <summary>
         /// Gets or Sets HasSubRequest
         /// </summary>
         [DataMember(Name = "hasSubRequest", EmitDefaultValue = false)]
         public bool HasSubRequest { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Metadata
+        /// </summary>
+        [DataMember(Name = "metadata", EmitDefaultValue = true)]
+        public List<ReportMetadata> Metadata { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -248,6 +272,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
             sb.Append("  ServiceType: ").Append(ServiceType).Append("\n");
             sb.Append("  ServiceTypeDescription: ").Append(ServiceTypeDescription).Append("\n");
+            sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  CategoryName: ").Append(CategoryName).Append("\n");
             sb.Append("  ApprovalStageName: ").Append(ApprovalStageName).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
@@ -263,12 +288,14 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  Modified: ").Append(Modified).Append("\n");
             sb.Append("  AssignTo: ").Append(AssignTo).Append("\n");
             sb.Append("  AssignToDisplayName: ").Append(AssignToDisplayName).Append("\n");
+            sb.Append("  Assignees: ").Append(Assignees).Append("\n");
             sb.Append("  ServiceAdmin: ").Append(ServiceAdmin).Append("\n");
             sb.Append("  ServiceAdminDisplayName: ").Append(ServiceAdminDisplayName).Append("\n");
             sb.Append("  ObjectUrl: ").Append(ObjectUrl).Append("\n");
             sb.Append("  ObjectID: ").Append(ObjectID).Append("\n");
             sb.Append("  CreatedTime: ").Append(CreatedTime).Append("\n");
             sb.Append("  HasSubRequest: ").Append(HasSubRequest).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -326,6 +353,11 @@ namespace Cloud.Governance.Client.Model
                     this.ServiceTypeDescription == input.ServiceTypeDescription ||
                     (this.ServiceTypeDescription != null &&
                     this.ServiceTypeDescription.Equals(input.ServiceTypeDescription))
+                ) && 
+                (
+                    this.Category == input.Category ||
+                    (this.Category != null &&
+                    this.Category.Equals(input.Category))
                 ) && 
                 (
                     this.CategoryName == input.CategoryName ||
@@ -400,6 +432,12 @@ namespace Cloud.Governance.Client.Model
                     this.AssignToDisplayName.Equals(input.AssignToDisplayName))
                 ) && 
                 (
+                    this.Assignees == input.Assignees ||
+                    this.Assignees != null &&
+                    input.Assignees != null &&
+                    this.Assignees.SequenceEqual(input.Assignees)
+                ) && 
+                (
                     this.ServiceAdmin == input.ServiceAdmin ||
                     (this.ServiceAdmin != null &&
                     this.ServiceAdmin.Equals(input.ServiceAdmin))
@@ -427,6 +465,12 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.HasSubRequest == input.HasSubRequest ||
                     this.HasSubRequest.Equals(input.HasSubRequest)
+                ) && 
+                (
+                    this.Metadata == input.Metadata ||
+                    this.Metadata != null &&
+                    input.Metadata != null &&
+                    this.Metadata.SequenceEqual(input.Metadata)
                 );
         }
 
@@ -448,6 +492,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.ServiceType.GetHashCode();
                 if (this.ServiceTypeDescription != null)
                     hashCode = hashCode * 59 + this.ServiceTypeDescription.GetHashCode();
+                if (this.Category != null)
+                    hashCode = hashCode * 59 + this.Category.GetHashCode();
                 if (this.CategoryName != null)
                     hashCode = hashCode * 59 + this.CategoryName.GetHashCode();
                 if (this.ApprovalStageName != null)
@@ -475,6 +521,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.AssignTo.GetHashCode();
                 if (this.AssignToDisplayName != null)
                     hashCode = hashCode * 59 + this.AssignToDisplayName.GetHashCode();
+                if (this.Assignees != null)
+                    hashCode = hashCode * 59 + this.Assignees.GetHashCode();
                 if (this.ServiceAdmin != null)
                     hashCode = hashCode * 59 + this.ServiceAdmin.GetHashCode();
                 if (this.ServiceAdminDisplayName != null)
@@ -486,6 +534,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.CreatedTime != null)
                     hashCode = hashCode * 59 + this.CreatedTime.GetHashCode();
                 hashCode = hashCode * 59 + this.HasSubRequest.GetHashCode();
+                if (this.Metadata != null)
+                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;
             }
         }

@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **IsApplyLifecycle** | **bool** |  | [optional] [default to false]
 **LifecycleRenewalSetting** | [**LifecycleRenewalSetting**](LifecycleRenewalSetting.md) |  | [optional] 
 **Filter** | **string** |  | [optional] 
+**Search** | **string** |  | [optional] 
 **SelectedObjects** | **List&lt;string&gt;** |  | [optional] 
 **HasOngoingTasks** | **bool** |  | [optional] [default to false]
 **IsApplyUniqueAccess** | **bool?** |  | [optional] [default to false]

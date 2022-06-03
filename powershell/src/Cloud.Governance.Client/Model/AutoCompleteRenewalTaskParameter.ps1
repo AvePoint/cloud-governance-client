@@ -21,7 +21,10 @@ function New-AutoCompleteRenewalTaskParameter {
         ${CancelEmailTemplateId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
-        ${Workspace}
+        ${Workspace},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsSelectAllWorkspace} = $false
     )
 
     Process {
@@ -34,6 +37,7 @@ function New-AutoCompleteRenewalTaskParameter {
             "IsSendCancelEmail" = ${IsSendCancelEmail}
             "CancelEmailTemplateId" = ${CancelEmailTemplateId}
             "Workspace" = ${Workspace}
+            "IsSelectAllWorkspace" = ${IsSelectAllWorkspace}
         }
 
         return $PSO
@@ -56,7 +60,7 @@ function ConvertFrom-JsonToAutoCompleteRenewalTaskParameter {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in AutoCompleteRenewalTaskParameter
-        $AllProperties = $("IsMarkAsCanceled", "IsSendCancelEmail", "CancelEmailTemplateId", "Workspace")
+        $AllProperties = $("IsMarkAsCanceled", "IsSendCancelEmail", "CancelEmailTemplateId", "Workspace", "IsSelectAllWorkspace")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -87,11 +91,18 @@ function ConvertFrom-JsonToAutoCompleteRenewalTaskParameter {
             $Workspace = $JsonParameters.PSobject.Properties["Workspace"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsSelectAllWorkspace"))) { #optional property not found
+            $IsSelectAllWorkspace = $null
+        } else {
+            $IsSelectAllWorkspace = $JsonParameters.PSobject.Properties["IsSelectAllWorkspace"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "IsMarkAsCanceled" = ${IsMarkAsCanceled}
             "IsSendCancelEmail" = ${IsSendCancelEmail}
             "CancelEmailTemplateId" = ${CancelEmailTemplateId}
             "Workspace" = ${Workspace}
+            "IsSelectAllWorkspace" = ${IsSelectAllWorkspace}
         }
 
         return $PSO

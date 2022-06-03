@@ -21,7 +21,10 @@ function New-LockSiteParameter {
         ${CancelEmailTemplateId},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject[]]
-        ${Workspace}
+        ${Workspace},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsSelectAllWorkspace} = $false
     )
 
     Process {
@@ -34,6 +37,7 @@ function New-LockSiteParameter {
             "IsSendCancelEmail" = ${IsSendCancelEmail}
             "CancelEmailTemplateId" = ${CancelEmailTemplateId}
             "Workspace" = ${Workspace}
+            "IsSelectAllWorkspace" = ${IsSelectAllWorkspace}
         }
 
         return $PSO
@@ -56,7 +60,7 @@ function ConvertFrom-JsonToLockSiteParameter {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in LockSiteParameter
-        $AllProperties = $("LockType", "IsSendCancelEmail", "CancelEmailTemplateId", "Workspace")
+        $AllProperties = $("LockType", "IsSendCancelEmail", "CancelEmailTemplateId", "Workspace", "IsSelectAllWorkspace")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -87,11 +91,18 @@ function ConvertFrom-JsonToLockSiteParameter {
             $Workspace = $JsonParameters.PSobject.Properties["Workspace"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsSelectAllWorkspace"))) { #optional property not found
+            $IsSelectAllWorkspace = $null
+        } else {
+            $IsSelectAllWorkspace = $JsonParameters.PSobject.Properties["IsSelectAllWorkspace"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "LockType" = ${LockType}
             "IsSendCancelEmail" = ${IsSendCancelEmail}
             "CancelEmailTemplateId" = ${CancelEmailTemplateId}
             "Workspace" = ${Workspace}
+            "IsSelectAllWorkspace" = ${IsSelectAllWorkspace}
         }
 
         return $PSO

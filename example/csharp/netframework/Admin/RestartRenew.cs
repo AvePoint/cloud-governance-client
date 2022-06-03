@@ -22,7 +22,7 @@ namespace NetFramework
             try
             {
                 var apiInstance = new WorkspacesAdminApi(Configuration.Default);
-                apiInstance.TriggerWorkspaceRenewal(new WorkspaceSendCancelEmailParameter
+                apiInstance.TriggerWorkspaceRenewal(workspaceSendCancelEmailParameter: new WorkspaceSendCancelEmailParameter
                 {
                     Workspace = new List<WorkspaceIdTypeModel> { workspace },
                 });

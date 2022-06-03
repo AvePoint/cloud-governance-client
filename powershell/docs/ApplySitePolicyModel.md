@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **IsApplyLifecycle** | **Boolean** |  | [optional] [default to $false]
 **LifecycleRenewalSetting** | [**LifecycleRenewalSetting**](LifecycleRenewalSetting.md) |  | [optional] 
 **VarFilter** | **String** |  | [optional] 
+**Search** | **String** |  | [optional] 
 **SelectedObjects** | **String[]** |  | [optional] 
 **HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **IsApplyUniqueAccess** | **Boolean** |  | [optional] [default to $false]
@@ -37,6 +38,7 @@ $ApplySitePolicyModel = New-Cloud.Governance.ClientApplySitePolicyModel  -IsAppl
  -IsApplyLifecycle null `
  -LifecycleRenewalSetting null `
  -VarFilter null `
+ -Search null `
  -SelectedObjects null `
  -HasOngoingTasks null `
  -IsApplyUniqueAccess null

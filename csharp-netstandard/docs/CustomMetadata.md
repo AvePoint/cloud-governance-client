@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Guid** |  | [optional] 
 **Name** | **string** |  | [optional] 
+**DisplayName** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **Type** | **MetadataFieldType** |  | [optional] 
 **DisplayType** | **DisplayInReportType** |  | [optional] 

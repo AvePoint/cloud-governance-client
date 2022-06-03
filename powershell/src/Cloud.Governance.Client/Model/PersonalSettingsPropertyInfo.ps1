@@ -18,7 +18,10 @@ function New-PersonalSettingsPropertyInfo {
         ${IsUsingBrowserLanguage} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${ThemeCode}
+        ${ThemeCode},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Boolean]]
+        ${IsEnabledInTeamsApp} = $false
     )
 
     Process {
@@ -30,6 +33,7 @@ function New-PersonalSettingsPropertyInfo {
             "SelectedLanguages" = ${SelectedLanguages}
             "IsUsingBrowserLanguage" = ${IsUsingBrowserLanguage}
             "ThemeCode" = ${ThemeCode}
+            "IsEnabledInTeamsApp" = ${IsEnabledInTeamsApp}
         }
 
         return $PSO
@@ -52,7 +56,7 @@ function ConvertFrom-JsonToPersonalSettingsPropertyInfo {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in PersonalSettingsPropertyInfo
-        $AllProperties = $("SelectedLanguages", "IsUsingBrowserLanguage", "ThemeCode", "ThemeType")
+        $AllProperties = $("SelectedLanguages", "IsUsingBrowserLanguage", "ThemeCode", "ThemeType", "IsEnabledInTeamsApp")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -83,11 +87,18 @@ function ConvertFrom-JsonToPersonalSettingsPropertyInfo {
             $ThemeType = $JsonParameters.PSobject.Properties["ThemeType"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "IsEnabledInTeamsApp"))) { #optional property not found
+            $IsEnabledInTeamsApp = $null
+        } else {
+            $IsEnabledInTeamsApp = $JsonParameters.PSobject.Properties["IsEnabledInTeamsApp"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "SelectedLanguages" = ${SelectedLanguages}
             "IsUsingBrowserLanguage" = ${IsUsingBrowserLanguage}
             "ThemeCode" = ${ThemeCode}
             "ThemeType" = ${ThemeType}
+            "IsEnabledInTeamsApp" = ${IsEnabledInTeamsApp}
         }
 
         return $PSO

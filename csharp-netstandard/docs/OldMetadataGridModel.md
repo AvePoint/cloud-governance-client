@@ -1,4 +1,4 @@
-# Cloud.Governance.Client.Model.MetadataGridModel
+# Cloud.Governance.Client.Model.OldMetadataGridModel
 ## Properties
 
 Name | Type | Description | Notes
@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **FieldType** | **MetadataFieldType** |  | [optional] 
+**FieldTypeDescription** | **string** |  | [optional] 
 **MetadataValue** | **string** |  | [optional] 
 **ShowInReportType** | **MetadataDisplayType** |  | [optional] 
 **ShowInReportTypeDescription** | **string** |  | [optional] 

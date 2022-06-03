@@ -41,6 +41,9 @@ function New-ApplyGroupPolicyModel {
         [String]
         ${VarFilter},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${Search},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String[]]
         ${SelectedObjects},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -67,6 +70,7 @@ function New-ApplyGroupPolicyModel {
             "IsApplyLifecycle" = ${IsApplyLifecycle}
             "LifecycleRenewalSetting" = ${LifecycleRenewalSetting}
             "VarFilter" = ${VarFilter}
+            "Search" = ${Search}
             "SelectedObjects" = ${SelectedObjects}
             "HasOngoingTasks" = ${HasOngoingTasks}
             "IsApplyUniqueAccess" = ${IsApplyUniqueAccess}
@@ -92,7 +96,7 @@ function ConvertFrom-JsonToApplyGroupPolicyModel {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in ApplyGroupPolicyModel
-        $AllProperties = $("SubType", "PolicyId", "IsApplyAllSetting", "IsApplyQuota", "IsApplySharing", "IsApplyQuotaThreshold", "IsApplyDeactivatedElection", "IsApplyLifecycle", "LifecycleRenewalSetting", "VarFilter", "SelectedObjects", "HasOngoingTasks", "IsApplyUniqueAccess")
+        $AllProperties = $("SubType", "PolicyId", "IsApplyAllSetting", "IsApplyQuota", "IsApplySharing", "IsApplyQuotaThreshold", "IsApplyDeactivatedElection", "IsApplyLifecycle", "LifecycleRenewalSetting", "VarFilter", "Search", "SelectedObjects", "HasOngoingTasks", "IsApplyUniqueAccess")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -159,6 +163,12 @@ function ConvertFrom-JsonToApplyGroupPolicyModel {
             $VarFilter = $JsonParameters.PSobject.Properties["VarFilter"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Search"))) { #optional property not found
+            $Search = $null
+        } else {
+            $Search = $JsonParameters.PSobject.Properties["Search"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "SelectedObjects"))) { #optional property not found
             $SelectedObjects = $null
         } else {
@@ -188,6 +198,7 @@ function ConvertFrom-JsonToApplyGroupPolicyModel {
             "IsApplyLifecycle" = ${IsApplyLifecycle}
             "LifecycleRenewalSetting" = ${LifecycleRenewalSetting}
             "VarFilter" = ${VarFilter}
+            "Search" = ${Search}
             "SelectedObjects" = ${SelectedObjects}
             "HasOngoingTasks" = ${HasOngoingTasks}
             "IsApplyUniqueAccess" = ${IsApplyUniqueAccess}

@@ -154,6 +154,10 @@ namespace Cloud.Governance.Client.Model
 
         ApplyGroupPolicyPartSetting = 74,
 
+        ApplyGroupExternalSharingProfilePartSetting = 75,
+
+        ApplyGroupQuotaProfilePartSetting = 76,
+
         CreateUser = 110,
 
         ChangeUser = 111,
@@ -310,7 +314,17 @@ namespace Cloud.Governance.Client.Model
 
         ChangePrivateChannel = 562,
 
-        RequestReportAction = 563
+        RequestReportAction = 563,
+
+        ApplyTeamProfiles = 564,
+
+        ApplyGroupProfiles = 565,
+
+        ApplyYammerProfiles = 566,
+
+        ApplySiteProfiles = 567,
+
+        UpdateModernRenewalProfile = 568
 
     }
 

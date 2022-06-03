@@ -24,7 +24,9 @@ namespace Cloud.Governance.Client.Model
 
         DisplayInPublicSCDirectoryReport = 2,
 
-        DisplayInAdministrationReport = 3
+        DisplayInAdministrationReport = 3,
+
+        DisplayInEndUserReport = 4
 
     }
 

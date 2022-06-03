@@ -43,6 +43,7 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="name">name.</param>
+        /// <param name="displayName">displayName.</param>
         /// <param name="description">description.</param>
         /// <param name="type">type.</param>
         /// <param name="displayType">displayType.</param>
@@ -58,10 +59,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="linkMetadataSettings">linkMetadataSettings.</param>
         /// <param name="singleLineOrMultipleLineMetadataSettings">singleLineOrMultipleLineMetadataSettings.</param>
         /// <param name="sharePointListMetadataSettings">sharePointListMetadataSettings.</param>
-        public CustomMetadata(Guid id = default(Guid), string name = default(string), string description = default(string), MetadataFieldType? type = default(MetadataFieldType?), DisplayInReportType? displayType = default(DisplayInReportType?), AssignBy? assignBy = default(AssignBy?), bool enableTextValidation = false, TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), BooleanMetadataSettings booleanMetadataSettings = default(BooleanMetadataSettings), TermsMetadataSettings termsMetadataSettings = default(TermsMetadataSettings), UserMetadataSettings userMetadataSettings = default(UserMetadataSettings), UserProfileMetadataSettings userProfileMetadataSettings = default(UserProfileMetadataSettings), AzureAdMetadataSettings azureAdMetadataSettings = default(AzureAdMetadataSettings), ChoiceMetadataSettings choiceMetadataSettings = default(ChoiceMetadataSettings), LinkMetadataSettings linkMetadataSettings = default(LinkMetadataSettings), SingleLineOrMultipleLineMetadataSettings singleLineOrMultipleLineMetadataSettings = default(SingleLineOrMultipleLineMetadataSettings), SharePointListMetadataSettings sharePointListMetadataSettings = default(SharePointListMetadataSettings))
+        public CustomMetadata(Guid id = default(Guid), string name = default(string), string displayName = default(string), string description = default(string), MetadataFieldType? type = default(MetadataFieldType?), DisplayInReportType? displayType = default(DisplayInReportType?), AssignBy? assignBy = default(AssignBy?), bool enableTextValidation = false, TextValidationRuleRef textValidationRule = default(TextValidationRuleRef), BooleanMetadataSettings booleanMetadataSettings = default(BooleanMetadataSettings), TermsMetadataSettings termsMetadataSettings = default(TermsMetadataSettings), UserMetadataSettings userMetadataSettings = default(UserMetadataSettings), UserProfileMetadataSettings userProfileMetadataSettings = default(UserProfileMetadataSettings), AzureAdMetadataSettings azureAdMetadataSettings = default(AzureAdMetadataSettings), ChoiceMetadataSettings choiceMetadataSettings = default(ChoiceMetadataSettings), LinkMetadataSettings linkMetadataSettings = default(LinkMetadataSettings), SingleLineOrMultipleLineMetadataSettings singleLineOrMultipleLineMetadataSettings = default(SingleLineOrMultipleLineMetadataSettings), SharePointListMetadataSettings sharePointListMetadataSettings = default(SharePointListMetadataSettings))
         {
             this.Id = id;
             this.Name = name;
+            this.DisplayName = displayName;
             this.Description = description;
             this.Type = type;
             this.DisplayType = displayType;
@@ -90,6 +92,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisplayName
+        /// </summary>
+        [DataMember(Name = "displayName", EmitDefaultValue = true)]
+        public string DisplayName { get; set; }
 
         /// <summary>
         /// Gets or Sets Description
@@ -173,6 +181,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class CustomMetadata {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  DisplayType: ").Append(DisplayType).Append("\n");
@@ -231,6 +240,11 @@ namespace Cloud.Governance.Client.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.DisplayName == input.DisplayName ||
+                    (this.DisplayName != null &&
+                    this.DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
                     this.Description == input.Description ||
@@ -318,6 +332,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.DisplayName != null)
+                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 hashCode = hashCode * 59 + this.Type.GetHashCode();

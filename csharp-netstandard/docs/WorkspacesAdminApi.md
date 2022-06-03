@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**CompleteWorkspaceRenewalTask**](WorkspacesAdminApi.md#completeworkspacerenewaltask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 [**DeleteWorkspaces**](WorkspacesAdminApi.md#deleteworkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
 [**GetOngoingTasks**](WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
+[**GetWorkspaceFilters**](WorkspacesAdminApi.md#getworkspacefilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 [**GetWorkspaces**](WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
 [**LockWorkspaces**](WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 [**SpecifyContacts**](WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | specify contacts
@@ -265,7 +266,7 @@ void (empty response body)
 
 <a name="completeworkspacerenewaltask"></a>
 # **CompleteWorkspaceRenewalTask**
-> void CompleteWorkspaceRenewalTask (AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = null)
+> void CompleteWorkspaceRenewalTask (string filter = null, AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = null)
 
 completed renewal task
 
@@ -298,12 +299,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
+            var filter = filter_example;  // string |  (optional) 
             var autoCompleteRenewalTaskParameter = new AutoCompleteRenewalTaskParameter(); // AutoCompleteRenewalTaskParameter |  (optional) 
 
             try
             {
                 // completed renewal task
-                apiInstance.CompleteWorkspaceRenewalTask(autoCompleteRenewalTaskParameter);
+                apiInstance.CompleteWorkspaceRenewalTask(filter, autoCompleteRenewalTaskParameter);
             }
             catch (ApiException  e)
             {
@@ -320,6 +322,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter** | **string**|  | [optional] 
  **autoCompleteRenewalTaskParameter** | [**AutoCompleteRenewalTaskParameter**](AutoCompleteRenewalTaskParameter.md)|  | [optional] 
 
 ### Return type
@@ -512,6 +515,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getworkspacefilters"></a>
+# **GetWorkspaceFilters**
+> List&lt;DistinctResult&gt; GetWorkspaceFilters (string distinct = null)
+
+get filters for workspace report
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetWorkspaceFiltersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var distinct = distinct_example;  // string | support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional) 
+
+            try
+            {
+                // get filters for workspace report
+                List<DistinctResult> result = apiInstance.GetWorkspaceFilters(distinct);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetWorkspaceFilters: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **distinct** | **string**| support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata | [optional] 
+
+### Return type
+
+[**List&lt;DistinctResult&gt;**](DistinctResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** |  |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getworkspaces"></a>
 # **GetWorkspaces**
 > WorkspaceGridModelPageResult GetWorkspaces (string filter = null, string orderby = null, string search = null, int? top = null, string skip = null, string nexttoken = null)
@@ -689,7 +775,7 @@ void (empty response body)
 
 <a name="specifycontacts"></a>
 # **SpecifyContacts**
-> void SpecifyContacts (SpecifyContactParameter specifyContactParameter = null)
+> void SpecifyContacts (string filter = null, SpecifyContactParameter specifyContactParameter = null)
 
 specify contacts
 
@@ -722,12 +808,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
+            var filter = filter_example;  // string |  (optional) 
             var specifyContactParameter = new SpecifyContactParameter(); // SpecifyContactParameter |  (optional) 
 
             try
             {
                 // specify contacts
-                apiInstance.SpecifyContacts(specifyContactParameter);
+                apiInstance.SpecifyContacts(filter, specifyContactParameter);
             }
             catch (ApiException  e)
             {
@@ -744,6 +831,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter** | **string**|  | [optional] 
  **specifyContactParameter** | [**SpecifyContactParameter**](SpecifyContactParameter.md)|  | [optional] 
 
 ### Return type
@@ -771,7 +859,7 @@ void (empty response body)
 
 <a name="triggerworkspacerenewal"></a>
 # **TriggerWorkspaceRenewal**
-> void TriggerWorkspaceRenewal (WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = null)
+> void TriggerWorkspaceRenewal (string filter = null, WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = null)
 
 trigger workspace renewal
 
@@ -804,12 +892,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
+            var filter = filter_example;  // string |  (optional) 
             var workspaceSendCancelEmailParameter = new WorkspaceSendCancelEmailParameter(); // WorkspaceSendCancelEmailParameter |  (optional) 
 
             try
             {
                 // trigger workspace renewal
-                apiInstance.TriggerWorkspaceRenewal(workspaceSendCancelEmailParameter);
+                apiInstance.TriggerWorkspaceRenewal(filter, workspaceSendCancelEmailParameter);
             }
             catch (ApiException  e)
             {
@@ -826,6 +915,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter** | **string**|  | [optional] 
  **workspaceSendCancelEmailParameter** | [**WorkspaceSendCancelEmailParameter**](WorkspaceSendCancelEmailParameter.md)|  | [optional] 
 
 ### Return type

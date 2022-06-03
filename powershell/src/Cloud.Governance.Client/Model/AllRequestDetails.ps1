@@ -33,6 +33,9 @@ function New-AllRequestDetails {
         ${ServiceTypeDescription},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${Category},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${CategoryName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
@@ -77,6 +80,9 @@ function New-AllRequestDetails {
         [String]
         ${AssignToDisplayName},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${Assignees},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
         ${ServiceAdmin},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -89,11 +95,14 @@ function New-AllRequestDetails {
         [String]
         ${ObjectID},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
-        [String]
+        [System.Nullable[System.DateTime]]
         ${CreatedTime},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
-        ${HasSubRequest} = $false
+        ${HasSubRequest} = $false,
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${Metadata}
     )
 
     Process {
@@ -109,6 +118,7 @@ function New-AllRequestDetails {
             "ServiceName" = ${ServiceName}
             "ServiceType" = ${ServiceType}
             "ServiceTypeDescription" = ${ServiceTypeDescription}
+            "Category" = ${Category}
             "CategoryName" = ${CategoryName}
             "ApprovalStageName" = ${ApprovalStageName}
             "Participants" = ${Participants}
@@ -124,12 +134,14 @@ function New-AllRequestDetails {
             "Modified" = ${Modified}
             "AssignTo" = ${AssignTo}
             "AssignToDisplayName" = ${AssignToDisplayName}
+            "Assignees" = ${Assignees}
             "ServiceAdmin" = ${ServiceAdmin}
             "ServiceAdminDisplayName" = ${ServiceAdminDisplayName}
             "ObjectUrl" = ${ObjectUrl}
             "ObjectID" = ${ObjectID}
             "CreatedTime" = ${CreatedTime}
             "HasSubRequest" = ${HasSubRequest}
+            "Metadata" = ${Metadata}
         }
 
         return $PSO
@@ -152,7 +164,7 @@ function ConvertFrom-JsonToAllRequestDetails {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in AllRequestDetails
-        $AllProperties = $("LastApprovedTime", "CompletedTime", "Id", "ServiceId", "ServiceName", "ServiceType", "ServiceTypeDescription", "CategoryName", "ApprovalStageName", "Participants", "ParticipantDisplayName", "TicketNumber", "Summary", "Requester", "RequesterDisplayName", "DetailStatus", "DetailStatusDescription", "ProgressStatus", "ProgressStatusDescription", "Modified", "AssignTo", "AssignToDisplayName", "ServiceAdmin", "ServiceAdminDisplayName", "ObjectUrl", "ObjectID", "CreatedTime", "HasSubRequest")
+        $AllProperties = $("LastApprovedTime", "CompletedTime", "Id", "ServiceId", "ServiceName", "ServiceType", "ServiceTypeDescription", "Category", "CategoryName", "ApprovalStageName", "Participants", "ParticipantDisplayName", "TicketNumber", "Summary", "Requester", "RequesterDisplayName", "DetailStatus", "DetailStatusDescription", "ProgressStatus", "ProgressStatusDescription", "Modified", "AssignTo", "AssignToDisplayName", "Assignees", "ServiceAdmin", "ServiceAdminDisplayName", "ObjectUrl", "ObjectID", "CreatedTime", "HasSubRequest", "Metadata")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -199,6 +211,12 @@ function ConvertFrom-JsonToAllRequestDetails {
             $ServiceTypeDescription = $null
         } else {
             $ServiceTypeDescription = $JsonParameters.PSobject.Properties["ServiceTypeDescription"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Category"))) { #optional property not found
+            $Category = $null
+        } else {
+            $Category = $JsonParameters.PSobject.Properties["Category"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "CategoryName"))) { #optional property not found
@@ -291,6 +309,12 @@ function ConvertFrom-JsonToAllRequestDetails {
             $AssignToDisplayName = $JsonParameters.PSobject.Properties["AssignToDisplayName"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Assignees"))) { #optional property not found
+            $Assignees = $null
+        } else {
+            $Assignees = $JsonParameters.PSobject.Properties["Assignees"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "ServiceAdmin"))) { #optional property not found
             $ServiceAdmin = $null
         } else {
@@ -327,6 +351,12 @@ function ConvertFrom-JsonToAllRequestDetails {
             $HasSubRequest = $JsonParameters.PSobject.Properties["HasSubRequest"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "Metadata"))) { #optional property not found
+            $Metadata = $null
+        } else {
+            $Metadata = $JsonParameters.PSobject.Properties["Metadata"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "LastApprovedTime" = ${LastApprovedTime}
             "CompletedTime" = ${CompletedTime}
@@ -335,6 +365,7 @@ function ConvertFrom-JsonToAllRequestDetails {
             "ServiceName" = ${ServiceName}
             "ServiceType" = ${ServiceType}
             "ServiceTypeDescription" = ${ServiceTypeDescription}
+            "Category" = ${Category}
             "CategoryName" = ${CategoryName}
             "ApprovalStageName" = ${ApprovalStageName}
             "Participants" = ${Participants}
@@ -350,12 +381,14 @@ function ConvertFrom-JsonToAllRequestDetails {
             "Modified" = ${Modified}
             "AssignTo" = ${AssignTo}
             "AssignToDisplayName" = ${AssignToDisplayName}
+            "Assignees" = ${Assignees}
             "ServiceAdmin" = ${ServiceAdmin}
             "ServiceAdminDisplayName" = ${ServiceAdminDisplayName}
             "ObjectUrl" = ${ObjectUrl}
             "ObjectID" = ${ObjectID}
             "CreatedTime" = ${CreatedTime}
             "HasSubRequest" = ${HasSubRequest}
+            "Metadata" = ${Metadata}
         }
 
         return $PSO

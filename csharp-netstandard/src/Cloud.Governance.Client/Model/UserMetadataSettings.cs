@@ -27,10 +27,12 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="UserMetadataSettings" /> class.
         /// </summary>
         /// <param name="value">value.</param>
+        /// <param name="peoplePickerProfile">peoplePickerProfile.</param>
         /// <param name="allowReferenceAsRoleInApprovalProcess">allowReferenceAsRoleInApprovalProcess (default to false).</param>
-        public UserMetadataSettings(List<ApiUser> value = default(List<ApiUser>), bool allowReferenceAsRoleInApprovalProcess = false)
+        public UserMetadataSettings(List<ApiUser> value = default(List<ApiUser>), GuidModel peoplePickerProfile = default(GuidModel), bool allowReferenceAsRoleInApprovalProcess = false)
         {
             this.Value = value;
+            this.PeoplePickerProfile = peoplePickerProfile;
             this.AllowReferenceAsRoleInApprovalProcess = allowReferenceAsRoleInApprovalProcess;
         }
 
@@ -39,6 +41,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "value", EmitDefaultValue = true)]
         public List<ApiUser> Value { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PeoplePickerProfile
+        /// </summary>
+        [DataMember(Name = "peoplePickerProfile", EmitDefaultValue = true)]
+        public GuidModel PeoplePickerProfile { get; set; }
 
         /// <summary>
         /// Gets or Sets AllowReferenceAsRoleInApprovalProcess
@@ -55,6 +63,7 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class UserMetadataSettings {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  PeoplePickerProfile: ").Append(PeoplePickerProfile).Append("\n");
             sb.Append("  AllowReferenceAsRoleInApprovalProcess: ").Append(AllowReferenceAsRoleInApprovalProcess).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -97,6 +106,11 @@ namespace Cloud.Governance.Client.Model
                     this.Value.SequenceEqual(input.Value)
                 ) && 
                 (
+                    this.PeoplePickerProfile == input.PeoplePickerProfile ||
+                    (this.PeoplePickerProfile != null &&
+                    this.PeoplePickerProfile.Equals(input.PeoplePickerProfile))
+                ) && 
+                (
                     this.AllowReferenceAsRoleInApprovalProcess == input.AllowReferenceAsRoleInApprovalProcess ||
                     this.AllowReferenceAsRoleInApprovalProcess.Equals(input.AllowReferenceAsRoleInApprovalProcess)
                 );
@@ -113,6 +127,8 @@ namespace Cloud.Governance.Client.Model
                 int hashCode = 41;
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
+                if (this.PeoplePickerProfile != null)
+                    hashCode = hashCode * 59 + this.PeoplePickerProfile.GetHashCode();
                 hashCode = hashCode * 59 + this.AllowReferenceAsRoleInApprovalProcess.GetHashCode();
                 return hashCode;
             }

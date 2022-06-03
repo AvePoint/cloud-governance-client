@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**Complete-WorkspaceRenewalTask**](WorkspacesAdminApi.md#Complete-WorkspaceRenewalTask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 [**Invoke-DeleteWorkspaces**](WorkspacesAdminApi.md#Invoke-DeleteWorkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
 [**Get-OngoingTasks**](WorkspacesAdminApi.md#Get-OngoingTasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
+[**Get-WorkspaceFilters**](WorkspacesAdminApi.md#Get-WorkspaceFilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 [**Get-Workspaces**](WorkspacesAdminApi.md#Get-Workspaces) | **GET** /admin/directory/workspace | get managed workspaces
 [**Lock-Workspaces**](WorkspacesAdminApi.md#Lock-Workspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 [**Invoke-SpecifyContacts**](WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | specify contacts
@@ -43,7 +44,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyGroupPolicyModel = (Initialize-ApplyGroupPolicyModel -SubType (Initialize-GroupPolicySubType ) -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (Initialize-LifecycleRenewalSetting -LeaseDateType (Initialize-LeaseDateType ) -StartDateType (Initialize-LeaseStartDateType ) -SpecifyStartDate Get-Date -HandleOngoingType (Initialize-HandleOngoingType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -CancelEmailTemplateName "CancelEmailTemplateName_example") -VarFilter "VarFilter_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false -IsApplyUniqueAccess $false) # ApplyGroupPolicyModel | apply policy setting (optional)
+$ApplyGroupPolicyModel = (Initialize-ApplyGroupPolicyModel -SubType (Initialize-GroupPolicySubType ) -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (Initialize-LifecycleRenewalSetting -LeaseDateType (Initialize-LeaseDateType ) -StartDateType (Initialize-LeaseStartDateType ) -SpecifyStartDate Get-Date -HandleOngoingType (Initialize-HandleOngoingType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -CancelEmailTemplateName "CancelEmailTemplateName_example") -VarFilter "VarFilter_example" -Search "Search_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false -IsApplyUniqueAccess $false) # ApplyGroupPolicyModel | apply policy setting (optional)
 
 # apply groups policy
 try {
@@ -101,7 +102,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplySitePolicyModel = (Initialize-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (Initialize-LifecycleRenewalSetting -LeaseDateType (Initialize-LeaseDateType ) -StartDateType (Initialize-LeaseStartDateType ) -SpecifyStartDate Get-Date -HandleOngoingType (Initialize-HandleOngoingType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -CancelEmailTemplateName "CancelEmailTemplateName_example") -VarFilter "VarFilter_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false -IsApplyUniqueAccess $false) # ApplySitePolicyModel | apply policy setting (optional)
+$ApplySitePolicyModel = (Initialize-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "PolicyId_example" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting (Initialize-LifecycleRenewalSetting -LeaseDateType (Initialize-LeaseDateType ) -StartDateType (Initialize-LeaseStartDateType ) -SpecifyStartDate Get-Date -HandleOngoingType (Initialize-HandleOngoingType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -CancelEmailTemplateName "CancelEmailTemplateName_example") -VarFilter "VarFilter_example" -Search "Search_example" -SelectedObjects @("SelectedObjects_example") -HasOngoingTasks $false -IsApplyUniqueAccess $false) # ApplySitePolicyModel | apply policy setting (optional)
 
 # apply site policy
 try {
@@ -159,7 +160,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ArchiveWorkspaceParameter = (Initialize-ArchiveWorkspaceParameter -ArchiveProfile "ArchiveProfile_example" -WorkspaceType (Initialize-WorkspaceArchivedType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType )))) # ArchiveWorkspaceParameter |  (optional)
+$ArchiveWorkspaceParameter = (Initialize-ArchiveWorkspaceParameter -ArchiveProfile "ArchiveProfile_example" -WorkspaceType (Initialize-WorkspaceArchivedType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType ))) -IsSelectAllWorkspace $false) # ArchiveWorkspaceParameter |  (optional)
 
 # archive workspace
 try {
@@ -194,6 +195,7 @@ void (empty response body)
 <a name="Complete-WorkspaceRenewalTask"></a>
 # **Complete-WorkspaceRenewalTask**
 > void Complete-WorkspaceRenewalTask<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-AutoCompleteRenewalTaskParameter] <PSCustomObject><br>
 
 completed renewal task
@@ -217,11 +219,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$AutoCompleteRenewalTaskParameter = (Initialize-AutoCompleteRenewalTaskParameter -IsMarkAsCanceled $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType )))) # AutoCompleteRenewalTaskParameter |  (optional)
+$Filter = "Filter_example" # String |  (optional)
+$AutoCompleteRenewalTaskParameter = (Initialize-AutoCompleteRenewalTaskParameter -IsMarkAsCanceled $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType ))) -IsSelectAllWorkspace $false) # AutoCompleteRenewalTaskParameter |  (optional)
 
 # completed renewal task
 try {
-     $Result = Complete-WorkspaceRenewalTask -AutoCompleteRenewalTaskParameter $AutoCompleteRenewalTaskParameter
+     $Result = Complete-WorkspaceRenewalTask -Filter $Filter -AutoCompleteRenewalTaskParameter $AutoCompleteRenewalTaskParameter
 } catch {
     Write-Host ("Exception occured when calling Complete-WorkspaceRenewalTask: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -232,6 +235,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **Filter** | **String**|  | [optional] 
  **AutoCompleteRenewalTaskParameter** | [**AutoCompleteRenewalTaskParameter**](AutoCompleteRenewalTaskParameter.md)|  | [optional] 
 
 ### Return type
@@ -275,7 +279,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$DeleteWorkspaceParameter = (Initialize-DeleteWorkspaceParameter -EnableRemoveObject $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @()) # DeleteWorkspaceParameter |  (optional)
+$DeleteWorkspaceParameter = (Initialize-DeleteWorkspaceParameter -EnableRemoveObject $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false) # DeleteWorkspaceParameter |  (optional)
 
 # delete workspaces
 try {
@@ -356,6 +360,64 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**WorksapceOngoingTasksModel[]**](WorksapceOngoingTasksModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-WorkspaceFilters"></a>
+# **Get-WorkspaceFilters**
+> DistinctResult[] Get-WorkspaceFilters<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Distinct] <String><br>
+
+get filters for workspace report
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Distinct = "Distinct_example" # String | support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)
+
+# get filters for workspace report
+try {
+     $Result = Get-WorkspaceFilters -Distinct $Distinct
+} catch {
+    Write-Host ("Exception occured when calling Get-WorkspaceFilters: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Distinct** | **String**| support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**DistinctResult[]**](DistinctResult.md)
 
 ### Authorization
 
@@ -467,7 +529,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$LockSiteParameter = (Initialize-LockSiteParameter -LockType (Initialize-LockSiteCollectionType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @()) # LockSiteParameter |  (optional)
+$LockSiteParameter = (Initialize-LockSiteParameter -LockType (Initialize-LockSiteCollectionType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false) # LockSiteParameter |  (optional)
 
 # lock sites or Office365 group sites
 try {
@@ -502,6 +564,7 @@ void (empty response body)
 <a name="Invoke-SpecifyContacts"></a>
 # **Invoke-SpecifyContacts**
 > void Invoke-SpecifyContacts<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SpecifyContactParameter] <PSCustomObject><br>
 
 specify contacts
@@ -525,11 +588,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$SpecifyContactParameter = (Initialize-SpecifyContactParameter -PrimaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -SecondaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -PrimaryContactNotifiedEmail "PrimaryContactNotifiedEmail_example" -SecondaryContactNotifiedEmail "SecondaryContactNotifiedEmail_example" -Workspace @()) # SpecifyContactParameter |  (optional)
+$Filter = "Filter_example" # String |  (optional)
+$SpecifyContactParameter = (Initialize-SpecifyContactParameter -PrimaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -SecondaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -PrimaryContactNotifiedEmail "PrimaryContactNotifiedEmail_example" -SecondaryContactNotifiedEmail "SecondaryContactNotifiedEmail_example" -Workspace @() -IsSelectAllWorkspace $false) # SpecifyContactParameter |  (optional)
 
 # specify contacts
 try {
-     $Result = Invoke-SpecifyContacts -SpecifyContactParameter $SpecifyContactParameter
+     $Result = Invoke-SpecifyContacts -Filter $Filter -SpecifyContactParameter $SpecifyContactParameter
 } catch {
     Write-Host ("Exception occured when calling Invoke-SpecifyContacts: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -540,6 +604,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **Filter** | **String**|  | [optional] 
  **SpecifyContactParameter** | [**SpecifyContactParameter**](SpecifyContactParameter.md)|  | [optional] 
 
 ### Return type
@@ -560,6 +625,7 @@ void (empty response body)
 <a name="Invoke-TriggerWorkspaceRenewal"></a>
 # **Invoke-TriggerWorkspaceRenewal**
 > void Invoke-TriggerWorkspaceRenewal<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceSendCancelEmailParameter] <PSCustomObject><br>
 
 trigger workspace renewal
@@ -583,11 +649,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceSendCancelEmailParameter = (Initialize-WorkspaceSendCancelEmailParameter -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @()) # WorkspaceSendCancelEmailParameter |  (optional)
+$Filter = "Filter_example" # String |  (optional)
+$WorkspaceSendCancelEmailParameter = (Initialize-WorkspaceSendCancelEmailParameter -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false) # WorkspaceSendCancelEmailParameter |  (optional)
 
 # trigger workspace renewal
 try {
-     $Result = Invoke-TriggerWorkspaceRenewal -WorkspaceSendCancelEmailParameter $WorkspaceSendCancelEmailParameter
+     $Result = Invoke-TriggerWorkspaceRenewal -Filter $Filter -WorkspaceSendCancelEmailParameter $WorkspaceSendCancelEmailParameter
 } catch {
     Write-Host ("Exception occured when calling Invoke-TriggerWorkspaceRenewal: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -598,6 +665,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **Filter** | **String**|  | [optional] 
  **WorkspaceSendCancelEmailParameter** | [**WorkspaceSendCancelEmailParameter**](WorkspaceSendCancelEmailParameter.md)|  | [optional] 
 
 ### Return type
@@ -641,7 +709,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceActionParameter = (Initialize-WorkspaceActionParameter -Workspace @()) # WorkspaceActionParameter |  (optional)
+$WorkspaceActionParameter = (Initialize-WorkspaceActionParameter -Workspace @() -IsSelectAllWorkspace $false) # WorkspaceActionParameter |  (optional)
 
 # unlock sites and Office365 group site
 try {

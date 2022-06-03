@@ -78,7 +78,9 @@ namespace Cloud.Governance.Client.Model
 
         ConfirmTaskEscalation = 29,
 
-        WaitingForAssistant = 30
+        WaitingForAssistant = 30,
+
+        Deleted = 10000
 
     }
 

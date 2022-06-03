@@ -25,11 +25,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>MetadataGridModelPageResult</returns>
-        MetadataGridModelPageResult GetAllMetadata(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
+        /// <returns>OldMetadataGridModelPageResult</returns>
+        OldMetadataGridModelPageResult GetAllMetadata(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
 
         /// <summary>
         /// get all metadata
@@ -41,11 +41,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>ApiResponse of MetadataGridModelPageResult</returns>
-        ApiResponse<MetadataGridModelPageResult> GetAllMetadataWithHttpInfo(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
+        /// <returns>ApiResponse of OldMetadataGridModelPageResult</returns>
+        ApiResponse<OldMetadataGridModelPageResult> GetAllMetadataWithHttpInfo(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string));
         /// <summary>
         /// Get metadata by id
         /// </summary>
@@ -83,12 +83,12 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of MetadataGridModelPageResult</returns>
-        System.Threading.Tasks.Task<MetadataGridModelPageResult> GetAllMetadataAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of OldMetadataGridModelPageResult</returns>
+        System.Threading.Tasks.Task<OldMetadataGridModelPageResult> GetAllMetadataAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// get all metadata
@@ -100,12 +100,12 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (MetadataGridModelPageResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MetadataGridModelPageResult>> GetAllMetadataWithHttpInfoAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <returns>Task of ApiResponse (OldMetadataGridModelPageResult)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OldMetadataGridModelPageResult>> GetAllMetadataWithHttpInfoAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// Get metadata by id
         /// </summary>
@@ -256,13 +256,13 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>MetadataGridModelPageResult</returns>
-        public MetadataGridModelPageResult GetAllMetadata(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        /// <returns>OldMetadataGridModelPageResult</returns>
+        public OldMetadataGridModelPageResult GetAllMetadata(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
         {
-            Cloud.Governance.Client.Client.ApiResponse<MetadataGridModelPageResult> localVarResponse = GetAllMetadataWithHttpInfo(filter, orderby, search, top, skip, nexttoken);
+            Cloud.Governance.Client.Client.ApiResponse<OldMetadataGridModelPageResult> localVarResponse = GetAllMetadataWithHttpInfo(filter, orderby, search, top, skip, nexttoken);
             return localVarResponse.Data;
         }
 
@@ -273,11 +273,11 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
-        /// <returns>ApiResponse of MetadataGridModelPageResult</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<MetadataGridModelPageResult> GetAllMetadataWithHttpInfo(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
+        /// <returns>ApiResponse of OldMetadataGridModelPageResult</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<OldMetadataGridModelPageResult> GetAllMetadataWithHttpInfo(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -333,7 +333,7 @@ namespace Cloud.Governance.Client.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<MetadataGridModelPageResult>("/admin/metadata", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<OldMetadataGridModelPageResult>("/admin/metadata", localVarRequestOptions, this.Configuration);
 
             if (this.ExceptionFactory != null)
             {
@@ -351,14 +351,14 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of MetadataGridModelPageResult</returns>
-        public async System.Threading.Tasks.Task<MetadataGridModelPageResult> GetAllMetadataAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of OldMetadataGridModelPageResult</returns>
+        public async System.Threading.Tasks.Task<OldMetadataGridModelPageResult> GetAllMetadataAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Cloud.Governance.Client.Client.ApiResponse<MetadataGridModelPageResult> localVarResponse = await GetAllMetadataWithHttpInfoAsync(filter, orderby, search, top, skip, nexttoken, cancellationToken).ConfigureAwait(false);
+            Cloud.Governance.Client.Client.ApiResponse<OldMetadataGridModelPageResult> localVarResponse = await GetAllMetadataWithHttpInfoAsync(filter, orderby, search, top, skip, nexttoken, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -369,12 +369,12 @@ namespace Cloud.Governance.Client.Api
         /// <param name="filter">Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="orderby">Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)</param>
         /// <param name="search">Search for name (optional)</param>
-        /// <param name="top"> Define the number of records you want to return, max value is 200, default value is 200 (optional)</param>
+        /// <param name="top"> Define the number of records you want to return, max value is 2000, default value is 200 (optional)</param>
         /// <param name="skip"> Define the number of records you want to skip, default value is 0 (optional)</param>
         /// <param name="nexttoken"> Use the next token to get the next paging result (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
-        /// <returns>Task of ApiResponse (MetadataGridModelPageResult)</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<MetadataGridModelPageResult>> GetAllMetadataWithHttpInfoAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        /// <returns>Task of ApiResponse (OldMetadataGridModelPageResult)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<OldMetadataGridModelPageResult>> GetAllMetadataWithHttpInfoAsync(string filter = default(string), string orderby = default(string), string search = default(string), int? top = default(int?), string skip = default(string), string nexttoken = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -433,7 +433,7 @@ namespace Cloud.Governance.Client.Api
 
             // make the HTTP request
 
-            var localVarResponse = await this.AsynchronousClient.GetAsync<MetadataGridModelPageResult>("/admin/metadata", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<OldMetadataGridModelPageResult>("/admin/metadata", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {

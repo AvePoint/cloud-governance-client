@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ServiceName** | **String** |  | [optional] 
 **ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **ServiceTypeDescription** | **String** |  | [optional] 
+**Category** | **String** |  | [optional] 
 **CategoryName** | **String** |  | [optional] 
 **ApprovalStageName** | **String** |  | [optional] 
 **Participants** | **String** |  | [optional] 
@@ -23,12 +24,14 @@ Name | Type | Description | Notes
 **Modified** | **System.DateTime** |  | [optional] 
 **AssignTo** | **String** |  | [optional] 
 **AssignToDisplayName** | **String** |  | [optional] 
+**Assignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **ServiceAdmin** | **String** |  | [optional] 
 **ServiceAdminDisplayName** | **String** |  | [optional] 
 **ObjectUrl** | **String** |  | [optional] 
 **ObjectID** | **String** |  | [optional] 
-**CreatedTime** | **String** |  | [optional] 
+**CreatedTime** | **System.DateTime** |  | [optional] 
 **HasSubRequest** | **Boolean** |  | [optional] [default to $false]
+**Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 
 ## Examples
 
@@ -39,6 +42,7 @@ $AllRequestList = New-Cloud.Governance.ClientAllRequestList  -Id null `
  -ServiceName null `
  -ServiceType null `
  -ServiceTypeDescription null `
+ -Category null `
  -CategoryName null `
  -ApprovalStageName null `
  -Participants null `
@@ -54,12 +58,14 @@ $AllRequestList = New-Cloud.Governance.ClientAllRequestList  -Id null `
  -Modified null `
  -AssignTo null `
  -AssignToDisplayName null `
+ -Assignees null `
  -ServiceAdmin null `
  -ServiceAdminDisplayName null `
  -ObjectUrl null `
  -ObjectID null `
  -CreatedTime null `
- -HasSubRequest null
+ -HasSubRequest null `
+ -Metadata null
 ```
 
 - Convert the resource to JSON

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **IsUsingBrowserLanguage** | **bool** |  | [optional] [default to false]
 **ThemeCode** | **string** |  | [optional] 
 **ThemeType** | **ThemeSettingType** |  | [optional] [readonly] 
+**IsEnabledInTeamsApp** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,6 +18,9 @@ function New-CustomMetadata {
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${DisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${Description},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
@@ -71,6 +74,7 @@ function New-CustomMetadata {
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
+            "DisplayName" = ${DisplayName}
             "Description" = ${Description}
             "Type" = ${Type}
             "DisplayType" = ${DisplayType}
@@ -108,7 +112,7 @@ function ConvertFrom-JsonToCustomMetadata {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in CustomMetadata
-        $AllProperties = $("Id", "Name", "Description", "Type", "DisplayType", "AssignBy", "EnableTextValidation", "TextValidationRule", "BooleanMetadataSettings", "TermsMetadataSettings", "UserMetadataSettings", "UserProfileMetadataSettings", "AzureAdMetadataSettings", "ChoiceMetadataSettings", "LinkMetadataSettings", "SingleLineOrMultipleLineMetadataSettings", "SharePointListMetadataSettings")
+        $AllProperties = $("Id", "Name", "DisplayName", "Description", "Type", "DisplayType", "AssignBy", "EnableTextValidation", "TextValidationRule", "BooleanMetadataSettings", "TermsMetadataSettings", "UserMetadataSettings", "UserProfileMetadataSettings", "AzureAdMetadataSettings", "ChoiceMetadataSettings", "LinkMetadataSettings", "SingleLineOrMultipleLineMetadataSettings", "SharePointListMetadataSettings")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -125,6 +129,12 @@ function ConvertFrom-JsonToCustomMetadata {
             $Name = $null
         } else {
             $Name = $JsonParameters.PSobject.Properties["Name"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayName"))) { #optional property not found
+            $DisplayName = $null
+        } else {
+            $DisplayName = $JsonParameters.PSobject.Properties["DisplayName"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Description"))) { #optional property not found
@@ -220,6 +230,7 @@ function ConvertFrom-JsonToCustomMetadata {
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
+            "DisplayName" = ${DisplayName}
             "Description" = ${Description}
             "Type" = ${Type}
             "DisplayType" = ${DisplayType}

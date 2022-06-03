@@ -264,6 +264,9 @@ completed renewal task
 
 No description available.
 
+.PARAMETER Filter
+No description available.
+
 .PARAMETER AutoCompleteRenewalTaskParameter
 No description available.
 
@@ -279,6 +282,9 @@ function Complete-WorkspaceRenewalTask {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Filter},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${AutoCompleteRenewalTaskParameter},
         [Switch]
@@ -306,6 +312,10 @@ function Complete-WorkspaceRenewalTask {
         $LocalVarContentTypes = @('application/json')
 
         $LocalVarUri = '/admin/directory/workspace/renewal/complete'
+
+        if ($Filter) {
+            $LocalVarQueryParameters['filter'] = $Filter
+        }
 
         $LocalVarBodyParameter = $AutoCompleteRenewalTaskParameter | ConvertTo-Json -Depth 100
 
@@ -519,6 +529,101 @@ function Get-OngoingTasks {
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
                                 -ReturnType "WorksapceOngoingTasksModel[]" `
+                                -IsBodyNullable $false
+
+        if ($WithHttpInfo.IsPresent) {
+            return $LocalVarResult
+        } else {
+            return $LocalVarResult["Response"]
+        }
+    }
+}
+
+<#
+.SYNOPSIS
+
+get filters for workspace report
+
+.DESCRIPTION
+
+No description available.
+
+.PARAMETER Distinct
+support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata
+
+.PARAMETER ReturnType
+
+Select the return type (optional): text/plain, application/json
+
+.PARAMETER WithHttpInfo
+
+A switch when turned on will return a hash table of Response, StatusCode and Headers instead of just the Response
+
+.OUTPUTS
+
+DistinctResult[]
+#>
+function Get-WorkspaceFilters {
+    [CmdletBinding()]
+    Param (
+        [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Distinct},
+        [String]
+        [ValidateSet("text/plain", "application/json")]
+        $ReturnType,
+        [Switch]
+        $WithHttpInfo
+    )
+
+    Process {
+        'Calling method: Get-WorkspaceFilters' | Write-Debug
+        $PSBoundParameters | Out-DebugParameter | Write-Debug
+
+        $LocalVarAccepts = @()
+        $LocalVarContentTypes = @()
+        $LocalVarQueryParameters = @{}
+        $LocalVarHeaderParameters = @{}
+        $LocalVarFormParameters = @{}
+        $LocalVarPathParameters = @{}
+        $LocalVarCookieParameters = @{}
+        $LocalVarBodyParameter = $null
+
+        $Configuration = Get-Configuration
+        # HTTP header 'Accept' (if needed)
+        $LocalVarAccepts = @('text/plain', 'application/json')
+
+        if ($ReturnType) {
+            # use the return type (MIME) provided by the user
+            $LocalVarAccepts = @($ReturnType)
+        }
+
+        $LocalVarUri = '/admin/directory/workspace/filters'
+
+        if ($Distinct) {
+            $LocalVarQueryParameters['distinct'] = $Distinct
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
+            $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
+            Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["userPrincipalName"]) {
+            $LocalVarHeaderParameters['userPrincipalName'] = $Configuration["ApiKey"]["userPrincipalName"]
+            Write-Verbose ("Using API key 'userPrincipalName' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
+        }
+
+        $LocalVarResult = Invoke-ApiClient -Method 'GET' `
+                                -Uri $LocalVarUri `
+                                -Accepts $LocalVarAccepts `
+                                -ContentTypes $LocalVarContentTypes `
+                                -Body $LocalVarBodyParameter `
+                                -HeaderParameters $LocalVarHeaderParameters `
+                                -QueryParameters $LocalVarQueryParameters `
+                                -FormParameters $LocalVarFormParameters `
+                                -CookieParameters $LocalVarCookieParameters `
+                                -ReturnType "DistinctResult[]" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {
@@ -755,6 +860,9 @@ specify contacts
 
 No description available.
 
+.PARAMETER Filter
+No description available.
+
 .PARAMETER SpecifyContactParameter
 No description available.
 
@@ -770,6 +878,9 @@ function Invoke-SpecifyContacts {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Filter},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${SpecifyContactParameter},
         [Switch]
@@ -797,6 +908,10 @@ function Invoke-SpecifyContacts {
         $LocalVarContentTypes = @('application/json')
 
         $LocalVarUri = '/admin/directory/workspace/contacts'
+
+        if ($Filter) {
+            $LocalVarQueryParameters['filter'] = $Filter
+        }
 
         $LocalVarBodyParameter = $SpecifyContactParameter | ConvertTo-Json -Depth 100
 
@@ -839,6 +954,9 @@ trigger workspace renewal
 
 No description available.
 
+.PARAMETER Filter
+No description available.
+
 .PARAMETER WorkspaceSendCancelEmailParameter
 No description available.
 
@@ -854,6 +972,9 @@ function Invoke-TriggerWorkspaceRenewal {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [String]
+        ${Filter},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${WorkspaceSendCancelEmailParameter},
         [Switch]
@@ -881,6 +1002,10 @@ function Invoke-TriggerWorkspaceRenewal {
         $LocalVarContentTypes = @('application/json')
 
         $LocalVarUri = '/admin/directory/workspace/renewal/trigger'
+
+        if ($Filter) {
+            $LocalVarQueryParameters['filter'] = $Filter
+        }
 
         $LocalVarBodyParameter = $WorkspaceSendCancelEmailParameter | ConvertTo-Json -Depth 100
 

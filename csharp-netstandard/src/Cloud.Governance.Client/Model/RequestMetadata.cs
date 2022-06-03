@@ -49,6 +49,7 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         /// <param name="id">Id of metadata..</param>
         /// <param name="name">Name of metadata..</param>
+        /// <param name="displayName">displayName.</param>
         /// <param name="booleanValue">Value of Yes/No metadata. (default to false).</param>
         /// <param name="singleLineOrMultipleLineValue">Value of Single/Multiple line of text metadata..</param>
         /// <param name="upsOrAzureAdValue">Value of User Profile or Azure AD metadata..</param>
@@ -57,13 +58,15 @@ namespace Cloud.Governance.Client.Model
         /// <param name="linkValue">Value of Hyperlink metadata..</param>
         /// <param name="choiceValue">Value of Choice metadata..</param>
         /// <param name="lookupListValue">Value of Lookup to SharePoint library/list metadata..</param>
+        /// <param name="valueDisplayString">Display value of metadata for show in the page.  The customer maybe depend the valueString to do something, so we need a new property for show in the page  GAO-43948.</param>
         /// <param name="value">Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot;.</param>
         /// <param name="action">Action of metadata, used in change workspace metadata service..</param>
         /// <param name="allowReferenceAsRoleInApprovalProcess">Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process. (default to false).</param>
-        public RequestMetadata(Guid id = default(Guid), string name = default(string), bool? booleanValue = false, string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), string value = default(string), MetadataActionType? action = default(MetadataActionType?), bool allowReferenceAsRoleInApprovalProcess = false)
+        public RequestMetadata(Guid id = default(Guid), string name = default(string), string displayName = default(string), bool? booleanValue = false, string singleLineOrMultipleLineValue = default(string), LookupValue upsOrAzureAdValue = default(LookupValue), TermsValue termsValue = default(TermsValue), List<ApiUser> userValue = default(List<ApiUser>), LinkValue linkValue = default(LinkValue), List<string> choiceValue = default(List<string>), LookupListValue lookupListValue = default(LookupListValue), string valueDisplayString = default(string), string value = default(string), MetadataActionType? action = default(MetadataActionType?), bool allowReferenceAsRoleInApprovalProcess = false)
         {
             this.Id = id;
             this.Name = name;
+            this.DisplayName = displayName;
             // use default value if no "booleanValue" provided
             this.BooleanValue = booleanValue ?? false;
             this.SingleLineOrMultipleLineValue = singleLineOrMultipleLineValue;
@@ -73,6 +76,7 @@ namespace Cloud.Governance.Client.Model
             this.LinkValue = linkValue;
             this.ChoiceValue = choiceValue;
             this.LookupListValue = lookupListValue;
+            this.ValueDisplayString = valueDisplayString;
             this.Value = value;
             this.Action = action;
             this.AllowReferenceAsRoleInApprovalProcess = allowReferenceAsRoleInApprovalProcess;
@@ -91,6 +95,12 @@ namespace Cloud.Governance.Client.Model
         /// <value>Name of metadata.</value>
         [DataMember(Name = "name", EmitDefaultValue = true)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisplayName
+        /// </summary>
+        [DataMember(Name = "displayName", EmitDefaultValue = true)]
+        public string DisplayName { get; set; }
 
         /// <summary>
         /// Value of Yes/No metadata.
@@ -165,6 +175,13 @@ namespace Cloud.Governance.Client.Model
         }
 
         /// <summary>
+        /// Display value of metadata for show in the page.  The customer maybe depend the valueString to do something, so we need a new property for show in the page  GAO-43948
+        /// </summary>
+        /// <value>Display value of metadata for show in the page.  The customer maybe depend the valueString to do something, so we need a new property for show in the page  GAO-43948</value>
+        [DataMember(Name = "valueDisplayString", EmitDefaultValue = true)]
+        public string ValueDisplayString { get; set; }
+
+        /// <summary>
         /// Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot;
         /// </summary>
         /// <value>Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot;</value>
@@ -188,6 +205,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("class RequestMetadata {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  BooleanValue: ").Append(BooleanValue).Append("\n");
             sb.Append("  SingleLineOrMultipleLineValue: ").Append(SingleLineOrMultipleLineValue).Append("\n");
             sb.Append("  UpsOrAzureAdValue: ").Append(UpsOrAzureAdValue).Append("\n");
@@ -198,6 +216,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  LookupListValue: ").Append(LookupListValue).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ValueString: ").Append(ValueString).Append("\n");
+            sb.Append("  ValueDisplayString: ").Append(ValueDisplayString).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  AllowReferenceAsRoleInApprovalProcess: ").Append(AllowReferenceAsRoleInApprovalProcess).Append("\n");
@@ -244,6 +263,11 @@ namespace Cloud.Governance.Client.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.DisplayName == input.DisplayName ||
+                    (this.DisplayName != null &&
+                    this.DisplayName.Equals(input.DisplayName))
                 ) && 
                 (
                     this.BooleanValue == input.BooleanValue ||
@@ -297,6 +321,11 @@ namespace Cloud.Governance.Client.Model
                     this.ValueString.Equals(input.ValueString))
                 ) && 
                 (
+                    this.ValueDisplayString == input.ValueDisplayString ||
+                    (this.ValueDisplayString != null &&
+                    this.ValueDisplayString.Equals(input.ValueDisplayString))
+                ) && 
+                (
                     this.Value == input.Value ||
                     (this.Value != null &&
                     this.Value.Equals(input.Value))
@@ -324,6 +353,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.DisplayName != null)
+                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
                 if (this.BooleanValue != null)
                     hashCode = hashCode * 59 + this.BooleanValue.GetHashCode();
                 if (this.SingleLineOrMultipleLineValue != null)
@@ -343,6 +374,8 @@ namespace Cloud.Governance.Client.Model
                 hashCode = hashCode * 59 + this.Type.GetHashCode();
                 if (this.ValueString != null)
                     hashCode = hashCode * 59 + this.ValueString.GetHashCode();
+                if (this.ValueDisplayString != null)
+                    hashCode = hashCode * 59 + this.ValueDisplayString.GetHashCode();
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
                 hashCode = hashCode * 59 + this.Action.GetHashCode();

@@ -1,6 +1,6 @@
 ﻿$ModuleName="Cloud.Governance.Client"
-if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "5.1.1")){
-    Install-Module -Name $ModuleName -Force -MinimumVersion "5.1.1"
+if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "5.5.3.0")){
+    Install-Module -Name $ModuleName -Force -MinimumVersion "5.5.3.0"
 }
 
 

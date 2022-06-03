@@ -76,9 +76,10 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns></returns>
-        void CompleteWorkspaceRenewalTask(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter));
+        void CompleteWorkspaceRenewalTask(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter));
 
         /// <summary>
         /// completed renewal task
@@ -87,9 +88,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter));
+        ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter));
         /// <summary>
         /// delete workspaces
         /// </summary>
@@ -128,6 +130,24 @@ namespace Cloud.Governance.Client.Api
         /// <param name="groupNameOrUrl"></param>
         /// <returns>ApiResponse of List&lt;WorksapceOngoingTasksModel&gt;</returns>
         ApiResponse<List<WorksapceOngoingTasksModel>> GetOngoingTasksWithHttpInfo(WorkspaceType type, string groupNameOrUrl);
+        /// <summary>
+        /// get filters for workspace report
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <returns>List&lt;DistinctResult&gt;</returns>
+        List<DistinctResult> GetWorkspaceFilters(string distinct = default(string));
+
+        /// <summary>
+        /// get filters for workspace report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <returns>ApiResponse of List&lt;DistinctResult&gt;</returns>
+        ApiResponse<List<DistinctResult>> GetWorkspaceFiltersWithHttpInfo(string distinct = default(string));
         /// <summary>
         /// get managed workspaces
         /// </summary>
@@ -178,9 +198,10 @@ namespace Cloud.Governance.Client.Api
         /// specify contacts
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <returns></returns>
-        void SpecifyContacts(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter));
+        void SpecifyContacts(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter));
 
         /// <summary>
         /// specify contacts
@@ -189,16 +210,18 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SpecifyContactsWithHttpInfo(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter));
+        ApiResponse<Object> SpecifyContactsWithHttpInfo(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter));
         /// <summary>
         /// trigger workspace renewal
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns></returns>
-        void TriggerWorkspaceRenewal(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter));
+        void TriggerWorkspaceRenewal(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter));
 
         /// <summary>
         /// trigger workspace renewal
@@ -207,9 +230,10 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter));
+        ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter));
         /// <summary>
         /// unlock sites and Office365 group site
         /// </summary>
@@ -313,10 +337,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// completed renewal task
@@ -325,10 +350,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// delete workspaces
         /// </summary>
@@ -377,6 +403,29 @@ namespace Cloud.Governance.Client.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;WorksapceOngoingTasksModel&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<WorksapceOngoingTasksModel>>> GetOngoingTasksWithHttpInfoAsync(WorkspaceType type, string groupNameOrUrl, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        /// <summary>
+        /// get filters for workspace report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;DistinctResult&gt;</returns>
+        System.Threading.Tasks.Task<List<DistinctResult>> GetWorkspaceFiltersAsync(string distinct = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        /// <summary>
+        /// get filters for workspace report
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;DistinctResult&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DistinctResult>>> GetWorkspaceFiltersWithHttpInfoAsync(string distinct = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// get managed workspaces
         /// </summary>
@@ -440,10 +489,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SpecifyContactsAsync(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task SpecifyContactsAsync(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// specify contacts
@@ -452,10 +502,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SpecifyContactsWithHttpInfoAsync(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> SpecifyContactsWithHttpInfoAsync(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// trigger workspace renewal
         /// </summary>
@@ -463,10 +514,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
         /// trigger workspace renewal
@@ -475,10 +527,11 @@ namespace Cloud.Governance.Client.Api
         /// 
         /// </remarks>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// unlock sites and Office365 group site
         /// </summary>
@@ -1007,20 +1060,22 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns></returns>
-        public void CompleteWorkspaceRenewalTask(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter))
+        public void CompleteWorkspaceRenewalTask(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter))
         {
-            CompleteWorkspaceRenewalTaskWithHttpInfo(autoCompleteRenewalTaskParameter);
+            CompleteWorkspaceRenewalTaskWithHttpInfo(filter, autoCompleteRenewalTaskParameter);
         }
 
         /// <summary>
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> CompleteWorkspaceRenewalTaskWithHttpInfo(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1039,6 +1094,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
             localVarRequestOptions.Data = autoCompleteRenewalTaskParameter;
 
             // authentication (clientSecret) required
@@ -1068,22 +1127,24 @@ namespace Cloud.Governance.Client.Api
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task CompleteWorkspaceRenewalTaskAsync(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await CompleteWorkspaceRenewalTaskWithHttpInfoAsync(autoCompleteRenewalTaskParameter, cancellationToken).ConfigureAwait(false);
+            await CompleteWorkspaceRenewalTaskWithHttpInfoAsync(filter, autoCompleteRenewalTaskParameter, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// completed renewal task 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="autoCompleteRenewalTaskParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> CompleteWorkspaceRenewalTaskWithHttpInfoAsync(string filter = default(string), AutoCompleteRenewalTaskParameter autoCompleteRenewalTaskParameter = default(AutoCompleteRenewalTaskParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1104,6 +1165,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
             localVarRequestOptions.Data = autoCompleteRenewalTaskParameter;
 
             // authentication (clientSecret) required
@@ -1394,6 +1459,141 @@ namespace Cloud.Governance.Client.Api
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetOngoingTasks", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get filters for workspace report 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <returns>List&lt;DistinctResult&gt;</returns>
+        public List<DistinctResult> GetWorkspaceFilters(string distinct = default(string))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<DistinctResult>> localVarResponse = GetWorkspaceFiltersWithHttpInfo(distinct);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get filters for workspace report 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <returns>ApiResponse of List&lt;DistinctResult&gt;</returns>
+        public Cloud.Governance.Client.Client.ApiResponse<List<DistinctResult>> GetWorkspaceFiltersWithHttpInfo(string distinct = default(string))
+        {
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (distinct != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "distinct", distinct));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+            var localVarResponse = this.Client.Get<List<DistinctResult>>("/admin/directory/workspace/filters", localVarRequestOptions, this.Configuration);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetWorkspaceFilters", localVarResponse);
+                if (_exception != null) throw _exception;
+            }
+
+            return localVarResponse;
+        }
+
+        /// <summary>
+        /// get filters for workspace report 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of List&lt;DistinctResult&gt;</returns>
+        public async System.Threading.Tasks.Task<List<DistinctResult>> GetWorkspaceFiltersAsync(string distinct = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+            Cloud.Governance.Client.Client.ApiResponse<List<DistinctResult>> localVarResponse = await GetWorkspaceFiltersWithHttpInfoAsync(distinct, cancellationToken).ConfigureAwait(false);
+            return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// get filters for workspace report 
+        /// </summary>
+        /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="distinct">support value: PolicyId,PolicyName,PhaseProfileId,PhaseProfileName,GeoLocation,Classification and metadata (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <returns>Task of ApiResponse (List&lt;DistinctResult&gt;)</returns>
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<List<DistinctResult>>> GetWorkspaceFiltersWithHttpInfoAsync(string distinct = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        {
+
+            Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
+
+            String[] _contentTypes = new String[] {
+            };
+
+            // to determine the Accept header
+            String[] _accepts = new String[] {
+                "text/plain",
+                "application/json"
+            };
+
+
+            var localVarContentType = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
+
+            var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
+
+            if (distinct != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "distinct", distinct));
+            }
+
+            // authentication (clientSecret) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("clientSecret")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("clientSecret", this.Configuration.GetApiKeyWithPrefix("clientSecret"));
+            }
+            // authentication (userPrincipalName) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("userPrincipalName")))
+            {
+                localVarRequestOptions.HeaderParameters.Add("userPrincipalName", this.Configuration.GetApiKeyWithPrefix("userPrincipalName"));
+            }
+
+            // make the HTTP request
+
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<DistinctResult>>("/admin/directory/workspace/filters", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+
+            if (this.ExceptionFactory != null)
+            {
+                Exception _exception = this.ExceptionFactory("GetWorkspaceFilters", localVarResponse);
                 if (_exception != null) throw _exception;
             }
 
@@ -1726,20 +1926,22 @@ namespace Cloud.Governance.Client.Api
         /// specify contacts 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <returns></returns>
-        public void SpecifyContacts(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter))
+        public void SpecifyContacts(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter))
         {
-            SpecifyContactsWithHttpInfo(specifyContactParameter);
+            SpecifyContactsWithHttpInfo(filter, specifyContactParameter);
         }
 
         /// <summary>
         /// specify contacts 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> SpecifyContactsWithHttpInfo(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> SpecifyContactsWithHttpInfo(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1758,6 +1960,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
             localVarRequestOptions.Data = specifyContactParameter;
 
             // authentication (clientSecret) required
@@ -1787,22 +1993,24 @@ namespace Cloud.Governance.Client.Api
         /// specify contacts 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SpecifyContactsAsync(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task SpecifyContactsAsync(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await SpecifyContactsWithHttpInfoAsync(specifyContactParameter, cancellationToken).ConfigureAwait(false);
+            await SpecifyContactsWithHttpInfoAsync(filter, specifyContactParameter, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// specify contacts 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="specifyContactParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SpecifyContactsWithHttpInfoAsync(SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> SpecifyContactsWithHttpInfoAsync(string filter = default(string), SpecifyContactParameter specifyContactParameter = default(SpecifyContactParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1823,6 +2031,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
             localVarRequestOptions.Data = specifyContactParameter;
 
             // authentication (clientSecret) required
@@ -1853,20 +2065,22 @@ namespace Cloud.Governance.Client.Api
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns></returns>
-        public void TriggerWorkspaceRenewal(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter))
+        public void TriggerWorkspaceRenewal(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter))
         {
-            TriggerWorkspaceRenewalWithHttpInfo(workspaceSendCancelEmailParameter);
+            TriggerWorkspaceRenewalWithHttpInfo(filter, workspaceSendCancelEmailParameter);
         }
 
         /// <summary>
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public Cloud.Governance.Client.Client.ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter))
+        public Cloud.Governance.Client.Client.ApiResponse<Object> TriggerWorkspaceRenewalWithHttpInfo(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter))
         {
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
 
@@ -1885,6 +2099,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
             localVarRequestOptions.Data = workspaceSendCancelEmailParameter;
 
             // authentication (clientSecret) required
@@ -1914,22 +2132,24 @@ namespace Cloud.Governance.Client.Api
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task TriggerWorkspaceRenewalAsync(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            await TriggerWorkspaceRenewalWithHttpInfoAsync(workspaceSendCancelEmailParameter, cancellationToken).ConfigureAwait(false);
+            await TriggerWorkspaceRenewalWithHttpInfoAsync(filter, workspaceSendCancelEmailParameter, cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
         /// trigger workspace renewal 
         /// </summary>
         /// <exception cref="Cloud.Governance.Client.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filter"> (optional)</param>
         /// <param name="workspaceSendCancelEmailParameter"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Cloud.Governance.Client.Client.ApiResponse<Object>> TriggerWorkspaceRenewalWithHttpInfoAsync(string filter = default(string), WorkspaceSendCancelEmailParameter workspaceSendCancelEmailParameter = default(WorkspaceSendCancelEmailParameter), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             Cloud.Governance.Client.Client.RequestOptions localVarRequestOptions = new Cloud.Governance.Client.Client.RequestOptions();
@@ -1950,6 +2170,10 @@ namespace Cloud.Governance.Client.Api
             var localVarAccept = Cloud.Governance.Client.Client.ClientUtils.SelectHeaderAccept(_accepts);
             if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
+            if (filter != null)
+            {
+                localVarRequestOptions.QueryParameters.Add(Cloud.Governance.Client.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
+            }
             localVarRequestOptions.Data = workspaceSendCancelEmailParameter;
 
             // authentication (clientSecret) required

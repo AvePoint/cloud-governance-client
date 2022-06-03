@@ -456,6 +456,9 @@ No description available.
 .PARAMETER PeopleFilterProfileId
 No description available.
 
+.PARAMETER IsGetTenantBySiteUrl
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -492,6 +495,9 @@ function Resolve-ACGUsers {
         [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${PeopleFilterProfileId},
+        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsGetTenantBySiteUrl},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -555,6 +561,10 @@ function Resolve-ACGUsers {
             $LocalVarQueryParameters['peopleFilterProfileId'] = $PeopleFilterProfileId
         }
 
+        if ($IsGetTenantBySiteUrl) {
+            $LocalVarQueryParameters['isGetTenantBySiteUrl'] = $IsGetTenantBySiteUrl
+        }
+
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {
             $LocalVarHeaderParameters['clientSecret'] = $Configuration["ApiKey"]["clientSecret"]
             Write-Verbose ("Using API key 'clientSecret' in the header for authentication in {0}" -f $MyInvocation.MyCommand)
@@ -615,6 +625,9 @@ No description available.
 .PARAMETER PeopleFilterProfileId
 No description available.
 
+.PARAMETER IsGetTenantBySiteUrl
+No description available.
+
 .PARAMETER ReturnType
 
 Select the return type (optional): text/plain, application/json
@@ -651,6 +664,9 @@ function Search-ACGUsers {
         [Parameter(Position = 6, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
         [PSCustomObject]
         ${PeopleFilterProfileId},
+        [Parameter(Position = 7, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
+        [System.Nullable[Boolean]]
+        ${IsGetTenantBySiteUrl},
         [String]
         [ValidateSet("text/plain", "application/json")]
         $ReturnType,
@@ -712,6 +728,10 @@ function Search-ACGUsers {
 
         if ($PeopleFilterProfileId) {
             $LocalVarQueryParameters['peopleFilterProfileId'] = $PeopleFilterProfileId
+        }
+
+        if ($IsGetTenantBySiteUrl) {
+            $LocalVarQueryParameters['isGetTenantBySiteUrl'] = $IsGetTenantBySiteUrl
         }
 
         if ($Configuration["ApiKey"] -and $Configuration["ApiKey"]["clientSecret"]) {

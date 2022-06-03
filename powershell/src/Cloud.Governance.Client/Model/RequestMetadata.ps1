@@ -17,6 +17,9 @@ function New-RequestMetadata {
         [String]
         ${Name},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${DisplayName},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${BooleanValue} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
@@ -42,6 +45,9 @@ function New-RequestMetadata {
         ${LookupListValue},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
+        ${ValueDisplayString},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [PSCustomObject]
@@ -59,6 +65,7 @@ function New-RequestMetadata {
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
+            "DisplayName" = ${DisplayName}
             "BooleanValue" = ${BooleanValue}
             "SingleLineOrMultipleLineValue" = ${SingleLineOrMultipleLineValue}
             "UpsOrAzureAdValue" = ${UpsOrAzureAdValue}
@@ -67,6 +74,7 @@ function New-RequestMetadata {
             "LinkValue" = ${LinkValue}
             "ChoiceValue" = ${ChoiceValue}
             "LookupListValue" = ${LookupListValue}
+            "ValueDisplayString" = ${ValueDisplayString}
             "Value" = ${Value}
             "Action" = ${Action}
             "AllowReferenceAsRoleInApprovalProcess" = ${AllowReferenceAsRoleInApprovalProcess}
@@ -92,7 +100,7 @@ function ConvertFrom-JsonToRequestMetadata {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in RequestMetadata
-        $AllProperties = $("Id", "Name", "BooleanValue", "SingleLineOrMultipleLineValue", "UpsOrAzureAdValue", "TermsValue", "UserValue", "LinkValue", "ChoiceValue", "LookupListValue", "Type", "ValueString", "Value", "Action", "AllowReferenceAsRoleInApprovalProcess")
+        $AllProperties = $("Id", "Name", "DisplayName", "BooleanValue", "SingleLineOrMultipleLineValue", "UpsOrAzureAdValue", "TermsValue", "UserValue", "LinkValue", "ChoiceValue", "LookupListValue", "Type", "ValueString", "ValueDisplayString", "Value", "Action", "AllowReferenceAsRoleInApprovalProcess")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -109,6 +117,12 @@ function ConvertFrom-JsonToRequestMetadata {
             $Name = $null
         } else {
             $Name = $JsonParameters.PSobject.Properties["Name"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DisplayName"))) { #optional property not found
+            $DisplayName = $null
+        } else {
+            $DisplayName = $JsonParameters.PSobject.Properties["DisplayName"].value
         }
 
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "BooleanValue"))) { #optional property not found
@@ -171,6 +185,12 @@ function ConvertFrom-JsonToRequestMetadata {
             $ValueString = $JsonParameters.PSobject.Properties["ValueString"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "ValueDisplayString"))) { #optional property not found
+            $ValueDisplayString = $null
+        } else {
+            $ValueDisplayString = $JsonParameters.PSobject.Properties["ValueDisplayString"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "Value"))) { #optional property not found
             $Value = $null
         } else {
@@ -192,6 +212,7 @@ function ConvertFrom-JsonToRequestMetadata {
         $PSO = [PSCustomObject]@{
             "Id" = ${Id}
             "Name" = ${Name}
+            "DisplayName" = ${DisplayName}
             "BooleanValue" = ${BooleanValue}
             "SingleLineOrMultipleLineValue" = ${SingleLineOrMultipleLineValue}
             "UpsOrAzureAdValue" = ${UpsOrAzureAdValue}
@@ -202,6 +223,7 @@ function ConvertFrom-JsonToRequestMetadata {
             "LookupListValue" = ${LookupListValue}
             "Type" = ${Type}
             "ValueString" = ${ValueString}
+            "ValueDisplayString" = ${ValueDisplayString}
             "Value" = ${Value}
             "Action" = ${Action}
             "AllowReferenceAsRoleInApprovalProcess" = ${AllowReferenceAsRoleInApprovalProcess}

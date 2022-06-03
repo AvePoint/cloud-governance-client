@@ -18,10 +18,10 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// MetadataGridModel
+    /// OldMetadataGridModel
     /// </summary>
-    [DataContract(Name = "MetadataGridModel")]
-    public partial class MetadataGridModel : IEquatable<MetadataGridModel>, IValidatableObject
+    [DataContract(Name = "OldMetadataGridModel")]
+    public partial class OldMetadataGridModel : IEquatable<OldMetadataGridModel>, IValidatableObject
     {
         /// <summary>
         /// Gets or Sets FieldType
@@ -34,7 +34,7 @@ namespace Cloud.Governance.Client.Model
         [DataMember(Name = "showInReportType", EmitDefaultValue = false)]
         public MetadataDisplayType? ShowInReportType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="MetadataGridModel" /> class.
+        /// Initializes a new instance of the <see cref="OldMetadataGridModel" /> class.
         /// </summary>
         /// <param name="createdBy">createdBy.</param>
         /// <param name="createdByDisplayName">createdByDisplayName.</param>
@@ -42,11 +42,12 @@ namespace Cloud.Governance.Client.Model
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="fieldType">fieldType.</param>
+        /// <param name="fieldTypeDescription">fieldTypeDescription.</param>
         /// <param name="metadataValue">metadataValue.</param>
         /// <param name="showInReportType">showInReportType.</param>
         /// <param name="showInReportTypeDescription">showInReportTypeDescription.</param>
         /// <param name="lastModifiedTime">lastModifiedTime.</param>
-        public MetadataGridModel(string createdBy = default(string), string createdByDisplayName = default(string), Guid id = default(Guid), string name = default(string), string description = default(string), MetadataFieldType? fieldType = default(MetadataFieldType?), string metadataValue = default(string), MetadataDisplayType? showInReportType = default(MetadataDisplayType?), string showInReportTypeDescription = default(string), DateTime lastModifiedTime = default(DateTime))
+        public OldMetadataGridModel(string createdBy = default(string), string createdByDisplayName = default(string), Guid id = default(Guid), string name = default(string), string description = default(string), MetadataFieldType? fieldType = default(MetadataFieldType?), string fieldTypeDescription = default(string), string metadataValue = default(string), MetadataDisplayType? showInReportType = default(MetadataDisplayType?), string showInReportTypeDescription = default(string), DateTime lastModifiedTime = default(DateTime))
         {
             this.CreatedBy = createdBy;
             this.CreatedByDisplayName = createdByDisplayName;
@@ -54,6 +55,7 @@ namespace Cloud.Governance.Client.Model
             this.Name = name;
             this.Description = description;
             this.FieldType = fieldType;
+            this.FieldTypeDescription = fieldTypeDescription;
             this.MetadataValue = metadataValue;
             this.ShowInReportType = showInReportType;
             this.ShowInReportTypeDescription = showInReportTypeDescription;
@@ -91,6 +93,12 @@ namespace Cloud.Governance.Client.Model
         public string Description { get; set; }
 
         /// <summary>
+        /// Gets or Sets FieldTypeDescription
+        /// </summary>
+        [DataMember(Name = "fieldTypeDescription", EmitDefaultValue = true)]
+        public string FieldTypeDescription { get; set; }
+
+        /// <summary>
         /// Gets or Sets MetadataValue
         /// </summary>
         [DataMember(Name = "metadataValue", EmitDefaultValue = true)]
@@ -115,13 +123,14 @@ namespace Cloud.Governance.Client.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MetadataGridModel {\n");
+            sb.Append("class OldMetadataGridModel {\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  CreatedByDisplayName: ").Append(CreatedByDisplayName).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  FieldType: ").Append(FieldType).Append("\n");
+            sb.Append("  FieldTypeDescription: ").Append(FieldTypeDescription).Append("\n");
             sb.Append("  MetadataValue: ").Append(MetadataValue).Append("\n");
             sb.Append("  ShowInReportType: ").Append(ShowInReportType).Append("\n");
             sb.Append("  ShowInReportTypeDescription: ").Append(ShowInReportTypeDescription).Append("\n");
@@ -146,15 +155,15 @@ namespace Cloud.Governance.Client.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MetadataGridModel);
+            return this.Equals(input as OldMetadataGridModel);
         }
 
         /// <summary>
-        /// Returns true if MetadataGridModel instances are equal
+        /// Returns true if OldMetadataGridModel instances are equal
         /// </summary>
-        /// <param name="input">Instance of MetadataGridModel to be compared</param>
+        /// <param name="input">Instance of OldMetadataGridModel to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MetadataGridModel input)
+        public bool Equals(OldMetadataGridModel input)
         {
             if (input == null)
                 return false;
@@ -188,6 +197,11 @@ namespace Cloud.Governance.Client.Model
                 (
                     this.FieldType == input.FieldType ||
                     this.FieldType.Equals(input.FieldType)
+                ) && 
+                (
+                    this.FieldTypeDescription == input.FieldTypeDescription ||
+                    (this.FieldTypeDescription != null &&
+                    this.FieldTypeDescription.Equals(input.FieldTypeDescription))
                 ) && 
                 (
                     this.MetadataValue == input.MetadataValue ||
@@ -230,6 +244,8 @@ namespace Cloud.Governance.Client.Model
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 hashCode = hashCode * 59 + this.FieldType.GetHashCode();
+                if (this.FieldTypeDescription != null)
+                    hashCode = hashCode * 59 + this.FieldTypeDescription.GetHashCode();
                 if (this.MetadataValue != null)
                     hashCode = hashCode * 59 + this.MetadataValue.GetHashCode();
                 hashCode = hashCode * 59 + this.ShowInReportType.GetHashCode();

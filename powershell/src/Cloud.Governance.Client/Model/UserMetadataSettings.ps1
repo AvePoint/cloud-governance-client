@@ -14,6 +14,9 @@ function New-UserMetadataSettings {
         [PSCustomObject[]]
         ${Value},
         [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject]
+        ${PeoplePickerProfile},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
         [System.Nullable[Boolean]]
         ${AllowReferenceAsRoleInApprovalProcess} = $false
     )
@@ -25,6 +28,7 @@ function New-UserMetadataSettings {
         
         $PSO = [PSCustomObject]@{
             "Value" = ${Value}
+            "PeoplePickerProfile" = ${PeoplePickerProfile}
             "AllowReferenceAsRoleInApprovalProcess" = ${AllowReferenceAsRoleInApprovalProcess}
         }
 
@@ -48,7 +52,7 @@ function ConvertFrom-JsonToUserMetadataSettings {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in UserMetadataSettings
-        $AllProperties = $("Value", "AllowReferenceAsRoleInApprovalProcess")
+        $AllProperties = $("Value", "PeoplePickerProfile", "AllowReferenceAsRoleInApprovalProcess")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -61,6 +65,12 @@ function ConvertFrom-JsonToUserMetadataSettings {
             $Value = $JsonParameters.PSobject.Properties["Value"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "PeoplePickerProfile"))) { #optional property not found
+            $PeoplePickerProfile = $null
+        } else {
+            $PeoplePickerProfile = $JsonParameters.PSobject.Properties["PeoplePickerProfile"].value
+        }
+
         if (!([bool]($JsonParameters.PSobject.Properties.name -match "AllowReferenceAsRoleInApprovalProcess"))) { #optional property not found
             $AllowReferenceAsRoleInApprovalProcess = $null
         } else {
@@ -69,6 +79,7 @@ function ConvertFrom-JsonToUserMetadataSettings {
 
         $PSO = [PSCustomObject]@{
             "Value" = ${Value}
+            "PeoplePickerProfile" = ${PeoplePickerProfile}
             "AllowReferenceAsRoleInApprovalProcess" = ${AllowReferenceAsRoleInApprovalProcess}
         }
 

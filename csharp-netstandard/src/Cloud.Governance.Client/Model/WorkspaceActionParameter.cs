@@ -27,9 +27,11 @@ namespace Cloud.Governance.Client.Model
         /// Initializes a new instance of the <see cref="WorkspaceActionParameter" /> class.
         /// </summary>
         /// <param name="workspace">workspace.</param>
-        public WorkspaceActionParameter(List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>))
+        /// <param name="isSelectAllWorkspace">isSelectAllWorkspace (default to false).</param>
+        public WorkspaceActionParameter(List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>), bool isSelectAllWorkspace = false)
         {
             this.Workspace = workspace;
+            this.IsSelectAllWorkspace = isSelectAllWorkspace;
         }
 
         /// <summary>
@@ -37,6 +39,12 @@ namespace Cloud.Governance.Client.Model
         /// </summary>
         [DataMember(Name = "workspace", EmitDefaultValue = true)]
         public List<WorkspaceIdTypeModel> Workspace { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsSelectAllWorkspace
+        /// </summary>
+        [DataMember(Name = "isSelectAllWorkspace", EmitDefaultValue = false)]
+        public bool IsSelectAllWorkspace { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -47,6 +55,7 @@ namespace Cloud.Governance.Client.Model
             var sb = new StringBuilder();
             sb.Append("class WorkspaceActionParameter {\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
+            sb.Append("  IsSelectAllWorkspace: ").Append(IsSelectAllWorkspace).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -86,6 +95,10 @@ namespace Cloud.Governance.Client.Model
                     this.Workspace != null &&
                     input.Workspace != null &&
                     this.Workspace.SequenceEqual(input.Workspace)
+                ) && 
+                (
+                    this.IsSelectAllWorkspace == input.IsSelectAllWorkspace ||
+                    this.IsSelectAllWorkspace.Equals(input.IsSelectAllWorkspace)
                 );
         }
 
@@ -100,6 +113,7 @@ namespace Cloud.Governance.Client.Model
                 int hashCode = 41;
                 if (this.Workspace != null)
                     hashCode = hashCode * 59 + this.Workspace.GetHashCode();
+                hashCode = hashCode * 59 + this.IsSelectAllWorkspace.GetHashCode();
                 return hashCode;
             }
         }

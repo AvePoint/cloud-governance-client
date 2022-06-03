@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**MetadataFieldType**](MetadataFieldType.md) |  | [optional] 
 **DisplayType** | [**DisplayInReportType**](DisplayInReportType.md) |  | [optional] 
@@ -27,6 +28,7 @@ Name | Type | Description | Notes
 ```powershell
 $CustomMetadata = New-Cloud.Governance.ClientCustomMetadata  -Id null `
  -Name null `
+ -DisplayName null `
  -Description null `
  -Type null `
  -DisplayType null `

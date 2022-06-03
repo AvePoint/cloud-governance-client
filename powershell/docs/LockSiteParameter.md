@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
 **CancelEmailTemplateId** | **String** |  | [optional] 
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
+**IsSelectAllWorkspace** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -15,7 +16,8 @@ Name | Type | Description | Notes
 $LockSiteParameter = New-Cloud.Governance.ClientLockSiteParameter  -LockType null `
  -IsSendCancelEmail null `
  -CancelEmailTemplateId null `
- -Workspace null
+ -Workspace null `
+ -IsSelectAllWorkspace null
 ```
 
 - Convert the resource to JSON

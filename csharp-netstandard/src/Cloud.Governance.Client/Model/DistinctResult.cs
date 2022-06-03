@@ -18,41 +18,33 @@ using OpenAPIDateConverter = Cloud.Governance.Client.Client.OpenAPIDateConverter
 namespace Cloud.Governance.Client.Model
 {
     /// <summary>
-    /// MetadataGridModelPageResult
+    /// DistinctResult
     /// </summary>
-    [DataContract(Name = "MetadataGridModelPageResult")]
-    public partial class MetadataGridModelPageResult : IEquatable<MetadataGridModelPageResult>, IValidatableObject
+    [DataContract(Name = "DistinctResult")]
+    public partial class DistinctResult : IEquatable<DistinctResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="MetadataGridModelPageResult" /> class.
+        /// Initializes a new instance of the <see cref="DistinctResult" /> class.
         /// </summary>
         /// <param name="value">value.</param>
-        /// <param name="nextLink">nextLink.</param>
-        /// <param name="nextToken">nextToken.</param>
-        public MetadataGridModelPageResult(List<MetadataGridModel> value = default(List<MetadataGridModel>), string nextLink = default(string), string nextToken = default(string))
+        /// <param name="displayValue">displayValue.</param>
+        public DistinctResult(string value = default(string), string displayValue = default(string))
         {
             this.Value = value;
-            this.NextLink = nextLink;
-            this.NextToken = nextToken;
+            this.DisplayValue = displayValue;
         }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name = "value", EmitDefaultValue = true)]
-        public List<MetadataGridModel> Value { get; set; }
+        public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets NextLink
+        /// Gets or Sets DisplayValue
         /// </summary>
-        [DataMember(Name = "nextLink", EmitDefaultValue = true)]
-        public string NextLink { get; set; }
-
-        /// <summary>
-        /// Gets or Sets NextToken
-        /// </summary>
-        [DataMember(Name = "nextToken", EmitDefaultValue = true)]
-        public string NextToken { get; set; }
+        [DataMember(Name = "displayValue", EmitDefaultValue = true)]
+        public string DisplayValue { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,10 +53,9 @@ namespace Cloud.Governance.Client.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MetadataGridModelPageResult {\n");
+            sb.Append("class DistinctResult {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  NextLink: ").Append(NextLink).Append("\n");
-            sb.Append("  NextToken: ").Append(NextToken).Append("\n");
+            sb.Append("  DisplayValue: ").Append(DisplayValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -85,15 +76,15 @@ namespace Cloud.Governance.Client.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as MetadataGridModelPageResult);
+            return this.Equals(input as DistinctResult);
         }
 
         /// <summary>
-        /// Returns true if MetadataGridModelPageResult instances are equal
+        /// Returns true if DistinctResult instances are equal
         /// </summary>
-        /// <param name="input">Instance of MetadataGridModelPageResult to be compared</param>
+        /// <param name="input">Instance of DistinctResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MetadataGridModelPageResult input)
+        public bool Equals(DistinctResult input)
         {
             if (input == null)
                 return false;
@@ -101,19 +92,13 @@ namespace Cloud.Governance.Client.Model
             return 
                 (
                     this.Value == input.Value ||
-                    this.Value != null &&
-                    input.Value != null &&
-                    this.Value.SequenceEqual(input.Value)
+                    (this.Value != null &&
+                    this.Value.Equals(input.Value))
                 ) && 
                 (
-                    this.NextLink == input.NextLink ||
-                    (this.NextLink != null &&
-                    this.NextLink.Equals(input.NextLink))
-                ) && 
-                (
-                    this.NextToken == input.NextToken ||
-                    (this.NextToken != null &&
-                    this.NextToken.Equals(input.NextToken))
+                    this.DisplayValue == input.DisplayValue ||
+                    (this.DisplayValue != null &&
+                    this.DisplayValue.Equals(input.DisplayValue))
                 );
         }
 
@@ -128,10 +113,8 @@ namespace Cloud.Governance.Client.Model
                 int hashCode = 41;
                 if (this.Value != null)
                     hashCode = hashCode * 59 + this.Value.GetHashCode();
-                if (this.NextLink != null)
-                    hashCode = hashCode * 59 + this.NextLink.GetHashCode();
-                if (this.NextToken != null)
-                    hashCode = hashCode * 59 + this.NextToken.GetHashCode();
+                if (this.DisplayValue != null)
+                    hashCode = hashCode * 59 + this.DisplayValue.GetHashCode();
                 return hashCode;
             }
         }

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Value** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**PeoplePickerProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
@@ -11,6 +12,7 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $UserMetadataSettings = New-Cloud.Governance.ClientUserMetadataSettings  -Value null `
+ -PeoplePickerProfile null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```
 

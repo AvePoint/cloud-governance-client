@@ -23,7 +23,7 @@ namespace Cloud.Governance.Client.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "5.3.0";
+        public const string Version = "5.5.4";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -52,6 +52,11 @@ namespace Cloud.Governance.Client.Client
                 return new ApiException(status,
                     string.Format("Error calling {0}: {1}", methodName, response.RawContent),
                     response.RawContent, response.Headers);
+            }
+            if (!String.IsNullOrEmpty(response.ErrorText))
+            {
+                return new ApiException(status,
+                   string.Format("Error calling {0}: {1}", methodName, response.ErrorText), response.ErrorText);
             }
             return null;
         };
@@ -91,7 +96,7 @@ namespace Cloud.Governance.Client.Client
         [System.Diagnostics.CodeAnalysis.SuppressMessage("ReSharper", "VirtualMemberCallInConstructor")]
         public Configuration()
         {
-            UserAgent = "sdk/csharp-netstandard/5.3.0";
+            UserAgent = "sdk/csharp-netstandard/5.5.4";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
             ApiKeyPrefix = new ConcurrentDictionary<string, string>();
@@ -352,7 +357,7 @@ namespace Cloud.Governance.Client.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 1.0\n";
-            report += "    SDK Package Version: 5.3.0\n";
+            report += "    SDK Package Version: 5.5.4\n";
 
             return report;
         }

@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 5.3.0
+- SDK version: 5.5.3
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -45,8 +45,10 @@ Class | Method | HTTP request | Description
 *Office365Api* | [**Remove-ACGSecurityGroup**](docs/Office365Api.md#remove-acgsecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 *Office365AdminApi* | [**Add-WebUserCustomAction**](docs/Office365AdminApi.md#Add-WebUserCustomAction) | **POST** /admin/office365/web/usercustomactions | add user custom actions, if exists, will update the existing one.
 *Office365AdminApi* | [**Invoke-DeleteWebUserCustomAction**](docs/Office365AdminApi.md#Invoke-DeleteWebUserCustomAction) | **DELETE** /admin/office365/web/usercustomactions | delete user custom actions by action name
+*Office365AdminApi* | [**Get-AzureADExtensionPropertyNamesWithDataType**](docs/Office365AdminApi.md#Get-AzureADExtensionPropertyNamesWithDataType) | **GET** /admin/office365/azuread/{tenantId}/property/custom | get azure ad custom property with data type
 *Office365AdminApi* | [**Get-AzureAdCustomPropertyNames**](docs/Office365AdminApi.md#Get-AzureAdCustomPropertyNames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
 *Office365AdminApi* | [**Get-TenantIdByUrl**](docs/Office365AdminApi.md#Get-TenantIdByUrl) | **GET** /admin/office365/tenantid | get tenant ids by url
+*Office365AdminApi* | [**Get-TenantIds**](docs/Office365AdminApi.md#Get-TenantIds) | **GET** /admin/office365/tenantids | get tenant ids by filter expression
 *ReportAdminApi* | [**Invoke-GeTaskReport**](docs/ReportAdminApi.md#Invoke-GeTaskReport) | **GET** /admin/report/tasks | get all tasks report
 *ReportAdminApi* | [**Get-RequestReport**](docs/ReportAdminApi.md#Get-RequestReport) | **GET** /admin/report/requests | get requests report
 *ReportAdminApi* | [**Get-WorkspaceReport**](docs/ReportAdminApi.md#Get-WorkspaceReport) | **GET** /admin/report/workspaces | get workspaces report
@@ -240,6 +242,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**Complete-WorkspaceRenewalTask**](docs/WorkspacesAdminApi.md#Complete-WorkspaceRenewalTask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 *WorkspacesAdminApi* | [**Invoke-DeleteWorkspaces**](docs/WorkspacesAdminApi.md#Invoke-DeleteWorkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
 *WorkspacesAdminApi* | [**Get-OngoingTasks**](docs/WorkspacesAdminApi.md#Get-OngoingTasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
+*WorkspacesAdminApi* | [**Get-WorkspaceFilters**](docs/WorkspacesAdminApi.md#Get-WorkspaceFilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 *WorkspacesAdminApi* | [**Get-Workspaces**](docs/WorkspacesAdminApi.md#Get-Workspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**Lock-Workspaces**](docs/WorkspacesAdminApi.md#Lock-Workspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 *WorkspacesAdminApi* | [**Invoke-SpecifyContacts**](docs/WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | specify contacts
@@ -393,6 +396,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.CreateWebUrlValidationResult](docs/CreateWebUrlValidationResult.md)
  - [Cloud.Governance.Client\Model.CreateWebValidationParameter](docs/CreateWebValidationParameter.md)
  - [Cloud.Governance.Client\Model.CustomActionSettings](docs/CustomActionSettings.md)
+ - [Cloud.Governance.Client\Model.CustomExtensionPropertyModel](docs/CustomExtensionPropertyModel.md)
  - [Cloud.Governance.Client\Model.CustomMetadata](docs/CustomMetadata.md)
  - [Cloud.Governance.Client\Model.DelegatedAccessToken](docs/DelegatedAccessToken.md)
  - [Cloud.Governance.Client\Model.DelegatedAccessTokenApiResult](docs/DelegatedAccessTokenApiResult.md)
@@ -403,6 +407,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.DeleteWorkspaceParameter](docs/DeleteWorkspaceParameter.md)
  - [Cloud.Governance.Client\Model.DeploymentManagerPlanSettings](docs/DeploymentManagerPlanSettings.md)
  - [Cloud.Governance.Client\Model.DisplayInReportType](docs/DisplayInReportType.md)
+ - [Cloud.Governance.Client\Model.DistinctResult](docs/DistinctResult.md)
  - [Cloud.Governance.Client\Model.DpmServiceSetting](docs/DpmServiceSetting.md)
  - [Cloud.Governance.Client\Model.DueDateType](docs/DueDateType.md)
  - [Cloud.Governance.Client\Model.DurationDateType](docs/DurationDateType.md)
@@ -495,6 +500,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ListVersionSettings](docs/ListVersionSettings.md)
  - [Cloud.Governance.Client\Model.ListVersionSettingsChangedProperty](docs/ListVersionSettingsChangedProperty.md)
  - [Cloud.Governance.Client\Model.LocaleSettings](docs/LocaleSettings.md)
+ - [Cloud.Governance.Client\Model.LocalizedMetadataTermsAndConditionsModel](docs/LocalizedMetadataTermsAndConditionsModel.md)
  - [Cloud.Governance.Client\Model.LockSiteCollectionType](docs/LockSiteCollectionType.md)
  - [Cloud.Governance.Client\Model.LockSiteParameter](docs/LockSiteParameter.md)
  - [Cloud.Governance.Client\Model.LockSiteRequest](docs/LockSiteRequest.md)
@@ -516,8 +522,6 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.MetadataActionType](docs/MetadataActionType.md)
  - [Cloud.Governance.Client\Model.MetadataDisplayType](docs/MetadataDisplayType.md)
  - [Cloud.Governance.Client\Model.MetadataFieldType](docs/MetadataFieldType.md)
- - [Cloud.Governance.Client\Model.MetadataGridModel](docs/MetadataGridModel.md)
- - [Cloud.Governance.Client\Model.MetadataGridModelPageResult](docs/MetadataGridModelPageResult.md)
  - [Cloud.Governance.Client\Model.MultiGeoControlMode](docs/MultiGeoControlMode.md)
  - [Cloud.Governance.Client\Model.MultiGeoSerivceSetting](docs/MultiGeoSerivceSetting.md)
  - [Cloud.Governance.Client\Model.MultiGeoSetting](docs/MultiGeoSetting.md)
@@ -526,6 +530,8 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.NodeType](docs/NodeType.md)
  - [Cloud.Governance.Client\Model.ObjectPermissionManagementModel](docs/ObjectPermissionManagementModel.md)
  - [Cloud.Governance.Client\Model.ObjectValidateResult](docs/ObjectValidateResult.md)
+ - [Cloud.Governance.Client\Model.OldMetadataGridModel](docs/OldMetadataGridModel.md)
+ - [Cloud.Governance.Client\Model.OldMetadataGridModelPageResult](docs/OldMetadataGridModelPageResult.md)
  - [Cloud.Governance.Client\Model.OneTimeRenewalOption](docs/OneTimeRenewalOption.md)
  - [Cloud.Governance.Client\Model.PermissionChangedType](docs/PermissionChangedType.md)
  - [Cloud.Governance.Client\Model.PermissionLevel](docs/PermissionLevel.md)

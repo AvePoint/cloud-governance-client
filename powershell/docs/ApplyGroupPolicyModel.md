@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **IsApplyLifecycle** | **Boolean** |  | [optional] [default to $false]
 **LifecycleRenewalSetting** | [**LifecycleRenewalSetting**](LifecycleRenewalSetting.md) |  | [optional] 
 **VarFilter** | **String** |  | [optional] 
+**Search** | **String** |  | [optional] 
 **SelectedObjects** | **String[]** |  | [optional] 
 **HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **IsApplyUniqueAccess** | **Boolean** |  | [optional] [default to $false]
@@ -31,6 +32,7 @@ $ApplyGroupPolicyModel = New-Cloud.Governance.ClientApplyGroupPolicyModel  -SubT
  -IsApplyLifecycle null `
  -LifecycleRenewalSetting null `
  -VarFilter null `
+ -Search null `
  -SelectedObjects null `
  -HasOngoingTasks null `
  -IsApplyUniqueAccess null

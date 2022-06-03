@@ -18,7 +18,19 @@ function New-BooleanMetadataSettings {
         ${Value} = $false,
         [Parameter(ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${TermsAndConditions}
+        ${TermsAndConditions},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${TrueDisplayValue},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [String]
+        ${FalseDisplayValue},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [PSCustomObject[]]
+        ${TermsAndConditionsContent},
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [System.Nullable[Int32]]
+        ${DefaultTermLanguageId} = 0
     )
 
     Process {
@@ -30,6 +42,10 @@ function New-BooleanMetadataSettings {
             "EnableTerms" = ${EnableTerms}
             "Value" = ${Value}
             "TermsAndConditions" = ${TermsAndConditions}
+            "TrueDisplayValue" = ${TrueDisplayValue}
+            "FalseDisplayValue" = ${FalseDisplayValue}
+            "TermsAndConditionsContent" = ${TermsAndConditionsContent}
+            "DefaultTermLanguageId" = ${DefaultTermLanguageId}
         }
 
         return $PSO
@@ -52,7 +68,7 @@ function ConvertFrom-JsonToBooleanMetadataSettings {
         $JsonParameters = ConvertFrom-Json -InputObject $Json
 
         # check if Json contains properties not defined in BooleanMetadataSettings
-        $AllProperties = $("EnableTerms", "Value", "TermsAndConditions")
+        $AllProperties = $("EnableTerms", "Value", "TermsAndConditions", "TrueDisplayValue", "FalseDisplayValue", "TermsAndConditionsContent", "DefaultTermLanguageId")
         foreach ($name in $JsonParameters.PsObject.Properties.Name) {
             if (!($AllProperties.Contains($name))) {
                 throw "Error! JSON key '$name' not found in the properties: $($AllProperties)"
@@ -77,10 +93,38 @@ function ConvertFrom-JsonToBooleanMetadataSettings {
             $TermsAndConditions = $JsonParameters.PSobject.Properties["TermsAndConditions"].value
         }
 
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TrueDisplayValue"))) { #optional property not found
+            $TrueDisplayValue = $null
+        } else {
+            $TrueDisplayValue = $JsonParameters.PSobject.Properties["TrueDisplayValue"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "FalseDisplayValue"))) { #optional property not found
+            $FalseDisplayValue = $null
+        } else {
+            $FalseDisplayValue = $JsonParameters.PSobject.Properties["FalseDisplayValue"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "TermsAndConditionsContent"))) { #optional property not found
+            $TermsAndConditionsContent = $null
+        } else {
+            $TermsAndConditionsContent = $JsonParameters.PSobject.Properties["TermsAndConditionsContent"].value
+        }
+
+        if (!([bool]($JsonParameters.PSobject.Properties.name -match "DefaultTermLanguageId"))) { #optional property not found
+            $DefaultTermLanguageId = $null
+        } else {
+            $DefaultTermLanguageId = $JsonParameters.PSobject.Properties["DefaultTermLanguageId"].value
+        }
+
         $PSO = [PSCustomObject]@{
             "EnableTerms" = ${EnableTerms}
             "Value" = ${Value}
             "TermsAndConditions" = ${TermsAndConditions}
+            "TrueDisplayValue" = ${TrueDisplayValue}
+            "FalseDisplayValue" = ${FalseDisplayValue}
+            "TermsAndConditionsContent" = ${TermsAndConditionsContent}
+            "DefaultTermLanguageId" = ${DefaultTermLanguageId}
         }
 
         return $PSO

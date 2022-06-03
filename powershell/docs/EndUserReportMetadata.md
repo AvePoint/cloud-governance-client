@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
 **Value** | **String** |  | [optional] 
 **DisplayValue** | **String** |  | [optional] 
 **Type** | [**MetadataFieldType**](MetadataFieldType.md) |  | [optional] 
@@ -15,6 +16,7 @@ Name | Type | Description | Notes
 ```powershell
 $EndUserReportMetadata = New-Cloud.Governance.ClientEndUserReportMetadata  -Id null `
  -Name null `
+ -DisplayName null `
  -Value null `
  -DisplayValue null `
  -Type null

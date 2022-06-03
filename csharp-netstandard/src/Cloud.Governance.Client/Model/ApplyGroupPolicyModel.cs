@@ -41,10 +41,11 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isApplyLifecycle">isApplyLifecycle (default to false).</param>
         /// <param name="lifecycleRenewalSetting">lifecycleRenewalSetting.</param>
         /// <param name="filter">filter.</param>
+        /// <param name="search">search.</param>
         /// <param name="selectedObjects">selectedObjects.</param>
         /// <param name="hasOngoingTasks">hasOngoingTasks (default to false).</param>
         /// <param name="isApplyUniqueAccess">isApplyUniqueAccess (default to false).</param>
-        public ApplyGroupPolicyModel(GroupPolicySubType? subType = default(GroupPolicySubType?), Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false, bool? isApplyUniqueAccess = false)
+        public ApplyGroupPolicyModel(GroupPolicySubType? subType = default(GroupPolicySubType?), Guid policyId = default(Guid), bool isApplyAllSetting = false, bool isApplyQuota = false, bool isApplySharing = false, bool isApplyQuotaThreshold = false, bool isApplyDeactivatedElection = false, bool isApplyLifecycle = false, LifecycleRenewalSetting lifecycleRenewalSetting = default(LifecycleRenewalSetting), string filter = default(string), string search = default(string), List<string> selectedObjects = default(List<string>), bool hasOngoingTasks = false, bool? isApplyUniqueAccess = false)
         {
             this.SubType = subType;
             this.PolicyId = policyId;
@@ -56,6 +57,7 @@ namespace Cloud.Governance.Client.Model
             this.IsApplyLifecycle = isApplyLifecycle;
             this.LifecycleRenewalSetting = lifecycleRenewalSetting;
             this.Filter = filter;
+            this.Search = search;
             this.SelectedObjects = selectedObjects;
             this.HasOngoingTasks = hasOngoingTasks;
             // use default value if no "isApplyUniqueAccess" provided
@@ -117,6 +119,12 @@ namespace Cloud.Governance.Client.Model
         public string Filter { get; set; }
 
         /// <summary>
+        /// Gets or Sets Search
+        /// </summary>
+        [DataMember(Name = "search", EmitDefaultValue = true)]
+        public string Search { get; set; }
+
+        /// <summary>
         /// Gets or Sets SelectedObjects
         /// </summary>
         [DataMember(Name = "selectedObjects", EmitDefaultValue = true)]
@@ -152,6 +160,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsApplyLifecycle: ").Append(IsApplyLifecycle).Append("\n");
             sb.Append("  LifecycleRenewalSetting: ").Append(LifecycleRenewalSetting).Append("\n");
             sb.Append("  Filter: ").Append(Filter).Append("\n");
+            sb.Append("  Search: ").Append(Search).Append("\n");
             sb.Append("  SelectedObjects: ").Append(SelectedObjects).Append("\n");
             sb.Append("  HasOngoingTasks: ").Append(HasOngoingTasks).Append("\n");
             sb.Append("  IsApplyUniqueAccess: ").Append(IsApplyUniqueAccess).Append("\n");
@@ -233,6 +242,11 @@ namespace Cloud.Governance.Client.Model
                     this.Filter.Equals(input.Filter))
                 ) && 
                 (
+                    this.Search == input.Search ||
+                    (this.Search != null &&
+                    this.Search.Equals(input.Search))
+                ) && 
+                (
                     this.SelectedObjects == input.SelectedObjects ||
                     this.SelectedObjects != null &&
                     input.SelectedObjects != null &&
@@ -271,6 +285,8 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.LifecycleRenewalSetting.GetHashCode();
                 if (this.Filter != null)
                     hashCode = hashCode * 59 + this.Filter.GetHashCode();
+                if (this.Search != null)
+                    hashCode = hashCode * 59 + this.Search.GetHashCode();
                 if (this.SelectedObjects != null)
                     hashCode = hashCode * 59 + this.SelectedObjects.GetHashCode();
                 hashCode = hashCode * 59 + this.HasOngoingTasks.GetHashCode();

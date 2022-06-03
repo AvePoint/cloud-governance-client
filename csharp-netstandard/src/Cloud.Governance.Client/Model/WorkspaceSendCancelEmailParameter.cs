@@ -29,11 +29,13 @@ namespace Cloud.Governance.Client.Model
         /// <param name="isSendCancelEmail">isSendCancelEmail (default to false).</param>
         /// <param name="cancelEmailTemplateId">cancelEmailTemplateId.</param>
         /// <param name="workspace">workspace.</param>
-        public WorkspaceSendCancelEmailParameter(bool isSendCancelEmail = false, Guid cancelEmailTemplateId = default(Guid), List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>))
+        /// <param name="isSelectAllWorkspace">isSelectAllWorkspace (default to false).</param>
+        public WorkspaceSendCancelEmailParameter(bool isSendCancelEmail = false, Guid cancelEmailTemplateId = default(Guid), List<WorkspaceIdTypeModel> workspace = default(List<WorkspaceIdTypeModel>), bool isSelectAllWorkspace = false)
         {
             this.IsSendCancelEmail = isSendCancelEmail;
             this.CancelEmailTemplateId = cancelEmailTemplateId;
             this.Workspace = workspace;
+            this.IsSelectAllWorkspace = isSelectAllWorkspace;
         }
 
         /// <summary>
@@ -55,6 +57,12 @@ namespace Cloud.Governance.Client.Model
         public List<WorkspaceIdTypeModel> Workspace { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsSelectAllWorkspace
+        /// </summary>
+        [DataMember(Name = "isSelectAllWorkspace", EmitDefaultValue = false)]
+        public bool IsSelectAllWorkspace { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +73,7 @@ namespace Cloud.Governance.Client.Model
             sb.Append("  IsSendCancelEmail: ").Append(IsSendCancelEmail).Append("\n");
             sb.Append("  CancelEmailTemplateId: ").Append(CancelEmailTemplateId).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
+            sb.Append("  IsSelectAllWorkspace: ").Append(IsSelectAllWorkspace).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -113,6 +122,10 @@ namespace Cloud.Governance.Client.Model
                     this.Workspace != null &&
                     input.Workspace != null &&
                     this.Workspace.SequenceEqual(input.Workspace)
+                ) && 
+                (
+                    this.IsSelectAllWorkspace == input.IsSelectAllWorkspace ||
+                    this.IsSelectAllWorkspace.Equals(input.IsSelectAllWorkspace)
                 );
         }
 
@@ -130,6 +143,7 @@ namespace Cloud.Governance.Client.Model
                     hashCode = hashCode * 59 + this.CancelEmailTemplateId.GetHashCode();
                 if (this.Workspace != null)
                     hashCode = hashCode * 59 + this.Workspace.GetHashCode();
+                hashCode = hashCode * 59 + this.IsSelectAllWorkspace.GetHashCode();
                 return hashCode;
             }
         }

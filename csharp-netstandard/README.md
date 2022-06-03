@@ -98,8 +98,10 @@ Class | Method | HTTP request | Description
 *Office365Api* | [**RemoveSecurityGroup**](docs/Office365Api.md#removesecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 *Office365AdminApi* | [**AddWebUserCustomAction**](docs/Office365AdminApi.md#addwebusercustomaction) | **POST** /admin/office365/web/usercustomactions | add user custom actions, if exists, will update the existing one.
 *Office365AdminApi* | [**DeleteWebUserCustomAction**](docs/Office365AdminApi.md#deletewebusercustomaction) | **DELETE** /admin/office365/web/usercustomactions | delete user custom actions by action name
+*Office365AdminApi* | [**GetAzureADExtensionPropertyNamesWithDataType**](docs/Office365AdminApi.md#getazureadextensionpropertynameswithdatatype) | **GET** /admin/office365/azuread/{tenantId}/property/custom | get azure ad custom property with data type
 *Office365AdminApi* | [**GetAzureAdCustomPropertyNames**](docs/Office365AdminApi.md#getazureadcustompropertynames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
 *Office365AdminApi* | [**GetTenantIdByUrl**](docs/Office365AdminApi.md#gettenantidbyurl) | **GET** /admin/office365/tenantid | get tenant ids by url
+*Office365AdminApi* | [**GetTenantIds**](docs/Office365AdminApi.md#gettenantids) | **GET** /admin/office365/tenantids | get tenant ids by filter expression
 *ReportAdminApi* | [**GeTaskReport**](docs/ReportAdminApi.md#getaskreport) | **GET** /admin/report/tasks | get all tasks report
 *ReportAdminApi* | [**GetRequestReport**](docs/ReportAdminApi.md#getrequestreport) | **GET** /admin/report/requests | get requests report
 *ReportAdminApi* | [**GetWorkspaceReport**](docs/ReportAdminApi.md#getworkspacereport) | **GET** /admin/report/workspaces | get workspaces report
@@ -293,6 +295,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**CompleteWorkspaceRenewalTask**](docs/WorkspacesAdminApi.md#completeworkspacerenewaltask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 *WorkspacesAdminApi* | [**DeleteWorkspaces**](docs/WorkspacesAdminApi.md#deleteworkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
 *WorkspacesAdminApi* | [**GetOngoingTasks**](docs/WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
+*WorkspacesAdminApi* | [**GetWorkspaceFilters**](docs/WorkspacesAdminApi.md#getworkspacefilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 *WorkspacesAdminApi* | [**GetWorkspaces**](docs/WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**LockWorkspaces**](docs/WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 *WorkspacesAdminApi* | [**SpecifyContacts**](docs/WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | specify contacts
@@ -447,6 +450,7 @@ Class | Method | HTTP request | Description
  - [Model.CreateWebUrlValidationResult](docs/CreateWebUrlValidationResult.md)
  - [Model.CreateWebValidationParameter](docs/CreateWebValidationParameter.md)
  - [Model.CustomActionSettings](docs/CustomActionSettings.md)
+ - [Model.CustomExtensionPropertyModel](docs/CustomExtensionPropertyModel.md)
  - [Model.CustomMetadata](docs/CustomMetadata.md)
  - [Model.DelegatedAccessToken](docs/DelegatedAccessToken.md)
  - [Model.DelegatedAccessTokenApiResult](docs/DelegatedAccessTokenApiResult.md)
@@ -457,6 +461,7 @@ Class | Method | HTTP request | Description
  - [Model.DeleteWorkspaceParameter](docs/DeleteWorkspaceParameter.md)
  - [Model.DeploymentManagerPlanSettings](docs/DeploymentManagerPlanSettings.md)
  - [Model.DisplayInReportType](docs/DisplayInReportType.md)
+ - [Model.DistinctResult](docs/DistinctResult.md)
  - [Model.DpmServiceSetting](docs/DpmServiceSetting.md)
  - [Model.DueDateType](docs/DueDateType.md)
  - [Model.DurationDateType](docs/DurationDateType.md)
@@ -549,6 +554,7 @@ Class | Method | HTTP request | Description
  - [Model.ListVersionSettings](docs/ListVersionSettings.md)
  - [Model.ListVersionSettingsChangedProperty](docs/ListVersionSettingsChangedProperty.md)
  - [Model.LocaleSettings](docs/LocaleSettings.md)
+ - [Model.LocalizedMetadataTermsAndConditionsModel](docs/LocalizedMetadataTermsAndConditionsModel.md)
  - [Model.LockSiteCollectionType](docs/LockSiteCollectionType.md)
  - [Model.LockSiteParameter](docs/LockSiteParameter.md)
  - [Model.LockSiteRequest](docs/LockSiteRequest.md)
@@ -570,8 +576,6 @@ Class | Method | HTTP request | Description
  - [Model.MetadataActionType](docs/MetadataActionType.md)
  - [Model.MetadataDisplayType](docs/MetadataDisplayType.md)
  - [Model.MetadataFieldType](docs/MetadataFieldType.md)
- - [Model.MetadataGridModel](docs/MetadataGridModel.md)
- - [Model.MetadataGridModelPageResult](docs/MetadataGridModelPageResult.md)
  - [Model.MultiGeoControlMode](docs/MultiGeoControlMode.md)
  - [Model.MultiGeoSerivceSetting](docs/MultiGeoSerivceSetting.md)
  - [Model.MultiGeoSetting](docs/MultiGeoSetting.md)
@@ -580,6 +584,8 @@ Class | Method | HTTP request | Description
  - [Model.NodeType](docs/NodeType.md)
  - [Model.ObjectPermissionManagementModel](docs/ObjectPermissionManagementModel.md)
  - [Model.ObjectValidateResult](docs/ObjectValidateResult.md)
+ - [Model.OldMetadataGridModel](docs/OldMetadataGridModel.md)
+ - [Model.OldMetadataGridModelPageResult](docs/OldMetadataGridModelPageResult.md)
  - [Model.OneTimeRenewalOption](docs/OneTimeRenewalOption.md)
  - [Model.PermissionChangedType](docs/PermissionChangedType.md)
  - [Model.PermissionLevel](docs/PermissionLevel.md)

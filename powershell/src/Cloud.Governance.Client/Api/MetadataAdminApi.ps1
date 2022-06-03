@@ -22,7 +22,7 @@ Order by one field, supported fields:<br/> createdBy, createdByDisplayName, id, 
 Search for name
 
 .PARAMETER Top
- Define the number of records you want to return, max value is 200, default value is 200
+ Define the number of records you want to return, max value is 2000, default value is 200
 
 .PARAMETER Skip
  Define the number of records you want to skip, default value is 0
@@ -40,7 +40,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 .OUTPUTS
 
-MetadataGridModelPageResult
+OldMetadataGridModelPageResult
 #>
 function Get-AllMetadata {
     [CmdletBinding()]
@@ -125,7 +125,7 @@ function Get-AllMetadata {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "MetadataGridModelPageResult" `
+                                -ReturnType "OldMetadataGridModelPageResult" `
                                 -IsBodyNullable $false
 
         if ($WithHttpInfo.IsPresent) {

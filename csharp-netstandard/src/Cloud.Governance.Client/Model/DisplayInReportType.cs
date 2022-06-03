@@ -24,7 +24,9 @@ namespace Cloud.Governance.Client.Model
 
         DisplayInAllPlaces = 2,
 
-        OnlyDisplayInAdminReport = 3
+        OnlyDisplayInAdminReport = 3,
+
+        OnlyDisplayInEndUserReport = 4
 
     }
 
