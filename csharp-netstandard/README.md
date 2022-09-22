@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 *Office365Api* | [**GetSiteSharePointGroups**](docs/Office365Api.md#getsitesharepointgroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 *Office365Api* | [**GetSiteStatus**](docs/Office365Api.md#getsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 *Office365Api* | [**GetSiteTemplates**](docs/Office365Api.md#getsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
+*Office365Api* | [**GetTeamSiteDesigns**](docs/Office365Api.md#getteamsitedesigns) | **GET** /office365/teamsitedesigns | 
 *Office365Api* | [**HasPermission**](docs/Office365Api.md#haspermission) | **GET** /office365/sites/haspermission | whether user has permission on the site
 *Office365Api* | [**RemoveSecurityGroup**](docs/Office365Api.md#removesecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 *Office365AdminApi* | [**AddWebUserCustomAction**](docs/Office365AdminApi.md#addwebusercustomaction) | **POST** /admin/office365/web/usercustomactions | add user custom actions, if exists, will update the existing one.
@@ -133,6 +134,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetDeleteGroupRequest**](docs/RequestsApi.md#getdeletegrouprequest) | **GET** /requests/deletegroup/{id} | get delete group request
 *RequestsApi* | [**GetDeleteSiteRequest**](docs/RequestsApi.md#getdeletesiterequest) | **GET** /requests/deletesite/{id} | get delete site request
 *RequestsApi* | [**GetDeleteWebRequest**](docs/RequestsApi.md#getdeletewebrequest) | **GET** /requests/deleteweb/{id} | get delete web request
+*RequestsApi* | [**GetDynamicRequest**](docs/RequestsApi.md#getdynamicrequest) | **GET** /requests/dynamic/{id} | get create group request
 *RequestsApi* | [**GetExtendGroupRequest**](docs/RequestsApi.md#getextendgrouprequest) | **GET** /requests/extendgroup/{id} | get extend group request
 *RequestsApi* | [**GetExtendSiteRequest**](docs/RequestsApi.md#getextendsiterequest) | **GET** /requests/extendsite/{id} | get extend site request
 *RequestsApi* | [**GetGrantPermissionRequest**](docs/RequestsApi.md#getgrantpermissionrequest) | **GET** /requests/grantpermission/{id} | get grant permission request
@@ -172,6 +174,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**SubmitDeleteGroupRequest**](docs/RequestsApi.md#submitdeletegrouprequest) | **POST** /requests/deletegroup | submit delete group request
 *RequestsApi* | [**SubmitDeleteSiteRequest**](docs/RequestsApi.md#submitdeletesiterequest) | **POST** /requests/deletesite | submit delete site request
 *RequestsApi* | [**SubmitDeleteWebRequest**](docs/RequestsApi.md#submitdeletewebrequest) | **POST** /requests/deleteweb | submit delete web request
+*RequestsApi* | [**SubmitDynamicRequest**](docs/RequestsApi.md#submitdynamicrequest) | **POST** /requests/dynamic | submit create group request
 *RequestsApi* | [**SubmitExtendGroupRequest**](docs/RequestsApi.md#submitextendgrouprequest) | **POST** /requests/extendgroup | submit extend group request
 *RequestsApi* | [**SubmitExtendSiteRequest**](docs/RequestsApi.md#submitextendsiterequest) | **POST** /requests/extendsite | submit extend site request
 *RequestsApi* | [**SubmitGrantPermissionRequest**](docs/RequestsApi.md#submitgrantpermissionrequest) | **POST** /requests/grantpermission | get submit grant permission request
@@ -198,6 +201,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**GetCreateSiteService**](docs/ServicesApi.md#getcreatesiteservice) | **GET** /services/createsite/{id} | get create site service
 *ServicesApi* | [**GetCreateWebService**](docs/ServicesApi.md#getcreatewebservice) | **GET** /services/createweb/{id} | get create web service
 *ServicesApi* | [**GetCustomService**](docs/ServicesApi.md#getcustomservice) | **GET** /services/custom/{id} | get custom service
+*ServicesApi* | [**GetDynamicService**](docs/ServicesApi.md#getdynamicservice) | **GET** /services/dynamic/{id} | get custom service
 *ServicesApi* | [**GetGrantPermissionService**](docs/ServicesApi.md#getgrantpermissionservice) | **GET** /services/grantpermission/{id} | get grant permission service
 *ServicesApi* | [**GetGroupLifecycleService**](docs/ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 *ServicesApi* | [**GetManagePermissionService**](docs/ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
@@ -283,7 +287,6 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**IsMemberOfGroup**](docs/UsersApi.md#ismemberofgroup) | **GET** /users/{userprincipalname}/ismemberof/{groupid} | Is Member Of Group
 *UsersApi* | [**ResolveUsers**](docs/UsersApi.md#resolveusers) | **GET** /users/resolve | resolve users
 *UsersApi* | [**SearchUsers**](docs/UsersApi.md#searchusers) | **GET** /users/search | search users
-*UsersApi* | [**UpdateUserInfo**](docs/UsersApi.md#updateuserinfo) | **POST** /users | add users or update user information
 *WorkspaceApi* | [**GetGroupMetadata**](docs/WorkspaceApi.md#getgroupmetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
 *WorkspaceApi* | [**GetMyGroupInformation**](docs/WorkspaceApi.md#getmygroupinformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
 *WorkspaceApi* | [**GetMySiteInformation**](docs/WorkspaceApi.md#getmysiteinformation) | **GET** /workspace/sites/{id} | get site information
@@ -300,6 +303,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**LockWorkspaces**](docs/WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 *WorkspacesAdminApi* | [**SpecifyContacts**](docs/WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 *WorkspacesAdminApi* | [**TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#triggerworkspacerenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
+*WorkspacesAdminApi* | [**TriggerWorkspacesElection**](docs/WorkspacesAdminApi.md#triggerworkspaceselection) | **POST** /admin/directory/workspace/election/trigger | trigger workspace election
 *WorkspacesAdminApi* | [**UnlockWorkspace**](docs/WorkspacesAdminApi.md#unlockworkspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
 
@@ -333,6 +337,7 @@ Class | Method | HTTP request | Description
  - [Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
  - [Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
  - [Model.ApplySitePolicyModel](docs/ApplySitePolicyModel.md)
+ - [Model.ApproveProcessModel](docs/ApproveProcessModel.md)
  - [Model.ArchiveGroupRequest](docs/ArchiveGroupRequest.md)
  - [Model.ArchiveSiteRequest](docs/ArchiveSiteRequest.md)
  - [Model.ArchiveWebLifecycleRequest](docs/ArchiveWebLifecycleRequest.md)
@@ -467,8 +472,10 @@ Class | Method | HTTP request | Description
  - [Model.DurationDateType](docs/DurationDateType.md)
  - [Model.DynamicGroupRuleInfo](docs/DynamicGroupRuleInfo.md)
  - [Model.DynamicGroupRuleModel](docs/DynamicGroupRuleModel.md)
+ - [Model.DynamicRequest](docs/DynamicRequest.md)
  - [Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Model.DynamicRuleElement](docs/DynamicRuleElement.md)
+ - [Model.DynamicServiceForRequest](docs/DynamicServiceForRequest.md)
  - [Model.ElectionContact](docs/ElectionContact.md)
  - [Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
@@ -486,6 +493,7 @@ Class | Method | HTTP request | Description
  - [Model.ExternalUserSharingType](docs/ExternalUserSharingType.md)
  - [Model.ExternalUserState](docs/ExternalUserState.md)
  - [Model.ExternalUserType](docs/ExternalUserType.md)
+ - [Model.Gallerybase](docs/Gallerybase.md)
  - [Model.GeoLocationBase](docs/GeoLocationBase.md)
  - [Model.GeoLocationModel](docs/GeoLocationModel.md)
  - [Model.GiphyRatingType](docs/GiphyRatingType.md)
@@ -559,6 +567,7 @@ Class | Method | HTTP request | Description
  - [Model.LockSiteParameter](docs/LockSiteParameter.md)
  - [Model.LockSiteRequest](docs/LockSiteRequest.md)
  - [Model.LockSiteSetting](docs/LockSiteSetting.md)
+ - [Model.LockedBy](docs/LockedBy.md)
  - [Model.LogicalOperator](docs/LogicalOperator.md)
  - [Model.LookupListValue](docs/LookupListValue.md)
  - [Model.LookupValue](docs/LookupValue.md)
@@ -673,6 +682,7 @@ Class | Method | HTTP request | Description
  - [Model.TaskResult](docs/TaskResult.md)
  - [Model.TaskStatus](docs/TaskStatus.md)
  - [Model.TaskType](docs/TaskType.md)
+ - [Model.TeamSiteStatus](docs/TeamSiteStatus.md)
  - [Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)
  - [Model.TeamsTemplateSettings](docs/TeamsTemplateSettings.md)
  - [Model.TemplateWithPermissions](docs/TemplateWithPermissions.md)
@@ -690,7 +700,6 @@ Class | Method | HTTP request | Description
  - [Model.TriggerType](docs/TriggerType.md)
  - [Model.UnlockSiteRequest](docs/UnlockSiteRequest.md)
  - [Model.UnlockSiteSetting](docs/UnlockSiteSetting.md)
- - [Model.UpdatableApiUser](docs/UpdatableApiUser.md)
  - [Model.UrlRandomStringSettings](docs/UrlRandomStringSettings.md)
  - [Model.UrlSequentialNumberingSettings](docs/UrlSequentialNumberingSettings.md)
  - [Model.UserCustomAction](docs/UserCustomAction.md)

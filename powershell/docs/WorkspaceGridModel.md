@@ -50,15 +50,26 @@ Name | Type | Description | Notes
 **ApplyPolicyStatus** | [**ApplyPolicyStatus**](ApplyPolicyStatus.md) |  | [optional] 
 **HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **HasOngoingTasksDescription** | **String** |  | [optional] 
+**HasElectionOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **LastRenewalBy** | **String** |  | [optional] 
 **LastRenewalByEmail** | **String** |  | [optional] 
 **LastRenewalByDisplayName** | **String** |  | [optional] 
 **Sensitivity** | **String** |  | [optional] 
 **InsightsStatus** | [**InsightsStatus**](InsightsStatus.md) |  | [optional] 
+**SiteStatus** | [**TeamSiteStatus**](TeamSiteStatus.md) |  | [optional] 
+**SiteStatusDescription** | **String** |  | [optional] 
+**LockedBy** | [**LockedBy**](LockedBy.md) |  | [optional] 
+**LockedByDescription** | **String** |  | [optional] 
 **PhaseAssigneeDisplayNames** | **String** |  | [optional] 
 **PhaseAssignees** | **String** |  | [optional] 
 **PhaseProfileName** | **String** |  | [optional] 
 **PhaseProfileId** | **String** |  | [optional] 
+**QuotaProfileName** | **String** |  | [optional] 
+**QuotaProfileId** | **String** |  | [optional] 
+**ExternalSharingProfileName** | **String** |  | [optional] 
+**ExternalSharingProfileId** | **String** |  | [optional] 
+**ElectionProfileName** | **String** |  | [optional] 
+**ElectionProfileId** | **String** |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
 **RenewalDueDate** | **System.DateTime** |  | [optional] 
 **NextRenewalDate** | **System.DateTime** |  | [optional] 
@@ -117,15 +128,26 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -ApplyPolicyStatus null `
  -HasOngoingTasks null `
  -HasOngoingTasksDescription null `
+ -HasElectionOngoingTasks null `
  -LastRenewalBy null `
  -LastRenewalByEmail null `
  -LastRenewalByDisplayName null `
  -Sensitivity null `
  -InsightsStatus null `
+ -SiteStatus null `
+ -SiteStatusDescription null `
+ -LockedBy null `
+ -LockedByDescription null `
  -PhaseAssigneeDisplayNames null `
  -PhaseAssignees null `
  -PhaseProfileName null `
  -PhaseProfileId null `
+ -QuotaProfileName null `
+ -QuotaProfileId null `
+ -ExternalSharingProfileName null `
+ -ExternalSharingProfileId null `
+ -ElectionProfileName null `
+ -ElectionProfileId null `
  -PhaseStartTime null `
  -RenewalDueDate null `
  -NextRenewalDate null `

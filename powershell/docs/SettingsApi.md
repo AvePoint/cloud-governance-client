@@ -13,6 +13,7 @@ Method | HTTP request | Description
 # **Get-DynamicMembershipRuleItems**
 > InlineResponse200 Get-DynamicMembershipRuleItems<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tenantid] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsDynamic] <System.Nullable[Boolean]><br>
 
 get group/teams dynamic membership rules
 
@@ -36,10 +37,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Tenantid = "Tenantid_example" # String | 
+$IsDynamic = true # Boolean |  (optional) (default to $false)
 
 # get group/teams dynamic membership rules
 try {
-     $Result = Get-DynamicMembershipRuleItems -Tenantid $Tenantid
+     $Result = Get-DynamicMembershipRuleItems -Tenantid $Tenantid -IsDynamic $IsDynamic
 } catch {
     Write-Host ("Exception occured when calling Get-DynamicMembershipRuleItems: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -51,6 +53,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Tenantid** | [**String**](String.md)|  | 
+ **IsDynamic** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

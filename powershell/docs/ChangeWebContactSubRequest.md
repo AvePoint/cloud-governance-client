@@ -5,6 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
 **AssignTo** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ModifiedBy** | **String** |  | [optional] 
+**ModifiedByDisplayName** | **String** |  | [optional] 
+**ModifiedDate** | **System.DateTime** |  | [optional] 
 **Reason** | **String** |  | [optional] 
 **Status** | **Int32** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **String** |  | [optional] 
@@ -17,6 +20,9 @@ Name | Type | Description | Notes
 ```powershell
 $ChangeWebContactSubRequest = New-Cloud.Governance.ClientChangeWebContactSubRequest  -Id null `
  -AssignTo null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
+ -ModifiedDate null `
  -Reason null `
  -Status null `
  -StatusDescription null `

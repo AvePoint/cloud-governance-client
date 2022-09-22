@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **Value** | **string** | Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: \&quot;True\&quot;  User Profile or Azure AD metadata: \&quot;user1@example.com\&quot;  Managed metadata metadata: \&quot;term1;term2\&quot;  Person or Group metadata: \&quot;user1@example.com;user2@example.com\&quot;  Hyperlink metadata: \&quot;linktitle;linkaddress\&quot;  Lookup to SharePoint library/list metadata: \&quot;value\&quot;  Choice metadata: \&quot;choice1;choice2\&quot; | [optional] 
 **Action** | **MetadataActionType** | Action of metadata, used in change workspace metadata service. | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **bool** | Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process. | [optional] [default to false]
+**ActivityId** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

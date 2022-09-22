@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Tenant** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
+**ParentName** | **String** |  | [optional] 
 **Id** | **String** |  | [optional] 
 
 ## Examples
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 ```powershell
 $SensitivityLabelModel = New-Cloud.Governance.ClientSensitivityLabelModel  -Tenant null `
  -Name null `
+ -ParentName null `
  -Id null
 ```
 

@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**Get-CreateSiteService**](ServicesApi.md#Get-CreateSiteService) | **GET** /services/createsite/{id} | get create site service
 [**Get-CreateWebService**](ServicesApi.md#Get-CreateWebService) | **GET** /services/createweb/{id} | get create web service
 [**Get-CustomService**](ServicesApi.md#Get-CustomService) | **GET** /services/custom/{id} | get custom service
+[**Get-DynamicService**](ServicesApi.md#Get-DynamicService) | **GET** /services/dynamic/{id} | get custom service
 [**Get-GrantPermissionService**](ServicesApi.md#Get-GrantPermissionService) | **GET** /services/grantpermission/{id} | get grant permission service
 [**Get-GroupLifecycleService**](ServicesApi.md#Get-GroupLifecycleService) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 [**Get-ManagePermissionService**](ServicesApi.md#Get-ManagePermissionService) | **GET** /services/managepermission/{id} | get manage permission service
@@ -1181,6 +1182,67 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ServiceForRequest**](ServiceForRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-DynamicService"></a>
+# **Get-DynamicService**
+> DynamicServiceForRequest Get-DynamicService<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
+
+get custom service
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "Id_example" # String | 
+$IsValidatePermission = true # Boolean |  (optional) (default to $false)
+
+# get custom service
+try {
+     $Result = Get-DynamicService -Id $Id -IsValidatePermission $IsValidatePermission
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicService: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**DynamicServiceForRequest**](DynamicServiceForRequest.md)
 
 ### Authorization
 

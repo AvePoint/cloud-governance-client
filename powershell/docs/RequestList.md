@@ -8,6 +8,17 @@ Name | Type | Description | Notes
 **ServiceName** | **String** |  | [optional] 
 **ServiceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **ServiceTypeDescription** | **String** |  | [optional] 
+**Category** | **String** |  | [optional] 
+**CategoryName** | **String** |  | [optional] 
+**ApprovalStageName** | **String** |  | [optional] 
+**Participants** | **String** |  | [optional] 
+**ParticipantDisplayName** | **String** |  | [optional] 
+**ObjectUrl** | **String** |  | [optional] 
+**ObjectID** | **String** |  | [optional] 
+**HasSubRequest** | **Boolean** |  | [optional] [default to $false]
+**ModifiedBy** | **String** |  | [optional] 
+**ModifiedByDisplayName** | **String** |  | [optional] 
+**ModifiedDate** | **System.DateTime** |  | [optional] 
 **TicketNumber** | **Int32** |  | [optional] [default to 0]
 **Summary** | **String** |  | [optional] 
 **Status** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] 
@@ -16,6 +27,7 @@ Name | Type | Description | Notes
 **Modified** | **System.DateTime** |  | [optional] 
 **SubmitStatus** | **Int32** |  | [optional] [default to 0]
 **Assigned** | **String** |  | [optional] 
+**AssignedLoginName** | **String** |  | [optional] 
 **ServiceAdmin** | **String** |  | [optional] 
 **EnabledCopy** | **Boolean** |  | [optional] [default to $false]
 **QuestionnaireId** | **String** |  | [optional] 
@@ -29,6 +41,17 @@ $RequestList = New-Cloud.Governance.ClientRequestList  -Id null `
  -ServiceName null `
  -ServiceType null `
  -ServiceTypeDescription null `
+ -Category null `
+ -CategoryName null `
+ -ApprovalStageName null `
+ -Participants null `
+ -ParticipantDisplayName null `
+ -ObjectUrl null `
+ -ObjectID null `
+ -HasSubRequest null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
+ -ModifiedDate null `
  -TicketNumber null `
  -Summary null `
  -Status null `
@@ -37,6 +60,7 @@ $RequestList = New-Cloud.Governance.ClientRequestList  -Id null `
  -Modified null `
  -SubmitStatus null `
  -Assigned null `
+ -AssignedLoginName null `
  -ServiceAdmin null `
  -EnabledCopy null `
  -QuestionnaireId null

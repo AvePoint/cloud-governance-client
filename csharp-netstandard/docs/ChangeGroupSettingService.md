@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **AddMemberRestriction** | **UserLevelRestrictionType** |  | [optional] 
 **EnableRemoveMembers** | **bool** |  | [optional] [default to false]
 **EnableChangeDynamicMembershipRules** | **bool** |  | [optional] [default to false]
+**EnableChangeDynamicMembershipRulesValue** | **bool** |  | [optional] [default to false]
 **EnableChangeTeamCollaboration** | **bool** |  | [optional] [default to false]
 **EnableChangeHubSite** | **bool** |  | [optional] [default to false]
 **EnableChangeClassification** | **bool** |  | [optional] [default to false]

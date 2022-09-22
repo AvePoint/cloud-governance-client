@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **Assignee** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **AllowEdit** | **bool** |  | [optional] [default to false]
 **RequestTicketNumber** | **int** |  | [optional] [default to 0]
+**DueDate** | **DateTime** |  | [optional] 
+**TaskFullPath** | **string** |  | [optional] 
 **DynamicActions** | [**List&lt;TaskDynamicActions&gt;**](TaskDynamicActions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

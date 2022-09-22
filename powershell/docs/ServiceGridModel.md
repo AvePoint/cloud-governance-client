@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **StatusDescription** | **String** |  | [optional] 
 **Language** | **Int32** |  | [optional] [default to 0]
 **ModifiedTime** | **System.DateTime** |  | [optional] 
+**ModifiedBy** | **String** |  | [optional] 
+**ModifiedByDisplayName** | **String** |  | [optional] 
 **CreatedByDisplayName** | **String** |  | [optional] 
 **CreatedBy** | **String** |  | [optional] 
 
@@ -28,6 +30,8 @@ $ServiceGridModel = New-Cloud.Governance.ClientServiceGridModel  -Id null `
  -StatusDescription null `
  -Language null `
  -ModifiedTime null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
  -CreatedByDisplayName null `
  -CreatedBy null
 ```

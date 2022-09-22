@@ -22,6 +22,7 @@ Method | HTTP request | Description
 [**GetCreateSiteService**](ServicesApi.md#getcreatesiteservice) | **GET** /services/createsite/{id} | get create site service
 [**GetCreateWebService**](ServicesApi.md#getcreatewebservice) | **GET** /services/createweb/{id} | get create web service
 [**GetCustomService**](ServicesApi.md#getcustomservice) | **GET** /services/custom/{id} | get custom service
+[**GetDynamicService**](ServicesApi.md#getdynamicservice) | **GET** /services/dynamic/{id} | get custom service
 [**GetGrantPermissionService**](ServicesApi.md#getgrantpermissionservice) | **GET** /services/grantpermission/{id} | get grant permission service
 [**GetGroupLifecycleService**](ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 [**GetManagePermissionService**](ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
@@ -1590,6 +1591,91 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ServiceForRequest**](ServiceForRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdynamicservice"></a>
+# **GetDynamicService**
+> DynamicServiceForRequest GetDynamicService (Guid id, bool? isValidatePermission = null)
+
+get custom service
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicServiceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var id = new Guid(); // Guid | 
+            var isValidatePermission = true;  // bool? |  (optional)  (default to false)
+
+            try
+            {
+                // get custom service
+                DynamicServiceForRequest result = apiInstance.GetDynamicService(id, isValidatePermission);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.GetDynamicService: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **isValidatePermission** | **bool?**|  | [optional] [default to false]
+
+### Return type
+
+[**DynamicServiceForRequest**](DynamicServiceForRequest.md)
 
 ### Authorization
 

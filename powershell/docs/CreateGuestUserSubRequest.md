@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **ProcessStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [readonly] 
 **AssignTo** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**ModifiedBy** | **String** |  | [optional] 
+**ModifiedByDisplayName** | **String** |  | [optional] 
+**ModifiedDate** | **System.DateTime** |  | [optional] 
 
 ## Examples
 
@@ -27,7 +30,10 @@ $CreateGuestUserSubRequest = New-Cloud.Governance.ClientCreateGuestUserSubReques
  -OneTimeSettings null `
  -Metadatas null `
  -ProcessStatus null `
- -AssignTo null
+ -AssignTo null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
+ -ModifiedDate null
 ```
 
 - Convert the resource to JSON

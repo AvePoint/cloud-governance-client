@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **Assignee** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **AllowEdit** | **Boolean** |  | [optional] [default to $false]
 **RequestTicketNumber** | **Int32** |  | [optional] [default to 0]
+**DueDate** | **System.DateTime** |  | [optional] 
+**TaskFullPath** | **String** |  | [optional] 
 **DynamicActions** | [**TaskDynamicActions[]**](TaskDynamicActions.md) |  | [optional] 
 
 ## Examples
@@ -45,6 +47,8 @@ $ApiTask = New-Cloud.Governance.ClientApiTask  -DynamicProperties null `
  -Assignee null `
  -AllowEdit null `
  -RequestTicketNumber null `
+ -DueDate null `
+ -TaskFullPath null `
  -DynamicActions null
 ```
 

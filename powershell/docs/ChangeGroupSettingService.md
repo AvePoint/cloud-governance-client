@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **AddMemberRestriction** | [**UserLevelRestrictionType**](UserLevelRestrictionType.md) |  | [optional] 
 **EnableRemoveMembers** | **Boolean** |  | [optional] [default to $false]
 **EnableChangeDynamicMembershipRules** | **Boolean** |  | [optional] [default to $false]
+**EnableChangeDynamicMembershipRulesValue** | **Boolean** |  | [optional] [default to $false]
 **EnableChangeTeamCollaboration** | **Boolean** |  | [optional] [default to $false]
 **EnableChangeHubSite** | **Boolean** |  | [optional] [default to $false]
 **EnableChangeClassification** | **Boolean** |  | [optional] [default to $false]
@@ -74,6 +75,7 @@ $ChangeGroupSettingService = New-Cloud.Governance.ClientChangeGroupSettingServic
  -AddMemberRestriction null `
  -EnableRemoveMembers null `
  -EnableChangeDynamicMembershipRules null `
+ -EnableChangeDynamicMembershipRulesValue null `
  -EnableChangeTeamCollaboration null `
  -EnableChangeHubSite null `
  -EnableChangeClassification null `

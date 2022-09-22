@@ -25,8 +25,20 @@ Name | Type | Description | Notes
 **PhaseDescription** | **String** |  | [optional] 
 **AutoImportProfileId** | **String** |  | [optional] 
 **AutoImportProfileName** | **String** |  | [optional] 
+**RenewalProfileId** | **String** |  | [optional] 
+**RenewalProfileName** | **String** |  | [optional] 
+**RenewalProfileDescription** | **String** |  | [optional] 
 **PolicyName** | **String** |  | [optional] 
 **PolicyDescription** | **String** |  | [optional] 
+**ElectionProfileId** | **String** |  | [optional] 
+**ElectionProfileName** | **String** |  | [optional] 
+**ElectionProfileDescription** | **String** |  | [optional] 
+**ExternalSharingProfileId** | **String** |  | [optional] 
+**ExternalSharingProfileName** | **String** |  | [optional] 
+**ExternalSharingProfileDescription** | **String** |  | [optional] 
+**QuotaProfileId** | **String** |  | [optional] 
+**QuotaProfileName** | **String** |  | [optional] 
+**QuotaProfileDescription** | **String** |  | [optional] 
 **IsCurrentRenewer** | **Boolean** |  | [optional] [default to $false]
 **PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **PhaseDueDate** | **System.DateTime** |  | [optional] 
@@ -61,8 +73,20 @@ $MySite = New-Cloud.Governance.ClientMySite  -FullUrl null `
  -PhaseDescription null `
  -AutoImportProfileId null `
  -AutoImportProfileName null `
+ -RenewalProfileId null `
+ -RenewalProfileName null `
+ -RenewalProfileDescription null `
  -PolicyName null `
  -PolicyDescription null `
+ -ElectionProfileId null `
+ -ElectionProfileName null `
+ -ElectionProfileDescription null `
+ -ExternalSharingProfileId null `
+ -ExternalSharingProfileName null `
+ -ExternalSharingProfileDescription null `
+ -QuotaProfileId null `
+ -QuotaProfileName null `
+ -QuotaProfileDescription null `
  -IsCurrentRenewer null `
  -PhaseAssignees null `
  -PhaseDueDate null `

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **Value** | **String** | Value of metadata, you can set this value for all metadata types when calling API  Examples:  Yes/No metadata: &quot;&quot;True&quot;&quot;  User Profile or Azure AD metadata: &quot;&quot;user1@example.com&quot;&quot;  Managed metadata metadata: &quot;&quot;term1;term2&quot;&quot;  Person or Group metadata: &quot;&quot;user1@example.com;user2@example.com&quot;&quot;  Hyperlink metadata: &quot;&quot;linktitle;linkaddress&quot;&quot;  Lookup to SharePoint library/list metadata: &quot;&quot;value&quot;&quot;  Choice metadata: &quot;&quot;choice1;choice2&quot;&quot; | [optional] 
 **Action** | [**MetadataActionType**](MetadataActionType.md) | Action of metadata, used in change workspace metadata service. | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** | Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process. | [optional] [default to $false]
+**ActivityId** | **String** |  | [optional] 
 
 ## Examples
 
@@ -41,7 +42,8 @@ $RequestMetadata = New-Cloud.Governance.ClientRequestMetadata  -Id null `
  -ValueDisplayString null `
  -Value null `
  -Action null `
- -AllowReferenceAsRoleInApprovalProcess null
+ -AllowReferenceAsRoleInApprovalProcess null `
+ -ActivityId null
 ```
 
 - Convert the resource to JSON

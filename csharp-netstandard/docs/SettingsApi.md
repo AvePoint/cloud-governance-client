@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getdynamicmembershipruleitems"></a>
 # **GetDynamicMembershipRuleItems**
-> InlineResponse200 GetDynamicMembershipRuleItems (Guid tenantid)
+> InlineResponse200 GetDynamicMembershipRuleItems (Guid tenantid, bool? isDynamic = null)
 
 get group/teams dynamic membership rules
 
@@ -45,11 +45,12 @@ namespace Example
             var apiInstance = new SettingsApi(config);
 
             var tenantid = new Guid(); // Guid | 
+            var isDynamic = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // get group/teams dynamic membership rules
-                InlineResponse200 result = apiInstance.GetDynamicMembershipRuleItems(tenantid);
+                InlineResponse200 result = apiInstance.GetDynamicMembershipRuleItems(tenantid, isDynamic);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -68,6 +69,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenantid** | [**Guid**](Guid.md)|  | 
+ **isDynamic** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 

@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **StatusDescription** | **string** |  | [optional] 
 **Language** | **int** |  | [optional] [default to 0]
 **ModifiedTime** | **DateTime** |  | [optional] 
+**ModifiedBy** | **string** |  | [optional] 
+**ModifiedByDisplayName** | **string** |  | [optional] 
 **CreatedByDisplayName** | **string** |  | [optional] 
 **CreatedBy** | **string** |  | [optional] 
 

@@ -6,6 +6,9 @@ Name | Type | Description | Notes
 **Id** | **String** |  | [optional] 
 **AssignTo** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **Reason** | **String** |  | [optional] 
+**ModifiedBy** | **String** |  | [optional] 
+**ModifiedByDisplayName** | **String** |  | [optional] 
+**ModifiedDate** | **System.DateTime** |  | [optional] 
 **Status** | **Int32** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **String** |  | [optional] [readonly] 
 **AdminContactSettings** | [**ChangeContactByUrlSetting**](ChangeContactByUrlSetting.md) |  | [optional] 
@@ -18,6 +21,9 @@ Name | Type | Description | Notes
 $ChangeSiteContactSubRequest = New-Cloud.Governance.ClientChangeSiteContactSubRequest  -Id null `
  -AssignTo null `
  -Reason null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
+ -ModifiedDate null `
  -Status null `
  -StatusDescription null `
  -AdminContactSettings null `

@@ -28,6 +28,10 @@ Name | Type | Description | Notes
 **SubmittedTime** | **System.DateTime** | Submitted time of request. | [optional] [readonly] 
 **LastUpdated** | **System.DateTime** | Last updated time of request. | [optional] [readonly] 
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
+**HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
+**ModifiedBy** | **String** | ModifiedBy | [optional] 
+**ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
+**ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
 **AssignTo** | **String** | Task assignee of request. | [optional] [readonly] 
 **FullPath** | **String** | Object full path of request. | [optional] [readonly] 
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
@@ -63,6 +67,10 @@ $ExtendSiteRequest = New-Cloud.Governance.ClientExtendSiteRequest  -ExtendDurati
  -SubmittedTime null `
  -LastUpdated null `
  -CreatedTime null `
+ -HasSubRequest null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
+ -ModifiedDate null `
  -AssignTo null `
  -FullPath null `
  -ApprovalStageName null `

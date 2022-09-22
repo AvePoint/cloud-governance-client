@@ -24,6 +24,9 @@ Name | Type | Description | Notes
 **ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] 
 **ProgressStatusDescription** | **String** |  | [optional] 
 **Modified** | **System.DateTime** |  | [optional] 
+**ModifiedBy** | **String** |  | [optional] 
+**ModifiedByDisplayName** | **String** |  | [optional] 
+**ModifiedDate** | **System.DateTime** |  | [optional] 
 **AssignTo** | **String** |  | [optional] 
 **AssignToDisplayName** | **String** |  | [optional] 
 **Assignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
@@ -60,6 +63,9 @@ $AllRequestDetails = New-Cloud.Governance.ClientAllRequestDetails  -LastApproved
  -ProgressStatus null `
  -ProgressStatusDescription null `
  -Modified null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
+ -ModifiedDate null `
  -AssignTo null `
  -AssignToDisplayName null `
  -Assignees null `

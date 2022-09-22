@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**Get-SiteSharePointGroups**](Office365Api.md#Get-SiteSharePointGroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 [**Get-ACGSiteStatus**](Office365Api.md#get-acgsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 [**Get-ACGSiteTemplates**](Office365Api.md#get-acgsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
+[**Get-ACGTeamSiteDesigns**](Office365Api.md#get-acgteamsitedesigns) | **GET** /office365/teamsitedesigns | 
 [**Invoke-HasPermission**](Office365Api.md#Invoke-HasPermission) | **GET** /office365/sites/haspermission | whether user has permission on the site
 [**Remove-ACGSecurityGroup**](Office365Api.md#remove-acgsecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 
@@ -794,6 +795,63 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**SiteTemplate[]**](SiteTemplate.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="get-acgteamsitedesigns"></a>
+# **Get-ACGTeamSiteDesigns**
+> StringModel[] Get-ACGTeamSiteDesigns<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <PSCustomObject><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$TenantId = "TenantId_example" # String |  (optional)
+
+try {
+     $Result = Get-ACGTeamSiteDesigns -TenantId $TenantId
+} catch {
+    Write-Host ("Exception occured when calling Get-ACGTeamSiteDesigns: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **TenantId** | [**String**](String.md)|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**StringModel[]**](StringModel.md)
 
 ### Authorization
 

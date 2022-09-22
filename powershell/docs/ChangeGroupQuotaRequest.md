@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **GroupName** | **String** | Group name | [optional] [readonly] 
 **GroupEmail** | **String** | Group e-mail address | [optional] [readonly] 
 **GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) | Group type | [optional] 
+**LifecycleType** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -28,6 +29,10 @@ Name | Type | Description | Notes
 **SubmittedTime** | **System.DateTime** | Submitted time of request. | [optional] [readonly] 
 **LastUpdated** | **System.DateTime** | Last updated time of request. | [optional] [readonly] 
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
+**HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
+**ModifiedBy** | **String** | ModifiedBy | [optional] 
+**ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
+**ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
 **AssignTo** | **String** | Task assignee of request. | [optional] [readonly] 
 **FullPath** | **String** | Object full path of request. | [optional] [readonly] 
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
@@ -45,6 +50,7 @@ $ChangeGroupQuotaRequest = New-Cloud.Governance.ClientChangeGroupQuotaRequest  -
  -GroupName null `
  -GroupEmail null `
  -GroupObjectType null `
+ -LifecycleType null `
  -Id null `
  -ServiceId null `
  -Summary null `
@@ -63,6 +69,10 @@ $ChangeGroupQuotaRequest = New-Cloud.Governance.ClientChangeGroupQuotaRequest  -
  -SubmittedTime null `
  -LastUpdated null `
  -CreatedTime null `
+ -HasSubRequest null `
+ -ModifiedBy null `
+ -ModifiedByDisplayName null `
+ -ModifiedDate null `
  -AssignTo null `
  -FullPath null `
  -ApprovalStageName null `

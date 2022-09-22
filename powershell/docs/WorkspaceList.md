@@ -22,6 +22,14 @@ Name | Type | Description | Notes
 **SecondaryContactEmail** | **String** |  | [optional] 
 **Policy** | **String** |  | [optional] 
 **PolicyId** | **String** |  | [optional] 
+**RenewalProfile** | **String** |  | [optional] 
+**RenewalProfileId** | **String** |  | [optional] 
+**ElectionProfile** | **String** |  | [optional] 
+**ElectionProfileId** | **String** |  | [optional] 
+**QuotaProfile** | **String** |  | [optional] 
+**QuotaProfileId** | **String** |  | [optional] 
+**ExternalSharingProfile** | **String** |  | [optional] 
+**ExternalSharingProfileId** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **PrimaryAdmin** | **String** |  | [optional] 
 **PrimaryAdminEmail** | **String** |  | [optional] 
@@ -62,6 +70,14 @@ $WorkspaceList = New-Cloud.Governance.ClientWorkspaceList  -Id null `
  -SecondaryContactEmail null `
  -Policy null `
  -PolicyId null `
+ -RenewalProfile null `
+ -RenewalProfileId null `
+ -ElectionProfile null `
+ -ElectionProfileId null `
+ -QuotaProfile null `
+ -QuotaProfileId null `
+ -ExternalSharingProfile null `
+ -ExternalSharingProfileId null `
  -Description null `
  -PrimaryAdmin null `
  -PrimaryAdminEmail null `

@@ -33,6 +33,8 @@ Name | Type | Description | Notes
 **GuestUserName** | [**AnyType**](.md) |  | [optional] 
 **Manager** | [**AnyType**](.md) |  | [optional] 
 **ElectionProfile** | [**AnyType**](.md) |  | [optional] 
+**RenewalDetails** | [**AnyType**](.md) |  | [optional] 
+**IsFinalStep** | [**AnyType**](.md) |  | [optional] 
 
 ## Examples
 
@@ -67,7 +69,9 @@ $ApiTaskDynamicProperties = New-Cloud.Governance.ClientApiTaskDynamicProperties 
  -GuestUserMail null `
  -GuestUserName null `
  -Manager null `
- -ElectionProfile null
+ -ElectionProfile null `
+ -RenewalDetails null `
+ -IsFinalStep null
 ```
 
 - Convert the resource to JSON

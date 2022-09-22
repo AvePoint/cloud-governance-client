@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 5.5.3
+- SDK version: 5.9.1
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -41,6 +41,7 @@ Class | Method | HTTP request | Description
 *Office365Api* | [**Get-SiteSharePointGroups**](docs/Office365Api.md#Get-SiteSharePointGroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 *Office365Api* | [**Get-ACGSiteStatus**](docs/Office365Api.md#get-acgsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 *Office365Api* | [**Get-ACGSiteTemplates**](docs/Office365Api.md#get-acgsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
+*Office365Api* | [**Get-ACGTeamSiteDesigns**](docs/Office365Api.md#get-acgteamsitedesigns) | **GET** /office365/teamsitedesigns | 
 *Office365Api* | [**Invoke-HasPermission**](docs/Office365Api.md#Invoke-HasPermission) | **GET** /office365/sites/haspermission | whether user has permission on the site
 *Office365Api* | [**Remove-ACGSecurityGroup**](docs/Office365Api.md#remove-acgsecuritygroup) | **DELETE** /office365/securitygroups/{name} | Remove mail-enabled security group by group name
 *Office365AdminApi* | [**Add-WebUserCustomAction**](docs/Office365AdminApi.md#Add-WebUserCustomAction) | **POST** /admin/office365/web/usercustomactions | add user custom actions, if exists, will update the existing one.
@@ -80,6 +81,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Get-DeleteGroupRequest**](docs/RequestsApi.md#Get-DeleteGroupRequest) | **GET** /requests/deletegroup/{id} | get delete group request
 *RequestsApi* | [**Get-DeleteSiteRequest**](docs/RequestsApi.md#Get-DeleteSiteRequest) | **GET** /requests/deletesite/{id} | get delete site request
 *RequestsApi* | [**Get-DeleteWebRequest**](docs/RequestsApi.md#Get-DeleteWebRequest) | **GET** /requests/deleteweb/{id} | get delete web request
+*RequestsApi* | [**Get-DynamicRequest**](docs/RequestsApi.md#Get-DynamicRequest) | **GET** /requests/dynamic/{id} | get create group request
 *RequestsApi* | [**Get-ExtendGroupRequest**](docs/RequestsApi.md#Get-ExtendGroupRequest) | **GET** /requests/extendgroup/{id} | get extend group request
 *RequestsApi* | [**Get-ExtendSiteRequest**](docs/RequestsApi.md#Get-ExtendSiteRequest) | **GET** /requests/extendsite/{id} | get extend site request
 *RequestsApi* | [**Get-GrantPermissionRequest**](docs/RequestsApi.md#Get-GrantPermissionRequest) | **GET** /requests/grantpermission/{id} | get grant permission request
@@ -119,6 +121,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Submit-DeleteGroupRequest**](docs/RequestsApi.md#Submit-DeleteGroupRequest) | **POST** /requests/deletegroup | submit delete group request
 *RequestsApi* | [**Submit-DeleteSiteRequest**](docs/RequestsApi.md#Submit-DeleteSiteRequest) | **POST** /requests/deletesite | submit delete site request
 *RequestsApi* | [**Submit-DeleteWebRequest**](docs/RequestsApi.md#Submit-DeleteWebRequest) | **POST** /requests/deleteweb | submit delete web request
+*RequestsApi* | [**Submit-DynamicRequest**](docs/RequestsApi.md#Submit-DynamicRequest) | **POST** /requests/dynamic | submit create group request
 *RequestsApi* | [**Submit-ExtendGroupRequest**](docs/RequestsApi.md#Submit-ExtendGroupRequest) | **POST** /requests/extendgroup | submit extend group request
 *RequestsApi* | [**Submit-ExtendSiteRequest**](docs/RequestsApi.md#Submit-ExtendSiteRequest) | **POST** /requests/extendsite | submit extend site request
 *RequestsApi* | [**Submit-GrantPermissionRequest**](docs/RequestsApi.md#Submit-GrantPermissionRequest) | **POST** /requests/grantpermission | get submit grant permission request
@@ -145,6 +148,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**Get-CreateSiteService**](docs/ServicesApi.md#Get-CreateSiteService) | **GET** /services/createsite/{id} | get create site service
 *ServicesApi* | [**Get-CreateWebService**](docs/ServicesApi.md#Get-CreateWebService) | **GET** /services/createweb/{id} | get create web service
 *ServicesApi* | [**Get-CustomService**](docs/ServicesApi.md#Get-CustomService) | **GET** /services/custom/{id} | get custom service
+*ServicesApi* | [**Get-DynamicService**](docs/ServicesApi.md#Get-DynamicService) | **GET** /services/dynamic/{id} | get custom service
 *ServicesApi* | [**Get-GrantPermissionService**](docs/ServicesApi.md#Get-GrantPermissionService) | **GET** /services/grantpermission/{id} | get grant permission service
 *ServicesApi* | [**Get-GroupLifecycleService**](docs/ServicesApi.md#Get-GroupLifecycleService) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 *ServicesApi* | [**Get-ManagePermissionService**](docs/ServicesApi.md#Get-ManagePermissionService) | **GET** /services/managepermission/{id} | get manage permission service
@@ -230,7 +234,6 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**Invoke-IsMemberOfGroup**](docs/UsersApi.md#Invoke-IsMemberOfGroup) | **GET** /users/{userprincipalname}/ismemberof/{groupid} | Is Member Of Group
 *UsersApi* | [**Resolve-ACGUsers**](docs/UsersApi.md#resolve-acgusers) | **GET** /users/resolve | resolve users
 *UsersApi* | [**Search-ACGUsers**](docs/UsersApi.md#search-acgusers) | **GET** /users/search | search users
-*UsersApi* | [**Update-UserInfo**](docs/UsersApi.md#Update-UserInfo) | **POST** /users | add users or update user information
 *WorkspaceApi* | [**Get-GroupMetadata**](docs/WorkspaceApi.md#Get-GroupMetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
 *WorkspaceApi* | [**Get-MyGroupInformation**](docs/WorkspaceApi.md#Get-MyGroupInformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
 *WorkspaceApi* | [**Get-MySiteInformation**](docs/WorkspaceApi.md#Get-MySiteInformation) | **GET** /workspace/sites/{id} | get site information
@@ -247,6 +250,7 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**Lock-Workspaces**](docs/WorkspacesAdminApi.md#Lock-Workspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 *WorkspacesAdminApi* | [**Invoke-SpecifyContacts**](docs/WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 *WorkspacesAdminApi* | [**Invoke-TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#Invoke-TriggerWorkspaceRenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
+*WorkspacesAdminApi* | [**Invoke-TriggerWorkspacesElection**](docs/WorkspacesAdminApi.md#Invoke-TriggerWorkspacesElection) | **POST** /admin/directory/workspace/election/trigger | trigger workspace election
 *WorkspacesAdminApi* | [**Unlock-Workspace**](docs/WorkspacesAdminApi.md#Unlock-Workspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
 
@@ -279,6 +283,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
  - [Cloud.Governance.Client\Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
  - [Cloud.Governance.Client\Model.ApplySitePolicyModel](docs/ApplySitePolicyModel.md)
+ - [Cloud.Governance.Client\Model.ApproveProcessModel](docs/ApproveProcessModel.md)
  - [Cloud.Governance.Client\Model.ArchiveGroupRequest](docs/ArchiveGroupRequest.md)
  - [Cloud.Governance.Client\Model.ArchiveSiteRequest](docs/ArchiveSiteRequest.md)
  - [Cloud.Governance.Client\Model.ArchiveWebLifecycleRequest](docs/ArchiveWebLifecycleRequest.md)
@@ -413,8 +418,10 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.DurationDateType](docs/DurationDateType.md)
  - [Cloud.Governance.Client\Model.DynamicGroupRuleInfo](docs/DynamicGroupRuleInfo.md)
  - [Cloud.Governance.Client\Model.DynamicGroupRuleModel](docs/DynamicGroupRuleModel.md)
+ - [Cloud.Governance.Client\Model.DynamicRequest](docs/DynamicRequest.md)
  - [Cloud.Governance.Client\Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Cloud.Governance.Client\Model.DynamicRuleElement](docs/DynamicRuleElement.md)
+ - [Cloud.Governance.Client\Model.DynamicServiceForRequest](docs/DynamicServiceForRequest.md)
  - [Cloud.Governance.Client\Model.ElectionContact](docs/ElectionContact.md)
  - [Cloud.Governance.Client\Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Cloud.Governance.Client\Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
@@ -432,6 +439,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ExternalUserSharingType](docs/ExternalUserSharingType.md)
  - [Cloud.Governance.Client\Model.ExternalUserState](docs/ExternalUserState.md)
  - [Cloud.Governance.Client\Model.ExternalUserType](docs/ExternalUserType.md)
+ - [Cloud.Governance.Client\Model.Gallerybase](docs/Gallerybase.md)
  - [Cloud.Governance.Client\Model.GeoLocationBase](docs/GeoLocationBase.md)
  - [Cloud.Governance.Client\Model.GeoLocationModel](docs/GeoLocationModel.md)
  - [Cloud.Governance.Client\Model.GiphyRatingType](docs/GiphyRatingType.md)
@@ -505,6 +513,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.LockSiteParameter](docs/LockSiteParameter.md)
  - [Cloud.Governance.Client\Model.LockSiteRequest](docs/LockSiteRequest.md)
  - [Cloud.Governance.Client\Model.LockSiteSetting](docs/LockSiteSetting.md)
+ - [Cloud.Governance.Client\Model.LockedBy](docs/LockedBy.md)
  - [Cloud.Governance.Client\Model.LogicalOperator](docs/LogicalOperator.md)
  - [Cloud.Governance.Client\Model.LookupListValue](docs/LookupListValue.md)
  - [Cloud.Governance.Client\Model.LookupValue](docs/LookupValue.md)
@@ -619,6 +628,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TaskResult](docs/TaskResult.md)
  - [Cloud.Governance.Client\Model.TaskStatus](docs/TaskStatus.md)
  - [Cloud.Governance.Client\Model.TaskType](docs/TaskType.md)
+ - [Cloud.Governance.Client\Model.TeamSiteStatus](docs/TeamSiteStatus.md)
  - [Cloud.Governance.Client\Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)
  - [Cloud.Governance.Client\Model.TeamsTemplateSettings](docs/TeamsTemplateSettings.md)
  - [Cloud.Governance.Client\Model.TemplateWithPermissions](docs/TemplateWithPermissions.md)
@@ -636,7 +646,6 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TriggerType](docs/TriggerType.md)
  - [Cloud.Governance.Client\Model.UnlockSiteRequest](docs/UnlockSiteRequest.md)
  - [Cloud.Governance.Client\Model.UnlockSiteSetting](docs/UnlockSiteSetting.md)
- - [Cloud.Governance.Client\Model.UpdatableApiUser](docs/UpdatableApiUser.md)
  - [Cloud.Governance.Client\Model.UrlRandomStringSettings](docs/UrlRandomStringSettings.md)
  - [Cloud.Governance.Client\Model.UrlSequentialNumberingSettings](docs/UrlSequentialNumberingSettings.md)
  - [Cloud.Governance.Client\Model.UserCustomAction](docs/UserCustomAction.md)

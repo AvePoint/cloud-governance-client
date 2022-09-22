@@ -13,6 +13,9 @@ Name | Type | Description | Notes
 **Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
 **ProcessStatus** | **ApiRequestProgressStatus** |  | [optional] [readonly] 
 **AssignTo** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**ModifiedBy** | **string** |  | [optional] 
+**ModifiedByDisplayName** | **string** |  | [optional] 
+**ModifiedDate** | **DateTime?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

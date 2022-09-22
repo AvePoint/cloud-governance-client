@@ -5,6 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Guid** |  | [optional] 
 **AssignTo** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ModifiedBy** | **string** |  | [optional] 
+**ModifiedByDisplayName** | **string** |  | [optional] 
+**ModifiedDate** | **DateTime?** |  | [optional] 
 **Reason** | **string** |  | [optional] 
 **Status** | **int** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **string** |  | [optional] 
