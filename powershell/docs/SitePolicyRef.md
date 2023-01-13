@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Category** | **String** |  | [optional] 
 **TenantId** | **String** |  | [optional] 
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
+**Detail** | **String** |  | [optional] 
 
 ## Examples
 
@@ -21,7 +22,8 @@ $SitePolicyRef = New-Cloud.Governance.ClientSitePolicyRef  -SiteSharingOptions n
  -Description null `
  -Category null `
  -TenantId null `
- -Status null
+ -Status null `
+ -Detail null
 ```
 
 - Convert the resource to JSON

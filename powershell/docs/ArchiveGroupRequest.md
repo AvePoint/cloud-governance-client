@@ -7,7 +7,9 @@ Name | Type | Description | Notes
 **GroupName** | **String** | Group name | [optional] [readonly] 
 **GroupEmail** | **String** | Group e-mail address | [optional] [readonly] 
 **GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) | Group type | [optional] 
-**LifecycleType** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**LifecycleType** | [**ServiceType**](ServiceType.md) | Lifecycle type | [optional] 
+**GenerateFromRenewal** | **Boolean** | If generate from renewal | [optional] [default to $false]
+**GenerateFromElection** | **Boolean** | If generate from election | [optional] [default to $false]
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -45,6 +47,8 @@ $ArchiveGroupRequest = New-Cloud.Governance.ClientArchiveGroupRequest  -GroupId 
  -GroupEmail null `
  -GroupObjectType null `
  -LifecycleType null `
+ -GenerateFromRenewal null `
+ -GenerateFromElection null `
  -Id null `
  -ServiceId null `
  -Summary null `

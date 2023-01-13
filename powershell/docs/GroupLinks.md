@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **GroupConversationsLink** | **String** | Conversations link | [optional] 
 **GroupNotebookLink** | **String** | Notebook link | [optional] 
 **YammerGroupLink** | **String** | Yammer community link | [optional] 
+**TeamLink** | **String** | Team link | [optional] 
 
 ## Examples
 
@@ -19,7 +20,8 @@ $GroupLinks = New-Cloud.Governance.ClientGroupLinks  -GroupSiteLink null `
  -GroupFilesLink null `
  -GroupConversationsLink null `
  -GroupNotebookLink null `
- -YammerGroupLink null
+ -YammerGroupLink null `
+ -TeamLink null
 ```
 
 - Convert the resource to JSON

@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **AddMemberRestriction** | **UserLevelRestrictionType** |  | [optional] 
 **EnableRemoveMembers** | **bool** |  | [optional] [default to false]
 **EnableChangeDynamicMembershipRules** | **bool** |  | [optional] [default to false]
+**EnableRestrictDynamicMembershipRules** | **bool** |  | [optional] [default to false]
+**DynamicMembershipRules** | [**List&lt;DynamicGroupRuleInfo&gt;**](DynamicGroupRuleInfo.md) |  | [optional] 
 **EnableChangeDynamicMembershipRulesValue** | **bool** |  | [optional] [default to false]
 **EnableChangeTeamCollaboration** | **bool** |  | [optional] [default to false]
 **EnableChangeHubSite** | **bool** |  | [optional] [default to false]

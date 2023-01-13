@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
 **LanguageId** | [**IntModel**](IntModel.md) |  | [optional] 

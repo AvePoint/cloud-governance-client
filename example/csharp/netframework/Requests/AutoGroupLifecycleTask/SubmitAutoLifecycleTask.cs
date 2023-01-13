@@ -7,23 +7,19 @@
     using System.Collections.Generic;
     using System.Diagnostics;
 
-
     public class SubmitAutoLifecyceTask : TestBase
     {
-        public SubmitAutoLifecyceTask(ApiConfig authData) : base(authData) { }
-
-        public Boolean Run(SubmitAutoLifecycleTaskTestData data)
+        public SubmitAutoLifecyceTask(ApiConfig authData) : base(authData)
         {
+        }
 
+        public Boolean Run(TaskList task)
+        {
             try
             {
                 var apiInstance = new TasksApi(Configuration.Default);
                 var comments = new CommentsParam("Test");
-                apiInstance.SubmitContinueAccessSiteAutoTaskAsync(new Guid(data.TaskId), comments).GetAwaiter().GetResult();
-                //apiInstance.SubmitContinueAccessGroupAutoTaskAsync(new Guid(), comments).GetAwaiter().GetResult();
-                //var task = new AutoTaskExtendRequest();
-                //apiInstance.SubmitExtendSiteAutoTaskAsync(task).GetAwaiter().GetResult();
-                //apiInstance.SubmitExtendGroupAutoTaskAsync(task).GetAwaiter().GetResult();
+                apiInstance.SubmitContinueAccessSiteAutoTaskAsync(task.Id, comments).GetAwaiter().GetResult();
                 return true;
             }
             catch (ApiException e)
@@ -34,6 +30,5 @@
                 return false;
             }
         }
-
     }
 }

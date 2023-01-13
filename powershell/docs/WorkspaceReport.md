@@ -47,6 +47,11 @@ Name | Type | Description | Notes
 **LastRenewalBy** | **String** |  | [optional] 
 **LastRenewalByDisplayName** | **String** |  | [optional] 
 **LastAccessedTime** | **System.DateTime** |  | [optional] 
+**LastSyncTime** | **System.DateTime** |  | [optional] 
+**QuotaProfileName** | **String** |  | [optional] 
+**ExternalSharingProfileName** | **String** |  | [optional] 
+**ElectionProfileName** | **String** |  | [optional] 
+**SiteStatusDescription** | **String** |  | [optional] 
 
 ## Examples
 
@@ -95,7 +100,12 @@ $WorkspaceReport = New-Cloud.Governance.ClientWorkspaceReport  -Id null `
  -LastRenewalTime null `
  -LastRenewalBy null `
  -LastRenewalByDisplayName null `
- -LastAccessedTime null
+ -LastAccessedTime null `
+ -LastSyncTime null `
+ -QuotaProfileName null `
+ -ExternalSharingProfileName null `
+ -ElectionProfileName null `
+ -SiteStatusDescription null
 ```
 
 - Convert the resource to JSON

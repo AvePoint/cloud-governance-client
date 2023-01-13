@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cloud.Governance.Client, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Cloud.Governance.Client.5.9.1\lib\netstandard2.0\Cloud.Governance.Client.dll</HintPath>
+      <HintPath>..\packages\Cloud.Governance.Client.6.1.1\lib\netstandard2.0\Cloud.Governance.Client.dll</HintPath>
     </Reference>
     <Reference Include="JsonSubTypes, Version=1.7.0.0, Culture=neutral, PublicKeyToken=ee75fc290dbc1176, processorArchitecture=MSIL">
       <HintPath>..\packages\JsonSubTypes.1.7.0\lib\net47\JsonSubTypes.dll</HintPath>
@@ -167,118 +167,306 @@
     <Compile Include="Requests\SiteLifecycle\UnlockSiteCollection.cs" />
     <Compile Include="Tasks\GetPendingInactivityTasks.cs" />
     <Compile Include="TestBase.cs" />
-    <Compile Include="TestData\ApiConfig.cs" />
-    <Compile Include="TestData\Model\Admin\WorkspaceActionTestData.cs" />
-    <Compile Include="TestData\Model\ChangeGroupTeamsTestData.cs" />
-    <Compile Include="TestData\Model\ChangeListSettingsTestData.cs" />
-    <Compile Include="TestData\Model\ChangeSiteAdminTestData.cs" />
-    <Compile Include="TestData\Model\ChangeSiteSettingTestData.cs" />
-    <Compile Include="TestData\Model\CreateGroupTestData.cs" />
-    <Compile Include="TestData\Model\CreateGuestUserTestData.cs" />
-    <Compile Include="TestData\Model\CreateListOrLibraryTestData.cs" />
-    <Compile Include="TestData\Model\CreateSiteTestData.cs" />
-    <Compile Include="TestData\Model\CustomTestData.cs" />
-    <Compile Include="TestData\Model\GrantPermissionTestData.cs" />
-    <Compile Include="TestData\Model\GroupTeamYammerLifecycleTestData.cs" />
-    <Compile Include="TestData\Model\ManagePermissionTestData.cs" />
-    <Compile Include="TestData\Model\MetadataTestData.cs" />
-    <Compile Include="TestData\Model\SiteCollectionLifecycleTestData.cs" />
-    <Compile Include="TestData\SubmitAutoLifecycleTaskTestData.cs" />
+    <Compile Include="Model\ApiConfig.cs" />
+    <Compile Include="Model\AutoLifecycleTaskTestData.cs" />
+    <Compile Include="Model\Admin\WorkspaceActionTestData.cs" />
+    <Compile Include="Model\ChangeGroupTeamsTestData.cs" />
+    <Compile Include="Model\ChangeListSettingsTestData.cs" />
+    <Compile Include="Model\ChangeSiteAdminTestData.cs" />
+    <Compile Include="Model\ChangeSiteSettingTestData.cs" />
+    <Compile Include="Model\CreateGroupTestData.cs" />
+    <Compile Include="Model\CreateGuestUserTestData.cs" />
+    <Compile Include="Model\CreateListOrLibraryTestData.cs" />
+    <Compile Include="Model\CreateSiteTestData.cs" />
+    <Compile Include="Model\CustomTestData.cs" />
+    <Compile Include="Model\GrantPermissionTestData.cs" />
+    <Compile Include="Model\GroupTeamYammerLifecycleTestData.cs" />
+    <Compile Include="Model\ManagePermissionTestData.cs" />
+    <Compile Include="Model\MetadataTestData.cs" />
+    <Compile Include="Model\SiteCollectionLifecycleTestData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="TestData\Files\AdminWorkspaceReport\CompleteRenew.json" />
-    <None Include="TestData\Files\AdminWorkspaceReport\RestartRenew.json" />
-    <None Include="TestData\Files\ApiConfig.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeMembersAdd.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeMembersDelete.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeNameAndDescription.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeOwnersAdd.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeOwnersDelete.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeSubscriptionAndSenders.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamClassification.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamHubsite.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamMembershipToDynamic.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamMembershipToManually.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamMetadata1.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_Contact.json" />
-    <None Include="TestData\Files\Requests\ChangeGroupTeams\ChangeGroupTeams_EnableTeam.json" />
-    <None Include="TestData\Files\Requests\ChangeListSettings\ChangeListSettings_Description.json" />
-    <None Include="TestData\Files\Requests\ChangeListSettings\ChangeListSettings_Name.json" />
-    <None Include="TestData\Files\Requests\ChangeListSettings\ChangeListSettings_Navigation.json" />
-    <None Include="TestData\Files\Requests\ChangeListSettings\ChangeListSettings_Version.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteAdminContact\ChangeAdminByUrl.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteAdminContact\ChangeAdminContactByUser.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteAdminContact\ChangeContactByUrl.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteSettings\DPMPlan.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteSettings\EditMetadata.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteSettings\HubSite.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteSettings\RemoveMetadata.json" />
-    <None Include="TestData\Files\Requests\ChangeSiteSettings\SiteTitleDescription.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\Basic.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\Classification.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\CloneTeam.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\ConstructGroupId.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\ConstructGroupName.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\DynamicRule.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\FromTemplate.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\MultiGeo.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\Policy.json" />
-    <None Include="TestData\Files\Requests\CreateGroup\SiteDesign.json" />
-    <None Include="TestData\Files\Requests\CreateGuestUser\AddToGroup.json" />
-    <None Include="TestData\Files\Requests\CreateGuestUser\Basic.json" />
-    <None Include="TestData\Files\Requests\CreateGuestUser\EnableOneTimeRenewal.json" />
-    <None Include="TestData\Files\Requests\CreateGuestUser\SetUserProperties.json" />
-    <None Include="TestData\Files\Requests\CreateGuestUser\SetWelcomeMessage.json" />
-    <None Include="TestData\Files\Requests\CreateListOrLibrary\CreateLibrary_Required.json" />
-    <None Include="TestData\Files\Requests\CreateListOrLibrary\CreateLibrary_WithVersion.json" />
-    <None Include="TestData\Files\Requests\CreateListOrLibrary\CreateList_Required.json" />
-    <None Include="TestData\Files\Requests\CreateListOrLibrary\CreateList_WithVersion.json" />
-    <None Include="TestData\Files\Requests\CreateSite\AddGroupPermission.json" />
-    <None Include="TestData\Files\Requests\CreateSite\AdditionalAdmin.json" />
-    <None Include="TestData\Files\Requests\CreateSite\Basic.json" />
-    <None Include="TestData\Files\Requests\CreateSite\ConstructUrlWithMetadata1.json" />
-    <None Include="TestData\Files\Requests\CreateSite\CustomTemplate.json" />
-    <None Include="TestData\Files\Requests\CreateSite\DifferentTemplate.json" />
-    <None Include="TestData\Files\Requests\CreateSite\EnableMultiGeo.json" />
-    <None Include="TestData\Files\Requests\CreateSite\GrantUserPermission.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_AAD.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_Choice.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_Hyperlink.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_LookupList.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_LookupWithCondition.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_MultipleLine.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_Person.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_SingleMultipleLine.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_Terms.json" />
-    <None Include="TestData\Files\Requests\Custom\Custom_Metadata1_UPS.json" />
-    <None Include="TestData\Files\Requests\GrantPermission\List_GrantUserPermission.json" />
-    <None Include="TestData\Files\Requests\GrantPermission\Site_GrantTemporaryPermission_Date.json" />
-    <None Include="TestData\Files\Requests\GrantPermission\Site_GrantTemporaryPermission_Duration.json" />
-    <None Include="TestData\Files\Requests\GrantPermission\Site_GrantUserPermission.json" />
-    <None Include="TestData\Files\Requests\GrantPermission\Site_GrantUserPermissionAddUserToGroup.json" />
-    <None Include="TestData\Files\Requests\GroupTeamYammerManualLifecycle\Lifecycle_ArchiveTeam.json" />
-    <None Include="TestData\Files\Requests\GroupTeamYammerManualLifecycle\Lifecycle_ChangeGroupQuota.json" />
-    <None Include="TestData\Files\Requests\GroupTeamYammerManualLifecycle\Lifecycle_DeleteGroup.json" />
-    <None Include="TestData\Files\Requests\GroupTeamYammerManualLifecycle\Lifecycle_DeleteYammer.json" />
-    <None Include="TestData\Files\Requests\GroupTeamYammerManualLifecycle\Lifecycle_ExtendGroup.json" />
-    <None Include="TestData\Files\Requests\GroupTeamYammerManualLifecycle\Lifecycle_RestoreTeam.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\File_BreakInheritance_CopyParent_AddNewUser.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Library_BreakInheritance_CopyParent_AddNewUser.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_AddSharePointGroup_AddOwnerAndMember.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_AddUserPermission.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_BreakInheritance_CopyParent_AddNewUser.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_DeleteSharePointGroup.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_DeleteUserPermission.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_EditSharePointGroup.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_GrantGroupPermission.json" />
-    <None Include="TestData\Files\Requests\ManagePermission\Site_GrantUserTemporaryPermission.json" />
-    <None Include="TestData\Files\Requests\SiteCollectionLifecycle\ChangeSitePolicy.json" />
-    <None Include="TestData\Files\Requests\SiteCollectionLifecycle\ChangeSiteQuota.json" />
-    <None Include="TestData\Files\Requests\SiteCollectionLifecycle\ExtendSite.json" />
-    <None Include="TestData\Files\Requests\SiteCollectionLifecycle\LockSite.json" />
-    <None Include="TestData\Files\Requests\SiteCollectionLifecycle\UnlockSite.json" />
+    <Content Include="TestData\AdminWorkspaceReport\CompleteRenew.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\AdminWorkspaceReport\RestartRenew.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\ApiConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeMembersAdd.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeMembersDelete.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeNameAndDescription.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeOwnersAdd.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeOwnersDelete.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeSubscriptionAndSenders.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamClassification.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamHubsite.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamMembershipToDynamic.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamMembershipToManually.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_ChangeTeamMetadata1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_Contact.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeGroupTeams\ChangeGroupTeams_EnableTeam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeListSettings\ChangeListSettings_Description.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeListSettings\ChangeListSettings_Name.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeListSettings\ChangeListSettings_Navigation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeListSettings\ChangeListSettings_Version.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteAdminContact\ChangeAdminByUrl.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteAdminContact\ChangeAdminContactByUser.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteAdminContact\ChangeContactByUrl.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteSettings\DPMPlan.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteSettings\EditMetadata.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteSettings\HubSite.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteSettings\RemoveMetadata.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ChangeSiteSettings\SiteTitleDescription.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\Basic.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\Classification.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\CloneTeam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\ConstructGroupId.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\ConstructGroupName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\DynamicRule.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\FromTemplate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\MultiGeo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\Policy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGroup\SiteDesign.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGuestUser\AddToGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGuestUser\Basic.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGuestUser\EnableOneTimeRenewal.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGuestUser\SetUserProperties.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateGuestUser\SetWelcomeMessage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateListOrLibrary\CreateLibrary_Required.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateListOrLibrary\CreateLibrary_WithVersion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateListOrLibrary\CreateList_Required.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateListOrLibrary\CreateList_WithVersion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\AddGroupPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\AdditionalAdmin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\Basic.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\ConstructUrlWithMetadata1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\CustomTemplate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\DifferentTemplate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\EnableMultiGeo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\CreateSite\GrantUserPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_AAD.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_Choice.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_Hyperlink.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_LookupList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_LookupWithCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_MultipleLine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_Person.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_SingleMultipleLine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_Terms.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\Custom\Custom_Metadata1_UPS.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GrantPermission\List_GrantUserPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GrantPermission\Site_GrantTemporaryPermission_Date.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GrantPermission\Site_GrantTemporaryPermission_Duration.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GrantPermission\Site_GrantUserPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GrantPermission\Site_GrantUserPermissionAddUserToGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GroupTeamYammerManualLifecycle\Lifecycle_ArchiveTeam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GroupTeamYammerManualLifecycle\Lifecycle_ChangeGroupQuota.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GroupTeamYammerManualLifecycle\Lifecycle_DeleteGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GroupTeamYammerManualLifecycle\Lifecycle_DeleteYammer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GroupTeamYammerManualLifecycle\Lifecycle_ExtendGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\GroupTeamYammerManualLifecycle\Lifecycle_RestoreTeam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\File_BreakInheritance_CopyParent_AddNewUser.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Library_BreakInheritance_CopyParent_AddNewUser.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_AddSharePointGroup_AddOwnerAndMember.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_AddUserPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_BreakInheritance_CopyParent_AddNewUser.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_DeleteSharePointGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_DeleteUserPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_EditSharePointGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_GrantGroupPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\ManagePermission\Site_GrantUserTemporaryPermission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\SiteCollectionLifecycle\ChangeSitePolicy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\SiteCollectionLifecycle\ChangeSiteQuota.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\SiteCollectionLifecycle\ExtendSite.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\SiteCollectionLifecycle\LockSite.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Requests\SiteCollectionLifecycle\UnlockSite.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\cloud-governance-client\csharp-netstandard\src\Cloud.Governance.Client\Cloud.Governance.Client.csproj">
+      <Project>{8b25ca85-ac58-4aa4-8ede-76f03b27e846}</Project>
+      <Name>Cloud.Governance.Client</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

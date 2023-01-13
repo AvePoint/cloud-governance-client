@@ -2116,7 +2116,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | service id |  -  |
+| **200** | Success |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |
@@ -2462,7 +2462,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | return invalid emails |  -  |
+| **200** | Success |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |

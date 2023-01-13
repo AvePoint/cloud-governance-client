@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **AssignedLoginName** | **string** |  | [optional] 
 **ServiceAdmin** | **string** |  | [optional] 
 **EnabledCopy** | **bool** |  | [optional] [default to false]
+**Metadata** | [**List&lt;ReportMetadata&gt;**](ReportMetadata.md) |  | [optional] 
 **QuestionnaireId** | **Guid** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

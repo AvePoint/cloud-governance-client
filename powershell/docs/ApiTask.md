@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **RequestTicketNumber** | **Int32** |  | [optional] [default to 0]
 **DueDate** | **System.DateTime** |  | [optional] 
 **TaskFullPath** | **String** |  | [optional] 
+**AppId** | **String** |  | [optional] 
 **DynamicActions** | [**TaskDynamicActions[]**](TaskDynamicActions.md) |  | [optional] 
 
 ## Examples
@@ -49,6 +50,7 @@ $ApiTask = New-Cloud.Governance.ClientApiTask  -DynamicProperties null `
  -RequestTicketNumber null `
  -DueDate null `
  -TaskFullPath null `
+ -AppId null `
  -DynamicActions null
 ```
 

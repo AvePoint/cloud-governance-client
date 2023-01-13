@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **IsAutoAcceptRequest** | **Boolean** |  | [optional] [default to $false]
 **SendMembershipRequestEmailAddress** | **String** |  | [optional] 
 **GroupRequestAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**IsEnabelSPMemberWelcomeEmail** | **Boolean** |  | [optional] [default to $false]
+**SpMemberWelcomeEmailTemplateId** | **String** |  | [optional] 
 
 ## Examples
 
@@ -33,7 +35,9 @@ $ManagePermissionSharePointGroupOption = New-Cloud.Governance.ClientManagePermis
  -IsAllowJoinOrLeaveRequest null `
  -IsAutoAcceptRequest null `
  -SendMembershipRequestEmailAddress null `
- -GroupRequestAssignBy null
+ -GroupRequestAssignBy null `
+ -IsEnabelSPMemberWelcomeEmail null `
+ -SpMemberWelcomeEmailTemplateId null
 ```
 
 - Convert the resource to JSON

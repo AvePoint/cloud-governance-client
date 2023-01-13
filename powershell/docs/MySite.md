@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **RenewalProfileId** | **String** |  | [optional] 
 **RenewalProfileName** | **String** |  | [optional] 
 **RenewalProfileDescription** | **String** |  | [optional] 
+**PolicyId** | **String** |  | [optional] 
 **PolicyName** | **String** |  | [optional] 
 **PolicyDescription** | **String** |  | [optional] 
 **ElectionProfileId** | **String** |  | [optional] 
@@ -46,6 +47,9 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
+**CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
+**HasSubmitted** | **Boolean** |  | [optional] [default to $false]
+**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -76,6 +80,7 @@ $MySite = New-Cloud.Governance.ClientMySite  -FullUrl null `
  -RenewalProfileId null `
  -RenewalProfileName null `
  -RenewalProfileDescription null `
+ -PolicyId null `
  -PolicyName null `
  -PolicyDescription null `
  -ElectionProfileId null `
@@ -93,7 +98,10 @@ $MySite = New-Cloud.Governance.ClientMySite  -FullUrl null `
  -Metadatas null `
  -PrimaryContact null `
  -SecondaryContact null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -CreatedSource null `
+ -HasSubmitted null `
+ -HasPendingApprovalTask null
 ```
 
 - Convert the resource to JSON

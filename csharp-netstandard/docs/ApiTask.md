@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **RequestTicketNumber** | **int** |  | [optional] [default to 0]
 **DueDate** | **DateTime** |  | [optional] 
 **TaskFullPath** | **string** |  | [optional] 
+**AppId** | **string** |  | [optional] 
 **DynamicActions** | [**List&lt;TaskDynamicActions&gt;**](TaskDynamicActions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

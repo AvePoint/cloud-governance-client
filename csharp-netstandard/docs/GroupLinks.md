@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **GroupConversationsLink** | **string** | Conversations link | [optional] 
 **GroupNotebookLink** | **string** | Notebook link | [optional] 
 **YammerGroupLink** | **string** | Yammer community link | [optional] 
+**TeamLink** | **string** | Team link | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

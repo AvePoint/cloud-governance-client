@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **ObjectID** | **string** |  | [optional] 
 **CreatedTime** | **DateTime** |  | [optional] 
 **HasSubRequest** | **bool** |  | [optional] [default to false]
+**GenerateFromRenewal** | **bool** |  | [optional] [default to false]
 **Metadata** | [**List&lt;ReportMetadata&gt;**](ReportMetadata.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

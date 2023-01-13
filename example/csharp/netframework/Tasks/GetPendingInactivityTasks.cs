@@ -11,13 +11,15 @@ namespace NetFramework
 {
     public class GetPendingInactivityTasks : TestBase
     {
-        public GetPendingInactivityTasks(ApiConfig authData) : base(authData) { }
+        public GetPendingInactivityTasks(ApiConfig authData) : base(authData)
+        {
+        }
 
         /// <summary>
         /// get pending approval tasks for group/team/site inactivity
         /// </summary>
         /// <param name="assignee">example:someone@example.com</param>
-        public void Run(String assignee)
+        public List<TaskList> Run(String assignee)
         {
             Configuration.Default.AddApiKey("userPrincipalName", assignee);
             var apiInstance = new TasksApi(Configuration.Default);
@@ -34,7 +36,7 @@ namespace NetFramework
                     nextToken = pageResult.NextToken;
                 }
             } while (nextToken != null);
+            return result;
         }
     }
 }
-

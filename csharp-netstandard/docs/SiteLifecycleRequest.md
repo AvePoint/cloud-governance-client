@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **SiteId** | **Guid** | Site collection ID | [optional] 
 **SiteUrl** | **string** | Site collection URL | [optional] 
 **SiteTitle** | **string** | Site Title | [optional] 
+**GenerateFromRenewal** | **bool** | If generate from renewal | [optional] [default to false]
+**GenerateFromElection** | **bool** | If generate from election | [optional] [default to false]
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 

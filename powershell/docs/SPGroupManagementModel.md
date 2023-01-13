@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **SendMembershipRequestEmailAddress** | **String** |  | [optional] 
 **IsTemporaryGroup** | **Boolean** |  | [optional] [default to $false]
 **RoleID** | **String[]** |  | [optional] 
+**IsEnabelSPMemberWelcomeEmail** | **Boolean** |  | [optional] [default to $false]
+**SpMemberWelcomeEmailTemplateId** | **String** |  | [optional] 
 
 ## Examples
 
@@ -35,7 +37,9 @@ $SPGroupManagementModel = New-Cloud.Governance.ClientSPGroupManagementModel  -Id
  -IsAutoAcceptRequest null `
  -SendMembershipRequestEmailAddress null `
  -IsTemporaryGroup null `
- -RoleID null
+ -RoleID null `
+ -IsEnabelSPMemberWelcomeEmail null `
+ -SpMemberWelcomeEmailTemplateId null
 ```
 
 - Convert the resource to JSON

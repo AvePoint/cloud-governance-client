@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **SiteId** | **String** | Site collection ID | [optional] 
 **SiteUrl** | **String** | Site collection URL | [optional] 
 **SiteTitle** | **String** | Site Title | [optional] 
+**GenerateFromRenewal** | **Boolean** | If generate from renewal | [optional] [default to $false]
+**GenerateFromElection** | **Boolean** | If generate from election | [optional] [default to $false]
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -51,6 +53,8 @@ $ChangeSiteQuotaRequest = New-Cloud.Governance.ClientChangeSiteQuotaRequest  -Qu
  -SiteId null `
  -SiteUrl null `
  -SiteTitle null `
+ -GenerateFromRenewal null `
+ -GenerateFromElection null `
  -Id null `
  -ServiceId null `
  -Summary null `

@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **ProxyAddresses** | **String[]** |  | [optional] 
 **PrincipalType** | [**PrincipalType**](PrincipalType.md) |  | [optional] 
 **Inviter** | **String** |  | [optional] 
+**CreatedTime** | **System.DateTime** |  | [optional] 
+**LastModifiedTime** | **System.DateTime** |  | [optional] 
 **Id** | **Int32** |  | [optional] [default to 0]
 **DisplayName** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
@@ -76,6 +78,8 @@ $UserInfo = New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -ProxyAddresses null `
  -PrincipalType null `
  -Inviter null `
+ -CreatedTime null `
+ -LastModifiedTime null `
  -Id null `
  -DisplayName null `
  -Title null `

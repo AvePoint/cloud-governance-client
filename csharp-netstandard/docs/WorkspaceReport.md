@@ -47,6 +47,11 @@ Name | Type | Description | Notes
 **LastRenewalBy** | **string** |  | [optional] 
 **LastRenewalByDisplayName** | **string** |  | [optional] 
 **LastAccessedTime** | **DateTime?** |  | [optional] 
+**LastSyncTime** | **DateTime?** |  | [optional] 
+**QuotaProfileName** | **string** |  | [optional] 
+**ExternalSharingProfileName** | **string** |  | [optional] 
+**ElectionProfileName** | **string** |  | [optional] 
+**SiteStatusDescription** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

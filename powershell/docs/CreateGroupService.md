@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **ShowTeamSiteLink** | **Boolean** |  | [optional] [default to $false]
 **ShowPlannerLink** | **Boolean** |  | [optional] [default to $false]
 **ShowYammerGroupLink** | **Boolean** |  | [optional] [default to $false]
+**ShowTeamLink** | **Boolean** |  | [optional] [default to $false]
 **Classifications** | **String[]** |  | [optional] 
 **Sensitivities** | [**StringModel[]**](StringModel.md) |  | [optional] 
 **SiteDesigns** | [**GuidModel[]**](GuidModel.md) |  | [optional] 
@@ -40,6 +41,7 @@ Name | Type | Description | Notes
 **DefaultOwners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **DefaultMembers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **DisableAddRemoveDynamicMembershipRules** | **Boolean** |  | [optional] [default to $false]
+**EnableRestrictDynamicMembershipRules** | **Boolean** |  | [optional] [default to $false]
 **DynamicMembershipRules** | [**DynamicGroupRuleInfo[]**](DynamicGroupRuleInfo.md) |  | [optional] 
 **DefaultPolicy** | **String** |  | [optional] 
 **DefaultClassification** | **String** |  | [optional] 
@@ -115,6 +117,7 @@ $CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType 
  -ShowTeamSiteLink null `
  -ShowPlannerLink null `
  -ShowYammerGroupLink null `
+ -ShowTeamLink null `
  -Classifications null `
  -Sensitivities null `
  -SiteDesigns null `
@@ -132,6 +135,7 @@ $CreateGroupService = New-Cloud.Governance.ClientCreateGroupService  -GroupType 
  -DefaultOwners null `
  -DefaultMembers null `
  -DisableAddRemoveDynamicMembershipRules null `
+ -EnableRestrictDynamicMembershipRules null `
  -DynamicMembershipRules null `
  -DefaultPolicy null `
  -DefaultClassification null `

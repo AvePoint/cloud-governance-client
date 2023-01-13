@@ -5,12 +5,12 @@ When an import process with pre-defined governance details or end user completes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AutoImportProfileName** | **string** | Name of the import job | [optional] 
-**TaskLink** | **string** | Link of task  &lt;sample&gt;abc&lt;/sample&gt; | [optional] 
+**TaskLink** | **string** | Link of task | [optional] 
 **ObjectTitle** | **string** | Name of the workspace | [optional] 
 **ObjectType** | **string** | Type of the workspace | [optional] 
 **ObjectTypeEnum** | **HookMessageObjectType** | Type enum of the workspace, availabe values:SiteCollection,Group,Team,GuestUser,Yammer | [optional] 
 **GroupEmail** | **string** | E-mail address of the workspace | [optional] 
-**TriggerType** | **TriggerType** | Event type that being triggered, available values and corresponding messages:    RequestSubmitted,RequestCompleted,RequestCancelled - -- -&gt; RequestHookMessage  TaskCreated,TaskApproved,TaskRejected,ErrorTaskCreated,TaskRetried,TaskSkipped - -- -&gt; TaskHookMessage  RenewalSuccess RenewalException,RenewalOverdue - -- -&gt; RenewalTaskHookMessage  FullyAutoImportSuccess,ConfirmDetailSuccess - -- -&gt; AutoImportProcessHookMessage  ElectionCompleted,ElectionOverdue - --&gt; ElectionHookMessage  LifecycleInactiveTaskCreated,LifecycleLeaseTaskCreated - -- -&gt; ElectionOverdue | [optional] 
+**TriggerType** | **TriggerType** | Event type that being triggered, available values and corresponding messages:                          RequestSubmitted,RequestCompleted,RequestCancelled - -- -&gt; RequestHookMessage             TaskCreated,TaskApproved,TaskRejected,ErrorTaskCreated,TaskRetried,TaskSkipped - -- -&gt; TaskHookMessage             RenewalSuccess RenewalException,RenewalOverdue - -- -&gt; RenewalTaskHookMessage             FullyAutoImportSuccess,ConfirmDetailSuccess - -- -&gt; AutoImportProcessHookMessage             ElectionCompleted,ElectionOverdue - --&gt; ElectionHookMessage             LifecycleInactiveTaskCreated,LifecycleLeaseTaskCreated - -- -&gt; ElectionOverdue | [optional] 
 **TriggerTime** | **DateTime** | Time that the webhook is triggered | [optional] 
 **ObjectUrl** | **string** | URL of the workspace | [optional] 
 **ObjectId** | **Guid?** | The unique ID of the workspace | [optional] 

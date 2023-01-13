@@ -4,7 +4,7 @@ archive workspace parameter
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArchiveProfile** | **string** | WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id | [optional] 
+**ArchiveProfile** | **string** | WorkspaceType is site, you should set profile name             WorkspaceType is teams, you should set profile id | [optional] 
 **WorkspaceType** | **WorkspaceArchivedType** | workspace type | [optional] 
 **IsSendCancelEmail** | **bool** |  | [optional] [default to false]
 **CancelEmailTemplateId** | **Guid** |  | [optional] 

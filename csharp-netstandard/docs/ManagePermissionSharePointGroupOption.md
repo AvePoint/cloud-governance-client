@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **IsAutoAcceptRequest** | **bool** |  | [optional] [default to false]
 **SendMembershipRequestEmailAddress** | **string** |  | [optional] 
 **GroupRequestAssignBy** | **AssignBy** |  | [optional] 
+**IsEnabelSPMemberWelcomeEmail** | **bool** |  | [optional] [default to false]
+**SpMemberWelcomeEmailTemplateId** | **Guid** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

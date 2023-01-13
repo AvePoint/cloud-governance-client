@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectId** | **String** |  | [optional] 
-**PolicyId** | **String** |  | [optional] 
 **TenantId** | **String** |  | [optional] 
 **GroupName** | **String** |  | [optional] 
 **Email** | **String** |  | [optional] 
@@ -29,8 +28,6 @@ Name | Type | Description | Notes
 **GroupObjectId** | **String** |  | [optional] 
 **NetworkId** | **String** |  | [optional] 
 **Sensitivity** | **String** |  | [optional] 
-**HasSubmitted** | **Boolean** |  | [optional] [default to $false]
-**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
@@ -40,6 +37,7 @@ Name | Type | Description | Notes
 **RenewalProfileId** | **String** |  | [optional] 
 **RenewalProfileName** | **String** |  | [optional] 
 **RenewalProfileDescription** | **String** |  | [optional] 
+**PolicyId** | **String** |  | [optional] 
 **PolicyName** | **String** |  | [optional] 
 **PolicyDescription** | **String** |  | [optional] 
 **ElectionProfileId** | **String** |  | [optional] 
@@ -58,13 +56,15 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
+**CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
+**HasSubmitted** | **Boolean** |  | [optional] [default to $false]
+**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
 - Prepare the resource
 ```powershell
 $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
- -PolicyId null `
  -TenantId null `
  -GroupName null `
  -Email null `
@@ -89,8 +89,6 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -GroupObjectId null `
  -NetworkId null `
  -Sensitivity null `
- -HasSubmitted null `
- -HasPendingApprovalTask null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `
@@ -100,6 +98,7 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -RenewalProfileId null `
  -RenewalProfileName null `
  -RenewalProfileDescription null `
+ -PolicyId null `
  -PolicyName null `
  -PolicyDescription null `
  -ElectionProfileId null `
@@ -117,7 +116,10 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -Metadatas null `
  -PrimaryContact null `
  -SecondaryContact null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -CreatedSource null `
+ -HasSubmitted null `
+ -HasPendingApprovalTask null
 ```
 
 - Convert the resource to JSON

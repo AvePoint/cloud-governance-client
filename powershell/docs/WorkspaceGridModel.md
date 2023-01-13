@@ -59,17 +59,19 @@ Name | Type | Description | Notes
 **SiteStatus** | [**TeamSiteStatus**](TeamSiteStatus.md) |  | [optional] 
 **SiteStatusDescription** | **String** |  | [optional] 
 **LockedBy** | [**LockedBy**](LockedBy.md) |  | [optional] 
+**LastSyncTime** | **System.DateTime** |  | [optional] 
 **LockedByDescription** | **String** |  | [optional] 
-**PhaseAssigneeDisplayNames** | **String** |  | [optional] 
-**PhaseAssignees** | **String** |  | [optional] 
-**PhaseProfileName** | **String** |  | [optional] 
-**PhaseProfileId** | **String** |  | [optional] 
+**CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
 **QuotaProfileName** | **String** |  | [optional] 
 **QuotaProfileId** | **String** |  | [optional] 
 **ExternalSharingProfileName** | **String** |  | [optional] 
 **ExternalSharingProfileId** | **String** |  | [optional] 
 **ElectionProfileName** | **String** |  | [optional] 
 **ElectionProfileId** | **String** |  | [optional] 
+**PhaseAssigneeDisplayNames** | **String** |  | [optional] 
+**PhaseAssignees** | **String** |  | [optional] 
+**PhaseProfileName** | **String** |  | [optional] 
+**PhaseProfileId** | **String** |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
 **RenewalDueDate** | **System.DateTime** |  | [optional] 
 **NextRenewalDate** | **System.DateTime** |  | [optional] 
@@ -137,17 +139,19 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -SiteStatus null `
  -SiteStatusDescription null `
  -LockedBy null `
+ -LastSyncTime null `
  -LockedByDescription null `
- -PhaseAssigneeDisplayNames null `
- -PhaseAssignees null `
- -PhaseProfileName null `
- -PhaseProfileId null `
+ -CreatedSource null `
  -QuotaProfileName null `
  -QuotaProfileId null `
  -ExternalSharingProfileName null `
  -ExternalSharingProfileId null `
  -ElectionProfileName null `
  -ElectionProfileId null `
+ -PhaseAssigneeDisplayNames null `
+ -PhaseAssignees null `
+ -PhaseProfileName null `
+ -PhaseProfileId null `
  -PhaseStartTime null `
  -RenewalDueDate null `
  -NextRenewalDate null `

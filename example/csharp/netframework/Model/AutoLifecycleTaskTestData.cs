@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetFramework
 {
-    public class SubmitAutoLifecycleTaskTestData
+    public class AutoLifecycleTaskTestData
     {
         public String TaskId { get; set; }
     }

@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **SendMembershipRequestEmailAddress** | **string** |  | [optional] 
 **IsTemporaryGroup** | **bool** |  | [optional] [default to false]
 **RoleID** | **List&lt;string&gt;** |  | [optional] 
+**IsEnabelSPMemberWelcomeEmail** | **bool** |  | [optional] [default to false]
+**SpMemberWelcomeEmailTemplateId** | **Guid** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

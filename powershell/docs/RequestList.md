@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **AssignedLoginName** | **String** |  | [optional] 
 **ServiceAdmin** | **String** |  | [optional] 
 **EnabledCopy** | **Boolean** |  | [optional] [default to $false]
+**Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 **QuestionnaireId** | **String** |  | [optional] 
 
 ## Examples
@@ -63,6 +64,7 @@ $RequestList = New-Cloud.Governance.ClientRequestList  -Id null `
  -AssignedLoginName null `
  -ServiceAdmin null `
  -EnabledCopy null `
+ -Metadata null `
  -QuestionnaireId null
 ```
 

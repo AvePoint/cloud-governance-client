@@ -32,7 +32,7 @@ Method | HTTP request | Description
 [**GetDeleteGroupRequest**](RequestsApi.md#getdeletegrouprequest) | **GET** /requests/deletegroup/{id} | get delete group request
 [**GetDeleteSiteRequest**](RequestsApi.md#getdeletesiterequest) | **GET** /requests/deletesite/{id} | get delete site request
 [**GetDeleteWebRequest**](RequestsApi.md#getdeletewebrequest) | **GET** /requests/deleteweb/{id} | get delete web request
-[**GetDynamicRequest**](RequestsApi.md#getdynamicrequest) | **GET** /requests/dynamic/{id} | get create group request
+[**GetDynamicRequest**](RequestsApi.md#getdynamicrequest) | **GET** /requests/dynamic/{id} | get dynamic request
 [**GetExtendGroupRequest**](RequestsApi.md#getextendgrouprequest) | **GET** /requests/extendgroup/{id} | get extend group request
 [**GetExtendSiteRequest**](RequestsApi.md#getextendsiterequest) | **GET** /requests/extendsite/{id} | get extend site request
 [**GetGrantPermissionRequest**](RequestsApi.md#getgrantpermissionrequest) | **GET** /requests/grantpermission/{id} | get grant permission request
@@ -72,7 +72,7 @@ Method | HTTP request | Description
 [**SubmitDeleteGroupRequest**](RequestsApi.md#submitdeletegrouprequest) | **POST** /requests/deletegroup | submit delete group request
 [**SubmitDeleteSiteRequest**](RequestsApi.md#submitdeletesiterequest) | **POST** /requests/deletesite | submit delete site request
 [**SubmitDeleteWebRequest**](RequestsApi.md#submitdeletewebrequest) | **POST** /requests/deleteweb | submit delete web request
-[**SubmitDynamicRequest**](RequestsApi.md#submitdynamicrequest) | **POST** /requests/dynamic | submit create group request
+[**SubmitDynamicRequest**](RequestsApi.md#submitdynamicrequest) | **POST** /requests/dynamic | submit dynamic request
 [**SubmitExtendGroupRequest**](RequestsApi.md#submitextendgrouprequest) | **POST** /requests/extendgroup | submit extend group request
 [**SubmitExtendSiteRequest**](RequestsApi.md#submitextendsiterequest) | **POST** /requests/extendsite | submit extend site request
 [**SubmitGrantPermissionRequest**](RequestsApi.md#submitgrantpermissionrequest) | **POST** /requests/grantpermission | get submit grant permission request
@@ -1983,7 +1983,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | CreateSiteRequest |  -  |
+| **200** | Success |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |
@@ -2409,7 +2409,7 @@ Name | Type | Description  | Notes
 # **GetDynamicRequest**
 > DynamicRequest GetDynamicRequest (Guid id)
 
-get create group request
+get dynamic request
 
 ### Example
 ```csharp
@@ -2444,7 +2444,7 @@ namespace Example
 
             try
             {
-                // get create group request
+                // get dynamic request
                 DynamicRequest result = apiInstance.GetDynamicRequest(id);
                 Debug.WriteLine(result);
             }
@@ -5317,7 +5317,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Newly created request id. |  -  |
+| **200** | Success |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |
@@ -5743,7 +5743,7 @@ Name | Type | Description  | Notes
 # **SubmitDynamicRequest**
 > Guid SubmitDynamicRequest (DynamicRequest dynamicRequest = null)
 
-submit create group request
+submit dynamic request
 
 ### Example
 ```csharp
@@ -5778,7 +5778,7 @@ namespace Example
 
             try
             {
-                // submit create group request
+                // submit dynamic request
                 Guid result = apiInstance.SubmitDynamicRequest(dynamicRequest);
                 Debug.WriteLine(result);
             }

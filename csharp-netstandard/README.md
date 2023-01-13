@@ -82,15 +82,19 @@ Class | Method | HTTP request | Description
 *MetadataAdminApi* | [**GetAllMetadata**](docs/MetadataAdminApi.md#getallmetadata) | **GET** /admin/metadata | get all metadata
 *MetadataAdminApi* | [**GetSingleMetadataById**](docs/MetadataAdminApi.md#getsinglemetadatabyid) | **GET** /admin/metadata/{id} | Get metadata by id
 *Office365Api* | [**CreateSecurityGroup**](docs/Office365Api.md#createsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
+*Office365Api* | [**GetAllSiteDesigns**](docs/Office365Api.md#getallsitedesigns) | **GET** /office365/allsitedesigns | get all site designs by site url
 *Office365Api* | [**GetGroupAllMembersByGroupValue**](docs/Office365Api.md#getgroupallmembersbygroupvalue) | **GET** /office365/groups/allmembers | get group members by group email
 *Office365Api* | [**GetGroupMembers**](docs/Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 *Office365Api* | [**GetGroupOwners**](docs/Office365Api.md#getgroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
+*Office365Api* | [**GetHubSiteUrlsByUrl**](docs/Office365Api.md#gethubsiteurlsbyurl) | **GET** /office365/hubsiteurls | get all hubsite urls from site's tenant
 *Office365Api* | [**GetHubSitesByUrl**](docs/Office365Api.md#gethubsitesbyurl) | **GET** /office365/hubsites | get all hubsites from site's tenant
+*Office365Api* | [**GetOfficeSiteTemplates**](docs/Office365Api.md#getofficesitetemplates) | **GET** /office365/{officeTenantId}/sites/templates/{languageId} | get site templates with language code identifier
 *Office365Api* | [**GetOwnedTeams**](docs/Office365Api.md#getownedteams) | **GET** /office365/teams/my | get all teams that owner is curernt user
 *Office365Api* | [**GetPermissions**](docs/Office365Api.md#getpermissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
 *Office365Api* | [**GetRoleAssignment**](docs/Office365Api.md#getroleassignment) | **GET** /office365/roleassignment | get site permimssion role assignment
 *Office365Api* | [**GetSiteDesigns**](docs/Office365Api.md#getsitedesigns) | **GET** /office365/sitedesigns | get site designs by site url
 *Office365Api* | [**GetSitePermissionLevels**](docs/Office365Api.md#getsitepermissionlevels) | **GET** /office365/sites/permissionlevels | get site permission levels
+*Office365Api* | [**GetSiteSensitivityLabels**](docs/Office365Api.md#getsitesensitivitylabels) | **GET** /office365/sites/sensitivitylabelsetting | get site sharePoint groups
 *Office365Api* | [**GetSiteSharePointGroups**](docs/Office365Api.md#getsitesharepointgroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 *Office365Api* | [**GetSiteStatus**](docs/Office365Api.md#getsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 *Office365Api* | [**GetSiteTemplates**](docs/Office365Api.md#getsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
@@ -134,7 +138,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetDeleteGroupRequest**](docs/RequestsApi.md#getdeletegrouprequest) | **GET** /requests/deletegroup/{id} | get delete group request
 *RequestsApi* | [**GetDeleteSiteRequest**](docs/RequestsApi.md#getdeletesiterequest) | **GET** /requests/deletesite/{id} | get delete site request
 *RequestsApi* | [**GetDeleteWebRequest**](docs/RequestsApi.md#getdeletewebrequest) | **GET** /requests/deleteweb/{id} | get delete web request
-*RequestsApi* | [**GetDynamicRequest**](docs/RequestsApi.md#getdynamicrequest) | **GET** /requests/dynamic/{id} | get create group request
+*RequestsApi* | [**GetDynamicRequest**](docs/RequestsApi.md#getdynamicrequest) | **GET** /requests/dynamic/{id} | get dynamic request
 *RequestsApi* | [**GetExtendGroupRequest**](docs/RequestsApi.md#getextendgrouprequest) | **GET** /requests/extendgroup/{id} | get extend group request
 *RequestsApi* | [**GetExtendSiteRequest**](docs/RequestsApi.md#getextendsiterequest) | **GET** /requests/extendsite/{id} | get extend site request
 *RequestsApi* | [**GetGrantPermissionRequest**](docs/RequestsApi.md#getgrantpermissionrequest) | **GET** /requests/grantpermission/{id} | get grant permission request
@@ -174,7 +178,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**SubmitDeleteGroupRequest**](docs/RequestsApi.md#submitdeletegrouprequest) | **POST** /requests/deletegroup | submit delete group request
 *RequestsApi* | [**SubmitDeleteSiteRequest**](docs/RequestsApi.md#submitdeletesiterequest) | **POST** /requests/deletesite | submit delete site request
 *RequestsApi* | [**SubmitDeleteWebRequest**](docs/RequestsApi.md#submitdeletewebrequest) | **POST** /requests/deleteweb | submit delete web request
-*RequestsApi* | [**SubmitDynamicRequest**](docs/RequestsApi.md#submitdynamicrequest) | **POST** /requests/dynamic | submit create group request
+*RequestsApi* | [**SubmitDynamicRequest**](docs/RequestsApi.md#submitdynamicrequest) | **POST** /requests/dynamic | submit dynamic request
 *RequestsApi* | [**SubmitExtendGroupRequest**](docs/RequestsApi.md#submitextendgrouprequest) | **POST** /requests/extendgroup | submit extend group request
 *RequestsApi* | [**SubmitExtendSiteRequest**](docs/RequestsApi.md#submitextendsiterequest) | **POST** /requests/extendsite | submit extend site request
 *RequestsApi* | [**SubmitGrantPermissionRequest**](docs/RequestsApi.md#submitgrantpermissionrequest) | **POST** /requests/grantpermission | get submit grant permission request
@@ -507,6 +511,7 @@ Class | Method | HTTP request | Description
  - [Model.GrantPermissionServiceDurationSettings](docs/GrantPermissionServiceDurationSettings.md)
  - [Model.GrantPermissionServicePermissionSettings](docs/GrantPermissionServicePermissionSettings.md)
  - [Model.GrantPermissionUrlValidationResult](docs/GrantPermissionUrlValidationResult.md)
+ - [Model.GroupClassificationModel](docs/GroupClassificationModel.md)
  - [Model.GroupConstructureRule](docs/GroupConstructureRule.md)
  - [Model.GroupEnableSharingStatus](docs/GroupEnableSharingStatus.md)
  - [Model.GroupIdConstructureSettings](docs/GroupIdConstructureSettings.md)
@@ -541,6 +546,7 @@ Class | Method | HTTP request | Description
  - [Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
  - [Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Model.HubSiteType](docs/HubSiteType.md)
+ - [Model.HubSiteUrl](docs/HubSiteUrl.md)
  - [Model.InlineResponse200](docs/InlineResponse200.md)
  - [Model.InsightsStatus](docs/InsightsStatus.md)
  - [Model.IntModel](docs/IntModel.md)
@@ -593,6 +599,7 @@ Class | Method | HTTP request | Description
  - [Model.NodeType](docs/NodeType.md)
  - [Model.ObjectPermissionManagementModel](docs/ObjectPermissionManagementModel.md)
  - [Model.ObjectValidateResult](docs/ObjectValidateResult.md)
+ - [Model.Office365SiteSettingModel](docs/Office365SiteSettingModel.md)
  - [Model.OldMetadataGridModel](docs/OldMetadataGridModel.md)
  - [Model.OldMetadataGridModelPageResult](docs/OldMetadataGridModelPageResult.md)
  - [Model.OneTimeRenewalOption](docs/OneTimeRenewalOption.md)
@@ -650,6 +657,7 @@ Class | Method | HTTP request | Description
  - [Model.SingleLineOrMultipleLineMetadataSettings](docs/SingleLineOrMultipleLineMetadataSettings.md)
  - [Model.SiteConstructTitleType](docs/SiteConstructTitleType.md)
  - [Model.SiteConstructUrlType](docs/SiteConstructUrlType.md)
+ - [Model.SiteDesignModel](docs/SiteDesignModel.md)
  - [Model.SiteLeasePeriodRequestSettings](docs/SiteLeasePeriodRequestSettings.md)
  - [Model.SiteLeasePeriodServiceSettings](docs/SiteLeasePeriodServiceSettings.md)
  - [Model.SiteLifecycleActionType](docs/SiteLifecycleActionType.md)
@@ -725,6 +733,7 @@ Class | Method | HTTP request | Description
  - [Model.WorksapceOngoingTasksModel](docs/WorksapceOngoingTasksModel.md)
  - [Model.WorkspaceActionParameter](docs/WorkspaceActionParameter.md)
  - [Model.WorkspaceArchivedType](docs/WorkspaceArchivedType.md)
+ - [Model.WorkspaceCreatedSourceType](docs/WorkspaceCreatedSourceType.md)
  - [Model.WorkspaceGridModel](docs/WorkspaceGridModel.md)
  - [Model.WorkspaceGridModelPageResult](docs/WorkspaceGridModelPageResult.md)
  - [Model.WorkspaceIdTypeModel](docs/WorkspaceIdTypeModel.md)

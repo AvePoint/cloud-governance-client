@@ -5,15 +5,19 @@ All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**New-ACGSecurityGroup**](Office365Api.md#new-acgsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
+[**Get-ACGAllSiteDesigns**](Office365Api.md#get-acgallsitedesigns) | **GET** /office365/allsitedesigns | get all site designs by site url
 [**Get-GroupAllMembersByGroupValue**](Office365Api.md#Get-GroupAllMembersByGroupValue) | **GET** /office365/groups/allmembers | get group members by group email
 [**Get-ACGGroupMembers**](Office365Api.md#get-acggroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 [**Get-ACGGroupOwners**](Office365Api.md#get-acggroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
+[**Get-HubSiteUrlsByUrl**](Office365Api.md#Get-HubSiteUrlsByUrl) | **GET** /office365/hubsiteurls | get all hubsite urls from site&#39;s tenant
 [**Get-HubSitesByUrl**](Office365Api.md#Get-HubSitesByUrl) | **GET** /office365/hubsites | get all hubsites from site&#39;s tenant
+[**Get-OfficeSiteTemplates**](Office365Api.md#get-officesitetemplates) | **GET** /office365/{officeTenantId}/sites/templates/{languageId} | get site templates with language code identifier
 [**Get-OwnedTeams**](Office365Api.md#Get-OwnedTeams) | **GET** /office365/teams/my | get all teams that owner is curernt user
 [**Get-ACGPermissions**](Office365Api.md#get-acgpermissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
 [**Get-ACGRoleAssignment**](Office365Api.md#get-acgroleassignment) | **GET** /office365/roleassignment | get site permimssion role assignment
 [**Get-ACGSiteDesigns**](Office365Api.md#get-acgsitedesigns) | **GET** /office365/sitedesigns | get site designs by site url
 [**Get-SitePermissionLevels**](Office365Api.md#Get-SitePermissionLevels) | **GET** /office365/sites/permissionlevels | get site permission levels
+[**Get-SiteSensitivityLabels**](Office365Api.md#Get-SiteSensitivityLabels) | **GET** /office365/sites/sensitivitylabelsetting | get site sharePoint groups
 [**Get-SiteSharePointGroups**](Office365Api.md#Get-SiteSharePointGroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 [**Get-ACGSiteStatus**](Office365Api.md#get-acgsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 [**Get-ACGSiteTemplates**](Office365Api.md#get-acgsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
@@ -77,6 +81,64 @@ void (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="get-acgallsitedesigns"></a>
+# **Get-ACGAllSiteDesigns**
+> SiteDesignModel[] Get-ACGAllSiteDesigns<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrl] <String><br>
+
+get all site designs by site url
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$SiteUrl = "SiteUrl_example" # String | 
+
+# get all site designs by site url
+try {
+     $Result = Get-ACGAllSiteDesigns -SiteUrl $SiteUrl
+} catch {
+    Write-Host ("Exception occured when calling Get-ACGAllSiteDesigns: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **SiteUrl** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**SiteDesignModel[]**](SiteDesignModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -284,6 +346,64 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-HubSiteUrlsByUrl"></a>
+# **Get-HubSiteUrlsByUrl**
+> HubSiteUrl[] Get-HubSiteUrlsByUrl<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrl] <String><br>
+
+get all hubsite urls from site's tenant
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$SiteUrl = "SiteUrl_example" # String | any site url in your tenant
+
+# get all hubsite urls from site's tenant
+try {
+     $Result = Get-HubSiteUrlsByUrl -SiteUrl $SiteUrl
+} catch {
+    Write-Host ("Exception occured when calling Get-HubSiteUrlsByUrl: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **SiteUrl** | **String**| any site url in your tenant | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**HubSiteUrl[]**](HubSiteUrl.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-HubSitesByUrl"></a>
 # **Get-HubSitesByUrl**
 > GuidModel[] Get-HubSitesByUrl<br>
@@ -330,6 +450,67 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**GuidModel[]**](GuidModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="get-officesitetemplates"></a>
+# **Get-OfficeSiteTemplates**
+> SiteTemplate[] Get-OfficeSiteTemplates<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-OfficeTenantId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-LanguageId] <Int32><br>
+
+get site templates with language code identifier
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$OfficeTenantId = "OfficeTenantId_example" # String | 
+$LanguageId = 987 # Int32 |  (default to 0)
+
+# get site templates with language code identifier
+try {
+     $Result = Get-OfficeSiteTemplates -OfficeTenantId $OfficeTenantId -LanguageId $LanguageId
+} catch {
+    Write-Host ("Exception occured when calling Get-OfficeSiteTemplates: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **OfficeTenantId** | **String**|  | 
+ **LanguageId** | **Int32**|  | [default to 0]
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**SiteTemplate[]**](SiteTemplate.md)
 
 ### Authorization
 
@@ -618,6 +799,64 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**PermissionLevel[]**](PermissionLevel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-SiteSensitivityLabels"></a>
+# **Get-SiteSensitivityLabels**
+> Office365SiteSettingModel Get-SiteSensitivityLabels<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Uri] <String><br>
+
+get site sharePoint groups
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Uri = "Uri_example" # String | 
+
+# get site sharePoint groups
+try {
+     $Result = Get-SiteSensitivityLabels -Uri $Uri
+} catch {
+    Write-Host ("Exception occured when calling Get-SiteSensitivityLabels: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Uri** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**Office365SiteSettingModel**](Office365SiteSettingModel.md)
 
 ### Authorization
 

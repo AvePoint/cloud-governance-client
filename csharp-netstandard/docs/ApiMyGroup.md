@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectId** | **string** |  | [optional] 
-**PolicyId** | **Guid** |  | [optional] 
 **TenantId** | **Guid** |  | [optional] 
 **GroupName** | **string** |  | [optional] 
 **Email** | **string** |  | [optional] 
@@ -29,8 +28,6 @@ Name | Type | Description | Notes
 **GroupObjectId** | **string** |  | [optional] 
 **NetworkId** | **string** |  | [optional] 
 **Sensitivity** | **string** |  | [optional] 
-**HasSubmitted** | **bool** |  | [optional] [default to false]
-**HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
 **Id** | **Guid** |  | [optional] 
 **Phase** | **AutoImportPhase** |  | [optional] 
 **PhaseStartTime** | **DateTime?** |  | [optional] 
@@ -40,6 +37,7 @@ Name | Type | Description | Notes
 **RenewalProfileId** | **Guid?** |  | [optional] 
 **RenewalProfileName** | **string** |  | [optional] 
 **RenewalProfileDescription** | **string** |  | [optional] 
+**PolicyId** | **Guid** |  | [optional] 
 **PolicyName** | **string** |  | [optional] 
 **PolicyDescription** | **string** |  | [optional] 
 **ElectionProfileId** | **Guid?** |  | [optional] 
@@ -58,6 +56,9 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
+**CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
+**HasSubmitted** | **bool** |  | [optional] [default to false]
+**HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

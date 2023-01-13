@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 5.9.1
+- SDK version: 6.1.1
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -29,15 +29,19 @@ Class | Method | HTTP request | Description
 *MetadataAdminApi* | [**Get-AllMetadata**](docs/MetadataAdminApi.md#Get-AllMetadata) | **GET** /admin/metadata | get all metadata
 *MetadataAdminApi* | [**Get-SingleMetadataById**](docs/MetadataAdminApi.md#Get-SingleMetadataById) | **GET** /admin/metadata/{id} | Get metadata by id
 *Office365Api* | [**New-ACGSecurityGroup**](docs/Office365Api.md#new-acgsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
+*Office365Api* | [**Get-ACGAllSiteDesigns**](docs/Office365Api.md#get-acgallsitedesigns) | **GET** /office365/allsitedesigns | get all site designs by site url
 *Office365Api* | [**Get-GroupAllMembersByGroupValue**](docs/Office365Api.md#Get-GroupAllMembersByGroupValue) | **GET** /office365/groups/allmembers | get group members by group email
 *Office365Api* | [**Get-ACGGroupMembers**](docs/Office365Api.md#get-acggroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 *Office365Api* | [**Get-ACGGroupOwners**](docs/Office365Api.md#get-acggroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
+*Office365Api* | [**Get-HubSiteUrlsByUrl**](docs/Office365Api.md#Get-HubSiteUrlsByUrl) | **GET** /office365/hubsiteurls | get all hubsite urls from site's tenant
 *Office365Api* | [**Get-HubSitesByUrl**](docs/Office365Api.md#Get-HubSitesByUrl) | **GET** /office365/hubsites | get all hubsites from site's tenant
+*Office365Api* | [**Get-OfficeSiteTemplates**](docs/Office365Api.md#get-officesitetemplates) | **GET** /office365/{officeTenantId}/sites/templates/{languageId} | get site templates with language code identifier
 *Office365Api* | [**Get-OwnedTeams**](docs/Office365Api.md#Get-OwnedTeams) | **GET** /office365/teams/my | get all teams that owner is curernt user
 *Office365Api* | [**Get-ACGPermissions**](docs/Office365Api.md#get-acgpermissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
 *Office365Api* | [**Get-ACGRoleAssignment**](docs/Office365Api.md#get-acgroleassignment) | **GET** /office365/roleassignment | get site permimssion role assignment
 *Office365Api* | [**Get-ACGSiteDesigns**](docs/Office365Api.md#get-acgsitedesigns) | **GET** /office365/sitedesigns | get site designs by site url
 *Office365Api* | [**Get-SitePermissionLevels**](docs/Office365Api.md#Get-SitePermissionLevels) | **GET** /office365/sites/permissionlevels | get site permission levels
+*Office365Api* | [**Get-SiteSensitivityLabels**](docs/Office365Api.md#Get-SiteSensitivityLabels) | **GET** /office365/sites/sensitivitylabelsetting | get site sharePoint groups
 *Office365Api* | [**Get-SiteSharePointGroups**](docs/Office365Api.md#Get-SiteSharePointGroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 *Office365Api* | [**Get-ACGSiteStatus**](docs/Office365Api.md#get-acgsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 *Office365Api* | [**Get-ACGSiteTemplates**](docs/Office365Api.md#get-acgsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
@@ -81,7 +85,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Get-DeleteGroupRequest**](docs/RequestsApi.md#Get-DeleteGroupRequest) | **GET** /requests/deletegroup/{id} | get delete group request
 *RequestsApi* | [**Get-DeleteSiteRequest**](docs/RequestsApi.md#Get-DeleteSiteRequest) | **GET** /requests/deletesite/{id} | get delete site request
 *RequestsApi* | [**Get-DeleteWebRequest**](docs/RequestsApi.md#Get-DeleteWebRequest) | **GET** /requests/deleteweb/{id} | get delete web request
-*RequestsApi* | [**Get-DynamicRequest**](docs/RequestsApi.md#Get-DynamicRequest) | **GET** /requests/dynamic/{id} | get create group request
+*RequestsApi* | [**Get-DynamicRequest**](docs/RequestsApi.md#Get-DynamicRequest) | **GET** /requests/dynamic/{id} | get dynamic request
 *RequestsApi* | [**Get-ExtendGroupRequest**](docs/RequestsApi.md#Get-ExtendGroupRequest) | **GET** /requests/extendgroup/{id} | get extend group request
 *RequestsApi* | [**Get-ExtendSiteRequest**](docs/RequestsApi.md#Get-ExtendSiteRequest) | **GET** /requests/extendsite/{id} | get extend site request
 *RequestsApi* | [**Get-GrantPermissionRequest**](docs/RequestsApi.md#Get-GrantPermissionRequest) | **GET** /requests/grantpermission/{id} | get grant permission request
@@ -121,7 +125,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Submit-DeleteGroupRequest**](docs/RequestsApi.md#Submit-DeleteGroupRequest) | **POST** /requests/deletegroup | submit delete group request
 *RequestsApi* | [**Submit-DeleteSiteRequest**](docs/RequestsApi.md#Submit-DeleteSiteRequest) | **POST** /requests/deletesite | submit delete site request
 *RequestsApi* | [**Submit-DeleteWebRequest**](docs/RequestsApi.md#Submit-DeleteWebRequest) | **POST** /requests/deleteweb | submit delete web request
-*RequestsApi* | [**Submit-DynamicRequest**](docs/RequestsApi.md#Submit-DynamicRequest) | **POST** /requests/dynamic | submit create group request
+*RequestsApi* | [**Submit-DynamicRequest**](docs/RequestsApi.md#Submit-DynamicRequest) | **POST** /requests/dynamic | submit dynamic request
 *RequestsApi* | [**Submit-ExtendGroupRequest**](docs/RequestsApi.md#Submit-ExtendGroupRequest) | **POST** /requests/extendgroup | submit extend group request
 *RequestsApi* | [**Submit-ExtendSiteRequest**](docs/RequestsApi.md#Submit-ExtendSiteRequest) | **POST** /requests/extendsite | submit extend site request
 *RequestsApi* | [**Submit-GrantPermissionRequest**](docs/RequestsApi.md#Submit-GrantPermissionRequest) | **POST** /requests/grantpermission | get submit grant permission request
@@ -453,6 +457,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.GrantPermissionServiceDurationSettings](docs/GrantPermissionServiceDurationSettings.md)
  - [Cloud.Governance.Client\Model.GrantPermissionServicePermissionSettings](docs/GrantPermissionServicePermissionSettings.md)
  - [Cloud.Governance.Client\Model.GrantPermissionUrlValidationResult](docs/GrantPermissionUrlValidationResult.md)
+ - [Cloud.Governance.Client\Model.GroupClassificationModel](docs/GroupClassificationModel.md)
  - [Cloud.Governance.Client\Model.GroupConstructureRule](docs/GroupConstructureRule.md)
  - [Cloud.Governance.Client\Model.GroupEnableSharingStatus](docs/GroupEnableSharingStatus.md)
  - [Cloud.Governance.Client\Model.GroupIdConstructureSettings](docs/GroupIdConstructureSettings.md)
@@ -487,6 +492,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
  - [Cloud.Governance.Client\Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Cloud.Governance.Client\Model.HubSiteType](docs/HubSiteType.md)
+ - [Cloud.Governance.Client\Model.HubSiteUrl](docs/HubSiteUrl.md)
  - [Cloud.Governance.Client\Model.InlineResponse200](docs/InlineResponse200.md)
  - [Cloud.Governance.Client\Model.InsightsStatus](docs/InsightsStatus.md)
  - [Cloud.Governance.Client\Model.IntModel](docs/IntModel.md)
@@ -539,6 +545,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.NodeType](docs/NodeType.md)
  - [Cloud.Governance.Client\Model.ObjectPermissionManagementModel](docs/ObjectPermissionManagementModel.md)
  - [Cloud.Governance.Client\Model.ObjectValidateResult](docs/ObjectValidateResult.md)
+ - [Cloud.Governance.Client\Model.Office365SiteSettingModel](docs/Office365SiteSettingModel.md)
  - [Cloud.Governance.Client\Model.OldMetadataGridModel](docs/OldMetadataGridModel.md)
  - [Cloud.Governance.Client\Model.OldMetadataGridModelPageResult](docs/OldMetadataGridModelPageResult.md)
  - [Cloud.Governance.Client\Model.OneTimeRenewalOption](docs/OneTimeRenewalOption.md)
@@ -596,6 +603,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.SingleLineOrMultipleLineMetadataSettings](docs/SingleLineOrMultipleLineMetadataSettings.md)
  - [Cloud.Governance.Client\Model.SiteConstructTitleType](docs/SiteConstructTitleType.md)
  - [Cloud.Governance.Client\Model.SiteConstructUrlType](docs/SiteConstructUrlType.md)
+ - [Cloud.Governance.Client\Model.SiteDesignModel](docs/SiteDesignModel.md)
  - [Cloud.Governance.Client\Model.SiteLeasePeriodRequestSettings](docs/SiteLeasePeriodRequestSettings.md)
  - [Cloud.Governance.Client\Model.SiteLeasePeriodServiceSettings](docs/SiteLeasePeriodServiceSettings.md)
  - [Cloud.Governance.Client\Model.SiteLifecycleActionType](docs/SiteLifecycleActionType.md)
@@ -671,6 +679,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.WorksapceOngoingTasksModel](docs/WorksapceOngoingTasksModel.md)
  - [Cloud.Governance.Client\Model.WorkspaceActionParameter](docs/WorkspaceActionParameter.md)
  - [Cloud.Governance.Client\Model.WorkspaceArchivedType](docs/WorkspaceArchivedType.md)
+ - [Cloud.Governance.Client\Model.WorkspaceCreatedSourceType](docs/WorkspaceCreatedSourceType.md)
  - [Cloud.Governance.Client\Model.WorkspaceGridModel](docs/WorkspaceGridModel.md)
  - [Cloud.Governance.Client\Model.WorkspaceGridModelPageResult](docs/WorkspaceGridModelPageResult.md)
  - [Cloud.Governance.Client\Model.WorkspaceIdTypeModel](docs/WorkspaceIdTypeModel.md)

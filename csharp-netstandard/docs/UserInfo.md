@@ -34,6 +34,8 @@ Name | Type | Description | Notes
 **ProxyAddresses** | **List&lt;string&gt;** |  | [optional] 
 **PrincipalType** | **PrincipalType** |  | [optional] 
 **Inviter** | **string** |  | [optional] 
+**CreatedTime** | **DateTime?** |  | [optional] 
+**LastModifiedTime** | **DateTime?** |  | [optional] 
 **Id** | **int** |  | [optional] [default to 0]
 **DisplayName** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 

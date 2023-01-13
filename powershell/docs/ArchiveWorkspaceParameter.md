@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArchiveProfile** | **String** | WorkspaceType is site, you should set profile name  WorkspaceType is teams, you should set profile id | [optional] 
+**ArchiveProfile** | **String** | WorkspaceType is site, you should set profile name             WorkspaceType is teams, you should set profile id | [optional] 
 **WorkspaceType** | [**WorkspaceArchivedType**](WorkspaceArchivedType.md) | workspace type | [optional] 
 **IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
 **CancelEmailTemplateId** | **String** |  | [optional] 

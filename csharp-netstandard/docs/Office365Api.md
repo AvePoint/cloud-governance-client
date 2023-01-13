@@ -5,15 +5,19 @@ All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateSecurityGroup**](Office365Api.md#createsecuritygroup) | **POST** /office365/securitygroups | Create mail-enabled security group
+[**GetAllSiteDesigns**](Office365Api.md#getallsitedesigns) | **GET** /office365/allsitedesigns | get all site designs by site url
 [**GetGroupAllMembersByGroupValue**](Office365Api.md#getgroupallmembersbygroupvalue) | **GET** /office365/groups/allmembers | get group members by group email
 [**GetGroupMembers**](Office365Api.md#getgroupmembers) | **GET** /office365/groups/{email}/memberswithoutowner | get group members without owners by group email
 [**GetGroupOwners**](Office365Api.md#getgroupowners) | **GET** /office365/groups/{email}/owners | get group owners by group email
+[**GetHubSiteUrlsByUrl**](Office365Api.md#gethubsiteurlsbyurl) | **GET** /office365/hubsiteurls | get all hubsite urls from site&#39;s tenant
 [**GetHubSitesByUrl**](Office365Api.md#gethubsitesbyurl) | **GET** /office365/hubsites | get all hubsites from site&#39;s tenant
+[**GetOfficeSiteTemplates**](Office365Api.md#getofficesitetemplates) | **GET** /office365/{officeTenantId}/sites/templates/{languageId} | get site templates with language code identifier
 [**GetOwnedTeams**](Office365Api.md#getownedteams) | **GET** /office365/teams/my | get all teams that owner is curernt user
 [**GetPermissions**](Office365Api.md#getpermissions) | **GET** /office365/permissions | get web permissions for creating list request by web url
 [**GetRoleAssignment**](Office365Api.md#getroleassignment) | **GET** /office365/roleassignment | get site permimssion role assignment
 [**GetSiteDesigns**](Office365Api.md#getsitedesigns) | **GET** /office365/sitedesigns | get site designs by site url
 [**GetSitePermissionLevels**](Office365Api.md#getsitepermissionlevels) | **GET** /office365/sites/permissionlevels | get site permission levels
+[**GetSiteSensitivityLabels**](Office365Api.md#getsitesensitivitylabels) | **GET** /office365/sites/sensitivitylabelsetting | get site sharePoint groups
 [**GetSiteSharePointGroups**](Office365Api.md#getsitesharepointgroups) | **GET** /office365/sites/sharepointgroups | get site sharePoint groups
 [**GetSiteStatus**](Office365Api.md#getsitestatus) | **GET** /office365/sites/status | check site collection status by full url
 [**GetSiteTemplates**](Office365Api.md#getsitetemplates) | **GET** /office365/sites/templates/{languageid} | get site templates with language code identifier
@@ -93,6 +97,89 @@ void (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getallsitedesigns"></a>
+# **GetAllSiteDesigns**
+> List&lt;SiteDesignModel&gt; GetAllSiteDesigns (string siteUrl)
+
+get all site designs by site url
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetAllSiteDesignsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
+            var siteUrl = siteUrl_example;  // string | 
+
+            try
+            {
+                // get all site designs by site url
+                List<SiteDesignModel> result = apiInstance.GetAllSiteDesigns(siteUrl);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Office365Api.GetAllSiteDesigns: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **siteUrl** | **string**|  | 
+
+### Return type
+
+[**List&lt;SiteDesignModel&gt;**](SiteDesignModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -373,6 +460,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="gethubsiteurlsbyurl"></a>
+# **GetHubSiteUrlsByUrl**
+> List&lt;HubSiteUrl&gt; GetHubSiteUrlsByUrl (string siteUrl)
+
+get all hubsite urls from site's tenant
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetHubSiteUrlsByUrlExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
+            var siteUrl = siteUrl_example;  // string | any site url in your tenant
+
+            try
+            {
+                // get all hubsite urls from site's tenant
+                List<HubSiteUrl> result = apiInstance.GetHubSiteUrlsByUrl(siteUrl);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Office365Api.GetHubSiteUrlsByUrl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **siteUrl** | **string**| any site url in your tenant | 
+
+### Return type
+
+[**List&lt;HubSiteUrl&gt;**](HubSiteUrl.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="gethubsitesbyurl"></a>
 # **GetHubSitesByUrl**
 > List&lt;GuidModel&gt; GetHubSitesByUrl (string siteUrl)
@@ -436,6 +606,91 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;GuidModel&gt;**](GuidModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getofficesitetemplates"></a>
+# **GetOfficeSiteTemplates**
+> List&lt;SiteTemplate&gt; GetOfficeSiteTemplates (string officeTenantId, int languageId)
+
+get site templates with language code identifier
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetOfficeSiteTemplatesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
+            var officeTenantId = officeTenantId_example;  // string | 
+            var languageId = 56;  // int |  (default to 0)
+
+            try
+            {
+                // get site templates with language code identifier
+                List<SiteTemplate> result = apiInstance.GetOfficeSiteTemplates(officeTenantId, languageId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Office365Api.GetOfficeSiteTemplates: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **officeTenantId** | **string**|  | 
+ **languageId** | **int**|  | [default to 0]
+
+### Return type
+
+[**List&lt;SiteTemplate&gt;**](SiteTemplate.md)
 
 ### Authorization
 
@@ -869,6 +1124,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getsitesensitivitylabels"></a>
+# **GetSiteSensitivityLabels**
+> Office365SiteSettingModel GetSiteSensitivityLabels (string uri)
+
+get site sharePoint groups
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetSiteSensitivityLabelsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new Office365Api(config);
+
+            var uri = uri_example;  // string | 
+
+            try
+            {
+                // get site sharePoint groups
+                Office365SiteSettingModel result = apiInstance.GetSiteSensitivityLabels(uri);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling Office365Api.GetSiteSensitivityLabels: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uri** | **string**|  | 
+
+### Return type
+
+[**Office365SiteSettingModel**](Office365SiteSettingModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getsitesharepointgroups"></a>
 # **GetSiteSharePointGroups**
 > List&lt;SPGroup&gt; GetSiteSharePointGroups (string uri)
@@ -1280,7 +1618,7 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** |  |  -  |
+| **200** | Success |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |

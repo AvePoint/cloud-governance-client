@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **RenewalProfileId** | **Guid?** |  | [optional] 
 **RenewalProfileName** | **string** |  | [optional] 
 **RenewalProfileDescription** | **string** |  | [optional] 
+**PolicyId** | **Guid** |  | [optional] 
 **PolicyName** | **string** |  | [optional] 
 **PolicyDescription** | **string** |  | [optional] 
 **ElectionProfileId** | **Guid?** |  | [optional] 
@@ -46,6 +47,9 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
+**CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
+**HasSubmitted** | **bool** |  | [optional] [default to false]
+**HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
