@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 6.1.1
+- SDK version: 6.3.1
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -239,7 +239,9 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**Resolve-ACGUsers**](docs/UsersApi.md#resolve-acgusers) | **GET** /users/resolve | resolve users
 *UsersApi* | [**Search-ACGUsers**](docs/UsersApi.md#search-acgusers) | **GET** /users/search | search users
 *WorkspaceApi* | [**Get-GroupMetadata**](docs/WorkspaceApi.md#Get-GroupMetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
+*WorkspaceApi* | [**Get-MyExchangeResourceInformation**](docs/WorkspaceApi.md#Get-MyExchangeResourceInformation) | **GET** /workspace/exchangeresource/{id} | 
 *WorkspaceApi* | [**Get-MyGroupInformation**](docs/WorkspaceApi.md#Get-MyGroupInformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
+*WorkspaceApi* | [**Get-MySharedMailboxInformation**](docs/WorkspaceApi.md#Get-MySharedMailboxInformation) | **GET** /workspace/sharedmailbox/{id} | 
 *WorkspaceApi* | [**Get-MySiteInformation**](docs/WorkspaceApi.md#Get-MySiteInformation) | **GET** /workspace/sites/{id} | get site information
 *WorkspaceApi* | [**Get-SiteMetadata**](docs/WorkspaceApi.md#Get-SiteMetadata) | **GET** /workspace/sites/metadata | get site metadata
 *WorkspaceApi* | [**Get-WorkspaceItems**](docs/WorkspaceApi.md#Get-WorkspaceItems) | **GET** /workspace/my | get my workspace items
@@ -429,6 +431,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ElectionContact](docs/ElectionContact.md)
  - [Cloud.Governance.Client\Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Cloud.Governance.Client\Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
+ - [Cloud.Governance.Client\Model.ExchangeResourceStatus](docs/ExchangeResourceStatus.md)
  - [Cloud.Governance.Client\Model.ExecutionModel](docs/ExecutionModel.md)
  - [Cloud.Governance.Client\Model.ExecutionParameter](docs/ExecutionParameter.md)
  - [Cloud.Governance.Client\Model.ExpirationType](docs/ExpirationType.md)
@@ -477,6 +480,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.GroupPolicySubType](docs/GroupPolicySubType.md)
  - [Cloud.Governance.Client\Model.GroupRestrictionType](docs/GroupRestrictionType.md)
  - [Cloud.Governance.Client\Model.GroupSettingModel](docs/GroupSettingModel.md)
+ - [Cloud.Governance.Client\Model.GroupStatus](docs/GroupStatus.md)
  - [Cloud.Governance.Client\Model.GroupUser](docs/GroupUser.md)
  - [Cloud.Governance.Client\Model.GroupValidationParameter](docs/GroupValidationParameter.md)
  - [Cloud.Governance.Client\Model.GuestUserGridModel](docs/GuestUserGridModel.md)
@@ -540,6 +544,8 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.MultiGeoControlMode](docs/MultiGeoControlMode.md)
  - [Cloud.Governance.Client\Model.MultiGeoSerivceSetting](docs/MultiGeoSerivceSetting.md)
  - [Cloud.Governance.Client\Model.MultiGeoSetting](docs/MultiGeoSetting.md)
+ - [Cloud.Governance.Client\Model.MyExchangeResource](docs/MyExchangeResource.md)
+ - [Cloud.Governance.Client\Model.MySharedMailbox](docs/MySharedMailbox.md)
  - [Cloud.Governance.Client\Model.MySite](docs/MySite.md)
  - [Cloud.Governance.Client\Model.MySiteType](docs/MySiteType.md)
  - [Cloud.Governance.Client\Model.NodeType](docs/NodeType.md)

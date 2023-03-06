@@ -5,7 +5,9 @@ All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Get-GroupMetadata**](WorkspaceApi.md#Get-GroupMetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
+[**Get-MyExchangeResourceInformation**](WorkspaceApi.md#Get-MyExchangeResourceInformation) | **GET** /workspace/exchangeresource/{id} | 
 [**Get-MyGroupInformation**](WorkspaceApi.md#Get-MyGroupInformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
+[**Get-MySharedMailboxInformation**](WorkspaceApi.md#Get-MySharedMailboxInformation) | **GET** /workspace/sharedmailbox/{id} | 
 [**Get-MySiteInformation**](WorkspaceApi.md#Get-MySiteInformation) | **GET** /workspace/sites/{id} | get site information
 [**Get-SiteMetadata**](WorkspaceApi.md#Get-SiteMetadata) | **GET** /workspace/sites/metadata | get site metadata
 [**Get-WorkspaceItems**](WorkspaceApi.md#Get-WorkspaceItems) | **GET** /workspace/my | get my workspace items
@@ -69,6 +71,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-MyExchangeResourceInformation"></a>
+# **Get-MyExchangeResourceInformation**
+> MyExchangeResource Get-MyExchangeResourceInformation<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "Id_example" # String | 
+
+try {
+     $Result = Get-MyExchangeResourceInformation -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-MyExchangeResourceInformation: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**MyExchangeResource**](MyExchangeResource.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-MyGroupInformation"></a>
 # **Get-MyGroupInformation**
 > ApiMyGroup Get-MyGroupInformation<br>
@@ -115,6 +174,63 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ApiMyGroup**](ApiMyGroup.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-MySharedMailboxInformation"></a>
+# **Get-MySharedMailboxInformation**
+> MySharedMailbox Get-MySharedMailboxInformation<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "Id_example" # String | 
+
+try {
+     $Result = Get-MySharedMailboxInformation -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-MySharedMailboxInformation: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**MySharedMailbox**](MySharedMailbox.md)
 
 ### Authorization
 

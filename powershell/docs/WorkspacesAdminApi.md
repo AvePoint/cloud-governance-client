@@ -138,6 +138,7 @@ void (empty response body)
 <a name="Invoke-ArchiveWorkspace"></a>
 # **Invoke-ArchiveWorkspace**
 > void Invoke-ArchiveWorkspace<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ArchiveWorkspaceParameter] <PSCustomObject><br>
 
 archive workspace
@@ -161,11 +162,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ArchiveWorkspaceParameter = (Initialize-ArchiveWorkspaceParameter -ArchiveProfile "ArchiveProfile_example" -WorkspaceType (Initialize-WorkspaceArchivedType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType ))) -IsSelectAllWorkspace $false) # ArchiveWorkspaceParameter |  (optional)
+$Filter = "Filter_example" # String |  (optional)
+$ArchiveWorkspaceParameter = (Initialize-ArchiveWorkspaceParameter -ArchiveProfile "ArchiveProfile_example" -WorkspaceType (Initialize-WorkspaceArchivedType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType ))) -IsSelectAllWorkspace $false -Type (Initialize-WorkspaceType )) # ArchiveWorkspaceParameter |  (optional)
 
 # archive workspace
 try {
-     $Result = Invoke-ArchiveWorkspace -ArchiveWorkspaceParameter $ArchiveWorkspaceParameter
+     $Result = Invoke-ArchiveWorkspace -Filter $Filter -ArchiveWorkspaceParameter $ArchiveWorkspaceParameter
 } catch {
     Write-Host ("Exception occured when calling Invoke-ArchiveWorkspace: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -176,6 +178,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **Filter** | **String**|  | [optional] 
  **ArchiveWorkspaceParameter** | [**ArchiveWorkspaceParameter**](ArchiveWorkspaceParameter.md)|  | [optional] 
 
 ### Return type
@@ -221,7 +224,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Filter = "Filter_example" # String |  (optional)
-$AutoCompleteRenewalTaskParameter = (Initialize-AutoCompleteRenewalTaskParameter -IsMarkAsCanceled $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType (Initialize-WorkspaceType ))) -IsSelectAllWorkspace $false) # AutoCompleteRenewalTaskParameter |  (optional)
+$AutoCompleteRenewalTaskParameter = (Initialize-AutoCompleteRenewalTaskParameter -IsMarkAsCanceled $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @((Initialize-WorkspaceIdTypeModel -ObjectId "ObjectId_example" -WorkspaceType )) -IsSelectAllWorkspace $false -Type ) # AutoCompleteRenewalTaskParameter |  (optional)
 
 # completed renewal task
 try {
@@ -280,7 +283,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$DeleteWorkspaceParameter = (Initialize-DeleteWorkspaceParameter -EnableRemoveObject $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false) # DeleteWorkspaceParameter |  (optional)
+$DeleteWorkspaceParameter = (Initialize-DeleteWorkspaceParameter -EnableRemoveObject $false -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false -Type ) # DeleteWorkspaceParameter |  (optional)
 
 # delete workspaces
 try {
@@ -507,6 +510,7 @@ Name | Type | Description  | Notes
 <a name="Lock-Workspaces"></a>
 # **Lock-Workspaces**
 > void Lock-Workspaces<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-LockSiteParameter] <PSCustomObject><br>
 
 lock sites or Office365 group sites
@@ -530,11 +534,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$LockSiteParameter = (Initialize-LockSiteParameter -LockType (Initialize-LockSiteCollectionType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false) # LockSiteParameter |  (optional)
+$Filter = "Filter_example" # String |  (optional)
+$LockSiteParameter = (Initialize-LockSiteParameter -LockType (Initialize-LockSiteCollectionType ) -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false -Type ) # LockSiteParameter |  (optional)
 
 # lock sites or Office365 group sites
 try {
-     $Result = Lock-Workspaces -LockSiteParameter $LockSiteParameter
+     $Result = Lock-Workspaces -Filter $Filter -LockSiteParameter $LockSiteParameter
 } catch {
     Write-Host ("Exception occured when calling Lock-Workspaces: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -545,6 +550,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **Filter** | **String**|  | [optional] 
  **LockSiteParameter** | [**LockSiteParameter**](LockSiteParameter.md)|  | [optional] 
 
 ### Return type
@@ -590,7 +596,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Filter = "Filter_example" # String |  (optional)
-$SpecifyContactParameter = (Initialize-SpecifyContactParameter -PrimaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -SecondaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -PrimaryContactNotifiedEmail "PrimaryContactNotifiedEmail_example" -SecondaryContactNotifiedEmail "SecondaryContactNotifiedEmail_example" -Workspace @() -IsSelectAllWorkspace $false) # SpecifyContactParameter |  (optional)
+$SpecifyContactParameter = (Initialize-SpecifyContactParameter -PrimaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -SecondaryContact (Initialize-ApiUser -Id "Id_example" -LoginName "LoginName_example" -IsExternalUser (Initialize-ExternalUserType ) -AzureUserType "AzureUserType_example" -DisplayName "DisplayName_example" -IsGroup $false -IsLocalUser $false -Email "Email_example" -JobTitle "JobTitle_example" -PhysicalDeliveryOfficeName "PhysicalDeliveryOfficeName_example" -IsValid $false -TenantId "TenantId_example" -AdditionalData "TODO" -ApiUserType (Initialize-ApiUserType )) -PrimaryContactNotifiedEmail "PrimaryContactNotifiedEmail_example" -SecondaryContactNotifiedEmail "SecondaryContactNotifiedEmail_example" -Workspace @() -IsSelectAllWorkspace $false -Type ) # SpecifyContactParameter |  (optional)
 
 # specify contacts
 try {
@@ -651,7 +657,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Filter = "Filter_example" # String |  (optional)
-$WorkspaceSendCancelEmailParameter = (Initialize-WorkspaceSendCancelEmailParameter -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false) # WorkspaceSendCancelEmailParameter |  (optional)
+$WorkspaceSendCancelEmailParameter = (Initialize-WorkspaceSendCancelEmailParameter -IsSendCancelEmail $false -CancelEmailTemplateId "CancelEmailTemplateId_example" -Workspace @() -IsSelectAllWorkspace $false -Type ) # WorkspaceSendCancelEmailParameter |  (optional)
 
 # trigger workspace renewal
 try {
@@ -712,7 +718,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Filter = "Filter_example" # String |  (optional)
-$WorkspaceActionParameter = (Initialize-WorkspaceActionParameter -Workspace @() -IsSelectAllWorkspace $false) # WorkspaceActionParameter |  (optional)
+$WorkspaceActionParameter = (Initialize-WorkspaceActionParameter -Workspace @() -IsSelectAllWorkspace $false -Type ) # WorkspaceActionParameter |  (optional)
 
 # trigger workspace election
 try {
@@ -748,6 +754,7 @@ void (empty response body)
 <a name="Unlock-Workspace"></a>
 # **Unlock-Workspace**
 > void Unlock-Workspace<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-WorkspaceActionParameter] <PSCustomObject><br>
 
 unlock sites and Office365 group site
@@ -771,11 +778,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$WorkspaceActionParameter = (Initialize-WorkspaceActionParameter -Workspace @() -IsSelectAllWorkspace $false) # WorkspaceActionParameter |  (optional)
+$Filter = "Filter_example" # String |  (optional)
+$WorkspaceActionParameter = (Initialize-WorkspaceActionParameter -Workspace @() -IsSelectAllWorkspace $false -Type ) # WorkspaceActionParameter |  (optional)
 
 # unlock sites and Office365 group site
 try {
-     $Result = Unlock-Workspace -WorkspaceActionParameter $WorkspaceActionParameter
+     $Result = Unlock-Workspace -Filter $Filter -WorkspaceActionParameter $WorkspaceActionParameter
 } catch {
     Write-Host ("Exception occured when calling Unlock-Workspace: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -786,6 +794,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **Filter** | **String**|  | [optional] 
  **WorkspaceActionParameter** | [**WorkspaceActionParameter**](WorkspaceActionParameter.md)|  | [optional] 
 
 ### Return type

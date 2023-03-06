@@ -1,11 +1,20 @@
-# Cloud.Governance.Client.Model.WorkspaceActionParameter
+# GroupStatus
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Workspace** | [**List&lt;WorkspaceIdTypeModel&gt;**](WorkspaceIdTypeModel.md) |  | [optional] 
-**IsSelectAllWorkspace** | **bool** |  | [optional] [default to false]
-**Type** | **WorkspaceType** |  | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$GroupStatus = New-Cloud.Governance.ClientGroupStatus 
+```
+
+- Convert the resource to JSON
+```powershell
+$GroupStatus | ConvertTo-JSON
+```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

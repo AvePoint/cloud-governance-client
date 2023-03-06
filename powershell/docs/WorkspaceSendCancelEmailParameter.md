@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **CancelEmailTemplateId** | **String** |  | [optional] 
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
 **IsSelectAllWorkspace** | **Boolean** |  | [optional] [default to $false]
+**Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
 
 ## Examples
 
@@ -15,7 +16,8 @@ Name | Type | Description | Notes
 $WorkspaceSendCancelEmailParameter = New-Cloud.Governance.ClientWorkspaceSendCancelEmailParameter  -IsSendCancelEmail null `
  -CancelEmailTemplateId null `
  -Workspace null `
- -IsSelectAllWorkspace null
+ -IsSelectAllWorkspace null `
+ -Type null
 ```
 
 - Convert the resource to JSON

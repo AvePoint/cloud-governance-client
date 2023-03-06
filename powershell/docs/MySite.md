@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **AdditionalAdministrator** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **PreferredDataLocation** | **String** |  | [optional] 
 **PreferredDataLocationName** | **String** |  | [optional] 
+**SiteStatus** | [**SiteStatus**](SiteStatus.md) |  | [optional] 
 **Id** | **String** |  | [optional] 
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
@@ -71,6 +72,7 @@ $MySite = New-Cloud.Governance.ClientMySite  -FullUrl null `
  -AdditionalAdministrator null `
  -PreferredDataLocation null `
  -PreferredDataLocationName null `
+ -SiteStatus null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `

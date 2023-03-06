@@ -1,34 +1,17 @@
-# ApiMyGroup
+# MyExchangeResource
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectId** | **String** |  | [optional] 
-**TenantId** | **String** |  | [optional] 
-**GroupName** | **String** |  | [optional] 
-**Email** | **String** |  | [optional] 
-**Language** | **String** |  | [optional] 
-**ApplyPolicyStatus** | **Int32** |  | [optional] [default to 0]
-**EnableTeamCollaboration** | **Boolean** |  | [optional] [default to $false]
-**DynamicGroupRules** | [**DynamicGroupRuleModel[]**](DynamicGroupRuleModel.md) |  | [optional] 
-**GroupType** | **String** |  | [optional] 
-**CreatedTime** | **System.DateTime** |  | [optional] 
 **Owners** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**PreferredDataLocation** | **String** |  | [optional] 
-**PreferredDataLocationName** | **String** |  | [optional] 
-**EnableDynamicMembership** | **Boolean** |  | [optional] [default to $false]
-**GroupTeamSiteUrl** | **String** |  | [optional] 
-**QuotaSize** | **Int64** |  | [optional] [default to 0]
-**StorageUsed** | **String** |  | [optional] 
-**TeamLink** | **String** |  | [optional] 
-**NoteBookLink** | **String** |  | [optional] 
-**PlannerLink** | **String** |  | [optional] 
-**Classification** | **String** |  | [optional] 
-**GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
-**GroupObjectId** | **String** |  | [optional] 
-**NetworkId** | **String** |  | [optional] 
-**Sensitivity** | **String** |  | [optional] 
-**GroupStatus** | [**GroupStatus**](GroupStatus.md) |  | [optional] 
+**Name** | **String** |  | [optional] 
+**Description** | **String** |  | [optional] 
+**Email** | **String** |  | [optional] 
+**TenantId** | **String** |  | [optional] 
+**CreatedTime** | **System.DateTime** |  | [optional] 
+**Status** | [**ExchangeResourceStatus**](ExchangeResourceStatus.md) |  | [optional] 
+**WorkspaceType** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
+**WorkspaceTypeDes** | **String** |  | [optional] 
 **Id** | **String** |  | [optional] 
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
@@ -65,32 +48,15 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-$ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
- -TenantId null `
- -GroupName null `
+$MyExchangeResource = New-Cloud.Governance.ClientMyExchangeResource  -Owners null `
+ -Name null `
+ -Description null `
  -Email null `
- -Language null `
- -ApplyPolicyStatus null `
- -EnableTeamCollaboration null `
- -DynamicGroupRules null `
- -GroupType null `
+ -TenantId null `
  -CreatedTime null `
- -Owners null `
- -PreferredDataLocation null `
- -PreferredDataLocationName null `
- -EnableDynamicMembership null `
- -GroupTeamSiteUrl null `
- -QuotaSize null `
- -StorageUsed null `
- -TeamLink null `
- -NoteBookLink null `
- -PlannerLink null `
- -Classification null `
- -GroupObjectType null `
- -GroupObjectId null `
- -NetworkId null `
- -Sensitivity null `
- -GroupStatus null `
+ -Status null `
+ -WorkspaceType null `
+ -WorkspaceTypeDes null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `
@@ -126,7 +92,7 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
 
 - Convert the resource to JSON
 ```powershell
-$ApiMyGroup | ConvertTo-JSON
+$MyExchangeResource | ConvertTo-JSON
 ```
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

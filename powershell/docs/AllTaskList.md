@@ -15,12 +15,14 @@ Name | Type | Description | Notes
 **ServiceTypeDescription** | **String** |  | [optional] 
 **CreatedTime** | **System.DateTime** |  | [optional] 
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
+**TaskTypeDescription** | **String** |  | [optional] 
 **Status** | [**TaskResult**](TaskResult.md) |  | [optional] 
 **StatusDescription** | **String** |  | [optional] 
 **IsApproveTask** | **Boolean** |  | [optional] [default to $false]
 **Assignee** | **String** |  | [optional] 
 **AssigneeLoginName** | **String** |  | [optional] 
 **AssigneeDisplayName** | **String** |  | [optional] 
+**Url** | **String** |  | [optional] 
 
 ## Examples
 
@@ -38,12 +40,14 @@ $AllTaskList = New-Cloud.Governance.ClientAllTaskList  -Id null `
  -ServiceTypeDescription null `
  -CreatedTime null `
  -TaskType null `
+ -TaskTypeDescription null `
  -Status null `
  -StatusDescription null `
  -IsApproveTask null `
  -Assignee null `
  -AssigneeLoginName null `
- -AssigneeDisplayName null
+ -AssigneeDisplayName null `
+ -Url null
 ```
 
 - Convert the resource to JSON

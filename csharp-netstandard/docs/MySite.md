@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **AdditionalAdministrator** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **PreferredDataLocation** | **string** |  | [optional] 
 **PreferredDataLocationName** | **string** |  | [optional] 
+**SiteStatus** | **SiteStatus** |  | [optional] 
 **Id** | **Guid** |  | [optional] 
 **Phase** | **AutoImportPhase** |  | [optional] 
 **PhaseStartTime** | **DateTime?** |  | [optional] 

@@ -185,7 +185,7 @@ void (empty response body)
 
 <a name="archiveworkspace"></a>
 # **ArchiveWorkspace**
-> void ArchiveWorkspace (ArchiveWorkspaceParameter archiveWorkspaceParameter = null)
+> void ArchiveWorkspace (string filter = null, ArchiveWorkspaceParameter archiveWorkspaceParameter = null)
 
 archive workspace
 
@@ -218,12 +218,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
+            var filter = filter_example;  // string |  (optional) 
             var archiveWorkspaceParameter = new ArchiveWorkspaceParameter(); // ArchiveWorkspaceParameter |  (optional) 
 
             try
             {
                 // archive workspace
-                apiInstance.ArchiveWorkspace(archiveWorkspaceParameter);
+                apiInstance.ArchiveWorkspace(filter, archiveWorkspaceParameter);
             }
             catch (ApiException  e)
             {
@@ -240,6 +241,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter** | **string**|  | [optional] 
  **archiveWorkspaceParameter** | [**ArchiveWorkspaceParameter**](ArchiveWorkspaceParameter.md)|  | [optional] 
 
 ### Return type
@@ -694,7 +696,7 @@ Name | Type | Description  | Notes
 
 <a name="lockworkspaces"></a>
 # **LockWorkspaces**
-> void LockWorkspaces (LockSiteParameter lockSiteParameter = null)
+> void LockWorkspaces (string filter = null, LockSiteParameter lockSiteParameter = null)
 
 lock sites or Office365 group sites
 
@@ -727,12 +729,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
+            var filter = filter_example;  // string |  (optional) 
             var lockSiteParameter = new LockSiteParameter(); // LockSiteParameter |  (optional) 
 
             try
             {
                 // lock sites or Office365 group sites
-                apiInstance.LockWorkspaces(lockSiteParameter);
+                apiInstance.LockWorkspaces(filter, lockSiteParameter);
             }
             catch (ApiException  e)
             {
@@ -749,6 +752,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter** | **string**|  | [optional] 
  **lockSiteParameter** | [**LockSiteParameter**](LockSiteParameter.md)|  | [optional] 
 
 ### Return type
@@ -1028,7 +1032,7 @@ void (empty response body)
 
 <a name="unlockworkspace"></a>
 # **UnlockWorkspace**
-> void UnlockWorkspace (WorkspaceActionParameter workspaceActionParameter = null)
+> void UnlockWorkspace (string filter = null, WorkspaceActionParameter workspaceActionParameter = null)
 
 unlock sites and Office365 group site
 
@@ -1061,12 +1065,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
 
+            var filter = filter_example;  // string |  (optional) 
             var workspaceActionParameter = new WorkspaceActionParameter(); // WorkspaceActionParameter |  (optional) 
 
             try
             {
                 // unlock sites and Office365 group site
-                apiInstance.UnlockWorkspace(workspaceActionParameter);
+                apiInstance.UnlockWorkspace(filter, workspaceActionParameter);
             }
             catch (ApiException  e)
             {
@@ -1083,6 +1088,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter** | **string**|  | [optional] 
  **workspaceActionParameter** | [**WorkspaceActionParameter**](WorkspaceActionParameter.md)|  | [optional] 
 
 ### Return type

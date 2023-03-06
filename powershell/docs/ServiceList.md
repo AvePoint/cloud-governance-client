@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **TypeDescription** | **String** |  | [optional] 
 **IsQuestionnaire** | **Boolean** |  | [optional] [default to $false]
 **QuestionnaireId** | **String** |  | [optional] 
+**RankedNumber** | **Int32** |  | [optional] [default to 0]
 
 ## Examples
 
@@ -27,7 +28,8 @@ $ServiceList = New-Cloud.Governance.ClientServiceList  -Id null `
  -Type null `
  -TypeDescription null `
  -IsQuestionnaire null `
- -QuestionnaireId null
+ -QuestionnaireId null `
+ -RankedNumber null
 ```
 
 - Convert the resource to JSON

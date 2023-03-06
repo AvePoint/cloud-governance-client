@@ -15,12 +15,14 @@ Name | Type | Description | Notes
 **ServiceTypeDescription** | **string** |  | [optional] 
 **CreatedTime** | **DateTime** |  | [optional] 
 **TaskType** | **TaskType** |  | [optional] 
+**TaskTypeDescription** | **string** |  | [optional] 
 **Status** | **TaskResult** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 
 **IsApproveTask** | **bool** |  | [optional] [default to false]
 **Assignee** | **string** |  | [optional] 
 **AssigneeLoginName** | **string** |  | [optional] 
 **AssigneeDisplayName** | **string** |  | [optional] 
+**Url** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

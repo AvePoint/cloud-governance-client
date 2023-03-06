@@ -47,12 +47,13 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
             
+            var filter = filter_example;  // string |  (optional) 
             var workspaceActionParameter = new WorkspaceActionParameter(); // WorkspaceActionParameter |  (optional) 
 
             try
             {
                 // unlock sites and Office365 group site
-                apiInstance.UnlockWorkspace(workspaceActionParameter);
+                apiInstance.UnlockWorkspace(filterworkspaceActionParameter);
             }
             catch (ApiException e)
             {
@@ -292,7 +293,9 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**ResolveUsers**](docs/UsersApi.md#resolveusers) | **GET** /users/resolve | resolve users
 *UsersApi* | [**SearchUsers**](docs/UsersApi.md#searchusers) | **GET** /users/search | search users
 *WorkspaceApi* | [**GetGroupMetadata**](docs/WorkspaceApi.md#getgroupmetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
+*WorkspaceApi* | [**GetMyExchangeResourceInformation**](docs/WorkspaceApi.md#getmyexchangeresourceinformation) | **GET** /workspace/exchangeresource/{id} | 
 *WorkspaceApi* | [**GetMyGroupInformation**](docs/WorkspaceApi.md#getmygroupinformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
+*WorkspaceApi* | [**GetMySharedMailboxInformation**](docs/WorkspaceApi.md#getmysharedmailboxinformation) | **GET** /workspace/sharedmailbox/{id} | 
 *WorkspaceApi* | [**GetMySiteInformation**](docs/WorkspaceApi.md#getmysiteinformation) | **GET** /workspace/sites/{id} | get site information
 *WorkspaceApi* | [**GetSiteMetadata**](docs/WorkspaceApi.md#getsitemetadata) | **GET** /workspace/sites/metadata | get site metadata
 *WorkspaceApi* | [**GetWorkspaceItems**](docs/WorkspaceApi.md#getworkspaceitems) | **GET** /workspace/my | get my workspace items
@@ -483,6 +486,7 @@ Class | Method | HTTP request | Description
  - [Model.ElectionContact](docs/ElectionContact.md)
  - [Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
+ - [Model.ExchangeResourceStatus](docs/ExchangeResourceStatus.md)
  - [Model.ExecutionModel](docs/ExecutionModel.md)
  - [Model.ExecutionParameter](docs/ExecutionParameter.md)
  - [Model.ExpirationType](docs/ExpirationType.md)
@@ -531,6 +535,7 @@ Class | Method | HTTP request | Description
  - [Model.GroupPolicySubType](docs/GroupPolicySubType.md)
  - [Model.GroupRestrictionType](docs/GroupRestrictionType.md)
  - [Model.GroupSettingModel](docs/GroupSettingModel.md)
+ - [Model.GroupStatus](docs/GroupStatus.md)
  - [Model.GroupUser](docs/GroupUser.md)
  - [Model.GroupValidationParameter](docs/GroupValidationParameter.md)
  - [Model.GuestUserGridModel](docs/GuestUserGridModel.md)
@@ -594,6 +599,8 @@ Class | Method | HTTP request | Description
  - [Model.MultiGeoControlMode](docs/MultiGeoControlMode.md)
  - [Model.MultiGeoSerivceSetting](docs/MultiGeoSerivceSetting.md)
  - [Model.MultiGeoSetting](docs/MultiGeoSetting.md)
+ - [Model.MyExchangeResource](docs/MyExchangeResource.md)
+ - [Model.MySharedMailbox](docs/MySharedMailbox.md)
  - [Model.MySite](docs/MySite.md)
  - [Model.MySiteType](docs/MySiteType.md)
  - [Model.NodeType](docs/NodeType.md)
