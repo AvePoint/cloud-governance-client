@@ -38,12 +38,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "Filter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest (optional)
-$Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest (optional)
-$Search = "Search_example" # String | Search for ticketNumber (optional)
-$Top = 987 # Int32 |  Define the number of records you want to return, max value is 3000, default value is 200 (optional)
-$Skip = "Skip_example" # String |  Define the number of records you want to skip, default value is 0 (optional)
-$Nexttoken = "Nexttoken_example" # String |  Use the next token to get the next paging result (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest, isEnabledPassback (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest, isEnabledPassback (optional)
+$Search = "MySearch" # String | Search for ticketNumber (optional)
+$Top = 56 # Int32 |  Define the number of records you want to return, max value is 3000, default value is 200 (optional)
+$Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
+$Nexttoken = "MyNexttoken" # String |  Use the next token to get the next paging result (optional)
 
 # get all requests
 try {
@@ -58,8 +58,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest, isEnabledPassback | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, serviceId, serviceName, serviceType, category, approvalStageName, participants, ticketNumber, summary, requester, detailStatus, progressStatus, modified, modifiedBy, modifiedDate, assignTo, serviceAdmin, objectUrl, objectID, createdTime, hasSubRequest, isEnabledPassback | [optional] 
  **Search** | **String**| Search for ticketNumber | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 3000, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 

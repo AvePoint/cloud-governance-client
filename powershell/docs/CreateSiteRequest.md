@@ -45,6 +45,7 @@ Name | Type | Description | Notes
 **LastUpdated** | **System.DateTime** | Last updated time of request. | [optional] [readonly] 
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
+**IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -100,6 +101,7 @@ $CreateSiteRequest = New-Cloud.Governance.ClientCreateSiteRequest  -SiteTitle nu
  -LastUpdated null `
  -CreatedTime null `
  -HasSubRequest null `
+ -IsEnabledPassback null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `

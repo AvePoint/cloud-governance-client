@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **TermGroup** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **TermSet** | [**GuidModel**](GuidModel.md) |  | [optional] 
 **Scope** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**Tree** | [**TermTreeModel**](TermTreeModel.md) |  | [optional] 
+**Tree** | **String** |  | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples

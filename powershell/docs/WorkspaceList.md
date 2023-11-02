@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **Sensitivity** | **String** |  | [optional] 
 **PrivacyDescription** | **String** |  | [optional] 
 **EnableDynamicMembership** | **Boolean** |  | [optional] [default to $false]
+**WebLink** | **String** |  | [optional] 
 **EnableDynamicMembershipDescription** | **String** |  | [optional] 
 **Metadata** | [**EndUserReportMetadata[]**](EndUserReportMetadata.md) |  | [optional] 
 
@@ -92,6 +93,7 @@ $WorkspaceList = New-Cloud.Governance.ClientWorkspaceList  -Id null `
  -Sensitivity null `
  -PrivacyDescription null `
  -EnableDynamicMembership null `
+ -WebLink null `
  -EnableDynamicMembershipDescription null `
  -Metadata null
 ```

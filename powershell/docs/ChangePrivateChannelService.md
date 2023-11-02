@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChangePrivateChannelFields** | [**ChangePrivateChannelFieldModel[]**](ChangePrivateChannelFieldModel.md) | Change PrivateChannel fields | [optional] 
+**ChangePrivateChannelQuotaSetting** | [**ChangePrivateChannelQuotaModel**](ChangePrivateChannelQuotaModel.md) |  | [optional] 
 **TenantId** | **String** | Tenant id | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
@@ -27,6 +28,7 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $ChangePrivateChannelService = New-Cloud.Governance.ClientChangePrivateChannelService  -ChangePrivateChannelFields null `
+ -ChangePrivateChannelQuotaSetting null `
  -TenantId null `
  -Metadatas null `
  -HideRequestSummary null `

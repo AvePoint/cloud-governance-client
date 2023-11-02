@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **RequestLastModifiedTime** | **DateTime?** |  | [optional] 
 **RequestProgressStatus** | **RequestProgressStatus** |  | [optional] 
 **TaskType** | **TaskType** |  | [optional] 
+**TaskTypeDescription** | **string** |  | [optional] 
 **Status** | **TaskResult** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 
 **IsApproveTask** | **bool** |  | [optional] [default to false]

@@ -6,6 +6,9 @@ Name | Type | Description | Notes
 **ActivityGalleries** | [**Gallerybase[]**](Gallerybase.md) | list of all galleries in the request | [optional] 
 **ApproveProcess** | [**ApproveProcessModel**](ApproveProcessModel.md) |  | [optional] 
 **OrderInfo** | **String** |  | [optional] 
+**ParentId** | **String** |  | [optional] 
+**ParentTicketNumber** | **Int32** |  | [optional] [default to 0]
+**StartRequestTime** | **System.DateTime** |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -25,6 +28,7 @@ Name | Type | Description | Notes
 **LastUpdated** | **System.DateTime** | Last updated time of request. | [optional] [readonly] 
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
+**IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -41,6 +45,9 @@ Name | Type | Description | Notes
 $DynamicRequest = New-Cloud.Governance.ClientDynamicRequest  -ActivityGalleries null `
  -ApproveProcess null `
  -OrderInfo null `
+ -ParentId null `
+ -ParentTicketNumber null `
+ -StartRequestTime null `
  -Id null `
  -ServiceId null `
  -Summary null `
@@ -60,6 +67,7 @@ $DynamicRequest = New-Cloud.Governance.ClientDynamicRequest  -ActivityGalleries 
  -LastUpdated null `
  -CreatedTime null `
  -HasSubRequest null `
+ -IsEnabledPassback null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `

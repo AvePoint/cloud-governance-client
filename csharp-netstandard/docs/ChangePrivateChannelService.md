@@ -5,6 +5,7 @@ Change PrivateChannel Service
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChangePrivateChannelFields** | [**List&lt;ChangePrivateChannelFieldModel&gt;**](ChangePrivateChannelFieldModel.md) | Change PrivateChannel fields | [optional] 
+**ChangePrivateChannelQuotaSetting** | [**ChangePrivateChannelQuotaModel**](ChangePrivateChannelQuotaModel.md) |  | [optional] 
 **TenantId** | **Guid** | Tenant id | [optional] 
 **Metadatas** | [**List&lt;CustomMetadata&gt;**](CustomMetadata.md) |  | [optional] 
 **HideRequestSummary** | **bool** |  | [optional] [default to false]

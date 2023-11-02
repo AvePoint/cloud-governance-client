@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **EnableRoleValueSync** | **Boolean** |  | [optional] [default to $false]
 **Value** | [**LookupValue**](LookupValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
 **Property** | **String** |  | [optional] 
+**ExtensionAttribute** | **String** |  | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
@@ -21,6 +22,7 @@ $UserProfileMetadataSettings = New-Cloud.Governance.ClientUserProfileMetadataSet
  -EnableRoleValueSync null `
  -Value null `
  -Property null `
+ -ExtensionAttribute null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```
 

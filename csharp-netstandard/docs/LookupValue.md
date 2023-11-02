@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Tenant** | **string** | Id of Office365 tenant. | [optional] [readonly] 
 **Property** | **string** | Name of user property. | [optional] [readonly] 
+**ExtensionAttribute** | **string** | Extension attribute of user property. | [optional] [readonly] 
 **TargetUser** | [**ApiUser**](ApiUser.md) | Lookup user | [optional] 
 **UserPropertyValue** | **string** | Property value of lookup user | [optional] 
 **UserPropertyDisplayValue** | **string** | Property display value of lookup user | [optional] 

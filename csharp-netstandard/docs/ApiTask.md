@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **DueDate** | **DateTime** |  | [optional] 
 **TaskFullPath** | **string** |  | [optional] 
 **AppId** | **string** |  | [optional] 
+**IsEnabledPassback** | **bool** |  | [optional] [default to false]
 **DynamicActions** | [**List&lt;TaskDynamicActions&gt;**](TaskDynamicActions.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

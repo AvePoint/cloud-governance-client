@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteId** | **String** |  | [optional] 
 **SiteUrl** | **String** |  | [optional] 
+**ApprovalProcessHasManagerRole** | **Boolean** |  | [optional] [default to $false]
 **ChangeQuotaSetting** | [**ChangeSiteQuotaSettings**](ChangeSiteQuotaSettings.md) |  | [optional] 
 **ExtendSetting** | [**ExtendSiteSetting**](ExtendSiteSetting.md) |  | [optional] 
 **UnlockSetting** | [**UnlockSiteSetting**](UnlockSiteSetting.md) |  | [optional] 
@@ -20,6 +21,7 @@ Name | Type | Description | Notes
 ```powershell
 $SiteLifecycleValidateResult = New-Cloud.Governance.ClientSiteLifecycleValidateResult  -SiteId null `
  -SiteUrl null `
+ -ApprovalProcessHasManagerRole null `
  -ChangeQuotaSetting null `
  -ExtendSetting null `
  -UnlockSetting null `

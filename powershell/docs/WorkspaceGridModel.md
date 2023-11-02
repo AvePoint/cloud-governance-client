@@ -62,6 +62,8 @@ Name | Type | Description | Notes
 **LastSyncTime** | **System.DateTime** |  | [optional] 
 **LockedByDescription** | **String** |  | [optional] 
 **CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
+**SiteTemplate** | **String** |  | [optional] 
+**SiteTemplateTitle** | **String** |  | [optional] 
 **QuotaProfileName** | **String** |  | [optional] 
 **QuotaProfileId** | **String** |  | [optional] 
 **ExternalSharingProfileName** | **String** |  | [optional] 
@@ -142,6 +144,8 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -LastSyncTime null `
  -LockedByDescription null `
  -CreatedSource null `
+ -SiteTemplate null `
+ -SiteTemplateTitle null `
  -QuotaProfileName null `
  -QuotaProfileId null `
  -ExternalSharingProfileName null `

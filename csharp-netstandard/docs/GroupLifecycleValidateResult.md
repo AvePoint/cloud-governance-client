@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ApprovalProcessHasManagerRole** | **bool** |  | [optional] [default to false]
 **ExtendSetting** | [**ExtendGroupResult**](ExtendGroupResult.md) |  | [optional] 
 **ChangePolicySetting** | [**ChangeGroupPolicyResult**](ChangeGroupPolicyResult.md) |  | [optional] 
 **ChangeQuotaSetting** | [**ChangeGroupQuotaResult**](ChangeGroupQuotaResult.md) |  | [optional] 

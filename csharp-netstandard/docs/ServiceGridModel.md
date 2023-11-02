@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Status** | **CommonStatus** |  | [optional] 
 **StatusDescription** | **string** |  | [optional] 
 **Language** | **int** |  | [optional] [default to 0]
+**CategoryId** | **Guid** |  | [optional] 
 **ModifiedTime** | **DateTime** |  | [optional] 
 **ModifiedBy** | **string** |  | [optional] 
 **ModifiedByDisplayName** | **string** |  | [optional] 

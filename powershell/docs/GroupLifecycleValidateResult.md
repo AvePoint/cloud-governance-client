@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ApprovalProcessHasManagerRole** | **Boolean** |  | [optional] [default to $false]
 **ExtendSetting** | [**ExtendGroupResult**](ExtendGroupResult.md) |  | [optional] 
 **ChangePolicySetting** | [**ChangeGroupPolicyResult**](ChangeGroupPolicyResult.md) |  | [optional] 
 **ChangeQuotaSetting** | [**ChangeGroupQuotaResult**](ChangeGroupQuotaResult.md) |  | [optional] 
@@ -16,7 +17,8 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-$GroupLifecycleValidateResult = New-Cloud.Governance.ClientGroupLifecycleValidateResult  -ExtendSetting null `
+$GroupLifecycleValidateResult = New-Cloud.Governance.ClientGroupLifecycleValidateResult  -ApprovalProcessHasManagerRole null `
+ -ExtendSetting null `
  -ChangePolicySetting null `
  -ChangeQuotaSetting null `
  -EnableTeamCollaboration null `

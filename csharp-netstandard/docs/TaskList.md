@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **AllowEdit** | **bool** |  | [optional] [default to false]
 **ProgressStatus** | **RequestProgressStatus** |  | [optional] 
 **BatchId** | **Guid** |  | [optional] 
+**IsEnabledPassback** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

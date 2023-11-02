@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Tenant** | **String** | Id of Office365 tenant. | [optional] [readonly] 
 **Property** | **String** | Name of user property. | [optional] [readonly] 
+**ExtensionAttribute** | **String** | Extension attribute of user property. | [optional] [readonly] 
 **TargetUser** | [**ApiUser**](ApiUser.md) | Lookup user | [optional] 
 **UserPropertyValue** | **String** | Property value of lookup user | [optional] 
 **UserPropertyDisplayValue** | **String** | Property display value of lookup user | [optional] 
@@ -15,6 +16,7 @@ Name | Type | Description | Notes
 ```powershell
 $LookupValue = New-Cloud.Governance.ClientLookupValue  -Tenant null `
  -Property null `
+ -ExtensionAttribute null `
  -TargetUser null `
  -UserPropertyValue null `
  -UserPropertyDisplayValue null

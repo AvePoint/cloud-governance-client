@@ -22,7 +22,7 @@ Method | HTTP request | Description
 [**GetCreateSiteService**](ServicesApi.md#getcreatesiteservice) | **GET** /services/createsite/{id} | get create site service
 [**GetCreateWebService**](ServicesApi.md#getcreatewebservice) | **GET** /services/createweb/{id} | get create web service
 [**GetCustomService**](ServicesApi.md#getcustomservice) | **GET** /services/custom/{id} | get custom service
-[**GetDynamicService**](ServicesApi.md#getdynamicservice) | **GET** /services/dynamic/{id} | get custom service
+[**GetDynamicService**](ServicesApi.md#getdynamicservice) | **GET** /services/dynamic/{id} | get dynamic service
 [**GetGrantPermissionService**](ServicesApi.md#getgrantpermissionservice) | **GET** /services/grantpermission/{id} | get grant permission service
 [**GetGroupLifecycleService**](ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 [**GetManagePermissionService**](ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
@@ -1615,7 +1615,7 @@ Name | Type | Description  | Notes
 # **GetDynamicService**
 > DynamicServiceForRequest GetDynamicService (Guid id, bool? isValidatePermission = null)
 
-get custom service
+get dynamic service
 
 ### Example
 ```csharp
@@ -1651,7 +1651,7 @@ namespace Example
 
             try
             {
-                // get custom service
+                // get dynamic service
                 DynamicServiceForRequest result = apiInstance.GetDynamicService(id, isValidatePermission);
                 Debug.WriteLine(result);
             }

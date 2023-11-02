@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **UseBuiltInProperty** | **Boolean** |  | [optional] [default to $false]
 **Value** | [**LookupValue**](LookupValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
 **Property** | **String** |  | [optional] 
+**ExtensionAttribute** | **String** |  | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
@@ -17,6 +18,7 @@ $AzureAdMetadataSettings = New-Cloud.Governance.ClientAzureAdMetadataSettings  -
  -UseBuiltInProperty null `
  -Value null `
  -Property null `
+ -ExtensionAttribute null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```
 

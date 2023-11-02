@@ -35,6 +35,7 @@ Name | Type | Description | Notes
 **ElectionProfile** | [**AnyType**](.md) |  | [optional] 
 **RenewalDetails** | [**AnyType**](.md) |  | [optional] 
 **IsFinalStep** | [**AnyType**](.md) |  | [optional] 
+**ObjectId** | [**AnyType**](.md) |  | [optional] 
 
 ## Examples
 
@@ -71,7 +72,8 @@ $ApiTaskDynamicProperties = New-Cloud.Governance.ClientApiTaskDynamicProperties 
  -Manager null `
  -ElectionProfile null `
  -RenewalDetails null `
- -IsFinalStep null
+ -IsFinalStep null `
+ -ObjectId null
 ```
 
 - Convert the resource to JSON

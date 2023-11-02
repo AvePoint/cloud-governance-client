@@ -57,6 +57,7 @@ Name | Type | Description | Notes
 **LastUpdated** | **DateTime?** | Last updated time of request. | [optional] [readonly] 
 **CreatedTime** | **DateTime?** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **bool** | HasSubRequest | [optional] [default to false]
+**IsEnabledPassback** | **bool** |  | [optional] [default to false]
 **ModifiedBy** | **string** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **string** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **DateTime?** | ModifiedDate | [optional] 

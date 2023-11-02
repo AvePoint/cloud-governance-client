@@ -39,12 +39,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "Filter_example" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)
-$Orderby = "Orderby_example" # String | Order by one field, supported fields:<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)
-$Search = "Search_example" # String | Search for name (optional)
-$Top = 987 # Int32 |  Define the number of records you want to return, max value is 2000, default value is 200 (optional)
-$Skip = "Skip_example" # String |  Define the number of records you want to skip, default value is 0 (optional)
-$Nexttoken = "Nexttoken_example" # String |  Use the next token to get the next paging result (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)
+$Search = "MySearch" # String | Search for name (optional)
+$Top = 56 # Int32 |  Define the number of records you want to return, max value is 2000, default value is 200 (optional)
+$Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
+$Nexttoken = "MyNexttoken" # String |  Use the next token to get the next paging result (optional)
 
 # get all metadata
 try {
@@ -107,7 +107,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "Id_example" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # Get metadata by id
 try {

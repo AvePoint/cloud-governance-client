@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**EditDeleteGroupRequest**](TasksApi.md#editdeletegrouprequest) | **PUT** /tasks/{id}/deletegroup | edit delete change group request in task
 [**EditDeleteSiteRequest**](TasksApi.md#editdeletesiterequest) | **PUT** /tasks/{id}/deletesite | edit delete site request in task
 [**EditDeleteWebRequest**](TasksApi.md#editdeletewebrequest) | **PUT** /tasks/{id}/deleteweb | edit delete web request in task
+[**EditDynamicServiceRequest**](TasksApi.md#editdynamicservicerequest) | **PUT** /tasks/{id}/dynamic | edit dynamic service request
 [**EditExtendGroupRequest**](TasksApi.md#editextendgrouprequest) | **PUT** /tasks/{id}/extendgroup | edit extend group request in task
 [**EditExtendSiteRequest**](TasksApi.md#editextendsiterequest) | **PUT** /tasks/{id}/extendsite | edit extend site request in task
 [**EditGrantPermissionRequest**](TasksApi.md#editgrantpermissionrequest) | **PUT** /tasks/{id}/grantpermission | edit grant permission request in task
@@ -2235,6 +2236,90 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="editdynamicservicerequest"></a>
+# **EditDynamicServiceRequest**
+> void EditDynamicServiceRequest (Guid id, DynamicRequest dynamicRequest = null)
+
+edit dynamic service request
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class EditDynamicServiceRequestExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new TasksApi(config);
+
+            var id = new Guid(); // Guid | 
+            var dynamicRequest = new DynamicRequest(); // DynamicRequest |  (optional) 
+
+            try
+            {
+                // edit dynamic service request
+                apiInstance.EditDynamicServiceRequest(id, dynamicRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling TasksApi.EditDynamicServiceRequest: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **dynamicRequest** | [**DynamicRequest**](DynamicRequest.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="editextendgrouprequest"></a>
 # **EditExtendGroupRequest**
 > void EditExtendGroupRequest (Guid id, ExtendGroupRequest extendGroupRequest = null)
@@ -2942,8 +3027,8 @@ namespace Example
             var apiInstance = new TasksApi(config);
 
             var taskApprovalStatus = ;  // TaskApprovalStatus | 
-            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId (optional) 
-            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId (optional) 
+            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId, isEnabledPassback (optional) 
+            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId, isEnabledPassback (optional) 
             var search = search_example;  // string | Search for title (optional) 
             var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
             var skip = skip_example;  // string |  Define the number of records you want to skip, default value is 0 (optional) 
@@ -2971,8 +3056,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskApprovalStatus** | **TaskApprovalStatus**|  | 
- **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId | [optional] 
- **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId | [optional] 
+ **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId, isEnabledPassback | [optional] 
+ **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, title, requester, requestId, requestTicketNumber, requesterDisplayName, requesterEmail, dueDate, serviceType, createdTime, taskType, status, taskFullPath, lastUpdated, category, serviceName, objectId, profileId, allowEdit, progressStatus, batchId, isEnabledPassback | [optional] 
  **search** | **string**| Search for title | [optional] 
  **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **skip** | **string**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -3253,7 +3338,7 @@ void (empty response body)
 
 <a name="rejecttask"></a>
 # **RejectTask**
-> void RejectTask (Guid id, CommentsParam commentsParam = null)
+> void RejectTask (Guid id, bool? isPassbackEnabled = null, CommentsParam commentsParam = null)
 
 reject task
 
@@ -3287,12 +3372,13 @@ namespace Example
             var apiInstance = new TasksApi(config);
 
             var id = new Guid(); // Guid | 
+            var isPassbackEnabled = true;  // bool? |  (optional)  (default to false)
             var commentsParam = new CommentsParam(); // CommentsParam |  (optional) 
 
             try
             {
                 // reject task
-                apiInstance.RejectTask(id, commentsParam);
+                apiInstance.RejectTask(id, isPassbackEnabled, commentsParam);
             }
             catch (ApiException  e)
             {
@@ -3310,6 +3396,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | [**Guid**](Guid.md)|  | 
+ **isPassbackEnabled** | **bool?**|  | [optional] [default to false]
  **commentsParam** | [**CommentsParam**](CommentsParam.md)|  | [optional] 
 
 ### Return type

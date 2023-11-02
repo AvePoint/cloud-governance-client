@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 <a name="getazureaduserpropertyvalue"></a>
 # **GetAzureAdUserPropertyValue**
-> StringModel GetAzureAdUserPropertyValue (string username, string propertyName)
+> StringModel GetAzureAdUserPropertyValue (string username, string propertyName, string extensionAttribute = null)
 
 get Azure Ad user's property value
 
@@ -136,11 +136,12 @@ namespace Example
 
             var username = username_example;  // string | 
             var propertyName = propertyName_example;  // string | 
+            var extensionAttribute = extensionAttribute_example;  // string |  (optional)  (default to "")
 
             try
             {
                 // get Azure Ad user's property value
-                StringModel result = apiInstance.GetAzureAdUserPropertyValue(username, propertyName);
+                StringModel result = apiInstance.GetAzureAdUserPropertyValue(username, propertyName, extensionAttribute);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -160,6 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **string**|  | 
  **propertyName** | **string**|  | 
+ **extensionAttribute** | **string**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 
@@ -354,7 +356,7 @@ Name | Type | Description  | Notes
 
 <a name="resolveusers"></a>
 # **ResolveUsers**
-> List&lt;ApiUser&gt; ResolveUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null)
+> List&lt;ApiUser&gt; ResolveUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null, bool? includeBlockedUser = null)
 
 resolve users
 
@@ -395,11 +397,12 @@ namespace Example
             var groupEmail = groupEmail_example;  // string |  (optional)  (default to "")
             var peopleFilterProfileId = new Guid?(); // Guid? |  (optional) 
             var isGetTenantBySiteUrl = true;  // bool? |  (optional)  (default to true)
+            var includeBlockedUser = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // resolve users
-                List<ApiUser> result = apiInstance.ResolveUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl);
+                List<ApiUser> result = apiInstance.ResolveUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl, includeBlockedUser);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -425,6 +428,7 @@ Name | Type | Description  | Notes
  **groupEmail** | **string**|  | [optional] [default to &quot;&quot;]
  **peopleFilterProfileId** | [**Guid?**](Guid?.md)|  | [optional] 
  **isGetTenantBySiteUrl** | **bool?**|  | [optional] [default to true]
+ **includeBlockedUser** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -451,7 +455,7 @@ Name | Type | Description  | Notes
 
 <a name="searchusers"></a>
 # **SearchUsers**
-> List&lt;ApiUser&gt; SearchUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null)
+> List&lt;ApiUser&gt; SearchUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null, bool? includeBlockedUser = null)
 
 search users
 
@@ -492,11 +496,12 @@ namespace Example
             var groupEmail = groupEmail_example;  // string |  (optional)  (default to "")
             var peopleFilterProfileId = new Guid?(); // Guid? |  (optional) 
             var isGetTenantBySiteUrl = true;  // bool? |  (optional)  (default to true)
+            var includeBlockedUser = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // search users
-                List<ApiUser> result = apiInstance.SearchUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl);
+                List<ApiUser> result = apiInstance.SearchUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl, includeBlockedUser);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -522,6 +527,7 @@ Name | Type | Description  | Notes
  **groupEmail** | **string**|  | [optional] [default to &quot;&quot;]
  **peopleFilterProfileId** | [**Guid?**](Guid?.md)|  | [optional] 
  **isGetTenantBySiteUrl** | **bool?**|  | [optional] [default to true]
+ **includeBlockedUser** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 

@@ -40,9 +40,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$AttributeName = "AttributeName_example" # String | azure ad attribute name
-$AttributeValue = "AttributeValue_example" # String | value of attribute name
-$Office365TenantId = "Office365TenantId_example" # String | office 365 tenant id, optional, if not specified, only return the first tenant's result which is not empty (optional)
+$AttributeName = "MyAttributeName" # String | azure ad attribute name
+$AttributeValue = "MyAttributeValue" # String | value of attribute name
+$Office365TenantId = "MyOffice365TenantId" # String | office 365 tenant id, optional, if not specified, only return the first tenant's result which is not empty (optional)
 
 # filter users by property value
 try {
@@ -81,6 +81,7 @@ Name | Type | Description  | Notes
 > StringModel Get-AzureAdUserPropertyValue<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Username] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PropertyName] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ExtensionAttribute] <String><br>
 
 get Azure Ad user's property value
 
@@ -103,12 +104,13 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Username = "Username_example" # String | 
-$PropertyName = "PropertyName_example" # String | 
+$Username = "MyUsername" # String | 
+$PropertyName = "MyPropertyName" # String | 
+$ExtensionAttribute = "MyExtensionAttribute" # String |  (optional) (default to "")
 
 # get Azure Ad user's property value
 try {
-     $Result = Get-AzureAdUserPropertyValue -Username $Username -PropertyName $PropertyName
+     $Result = Get-AzureAdUserPropertyValue -Username $Username -PropertyName $PropertyName -ExtensionAttribute $ExtensionAttribute
 } catch {
     Write-Host ("Exception occured when calling Get-AzureAdUserPropertyValue: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -121,6 +123,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Username** | **String**|  | 
  **PropertyName** | **String**|  | 
+ **ExtensionAttribute** | **String**|  | [optional] [default to &quot;&quot;]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -163,7 +166,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Username = "Username_example" # String | 
+$Username = "MyUsername" # String | 
 
 # get user's extension property value from azure ad
 try {
@@ -222,8 +225,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Userprincipalname = "Userprincipalname_example" # String | 
-$Groupid = "Groupid_example" # String | 
+$Userprincipalname = "MyUserprincipalname" # String | 
+$Groupid = "MyGroupid" # String | 
 
 # Is Member Of Group
 try {
@@ -267,6 +270,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupEmail] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsGetTenantBySiteUrl] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IncludeBlockedUser] <System.Nullable[Boolean]><br>
 
 resolve users
 
@@ -289,18 +293,19 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Keyword = "Keyword_example" # String | 
-$UserType = (Initialize-ApiUserType ) # ApiUserType | 
-$UserSource = (Initialize-UserSource ) # UserSource | 
-$SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
-$SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
-$GroupEmail = "GroupEmail_example" # String |  (optional) (default to "")
-$PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
-$IsGetTenantBySiteUrl = true # Boolean |  (optional) (default to $true)
+$Keyword = "MyKeyword" # String | 
+$UserType = "1" # ApiUserType | 
+$UserSource = "0" # UserSource | 
+$SharingOptions = "0" # ExternalSharingOptions | 
+$SiteUrlOrTenantId = "MySiteUrlOrTenantId" # String |  (optional) (default to "")
+$GroupEmail = "MyGroupEmail" # String |  (optional) (default to "")
+$PeopleFilterProfileId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$IsGetTenantBySiteUrl = $true # Boolean |  (optional) (default to $true)
+$IncludeBlockedUser = $true # Boolean |  (optional) (default to $false)
 
 # resolve users
 try {
-     $Result = Resolve-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -GroupEmail $GroupEmail -PeopleFilterProfileId $PeopleFilterProfileId -IsGetTenantBySiteUrl $IsGetTenantBySiteUrl
+     $Result = Resolve-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -GroupEmail $GroupEmail -PeopleFilterProfileId $PeopleFilterProfileId -IsGetTenantBySiteUrl $IsGetTenantBySiteUrl -IncludeBlockedUser $IncludeBlockedUser
 } catch {
     Write-Host ("Exception occured when calling Resolve-ACGUsers: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -319,6 +324,7 @@ Name | Type | Description  | Notes
  **GroupEmail** | **String**|  | [optional] [default to &quot;&quot;]
  **PeopleFilterProfileId** | [**String**](String.md)|  | [optional] 
  **IsGetTenantBySiteUrl** | **Boolean**|  | [optional] [default to $true]
+ **IncludeBlockedUser** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -346,6 +352,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupEmail] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsGetTenantBySiteUrl] <System.Nullable[Boolean]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IncludeBlockedUser] <System.Nullable[Boolean]><br>
 
 search users
 
@@ -368,18 +375,19 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Keyword = "Keyword_example" # String | 
-$UserType = (Initialize-ApiUserType ) # ApiUserType | 
-$UserSource = (Initialize-UserSource ) # UserSource | 
-$SharingOptions = (Initialize-ExternalSharingOptions ) # ExternalSharingOptions | 
-$SiteUrlOrTenantId = "SiteUrlOrTenantId_example" # String |  (optional) (default to "")
-$GroupEmail = "GroupEmail_example" # String |  (optional) (default to "")
-$PeopleFilterProfileId = "PeopleFilterProfileId_example" # String |  (optional)
-$IsGetTenantBySiteUrl = true # Boolean |  (optional) (default to $true)
+$Keyword = "MyKeyword" # String | 
+$UserType = "1" # ApiUserType | 
+$UserSource = "0" # UserSource | 
+$SharingOptions = "0" # ExternalSharingOptions | 
+$SiteUrlOrTenantId = "MySiteUrlOrTenantId" # String |  (optional) (default to "")
+$GroupEmail = "MyGroupEmail" # String |  (optional) (default to "")
+$PeopleFilterProfileId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$IsGetTenantBySiteUrl = $true # Boolean |  (optional) (default to $true)
+$IncludeBlockedUser = $true # Boolean |  (optional) (default to $false)
 
 # search users
 try {
-     $Result = Search-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -GroupEmail $GroupEmail -PeopleFilterProfileId $PeopleFilterProfileId -IsGetTenantBySiteUrl $IsGetTenantBySiteUrl
+     $Result = Search-ACGUsers -Keyword $Keyword -UserType $UserType -UserSource $UserSource -SharingOptions $SharingOptions -SiteUrlOrTenantId $SiteUrlOrTenantId -GroupEmail $GroupEmail -PeopleFilterProfileId $PeopleFilterProfileId -IsGetTenantBySiteUrl $IsGetTenantBySiteUrl -IncludeBlockedUser $IncludeBlockedUser
 } catch {
     Write-Host ("Exception occured when calling Search-ACGUsers: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -398,6 +406,7 @@ Name | Type | Description  | Notes
  **GroupEmail** | **String**|  | [optional] [default to &quot;&quot;]
  **PeopleFilterProfileId** | [**String**](String.md)|  | [optional] 
  **IsGetTenantBySiteUrl** | **Boolean**|  | [optional] [default to $true]
+ **IncludeBlockedUser** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

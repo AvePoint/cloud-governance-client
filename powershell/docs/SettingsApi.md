@@ -36,8 +36,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Tenantid = "Tenantid_example" # String | 
-$IsDynamic = true # Boolean |  (optional) (default to $false)
+$Tenantid = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$IsDynamic = $true # Boolean |  (optional) (default to $false)
 
 # get group/teams dynamic membership rules
 try {

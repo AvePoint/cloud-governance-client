@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **StatusDescription** | **String** |  | [optional] 
 **Language** | **Int32** |  | [optional] [default to 0]
+**CategoryId** | **String** |  | [optional] 
 **ModifiedTime** | **System.DateTime** |  | [optional] 
 **ModifiedBy** | **String** |  | [optional] 
 **ModifiedByDisplayName** | **String** |  | [optional] 
@@ -29,6 +30,7 @@ $ServiceGridModel = New-Cloud.Governance.ClientServiceGridModel  -Id null `
  -Status null `
  -StatusDescription null `
  -Language null `
+ -CategoryId null `
  -ModifiedTime null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `

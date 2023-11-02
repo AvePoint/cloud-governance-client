@@ -34,7 +34,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApiCredential = (Initialize-ApiCredential -ClientSecret "ClientSecret_example" -UserPrincipalName "UserPrincipalName_example") # ApiCredential | 
+$ApiCredential = $ApiCredential = New-ApiCredential -ClientSecret "MyClientSecret" -UserPrincipalName "MyUserPrincipalName" # ApiCredential | 
 
 # get delegate access token by client id and client secret which created in cloud governance Api Authentication Management
 try {
@@ -92,7 +92,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$RefreshToken = "RefreshToken_example" # String | 
+$RefreshToken = "MyRefreshToken" # String | 
 
 # refresh user access token
 try {

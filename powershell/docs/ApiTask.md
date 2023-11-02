@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **DueDate** | **System.DateTime** |  | [optional] 
 **TaskFullPath** | **String** |  | [optional] 
 **AppId** | **String** |  | [optional] 
+**IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
 **DynamicActions** | [**TaskDynamicActions[]**](TaskDynamicActions.md) |  | [optional] 
 
 ## Examples
@@ -51,6 +52,7 @@ $ApiTask = New-Cloud.Governance.ClientApiTask  -DynamicProperties null `
  -DueDate null `
  -TaskFullPath null `
  -AppId null `
+ -IsEnabledPassback null `
  -DynamicActions null
 ```
 

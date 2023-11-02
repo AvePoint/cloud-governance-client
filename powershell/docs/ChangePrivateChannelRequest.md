@@ -9,6 +9,9 @@ Name | Type | Description | Notes
 **ChannelDescription** | [**StringChangedProperty**](StringChangedProperty.md) | Channnel description | [optional] 
 **Owners** | [**ApiUserIListChangedProperty**](ApiUserIListChangedProperty.md) | Channnel owners | [optional] 
 **Members** | [**ApiUserIListChangedProperty**](ApiUserIListChangedProperty.md) | Channnel members | [optional] 
+**EnableChangePrivateChannelQuota** | **Boolean** |  | [optional] [default to $false]
+**QuotaStorage** | [**Int64ChangedProperty**](Int64ChangedProperty.md) |  | [optional] 
+**QuotaStorageUsed** | **Double** |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -28,6 +31,7 @@ Name | Type | Description | Notes
 **LastUpdated** | **System.DateTime** | Last updated time of request. | [optional] [readonly] 
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
+**IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -47,6 +51,9 @@ $ChangePrivateChannelRequest = New-Cloud.Governance.ClientChangePrivateChannelRe
  -ChannelDescription null `
  -Owners null `
  -Members null `
+ -EnableChangePrivateChannelQuota null `
+ -QuotaStorage null `
+ -QuotaStorageUsed null `
  -Id null `
  -ServiceId null `
  -Summary null `
@@ -66,6 +73,7 @@ $ChangePrivateChannelRequest = New-Cloud.Governance.ClientChangePrivateChannelRe
  -LastUpdated null `
  -CreatedTime null `
  -HasSubRequest null `
+ -IsEnabledPassback null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `

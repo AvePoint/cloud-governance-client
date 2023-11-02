@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **ObjectID** | **String** |  | [optional] 
 **CreatedTime** | **System.DateTime** |  | [optional] 
 **HasSubRequest** | **Boolean** |  | [optional] [default to $false]
+**IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
 **Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 
 ## Examples
@@ -75,6 +76,7 @@ $AllRequestDetails = New-Cloud.Governance.ClientAllRequestDetails  -LastApproved
  -ObjectID null `
  -CreatedTime null `
  -HasSubRequest null `
+ -IsEnabledPassback null `
  -Metadata null
 ```
 

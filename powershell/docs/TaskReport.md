@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **RequestLastModifiedTime** | **System.DateTime** |  | [optional] 
 **RequestProgressStatus** | [**RequestProgressStatus**](RequestProgressStatus.md) |  | [optional] 
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
+**TaskTypeDescription** | **String** |  | [optional] 
 **Status** | [**TaskResult**](TaskResult.md) |  | [optional] 
 **StatusDescription** | **String** |  | [optional] 
 **IsApproveTask** | **Boolean** |  | [optional] [default to $false]
@@ -46,6 +47,7 @@ $TaskReport = New-Cloud.Governance.ClientTaskReport  -Id null `
  -RequestLastModifiedTime null `
  -RequestProgressStatus null `
  -TaskType null `
+ -TaskTypeDescription null `
  -Status null `
  -StatusDescription null `
  -IsApproveTask null `

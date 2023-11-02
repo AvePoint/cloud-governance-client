@@ -62,6 +62,8 @@ Name | Type | Description | Notes
 **LastSyncTime** | **DateTime?** |  | [optional] 
 **LockedByDescription** | **string** |  | [optional] 
 **CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
+**SiteTemplate** | **string** |  | [optional] 
+**SiteTemplateTitle** | **string** |  | [optional] 
 **QuotaProfileName** | **string** |  | [optional] 
 **QuotaProfileId** | **Guid?** |  | [optional] 
 **ExternalSharingProfileName** | **string** |  | [optional] 

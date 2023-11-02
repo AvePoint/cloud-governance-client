@@ -7,6 +7,9 @@ Name | Type | Description | Notes
 **Name** | **String** |  | [optional] 
 **Expression** | **String** |  | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
+**Type** | [**TextValidationType**](TextValidationType.md) |  | [optional] 
+**ModifiedBy** | **String** |  | [optional] 
+**BlockWord** | **String** |  | [optional] 
 
 ## Examples
 
@@ -15,7 +18,10 @@ Name | Type | Description | Notes
 $TextValidationRuleRef = New-Cloud.Governance.ClientTextValidationRuleRef  -Id null `
  -Name null `
  -Expression null `
- -ErrorMessage null
+ -ErrorMessage null `
+ -Type null `
+ -ModifiedBy null `
+ -BlockWord null
 ```
 
 - Convert the resource to JSON

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PreferredDataLocation** | **String** |  | [optional] 
 **PreferredDataLocationName** | **String** |  | [optional] 
+**Alias** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Email** | **String** |  | [optional] 
@@ -13,6 +14,8 @@ Name | Type | Description | Notes
 **Status** | [**ExchangeResourceStatus**](ExchangeResourceStatus.md) |  | [optional] 
 **WorkspaceType** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
 **WorkspaceTypeDes** | **String** |  | [optional] 
+**HasSubmitted** | **Boolean** |  | [optional] [default to $false]
+**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
@@ -42,8 +45,6 @@ Name | Type | Description | Notes
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
 **CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
-**HasSubmitted** | **Boolean** |  | [optional] [default to $false]
-**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -51,6 +52,7 @@ Name | Type | Description | Notes
 ```powershell
 $MySharedMailbox = New-Cloud.Governance.ClientMySharedMailbox  -PreferredDataLocation null `
  -PreferredDataLocationName null `
+ -Alias null `
  -Name null `
  -Description null `
  -Email null `
@@ -59,6 +61,8 @@ $MySharedMailbox = New-Cloud.Governance.ClientMySharedMailbox  -PreferredDataLoc
  -Status null `
  -WorkspaceType null `
  -WorkspaceTypeDes null `
+ -HasSubmitted null `
+ -HasPendingApprovalTask null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `
@@ -87,9 +91,7 @@ $MySharedMailbox = New-Cloud.Governance.ClientMySharedMailbox  -PreferredDataLoc
  -PrimaryContact null `
  -SecondaryContact null `
  -ErrorMessage null `
- -CreatedSource null `
- -HasSubmitted null `
- -HasPendingApprovalTask null
+ -CreatedSource null
 ```
 
 - Convert the resource to JSON

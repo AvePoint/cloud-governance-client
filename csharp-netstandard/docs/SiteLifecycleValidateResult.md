@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteId** | **Guid** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
+**ApprovalProcessHasManagerRole** | **bool** |  | [optional] [default to false]
 **ChangeQuotaSetting** | [**ChangeSiteQuotaSettings**](ChangeSiteQuotaSettings.md) |  | [optional] 
 **ExtendSetting** | [**ExtendSiteSetting**](ExtendSiteSetting.md) |  | [optional] 
 **UnlockSetting** | [**UnlockSiteSetting**](UnlockSiteSetting.md) |  | [optional] 

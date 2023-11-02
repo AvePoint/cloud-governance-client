@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **Sensitivity** | **string** |  | [optional] 
 **PrivacyDescription** | **string** |  | [optional] 
 **EnableDynamicMembership** | **bool?** |  | [optional] [default to false]
+**WebLink** | **string** |  | [optional] 
 **EnableDynamicMembershipDescription** | **string** |  | [optional] 
 **Metadata** | [**List&lt;EndUserReportMetadata&gt;**](EndUserReportMetadata.md) |  | [optional] 
 
