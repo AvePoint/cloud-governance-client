@@ -36,6 +36,9 @@ Name | Type | Description | Notes
 **RenewalDetails** | [**AnyType**](.md) |  | [optional] 
 **IsFinalStep** | [**AnyType**](.md) |  | [optional] 
 **ObjectId** | [**AnyType**](.md) |  | [optional] 
+**IsTriggerTaskWhenSecondaryEmpty** | [**AnyType**](.md) |  | [optional] 
+**PeoplePickerProfileId** | [**AnyType**](.md) |  | [optional] 
+**EnvironmentDisplayName** | [**AnyType**](.md) |  | [optional] 
 
 ## Examples
 
@@ -73,7 +76,10 @@ $ApiTaskDynamicProperties = New-Cloud.Governance.ClientApiTaskDynamicProperties 
  -ElectionProfile null `
  -RenewalDetails null `
  -IsFinalStep null `
- -ObjectId null
+ -ObjectId null `
+ -IsTriggerTaskWhenSecondaryEmpty null `
+ -PeoplePickerProfileId null `
+ -EnvironmentDisplayName null
 ```
 
 - Convert the resource to JSON

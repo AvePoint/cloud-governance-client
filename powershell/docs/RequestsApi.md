@@ -35,18 +35,26 @@ Method | HTTP request | Description
 [**Get-DynamicRequest**](RequestsApi.md#Get-DynamicRequest) | **GET** /requests/dynamic/{id} | get dynamic request
 [**Get-DynamicRequestChangeContactGallery**](RequestsApi.md#Get-DynamicRequestChangeContactGallery) | **GET** /requests/dynamic/{id}/gallery/changecontact | 
 [**Get-DynamicRequestChangeExchangeResourceMembershipGallery**](RequestsApi.md#Get-DynamicRequestChangeExchangeResourceMembershipGallery) | **GET** /requests/dynamic/{id}/gallery/changeexchangeresourcemembership | 
+[**Get-DynamicRequestChangeLicenseGallery**](RequestsApi.md#Get-DynamicRequestChangeLicenseGallery) | **GET** /requests/dynamic/{id}/gallery/changelicense | 
+[**Get-DynamicRequestChangeSecurityGroupSettingsGallery**](RequestsApi.md#Get-DynamicRequestChangeSecurityGroupSettingsGallery) | **GET** /requests/dynamic/{id}/gallery/changesecuritygroupsettings | 
+[**Get-DynamicRequestChangeSharedChannelGallery**](RequestsApi.md#Get-DynamicRequestChangeSharedChannelGallery) | **GET** /requests/dynamic/{id}/gallery/changesharedchannel | 
 [**Get-DynamicRequestChangeSharedMailboxPermissionGallery**](RequestsApi.md#Get-DynamicRequestChangeSharedMailboxPermissionGallery) | **GET** /requests/dynamic/{id}/gallery/changesharedmailboxpermission | 
+[**Get-DynamicRequestChangeSiteProfileGallery**](RequestsApi.md#Get-DynamicRequestChangeSiteProfileGallery) | **GET** /requests/dynamic/{id}/gallery/changesiteprofile | 
 [**Get-DynamicRequestChangeSiteSettingGallery**](RequestsApi.md#Get-DynamicRequestChangeSiteSettingGallery) | **GET** /requests/dynamic/{id}/gallery/changesitesetting | 
 [**Get-DynamicRequestChangeTeamSettingGallery**](RequestsApi.md#Get-DynamicRequestChangeTeamSettingGallery) | **GET** /requests/dynamic/{id}/gallery/changeteamsetting | 
 [**Get-DynamicRequestCreateDistributionListGallery**](RequestsApi.md#Get-DynamicRequestCreateDistributionListGallery) | **GET** /requests/dynamic/{id}/gallery/createdistributionlist | 
+[**Get-DynamicRequestCreateEquipmentMailboxGallery**](RequestsApi.md#Get-DynamicRequestCreateEquipmentMailboxGallery) | **GET** /requests/dynamic/{id}/gallery/createequipmentmailbox | 
 [**Get-DynamicRequestCreateGroupGallery**](RequestsApi.md#Get-DynamicRequestCreateGroupGallery) | **GET** /requests/dynamic/{id}/gallery/creategroups | 
 [**Get-DynamicRequestCreateLibraryGallery**](RequestsApi.md#Get-DynamicRequestCreateLibraryGallery) | **GET** /requests/dynamic/{id}/gallery/createlibrary | 
 [**Get-DynamicRequestCreateMailEnabledGroupGallery**](RequestsApi.md#Get-DynamicRequestCreateMailEnabledGroupGallery) | **GET** /requests/dynamic/{id}/gallery/createmailenabledgroup | 
+[**Get-DynamicRequestCreateRoomMailboxGallery**](RequestsApi.md#Get-DynamicRequestCreateRoomMailboxGallery) | **GET** /requests/dynamic/{id}/gallery/createroommailbox | 
 [**Get-DynamicRequestCreateSecurityGroupGallery**](RequestsApi.md#Get-DynamicRequestCreateSecurityGroupGallery) | **GET** /requests/dynamic/{id}/gallery/createsecuritygroupgallery | 
+[**Get-DynamicRequestCreateSharedChannelGallery**](RequestsApi.md#Get-DynamicRequestCreateSharedChannelGallery) | **GET** /requests/dynamic/{id}/gallery/createsharedchannel | 
 [**Get-DynamicRequestCreateSharedMailboxGallery**](RequestsApi.md#Get-DynamicRequestCreateSharedMailboxGallery) | **GET** /requests/dynamic/{id}/gallery/createsharedmailbox | 
 [**Get-DynamicRequestCreateSiteGallery**](RequestsApi.md#Get-DynamicRequestCreateSiteGallery) | **GET** /requests/dynamic/{id}/gallery/createsite | 
 [**Get-DynamicRequestCreateTeamsGallery**](RequestsApi.md#Get-DynamicRequestCreateTeamsGallery) | **GET** /requests/dynamic/{id}/gallery/createteams | 
 [**Get-DynamicRequestExchangeResourceLifecycleGallery**](RequestsApi.md#Get-DynamicRequestExchangeResourceLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/exchangeresourcelifecycle | 
+[**Get-DynamicRequestInviteGuestGallery**](RequestsApi.md#Get-DynamicRequestInviteGuestGallery) | **GET** /requests/dynamic/{id}/gallery/inviteguest | 
 [**Get-DynamicRequestM365GroupLifecycleGallery**](RequestsApi.md#Get-DynamicRequestM365GroupLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/m365grouplifecycle | 
 [**Get-DynamicRequestSCLifecycleGallery**](RequestsApi.md#Get-DynamicRequestSCLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/sclifecycle | 
 [**Get-DynamicRequestSharedMailboxLifecycleGallery**](RequestsApi.md#Get-DynamicRequestSharedMailboxLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/sharedmailboxlifecycle | 
@@ -1902,6 +1910,186 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-DynamicRequestChangeLicenseGallery"></a>
+# **Get-DynamicRequestChangeLicenseGallery**
+> ChangeLicenseGallery Get-DynamicRequestChangeLicenseGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestChangeLicenseGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestChangeLicenseGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ChangeLicenseGallery**](ChangeLicenseGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-DynamicRequestChangeSecurityGroupSettingsGallery"></a>
+# **Get-DynamicRequestChangeSecurityGroupSettingsGallery**
+> ChangeSecurityGroupSettingsGalleryRequestModel Get-DynamicRequestChangeSecurityGroupSettingsGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestChangeSecurityGroupSettingsGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestChangeSecurityGroupSettingsGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ChangeSecurityGroupSettingsGalleryRequestModel**](ChangeSecurityGroupSettingsGalleryRequestModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-DynamicRequestChangeSharedChannelGallery"></a>
+# **Get-DynamicRequestChangeSharedChannelGallery**
+> ChangeSharedChannelGallery Get-DynamicRequestChangeSharedChannelGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestChangeSharedChannelGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestChangeSharedChannelGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ChangeSharedChannelGallery**](ChangeSharedChannelGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-DynamicRequestChangeSharedMailboxPermissionGallery"></a>
 # **Get-DynamicRequestChangeSharedMailboxPermissionGallery**
 > ChangeSharedMailboxPermissionGallery Get-DynamicRequestChangeSharedMailboxPermissionGallery<br>
@@ -1950,6 +2138,66 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ChangeSharedMailboxPermissionGallery**](ChangeSharedMailboxPermissionGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-DynamicRequestChangeSiteProfileGallery"></a>
+# **Get-DynamicRequestChangeSiteProfileGallery**
+> ChangeSiteProfilesGallery Get-DynamicRequestChangeSiteProfileGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestChangeSiteProfileGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestChangeSiteProfileGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ChangeSiteProfilesGallery**](ChangeSiteProfilesGallery.md)
 
 ### Authorization
 
@@ -2142,6 +2390,66 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-DynamicRequestCreateEquipmentMailboxGallery"></a>
+# **Get-DynamicRequestCreateEquipmentMailboxGallery**
+> CreateEquipmentMailboxGallery Get-DynamicRequestCreateEquipmentMailboxGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestCreateEquipmentMailboxGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestCreateEquipmentMailboxGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreateEquipmentMailboxGallery**](CreateEquipmentMailboxGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-DynamicRequestCreateGroupGallery"></a>
 # **Get-DynamicRequestCreateGroupGallery**
 > CreateGroupGallery Get-DynamicRequestCreateGroupGallery<br>
@@ -2322,6 +2630,66 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-DynamicRequestCreateRoomMailboxGallery"></a>
+# **Get-DynamicRequestCreateRoomMailboxGallery**
+> CreateRoomMailboxGallery Get-DynamicRequestCreateRoomMailboxGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestCreateRoomMailboxGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestCreateRoomMailboxGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreateRoomMailboxGallery**](CreateRoomMailboxGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-DynamicRequestCreateSecurityGroupGallery"></a>
 # **Get-DynamicRequestCreateSecurityGroupGallery**
 > CreateSecurityGroupGallery Get-DynamicRequestCreateSecurityGroupGallery<br>
@@ -2370,6 +2738,66 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**CreateSecurityGroupGallery**](CreateSecurityGroupGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-DynamicRequestCreateSharedChannelGallery"></a>
+# **Get-DynamicRequestCreateSharedChannelGallery**
+> CreateSharedChannelGallery Get-DynamicRequestCreateSharedChannelGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestCreateSharedChannelGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestCreateSharedChannelGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**CreateSharedChannelGallery**](CreateSharedChannelGallery.md)
 
 ### Authorization
 
@@ -2610,6 +3038,66 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**ExchangeResourceLifecycleGallery**](ExchangeResourceLifecycleGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-DynamicRequestInviteGuestGallery"></a>
+# **Get-DynamicRequestInviteGuestGallery**
+> InviteGuestGallery Get-DynamicRequestInviteGuestGallery<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$GalleryName = "MyGalleryName" # String | 
+
+try {
+     $Result = Get-DynamicRequestInviteGuestGallery -Id $Id -GalleryName $GalleryName
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicRequestInviteGuestGallery: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+ **GalleryName** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**InviteGuestGallery**](InviteGuestGallery.md)
 
 ### Authorization
 
@@ -3611,7 +4099,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -3688,7 +4176,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -3766,7 +4254,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -3848,7 +4336,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -3925,7 +4413,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -3999,7 +4487,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ChangeGroupSettingRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupMembershipAction = New-GroupMembershipAction 
 $GroupMembershipItem = New-GroupMembershipItem -LoginName "MyLoginName" -DisplayName "MyDisplayName" -AzureUserType "MyAzureUserType" -IsGroup $false -Action $GroupMembershipAction
@@ -4011,7 +4499,7 @@ $DynamicRuleCondition = New-DynamicRuleCondition
 $AuthenticationType = New-AuthenticationType 
 $InviteType = New-InviteType 
 $PrincipalType = New-PrincipalType 
-$UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
+$UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -IsAccountEnabled $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
 
 $DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo
 
@@ -4106,7 +4594,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -4186,7 +4674,7 @@ $PermissionChangedType = New-PermissionChangedType
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
@@ -4263,7 +4751,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ChangePrivateChannelRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
 
@@ -4347,7 +4835,7 @@ $ChangeSiteContactRequest = $ChangeContactMethod = New-ChangeContactMethod
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $ChangeContactByUrlSetting = New-ChangeContactByUrlSetting -SiteId "MySiteId" -SiteUrl "MySiteUrl" -OriginalPrimaryContact $ApiUser -NewPrimaryContact $ApiUser -OriginalSecondaryContact $ApiUser -NewSecondaryContact $ApiUser -OriginalPrimaryAdministrator $ApiUser -NewPrimaryAdministrator $ApiUser -OriginalAdditionalAdministrators $ApiUser -NewAdditionalAdministrators $ApiUser -SiteTitle "MySiteTitle"
 
@@ -4437,7 +4925,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -4514,7 +5002,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -4591,7 +5079,7 @@ $ChangeSiteSettingRequest = $StringChangedProperty = New-StringChangedProperty -
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -4672,7 +5160,7 @@ $ChangeWebContactRequest = $ChangeContactMethod = New-ChangeContactMethod
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $ChangeContactByUserSetting = New-ChangeContactByUserSetting -CurrentUser $ApiUser -NewUser $ApiUser -AlternativeUser $ApiUser
 
@@ -4761,7 +5249,7 @@ $StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" 
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -4839,7 +5327,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ClonePermissionRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $ClonePermissionOption = New-ClonePermissionOption 
 $ClonePermissionAdditionalOption = New-ClonePermissionAdditionalOption 
@@ -4942,7 +5430,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -5018,7 +5506,7 @@ $CreateGroupRequest = $CreateGroupType = New-CreateGroupType
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupLinks = New-GroupLinks -GroupSiteLink "MyGroupSiteLink" -GroupPlannerLink "MyGroupPlannerLink" -GroupFilesLink "MyGroupFilesLink" -GroupConversationsLink "MyGroupConversationsLink" -GroupNotebookLink "MyGroupNotebookLink" -YammerGroupLink "MyYammerGroupLink" -TeamLink "MyTeamLink"
 
@@ -5041,7 +5529,7 @@ $DynamicRuleCondition = New-DynamicRuleCondition
 $AuthenticationType = New-AuthenticationType 
 $InviteType = New-InviteType 
 $PrincipalType = New-PrincipalType 
-$UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
+$UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -IsAccountEnabled $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
 
 $DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo
 
@@ -5126,7 +5614,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $CreateGuestUserRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GuestUserPropertyModel = New-GuestUserPropertyModel -DisplayName "MyDisplayName" -FirstName "MyFirstName" -LastName "MyLastName" -UserName "MyUserName" -UsageLocation "MyUsageLocation" -UsageLocationDisplayName "MyUsageLocationDisplayName" -JobTitle "MyJobTitle" -JobDepartment "MyJobDepartment" -Manager $ApiUser -CompanyName "MyCompanyName"
 
@@ -5216,12 +5704,12 @@ $ListVersionSettings = New-ListVersionSettings -ListType $ListType -EnableMajorV
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0
+$PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
 $RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
-$GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
@@ -5304,7 +5792,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $CreatePrivateChannelRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
@@ -5383,17 +5871,17 @@ $CreateSiteRequest = $SiteUrl = New-SiteUrl -Root "MyRoot" -ManagedPath "MyManag
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $StringModel = New-StringModel -Id "MyId" -Name "MyName"
 
 $ConvertHubSiteActionType = New-ConvertHubSiteActionType 
 $HubSiteSettings = New-HubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
 
-$PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0
+$PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
 $RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
-$GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
@@ -5484,12 +5972,12 @@ $CreateWebRequest = $IntModel = New-IntModel -Id 0 -Name "MyName" -Description "
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0
+$PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
 $RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
-$GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
@@ -5576,7 +6064,7 @@ $ApiRequest = $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "My
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -5655,7 +6143,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -5732,7 +6220,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -5810,7 +6298,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -5885,7 +6373,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $DynamicRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -5969,7 +6457,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -6047,7 +6535,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -6131,9 +6619,9 @@ $ExpirationType = New-ExpirationType
 $DurationDateType = New-DurationDateType 
 $GrantPermissionRequestDurationSettings = New-GrantPermissionRequestDurationSettings -IsGrantTemporaryPermission $false -IsGrantPermissionLevel $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $DurationDateType -StartTime (Get-Date) -EndTime (Get-Date)
 
-$ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestUser $false -IsGuestUserExistsInOrganization $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ExternalUserType = New-ExternalUserType 
+$SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestUser $false -IsGuestUserExistsInOrganization $false -ApiUserType $ApiUserType -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  }
 
 $ExternalUserSharingType = New-ExternalUserSharingType 
 
@@ -6145,7 +6633,7 @@ $ExternalUserSharingSettings = New-ExternalUserSharingSettings -Enabled $false -
 $WelcomeEmailSettings = New-WelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -6224,7 +6712,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -6303,7 +6791,7 @@ $StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" 
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $ManagePermissionAction = New-ManagePermissionAction 
 $SPUserManagementModel = New-SPUserManagementModel -IdentityName "MyIdentityName" -DisplayName "MyDisplayName" -IsGroup $false -AzureUserType "MyAzureUserType" -Action $ManagePermissionAction -ExternalUserType $ExternalUserType -Email "MyEmail"
@@ -6314,11 +6802,11 @@ $SPGroupManagementModel = New-SPGroupManagementModel -Id 0 -Name $StringChangedP
 
 $SPPrincipalType = New-SPPrincipalType 
 
-$SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestUser $false -IsGuestUserExistsInOrganization $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestUser $false -IsGuestUserExistsInOrganization $false -ApiUserType $ApiUserType -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  }
 
 $ExpirationType = New-ExpirationType 
 $ApiDurationType = New-ApiDurationType 
-$TemporaryPermissionRequestSetting = New-TemporaryPermissionRequestSetting -IsGrantTemporaryPermission $false -IsGrantAdminGroup $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $ApiDurationType -StartTime (Get-Date) -EndTime (Get-Date)
+$TemporaryPermissionRequestSetting = New-TemporaryPermissionRequestSetting -IsGrantTemporaryPermission $false -IsGrantAdminGroup $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $ApiDurationType -StartTime (Get-Date) -EndTime (Get-Date) -TempPermissionGroupIdentity "MyTempPermissionGroupIdentity"
 
 $WelcomeEmailSettings = New-WelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
 $GrantPermissionModel = New-GrantPermissionModel -PermissionDurationSettings $TemporaryPermissionRequestSetting -WelcomeEmailSettings $WelcomeEmailSettings
@@ -6406,7 +6894,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 
@@ -6484,7 +6972,7 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue"
 

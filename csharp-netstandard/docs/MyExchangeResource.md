@@ -12,8 +12,6 @@ Name | Type | Description | Notes
 **Status** | **ExchangeResourceStatus** |  | [optional] 
 **WorkspaceType** | **WorkspaceType** |  | [optional] 
 **WorkspaceTypeDes** | **string** |  | [optional] 
-**HasSubmitted** | **bool** |  | [optional] [default to false]
-**HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
 **Id** | **Guid** |  | [optional] 
 **Phase** | **AutoImportPhase** |  | [optional] 
 **PhaseStartTime** | **DateTime?** |  | [optional] 
@@ -43,6 +41,8 @@ Name | Type | Description | Notes
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **string** |  | [optional] 
 **CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
+**HasSubmitted** | **bool** |  | [optional] [default to false]
+**HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

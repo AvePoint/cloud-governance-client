@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **Communication** | [**Communication**](Communication.md) |  | [optional] 
 **MembershipApproval** | [**MembershipApproval**](MembershipApproval.md) |  | [optional] 
 **MessageApproval** | [**MessageApproval**](MessageApproval.md) |  | [optional] 
+**DeliveryManagement** | [**DeliveryManagement**](DeliveryManagement.md) |  | [optional] 
 **GroupEmailAddress** | [**EmailAddress**](EmailAddress.md) |  | [optional] 
 **GlobalAddressList** | [**GlobalAddressList**](GlobalAddressList.md) |  | [optional] 
 **GroupEmail** | **string** |  | [optional] [readonly] 

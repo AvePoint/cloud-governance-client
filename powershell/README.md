@@ -1,6 +1,6 @@
 # Cloud.Governance.Client - A PowerShell client for AvePoint Cloud Governance public REST endpoints providing the functionalities of Cloud Governance.
 
-- SDK version: 6.10.0
+- SDK version: 7.6.0
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -90,18 +90,26 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**Get-DynamicRequest**](docs/RequestsApi.md#Get-DynamicRequest) | **GET** /requests/dynamic/{id} | get dynamic request
 *RequestsApi* | [**Get-DynamicRequestChangeContactGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeContactGallery) | **GET** /requests/dynamic/{id}/gallery/changecontact | 
 *RequestsApi* | [**Get-DynamicRequestChangeExchangeResourceMembershipGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeExchangeResourceMembershipGallery) | **GET** /requests/dynamic/{id}/gallery/changeexchangeresourcemembership | 
+*RequestsApi* | [**Get-DynamicRequestChangeLicenseGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeLicenseGallery) | **GET** /requests/dynamic/{id}/gallery/changelicense | 
+*RequestsApi* | [**Get-DynamicRequestChangeSecurityGroupSettingsGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeSecurityGroupSettingsGallery) | **GET** /requests/dynamic/{id}/gallery/changesecuritygroupsettings | 
+*RequestsApi* | [**Get-DynamicRequestChangeSharedChannelGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeSharedChannelGallery) | **GET** /requests/dynamic/{id}/gallery/changesharedchannel | 
 *RequestsApi* | [**Get-DynamicRequestChangeSharedMailboxPermissionGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeSharedMailboxPermissionGallery) | **GET** /requests/dynamic/{id}/gallery/changesharedmailboxpermission | 
+*RequestsApi* | [**Get-DynamicRequestChangeSiteProfileGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeSiteProfileGallery) | **GET** /requests/dynamic/{id}/gallery/changesiteprofile | 
 *RequestsApi* | [**Get-DynamicRequestChangeSiteSettingGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeSiteSettingGallery) | **GET** /requests/dynamic/{id}/gallery/changesitesetting | 
 *RequestsApi* | [**Get-DynamicRequestChangeTeamSettingGallery**](docs/RequestsApi.md#Get-DynamicRequestChangeTeamSettingGallery) | **GET** /requests/dynamic/{id}/gallery/changeteamsetting | 
 *RequestsApi* | [**Get-DynamicRequestCreateDistributionListGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateDistributionListGallery) | **GET** /requests/dynamic/{id}/gallery/createdistributionlist | 
+*RequestsApi* | [**Get-DynamicRequestCreateEquipmentMailboxGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateEquipmentMailboxGallery) | **GET** /requests/dynamic/{id}/gallery/createequipmentmailbox | 
 *RequestsApi* | [**Get-DynamicRequestCreateGroupGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateGroupGallery) | **GET** /requests/dynamic/{id}/gallery/creategroups | 
 *RequestsApi* | [**Get-DynamicRequestCreateLibraryGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateLibraryGallery) | **GET** /requests/dynamic/{id}/gallery/createlibrary | 
 *RequestsApi* | [**Get-DynamicRequestCreateMailEnabledGroupGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateMailEnabledGroupGallery) | **GET** /requests/dynamic/{id}/gallery/createmailenabledgroup | 
+*RequestsApi* | [**Get-DynamicRequestCreateRoomMailboxGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateRoomMailboxGallery) | **GET** /requests/dynamic/{id}/gallery/createroommailbox | 
 *RequestsApi* | [**Get-DynamicRequestCreateSecurityGroupGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateSecurityGroupGallery) | **GET** /requests/dynamic/{id}/gallery/createsecuritygroupgallery | 
+*RequestsApi* | [**Get-DynamicRequestCreateSharedChannelGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateSharedChannelGallery) | **GET** /requests/dynamic/{id}/gallery/createsharedchannel | 
 *RequestsApi* | [**Get-DynamicRequestCreateSharedMailboxGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateSharedMailboxGallery) | **GET** /requests/dynamic/{id}/gallery/createsharedmailbox | 
 *RequestsApi* | [**Get-DynamicRequestCreateSiteGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateSiteGallery) | **GET** /requests/dynamic/{id}/gallery/createsite | 
 *RequestsApi* | [**Get-DynamicRequestCreateTeamsGallery**](docs/RequestsApi.md#Get-DynamicRequestCreateTeamsGallery) | **GET** /requests/dynamic/{id}/gallery/createteams | 
 *RequestsApi* | [**Get-DynamicRequestExchangeResourceLifecycleGallery**](docs/RequestsApi.md#Get-DynamicRequestExchangeResourceLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/exchangeresourcelifecycle | 
+*RequestsApi* | [**Get-DynamicRequestInviteGuestGallery**](docs/RequestsApi.md#Get-DynamicRequestInviteGuestGallery) | **GET** /requests/dynamic/{id}/gallery/inviteguest | 
 *RequestsApi* | [**Get-DynamicRequestM365GroupLifecycleGallery**](docs/RequestsApi.md#Get-DynamicRequestM365GroupLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/m365grouplifecycle | 
 *RequestsApi* | [**Get-DynamicRequestSCLifecycleGallery**](docs/RequestsApi.md#Get-DynamicRequestSCLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/sclifecycle | 
 *RequestsApi* | [**Get-DynamicRequestSharedMailboxLifecycleGallery**](docs/RequestsApi.md#Get-DynamicRequestSharedMailboxLifecycleGallery) | **GET** /requests/dynamic/{id}/gallery/sharedmailboxlifecycle | 
@@ -271,12 +279,16 @@ Class | Method | HTTP request | Description
 *WorkspaceApi* | [**Get-GroupMetadata**](docs/WorkspaceApi.md#Get-GroupMetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
 *WorkspaceApi* | [**Get-MyExchangeResourceInformation**](docs/WorkspaceApi.md#Get-MyExchangeResourceInformation) | **GET** /workspace/exchangeresource/{id} | 
 *WorkspaceApi* | [**Get-MyGroupInformation**](docs/WorkspaceApi.md#Get-MyGroupInformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
+*WorkspaceApi* | [**Get-MyResourceMailboxInformation**](docs/WorkspaceApi.md#Get-MyResourceMailboxInformation) | **GET** /workspace/resourcemailbox/{id} | 
 *WorkspaceApi* | [**Get-MySharedMailboxInformation**](docs/WorkspaceApi.md#Get-MySharedMailboxInformation) | **GET** /workspace/sharedmailbox/{id} | 
 *WorkspaceApi* | [**Get-MySiteInformation**](docs/WorkspaceApi.md#Get-MySiteInformation) | **GET** /workspace/sites/{id} | get site information
 *WorkspaceApi* | [**Get-SiteMetadata**](docs/WorkspaceApi.md#Get-SiteMetadata) | **GET** /workspace/sites/metadata | get site metadata
 *WorkspaceApi* | [**Get-WorkspaceItems**](docs/WorkspaceApi.md#Get-WorkspaceItems) | **GET** /workspace/my | get my workspace items
+*WorkspacesAdminApi* | [**Invoke-ApplyGroupProfiles**](docs/WorkspacesAdminApi.md#Invoke-ApplyGroupProfiles) | **POST** /admin/directory/workspace/group/applyprofiles | apply group profiles
 *WorkspacesAdminApi* | [**Invoke-ApplyGroupsPolicy**](docs/WorkspacesAdminApi.md#Invoke-ApplyGroupsPolicy) | **POST** /admin/directory/workspace/groups/policy | apply groups policy
+*WorkspacesAdminApi* | [**Invoke-ApplySiteProfiles**](docs/WorkspacesAdminApi.md#Invoke-ApplySiteProfiles) | **POST** /admin/directory/workspace/sites/profiles | apply site profiles
 *WorkspacesAdminApi* | [**Invoke-ApplySitesPolicy**](docs/WorkspacesAdminApi.md#Invoke-ApplySitesPolicy) | **POST** /admin/directory/workspace/sites/policy | apply site policy
+*WorkspacesAdminApi* | [**Invoke-ApplyTeamProfiles**](docs/WorkspacesAdminApi.md#Invoke-ApplyTeamProfiles) | **POST** /admin/directory/workspace/teams/profiles | apply team profiles
 *WorkspacesAdminApi* | [**Invoke-ArchiveWorkspace**](docs/WorkspacesAdminApi.md#Invoke-ArchiveWorkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 *WorkspacesAdminApi* | [**Complete-WorkspaceRenewalTask**](docs/WorkspacesAdminApi.md#Complete-WorkspaceRenewalTask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 *WorkspacesAdminApi* | [**Invoke-DeleteWorkspaces**](docs/WorkspacesAdminApi.md#Invoke-DeleteWorkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
@@ -292,6 +304,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [Cloud.Governance.Client\Model.ActivityModelbase](docs/ActivityModelbase.md)
  - [Cloud.Governance.Client\Model.AddGroupMemberType](docs/AddGroupMemberType.md)
  - [Cloud.Governance.Client\Model.AdministrativeUnit](docs/AdministrativeUnit.md)
  - [Cloud.Governance.Client\Model.AllRequestDetails](docs/AllRequestDetails.md)
@@ -307,6 +320,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ApiDurationType](docs/ApiDurationType.md)
  - [Cloud.Governance.Client\Model.ApiError](docs/ApiError.md)
  - [Cloud.Governance.Client\Model.ApiMyGroup](docs/ApiMyGroup.md)
+ - [Cloud.Governance.Client\Model.ApiProfileObjectType](docs/ApiProfileObjectType.md)
  - [Cloud.Governance.Client\Model.ApiRequest](docs/ApiRequest.md)
  - [Cloud.Governance.Client\Model.ApiRequestProgressStatus](docs/ApiRequestProgressStatus.md)
  - [Cloud.Governance.Client\Model.ApiSiteStatus](docs/ApiSiteStatus.md)
@@ -318,10 +332,14 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ApiUserIListChangedProperty](docs/ApiUserIListChangedProperty.md)
  - [Cloud.Governance.Client\Model.ApiUserPageResult](docs/ApiUserPageResult.md)
  - [Cloud.Governance.Client\Model.ApiUserType](docs/ApiUserType.md)
+ - [Cloud.Governance.Client\Model.AppInfo](docs/AppInfo.md)
+ - [Cloud.Governance.Client\Model.AppSettingType](docs/AppSettingType.md)
  - [Cloud.Governance.Client\Model.AppSettings](docs/AppSettings.md)
  - [Cloud.Governance.Client\Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
  - [Cloud.Governance.Client\Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
+ - [Cloud.Governance.Client\Model.ApplyProfilesModel](docs/ApplyProfilesModel.md)
  - [Cloud.Governance.Client\Model.ApplySitePolicyModel](docs/ApplySitePolicyModel.md)
+ - [Cloud.Governance.Client\Model.ApplyTeamProfilesModel](docs/ApplyTeamProfilesModel.md)
  - [Cloud.Governance.Client\Model.ApproveProcessModel](docs/ApproveProcessModel.md)
  - [Cloud.Governance.Client\Model.ArchiveGroupRequest](docs/ArchiveGroupRequest.md)
  - [Cloud.Governance.Client\Model.ArchiveSiteRequest](docs/ArchiveSiteRequest.md)
@@ -338,6 +356,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.AutoTaskExtendRequest](docs/AutoTaskExtendRequest.md)
  - [Cloud.Governance.Client\Model.AzureAdMetadataSettings](docs/AzureAdMetadataSettings.md)
  - [Cloud.Governance.Client\Model.BackupEnvironmentSetting](docs/BackupEnvironmentSetting.md)
+ - [Cloud.Governance.Client\Model.BookingRequestType](docs/BookingRequestType.md)
  - [Cloud.Governance.Client\Model.BooleanChangedProperty](docs/BooleanChangedProperty.md)
  - [Cloud.Governance.Client\Model.BooleanMetadataSettings](docs/BooleanMetadataSettings.md)
  - [Cloud.Governance.Client\Model.BriefGroupPolicy](docs/BriefGroupPolicy.md)
@@ -352,14 +371,21 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ChangeGroupPolicyResult](docs/ChangeGroupPolicyResult.md)
  - [Cloud.Governance.Client\Model.ChangeGroupQuotaRequest](docs/ChangeGroupQuotaRequest.md)
  - [Cloud.Governance.Client\Model.ChangeGroupQuotaResult](docs/ChangeGroupQuotaResult.md)
+ - [Cloud.Governance.Client\Model.ChangeGroupRequestDescription](docs/ChangeGroupRequestDescription.md)
+ - [Cloud.Governance.Client\Model.ChangeGroupRequestName](docs/ChangeGroupRequestName.md)
+ - [Cloud.Governance.Client\Model.ChangeGroupRequestVisibility](docs/ChangeGroupRequestVisibility.md)
  - [Cloud.Governance.Client\Model.ChangeGroupSettingCheckResult](docs/ChangeGroupSettingCheckResult.md)
  - [Cloud.Governance.Client\Model.ChangeGroupSettingRequest](docs/ChangeGroupSettingRequest.md)
  - [Cloud.Governance.Client\Model.ChangeGroupSettingService](docs/ChangeGroupSettingService.md)
  - [Cloud.Governance.Client\Model.ChangeGroupSettingValidationParameter](docs/ChangeGroupSettingValidationParameter.md)
+ - [Cloud.Governance.Client\Model.ChangeGroupSettingsModel](docs/ChangeGroupSettingsModel.md)
  - [Cloud.Governance.Client\Model.ChangeHubSiteContentModel](docs/ChangeHubSiteContentModel.md)
  - [Cloud.Governance.Client\Model.ChangeHubSiteContentModelChangedValueRequestModel](docs/ChangeHubSiteContentModelChangedValueRequestModel.md)
  - [Cloud.Governance.Client\Model.ChangeHubSiteMethod](docs/ChangeHubSiteMethod.md)
  - [Cloud.Governance.Client\Model.ChangeHubsiteActionType](docs/ChangeHubsiteActionType.md)
+ - [Cloud.Governance.Client\Model.ChangeLicenseGallery](docs/ChangeLicenseGallery.md)
+ - [Cloud.Governance.Client\Model.ChangeLicenseModel](docs/ChangeLicenseModel.md)
+ - [Cloud.Governance.Client\Model.ChangeLicenseUserModel](docs/ChangeLicenseUserModel.md)
  - [Cloud.Governance.Client\Model.ChangeListSettingObjectInfo](docs/ChangeListSettingObjectInfo.md)
  - [Cloud.Governance.Client\Model.ChangeListSettingRequest](docs/ChangeListSettingRequest.md)
  - [Cloud.Governance.Client\Model.ChangeListSettingService](docs/ChangeListSettingService.md)
@@ -377,23 +403,33 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ChangePrivateChannelRequest](docs/ChangePrivateChannelRequest.md)
  - [Cloud.Governance.Client\Model.ChangePrivateChannelService](docs/ChangePrivateChannelService.md)
  - [Cloud.Governance.Client\Model.ChangePrivateChannelValidationParameter](docs/ChangePrivateChannelValidationParameter.md)
+ - [Cloud.Governance.Client\Model.ChangeSecurityGroupSettingsGalleryRequestModel](docs/ChangeSecurityGroupSettingsGalleryRequestModel.md)
+ - [Cloud.Governance.Client\Model.ChangeSharedChannelGallery](docs/ChangeSharedChannelGallery.md)
+ - [Cloud.Governance.Client\Model.ChangeSharedChannelModel](docs/ChangeSharedChannelModel.md)
  - [Cloud.Governance.Client\Model.ChangeSharedMailboxModel](docs/ChangeSharedMailboxModel.md)
  - [Cloud.Governance.Client\Model.ChangeSharedMailboxPermissionGallery](docs/ChangeSharedMailboxPermissionGallery.md)
+ - [Cloud.Governance.Client\Model.ChangeSiteContactElectionProfileModel](docs/ChangeSiteContactElectionProfileModel.md)
  - [Cloud.Governance.Client\Model.ChangeSiteContactRequest](docs/ChangeSiteContactRequest.md)
  - [Cloud.Governance.Client\Model.ChangeSiteContactService](docs/ChangeSiteContactService.md)
  - [Cloud.Governance.Client\Model.ChangeSiteContactSubRequest](docs/ChangeSiteContactSubRequest.md)
  - [Cloud.Governance.Client\Model.ChangeSiteContactValidateResult](docs/ChangeSiteContactValidateResult.md)
+ - [Cloud.Governance.Client\Model.ChangeSiteExternalSharingProfileModel](docs/ChangeSiteExternalSharingProfileModel.md)
  - [Cloud.Governance.Client\Model.ChangeSiteHubSiteRequestModel](docs/ChangeSiteHubSiteRequestModel.md)
  - [Cloud.Governance.Client\Model.ChangeSiteObjectModel](docs/ChangeSiteObjectModel.md)
  - [Cloud.Governance.Client\Model.ChangeSitePolicyRequest](docs/ChangeSitePolicyRequest.md)
  - [Cloud.Governance.Client\Model.ChangeSitePolicySetting](docs/ChangeSitePolicySetting.md)
+ - [Cloud.Governance.Client\Model.ChangeSiteProfileOngoingActionModel](docs/ChangeSiteProfileOngoingActionModel.md)
+ - [Cloud.Governance.Client\Model.ChangeSiteProfilesGallery](docs/ChangeSiteProfilesGallery.md)
+ - [Cloud.Governance.Client\Model.ChangeSiteProfilesModel](docs/ChangeSiteProfilesModel.md)
  - [Cloud.Governance.Client\Model.ChangeSiteQuotaRequest](docs/ChangeSiteQuotaRequest.md)
  - [Cloud.Governance.Client\Model.ChangeSiteQuotaSettings](docs/ChangeSiteQuotaSettings.md)
+ - [Cloud.Governance.Client\Model.ChangeSiteRenewProfileModel](docs/ChangeSiteRenewProfileModel.md)
  - [Cloud.Governance.Client\Model.ChangeSiteSettingGalleryRequestModel](docs/ChangeSiteSettingGalleryRequestModel.md)
  - [Cloud.Governance.Client\Model.ChangeSiteSettingRequest](docs/ChangeSiteSettingRequest.md)
  - [Cloud.Governance.Client\Model.ChangeSiteSettingService](docs/ChangeSiteSettingService.md)
  - [Cloud.Governance.Client\Model.ChangeSiteSettingValidateResult](docs/ChangeSiteSettingValidateResult.md)
  - [Cloud.Governance.Client\Model.ChangeSiteSharingRequestModel](docs/ChangeSiteSharingRequestModel.md)
+ - [Cloud.Governance.Client\Model.ChangeSiteStorageManagementProfileModel](docs/ChangeSiteStorageManagementProfileModel.md)
  - [Cloud.Governance.Client\Model.ChangeSiteStorageSettingModel](docs/ChangeSiteStorageSettingModel.md)
  - [Cloud.Governance.Client\Model.ChangeTeamClassificationAndSensitivityLabel](docs/ChangeTeamClassificationAndSensitivityLabel.md)
  - [Cloud.Governance.Client\Model.ChangeTeamDisplayName](docs/ChangeTeamDisplayName.md)
@@ -414,6 +450,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ChangeWebSettingRequest](docs/ChangeWebSettingRequest.md)
  - [Cloud.Governance.Client\Model.ChangeWebSettingService](docs/ChangeWebSettingService.md)
  - [Cloud.Governance.Client\Model.ChangeWebUrlValidateResult](docs/ChangeWebUrlValidateResult.md)
+ - [Cloud.Governance.Client\Model.ChangedLicense](docs/ChangedLicense.md)
  - [Cloud.Governance.Client\Model.ChangedMembership](docs/ChangedMembership.md)
  - [Cloud.Governance.Client\Model.ChangedSiteDesignModel](docs/ChangedSiteDesignModel.md)
  - [Cloud.Governance.Client\Model.ChangedSiteDesignModelChangedValueRequestModel](docs/ChangedSiteDesignModelChangedValueRequestModel.md)
@@ -453,11 +490,14 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ContentMoveUrlValidationResult](docs/ContentMoveUrlValidationResult.md)
  - [Cloud.Governance.Client\Model.ContentTypes](docs/ContentTypes.md)
  - [Cloud.Governance.Client\Model.ContructUrlSetting](docs/ContructUrlSetting.md)
+ - [Cloud.Governance.Client\Model.ConvertAutomaticReply](docs/ConvertAutomaticReply.md)
+ - [Cloud.Governance.Client\Model.ConvertEmail](docs/ConvertEmail.md)
  - [Cloud.Governance.Client\Model.ConvertHubSite](docs/ConvertHubSite.md)
  - [Cloud.Governance.Client\Model.ConvertHubSiteActionType](docs/ConvertHubSiteActionType.md)
  - [Cloud.Governance.Client\Model.CopyMoveSetting](docs/CopyMoveSetting.md)
  - [Cloud.Governance.Client\Model.CopyMoveSettingAssignBy](docs/CopyMoveSettingAssignBy.md)
  - [Cloud.Governance.Client\Model.CreateDistributionListGallery](docs/CreateDistributionListGallery.md)
+ - [Cloud.Governance.Client\Model.CreateEquipmentMailboxGallery](docs/CreateEquipmentMailboxGallery.md)
  - [Cloud.Governance.Client\Model.CreateGroupGallery](docs/CreateGroupGallery.md)
  - [Cloud.Governance.Client\Model.CreateGroupRequest](docs/CreateGroupRequest.md)
  - [Cloud.Governance.Client\Model.CreateGroupService](docs/CreateGroupService.md)
@@ -477,7 +517,24 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.CreatePrivateChannelRequest](docs/CreatePrivateChannelRequest.md)
  - [Cloud.Governance.Client\Model.CreatePrivateChannelService](docs/CreatePrivateChannelService.md)
  - [Cloud.Governance.Client\Model.CreatePrivateChannelValidationParameter](docs/CreatePrivateChannelValidationParameter.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxAddressBookPolicyRequestModel](docs/CreateResourceMailboxAddressBookPolicyRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxAliasRequestModel](docs/CreateResourceMailboxAliasRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxBookingDelegateSettingRequestModel](docs/CreateResourceMailboxBookingDelegateSettingRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxBookingOptionRequestModel](docs/CreateResourceMailboxBookingOptionRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxCapacityRequestModel](docs/CreateResourceMailboxCapacityRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxCompanyRequestModel](docs/CreateResourceMailboxCompanyRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxContactInformationRequestModel](docs/CreateResourceMailboxContactInformationRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxDepartmentRequestModel](docs/CreateResourceMailboxDepartmentRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxDisableAccountRequestModel](docs/CreateResourceMailboxDisableAccountRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxExchangeGlobalAddressListRequestModel](docs/CreateResourceMailboxExchangeGlobalAddressListRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateResourceMailboxMailTipRequestModel](docs/CreateResourceMailboxMailTipRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateRoomMailboxAdditionalInformationRequestModel](docs/CreateRoomMailboxAdditionalInformationRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateRoomMailboxGallery](docs/CreateRoomMailboxGallery.md)
+ - [Cloud.Governance.Client\Model.CreateRoomMailboxRoomListRequestModel](docs/CreateRoomMailboxRoomListRequestModel.md)
+ - [Cloud.Governance.Client\Model.CreateRoomMailboxRoomPlaceRequestModel](docs/CreateRoomMailboxRoomPlaceRequestModel.md)
  - [Cloud.Governance.Client\Model.CreateSecurityGroupGallery](docs/CreateSecurityGroupGallery.md)
+ - [Cloud.Governance.Client\Model.CreateSharedChannelGallery](docs/CreateSharedChannelGallery.md)
+ - [Cloud.Governance.Client\Model.CreateSharedChannelModel](docs/CreateSharedChannelModel.md)
  - [Cloud.Governance.Client\Model.CreateSharedMailboxGallery](docs/CreateSharedMailboxGallery.md)
  - [Cloud.Governance.Client\Model.CreateSiteGallery](docs/CreateSiteGallery.md)
  - [Cloud.Governance.Client\Model.CreateSiteRequest](docs/CreateSiteRequest.md)
@@ -502,6 +559,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.DeleteType](docs/DeleteType.md)
  - [Cloud.Governance.Client\Model.DeleteWebLifecycleRequest](docs/DeleteWebLifecycleRequest.md)
  - [Cloud.Governance.Client\Model.DeleteWorkspaceParameter](docs/DeleteWorkspaceParameter.md)
+ - [Cloud.Governance.Client\Model.DeliveryManagement](docs/DeliveryManagement.md)
  - [Cloud.Governance.Client\Model.DeliveryStatusNotificationsRequestModel](docs/DeliveryStatusNotificationsRequestModel.md)
  - [Cloud.Governance.Client\Model.DeploymentManagerPlanSettings](docs/DeploymentManagerPlanSettings.md)
  - [Cloud.Governance.Client\Model.DepthLimitSetting](docs/DepthLimitSetting.md)
@@ -526,7 +584,9 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ElectionContact](docs/ElectionContact.md)
  - [Cloud.Governance.Client\Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Cloud.Governance.Client\Model.EmailAddress](docs/EmailAddress.md)
+ - [Cloud.Governance.Client\Model.EmailForward](docs/EmailForward.md)
  - [Cloud.Governance.Client\Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
+ - [Cloud.Governance.Client\Model.EntraGroupLifecycleActionType](docs/EntraGroupLifecycleActionType.md)
  - [Cloud.Governance.Client\Model.ExchangeResourceLifecycleGallery](docs/ExchangeResourceLifecycleGallery.md)
  - [Cloud.Governance.Client\Model.ExchangeResourceStatus](docs/ExchangeResourceStatus.md)
  - [Cloud.Governance.Client\Model.ExchangeResourceType](docs/ExchangeResourceType.md)
@@ -597,6 +657,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.GuidBooleanModel](docs/GuidBooleanModel.md)
  - [Cloud.Governance.Client\Model.GuidModel](docs/GuidModel.md)
  - [Cloud.Governance.Client\Model.HandleOngoingType](docs/HandleOngoingType.md)
+ - [Cloud.Governance.Client\Model.HandleTaskType](docs/HandleTaskType.md)
  - [Cloud.Governance.Client\Model.HookMessageList](docs/HookMessageList.md)
  - [Cloud.Governance.Client\Model.HookMessageObjectType](docs/HookMessageObjectType.md)
  - [Cloud.Governance.Client\Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
@@ -604,7 +665,12 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Cloud.Governance.Client\Model.HubSiteType](docs/HubSiteType.md)
  - [Cloud.Governance.Client\Model.HubSiteUrl](docs/HubSiteUrl.md)
+ - [Cloud.Governance.Client\Model.ImportEnvironmentModel](docs/ImportEnvironmentModel.md)
+ - [Cloud.Governance.Client\Model.ImportGroupModel](docs/ImportGroupModel.md)
+ - [Cloud.Governance.Client\Model.ImportMetadataModel](docs/ImportMetadataModel.md)
  - [Cloud.Governance.Client\Model.ImportObjectType](docs/ImportObjectType.md)
+ - [Cloud.Governance.Client\Model.ImportSiteModel](docs/ImportSiteModel.md)
+ - [Cloud.Governance.Client\Model.ImportTeamModel](docs/ImportTeamModel.md)
  - [Cloud.Governance.Client\Model.InformationIconSetting](docs/InformationIconSetting.md)
  - [Cloud.Governance.Client\Model.InlineResponse200](docs/InlineResponse200.md)
  - [Cloud.Governance.Client\Model.InsightsStatus](docs/InsightsStatus.md)
@@ -612,6 +678,17 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.Int64ChangedProperty](docs/Int64ChangedProperty.md)
  - [Cloud.Governance.Client\Model.Int64ChangedValueRequestModel](docs/Int64ChangedValueRequestModel.md)
  - [Cloud.Governance.Client\Model.IntModel](docs/IntModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestAddToGroupsRequestModel](docs/InviteGuestAddToGroupsRequestModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestContactInformationRequestModel](docs/InviteGuestContactInformationRequestModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestGallery](docs/InviteGuestGallery.md)
+ - [Cloud.Governance.Client\Model.InviteGuestMode](docs/InviteGuestMode.md)
+ - [Cloud.Governance.Client\Model.InviteGuestOneTimeRenewalSettingModel](docs/InviteGuestOneTimeRenewalSettingModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestRenewalProfileRequestModel](docs/InviteGuestRenewalProfileRequestModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestScopeRequestModel](docs/InviteGuestScopeRequestModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestUsageLocationRequestModel](docs/InviteGuestUsageLocationRequestModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestUserPropertyRequestModel](docs/InviteGuestUserPropertyRequestModel.md)
+ - [Cloud.Governance.Client\Model.InviteGuestUserTypePropertyRequestModel](docs/InviteGuestUserTypePropertyRequestModel.md)
+ - [Cloud.Governance.Client\Model.InviteMultipleGuestRequestModel](docs/InviteMultipleGuestRequestModel.md)
  - [Cloud.Governance.Client\Model.InviteType](docs/InviteType.md)
  - [Cloud.Governance.Client\Model.ItemConflictResolutionType](docs/ItemConflictResolutionType.md)
  - [Cloud.Governance.Client\Model.JoinGroupApproval](docs/JoinGroupApproval.md)
@@ -621,6 +698,8 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.LibraryDesign](docs/LibraryDesign.md)
  - [Cloud.Governance.Client\Model.LibraryScope](docs/LibraryScope.md)
  - [Cloud.Governance.Client\Model.LibraryVersionSetting](docs/LibraryVersionSetting.md)
+ - [Cloud.Governance.Client\Model.LicenseInfo](docs/LicenseInfo.md)
+ - [Cloud.Governance.Client\Model.LicenseUpdateInfo](docs/LicenseUpdateInfo.md)
  - [Cloud.Governance.Client\Model.LifecycleAction](docs/LifecycleAction.md)
  - [Cloud.Governance.Client\Model.LifecycleActions](docs/LifecycleActions.md)
  - [Cloud.Governance.Client\Model.LifecycleHookMessage](docs/LifecycleHookMessage.md)
@@ -652,10 +731,16 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.LogicalOperatorType](docs/LogicalOperatorType.md)
  - [Cloud.Governance.Client\Model.LookupListValue](docs/LookupListValue.md)
  - [Cloud.Governance.Client\Model.LookupValue](docs/LookupValue.md)
+ - [Cloud.Governance.Client\Model.M365GroupLifecycleActionType](docs/M365GroupLifecycleActionType.md)
  - [Cloud.Governance.Client\Model.M365GroupLifecycleActions](docs/M365GroupLifecycleActions.md)
  - [Cloud.Governance.Client\Model.M365GroupLifecycleGallery](docs/M365GroupLifecycleGallery.md)
  - [Cloud.Governance.Client\Model.M365GroupLifecycleModel](docs/M365GroupLifecycleModel.md)
  - [Cloud.Governance.Client\Model.M365GroupLifecycleScopeSetting](docs/M365GroupLifecycleScopeSetting.md)
+ - [Cloud.Governance.Client\Model.MailboxAutoMapping](docs/MailboxAutoMapping.md)
+ - [Cloud.Governance.Client\Model.MailboxAutomaticReply](docs/MailboxAutomaticReply.md)
+ - [Cloud.Governance.Client\Model.MailboxLanguageDataTime](docs/MailboxLanguageDataTime.md)
+ - [Cloud.Governance.Client\Model.MailboxSentItems](docs/MailboxSentItems.md)
+ - [Cloud.Governance.Client\Model.MailboxSharedMailboxPolicy](docs/MailboxSharedMailboxPolicy.md)
  - [Cloud.Governance.Client\Model.ManagePermissionAction](docs/ManagePermissionAction.md)
  - [Cloud.Governance.Client\Model.ManagePermissionGrantSetting](docs/ManagePermissionGrantSetting.md)
  - [Cloud.Governance.Client\Model.ManagePermissionOption](docs/ManagePermissionOption.md)
@@ -687,6 +772,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.MultiGeoSerivceSetting](docs/MultiGeoSerivceSetting.md)
  - [Cloud.Governance.Client\Model.MultiGeoSetting](docs/MultiGeoSetting.md)
  - [Cloud.Governance.Client\Model.MyExchangeResource](docs/MyExchangeResource.md)
+ - [Cloud.Governance.Client\Model.MyResourceMailbox](docs/MyResourceMailbox.md)
  - [Cloud.Governance.Client\Model.MySharedMailbox](docs/MySharedMailbox.md)
  - [Cloud.Governance.Client\Model.MySite](docs/MySite.md)
  - [Cloud.Governance.Client\Model.MySiteType](docs/MySiteType.md)
@@ -753,6 +839,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.SPTenantSharingSettingModel](docs/SPTenantSharingSettingModel.md)
  - [Cloud.Governance.Client\Model.SPUserManagementModel](docs/SPUserManagementModel.md)
  - [Cloud.Governance.Client\Model.ScopeType](docs/ScopeType.md)
+ - [Cloud.Governance.Client\Model.SenderOptions](docs/SenderOptions.md)
  - [Cloud.Governance.Client\Model.SensitivityLabelModel](docs/SensitivityLabelModel.md)
  - [Cloud.Governance.Client\Model.ServiceForRequest](docs/ServiceForRequest.md)
  - [Cloud.Governance.Client\Model.ServiceGridModel](docs/ServiceGridModel.md)
@@ -760,12 +847,16 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.ServiceGroupWithPermissions](docs/ServiceGroupWithPermissions.md)
  - [Cloud.Governance.Client\Model.ServiceList](docs/ServiceList.md)
  - [Cloud.Governance.Client\Model.ServiceListPageResult](docs/ServiceListPageResult.md)
+ - [Cloud.Governance.Client\Model.ServicePlanModel](docs/ServicePlanModel.md)
  - [Cloud.Governance.Client\Model.ServiceScopeSettings](docs/ServiceScopeSettings.md)
  - [Cloud.Governance.Client\Model.ServiceTeamsSettings](docs/ServiceTeamsSettings.md)
  - [Cloud.Governance.Client\Model.ServiceType](docs/ServiceType.md)
  - [Cloud.Governance.Client\Model.ServiceUserWithPermissions](docs/ServiceUserWithPermissions.md)
  - [Cloud.Governance.Client\Model.SharePointBuildInGroupType](docs/SharePointBuildInGroupType.md)
  - [Cloud.Governance.Client\Model.SharePointListMetadataSettings](docs/SharePointListMetadataSettings.md)
+ - [Cloud.Governance.Client\Model.SharedChannelChangedMembership](docs/SharedChannelChangedMembership.md)
+ - [Cloud.Governance.Client\Model.SharedChannelDescription](docs/SharedChannelDescription.md)
+ - [Cloud.Governance.Client\Model.SharedChannelName](docs/SharedChannelName.md)
  - [Cloud.Governance.Client\Model.SharedMailboxLifecycleGalleryRequestModel](docs/SharedMailboxLifecycleGalleryRequestModel.md)
  - [Cloud.Governance.Client\Model.SharingAdvanceSettingModel](docs/SharingAdvanceSettingModel.md)
  - [Cloud.Governance.Client\Model.SharingAdvanceSettingModelChangedValueRequestModel](docs/SharingAdvanceSettingModelChangedValueRequestModel.md)
@@ -849,6 +940,7 @@ Class | Method | HTTP request | Description
  - [Cloud.Governance.Client\Model.TeamSensitivityLabel](docs/TeamSensitivityLabel.md)
  - [Cloud.Governance.Client\Model.TeamSensitivityLabelChangedValueRequestModel](docs/TeamSensitivityLabelChangedValueRequestModel.md)
  - [Cloud.Governance.Client\Model.TeamSiteStatus](docs/TeamSiteStatus.md)
+ - [Cloud.Governance.Client\Model.TeamSiteUrl](docs/TeamSiteUrl.md)
  - [Cloud.Governance.Client\Model.TeamTemplate](docs/TeamTemplate.md)
  - [Cloud.Governance.Client\Model.TeamTimeZone](docs/TeamTimeZone.md)
  - [Cloud.Governance.Client\Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)

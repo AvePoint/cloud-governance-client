@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | **ImportObjectType** |  | [optional] 
+**Workspaces** | [**List&lt;ImportEnvironmentModel&gt;**](ImportEnvironmentModel.md) |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **FileName** | **string** |  | [optional] 

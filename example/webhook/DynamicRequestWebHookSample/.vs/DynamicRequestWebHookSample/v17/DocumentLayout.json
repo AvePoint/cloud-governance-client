@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\xlin\\Desktop\\Code\\Gao\\cloud-governance-client\\example\\webhook\\DynamicRequestWebHookSample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FAC12CA8-26B6-4EED-B36D-646F78087500}|DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj|c:\\users\\xlin\\desktop\\code\\gao\\cloud-governance-client\\example\\webhook\\dynamicrequestwebhooksample\\dynamicrequestwebhooksample\\controllers\\webhookmessagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAC12CA8-26B6-4EED-B36D-646F78087500}|DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj|solutionrelative:dynamicrequestwebhooksample\\controllers\\webhookmessagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAC12CA8-26B6-4EED-B36D-646F78087500}|DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj|c:\\users\\xlin\\desktop\\code\\gao\\cloud-governance-client\\example\\webhook\\dynamicrequestwebhooksample\\dynamicrequestwebhooksample\\controllers\\hookmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FAC12CA8-26B6-4EED-B36D-646F78087500}|DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj|solutionrelative:dynamicrequestwebhooksample\\controllers\\hookmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FAC12CA8-26B6-4EED-B36D-646F78087500}|DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj|c:\\users\\xlin\\desktop\\code\\gao\\cloud-governance-client\\example\\webhook\\dynamicrequestwebhooksample\\dynamicrequestwebhooksample\\dynamicrequestwebhooksample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FAC12CA8-26B6-4EED-B36D-646F78087500}|DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj|solutionrelative:dynamicrequestwebhooksample\\dynamicrequestwebhooksample.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebHookMessageController.cs",
+              "DocumentMoniker": "C:\\Users\\xlin\\Desktop\\Code\\Gao\\cloud-governance-client\\example\\webhook\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample\\Controllers\\WebHookMessageController.cs",
+              "RelativeDocumentMoniker": "DynamicRequestWebHookSample\\Controllers\\WebHookMessageController.cs",
+              "ToolTip": "C:\\Users\\xlin\\Desktop\\Code\\Gao\\cloud-governance-client\\example\\webhook\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample\\Controllers\\WebHookMessageController.cs",
+              "RelativeToolTip": "DynamicRequestWebHookSample\\Controllers\\WebHookMessageController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T05:56:37.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HookMessage.cs",
+              "DocumentMoniker": "C:\\Users\\xlin\\Desktop\\Code\\Gao\\cloud-governance-client\\example\\webhook\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample\\Controllers\\HookMessage.cs",
+              "RelativeDocumentMoniker": "DynamicRequestWebHookSample\\Controllers\\HookMessage.cs",
+              "ToolTip": "C:\\Users\\xlin\\Desktop\\Code\\Gao\\cloud-governance-client\\example\\webhook\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample\\Controllers\\HookMessage.cs",
+              "RelativeToolTip": "DynamicRequestWebHookSample\\Controllers\\HookMessage.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T05:56:34.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DynamicRequestWebHookSample",
+              "DocumentMoniker": "C:\\Users\\xlin\\Desktop\\Code\\Gao\\cloud-governance-client\\example\\webhook\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj",
+              "RelativeDocumentMoniker": "DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj",
+              "ToolTip": "C:\\Users\\xlin\\Desktop\\Code\\Gao\\cloud-governance-client\\example\\webhook\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj",
+              "RelativeToolTip": "DynamicRequestWebHookSample\\DynamicRequestWebHookSample.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-11T05:55:55.025Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

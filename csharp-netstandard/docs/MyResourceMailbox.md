@@ -1,0 +1,47 @@
+# Cloud.Governance.Client.Model.MyResourceMailbox
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | **string** |  | [optional] 
+**Description** | **string** |  | [optional] 
+**Email** | **string** |  | [optional] 
+**TenantId** | **Guid** |  | [optional] 
+**CreatedTime** | **DateTime?** |  | [optional] 
+**Status** | **ExchangeResourceStatus** |  | [optional] 
+**WorkspaceType** | **WorkspaceType** |  | [optional] 
+**WorkspaceTypeDes** | **string** |  | [optional] 
+**Id** | **Guid** |  | [optional] 
+**Phase** | **AutoImportPhase** |  | [optional] 
+**PhaseStartTime** | **DateTime?** |  | [optional] 
+**PhaseDescription** | **string** |  | [optional] 
+**AutoImportProfileId** | **Guid?** |  | [optional] 
+**AutoImportProfileName** | **string** |  | [optional] 
+**RenewalProfileId** | **Guid?** |  | [optional] 
+**RenewalProfileName** | **string** |  | [optional] 
+**RenewalProfileDescription** | **string** |  | [optional] 
+**PolicyId** | **Guid** |  | [optional] 
+**PolicyName** | **string** |  | [optional] 
+**PolicyDescription** | **string** |  | [optional] 
+**ElectionProfileId** | **Guid?** |  | [optional] 
+**ElectionProfileName** | **string** |  | [optional] 
+**ElectionProfileDescription** | **string** |  | [optional] 
+**ExternalSharingProfileId** | **Guid?** |  | [optional] 
+**ExternalSharingProfileName** | **string** |  | [optional] 
+**ExternalSharingProfileDescription** | **string** |  | [optional] 
+**QuotaProfileId** | **Guid?** |  | [optional] 
+**QuotaProfileName** | **string** |  | [optional] 
+**QuotaProfileDescription** | **string** |  | [optional] 
+**IsCurrentRenewer** | **bool** |  | [optional] [default to false]
+**PhaseAssignees** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**PhaseDueDate** | **DateTime?** |  | [optional] 
+**Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ErrorMessage** | **string** |  | [optional] 
+**CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
+**HasSubmitted** | **bool** |  | [optional] [default to false]
+**HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

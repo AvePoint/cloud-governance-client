@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SharedMailboxInfo** | [**ChangeSharedMailboxModel**](ChangeSharedMailboxModel.md) |  | [optional] 
+**LifecycleActions** | [**LifecycleActions**](LifecycleActions.md) |  | [optional] 
 **GalleryType** | **string** |  | [optional] 
 **GalleryInternalName** | **string** |  | [optional] 
 **GalleryMetadata** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 

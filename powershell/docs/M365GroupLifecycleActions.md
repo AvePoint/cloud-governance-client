@@ -3,11 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**M365GroupLifecycleActionType** | [**M365GroupLifecycleActionType**](M365GroupLifecycleActionType.md) |  | [optional] 
 **IsSendCancellation** | **Boolean** |  | [optional] [default to $false]
 **SendCancellationEmailTemplateId** | **String** |  | [optional] 
 **IsNotifyEnabled** | **Boolean** |  | [optional] [default to $false]
 **NotifyUsers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **NotifyEmailTemplateId** | **String** |  | [optional] 
+**EntraGroupLifecycleActionType** | [**EntraGroupLifecycleActionType**](EntraGroupLifecycleActionType.md) |  | [optional] 
+**ActivityId** | **String** |  | [optional] 
 **ActivityType** | **String** |  | [optional] 
 **Type** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
@@ -18,11 +21,14 @@ Name | Type | Description | Notes
 
 - Prepare the resource
 ```powershell
-$M365GroupLifecycleActions = New-Cloud.Governance.ClientM365GroupLifecycleActions  -IsSendCancellation null `
+$M365GroupLifecycleActions = New-Cloud.Governance.ClientM365GroupLifecycleActions  -M365GroupLifecycleActionType null `
+ -IsSendCancellation null `
  -SendCancellationEmailTemplateId null `
  -IsNotifyEnabled null `
  -NotifyUsers null `
  -NotifyEmailTemplateId null `
+ -EntraGroupLifecycleActionType null `
+ -ActivityId null `
  -ActivityType null `
  -Type null `
  -Title null `

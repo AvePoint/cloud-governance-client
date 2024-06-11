@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **UsageLocation** | **String** |  | [optional] 
 **PhysicalDeliveryOfficeName** | **String** |  | [optional] 
 **IsOtherTenantUser** | **Boolean** |  | [optional] [default to $false]
+**IsAccountEnabled** | **Boolean** |  | [optional] [default to $false]
 **NetworkId** | **String** |  | [optional] 
 **IsValidateByProfile** | **Boolean** |  | [optional] [default to $false]
 **ProxyAddresses** | **String[]** |  | [optional] 
@@ -73,6 +74,7 @@ $UserInfo = New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -UsageLocation null `
  -PhysicalDeliveryOfficeName null `
  -IsOtherTenantUser null `
+ -IsAccountEnabled null `
  -NetworkId null `
  -IsValidateByProfile null `
  -ProxyAddresses null `

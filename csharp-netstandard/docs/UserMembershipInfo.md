@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **DisplayName** | **string** |  | [optional] 
 **UserType** | **MembershipUserType** |  | [optional] 
 **ActionType** | **UserMembershipStatus** |  | [optional] 
+**Email** | **string** |  | [optional] 
+**LoginName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

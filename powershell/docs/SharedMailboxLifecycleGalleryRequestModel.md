@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SharedMailboxInfo** | [**ChangeSharedMailboxModel**](ChangeSharedMailboxModel.md) |  | [optional] 
+**LifecycleActions** | [**LifecycleActions**](LifecycleActions.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $SharedMailboxLifecycleGalleryRequestModel = New-Cloud.Governance.ClientSharedMailboxLifecycleGalleryRequestModel  -SharedMailboxInfo null `
+ -LifecycleActions null `
  -GalleryType null `
  -GalleryInternalName null `
  -GalleryMetadata null

@@ -1,8 +1,8 @@
 ﻿Try
 {
    $ModuleName="Cloud.Governance.Client"
-   if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "6.10.0")){
-    Install-Module -Name $ModuleName -Force -MinimumVersion "6.10.0"
+   if( $null -eq  (Get-InstalledModule -Name $ModuleName -MinimumVersion "7.6.0")){
+    Install-Module -Name $ModuleName -Force -MinimumVersion "7.6.0"
    }
 
    Import-Module -Name $ModuleName

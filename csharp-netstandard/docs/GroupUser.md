@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **JobTitle** | **string** | User job title | [optional] [readonly] 
 **PhysicalDeliveryOfficeName** | **string** | Physical delivery office name of the user | [optional] [readonly] 
 **IsValid** | **bool** | Whether the user is valid. | [optional] [readonly] [default to false]
+**IsAccountEnabled** | **bool** | Whether the user is valid. | [optional] [readonly] [default to false]
 **TenantId** | **string** | Office 365 tenant ID of the user | [optional] [readonly] 
 **AdditionalData** | **Dictionary&lt;string, Object&gt;** | User additional data | [optional] [readonly] 
 **ApiUserType** | **ApiUserType** | ApiUser type | [optional] [readonly] 

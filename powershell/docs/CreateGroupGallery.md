@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **MultiGeoLocationSetting** | [**MultiGeoLocationSetting**](MultiGeoLocationSetting.md) |  | [optional] 
 **SubscribeMembers** | [**SubscribeMembers**](SubscribeMembers.md) |  | [optional] 
 **OutsideSenders** | [**OutsideSenders**](OutsideSenders.md) |  | [optional] 
+**GroupSendAs** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
+**GroupSendOnBehalf** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
 **OfficeTenantId** | **String** |  | [optional] 
 **Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
 **Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
@@ -51,6 +53,8 @@ $CreateGroupGallery = New-Cloud.Governance.ClientCreateGroupGallery  -Administra
  -MultiGeoLocationSetting null `
  -SubscribeMembers null `
  -OutsideSenders null `
+ -GroupSendAs null `
+ -GroupSendOnBehalf null `
  -OfficeTenantId null `
  -Owners null `
  -Members null `

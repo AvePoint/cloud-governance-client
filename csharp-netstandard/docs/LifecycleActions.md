@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **IsNotifyEnabled** | **bool** |  | [optional] [default to false]
 **NotifyUsers** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **NotifyEmailTemplateId** | **string** |  | [optional] 
+**EntraGroupLifecycleActionType** | **EntraGroupLifecycleActionType** |  | [optional] 
+**ActivityId** | **string** |  | [optional] 
 **ActivityType** | **string** |  | [optional] 
 **Type** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 

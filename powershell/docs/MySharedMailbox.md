@@ -14,8 +14,6 @@ Name | Type | Description | Notes
 **Status** | [**ExchangeResourceStatus**](ExchangeResourceStatus.md) |  | [optional] 
 **WorkspaceType** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
 **WorkspaceTypeDes** | **String** |  | [optional] 
-**HasSubmitted** | **Boolean** |  | [optional] [default to $false]
-**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
 **Id** | **String** |  | [optional] 
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
@@ -45,6 +43,8 @@ Name | Type | Description | Notes
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
 **CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
+**HasSubmitted** | **Boolean** |  | [optional] [default to $false]
+**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -61,8 +61,6 @@ $MySharedMailbox = New-Cloud.Governance.ClientMySharedMailbox  -PreferredDataLoc
  -Status null `
  -WorkspaceType null `
  -WorkspaceTypeDes null `
- -HasSubmitted null `
- -HasPendingApprovalTask null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `
@@ -91,7 +89,9 @@ $MySharedMailbox = New-Cloud.Governance.ClientMySharedMailbox  -PreferredDataLoc
  -PrimaryContact null `
  -SecondaryContact null `
  -ErrorMessage null `
- -CreatedSource null
+ -CreatedSource null `
+ -HasSubmitted null `
+ -HasPendingApprovalTask null
 ```
 
 - Convert the resource to JSON

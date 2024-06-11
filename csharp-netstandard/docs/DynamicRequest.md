@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **OrderInfo** | **string** |  | [optional] 
 **ParentId** | **Guid?** |  | [optional] 
 **ParentTicketNumber** | **int?** |  | [optional] [default to 0]
-**StartRequestTime** | **DateTime** |  | [optional] 
+**StartRequestTime** | **DateTime?** |  | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 

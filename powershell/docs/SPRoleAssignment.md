@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **PrincipalType** | [**SPPrincipalType**](SPPrincipalType.md) |  | [optional] 
 **PrincipalTypeDescription** | **String** |  | [optional] 
 **PermissionLevels** | **String[]** |  | [optional] 
+**TemporaryPermissionSetting** | [**TemporaryPermissionRequestSetting**](TemporaryPermissionRequestSetting.md) |  | [optional] 
+**ObjectId** | **String** |  | [optional] 
 
 ## Examples
 
@@ -21,7 +23,9 @@ $SPRoleAssignment = New-Cloud.Governance.ClientSPRoleAssignment  -Id null `
  -AzureUserType null `
  -PrincipalType null `
  -PrincipalTypeDescription null `
- -PermissionLevels null
+ -PermissionLevels null `
+ -TemporaryPermissionSetting null `
+ -ObjectId null
 ```
 
 - Convert the resource to JSON

@@ -4,8 +4,11 @@ All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**Invoke-ApplyGroupProfiles**](WorkspacesAdminApi.md#Invoke-ApplyGroupProfiles) | **POST** /admin/directory/workspace/group/applyprofiles | apply group profiles
 [**Invoke-ApplyGroupsPolicy**](WorkspacesAdminApi.md#Invoke-ApplyGroupsPolicy) | **POST** /admin/directory/workspace/groups/policy | apply groups policy
+[**Invoke-ApplySiteProfiles**](WorkspacesAdminApi.md#Invoke-ApplySiteProfiles) | **POST** /admin/directory/workspace/sites/profiles | apply site profiles
 [**Invoke-ApplySitesPolicy**](WorkspacesAdminApi.md#Invoke-ApplySitesPolicy) | **POST** /admin/directory/workspace/sites/policy | apply site policy
+[**Invoke-ApplyTeamProfiles**](WorkspacesAdminApi.md#Invoke-ApplyTeamProfiles) | **POST** /admin/directory/workspace/teams/profiles | apply team profiles
 [**Invoke-ArchiveWorkspace**](WorkspacesAdminApi.md#Invoke-ArchiveWorkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 [**Complete-WorkspaceRenewalTask**](WorkspacesAdminApi.md#Complete-WorkspaceRenewalTask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 [**Invoke-DeleteWorkspaces**](WorkspacesAdminApi.md#Invoke-DeleteWorkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
@@ -18,6 +21,68 @@ Method | HTTP request | Description
 [**Invoke-TriggerWorkspacesElection**](WorkspacesAdminApi.md#Invoke-TriggerWorkspacesElection) | **POST** /admin/directory/workspace/election/trigger | trigger workspace election
 [**Unlock-Workspace**](WorkspacesAdminApi.md#Unlock-Workspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
+
+<a name="Invoke-ApplyGroupProfiles"></a>
+# **Invoke-ApplyGroupProfiles**
+> void Invoke-ApplyGroupProfiles<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplyTeamProfilesModel] <PSCustomObject><br>
+
+apply group profiles
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$ApplyTeamProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApiProfileObjectType = New-ApiProfileObjectType 
+$HandleOngoingType = New-HandleOngoingType 
+$HandleTaskType = New-HandleTaskType 
+$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" # ApplyTeamProfilesModel | apply profiles (optional)
+
+# apply group profiles
+try {
+     $Result = Invoke-ApplyGroupProfiles -ApplyTeamProfilesModel $ApplyTeamProfilesModel
+} catch {
+    Write-Host ("Exception occured when calling Invoke-ApplyGroupProfiles: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ApplyTeamProfilesModel** | [**ApplyTeamProfilesModel**](ApplyTeamProfilesModel.md)| apply profiles | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Invoke-ApplyGroupsPolicy"></a>
 # **Invoke-ApplyGroupsPolicy**
@@ -84,6 +149,68 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Invoke-ApplySiteProfiles"></a>
+# **Invoke-ApplySiteProfiles**
+> void Invoke-ApplySiteProfiles<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplyProfilesModel] <PSCustomObject><br>
+
+apply site profiles
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$ApplyProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApiProfileObjectType = New-ApiProfileObjectType 
+$HandleOngoingType = New-HandleOngoingType 
+$HandleTaskType = New-HandleTaskType 
+$ApplyProfilesModel = New-ApplyProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" # ApplyProfilesModel | apply profiles (optional)
+
+# apply site profiles
+try {
+     $Result = Invoke-ApplySiteProfiles -ApplyProfilesModel $ApplyProfilesModel
+} catch {
+    Write-Host ("Exception occured when calling Invoke-ApplySiteProfiles: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ApplyProfilesModel** | [**ApplyProfilesModel**](ApplyProfilesModel.md)| apply profiles | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Invoke-ApplySitesPolicy"></a>
 # **Invoke-ApplySitesPolicy**
 > void Invoke-ApplySitesPolicy<br>
@@ -131,6 +258,68 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ApplySitePolicyModel** | [**ApplySitePolicyModel**](ApplySitePolicyModel.md)| apply policy setting | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-ApplyTeamProfiles"></a>
+# **Invoke-ApplyTeamProfiles**
+> void Invoke-ApplyTeamProfiles<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplyTeamProfilesModel] <PSCustomObject><br>
+
+apply team profiles
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$ApplyTeamProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApiProfileObjectType = New-ApiProfileObjectType 
+$HandleOngoingType = New-HandleOngoingType 
+$HandleTaskType = New-HandleTaskType 
+$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" # ApplyTeamProfilesModel | apply profiles (optional)
+
+# apply team profiles
+try {
+     $Result = Invoke-ApplyTeamProfiles -ApplyTeamProfilesModel $ApplyTeamProfilesModel
+} catch {
+    Write-Host ("Exception occured when calling Invoke-ApplyTeamProfiles: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ApplyTeamProfilesModel** | [**ApplyTeamProfilesModel**](ApplyTeamProfilesModel.md)| apply profiles | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -626,7 +815,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $Filter = "MyFilter" # String |  (optional)
 $SpecifyContactParameter = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType

@@ -144,18 +144,26 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetDynamicRequest**](docs/RequestsApi.md#getdynamicrequest) | **GET** /requests/dynamic/{id} | get dynamic request
 *RequestsApi* | [**GetDynamicRequestChangeContactGallery**](docs/RequestsApi.md#getdynamicrequestchangecontactgallery) | **GET** /requests/dynamic/{id}/gallery/changecontact | 
 *RequestsApi* | [**GetDynamicRequestChangeExchangeResourceMembershipGallery**](docs/RequestsApi.md#getdynamicrequestchangeexchangeresourcemembershipgallery) | **GET** /requests/dynamic/{id}/gallery/changeexchangeresourcemembership | 
+*RequestsApi* | [**GetDynamicRequestChangeLicenseGallery**](docs/RequestsApi.md#getdynamicrequestchangelicensegallery) | **GET** /requests/dynamic/{id}/gallery/changelicense | 
+*RequestsApi* | [**GetDynamicRequestChangeSecurityGroupSettingsGallery**](docs/RequestsApi.md#getdynamicrequestchangesecuritygroupsettingsgallery) | **GET** /requests/dynamic/{id}/gallery/changesecuritygroupsettings | 
+*RequestsApi* | [**GetDynamicRequestChangeSharedChannelGallery**](docs/RequestsApi.md#getdynamicrequestchangesharedchannelgallery) | **GET** /requests/dynamic/{id}/gallery/changesharedchannel | 
 *RequestsApi* | [**GetDynamicRequestChangeSharedMailboxPermissionGallery**](docs/RequestsApi.md#getdynamicrequestchangesharedmailboxpermissiongallery) | **GET** /requests/dynamic/{id}/gallery/changesharedmailboxpermission | 
+*RequestsApi* | [**GetDynamicRequestChangeSiteProfileGallery**](docs/RequestsApi.md#getdynamicrequestchangesiteprofilegallery) | **GET** /requests/dynamic/{id}/gallery/changesiteprofile | 
 *RequestsApi* | [**GetDynamicRequestChangeSiteSettingGallery**](docs/RequestsApi.md#getdynamicrequestchangesitesettinggallery) | **GET** /requests/dynamic/{id}/gallery/changesitesetting | 
 *RequestsApi* | [**GetDynamicRequestChangeTeamSettingGallery**](docs/RequestsApi.md#getdynamicrequestchangeteamsettinggallery) | **GET** /requests/dynamic/{id}/gallery/changeteamsetting | 
 *RequestsApi* | [**GetDynamicRequestCreateDistributionListGallery**](docs/RequestsApi.md#getdynamicrequestcreatedistributionlistgallery) | **GET** /requests/dynamic/{id}/gallery/createdistributionlist | 
+*RequestsApi* | [**GetDynamicRequestCreateEquipmentMailboxGallery**](docs/RequestsApi.md#getdynamicrequestcreateequipmentmailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createequipmentmailbox | 
 *RequestsApi* | [**GetDynamicRequestCreateGroupGallery**](docs/RequestsApi.md#getdynamicrequestcreategroupgallery) | **GET** /requests/dynamic/{id}/gallery/creategroups | 
 *RequestsApi* | [**GetDynamicRequestCreateLibraryGallery**](docs/RequestsApi.md#getdynamicrequestcreatelibrarygallery) | **GET** /requests/dynamic/{id}/gallery/createlibrary | 
 *RequestsApi* | [**GetDynamicRequestCreateMailEnabledGroupGallery**](docs/RequestsApi.md#getdynamicrequestcreatemailenabledgroupgallery) | **GET** /requests/dynamic/{id}/gallery/createmailenabledgroup | 
+*RequestsApi* | [**GetDynamicRequestCreateRoomMailboxGallery**](docs/RequestsApi.md#getdynamicrequestcreateroommailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createroommailbox | 
 *RequestsApi* | [**GetDynamicRequestCreateSecurityGroupGallery**](docs/RequestsApi.md#getdynamicrequestcreatesecuritygroupgallery) | **GET** /requests/dynamic/{id}/gallery/createsecuritygroupgallery | 
+*RequestsApi* | [**GetDynamicRequestCreateSharedChannelGallery**](docs/RequestsApi.md#getdynamicrequestcreatesharedchannelgallery) | **GET** /requests/dynamic/{id}/gallery/createsharedchannel | 
 *RequestsApi* | [**GetDynamicRequestCreateSharedMailboxGallery**](docs/RequestsApi.md#getdynamicrequestcreatesharedmailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createsharedmailbox | 
 *RequestsApi* | [**GetDynamicRequestCreateSiteGallery**](docs/RequestsApi.md#getdynamicrequestcreatesitegallery) | **GET** /requests/dynamic/{id}/gallery/createsite | 
 *RequestsApi* | [**GetDynamicRequestCreateTeamsGallery**](docs/RequestsApi.md#getdynamicrequestcreateteamsgallery) | **GET** /requests/dynamic/{id}/gallery/createteams | 
 *RequestsApi* | [**GetDynamicRequestExchangeResourceLifecycleGallery**](docs/RequestsApi.md#getdynamicrequestexchangeresourcelifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/exchangeresourcelifecycle | 
+*RequestsApi* | [**GetDynamicRequestInviteGuestGallery**](docs/RequestsApi.md#getdynamicrequestinviteguestgallery) | **GET** /requests/dynamic/{id}/gallery/inviteguest | 
 *RequestsApi* | [**GetDynamicRequestM365GroupLifecycleGallery**](docs/RequestsApi.md#getdynamicrequestm365grouplifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/m365grouplifecycle | 
 *RequestsApi* | [**GetDynamicRequestSCLifecycleGallery**](docs/RequestsApi.md#getdynamicrequestsclifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/sclifecycle | 
 *RequestsApi* | [**GetDynamicRequestSharedMailboxLifecycleGallery**](docs/RequestsApi.md#getdynamicrequestsharedmailboxlifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/sharedmailboxlifecycle | 
@@ -325,12 +333,16 @@ Class | Method | HTTP request | Description
 *WorkspaceApi* | [**GetGroupMetadata**](docs/WorkspaceApi.md#getgroupmetadata) | **GET** /workspace/groups/{id}/metadata | get group/teams metadata
 *WorkspaceApi* | [**GetMyExchangeResourceInformation**](docs/WorkspaceApi.md#getmyexchangeresourceinformation) | **GET** /workspace/exchangeresource/{id} | 
 *WorkspaceApi* | [**GetMyGroupInformation**](docs/WorkspaceApi.md#getmygroupinformation) | **GET** /workspace/groups/{id} | get O365 group/teams information
+*WorkspaceApi* | [**GetMyResourceMailboxInformation**](docs/WorkspaceApi.md#getmyresourcemailboxinformation) | **GET** /workspace/resourcemailbox/{id} | 
 *WorkspaceApi* | [**GetMySharedMailboxInformation**](docs/WorkspaceApi.md#getmysharedmailboxinformation) | **GET** /workspace/sharedmailbox/{id} | 
 *WorkspaceApi* | [**GetMySiteInformation**](docs/WorkspaceApi.md#getmysiteinformation) | **GET** /workspace/sites/{id} | get site information
 *WorkspaceApi* | [**GetSiteMetadata**](docs/WorkspaceApi.md#getsitemetadata) | **GET** /workspace/sites/metadata | get site metadata
 *WorkspaceApi* | [**GetWorkspaceItems**](docs/WorkspaceApi.md#getworkspaceitems) | **GET** /workspace/my | get my workspace items
+*WorkspacesAdminApi* | [**ApplyGroupProfiles**](docs/WorkspacesAdminApi.md#applygroupprofiles) | **POST** /admin/directory/workspace/group/applyprofiles | apply group profiles
 *WorkspacesAdminApi* | [**ApplyGroupsPolicy**](docs/WorkspacesAdminApi.md#applygroupspolicy) | **POST** /admin/directory/workspace/groups/policy | apply groups policy
+*WorkspacesAdminApi* | [**ApplySiteProfiles**](docs/WorkspacesAdminApi.md#applysiteprofiles) | **POST** /admin/directory/workspace/sites/profiles | apply site profiles
 *WorkspacesAdminApi* | [**ApplySitesPolicy**](docs/WorkspacesAdminApi.md#applysitespolicy) | **POST** /admin/directory/workspace/sites/policy | apply site policy
+*WorkspacesAdminApi* | [**ApplyTeamProfiles**](docs/WorkspacesAdminApi.md#applyteamprofiles) | **POST** /admin/directory/workspace/teams/profiles | apply team profiles
 *WorkspacesAdminApi* | [**ArchiveWorkspace**](docs/WorkspacesAdminApi.md#archiveworkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 *WorkspacesAdminApi* | [**CompleteWorkspaceRenewalTask**](docs/WorkspacesAdminApi.md#completeworkspacerenewaltask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 *WorkspacesAdminApi* | [**DeleteWorkspaces**](docs/WorkspacesAdminApi.md#deleteworkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
@@ -347,6 +359,7 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.ActivityModelbase](docs/ActivityModelbase.md)
  - [Model.AddGroupMemberType](docs/AddGroupMemberType.md)
  - [Model.AdministrativeUnit](docs/AdministrativeUnit.md)
  - [Model.AllRequestDetails](docs/AllRequestDetails.md)
@@ -362,6 +375,7 @@ Class | Method | HTTP request | Description
  - [Model.ApiDurationType](docs/ApiDurationType.md)
  - [Model.ApiError](docs/ApiError.md)
  - [Model.ApiMyGroup](docs/ApiMyGroup.md)
+ - [Model.ApiProfileObjectType](docs/ApiProfileObjectType.md)
  - [Model.ApiRequest](docs/ApiRequest.md)
  - [Model.ApiRequestProgressStatus](docs/ApiRequestProgressStatus.md)
  - [Model.ApiSiteStatus](docs/ApiSiteStatus.md)
@@ -373,10 +387,14 @@ Class | Method | HTTP request | Description
  - [Model.ApiUserIListChangedProperty](docs/ApiUserIListChangedProperty.md)
  - [Model.ApiUserPageResult](docs/ApiUserPageResult.md)
  - [Model.ApiUserType](docs/ApiUserType.md)
+ - [Model.AppInfo](docs/AppInfo.md)
+ - [Model.AppSettingType](docs/AppSettingType.md)
  - [Model.AppSettings](docs/AppSettings.md)
  - [Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
  - [Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
+ - [Model.ApplyProfilesModel](docs/ApplyProfilesModel.md)
  - [Model.ApplySitePolicyModel](docs/ApplySitePolicyModel.md)
+ - [Model.ApplyTeamProfilesModel](docs/ApplyTeamProfilesModel.md)
  - [Model.ApproveProcessModel](docs/ApproveProcessModel.md)
  - [Model.ArchiveGroupRequest](docs/ArchiveGroupRequest.md)
  - [Model.ArchiveSiteRequest](docs/ArchiveSiteRequest.md)
@@ -393,6 +411,7 @@ Class | Method | HTTP request | Description
  - [Model.AutoTaskExtendRequest](docs/AutoTaskExtendRequest.md)
  - [Model.AzureAdMetadataSettings](docs/AzureAdMetadataSettings.md)
  - [Model.BackupEnvironmentSetting](docs/BackupEnvironmentSetting.md)
+ - [Model.BookingRequestType](docs/BookingRequestType.md)
  - [Model.BooleanChangedProperty](docs/BooleanChangedProperty.md)
  - [Model.BooleanMetadataSettings](docs/BooleanMetadataSettings.md)
  - [Model.BriefGroupPolicy](docs/BriefGroupPolicy.md)
@@ -407,14 +426,21 @@ Class | Method | HTTP request | Description
  - [Model.ChangeGroupPolicyResult](docs/ChangeGroupPolicyResult.md)
  - [Model.ChangeGroupQuotaRequest](docs/ChangeGroupQuotaRequest.md)
  - [Model.ChangeGroupQuotaResult](docs/ChangeGroupQuotaResult.md)
+ - [Model.ChangeGroupRequestDescription](docs/ChangeGroupRequestDescription.md)
+ - [Model.ChangeGroupRequestName](docs/ChangeGroupRequestName.md)
+ - [Model.ChangeGroupRequestVisibility](docs/ChangeGroupRequestVisibility.md)
  - [Model.ChangeGroupSettingCheckResult](docs/ChangeGroupSettingCheckResult.md)
  - [Model.ChangeGroupSettingRequest](docs/ChangeGroupSettingRequest.md)
  - [Model.ChangeGroupSettingService](docs/ChangeGroupSettingService.md)
  - [Model.ChangeGroupSettingValidationParameter](docs/ChangeGroupSettingValidationParameter.md)
+ - [Model.ChangeGroupSettingsModel](docs/ChangeGroupSettingsModel.md)
  - [Model.ChangeHubSiteContentModel](docs/ChangeHubSiteContentModel.md)
  - [Model.ChangeHubSiteContentModelChangedValueRequestModel](docs/ChangeHubSiteContentModelChangedValueRequestModel.md)
  - [Model.ChangeHubSiteMethod](docs/ChangeHubSiteMethod.md)
  - [Model.ChangeHubsiteActionType](docs/ChangeHubsiteActionType.md)
+ - [Model.ChangeLicenseGallery](docs/ChangeLicenseGallery.md)
+ - [Model.ChangeLicenseModel](docs/ChangeLicenseModel.md)
+ - [Model.ChangeLicenseUserModel](docs/ChangeLicenseUserModel.md)
  - [Model.ChangeListSettingObjectInfo](docs/ChangeListSettingObjectInfo.md)
  - [Model.ChangeListSettingRequest](docs/ChangeListSettingRequest.md)
  - [Model.ChangeListSettingService](docs/ChangeListSettingService.md)
@@ -432,23 +458,33 @@ Class | Method | HTTP request | Description
  - [Model.ChangePrivateChannelRequest](docs/ChangePrivateChannelRequest.md)
  - [Model.ChangePrivateChannelService](docs/ChangePrivateChannelService.md)
  - [Model.ChangePrivateChannelValidationParameter](docs/ChangePrivateChannelValidationParameter.md)
+ - [Model.ChangeSecurityGroupSettingsGalleryRequestModel](docs/ChangeSecurityGroupSettingsGalleryRequestModel.md)
+ - [Model.ChangeSharedChannelGallery](docs/ChangeSharedChannelGallery.md)
+ - [Model.ChangeSharedChannelModel](docs/ChangeSharedChannelModel.md)
  - [Model.ChangeSharedMailboxModel](docs/ChangeSharedMailboxModel.md)
  - [Model.ChangeSharedMailboxPermissionGallery](docs/ChangeSharedMailboxPermissionGallery.md)
+ - [Model.ChangeSiteContactElectionProfileModel](docs/ChangeSiteContactElectionProfileModel.md)
  - [Model.ChangeSiteContactRequest](docs/ChangeSiteContactRequest.md)
  - [Model.ChangeSiteContactService](docs/ChangeSiteContactService.md)
  - [Model.ChangeSiteContactSubRequest](docs/ChangeSiteContactSubRequest.md)
  - [Model.ChangeSiteContactValidateResult](docs/ChangeSiteContactValidateResult.md)
+ - [Model.ChangeSiteExternalSharingProfileModel](docs/ChangeSiteExternalSharingProfileModel.md)
  - [Model.ChangeSiteHubSiteRequestModel](docs/ChangeSiteHubSiteRequestModel.md)
  - [Model.ChangeSiteObjectModel](docs/ChangeSiteObjectModel.md)
  - [Model.ChangeSitePolicyRequest](docs/ChangeSitePolicyRequest.md)
  - [Model.ChangeSitePolicySetting](docs/ChangeSitePolicySetting.md)
+ - [Model.ChangeSiteProfileOngoingActionModel](docs/ChangeSiteProfileOngoingActionModel.md)
+ - [Model.ChangeSiteProfilesGallery](docs/ChangeSiteProfilesGallery.md)
+ - [Model.ChangeSiteProfilesModel](docs/ChangeSiteProfilesModel.md)
  - [Model.ChangeSiteQuotaRequest](docs/ChangeSiteQuotaRequest.md)
  - [Model.ChangeSiteQuotaSettings](docs/ChangeSiteQuotaSettings.md)
+ - [Model.ChangeSiteRenewProfileModel](docs/ChangeSiteRenewProfileModel.md)
  - [Model.ChangeSiteSettingGalleryRequestModel](docs/ChangeSiteSettingGalleryRequestModel.md)
  - [Model.ChangeSiteSettingRequest](docs/ChangeSiteSettingRequest.md)
  - [Model.ChangeSiteSettingService](docs/ChangeSiteSettingService.md)
  - [Model.ChangeSiteSettingValidateResult](docs/ChangeSiteSettingValidateResult.md)
  - [Model.ChangeSiteSharingRequestModel](docs/ChangeSiteSharingRequestModel.md)
+ - [Model.ChangeSiteStorageManagementProfileModel](docs/ChangeSiteStorageManagementProfileModel.md)
  - [Model.ChangeSiteStorageSettingModel](docs/ChangeSiteStorageSettingModel.md)
  - [Model.ChangeTeamClassificationAndSensitivityLabel](docs/ChangeTeamClassificationAndSensitivityLabel.md)
  - [Model.ChangeTeamDisplayName](docs/ChangeTeamDisplayName.md)
@@ -469,6 +505,7 @@ Class | Method | HTTP request | Description
  - [Model.ChangeWebSettingRequest](docs/ChangeWebSettingRequest.md)
  - [Model.ChangeWebSettingService](docs/ChangeWebSettingService.md)
  - [Model.ChangeWebUrlValidateResult](docs/ChangeWebUrlValidateResult.md)
+ - [Model.ChangedLicense](docs/ChangedLicense.md)
  - [Model.ChangedMembership](docs/ChangedMembership.md)
  - [Model.ChangedSiteDesignModel](docs/ChangedSiteDesignModel.md)
  - [Model.ChangedSiteDesignModelChangedValueRequestModel](docs/ChangedSiteDesignModelChangedValueRequestModel.md)
@@ -508,11 +545,14 @@ Class | Method | HTTP request | Description
  - [Model.ContentMoveUrlValidationResult](docs/ContentMoveUrlValidationResult.md)
  - [Model.ContentTypes](docs/ContentTypes.md)
  - [Model.ContructUrlSetting](docs/ContructUrlSetting.md)
+ - [Model.ConvertAutomaticReply](docs/ConvertAutomaticReply.md)
+ - [Model.ConvertEmail](docs/ConvertEmail.md)
  - [Model.ConvertHubSite](docs/ConvertHubSite.md)
  - [Model.ConvertHubSiteActionType](docs/ConvertHubSiteActionType.md)
  - [Model.CopyMoveSetting](docs/CopyMoveSetting.md)
  - [Model.CopyMoveSettingAssignBy](docs/CopyMoveSettingAssignBy.md)
  - [Model.CreateDistributionListGallery](docs/CreateDistributionListGallery.md)
+ - [Model.CreateEquipmentMailboxGallery](docs/CreateEquipmentMailboxGallery.md)
  - [Model.CreateGroupGallery](docs/CreateGroupGallery.md)
  - [Model.CreateGroupRequest](docs/CreateGroupRequest.md)
  - [Model.CreateGroupService](docs/CreateGroupService.md)
@@ -532,7 +572,24 @@ Class | Method | HTTP request | Description
  - [Model.CreatePrivateChannelRequest](docs/CreatePrivateChannelRequest.md)
  - [Model.CreatePrivateChannelService](docs/CreatePrivateChannelService.md)
  - [Model.CreatePrivateChannelValidationParameter](docs/CreatePrivateChannelValidationParameter.md)
+ - [Model.CreateResourceMailboxAddressBookPolicyRequestModel](docs/CreateResourceMailboxAddressBookPolicyRequestModel.md)
+ - [Model.CreateResourceMailboxAliasRequestModel](docs/CreateResourceMailboxAliasRequestModel.md)
+ - [Model.CreateResourceMailboxBookingDelegateSettingRequestModel](docs/CreateResourceMailboxBookingDelegateSettingRequestModel.md)
+ - [Model.CreateResourceMailboxBookingOptionRequestModel](docs/CreateResourceMailboxBookingOptionRequestModel.md)
+ - [Model.CreateResourceMailboxCapacityRequestModel](docs/CreateResourceMailboxCapacityRequestModel.md)
+ - [Model.CreateResourceMailboxCompanyRequestModel](docs/CreateResourceMailboxCompanyRequestModel.md)
+ - [Model.CreateResourceMailboxContactInformationRequestModel](docs/CreateResourceMailboxContactInformationRequestModel.md)
+ - [Model.CreateResourceMailboxDepartmentRequestModel](docs/CreateResourceMailboxDepartmentRequestModel.md)
+ - [Model.CreateResourceMailboxDisableAccountRequestModel](docs/CreateResourceMailboxDisableAccountRequestModel.md)
+ - [Model.CreateResourceMailboxExchangeGlobalAddressListRequestModel](docs/CreateResourceMailboxExchangeGlobalAddressListRequestModel.md)
+ - [Model.CreateResourceMailboxMailTipRequestModel](docs/CreateResourceMailboxMailTipRequestModel.md)
+ - [Model.CreateRoomMailboxAdditionalInformationRequestModel](docs/CreateRoomMailboxAdditionalInformationRequestModel.md)
+ - [Model.CreateRoomMailboxGallery](docs/CreateRoomMailboxGallery.md)
+ - [Model.CreateRoomMailboxRoomListRequestModel](docs/CreateRoomMailboxRoomListRequestModel.md)
+ - [Model.CreateRoomMailboxRoomPlaceRequestModel](docs/CreateRoomMailboxRoomPlaceRequestModel.md)
  - [Model.CreateSecurityGroupGallery](docs/CreateSecurityGroupGallery.md)
+ - [Model.CreateSharedChannelGallery](docs/CreateSharedChannelGallery.md)
+ - [Model.CreateSharedChannelModel](docs/CreateSharedChannelModel.md)
  - [Model.CreateSharedMailboxGallery](docs/CreateSharedMailboxGallery.md)
  - [Model.CreateSiteGallery](docs/CreateSiteGallery.md)
  - [Model.CreateSiteRequest](docs/CreateSiteRequest.md)
@@ -557,6 +614,7 @@ Class | Method | HTTP request | Description
  - [Model.DeleteType](docs/DeleteType.md)
  - [Model.DeleteWebLifecycleRequest](docs/DeleteWebLifecycleRequest.md)
  - [Model.DeleteWorkspaceParameter](docs/DeleteWorkspaceParameter.md)
+ - [Model.DeliveryManagement](docs/DeliveryManagement.md)
  - [Model.DeliveryStatusNotificationsRequestModel](docs/DeliveryStatusNotificationsRequestModel.md)
  - [Model.DeploymentManagerPlanSettings](docs/DeploymentManagerPlanSettings.md)
  - [Model.DepthLimitSetting](docs/DepthLimitSetting.md)
@@ -581,7 +639,9 @@ Class | Method | HTTP request | Description
  - [Model.ElectionContact](docs/ElectionContact.md)
  - [Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Model.EmailAddress](docs/EmailAddress.md)
+ - [Model.EmailForward](docs/EmailForward.md)
  - [Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
+ - [Model.EntraGroupLifecycleActionType](docs/EntraGroupLifecycleActionType.md)
  - [Model.ExchangeResourceLifecycleGallery](docs/ExchangeResourceLifecycleGallery.md)
  - [Model.ExchangeResourceStatus](docs/ExchangeResourceStatus.md)
  - [Model.ExchangeResourceType](docs/ExchangeResourceType.md)
@@ -652,6 +712,7 @@ Class | Method | HTTP request | Description
  - [Model.GuidBooleanModel](docs/GuidBooleanModel.md)
  - [Model.GuidModel](docs/GuidModel.md)
  - [Model.HandleOngoingType](docs/HandleOngoingType.md)
+ - [Model.HandleTaskType](docs/HandleTaskType.md)
  - [Model.HookMessageList](docs/HookMessageList.md)
  - [Model.HookMessageObjectType](docs/HookMessageObjectType.md)
  - [Model.HubSiteChangedSettings](docs/HubSiteChangedSettings.md)
@@ -659,7 +720,12 @@ Class | Method | HTTP request | Description
  - [Model.HubSiteSettings](docs/HubSiteSettings.md)
  - [Model.HubSiteType](docs/HubSiteType.md)
  - [Model.HubSiteUrl](docs/HubSiteUrl.md)
+ - [Model.ImportEnvironmentModel](docs/ImportEnvironmentModel.md)
+ - [Model.ImportGroupModel](docs/ImportGroupModel.md)
+ - [Model.ImportMetadataModel](docs/ImportMetadataModel.md)
  - [Model.ImportObjectType](docs/ImportObjectType.md)
+ - [Model.ImportSiteModel](docs/ImportSiteModel.md)
+ - [Model.ImportTeamModel](docs/ImportTeamModel.md)
  - [Model.InformationIconSetting](docs/InformationIconSetting.md)
  - [Model.InlineResponse200](docs/InlineResponse200.md)
  - [Model.InsightsStatus](docs/InsightsStatus.md)
@@ -667,6 +733,17 @@ Class | Method | HTTP request | Description
  - [Model.Int64ChangedProperty](docs/Int64ChangedProperty.md)
  - [Model.Int64ChangedValueRequestModel](docs/Int64ChangedValueRequestModel.md)
  - [Model.IntModel](docs/IntModel.md)
+ - [Model.InviteGuestAddToGroupsRequestModel](docs/InviteGuestAddToGroupsRequestModel.md)
+ - [Model.InviteGuestContactInformationRequestModel](docs/InviteGuestContactInformationRequestModel.md)
+ - [Model.InviteGuestGallery](docs/InviteGuestGallery.md)
+ - [Model.InviteGuestMode](docs/InviteGuestMode.md)
+ - [Model.InviteGuestOneTimeRenewalSettingModel](docs/InviteGuestOneTimeRenewalSettingModel.md)
+ - [Model.InviteGuestRenewalProfileRequestModel](docs/InviteGuestRenewalProfileRequestModel.md)
+ - [Model.InviteGuestScopeRequestModel](docs/InviteGuestScopeRequestModel.md)
+ - [Model.InviteGuestUsageLocationRequestModel](docs/InviteGuestUsageLocationRequestModel.md)
+ - [Model.InviteGuestUserPropertyRequestModel](docs/InviteGuestUserPropertyRequestModel.md)
+ - [Model.InviteGuestUserTypePropertyRequestModel](docs/InviteGuestUserTypePropertyRequestModel.md)
+ - [Model.InviteMultipleGuestRequestModel](docs/InviteMultipleGuestRequestModel.md)
  - [Model.InviteType](docs/InviteType.md)
  - [Model.ItemConflictResolutionType](docs/ItemConflictResolutionType.md)
  - [Model.JoinGroupApproval](docs/JoinGroupApproval.md)
@@ -676,6 +753,8 @@ Class | Method | HTTP request | Description
  - [Model.LibraryDesign](docs/LibraryDesign.md)
  - [Model.LibraryScope](docs/LibraryScope.md)
  - [Model.LibraryVersionSetting](docs/LibraryVersionSetting.md)
+ - [Model.LicenseInfo](docs/LicenseInfo.md)
+ - [Model.LicenseUpdateInfo](docs/LicenseUpdateInfo.md)
  - [Model.LifecycleAction](docs/LifecycleAction.md)
  - [Model.LifecycleActions](docs/LifecycleActions.md)
  - [Model.LifecycleHookMessage](docs/LifecycleHookMessage.md)
@@ -707,10 +786,16 @@ Class | Method | HTTP request | Description
  - [Model.LogicalOperatorType](docs/LogicalOperatorType.md)
  - [Model.LookupListValue](docs/LookupListValue.md)
  - [Model.LookupValue](docs/LookupValue.md)
+ - [Model.M365GroupLifecycleActionType](docs/M365GroupLifecycleActionType.md)
  - [Model.M365GroupLifecycleActions](docs/M365GroupLifecycleActions.md)
  - [Model.M365GroupLifecycleGallery](docs/M365GroupLifecycleGallery.md)
  - [Model.M365GroupLifecycleModel](docs/M365GroupLifecycleModel.md)
  - [Model.M365GroupLifecycleScopeSetting](docs/M365GroupLifecycleScopeSetting.md)
+ - [Model.MailboxAutoMapping](docs/MailboxAutoMapping.md)
+ - [Model.MailboxAutomaticReply](docs/MailboxAutomaticReply.md)
+ - [Model.MailboxLanguageDataTime](docs/MailboxLanguageDataTime.md)
+ - [Model.MailboxSentItems](docs/MailboxSentItems.md)
+ - [Model.MailboxSharedMailboxPolicy](docs/MailboxSharedMailboxPolicy.md)
  - [Model.ManagePermissionAction](docs/ManagePermissionAction.md)
  - [Model.ManagePermissionGrantSetting](docs/ManagePermissionGrantSetting.md)
  - [Model.ManagePermissionOption](docs/ManagePermissionOption.md)
@@ -742,6 +827,7 @@ Class | Method | HTTP request | Description
  - [Model.MultiGeoSerivceSetting](docs/MultiGeoSerivceSetting.md)
  - [Model.MultiGeoSetting](docs/MultiGeoSetting.md)
  - [Model.MyExchangeResource](docs/MyExchangeResource.md)
+ - [Model.MyResourceMailbox](docs/MyResourceMailbox.md)
  - [Model.MySharedMailbox](docs/MySharedMailbox.md)
  - [Model.MySite](docs/MySite.md)
  - [Model.MySiteType](docs/MySiteType.md)
@@ -808,6 +894,7 @@ Class | Method | HTTP request | Description
  - [Model.SPTenantSharingSettingModel](docs/SPTenantSharingSettingModel.md)
  - [Model.SPUserManagementModel](docs/SPUserManagementModel.md)
  - [Model.ScopeType](docs/ScopeType.md)
+ - [Model.SenderOptions](docs/SenderOptions.md)
  - [Model.SensitivityLabelModel](docs/SensitivityLabelModel.md)
  - [Model.ServiceForRequest](docs/ServiceForRequest.md)
  - [Model.ServiceGridModel](docs/ServiceGridModel.md)
@@ -815,12 +902,16 @@ Class | Method | HTTP request | Description
  - [Model.ServiceGroupWithPermissions](docs/ServiceGroupWithPermissions.md)
  - [Model.ServiceList](docs/ServiceList.md)
  - [Model.ServiceListPageResult](docs/ServiceListPageResult.md)
+ - [Model.ServicePlanModel](docs/ServicePlanModel.md)
  - [Model.ServiceScopeSettings](docs/ServiceScopeSettings.md)
  - [Model.ServiceTeamsSettings](docs/ServiceTeamsSettings.md)
  - [Model.ServiceType](docs/ServiceType.md)
  - [Model.ServiceUserWithPermissions](docs/ServiceUserWithPermissions.md)
  - [Model.SharePointBuildInGroupType](docs/SharePointBuildInGroupType.md)
  - [Model.SharePointListMetadataSettings](docs/SharePointListMetadataSettings.md)
+ - [Model.SharedChannelChangedMembership](docs/SharedChannelChangedMembership.md)
+ - [Model.SharedChannelDescription](docs/SharedChannelDescription.md)
+ - [Model.SharedChannelName](docs/SharedChannelName.md)
  - [Model.SharedMailboxLifecycleGalleryRequestModel](docs/SharedMailboxLifecycleGalleryRequestModel.md)
  - [Model.SharingAdvanceSettingModel](docs/SharingAdvanceSettingModel.md)
  - [Model.SharingAdvanceSettingModelChangedValueRequestModel](docs/SharingAdvanceSettingModelChangedValueRequestModel.md)
@@ -904,6 +995,7 @@ Class | Method | HTTP request | Description
  - [Model.TeamSensitivityLabel](docs/TeamSensitivityLabel.md)
  - [Model.TeamSensitivityLabelChangedValueRequestModel](docs/TeamSensitivityLabelChangedValueRequestModel.md)
  - [Model.TeamSiteStatus](docs/TeamSiteStatus.md)
+ - [Model.TeamSiteUrl](docs/TeamSiteUrl.md)
  - [Model.TeamTemplate](docs/TeamTemplate.md)
  - [Model.TeamTimeZone](docs/TeamTimeZone.md)
  - [Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)

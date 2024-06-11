@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Description** | **String** | Permission description | [optional] [readonly] 
 **IsExcluded** | **Boolean** | Whether the permission is excluded. | [optional] [readonly] [default to $false]
 **Type** | **Int32** |  | [optional] [default to 0]
+**IsCloudGovernanceCustomized** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -19,7 +20,8 @@ $PermissionLevel = New-Cloud.Governance.ClientPermissionLevel  -Id null `
  -Name null `
  -Description null `
  -IsExcluded null `
- -Type null
+ -Type null `
+ -IsCloudGovernanceCustomized null
 ```
 
 - Convert the resource to JSON

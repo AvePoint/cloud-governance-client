@@ -4,8 +4,11 @@ All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**ApplyGroupProfiles**](WorkspacesAdminApi.md#applygroupprofiles) | **POST** /admin/directory/workspace/group/applyprofiles | apply group profiles
 [**ApplyGroupsPolicy**](WorkspacesAdminApi.md#applygroupspolicy) | **POST** /admin/directory/workspace/groups/policy | apply groups policy
+[**ApplySiteProfiles**](WorkspacesAdminApi.md#applysiteprofiles) | **POST** /admin/directory/workspace/sites/profiles | apply site profiles
 [**ApplySitesPolicy**](WorkspacesAdminApi.md#applysitespolicy) | **POST** /admin/directory/workspace/sites/policy | apply site policy
+[**ApplyTeamProfiles**](WorkspacesAdminApi.md#applyteamprofiles) | **POST** /admin/directory/workspace/teams/profiles | apply team profiles
 [**ArchiveWorkspace**](WorkspacesAdminApi.md#archiveworkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 [**CompleteWorkspaceRenewalTask**](WorkspacesAdminApi.md#completeworkspacerenewaltask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 [**DeleteWorkspaces**](WorkspacesAdminApi.md#deleteworkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
@@ -18,6 +21,88 @@ Method | HTTP request | Description
 [**TriggerWorkspacesElection**](WorkspacesAdminApi.md#triggerworkspaceselection) | **POST** /admin/directory/workspace/election/trigger | trigger workspace election
 [**UnlockWorkspace**](WorkspacesAdminApi.md#unlockworkspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
 
+
+<a name="applygroupprofiles"></a>
+# **ApplyGroupProfiles**
+> void ApplyGroupProfiles (ApplyTeamProfilesModel applyTeamProfilesModel = null)
+
+apply group profiles
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ApplyGroupProfilesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var applyTeamProfilesModel = new ApplyTeamProfilesModel(); // ApplyTeamProfilesModel | apply profiles (optional) 
+
+            try
+            {
+                // apply group profiles
+                apiInstance.ApplyGroupProfiles(applyTeamProfilesModel);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.ApplyGroupProfiles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applyTeamProfilesModel** | [**ApplyTeamProfilesModel**](ApplyTeamProfilesModel.md)| apply profiles | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | start to apply group profiles |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="applygroupspolicy"></a>
 # **ApplyGroupsPolicy**
@@ -101,6 +186,88 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="applysiteprofiles"></a>
+# **ApplySiteProfiles**
+> void ApplySiteProfiles (ApplyProfilesModel applyProfilesModel = null)
+
+apply site profiles
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ApplySiteProfilesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var applyProfilesModel = new ApplyProfilesModel(); // ApplyProfilesModel | apply profiles (optional) 
+
+            try
+            {
+                // apply site profiles
+                apiInstance.ApplySiteProfiles(applyProfilesModel);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.ApplySiteProfiles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applyProfilesModel** | [**ApplyProfilesModel**](ApplyProfilesModel.md)| apply profiles | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | start to apply site profiles |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="applysitespolicy"></a>
 # **ApplySitesPolicy**
 > void ApplySitesPolicy (ApplySitePolicyModel applySitePolicyModel = null)
@@ -177,6 +344,88 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | start to apply site policy |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="applyteamprofiles"></a>
+# **ApplyTeamProfiles**
+> void ApplyTeamProfiles (ApplyTeamProfilesModel applyTeamProfilesModel = null)
+
+apply team profiles
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ApplyTeamProfilesExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var applyTeamProfilesModel = new ApplyTeamProfilesModel(); // ApplyTeamProfilesModel | apply profiles (optional) 
+
+            try
+            {
+                // apply team profiles
+                apiInstance.ApplyTeamProfiles(applyTeamProfilesModel);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.ApplyTeamProfiles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applyTeamProfilesModel** | [**ApplyTeamProfilesModel**](ApplyTeamProfilesModel.md)| apply profiles | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | start to apply team profiles |  -  |
 | **400** | Bad request |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | Internal server error |  -  |

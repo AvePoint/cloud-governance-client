@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **IsNotifyEnabled** | **Boolean** |  | [optional] [default to $false]
 **NotifyUsers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **NotifyEmailTemplateId** | **String** |  | [optional] 
+**EntraGroupLifecycleActionType** | [**EntraGroupLifecycleActionType**](EntraGroupLifecycleActionType.md) |  | [optional] 
+**ActivityId** | **String** |  | [optional] 
 **ActivityType** | **String** |  | [optional] 
 **Type** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
@@ -23,6 +25,8 @@ $LifecycleActions = New-Cloud.Governance.ClientLifecycleActions  -IsSendCancella
  -IsNotifyEnabled null `
  -NotifyUsers null `
  -NotifyEmailTemplateId null `
+ -EntraGroupLifecycleActionType null `
+ -ActivityId null `
  -ActivityType null `
  -Type null `
  -Title null `

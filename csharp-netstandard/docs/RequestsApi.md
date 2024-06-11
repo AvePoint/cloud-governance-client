@@ -35,18 +35,26 @@ Method | HTTP request | Description
 [**GetDynamicRequest**](RequestsApi.md#getdynamicrequest) | **GET** /requests/dynamic/{id} | get dynamic request
 [**GetDynamicRequestChangeContactGallery**](RequestsApi.md#getdynamicrequestchangecontactgallery) | **GET** /requests/dynamic/{id}/gallery/changecontact | 
 [**GetDynamicRequestChangeExchangeResourceMembershipGallery**](RequestsApi.md#getdynamicrequestchangeexchangeresourcemembershipgallery) | **GET** /requests/dynamic/{id}/gallery/changeexchangeresourcemembership | 
+[**GetDynamicRequestChangeLicenseGallery**](RequestsApi.md#getdynamicrequestchangelicensegallery) | **GET** /requests/dynamic/{id}/gallery/changelicense | 
+[**GetDynamicRequestChangeSecurityGroupSettingsGallery**](RequestsApi.md#getdynamicrequestchangesecuritygroupsettingsgallery) | **GET** /requests/dynamic/{id}/gallery/changesecuritygroupsettings | 
+[**GetDynamicRequestChangeSharedChannelGallery**](RequestsApi.md#getdynamicrequestchangesharedchannelgallery) | **GET** /requests/dynamic/{id}/gallery/changesharedchannel | 
 [**GetDynamicRequestChangeSharedMailboxPermissionGallery**](RequestsApi.md#getdynamicrequestchangesharedmailboxpermissiongallery) | **GET** /requests/dynamic/{id}/gallery/changesharedmailboxpermission | 
+[**GetDynamicRequestChangeSiteProfileGallery**](RequestsApi.md#getdynamicrequestchangesiteprofilegallery) | **GET** /requests/dynamic/{id}/gallery/changesiteprofile | 
 [**GetDynamicRequestChangeSiteSettingGallery**](RequestsApi.md#getdynamicrequestchangesitesettinggallery) | **GET** /requests/dynamic/{id}/gallery/changesitesetting | 
 [**GetDynamicRequestChangeTeamSettingGallery**](RequestsApi.md#getdynamicrequestchangeteamsettinggallery) | **GET** /requests/dynamic/{id}/gallery/changeteamsetting | 
 [**GetDynamicRequestCreateDistributionListGallery**](RequestsApi.md#getdynamicrequestcreatedistributionlistgallery) | **GET** /requests/dynamic/{id}/gallery/createdistributionlist | 
+[**GetDynamicRequestCreateEquipmentMailboxGallery**](RequestsApi.md#getdynamicrequestcreateequipmentmailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createequipmentmailbox | 
 [**GetDynamicRequestCreateGroupGallery**](RequestsApi.md#getdynamicrequestcreategroupgallery) | **GET** /requests/dynamic/{id}/gallery/creategroups | 
 [**GetDynamicRequestCreateLibraryGallery**](RequestsApi.md#getdynamicrequestcreatelibrarygallery) | **GET** /requests/dynamic/{id}/gallery/createlibrary | 
 [**GetDynamicRequestCreateMailEnabledGroupGallery**](RequestsApi.md#getdynamicrequestcreatemailenabledgroupgallery) | **GET** /requests/dynamic/{id}/gallery/createmailenabledgroup | 
+[**GetDynamicRequestCreateRoomMailboxGallery**](RequestsApi.md#getdynamicrequestcreateroommailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createroommailbox | 
 [**GetDynamicRequestCreateSecurityGroupGallery**](RequestsApi.md#getdynamicrequestcreatesecuritygroupgallery) | **GET** /requests/dynamic/{id}/gallery/createsecuritygroupgallery | 
+[**GetDynamicRequestCreateSharedChannelGallery**](RequestsApi.md#getdynamicrequestcreatesharedchannelgallery) | **GET** /requests/dynamic/{id}/gallery/createsharedchannel | 
 [**GetDynamicRequestCreateSharedMailboxGallery**](RequestsApi.md#getdynamicrequestcreatesharedmailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createsharedmailbox | 
 [**GetDynamicRequestCreateSiteGallery**](RequestsApi.md#getdynamicrequestcreatesitegallery) | **GET** /requests/dynamic/{id}/gallery/createsite | 
 [**GetDynamicRequestCreateTeamsGallery**](RequestsApi.md#getdynamicrequestcreateteamsgallery) | **GET** /requests/dynamic/{id}/gallery/createteams | 
 [**GetDynamicRequestExchangeResourceLifecycleGallery**](RequestsApi.md#getdynamicrequestexchangeresourcelifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/exchangeresourcelifecycle | 
+[**GetDynamicRequestInviteGuestGallery**](RequestsApi.md#getdynamicrequestinviteguestgallery) | **GET** /requests/dynamic/{id}/gallery/inviteguest | 
 [**GetDynamicRequestM365GroupLifecycleGallery**](RequestsApi.md#getdynamicrequestm365grouplifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/m365grouplifecycle | 
 [**GetDynamicRequestSCLifecycleGallery**](RequestsApi.md#getdynamicrequestsclifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/sclifecycle | 
 [**GetDynamicRequestSharedMailboxLifecycleGallery**](RequestsApi.md#getdynamicrequestsharedmailboxlifecyclegallery) | **GET** /requests/dynamic/{id}/gallery/sharedmailboxlifecycle | 
@@ -2674,6 +2682,258 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getdynamicrequestchangelicensegallery"></a>
+# **GetDynamicRequestChangeLicenseGallery**
+> ChangeLicenseGallery GetDynamicRequestChangeLicenseGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestChangeLicenseGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                ChangeLicenseGallery result = apiInstance.GetDynamicRequestChangeLicenseGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestChangeLicenseGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**ChangeLicenseGallery**](ChangeLicenseGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdynamicrequestchangesecuritygroupsettingsgallery"></a>
+# **GetDynamicRequestChangeSecurityGroupSettingsGallery**
+> ChangeSecurityGroupSettingsGalleryRequestModel GetDynamicRequestChangeSecurityGroupSettingsGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestChangeSecurityGroupSettingsGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                ChangeSecurityGroupSettingsGalleryRequestModel result = apiInstance.GetDynamicRequestChangeSecurityGroupSettingsGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestChangeSecurityGroupSettingsGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**ChangeSecurityGroupSettingsGalleryRequestModel**](ChangeSecurityGroupSettingsGalleryRequestModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdynamicrequestchangesharedchannelgallery"></a>
+# **GetDynamicRequestChangeSharedChannelGallery**
+> ChangeSharedChannelGallery GetDynamicRequestChangeSharedChannelGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestChangeSharedChannelGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                ChangeSharedChannelGallery result = apiInstance.GetDynamicRequestChangeSharedChannelGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestChangeSharedChannelGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**ChangeSharedChannelGallery**](ChangeSharedChannelGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getdynamicrequestchangesharedmailboxpermissiongallery"></a>
 # **GetDynamicRequestChangeSharedMailboxPermissionGallery**
 > ChangeSharedMailboxPermissionGallery GetDynamicRequestChangeSharedMailboxPermissionGallery (Guid id, string galleryName)
@@ -2738,6 +2998,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ChangeSharedMailboxPermissionGallery**](ChangeSharedMailboxPermissionGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdynamicrequestchangesiteprofilegallery"></a>
+# **GetDynamicRequestChangeSiteProfileGallery**
+> ChangeSiteProfilesGallery GetDynamicRequestChangeSiteProfileGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestChangeSiteProfileGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                ChangeSiteProfilesGallery result = apiInstance.GetDynamicRequestChangeSiteProfileGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestChangeSiteProfileGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**ChangeSiteProfilesGallery**](ChangeSiteProfilesGallery.md)
 
 ### Authorization
 
@@ -3010,6 +3354,90 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getdynamicrequestcreateequipmentmailboxgallery"></a>
+# **GetDynamicRequestCreateEquipmentMailboxGallery**
+> CreateEquipmentMailboxGallery GetDynamicRequestCreateEquipmentMailboxGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestCreateEquipmentMailboxGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                CreateEquipmentMailboxGallery result = apiInstance.GetDynamicRequestCreateEquipmentMailboxGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestCreateEquipmentMailboxGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**CreateEquipmentMailboxGallery**](CreateEquipmentMailboxGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getdynamicrequestcreategroupgallery"></a>
 # **GetDynamicRequestCreateGroupGallery**
 > CreateGroupGallery GetDynamicRequestCreateGroupGallery (Guid id, string galleryName)
@@ -3262,6 +3690,90 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getdynamicrequestcreateroommailboxgallery"></a>
+# **GetDynamicRequestCreateRoomMailboxGallery**
+> CreateRoomMailboxGallery GetDynamicRequestCreateRoomMailboxGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestCreateRoomMailboxGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                CreateRoomMailboxGallery result = apiInstance.GetDynamicRequestCreateRoomMailboxGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestCreateRoomMailboxGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**CreateRoomMailboxGallery**](CreateRoomMailboxGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getdynamicrequestcreatesecuritygroupgallery"></a>
 # **GetDynamicRequestCreateSecurityGroupGallery**
 > CreateSecurityGroupGallery GetDynamicRequestCreateSecurityGroupGallery (Guid id, string galleryName)
@@ -3326,6 +3838,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreateSecurityGroupGallery**](CreateSecurityGroupGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdynamicrequestcreatesharedchannelgallery"></a>
+# **GetDynamicRequestCreateSharedChannelGallery**
+> CreateSharedChannelGallery GetDynamicRequestCreateSharedChannelGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestCreateSharedChannelGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                CreateSharedChannelGallery result = apiInstance.GetDynamicRequestCreateSharedChannelGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestCreateSharedChannelGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**CreateSharedChannelGallery**](CreateSharedChannelGallery.md)
 
 ### Authorization
 
@@ -3662,6 +4258,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ExchangeResourceLifecycleGallery**](ExchangeResourceLifecycleGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdynamicrequestinviteguestgallery"></a>
+# **GetDynamicRequestInviteGuestGallery**
+> InviteGuestGallery GetDynamicRequestInviteGuestGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestInviteGuestGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                InviteGuestGallery result = apiInstance.GetDynamicRequestInviteGuestGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestInviteGuestGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**InviteGuestGallery**](InviteGuestGallery.md)
 
 ### Authorization
 

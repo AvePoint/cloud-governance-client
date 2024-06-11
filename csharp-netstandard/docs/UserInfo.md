@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **UsageLocation** | **string** |  | [optional] 
 **PhysicalDeliveryOfficeName** | **string** |  | [optional] 
 **IsOtherTenantUser** | **bool** |  | [optional] [default to false]
+**IsAccountEnabled** | **bool** |  | [optional] [default to false]
 **NetworkId** | **string** |  | [optional] 
 **IsValidateByProfile** | **bool** |  | [optional] [default to false]
 **ProxyAddresses** | **List&lt;string&gt;** |  | [optional] 

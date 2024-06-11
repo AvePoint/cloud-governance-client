@@ -38,8 +38,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)
-$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, displayName, mail, primaryContact, secondaryContact, status, phaseProfileId, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileId, electionProfileName, phase, claimStatus, ongoingTaskCount (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, displayName, mail, primaryContact, secondaryContact, status, phaseProfileId, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileId, electionProfileName, phase, claimStatus, ongoingTaskCount (optional)
 $Search = "MySearch" # String | Search for displayName (optional)
 $Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
 $Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
@@ -58,8 +58,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileName | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, phaseProfileId, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileId, electionProfileName, phase, claimStatus, ongoingTaskCount | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, displayName, mail, primaryContact, secondaryContact, status, phaseProfileId, profileName, tenantId, nextRenewalDate, renewalAssignees, lastRenewalBy, externalUserState, lastSyncTime, inviteTime, lastRenewalTime, renewalStartTime, renewalDueDate, electionProfileId, electionProfileName, phase, claimStatus, ongoingTaskCount | [optional] 
  **Search** | **String**| Search for displayName | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 

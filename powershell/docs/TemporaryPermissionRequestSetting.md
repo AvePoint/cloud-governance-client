@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **DurationDateType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **StartTime** | **System.DateTime** |  | [optional] 
 **EndTime** | **System.DateTime** |  | [optional] 
+**TempPermissionGroupIdentity** | **String** |  | [optional] 
 
 ## Examples
 
@@ -21,7 +22,8 @@ $TemporaryPermissionRequestSetting = New-Cloud.Governance.ClientTemporaryPermiss
  -DurationInterval null `
  -DurationDateType null `
  -StartTime null `
- -EndTime null
+ -EndTime null `
+ -TempPermissionGroupIdentity null
 ```
 
 - Convert the resource to JSON

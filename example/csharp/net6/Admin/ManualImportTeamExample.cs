@@ -5,9 +5,6 @@
     using Cloud.Governance.Client.Model;
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.IO;
-    using System.Net.Http;
     using System.Threading.Tasks;
 
     public class ManualImportTeamExample : TestBase
@@ -18,8 +15,7 @@
         {
             try
             {
-                var localFilePath = "c:\\import.xlsx";
-                ManualImportTeam(localFilePath, Configuration.Default).GetAwaiter().GetResult();
+                ManualImportTeam(Configuration.Default).GetAwaiter().GetResult();
             }
             catch (ApiException e)
             {
@@ -29,28 +25,40 @@
             }
         }
 
-        public static async Task ManualImportTeam(String localFilePath, Configuration config)
+        public static async Task ManualImportTeam(Configuration config)
         {
-            var office365AdminApi = new Office365AdminApi(config);
-            var sasUriModel = await office365AdminApi.GetUploadFileUrLAsync(ApiUploadFileType.ManualImport, $"import_{DateTime.Now}.xlsx");
-
-            var client = new HttpClient();
-            var content = new StreamContent(new MemoryStream(File.ReadAllBytes(localFilePath)));
-            content.Headers.Add("x-ms-blob-type", "BlockBlob");
-            content.Headers.Add("Content-Type", "text/plain");
-            using (var response = await client.PutAsync(sasUriModel.Uri, content))
-            {
-                Console.WriteLine(response.StatusCode);
-            }
-
             var unmanagedDirectoryAdminApi = new UnmanagedDirectoryAdminApi(config);
             await unmanagedDirectoryAdminApi.ImportUnmanagedTeamsAsync(new ManualImportTeamJobModel
             {
                 ObjectType = ImportObjectType.Team,
                 InactiveJobTimeBaseType = LifecycleJobTimeBaseType.ImportedTime,
+                IsIncludeArchivedTeams = true,
                 Name = "Test Name",
                 Description = "Test Description",
-                FileName = sasUriModel.FileName,
+                Workspaces = new List<ImportTeamModel>
+                {
+                    new ImportTeamModel
+                    {
+                        TeamName = "Team Name",
+                        EmailAddress = "EmailAddress@xxx.com",
+                        IsKeepSiteQuota = true,
+                        AppSetting = AppSettingType.None,
+                        PrimaryContact = "user1@xxx.com",
+                        SecondaryContact = "user2@xxx.com",
+                        ExternalSharingProfile = "External Sharing Profile Name",
+                        StorageManagementProfile = "Storage Management Profile Name",
+                        ContactElectionProfile = "Contact Election Profile Name",
+                        RenewalProfile = "Renewal Profile Name",
+                        Metadatas = new List<ImportMetadataModel>
+                        {
+                            new ImportMetadataModel
+                            {
+                                Name = "Metadata Name",
+                                Value = "Metadata Value",
+                            }
+                        }
+                    }
+                }
             });
         }
     }

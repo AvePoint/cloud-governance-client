@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
 **PowerPlatformShowTargetObject** | **String** |  | [optional] 
 **ObjectIdentity** | **String** |  | [optional] 
+**EnvironmentName** | **String** |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples
@@ -25,6 +26,7 @@ $ChangeContactObjectModel = New-Cloud.Governance.ClientChangeContactObjectModel 
  -Type null `
  -PowerPlatformShowTargetObject null `
  -ObjectIdentity null `
+ -EnvironmentName null `
  -ActivityId null
 ```
 

@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **MultiGeoLocationSetting** | [**MultiGeoLocationSetting**](MultiGeoLocationSetting.md) |  | [optional] 
 **SubscribeMembers** | [**SubscribeMembers**](SubscribeMembers.md) |  | [optional] 
 **OutsideSenders** | [**OutsideSenders**](OutsideSenders.md) |  | [optional] 
+**GroupSendAs** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
+**GroupSendOnBehalf** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
 **OfficeTenantId** | **Guid** |  | [optional] 
 **Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
 **Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 

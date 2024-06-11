@@ -3,11 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**M365GroupLifecycleActionType** | **M365GroupLifecycleActionType** |  | [optional] 
 **IsSendCancellation** | **bool** |  | [optional] [default to false]
 **SendCancellationEmailTemplateId** | **string** |  | [optional] 
 **IsNotifyEnabled** | **bool** |  | [optional] [default to false]
 **NotifyUsers** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 **NotifyEmailTemplateId** | **string** |  | [optional] 
+**EntraGroupLifecycleActionType** | **EntraGroupLifecycleActionType** |  | [optional] 
+**ActivityId** | **string** |  | [optional] 
 **ActivityType** | **string** |  | [optional] 
 **Type** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 

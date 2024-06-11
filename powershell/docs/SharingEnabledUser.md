@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **IsSharePointGroup** | **Boolean** |  | [optional] [default to $false]
 **IsGuestUser** | **Boolean** |  | [optional] [default to $false]
 **IsGuestUserExistsInOrganization** | **Boolean** |  | [optional] [default to $false]
+**ApiUserType** | [**ApiUserType**](ApiUserType.md) |  | [optional] 
 **Id** | **String** | Object ID | [optional] 
 **LoginName** | **String** | Login name | [optional] 
 **IsExternalUser** | [**ExternalUserType**](ExternalUserType.md) | Whether the user is an external user. | [optional] 
@@ -17,9 +18,9 @@ Name | Type | Description | Notes
 **JobTitle** | **String** | User job title | [optional] [readonly] 
 **PhysicalDeliveryOfficeName** | **String** | Physical delivery office name of the user | [optional] [readonly] 
 **IsValid** | **Boolean** | Whether the user is valid. | [optional] [readonly] [default to $false]
+**IsAccountEnabled** | **Boolean** | Whether the user is valid. | [optional] [readonly] [default to $false]
 **TenantId** | **String** | Office 365 tenant ID of the user | [optional] [readonly] 
 **AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) | User additional data | [optional] [readonly] 
-**ApiUserType** | [**ApiUserType**](ApiUserType.md) | ApiUser type | [optional] [readonly] 
 
 ## Examples
 
@@ -28,6 +29,7 @@ Name | Type | Description | Notes
 $SharingEnabledUser = New-Cloud.Governance.ClientSharingEnabledUser  -IsSharePointGroup null `
  -IsGuestUser null `
  -IsGuestUserExistsInOrganization null `
+ -ApiUserType null `
  -Id null `
  -LoginName null `
  -IsExternalUser null `
@@ -39,9 +41,9 @@ $SharingEnabledUser = New-Cloud.Governance.ClientSharingEnabledUser  -IsSharePoi
  -JobTitle null `
  -PhysicalDeliveryOfficeName null `
  -IsValid null `
+ -IsAccountEnabled null `
  -TenantId null `
- -AdditionalData null `
- -ApiUserType null
+ -AdditionalData null
 ```
 
 - Convert the resource to JSON

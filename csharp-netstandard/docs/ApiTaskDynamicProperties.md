@@ -36,6 +36,9 @@ Name | Type | Description | Notes
 **RenewalDetails** | **Object** |  | [optional] 
 **IsFinalStep** | **Object** |  | [optional] 
 **ObjectId** | **Object** |  | [optional] 
+**IsTriggerTaskWhenSecondaryEmpty** | **Object** |  | [optional] 
+**PeoplePickerProfileId** | **Object** |  | [optional] 
+**EnvironmentDisplayName** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -45,6 +45,7 @@ Name | Type | Description | Notes
 **PrivacyDescription** | **string** |  | [optional] 
 **EnableDynamicMembership** | **bool?** |  | [optional] [default to false]
 **WebLink** | **string** |  | [optional] 
+**CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
 **EnableDynamicMembershipDescription** | **string** |  | [optional] 
 **Metadata** | [**List&lt;EndUserReportMetadata&gt;**](EndUserReportMetadata.md) |  | [optional] 
 

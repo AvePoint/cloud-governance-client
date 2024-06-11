@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **Communication** | [**Communication**](Communication.md) |  | [optional] 
 **MembershipApproval** | [**MembershipApproval**](MembershipApproval.md) |  | [optional] 
 **MessageApproval** | [**MessageApproval**](MessageApproval.md) |  | [optional] 
+**DeliveryManagement** | [**DeliveryManagement**](DeliveryManagement.md) |  | [optional] 
 **GroupEmailAddress** | [**EmailAddress**](EmailAddress.md) |  | [optional] 
 **GlobalAddressList** | [**GlobalAddressList**](GlobalAddressList.md) |  | [optional] 
 **GroupEmail** | **String** |  | [optional] [readonly] 
@@ -30,6 +31,7 @@ Name | Type | Description | Notes
 $CreateDistributionListGallery = New-Cloud.Governance.ClientCreateDistributionListGallery  -Communication null `
  -MembershipApproval null `
  -MessageApproval null `
+ -DeliveryManagement null `
  -GroupEmailAddress null `
  -GlobalAddressList null `
  -GroupEmail null `

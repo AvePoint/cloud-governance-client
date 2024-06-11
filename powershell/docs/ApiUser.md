@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **JobTitle** | **String** | User job title | [optional] [readonly] 
 **PhysicalDeliveryOfficeName** | **String** | Physical delivery office name of the user | [optional] [readonly] 
 **IsValid** | **Boolean** | Whether the user is valid. | [optional] [readonly] [default to $false]
+**IsAccountEnabled** | **Boolean** | Whether the user is valid. | [optional] [readonly] [default to $false]
 **TenantId** | **String** | Office 365 tenant ID of the user | [optional] [readonly] 
 **AdditionalData** | [**System.Collections.Hashtable**](AnyType.md) | User additional data | [optional] [readonly] 
 **ApiUserType** | [**ApiUserType**](ApiUserType.md) | ApiUser type | [optional] [readonly] 
@@ -33,6 +34,7 @@ $ApiUser = New-Cloud.Governance.ClientApiUser  -Id null `
  -JobTitle null `
  -PhysicalDeliveryOfficeName null `
  -IsValid null `
+ -IsAccountEnabled null `
  -TenantId null `
  -AdditionalData null `
  -ApiUserType null

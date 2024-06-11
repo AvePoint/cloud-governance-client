@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **MentionSetting** | [**TeamMentionSetting**](TeamMentionSetting.md) |  | [optional] 
 **TeamMessagingSettings** | [**TeamMessagingSettings**](TeamMessagingSettings.md) |  | [optional] 
 **TeamHubSite** | [**HubSiteSetting**](HubSiteSetting.md) |  | [optional] 
+**TeamSiteUrl** | [**TeamSiteUrl**](TeamSiteUrl.md) | Activity model for team site url | [optional] 
 **OfficeTenantId** | **String** |  | [optional] 
 **Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
 **Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
@@ -57,6 +58,7 @@ $CreateTeamGallery = New-Cloud.Governance.ClientCreateTeamGallery  -ObjectId nul
  -MentionSetting null `
  -TeamMessagingSettings null `
  -TeamHubSite null `
+ -TeamSiteUrl null `
  -OfficeTenantId null `
  -Owners null `
  -Members null `

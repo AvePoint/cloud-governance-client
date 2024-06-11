@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **PrincipalType** | **SPPrincipalType** |  | [optional] 
 **PrincipalTypeDescription** | **string** |  | [optional] 
 **PermissionLevels** | **List&lt;string&gt;** |  | [optional] 
+**TemporaryPermissionSetting** | [**TemporaryPermissionRequestSetting**](TemporaryPermissionRequestSetting.md) |  | [optional] 
+**ObjectId** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 <a name="resolveusers"></a>
 # **ResolveUsers**
-> List&lt;ApiUser&gt; ResolveUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null, bool? includeBlockedUser = null)
+> List&lt;ApiUser&gt; ResolveUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null, bool? includeBlockedUser = null, bool? isNeedEveryone = null, bool? isMultiTenantContact = null)
 
 resolve users
 
@@ -398,11 +398,13 @@ namespace Example
             var peopleFilterProfileId = new Guid?(); // Guid? |  (optional) 
             var isGetTenantBySiteUrl = true;  // bool? |  (optional)  (default to true)
             var includeBlockedUser = true;  // bool? |  (optional)  (default to false)
+            var isNeedEveryone = true;  // bool? |  (optional)  (default to false)
+            var isMultiTenantContact = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // resolve users
-                List<ApiUser> result = apiInstance.ResolveUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl, includeBlockedUser);
+                List<ApiUser> result = apiInstance.ResolveUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl, includeBlockedUser, isNeedEveryone, isMultiTenantContact);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -429,6 +431,8 @@ Name | Type | Description  | Notes
  **peopleFilterProfileId** | [**Guid?**](Guid?.md)|  | [optional] 
  **isGetTenantBySiteUrl** | **bool?**|  | [optional] [default to true]
  **includeBlockedUser** | **bool?**|  | [optional] [default to false]
+ **isNeedEveryone** | **bool?**|  | [optional] [default to false]
+ **isMultiTenantContact** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 
@@ -455,7 +459,7 @@ Name | Type | Description  | Notes
 
 <a name="searchusers"></a>
 # **SearchUsers**
-> List&lt;ApiUser&gt; SearchUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null, bool? includeBlockedUser = null)
+> List&lt;ApiUser&gt; SearchUsers (string keyword, ApiUserType userType, UserSource userSource, ExternalSharingOptions sharingOptions, string siteUrlOrTenantId = null, string groupEmail = null, Guid? peopleFilterProfileId = null, bool? isGetTenantBySiteUrl = null, bool? includeBlockedUser = null, bool? isNeedEveryone = null, bool? isMultiTenantContact = null)
 
 search users
 
@@ -497,11 +501,13 @@ namespace Example
             var peopleFilterProfileId = new Guid?(); // Guid? |  (optional) 
             var isGetTenantBySiteUrl = true;  // bool? |  (optional)  (default to true)
             var includeBlockedUser = true;  // bool? |  (optional)  (default to false)
+            var isNeedEveryone = true;  // bool? |  (optional)  (default to false)
+            var isMultiTenantContact = true;  // bool? |  (optional)  (default to false)
 
             try
             {
                 // search users
-                List<ApiUser> result = apiInstance.SearchUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl, includeBlockedUser);
+                List<ApiUser> result = apiInstance.SearchUsers(keyword, userType, userSource, sharingOptions, siteUrlOrTenantId, groupEmail, peopleFilterProfileId, isGetTenantBySiteUrl, includeBlockedUser, isNeedEveryone, isMultiTenantContact);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -528,6 +534,8 @@ Name | Type | Description  | Notes
  **peopleFilterProfileId** | [**Guid?**](Guid?.md)|  | [optional] 
  **isGetTenantBySiteUrl** | **bool?**|  | [optional] [default to true]
  **includeBlockedUser** | **bool?**|  | [optional] [default to false]
+ **isNeedEveryone** | **bool?**|  | [optional] [default to false]
+ **isMultiTenantContact** | **bool?**|  | [optional] [default to false]
 
 ### Return type
 

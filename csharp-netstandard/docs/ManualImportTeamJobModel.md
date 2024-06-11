@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **ObjectType** | **ImportObjectType** |  | [optional] 
 **IsIncludeArchivedTeams** | **bool** |  | [optional] [default to false]
 **InactiveJobTimeBaseType** | **LifecycleJobTimeBaseType** |  | [optional] 
+**Workspaces** | [**List&lt;ImportTeamModel&gt;**](ImportTeamModel.md) |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **FileName** | **string** |  | [optional] 

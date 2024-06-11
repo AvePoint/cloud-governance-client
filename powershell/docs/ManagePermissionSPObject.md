@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **TemporaryGroupTitle** | **String** |  | [optional] 
+**Language** | **Int32** |  | [optional] [default to 0]
+**GroupId** | **String** |  | [optional] 
 **WebId** | **String** |  | [optional] 
 **SiteId** | **String** |  | [optional] 
 **WebServerRelativeUrl** | **String** |  | [optional] 
@@ -35,6 +37,8 @@ $ManagePermissionSPObject = New-Cloud.Governance.ClientManagePermissionSPObject 
  -PrimaryContact null `
  -SecondaryContact null `
  -TemporaryGroupTitle null `
+ -Language null `
+ -GroupId null `
  -WebId null `
  -SiteId null `
  -WebServerRelativeUrl null `

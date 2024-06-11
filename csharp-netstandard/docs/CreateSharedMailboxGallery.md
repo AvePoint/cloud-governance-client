@@ -5,6 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ContactInformation** | [**ContactInformation**](ContactInformation.md) |  | [optional] 
 **MultiGeoLocationSetting** | [**MultiGeoLocationSetting**](MultiGeoLocationSetting.md) |  | [optional] 
+**LanguageDataTime** | [**MailboxLanguageDataTime**](MailboxLanguageDataTime.md) |  | [optional] 
+**TimeZone** | [**SiteTimeZone**](SiteTimeZone.md) |  | [optional] 
+**EmailForwarding** | [**EmailForward**](EmailForward.md) |  | [optional] 
+**AutoMappingSettings** | [**MailboxAutoMapping**](MailboxAutoMapping.md) |  | [optional] 
+**SentItems** | [**MailboxSentItems**](MailboxSentItems.md) |  | [optional] 
+**AutomaticReplies** | [**MailboxAutomaticReply**](MailboxAutomaticReply.md) |  | [optional] 
+**Policies** | [**MailboxSharedMailboxPolicy**](MailboxSharedMailboxPolicy.md) |  | [optional] 
 **GroupEmailAddress** | [**EmailAddress**](EmailAddress.md) |  | [optional] 
 **GlobalAddressList** | [**GlobalAddressList**](GlobalAddressList.md) |  | [optional] 
 **GroupEmail** | **string** |  | [optional] [readonly] 

@@ -76,7 +76,7 @@ void (empty response body)
 
 <a name="Import-UnmanagedEnvironments"></a>
 # **Import-UnmanagedEnvironments**
-> void Import-UnmanagedEnvironments<br>
+> String Import-UnmanagedEnvironments<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ManualImportEnvironmentJobModel] <PSCustomObject><br>
 
 manually import existing environments
@@ -101,7 +101,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $ManualImportEnvironmentJobModel = $ImportObjectType = New-ImportObjectType 
-$ManualImportEnvironmentJobModel = New-ManualImportEnvironmentJobModel -ObjectType $ImportObjectType -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportEnvironmentJobModel |  (optional)
+
+$ImportMetadataModel = New-ImportMetadataModel -Name "MyName" -Value "MyValue"
+$ImportEnvironmentModel = New-ImportEnvironmentModel -ObjectType $ImportObjectType -Id "MyId" -Url "MyUrl" -Name "MyName" -TenantId "MyTenantId" -ContactElectionProfile "MyContactElectionProfile" -RenewalProfile "MyRenewalProfile" -PrimaryContact "MyPrimaryContact" -SecondaryContact "MySecondaryContact" -Metadatas $ImportMetadataModel
+
+$ManualImportEnvironmentJobModel = New-ManualImportEnvironmentJobModel -ObjectType $ImportObjectType -Workspaces $ImportEnvironmentModel -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportEnvironmentJobModel |  (optional)
 
 # manually import existing environments
 try {
@@ -120,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
-void (empty response body)
+**String**
 
 ### Authorization
 
@@ -129,13 +133,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Import-UnmanagedGroups"></a>
 # **Import-UnmanagedGroups**
-> void Import-UnmanagedGroups<br>
+> String Import-UnmanagedGroups<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ManualImportGroupJobModel] <PSCustomObject><br>
 
 manually import existing microsoft 365 groups
@@ -161,7 +165,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ManualImportGroupJobModel = $ImportObjectType = New-ImportObjectType 
 $LifecycleJobTimeBaseType = New-LifecycleJobTimeBaseType 
-$ManualImportGroupJobModel = New-ManualImportGroupJobModel -ObjectType $ImportObjectType -InactiveJobTimeBaseType $LifecycleJobTimeBaseType -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportGroupJobModel |  (optional)
+
+$AppSettingType = New-AppSettingType 
+$ImportMetadataModel = New-ImportMetadataModel -Name "MyName" -Value "MyValue"
+$ImportGroupModel = New-ImportGroupModel -ObjectType $ImportObjectType -GroupName "MyGroupName" -EmailAddress "MyEmailAddress" -IsKeepSiteQuota $false -AppSetting $AppSettingType -ExternalSharingProfile "MyExternalSharingProfile" -StorageManagementProfile "MyStorageManagementProfile" -ContactElectionProfile "MyContactElectionProfile" -RenewalProfile "MyRenewalProfile" -PrimaryContact "MyPrimaryContact" -SecondaryContact "MySecondaryContact" -Metadatas $ImportMetadataModel
+
+$ManualImportGroupJobModel = New-ManualImportGroupJobModel -ObjectType $ImportObjectType -InactiveJobTimeBaseType $LifecycleJobTimeBaseType -Workspaces $ImportGroupModel -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportGroupJobModel |  (optional)
 
 # manually import existing microsoft 365 groups
 try {
@@ -180,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
-void (empty response body)
+**String**
 
 ### Authorization
 
@@ -189,7 +198,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -431,7 +440,7 @@ void (empty response body)
 
 <a name="Import-UnmanagedSites"></a>
 # **Import-UnmanagedSites**
-> void Import-UnmanagedSites<br>
+> String Import-UnmanagedSites<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ManualImportSiteJobModel] <PSCustomObject><br>
 
 manually import existing site collections
@@ -457,7 +466,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ManualImportSiteJobModel = $ImportObjectType = New-ImportObjectType 
 $LifecycleJobTimeBaseType = New-LifecycleJobTimeBaseType 
-$ManualImportSiteJobModel = New-ManualImportSiteJobModel -ObjectType $ImportObjectType -InactiveJobTimeBaseType $LifecycleJobTimeBaseType -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportSiteJobModel |  (optional)
+
+$AppSettingType = New-AppSettingType 
+$ImportMetadataModel = New-ImportMetadataModel -Name "MyName" -Value "MyValue"
+$ImportSiteModel = New-ImportSiteModel -ObjectType $ImportObjectType -SiteTitle "MySiteTitle" -SiteUrl "MySiteUrl" -IsKeepSiteQuota $false -AppSetting $AppSettingType -ExternalSharingProfile "MyExternalSharingProfile" -StorageManagementProfile "MyStorageManagementProfile" -ContactElectionProfile "MyContactElectionProfile" -RenewalProfile "MyRenewalProfile" -PrimaryContact "MyPrimaryContact" -SecondaryContact "MySecondaryContact" -Metadatas $ImportMetadataModel
+
+$ManualImportSiteJobModel = New-ManualImportSiteJobModel -ObjectType $ImportObjectType -InactiveJobTimeBaseType $LifecycleJobTimeBaseType -Workspaces $ImportSiteModel -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportSiteJobModel |  (optional)
 
 # manually import existing site collections
 try {
@@ -476,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
-void (empty response body)
+**String**
 
 ### Authorization
 
@@ -485,13 +499,13 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Import-UnmanagedTeams"></a>
 # **Import-UnmanagedTeams**
-> void Import-UnmanagedTeams<br>
+> String Import-UnmanagedTeams<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ManualImportTeamJobModel] <PSCustomObject><br>
 
 manually import existing microsoft teams
@@ -517,7 +531,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ManualImportTeamJobModel = $ImportObjectType = New-ImportObjectType 
 $LifecycleJobTimeBaseType = New-LifecycleJobTimeBaseType 
-$ManualImportTeamJobModel = New-ManualImportTeamJobModel -ObjectType $ImportObjectType -IsIncludeArchivedTeams $false -InactiveJobTimeBaseType $LifecycleJobTimeBaseType -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportTeamJobModel |  (optional)
+
+$AppSettingType = New-AppSettingType 
+$ImportMetadataModel = New-ImportMetadataModel -Name "MyName" -Value "MyValue"
+$ImportTeamModel = New-ImportTeamModel -ObjectType $ImportObjectType -TeamName "MyTeamName" -EmailAddress "MyEmailAddress" -IsKeepSiteQuota $false -AppSetting $AppSettingType -ExternalSharingProfile "MyExternalSharingProfile" -StorageManagementProfile "MyStorageManagementProfile" -ContactElectionProfile "MyContactElectionProfile" -RenewalProfile "MyRenewalProfile" -PrimaryContact "MyPrimaryContact" -SecondaryContact "MySecondaryContact" -Metadatas $ImportMetadataModel
+
+$ManualImportTeamJobModel = New-ManualImportTeamJobModel -ObjectType $ImportObjectType -IsIncludeArchivedTeams $false -InactiveJobTimeBaseType $LifecycleJobTimeBaseType -Workspaces $ImportTeamModel -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportTeamJobModel |  (optional)
 
 # manually import existing microsoft teams
 try {
@@ -536,7 +555,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
-void (empty response body)
+**String**
 
 ### Authorization
 
@@ -545,7 +564,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

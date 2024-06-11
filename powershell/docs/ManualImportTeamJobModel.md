@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **ObjectType** | [**ImportObjectType**](ImportObjectType.md) |  | [optional] 
 **IsIncludeArchivedTeams** | **Boolean** |  | [optional] [default to $false]
 **InactiveJobTimeBaseType** | [**LifecycleJobTimeBaseType**](LifecycleJobTimeBaseType.md) |  | [optional] 
+**Workspaces** | [**ImportTeamModel[]**](ImportTeamModel.md) |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **FileName** | **String** |  | [optional] 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 $ManualImportTeamJobModel = New-Cloud.Governance.ClientManualImportTeamJobModel  -ObjectType null `
  -IsIncludeArchivedTeams null `
  -InactiveJobTimeBaseType null `
+ -Workspaces null `
  -Name null `
  -Description null `
  -FileName null

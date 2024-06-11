@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | **ImportObjectType** |  | [optional] 
 **InactiveJobTimeBaseType** | **LifecycleJobTimeBaseType** |  | [optional] 
+**Workspaces** | [**List&lt;ImportSiteModel&gt;**](ImportSiteModel.md) |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
 **FileName** | **string** |  | [optional] 

@@ -99,7 +99,7 @@ void (empty response body)
 
 <a name="importunmanagedenvironments"></a>
 # **ImportUnmanagedEnvironments**
-> void ImportUnmanagedEnvironments (ManualImportEnvironmentJobModel manualImportEnvironmentJobModel = null)
+> Guid ImportUnmanagedEnvironments (ManualImportEnvironmentJobModel manualImportEnvironmentJobModel = null)
 
 manually import existing environments
 
@@ -137,7 +137,8 @@ namespace Example
             try
             {
                 // manually import existing environments
-                apiInstance.ImportUnmanagedEnvironments(manualImportEnvironmentJobModel);
+                Guid result = apiInstance.ImportUnmanagedEnvironments(manualImportEnvironmentJobModel);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -158,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Guid**
 
 ### Authorization
 
@@ -167,7 +168,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -181,7 +182,7 @@ void (empty response body)
 
 <a name="importunmanagedgroups"></a>
 # **ImportUnmanagedGroups**
-> void ImportUnmanagedGroups (ManualImportGroupJobModel manualImportGroupJobModel = null)
+> Guid ImportUnmanagedGroups (ManualImportGroupJobModel manualImportGroupJobModel = null)
 
 manually import existing microsoft 365 groups
 
@@ -219,7 +220,8 @@ namespace Example
             try
             {
                 // manually import existing microsoft 365 groups
-                apiInstance.ImportUnmanagedGroups(manualImportGroupJobModel);
+                Guid result = apiInstance.ImportUnmanagedGroups(manualImportGroupJobModel);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -240,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Guid**
 
 ### Authorization
 
@@ -249,7 +251,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -591,7 +593,7 @@ void (empty response body)
 
 <a name="importunmanagedsites"></a>
 # **ImportUnmanagedSites**
-> void ImportUnmanagedSites (ManualImportSiteJobModel manualImportSiteJobModel = null)
+> Guid ImportUnmanagedSites (ManualImportSiteJobModel manualImportSiteJobModel = null)
 
 manually import existing site collections
 
@@ -629,7 +631,8 @@ namespace Example
             try
             {
                 // manually import existing site collections
-                apiInstance.ImportUnmanagedSites(manualImportSiteJobModel);
+                Guid result = apiInstance.ImportUnmanagedSites(manualImportSiteJobModel);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -650,7 +653,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Guid**
 
 ### Authorization
 
@@ -659,7 +662,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -673,7 +676,7 @@ void (empty response body)
 
 <a name="importunmanagedteams"></a>
 # **ImportUnmanagedTeams**
-> void ImportUnmanagedTeams (ManualImportTeamJobModel manualImportTeamJobModel = null)
+> Guid ImportUnmanagedTeams (ManualImportTeamJobModel manualImportTeamJobModel = null)
 
 manually import existing microsoft teams
 
@@ -711,7 +714,8 @@ namespace Example
             try
             {
                 // manually import existing microsoft teams
-                apiInstance.ImportUnmanagedTeams(manualImportTeamJobModel);
+                Guid result = apiInstance.ImportUnmanagedTeams(manualImportTeamJobModel);
+                Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
@@ -732,7 +736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**Guid**
 
 ### Authorization
 
@@ -741,7 +745,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

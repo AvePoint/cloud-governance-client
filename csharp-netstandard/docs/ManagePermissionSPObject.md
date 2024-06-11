@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **TemporaryGroupTitle** | **string** |  | [optional] 
+**Language** | **int** |  | [optional] [default to 0]
+**GroupId** | **Guid** |  | [optional] 
 **WebId** | **Guid** |  | [optional] 
 **SiteId** | **Guid** |  | [optional] 
 **WebServerRelativeUrl** | **string** |  | [optional] 

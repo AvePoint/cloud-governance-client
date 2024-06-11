@@ -20,15 +20,25 @@ Name | Type | Description | Notes
 **EnableDynamicMembership** | **Boolean** |  | [optional] [default to $false]
 **EnableDynamicMembershipDescription** | **String** |  | [optional] 
 **PrimaryAdministrators** | **String** |  | [optional] 
+**PrimaryAdministratorObjectIds** | **String** |  | [optional] 
 **PrimaryAdministratorDisplayNames** | **String** |  | [optional] 
 **AdditionalAdministrators** | **String** |  | [optional] 
+**AdditionalAdministratorObjectIds** | **String** |  | [optional] 
 **AdditionalAdministratorDisplayNames** | **String** |  | [optional] 
 **PrimaryContact** | **String** |  | [optional] 
 **PrimaryContactEmail** | **String** |  | [optional] 
+**PrimaryContactObjectId** | **String** |  | [optional] 
 **PrimaryContactDisplayName** | **String** |  | [optional] 
 **SecondaryContact** | **String** |  | [optional] 
 **SecondaryContactEmail** | **String** |  | [optional] 
+**SecondaryContactObjectId** | **String** |  | [optional] 
 **SecondaryContactDisplayName** | **String** |  | [optional] 
+**PrimaryContactJobTitle** | **String** |  | [optional] 
+**PrimaryContactDepartment** | **String** |  | [optional] 
+**PrimaryContactCompanyName** | **String** |  | [optional] 
+**SecondaryContactJobTitle** | **String** |  | [optional] 
+**SecondaryContactDepartment** | **String** |  | [optional] 
+**SecondaryContactCompanyName** | **String** |  | [optional] 
 **HubType** | [**HubSiteType**](HubSiteType.md) |  | [optional] 
 **AssociateHubTitle** | **String** |  | [optional] 
 **GeoLocation** | **String** |  | [optional] 
@@ -53,6 +63,7 @@ Name | Type | Description | Notes
 **HasElectionOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **LastRenewalBy** | **String** |  | [optional] 
 **LastRenewalByEmail** | **String** |  | [optional] 
+**LastRenewalByObejctId** | **String** |  | [optional] 
 **LastRenewalByDisplayName** | **String** |  | [optional] 
 **Sensitivity** | **String** |  | [optional] 
 **InsightsStatus** | [**InsightsStatus**](InsightsStatus.md) |  | [optional] 
@@ -71,6 +82,7 @@ Name | Type | Description | Notes
 **ElectionProfileName** | **String** |  | [optional] 
 **ElectionProfileId** | **String** |  | [optional] 
 **PhaseAssigneeDisplayNames** | **String** |  | [optional] 
+**PhaseAssigneeObjectIds** | **String** |  | [optional] 
 **PhaseAssignees** | **String** |  | [optional] 
 **PhaseProfileName** | **String** |  | [optional] 
 **PhaseProfileId** | **String** |  | [optional] 
@@ -102,15 +114,25 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -EnableDynamicMembership null `
  -EnableDynamicMembershipDescription null `
  -PrimaryAdministrators null `
+ -PrimaryAdministratorObjectIds null `
  -PrimaryAdministratorDisplayNames null `
  -AdditionalAdministrators null `
+ -AdditionalAdministratorObjectIds null `
  -AdditionalAdministratorDisplayNames null `
  -PrimaryContact null `
  -PrimaryContactEmail null `
+ -PrimaryContactObjectId null `
  -PrimaryContactDisplayName null `
  -SecondaryContact null `
  -SecondaryContactEmail null `
+ -SecondaryContactObjectId null `
  -SecondaryContactDisplayName null `
+ -PrimaryContactJobTitle null `
+ -PrimaryContactDepartment null `
+ -PrimaryContactCompanyName null `
+ -SecondaryContactJobTitle null `
+ -SecondaryContactDepartment null `
+ -SecondaryContactCompanyName null `
  -HubType null `
  -AssociateHubTitle null `
  -GeoLocation null `
@@ -135,6 +157,7 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -HasElectionOngoingTasks null `
  -LastRenewalBy null `
  -LastRenewalByEmail null `
+ -LastRenewalByObejctId null `
  -LastRenewalByDisplayName null `
  -Sensitivity null `
  -InsightsStatus null `
@@ -153,6 +176,7 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -ElectionProfileName null `
  -ElectionProfileId null `
  -PhaseAssigneeDisplayNames null `
+ -PhaseAssigneeObjectIds null `
  -PhaseAssignees null `
  -PhaseProfileName null `
  -PhaseProfileId null `

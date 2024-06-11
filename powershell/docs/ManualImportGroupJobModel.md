@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | [**ImportObjectType**](ImportObjectType.md) |  | [optional] 
 **InactiveJobTimeBaseType** | [**LifecycleJobTimeBaseType**](LifecycleJobTimeBaseType.md) |  | [optional] 
+**Workspaces** | [**ImportGroupModel[]**](ImportGroupModel.md) |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **FileName** | **String** |  | [optional] 
@@ -15,6 +16,7 @@ Name | Type | Description | Notes
 ```powershell
 $ManualImportGroupJobModel = New-Cloud.Governance.ClientManualImportGroupJobModel  -ObjectType null `
  -InactiveJobTimeBaseType null `
+ -Workspaces null `
  -Name null `
  -Description null `
  -FileName null

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **MentionSetting** | [**TeamMentionSetting**](TeamMentionSetting.md) |  | [optional] 
 **TeamMessagingSettings** | [**TeamMessagingSettings**](TeamMessagingSettings.md) |  | [optional] 
 **TeamHubSite** | [**HubSiteSetting**](HubSiteSetting.md) |  | [optional] 
+**TeamSiteUrl** | [**TeamSiteUrl**](TeamSiteUrl.md) | Activity model for team site url | [optional] 
 **OfficeTenantId** | **Guid** |  | [optional] 
 **Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
 **Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
