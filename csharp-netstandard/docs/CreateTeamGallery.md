@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **MemberPermissionSetting** | [**TeamMemberPermissionSetting**](TeamMemberPermissionSetting.md) |  | [optional] 
 **GuestPermissionSetting** | [**TeamGuestPermissionSetting**](TeamGuestPermissionSetting.md) |  | [optional] 
 **FunSetting** | [**TeamFunSetting**](TeamFunSetting.md) |  | [optional] 
+**TeamPicture** | [**GroupTeamPicture**](GroupTeamPicture.md) |  | [optional] 
 **MentionSetting** | [**TeamMentionSetting**](TeamMentionSetting.md) |  | [optional] 
 **TeamMessagingSettings** | [**TeamMessagingSettings**](TeamMessagingSettings.md) |  | [optional] 
 **TeamHubSite** | [**HubSiteSetting**](HubSiteSetting.md) |  | [optional] 
@@ -41,6 +42,8 @@ Name | Type | Description | Notes
 **GalleryType** | **string** |  | [optional] 
 **GalleryInternalName** | **string** |  | [optional] 
 **GalleryMetadata** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **bool?** |  | [optional] [default to false]
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

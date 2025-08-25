@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] 
 **EnableShareAnnoymousLink** | **Boolean** |  | [optional] [default to $false]
-**Object** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] 
+**Object** | [**GrantPermissionRequestUrl**](GrantPermissionRequestUrl.md) |  | [optional] 
 **SpPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] 
 **SpGroups** | [**GrantPermissionGroup[]**](GrantPermissionGroup.md) |  | [optional] 
 **AllowBreakPermissionInheritance** | **Boolean** |  | [optional] [default to $false]

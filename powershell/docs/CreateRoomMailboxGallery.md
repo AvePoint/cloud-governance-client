@@ -3,34 +3,36 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdditionalInformation** | [**CreateRoomMailboxAdditionalInformationRequestModel**](CreateRoomMailboxAdditionalInformationRequestModel.md) |  | [optional] 
-**RoomList** | [**CreateRoomMailboxRoomListRequestModel**](CreateRoomMailboxRoomListRequestModel.md) |  | [optional] 
-**RoomPlace** | [**CreateRoomMailboxRoomPlaceRequestModel**](CreateRoomMailboxRoomPlaceRequestModel.md) |  | [optional] 
+**AdditionalInformation** | [**CreateRoomMailboxGalleryAdditionalInformation**](CreateRoomMailboxGalleryAdditionalInformation.md) |  | [optional] 
+**RoomList** | [**CreateRoomMailboxGalleryRoomList**](CreateRoomMailboxGalleryRoomList.md) |  | [optional] 
+**RoomPlace** | [**CreateRoomMailboxGalleryRoomPlace**](CreateRoomMailboxGalleryRoomPlace.md) |  | [optional] 
 **OfficeTenantId** | **String** |  | [optional] 
-**Name** | [**TeamNameDescription**](TeamNameDescription.md) |  | [optional] 
-**Contacts** | [**Contact**](Contact.md) | Activity model for primary contact,secondary contact | [optional] 
-**FullAccessUsers** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**EmailAddress** | [**EmailAddress**](EmailAddress.md) |  | [optional] 
-**GlobalAddressList** | [**CreateResourceMailboxExchangeGlobalAddressListRequestModel**](CreateResourceMailboxExchangeGlobalAddressListRequestModel.md) |  | [optional] 
+**Name** | [**CreateCommunityGalleryNameAndDescription**](CreateCommunityGalleryNameAndDescription.md) |  | [optional] 
+**Contacts** | [**CreateCommunityGalleryContact**](CreateCommunityGalleryContact.md) |  | [optional] 
+**FullAccessUsers** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**EmailAddress** | [**CreateDistributionListGalleryGroupEmailAddress**](CreateDistributionListGalleryGroupEmailAddress.md) |  | [optional] 
+**GlobalAddressList** | [**CreateEquipmentMailboxGalleryGlobalAddressList**](CreateEquipmentMailboxGalleryGlobalAddressList.md) |  | [optional] 
 **MailboxEmail** | **String** |  | [optional] [readonly] 
 **MailboxName** | **String** |  | [optional] [readonly] 
-**SendAs** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**SendOnBehalf** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**MultiGeoLocationSetting** | [**MultiGeoLocationSetting**](MultiGeoLocationSetting.md) |  | [optional] 
-**AddressBookPolicy** | [**CreateResourceMailboxAddressBookPolicyRequestModel**](CreateResourceMailboxAddressBookPolicyRequestModel.md) |  | [optional] 
-**Alias** | [**CreateResourceMailboxAliasRequestModel**](CreateResourceMailboxAliasRequestModel.md) |  | [optional] 
-**BookingDelegateSetting** | [**CreateResourceMailboxBookingDelegateSettingRequestModel**](CreateResourceMailboxBookingDelegateSettingRequestModel.md) |  | [optional] 
-**BookingOption** | [**CreateResourceMailboxBookingOptionRequestModel**](CreateResourceMailboxBookingOptionRequestModel.md) |  | [optional] 
-**Capacity** | [**CreateResourceMailboxCapacityRequestModel**](CreateResourceMailboxCapacityRequestModel.md) |  | [optional] 
-**ContactInformation** | [**CreateResourceMailboxContactInformationRequestModel**](CreateResourceMailboxContactInformationRequestModel.md) |  | [optional] 
-**Company** | [**CreateResourceMailboxCompanyRequestModel**](CreateResourceMailboxCompanyRequestModel.md) |  | [optional] 
-**Department** | [**CreateResourceMailboxDepartmentRequestModel**](CreateResourceMailboxDepartmentRequestModel.md) |  | [optional] 
-**DisableAccountSetting** | [**CreateResourceMailboxDisableAccountRequestModel**](CreateResourceMailboxDisableAccountRequestModel.md) |  | [optional] 
-**MailTip** | [**CreateResourceMailboxMailTipRequestModel**](CreateResourceMailboxMailTipRequestModel.md) |  | [optional] 
-**Tenant** | [**OfficeTenant**](OfficeTenant.md) |  | [optional] 
+**SendAs** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**SendOnBehalf** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**MultiGeoLocationSetting** | [**CreateEquipmentMailboxGalleryMultiGeoLocationSetting**](CreateEquipmentMailboxGalleryMultiGeoLocationSetting.md) |  | [optional] 
+**AddressBookPolicy** | [**CreateEquipmentMailboxGalleryAddressBookPolicy**](CreateEquipmentMailboxGalleryAddressBookPolicy.md) |  | [optional] 
+**Alias** | [**CreateEquipmentMailboxGalleryAlias**](CreateEquipmentMailboxGalleryAlias.md) |  | [optional] 
+**BookingDelegateSetting** | [**CreateEquipmentMailboxGalleryBookingDelegateSetting**](CreateEquipmentMailboxGalleryBookingDelegateSetting.md) |  | [optional] 
+**BookingOption** | [**CreateEquipmentMailboxGalleryBookingOption**](CreateEquipmentMailboxGalleryBookingOption.md) |  | [optional] 
+**Capacity** | [**CreateEquipmentMailboxGalleryCapacity**](CreateEquipmentMailboxGalleryCapacity.md) |  | [optional] 
+**ContactInformation** | [**CreateEquipmentMailboxGalleryContactInformation**](CreateEquipmentMailboxGalleryContactInformation.md) |  | [optional] 
+**Company** | [**CreateEquipmentMailboxGalleryCompany**](CreateEquipmentMailboxGalleryCompany.md) |  | [optional] 
+**Department** | [**CreateEquipmentMailboxGalleryDepartment**](CreateEquipmentMailboxGalleryDepartment.md) |  | [optional] 
+**DisableAccountSetting** | [**CreateEquipmentMailboxGalleryDisableAccountSetting**](CreateEquipmentMailboxGalleryDisableAccountSetting.md) |  | [optional] 
+**MailTip** | [**CreateEquipmentMailboxGalleryMailTip**](CreateEquipmentMailboxGalleryMailTip.md) |  | [optional] 
+**Tenant** | [**CreateCommunityGalleryTenant**](CreateCommunityGalleryTenant.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -63,7 +65,9 @@ $CreateRoomMailboxGallery = New-Cloud.Governance.ClientCreateRoomMailboxGallery 
  -Tenant null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

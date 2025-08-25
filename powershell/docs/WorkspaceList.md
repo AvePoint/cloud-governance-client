@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
+**ObjectId** | **String** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
 **SiteUrl** | **String** |  | [optional] 
@@ -46,6 +47,10 @@ Name | Type | Description | Notes
 **EnableDynamicMembership** | **Boolean** |  | [optional] [default to $false]
 **WebLink** | **String** |  | [optional] 
 **CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
+**LastActivityTime** | **System.DateTime** |  | [optional] 
+**SharePointSiteId** | **String** |  | [optional] 
+**PrimaryContactStatusOfEnpower** | [**EnpowerContactStatus**](EnpowerContactStatus.md) |  | [optional] 
+**SecondaryContactStatusOfEnpower** | [**EnpowerContactStatus**](EnpowerContactStatus.md) |  | [optional] 
 **EnableDynamicMembershipDescription** | **String** |  | [optional] 
 **Metadata** | [**EndUserReportMetadata[]**](EndUserReportMetadata.md) |  | [optional] 
 
@@ -54,6 +59,7 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $WorkspaceList = New-Cloud.Governance.ClientWorkspaceList  -Id null `
+ -ObjectId null `
  -Name null `
  -Type null `
  -SiteUrl null `
@@ -96,6 +102,10 @@ $WorkspaceList = New-Cloud.Governance.ClientWorkspaceList  -Id null `
  -EnableDynamicMembership null `
  -WebLink null `
  -CreatedSource null `
+ -LastActivityTime null `
+ -SharePointSiteId null `
+ -PrimaryContactStatusOfEnpower null `
+ -SecondaryContactStatusOfEnpower null `
  -EnableDynamicMembershipDescription null `
  -Metadata null
 ```

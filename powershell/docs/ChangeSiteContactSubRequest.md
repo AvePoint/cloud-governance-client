@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ModifiedDate** | **System.DateTime** |  | [optional] 
 **Status** | **Int32** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **String** |  | [optional] [readonly] 
-**AdminContactSettings** | [**ChangeContactByUrlSetting**](ChangeContactByUrlSetting.md) |  | [optional] 
+**AdminContactSettings** | [**ChangeSiteContactSubRequestAdminContactSettings**](ChangeSiteContactSubRequestAdminContactSettings.md) |  | [optional] 
 **ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [readonly] 
 
 ## Examples

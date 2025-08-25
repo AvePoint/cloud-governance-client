@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ColumnMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**ContentTypeMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**UserMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**LanguageMapping** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**ColumnMapping** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**ContentTypeMapping** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**UserMapping** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**LanguageMapping** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 
 ## Examples
 

@@ -1,0 +1,29 @@
+# ChangedSiteDesignModelChangedValueRequestModelNewValue
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Id** | **String** |  | [optional] 
+**Title** | **String** |  | [optional] 
+**IsOutOfBoxTemplate** | **Boolean** |  | [optional] [default to $false]
+**Tenant** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**SupportedWebTemplates** | [**SiteTemplateTypeSetting[]**](SiteTemplateTypeSetting.md) |  | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$ChangedSiteDesignModelChangedValueRequestModelNewValue = New-Cloud.Governance.ClientChangedSiteDesignModelChangedValueRequestModelNewValue  -Id null `
+ -Title null `
+ -IsOutOfBoxTemplate null `
+ -Tenant null `
+ -SupportedWebTemplates null
+```
+
+- Convert the resource to JSON
+```powershell
+$ChangedSiteDesignModelChangedValueRequestModelNewValue | ConvertTo-JSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

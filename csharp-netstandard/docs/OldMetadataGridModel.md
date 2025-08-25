@@ -11,9 +11,11 @@ Name | Type | Description | Notes
 **FieldType** | **MetadataFieldType** |  | [optional] 
 **FieldTypeDescription** | **string** |  | [optional] 
 **MetadataValue** | **string** |  | [optional] 
+**Content** | **string** |  | [optional] 
 **ShowInReportType** | **MetadataDisplayType** |  | [optional] 
 **ShowInReportTypeDescription** | **string** |  | [optional] 
 **LastModifiedTime** | **DateTime** |  | [optional] 
+**CreatedSource** | **int** |  | [optional] [default to 0]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

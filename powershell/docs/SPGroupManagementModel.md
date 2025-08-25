@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Int32** |  | [optional] [default to 0]
-**Name** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**Name** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
 **Description** | **String** |  | [optional] 
-**Owner** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**Owner** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **Members** | [**SPUserManagementModel[]**](SPUserManagementModel.md) |  | [optional] 
 **SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] 
 **SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] 

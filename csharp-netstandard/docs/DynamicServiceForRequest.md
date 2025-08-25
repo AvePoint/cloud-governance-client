@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **Status** | **CommonStatus** |  | [optional] 
 **ShowServiceInCatalog** | **bool** |  | [optional] [default to false]
 **LanguageId** | [**IntModel**](IntModel.md) |  | [optional] 
-**Category** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**LanguageSettings** | [**List&lt;ServiceLanguageSetting&gt;**](ServiceLanguageSetting.md) |  | [optional] 
+**Category** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
 **ActivityGalleryFlow** | **string** |  | [optional] 
 **ApproveProcessFlow** | **string** |  | [optional] 
 

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **LastModifiedTime** | **System.DateTime** |  | [optional] 
 **TaskType** | [**TaskType**](TaskType.md) |  | [optional] 
 **AllowReassign** | **Boolean** |  | [optional] [default to $false]
-**Assignee** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**Assignee** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **AllowEdit** | **Boolean** |  | [optional] [default to $false]
 **RequestTicketNumber** | **Int32** |  | [optional] [default to 0]
 **DueDate** | **System.DateTime** |  | [optional] 

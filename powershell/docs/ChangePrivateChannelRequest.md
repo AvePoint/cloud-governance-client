@@ -3,14 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Team** | [**ApiUser**](ApiUser.md) | Channel parent team | [optional] 
-**Channel** | [**ApiUser**](ApiUser.md) | Channel | [optional] 
-**Name** | [**StringChangedProperty**](StringChangedProperty.md) | Channnel name | [optional] 
-**ChannelDescription** | [**StringChangedProperty**](StringChangedProperty.md) | Channnel description | [optional] 
-**Owners** | [**ApiUserIListChangedProperty**](ApiUserIListChangedProperty.md) | Channnel owners | [optional] 
-**Members** | [**ApiUserIListChangedProperty**](ApiUserIListChangedProperty.md) | Channnel members | [optional] 
+**Team** | [**ChangePrivateChannelRequestTeam**](ChangePrivateChannelRequestTeam.md) |  | [optional] 
+**Channel** | [**ChangePrivateChannelRequestChannel**](ChangePrivateChannelRequestChannel.md) |  | [optional] 
+**Name** | [**ChangePrivateChannelRequestName**](ChangePrivateChannelRequestName.md) |  | [optional] 
+**ChannelDescription** | [**ChangePrivateChannelRequestChannelDescription**](ChangePrivateChannelRequestChannelDescription.md) |  | [optional] 
+**Owners** | [**ChangePrivateChannelRequestOwners**](ChangePrivateChannelRequestOwners.md) |  | [optional] 
+**Members** | [**ChangePrivateChannelRequestMembers**](ChangePrivateChannelRequestMembers.md) |  | [optional] 
 **EnableChangePrivateChannelQuota** | **Boolean** |  | [optional] [default to $false]
-**QuotaStorage** | [**Int64ChangedProperty**](Int64ChangedProperty.md) |  | [optional] 
+**QuotaStorage** | [**ChangePrivateChannelRequestQuotaStorage**](ChangePrivateChannelRequestQuotaStorage.md) |  | [optional] 
 **QuotaStorageUsed** | **Double** |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -40,6 +41,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -74,6 +77,7 @@ $ChangePrivateChannelRequest = New-Cloud.Governance.ClientChangePrivateChannelRe
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -81,7 +85,9 @@ $ChangePrivateChannelRequest = New-Cloud.Governance.ClientChangePrivateChannelRe
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

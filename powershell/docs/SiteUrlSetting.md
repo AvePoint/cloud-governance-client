@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Type** | [**SiteConstructUrlType**](SiteConstructUrlType.md) |  | [optional] 
-**ManuallyInputSetting** | [**ManuallyInputUrlSetting**](ManuallyInputUrlSetting.md) |  | [optional] 
-**AutoGenerateUrlSetting** | [**AutoGenerateUrlSetting**](AutoGenerateUrlSetting.md) |  | [optional] 
+**ManuallyInputSetting** | [**SiteUrlSettingManuallyInputSetting**](SiteUrlSettingManuallyInputSetting.md) |  | [optional] 
+**AutoGenerateUrlSetting** | [**SiteUrlSettingAutoGenerateUrlSetting**](SiteUrlSettingAutoGenerateUrlSetting.md) |  | [optional] 
 
 ## Examples
 

@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 <a name="getgroupowners"></a>
 # **GetGroupOwners**
-> ApiUserPageResult GetGroupOwners (string email, int? top = null, int? skip = null, string search = null)
+> ApiUserPageResult GetGroupOwners (string email, int? top = null, int? skip = null, string search = null, Guid? filterId = null)
 
 get group owners by group email
 
@@ -410,11 +410,12 @@ namespace Example
             var top = 56;  // int? |  (optional)  (default to 0)
             var skip = 56;  // int? |  (optional)  (default to 0)
             var search = search_example;  // string |  (optional) 
+            var filterId = new Guid?(); // Guid? |  (optional) 
 
             try
             {
                 // get group owners by group email
-                ApiUserPageResult result = apiInstance.GetGroupOwners(email, top, skip, search);
+                ApiUserPageResult result = apiInstance.GetGroupOwners(email, top, skip, search, filterId);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
@@ -436,6 +437,7 @@ Name | Type | Description  | Notes
  **top** | **int?**|  | [optional] [default to 0]
  **skip** | **int?**|  | [optional] [default to 0]
  **search** | **string**|  | [optional] 
+ **filterId** | [**Guid?**](Guid?.md)|  | [optional] 
 
 ### Return type
 

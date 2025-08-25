@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**Get-CreateWebService**](ServicesApi.md#Get-CreateWebService) | **GET** /services/createweb/{id} | get create web service
 [**Get-CustomService**](ServicesApi.md#Get-CustomService) | **GET** /services/custom/{id} | get custom service
 [**Get-DynamicService**](ServicesApi.md#Get-DynamicService) | **GET** /services/dynamic/{id} | get dynamic service
+[**Get-DynamicServiceRequestTemplate**](ServicesApi.md#Get-DynamicServiceRequestTemplate) | **GET** /services/dynamic/{id}/template | 
 [**Get-GrantPermissionService**](ServicesApi.md#Get-GrantPermissionService) | **GET** /services/grantpermission/{id} | get grant permission service
 [**Get-GroupLifecycleService**](ServicesApi.md#Get-GroupLifecycleService) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 [**Get-ManagePermissionService**](ServicesApi.md#Get-ManagePermissionService) | **GET** /services/managepermission/{id} | get manage permission service
@@ -56,8 +57,8 @@ Method | HTTP request | Description
 <a name="Get-ChangeGroupSettingService"></a>
 # **Get-ChangeGroupSettingService**
 > ChangeGroupSettingService Get-ChangeGroupSettingService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change group setting service
@@ -81,8 +82,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get change group setting service
@@ -98,8 +99,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -120,8 +121,8 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeListSettingService"></a>
 # **Get-ChangeListSettingService**
 > ChangeListSettingService Get-ChangeListSettingService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change list setting service
@@ -145,8 +146,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get change list setting service
@@ -162,8 +163,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -184,8 +185,8 @@ Name | Type | Description  | Notes
 <a name="Get-ChangePermissionService"></a>
 # **Get-ChangePermissionService**
 > ChangePermissionService Get-ChangePermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change permission service
@@ -209,8 +210,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get change permission service
@@ -226,8 +227,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -248,8 +249,8 @@ Name | Type | Description  | Notes
 <a name="Get-ChangePrivateChannelService"></a>
 # **Get-ChangePrivateChannelService**
 > ChangePrivateChannelService Get-ChangePrivateChannelService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get private channel service detail
@@ -273,8 +274,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get private channel service detail
@@ -290,8 +291,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -312,8 +313,8 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeSiteContactService"></a>
 # **Get-ChangeSiteContactService**
 > ChangeSiteContactService Get-ChangeSiteContactService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change site contact service
@@ -337,8 +338,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get change site contact service
@@ -354,8 +355,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -376,8 +377,8 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeSiteSettingService"></a>
 # **Get-ChangeSiteSettingService**
 > ChangeSiteSettingService Get-ChangeSiteSettingService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change site setting service
@@ -401,8 +402,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get change site setting service
@@ -418,8 +419,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -440,8 +441,8 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeWebContactService"></a>
 # **Get-ChangeWebContactService**
 > ChangeWebContactService Get-ChangeWebContactService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 validate permissions, scope for change web contact service
@@ -465,8 +466,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # validate permissions, scope for change web contact service
@@ -482,8 +483,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -504,8 +505,8 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeWebSettingsService"></a>
 # **Get-ChangeWebSettingsService**
 > ChangeWebSettingService Get-ChangeWebSettingsService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get change web setting service
@@ -529,8 +530,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get change web setting service
@@ -546,8 +547,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -568,8 +569,8 @@ Name | Type | Description  | Notes
 <a name="Get-ClonePermissionService"></a>
 # **Get-ClonePermissionService**
 > ClonePermissionService Get-ClonePermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get clone permission service
@@ -593,8 +594,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get clone permission service
@@ -610,8 +611,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -685,8 +686,8 @@ This endpoint does not need any parameter.
 <a name="Get-ContentMoveService"></a>
 # **Get-ContentMoveService**
 > ContentMoveService Get-ContentMoveService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get content move service
@@ -710,8 +711,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get content move service
@@ -727,8 +728,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -749,8 +750,8 @@ Name | Type | Description  | Notes
 <a name="Get-CreateGroupService"></a>
 # **Get-CreateGroupService**
 > CreateGroupService Get-CreateGroupService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create group service
@@ -774,8 +775,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get create group service
@@ -791,8 +792,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -813,8 +814,8 @@ Name | Type | Description  | Notes
 <a name="Get-CreateGuestUserService"></a>
 # **Get-CreateGuestUserService**
 > CreateGuestUserService Get-CreateGuestUserService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create group service
@@ -838,8 +839,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get create group service
@@ -855,8 +856,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -877,8 +878,8 @@ Name | Type | Description  | Notes
 <a name="Get-CreateListService"></a>
 # **Get-CreateListService**
 > CreateListService Get-CreateListService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create list service
@@ -902,8 +903,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get create list service
@@ -919,8 +920,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -941,8 +942,8 @@ Name | Type | Description  | Notes
 <a name="Get-CreatePrivateChannelService"></a>
 # **Get-CreatePrivateChannelService**
 > CreatePrivateChannelService Get-CreatePrivateChannelService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get private channel service detail
@@ -966,8 +967,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get private channel service detail
@@ -983,8 +984,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1005,8 +1006,8 @@ Name | Type | Description  | Notes
 <a name="Get-CreateSiteService"></a>
 # **Get-CreateSiteService**
 > CreateSiteService Get-CreateSiteService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create site service
@@ -1030,8 +1031,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get create site service
@@ -1047,8 +1048,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1069,8 +1070,8 @@ Name | Type | Description  | Notes
 <a name="Get-CreateWebService"></a>
 # **Get-CreateWebService**
 > CreateWebService Get-CreateWebService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get create web service
@@ -1094,8 +1095,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get create web service
@@ -1111,8 +1112,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1133,8 +1134,8 @@ Name | Type | Description  | Notes
 <a name="Get-CustomService"></a>
 # **Get-CustomService**
 > ServiceForRequest Get-CustomService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get custom service
@@ -1158,8 +1159,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get custom service
@@ -1175,8 +1176,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1197,7 +1198,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicService"></a>
 # **Get-DynamicService**
 > DynamicServiceForRequest Get-DynamicService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get dynamic service
@@ -1221,7 +1222,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get dynamic service
@@ -1237,7 +1238,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1255,11 +1256,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-DynamicServiceRequestTemplate"></a>
+# **Get-DynamicServiceRequestTemplate**
+> DynamicRequestTemplateModel Get-DynamicServiceRequestTemplate<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+
+try {
+     $Result = Get-DynamicServiceRequestTemplate -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-DynamicServiceRequestTemplate: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | **String**|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**DynamicRequestTemplateModel**](DynamicRequestTemplateModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-GrantPermissionService"></a>
 # **Get-GrantPermissionService**
 > GrantPermissionService Get-GrantPermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get grant permission service
@@ -1283,8 +1341,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get grant permission service
@@ -1300,8 +1358,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1322,8 +1380,8 @@ Name | Type | Description  | Notes
 <a name="Get-GroupLifecycleService"></a>
 # **Get-GroupLifecycleService**
 > GroupLifecycleService Get-GroupLifecycleService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get group lifecycle service
@@ -1347,8 +1405,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get group lifecycle service
@@ -1364,8 +1422,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1386,8 +1444,8 @@ Name | Type | Description  | Notes
 <a name="Get-ManagePermissionService"></a>
 # **Get-ManagePermissionService**
 > ManagePermissionService Get-ManagePermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get manage permission service
@@ -1411,8 +1469,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get manage permission service
@@ -1428,8 +1486,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1566,8 +1624,8 @@ Name | Type | Description  | Notes
 <a name="Get-SiteLifecycleService"></a>
 # **Get-SiteLifecycleService**
 > SiteLifecycleService Get-SiteLifecycleService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get site lifecycle service
@@ -1591,8 +1649,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get site lifecycle service
@@ -1608,8 +1666,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1630,8 +1688,8 @@ Name | Type | Description  | Notes
 <a name="Get-WebLifecycleService"></a>
 # **Get-WebLifecycleService**
 > WebLifecycleService Get-WebLifecycleService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-QuestionnaireId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsValidatePermission] <System.Nullable[Boolean]><br>
 
 get web lifecycle service
@@ -1655,8 +1713,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$QuestionnaireId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$QuestionnaireId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsValidatePermission = $true # Boolean |  (optional) (default to $false)
 
 # get web lifecycle service
@@ -1672,8 +1730,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **QuestionnaireId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **QuestionnaireId** | **String**|  | [optional] 
  **IsValidatePermission** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -1694,9 +1752,9 @@ Name | Type | Description  | Notes
 <a name="Resolve-EmailForCreateGuestUserService"></a>
 # **Resolve-EmailForCreateGuestUserService**
 > ObjectValidateResult Resolve-EmailForCreateGuestUserService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Email] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <String><br>
 
 validate guest user email
 
@@ -1719,9 +1777,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $Email = "MyEmail" # String | 
-$RequestId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$RequestId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # validate guest user email
 try {
@@ -1736,9 +1794,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **Email** | **String**|  | 
- **RequestId** | [**String**](String.md)|  | [optional] 
+ **RequestId** | **String**|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1758,7 +1816,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-EmailsForCreateGuestUserService"></a>
 # **Resolve-EmailsForCreateGuestUserService**
 > String[] Resolve-EmailsForCreateGuestUserService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestBody] <String[]><br>
 
 validate guest user emails
@@ -1782,7 +1840,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $RequestBody = "MyRequestBody" # String[] |  (optional)
 
 # validate guest user emails
@@ -1798,7 +1856,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **RequestBody** | [**String[]**](String.md)|  | [optional] 
 
 ### Return type
@@ -1819,7 +1877,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForChangeGroupSettingService"></a>
 # **Resolve-ForChangeGroupSettingService**
 > ChangeGroupSettingCheckResult Resolve-ForChangeGroupSettingService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChangeGroupSettingValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for change group setting service
@@ -1843,7 +1901,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $ChangeGroupSettingValidationParameter = $ChangeGroupSettingValidationParameter = New-ChangeGroupSettingValidationParameter -GroupEmail "MyGroupEmail" -GroupId "MyGroupId" -IsEditTask $false -IsFromQuestionnaire $false # ChangeGroupSettingValidationParameter |  (optional)
 
 # validate permissions, scope for change group setting service
@@ -1859,7 +1917,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **ChangeGroupSettingValidationParameter** | [**ChangeGroupSettingValidationParameter**](ChangeGroupSettingValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -1880,7 +1938,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForChangeListSettingService"></a>
 # **Resolve-ForChangeListSettingService**
 > ChangeListSettingValidateResult Resolve-ForChangeListSettingService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for change list setting service
@@ -1904,7 +1962,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change list setting service
@@ -1920,7 +1978,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -1941,7 +1999,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForChangePermissionService"></a>
 # **Resolve-ForChangePermissionService**
 > ChangePermissionValidateResult Resolve-ForChangePermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for change permission service
@@ -1965,7 +2023,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change permission service
@@ -1981,7 +2039,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2002,7 +2060,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForChangeSiteContactService"></a>
 # **Resolve-ForChangeSiteContactService**
 > ChangeSiteContactValidateResult Resolve-ForChangeSiteContactService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for change site contact service
@@ -2026,7 +2084,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site contact service
@@ -2042,7 +2100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2063,7 +2121,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForChangeSiteSettingService"></a>
 # **Resolve-ForChangeSiteSettingService**
 > ChangeSiteSettingValidateResult Resolve-ForChangeSiteSettingService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for change site setting service
@@ -2087,7 +2145,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change site setting service
@@ -2103,7 +2161,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2124,7 +2182,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForChangeWebContactService"></a>
 # **Resolve-ForChangeWebContactService**
 > ChangeWebContactValidateResult Resolve-ForChangeWebContactService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for change web contact service
@@ -2148,7 +2206,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web contact service
@@ -2164,7 +2222,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2185,7 +2243,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForChangeWebSettingService"></a>
 # **Resolve-ForChangeWebSettingService**
 > ChangeWebUrlValidateResult Resolve-ForChangeWebSettingService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for change web setting service
@@ -2209,7 +2267,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for change web setting service
@@ -2225,7 +2283,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2246,7 +2304,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForClonePermissionService"></a>
 # **Resolve-ForClonePermissionService**
 > ClonePermissionValidateResult Resolve-ForClonePermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for clone permission service
@@ -2270,7 +2328,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for clone permission service
@@ -2286,7 +2344,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2307,7 +2365,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForContentMoveService"></a>
 # **Resolve-ForContentMoveService**
 > ContentMoveUrlValidationResult Resolve-ForContentMoveService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ContentMoveUrlValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for content move service
@@ -2331,7 +2389,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $ContentMoveUrlValidationParameter = $ContentMoveUrlValidationParameter = New-ContentMoveUrlValidationParameter -IsCheckSourceUrl $false -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # ContentMoveUrlValidationParameter |  (optional)
 
 # validate permissions, scope for content move service
@@ -2347,7 +2405,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **ContentMoveUrlValidationParameter** | [**ContentMoveUrlValidationParameter**](ContentMoveUrlValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2368,8 +2426,8 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForCreateGuestUserService"></a>
 # **Resolve-ForCreateGuestUserService**
 > CreateGuestUserValidationResult[] Resolve-ForCreateGuestUserService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApiUser] <PSCustomObject[]><br>
 
 validate groups can invite
@@ -2393,8 +2451,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
-$RequestId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$RequestId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $ApiUser = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType # ApiUser[] |  (optional)
@@ -2412,8 +2470,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
- **RequestId** | [**String**](String.md)|  | [optional] 
+ **Id** | **String**|  | 
+ **RequestId** | **String**|  | [optional] 
  **ApiUser** | [**ApiUser[]**](ApiUser.md)|  | [optional] 
 
 ### Return type
@@ -2434,7 +2492,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForCreateListService"></a>
 # **Resolve-ForCreateListService**
 > CreateListUrlValidationResult Resolve-ForCreateListService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ListValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for create list service
@@ -2458,7 +2516,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $ListValidationParameter = $ListValidationParameter = New-ListValidationParameter -ListUrl "MyListUrl" -ParentUrl "MyParentUrl" -ListTitle "MyListTitle" -IsDocumentLibrary $false -IsEditTask $false -IsFromQuestionnaire $false # ListValidationParameter |  (optional)
 
 # validate permissions, scope for create list service
@@ -2474,7 +2532,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **ListValidationParameter** | [**ListValidationParameter**](ListValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2495,7 +2553,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForCreateWebService"></a>
 # **Resolve-ForCreateWebService**
 > CreateWebUrlValidationResult Resolve-ForCreateWebService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CreateWebValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for create web service
@@ -2519,7 +2577,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $CreateWebValidationParameter = $CreateWebValidationParameter = New-CreateWebValidationParameter -ParentUrl "MyParentUrl" -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # CreateWebValidationParameter |  (optional)
 
 # validate permissions, scope for create web service
@@ -2535,7 +2593,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **CreateWebValidationParameter** | [**CreateWebValidationParameter**](CreateWebValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2556,7 +2614,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForGrantPermissionService"></a>
 # **Resolve-ForGrantPermissionService**
 > GrantPermissionUrlValidationResult Resolve-ForGrantPermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for grant permission service
@@ -2580,7 +2638,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for grant permission service
@@ -2596,7 +2654,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2617,7 +2675,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForGroupLifecycleService"></a>
 # **Resolve-ForGroupLifecycleService**
 > GroupLifecycleValidateResult Resolve-ForGroupLifecycleService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for group lifecycle service
@@ -2641,7 +2699,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $GroupValidationParameter = $GroupValidationParameter = New-GroupValidationParameter -GroupId "MyGroupId" -IsEditTask $false -IsFromQuestionnaire $false # GroupValidationParameter |  (optional)
 
 # validate permissions, scope for group lifecycle service
@@ -2657,7 +2715,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **GroupValidationParameter** | [**GroupValidationParameter**](GroupValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2678,7 +2736,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForManagePermissionService"></a>
 # **Resolve-ForManagePermissionService**
 > ManagePermissionValidateResult Resolve-ForManagePermissionService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for manage permission service
@@ -2702,7 +2760,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for manage permission service
@@ -2718,7 +2776,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2739,7 +2797,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForSiteLifecycleService"></a>
 # **Resolve-ForSiteLifecycleService**
 > SiteLifecycleValidateResult Resolve-ForSiteLifecycleService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for site lifecycle service
@@ -2763,7 +2821,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for site lifecycle service
@@ -2779,7 +2837,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2800,7 +2858,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-ForWebLifecycleService"></a>
 # **Resolve-ForWebLifecycleService**
 > WebLifecycleValidateResult Resolve-ForWebLifecycleService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteValidationParameter] <PSCustomObject><br>
 
 validate permissions, scope for web lifecycle service
@@ -2824,7 +2882,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $SiteValidationParameter = $SiteValidationParameter = New-SiteValidationParameter -Uri "MyUri" -IgnoreLock $false -IsEditTask $false -IsFromQuestionnaire $false # SiteValidationParameter |  (optional)
 
 # validate permissions, scope for web lifecycle service
@@ -2840,7 +2898,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
  **SiteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2861,7 +2919,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-TeamForChangePrivateChannelService"></a>
 # **Resolve-TeamForChangePrivateChannelService**
 > ChangePrivateChannelCheckResult Resolve-TeamForChangePrivateChannelService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ServiceId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ServiceId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ChangePrivateChannelValidationParameter] <PSCustomObject><br>
 
 validate teams for change private channel service
@@ -2885,7 +2943,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ServiceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$ServiceId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $ChangePrivateChannelValidationParameter = $ChangePrivateChannelValidationParameter = New-ChangePrivateChannelValidationParameter -TeamObjectId "MyTeamObjectId" -TenantId "MyTenantId" -TaskId "MyTaskId" -IsEditTask $false -IsFromQuestionnaire $false # ChangePrivateChannelValidationParameter |  (optional)
 
 # validate teams for change private channel service
@@ -2901,7 +2959,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ServiceId** | [**String**](String.md)|  | 
+ **ServiceId** | **String**|  | 
  **ChangePrivateChannelValidationParameter** | [**ChangePrivateChannelValidationParameter**](ChangePrivateChannelValidationParameter.md)|  | [optional] 
 
 ### Return type
@@ -2922,7 +2980,7 @@ Name | Type | Description  | Notes
 <a name="Resolve-TeamForCreatePrivateChannelService"></a>
 # **Resolve-TeamForCreatePrivateChannelService**
 > CreatePrivateChannelCheckResult Resolve-TeamForCreatePrivateChannelService<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ServiceId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ServiceId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-CreatePrivateChannelValidationParameter] <PSCustomObject><br>
 
 validate teams for create private channel service
@@ -2946,7 +3004,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ServiceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$ServiceId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 $CreatePrivateChannelValidationParameter = $CreatePrivateChannelValidationParameter = New-CreatePrivateChannelValidationParameter -TeamObjectId "MyTeamObjectId" -TenantId "MyTenantId" -IsEditTask $false -IsFromQuestionnaire $false # CreatePrivateChannelValidationParameter |  (optional)
 
 # validate teams for create private channel service
@@ -2962,7 +3020,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ServiceId** | [**String**](String.md)|  | 
+ **ServiceId** | **String**|  | 
  **CreatePrivateChannelValidationParameter** | [**CreatePrivateChannelValidationParameter**](CreatePrivateChannelValidationParameter.md)|  | [optional] 
 
 ### Return type

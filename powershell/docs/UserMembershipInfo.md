@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **ActionType** | [**UserMembershipStatus**](UserMembershipStatus.md) |  | [optional] 
 **Email** | **String** |  | [optional] 
 **LoginName** | **String** |  | [optional] 
+**AzureUserType** | **String** |  | [optional] 
 
 ## Examples
 
@@ -21,7 +22,8 @@ $UserMembershipInfo = New-Cloud.Governance.ClientUserMembershipInfo  -ObjectId n
  -UserType null `
  -ActionType null `
  -Email null `
- -LoginName null
+ -LoginName null `
+ -AzureUserType null
 ```
 
 - Convert the resource to JSON

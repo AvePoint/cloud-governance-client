@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **GroupFilesLink** | **String** |  | [optional] [readonly] 
 **GroupNotebookLink** | **String** |  | [optional] [readonly] 
 **TeamLink** | **String** |  | [optional] [readonly] 
+**TeamsUrl** | **String** |  | [optional] [readonly] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples
@@ -19,6 +20,7 @@ $ShowLinksInRequestDetailsPage = New-Cloud.Governance.ClientShowLinksInRequestDe
  -GroupFilesLink null `
  -GroupNotebookLink null `
  -TeamLink null `
+ -TeamsUrl null `
  -ActivityId null
 ```
 

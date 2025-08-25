@@ -3,13 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArchiveProfile** | **String** | WorkspaceType is site, you should set profile name             WorkspaceType is teams, you should set profile id | [optional] 
+**ArchiveProfile** | **String** | WorkspaceType is site, you should set profile name              WorkspaceType is teams, you should set profile id | [optional] 
 **WorkspaceType** | [**WorkspaceArchivedType**](WorkspaceArchivedType.md) | workspace type | [optional] 
 **IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
 **CancelEmailTemplateId** | **String** |  | [optional] 
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
 **IsSelectAllWorkspace** | **Boolean** |  | [optional] [default to $false]
 **Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
+**IsConfirmed** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -21,7 +22,8 @@ $ArchiveWorkspaceParameter = New-Cloud.Governance.ClientArchiveWorkspaceParamete
  -CancelEmailTemplateId null `
  -Workspace null `
  -IsSelectAllWorkspace null `
- -Type null
+ -Type null `
+ -IsConfirmed null
 ```
 
 - Convert the resource to JSON

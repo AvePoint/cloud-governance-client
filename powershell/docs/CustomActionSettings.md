@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BeforeApprovalProcessExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
-**AfterApprovalProcessExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
-**PostExecution** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
-**BeforeSubmission** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
-**WhenErrorTaskGenerated** | [**ExecutionModel**](ExecutionModel.md) |  | [optional] 
+**BeforeApprovalProcessExecution** | [**CustomActionSettingsBeforeApprovalProcessExecution**](CustomActionSettingsBeforeApprovalProcessExecution.md) |  | [optional] 
+**AfterApprovalProcessExecution** | [**CustomActionSettingsBeforeApprovalProcessExecution**](CustomActionSettingsBeforeApprovalProcessExecution.md) |  | [optional] 
+**PostExecution** | [**CustomActionSettingsBeforeApprovalProcessExecution**](CustomActionSettingsBeforeApprovalProcessExecution.md) |  | [optional] 
+**BeforeSubmission** | [**CustomActionSettingsBeforeApprovalProcessExecution**](CustomActionSettingsBeforeApprovalProcessExecution.md) |  | [optional] 
+**WhenErrorTaskGenerated** | [**CustomActionSettingsBeforeApprovalProcessExecution**](CustomActionSettingsBeforeApprovalProcessExecution.md) |  | [optional] 
 
 ## Examples
 

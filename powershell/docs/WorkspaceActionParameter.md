@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
 **IsSelectAllWorkspace** | **Boolean** |  | [optional] [default to $false]
 **Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
+**IsConfirmed** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -13,7 +14,8 @@ Name | Type | Description | Notes
 ```powershell
 $WorkspaceActionParameter = New-Cloud.Governance.ClientWorkspaceActionParameter  -Workspace null `
  -IsSelectAllWorkspace null `
- -Type null
+ -Type null `
+ -IsConfirmed null
 ```
 
 - Convert the resource to JSON

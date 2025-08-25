@@ -3,12 +3,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangedGroupInfo** | [**ChangeExchangeResourceSettingsGroupModel**](ChangeExchangeResourceSettingsGroupModel.md) |  | [optional] 
-**ChangedGroupOwnership** | [**ChangedMembership**](ChangedMembership.md) |  | [optional] 
-**ChangedGroupMembership** | [**ChangedMembership**](ChangedMembership.md) |  | [optional] 
+**ChangedGroupInfo** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupInfo**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupInfo.md) |  | [optional] 
+**ChangedGroupOwnership** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership.md) |  | [optional] 
+**ChangedGroupMembership** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership.md) |  | [optional] 
+**PredefinedOwnerOrMembers** | [**ChangeExchangeResourceMembershipGalleryRequestModelPredefinedOwnerOrMembers**](ChangeExchangeResourceMembershipGalleryRequestModelPredefinedOwnerOrMembers.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -17,9 +20,12 @@ Name | Type | Description | Notes
 $ChangeExchangeResourceMembershipGalleryRequestModel = New-Cloud.Governance.ClientChangeExchangeResourceMembershipGalleryRequestModel  -ChangedGroupInfo null `
  -ChangedGroupOwnership null `
  -ChangedGroupMembership null `
+ -PredefinedOwnerOrMembers null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ConvertHubSite** | [**ConvertHubSite**](ConvertHubSite.md) |  | [optional] 
-**AssociateToHubSite** | [**AssociateToHubSite**](AssociateToHubSite.md) |  | [optional] 
-**RegisterAsHubSite** | [**RegisterAsHubSite**](RegisterAsHubSite.md) |  | [optional] 
+**AssociateToHubSite** | [**HubSiteSettingAssociateToHubSite**](HubSiteSettingAssociateToHubSite.md) |  | [optional] 
+**RegisterAsHubSite** | [**HubSiteSettingRegisterAsHubSite**](HubSiteSettingRegisterAsHubSite.md) |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

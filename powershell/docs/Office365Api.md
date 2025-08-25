@@ -286,6 +286,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterId] <String><br>
 
 get group owners by group email
 
@@ -312,10 +313,11 @@ $Email = "MyEmail" # String |
 $Top = 56 # Int32 |  (optional) (default to 0)
 $Skip = 56 # Int32 |  (optional) (default to 0)
 $Search = "MySearch" # String |  (optional)
+$FilterId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 # get group owners by group email
 try {
-     $Result = Get-ACGGroupOwners -Email $Email -Top $Top -Skip $Skip -Search $Search
+     $Result = Get-ACGGroupOwners -Email $Email -Top $Top -Skip $Skip -Search $Search -FilterId $FilterId
 } catch {
     Write-Host ("Exception occured when calling Get-ACGGroupOwners: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
@@ -330,6 +332,7 @@ Name | Type | Description  | Notes
  **Top** | **Int32**|  | [optional] [default to 0]
  **Skip** | **Int32**|  | [optional] [default to 0]
  **Search** | **String**|  | [optional] 
+ **FilterId** | **String**|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1049,7 +1052,7 @@ Name | Type | Description  | Notes
 <a name="get-acgteamsitedesigns"></a>
 # **Get-ACGTeamSiteDesigns**
 > StringModel[] Get-ACGTeamSiteDesigns<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <String><br>
 
 
 
@@ -1072,7 +1075,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$TenantId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$TenantId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 
 try {
      $Result = Get-ACGTeamSiteDesigns -TenantId $TenantId
@@ -1086,7 +1089,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **TenantId** | [**String**](String.md)|  | [optional] 
+ **TenantId** | **String**|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

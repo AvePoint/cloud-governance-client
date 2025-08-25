@@ -11,9 +11,13 @@ Name | Type | Description | Notes
 **Description** | **String** | Group description | [optional] 
 **Users** | [**GroupUser[]**](GroupUser.md) | The list of the group users | [optional] 
 **PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) | The list of the group permission levels | [optional] 
-**GroupOwner** | [**ApiUser**](ApiUser.md) | Group owner information | [optional] 
+**GroupOwner** | [**RequestGroupWithPermissionsGroupOwner**](RequestGroupWithPermissionsGroupOwner.md) |  | [optional] 
 **GroupOwnerType** | [**GroupOwnerType**](GroupOwnerType.md) | Group owner type | [optional] 
 **BuildInGroupType** | [**SharePointBuildInGroupType**](SharePointBuildInGroupType.md) | Built-in group type | [optional] 
+**SpGroupViewType** | [**SPGroupViewOptionType**](SPGroupViewOptionType.md) |  | [optional] 
+**SpGroupEditType** | [**SPGroupEditOptionType**](SPGroupEditOptionType.md) |  | [optional] 
+**SpGroupEditOptionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
+**SpGroupViewOptionAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 
 ## Examples
 
@@ -29,7 +33,11 @@ $ServiceGroupWithPermissions = New-Cloud.Governance.ClientServiceGroupWithPermis
  -PermissionLevels null `
  -GroupOwner null `
  -GroupOwnerType null `
- -BuildInGroupType null
+ -BuildInGroupType null `
+ -SpGroupViewType null `
+ -SpGroupEditType null `
+ -SpGroupEditOptionAssignBy null `
+ -SpGroupViewOptionAssignBy null
 ```
 
 - Convert the resource to JSON

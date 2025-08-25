@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Object** | [**ContentMoveSPObject**](ContentMoveSPObject.md) |  | [optional] 
+**Object** | [**ContentMoveSPObjectMappingSource**](ContentMoveSPObjectMappingSource.md) |  | [optional] 
 **ListBaseType** | **String** |  | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 

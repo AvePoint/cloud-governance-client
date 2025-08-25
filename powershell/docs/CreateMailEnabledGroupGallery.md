@@ -3,26 +3,28 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Communication** | [**Communication**](Communication.md) |  | [optional] 
-**MembershipApproval** | [**JoinGroupApproval**](JoinGroupApproval.md) |  | [optional] 
-**MessageApproval** | [**MessageApproval**](MessageApproval.md) |  | [optional] 
-**DeliveryStatusNotifications** | [**DeliveryStatusNotificationsRequestModel**](DeliveryStatusNotificationsRequestModel.md) |  | [optional] 
-**GroupEmailAddress** | [**EmailAddress**](EmailAddress.md) |  | [optional] 
-**GlobalAddressList** | [**GlobalAddressList**](GlobalAddressList.md) |  | [optional] 
+**Communication** | [**CreateDistributionListGalleryCommunication**](CreateDistributionListGalleryCommunication.md) |  | [optional] 
+**MembershipApproval** | [**CreateMailEnabledGroupGalleryMembershipApproval**](CreateMailEnabledGroupGalleryMembershipApproval.md) |  | [optional] 
+**MessageApproval** | [**CreateDistributionListGalleryMessageApproval**](CreateDistributionListGalleryMessageApproval.md) |  | [optional] 
+**DeliveryStatusNotifications** | [**CreateMailEnabledGroupGalleryDeliveryStatusNotifications**](CreateMailEnabledGroupGalleryDeliveryStatusNotifications.md) |  | [optional] 
+**GroupEmailAddress** | [**CreateDistributionListGalleryGroupEmailAddress**](CreateDistributionListGalleryGroupEmailAddress.md) |  | [optional] 
+**GlobalAddressList** | [**ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList**](ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList.md) |  | [optional] 
 **GroupEmail** | **String** |  | [optional] [readonly] 
-**SendAs** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**SendOnBehalf** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
+**SendAs** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**SendOnBehalf** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
 **OfficeTenantId** | **String** |  | [optional] 
-**GroupNameAndDescription** | [**TeamNameDescription**](TeamNameDescription.md) |  | [optional] 
-**GroupContact** | [**Contact**](Contact.md) | Activity model for primary contact,secondary contact | [optional] 
-**Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
-**Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**Tenant** | [**OfficeTenant**](OfficeTenant.md) |  | [optional] 
-**ElectionProfile** | [**TeamElectionProfile**](TeamElectionProfile.md) |  | [optional] 
-**RenewalProfile** | [**RenewalProfile**](RenewalProfile.md) |  | [optional] 
+**GroupNameAndDescription** | [**CreateCommunityGalleryNameAndDescription**](CreateCommunityGalleryNameAndDescription.md) |  | [optional] 
+**GroupContact** | [**CreateCommunityGalleryContact**](CreateCommunityGalleryContact.md) |  | [optional] 
+**Owners** | [**CreateCommunityGalleryOwners**](CreateCommunityGalleryOwners.md) |  | [optional] 
+**Members** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**Tenant** | [**CreateCommunityGalleryTenant**](CreateCommunityGalleryTenant.md) |  | [optional] 
+**ElectionProfile** | [**CreateCommunityGalleryElectionProfile**](CreateCommunityGalleryElectionProfile.md) |  | [optional] 
+**RenewalProfile** | [**CreateCommunityGalleryRenewalProfile**](CreateCommunityGalleryRenewalProfile.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -47,7 +49,9 @@ $CreateMailEnabledGroupGallery = New-Cloud.Governance.ClientCreateMailEnabledGro
  -RenewalProfile null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

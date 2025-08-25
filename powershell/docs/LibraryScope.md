@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ParentWebUrl** | **String** |  | [optional] 
 **LibraryUrl** | **String** |  | [optional] 
+**LibraryId** | **String** |  | [optional] 
+**LibraryName** | **String** |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples
@@ -13,6 +15,8 @@ Name | Type | Description | Notes
 ```powershell
 $LibraryScope = New-Cloud.Governance.ClientLibraryScope  -ParentWebUrl null `
  -LibraryUrl null `
+ -LibraryId null `
+ -LibraryName null `
  -ActivityId null
 ```
 

@@ -21,21 +21,21 @@ Name | Type | Description | Notes
 **Classification** | **String** | Group classification | [optional] 
 **Sensitivity** | **String** | Group sensitive lable id | [optional] 
 **SensitivityName** | **String** | Group sensitive lable name | [optional] 
-**Links** | [**GroupLinks**](GroupLinks.md) | Links of the group related objects. You can get IDs and names of all group related objects by invoking the GetCreateGroupServiceApi. | [optional] [readonly] 
-**LeasePeriodSettings** | [**GroupLeasePeriodSettings**](GroupLeasePeriodSettings.md) | Group lease period settings | [optional] 
-**TeamsSettings** | [**RequestTeamsSettings**](RequestTeamsSettings.md) | Team members permission settings | [optional] 
+**Links** | [**CreateGroupRequestLinks**](CreateGroupRequestLinks.md) |  | [optional] 
+**LeasePeriodSettings** | [**CreateGroupRequestLeasePeriodSettings**](CreateGroupRequestLeasePeriodSettings.md) |  | [optional] 
+**TeamsSettings** | [**CreateGroupRequestTeamsSettings**](CreateGroupRequestTeamsSettings.md) |  | [optional] 
 **AppliedSiteDesignId** | **String** | The ID of the group team site design. You can get IDs and names of all group team sites by invoking the GetCreateGroupServiceApi. | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) | Primary group contact | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) | Secondary group contact | [optional] 
+**PrimaryContact** | [**CreateGroupRequestPrimaryContact**](CreateGroupRequestPrimaryContact.md) |  | [optional] 
+**SecondaryContact** | [**CreateGroupRequestSecondaryContact**](CreateGroupRequestSecondaryContact.md) |  | [optional] 
 **EnableGroupMembershipHidden** | **Boolean** | Whether to hide the group members from users who are not members of the group. | [optional] [default to $false]
 **EnableAssignedMembership** | **Boolean** | Whether to allow to copy team members from existing teams. | [optional] [default to $false]
 **EnableDynamicMembership** | **Boolean** | Whether to use dynamic membership rules to get group members. | [optional] [default to $false]
-**TemplateSettings** | [**TeamsTemplateSettings**](TeamsTemplateSettings.md) | Teams template settings | [optional] 
+**TemplateSettings** | [**CreateGroupRequestTemplateSettings**](CreateGroupRequestTemplateSettings.md) |  | [optional] 
 **DynamicMembershipRules** | [**DynamicGroupRuleInfo[]**](DynamicGroupRuleInfo.md) | Dynamic group membership rules | [optional] 
-**MultiGeoLocation** | [**GeoLocationBase**](GeoLocationBase.md) | Multi-geo locations settings | [optional] 
-**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site settings | [optional] 
-**TimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | TimeZone Settings | [optional] 
-**LocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | Locale Settings | [optional] 
+**MultiGeoLocation** | [**CreateGroupRequestMultiGeoLocation**](CreateGroupRequestMultiGeoLocation.md) |  | [optional] 
+**HubSiteSettings** | [**CreateGroupRequestHubSiteSettings**](CreateGroupRequestHubSiteSettings.md) |  | [optional] 
+**TimeZoneSettings** | [**CreateGroupRequestTimeZoneSettings**](CreateGroupRequestTimeZoneSettings.md) |  | [optional] 
+**LocaleSettings** | [**CreateGroupRequestLocaleSettings**](CreateGroupRequestLocaleSettings.md) |  | [optional] 
 **YammerGroupInfo** | **String** | Yammer community info | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
@@ -57,6 +57,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -65,6 +66,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -124,6 +127,7 @@ $CreateGroupRequest = New-Cloud.Governance.ClientCreateGroupRequest  -GroupType 
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -131,7 +135,9 @@ $CreateGroupRequest = New-Cloud.Governance.ClientCreateGroupRequest  -GroupType 
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

@@ -4,6 +4,7 @@ Delete group request model
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**WarningMessage** | **string** |  | [optional] 
 **GroupId** | **Guid** | Object ID | [optional] 
 **GroupName** | **string** | Group name | [optional] [readonly] 
 **GroupEmail** | **string** | Group e-mail address | [optional] [readonly] 
@@ -31,6 +32,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **DateTime?** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **bool** | HasSubRequest | [optional] [default to false]
 **IsEnabledPassback** | **bool** |  | [optional] [default to false]
+**RequestResourceType** | **RequestResourceType** | RequestResourceType | [optional] 
 **ModifiedBy** | **string** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **string** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **DateTime?** | ModifiedDate | [optional] 
@@ -39,6 +41,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **string** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **string** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **string** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **int** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | **SubRequestType** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

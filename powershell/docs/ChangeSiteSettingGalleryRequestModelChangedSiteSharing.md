@@ -1,0 +1,37 @@
+# ChangeSiteSettingGalleryRequestModelChangedSiteSharing
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ExternalSharing** | [**ChangeSiteSharingRequestModelExternalSharing**](ChangeSiteSharingRequestModelExternalSharing.md) |  | [optional] 
+**GuestAccessExpireSetting** | [**ChangeSiteSharingRequestModelGuestAccessExpireSetting**](ChangeSiteSharingRequestModelGuestAccessExpireSetting.md) |  | [optional] 
+**SharingAdvanceSetting** | [**ChangeSiteSharingRequestModelSharingAdvanceSetting**](ChangeSiteSharingRequestModelSharingAdvanceSetting.md) |  | [optional] 
+**SharingLinkType** | [**ChangeSiteSharingRequestModelSharingLinkType**](ChangeSiteSharingRequestModelSharingLinkType.md) |  | [optional] 
+**AnyoneLinksExpireSetting** | [**ChangeSiteSharingRequestModelGuestAccessExpireSetting**](ChangeSiteSharingRequestModelGuestAccessExpireSetting.md) |  | [optional] 
+**LinkPermissionType** | [**ChangeSiteSharingRequestModelLinkPermissionType**](ChangeSiteSharingRequestModelLinkPermissionType.md) |  | [optional] 
+**TenantLevelSetting** | [**ChangeSiteSharingRequestModelTenantLevelSetting**](ChangeSiteSharingRequestModelTenantLevelSetting.md) |  | [optional] 
+**IsEnableSensitivityLabel** | **Boolean** |  | [optional] [default to $false]
+**ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$ChangeSiteSettingGalleryRequestModelChangedSiteSharing = New-Cloud.Governance.ClientChangeSiteSettingGalleryRequestModelChangedSiteSharing  -ExternalSharing null `
+ -GuestAccessExpireSetting null `
+ -SharingAdvanceSetting null `
+ -SharingLinkType null `
+ -AnyoneLinksExpireSetting null `
+ -LinkPermissionType null `
+ -TenantLevelSetting null `
+ -IsEnableSensitivityLabel null `
+ -ActivityId null
+```
+
+- Convert the resource to JSON
+```powershell
+$ChangeSiteSettingGalleryRequestModelChangedSiteSharing | ConvertTo-JSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

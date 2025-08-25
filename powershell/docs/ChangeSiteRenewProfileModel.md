@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangeSiteProfileOngoingAction** | [**ChangeSiteProfileOngoingActionModel**](ChangeSiteProfileOngoingActionModel.md) |  | [optional] 
-**OriginalProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
-**DestinationProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**ChangeSiteProfileOngoingAction** | [**ChangeSiteContactElectionProfileModelChangeSiteProfileOngoingAction**](ChangeSiteContactElectionProfileModelChangeSiteProfileOngoingAction.md) |  | [optional] 
+**OriginalProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**DestinationProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

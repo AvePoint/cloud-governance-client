@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **AllowGrantUserPermission** | **Boolean** |  | [optional] [default to $false]
 **PreventGrantSpecificPermissionLevels** | **Boolean** |  | [optional] [default to $false]
 **PreventPermissionLevles** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
+**PreventPermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 
 ## Examples
 
@@ -13,7 +14,8 @@ Name | Type | Description | Notes
 ```powershell
 $PermissionSettings = New-Cloud.Governance.ClientPermissionSettings  -AllowGrantUserPermission null `
  -PreventGrantSpecificPermissionLevels null `
- -PreventPermissionLevles null
+ -PreventPermissionLevles null `
+ -PreventPermissionLevels null
 ```
 
 - Convert the resource to JSON

@@ -4,42 +4,45 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectId** | **String** |  | [optional] 
-**ContentTypes** | [**ContentTypes**](ContentTypes.md) |  | [optional] 
-**TeamNameAndDescription** | [**TeamNameDescription**](TeamNameDescription.md) |  | [optional] 
-**TeamId** | [**TeamId**](TeamId.md) | Activity model for team id | [optional] 
-**TeamContact** | [**Contact**](Contact.md) | Activity model for primary contact,secondary contact | [optional] 
-**TeamTemplate** | [**TeamTemplate**](TeamTemplate.md) | Activity model for team template | [optional] 
-**CloneTeam** | [**CloneTeam**](CloneTeam.md) | Request activity model for clone team settings | [optional] 
-**MemberPermissionSetting** | [**TeamMemberPermissionSetting**](TeamMemberPermissionSetting.md) |  | [optional] 
-**GuestPermissionSetting** | [**TeamGuestPermissionSetting**](TeamGuestPermissionSetting.md) |  | [optional] 
-**FunSetting** | [**TeamFunSetting**](TeamFunSetting.md) |  | [optional] 
-**MentionSetting** | [**TeamMentionSetting**](TeamMentionSetting.md) |  | [optional] 
-**TeamMessagingSettings** | [**TeamMessagingSettings**](TeamMessagingSettings.md) |  | [optional] 
-**TeamHubSite** | [**HubSiteSetting**](HubSiteSetting.md) |  | [optional] 
-**TeamSiteUrl** | [**TeamSiteUrl**](TeamSiteUrl.md) | Activity model for team site url | [optional] 
+**ContentTypes** | [**CreateCommunityGalleryContentTypes**](CreateCommunityGalleryContentTypes.md) |  | [optional] 
+**TeamNameAndDescription** | [**CreateCommunityGalleryNameAndDescription**](CreateCommunityGalleryNameAndDescription.md) |  | [optional] 
+**TeamId** | [**CreateTeamGalleryTeamId**](CreateTeamGalleryTeamId.md) |  | [optional] 
+**TeamContact** | [**CreateCommunityGalleryContact**](CreateCommunityGalleryContact.md) |  | [optional] 
+**TeamTemplate** | [**CreateTeamGalleryTeamTemplate**](CreateTeamGalleryTeamTemplate.md) |  | [optional] 
+**CloneTeam** | [**CreateTeamGalleryCloneTeam**](CreateTeamGalleryCloneTeam.md) |  | [optional] 
+**MemberPermissionSetting** | [**CreateTeamGalleryMemberPermissionSetting**](CreateTeamGalleryMemberPermissionSetting.md) |  | [optional] 
+**GuestPermissionSetting** | [**CreateTeamGalleryGuestPermissionSetting**](CreateTeamGalleryGuestPermissionSetting.md) |  | [optional] 
+**FunSetting** | [**CreateTeamGalleryFunSetting**](CreateTeamGalleryFunSetting.md) |  | [optional] 
+**TeamPicture** | [**CreateGroupGalleryGroupPicture**](CreateGroupGalleryGroupPicture.md) |  | [optional] 
+**MentionSetting** | [**CreateTeamGalleryMentionSetting**](CreateTeamGalleryMentionSetting.md) |  | [optional] 
+**TeamMessagingSettings** | [**CreateTeamGalleryTeamMessagingSettings**](CreateTeamGalleryTeamMessagingSettings.md) |  | [optional] 
+**TeamHubSite** | [**CreateCommunityGalleryHubSite**](CreateCommunityGalleryHubSite.md) |  | [optional] 
+**TeamSiteUrl** | [**CreateTeamGalleryTeamSiteUrl**](CreateTeamGalleryTeamSiteUrl.md) |  | [optional] 
 **OfficeTenantId** | **String** |  | [optional] 
-**Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
-**Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**Privacy** | [**Privacy**](Privacy.md) |  | [optional] 
-**OutlookExperience** | [**OutlookExperience**](OutlookExperience.md) |  | [optional] 
-**GlobalAddressList** | [**GlobalAddressList**](GlobalAddressList.md) |  | [optional] 
-**ClassificationAndSensitivityLabel** | [**TeamClassificationAndSensitivityLabel**](TeamClassificationAndSensitivityLabel.md) |  | [optional] 
-**GovernancePanel** | [**GovernancePanel**](GovernancePanel.md) |  | [optional] 
-**ElectionProfile** | [**TeamElectionProfile**](TeamElectionProfile.md) |  | [optional] 
-**ExternalSharingSettingProfile** | [**ExternalSharingProfile**](ExternalSharingProfile.md) |  | [optional] 
-**QuotaSettingProfile** | [**QuotaProfile**](QuotaProfile.md) |  | [optional] 
-**RenewalProfile** | [**RenewalProfile**](RenewalProfile.md) |  | [optional] 
-**Locale** | [**TeamLocale**](TeamLocale.md) |  | [optional] 
-**TimeZone** | [**TeamTimeZone**](TeamTimeZone.md) |  | [optional] 
-**ShowLinksInRequestDetailsPage** | [**ShowLinksInRequestDetailsPage**](ShowLinksInRequestDetailsPage.md) |  | [optional] 
-**SiteDesign** | [**SiteDesign**](SiteDesign.md) |  | [optional] 
-**WelcomeEmail** | [**WelcomeEmail**](WelcomeEmail.md) |  | [optional] 
-**DynamicMembershipRules** | [**DynamicMembership**](DynamicMembership.md) |  | [optional] 
-**Tenant** | [**OfficeTenant**](OfficeTenant.md) |  | [optional] 
+**Owners** | [**CreateCommunityGalleryOwners**](CreateCommunityGalleryOwners.md) |  | [optional] 
+**Members** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**Privacy** | [**CreateCommunityGalleryPrivacy**](CreateCommunityGalleryPrivacy.md) |  | [optional] 
+**OutlookExperience** | [**ChangeTeamSettingGalleryRequestModelChangeTeamOutlookExperience**](ChangeTeamSettingGalleryRequestModelChangeTeamOutlookExperience.md) |  | [optional] 
+**GlobalAddressList** | [**ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList**](ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList.md) |  | [optional] 
+**ClassificationAndSensitivityLabel** | [**CreateCommunityGalleryClassificationAndSensitivityLabel**](CreateCommunityGalleryClassificationAndSensitivityLabel.md) |  | [optional] 
+**GovernancePanel** | [**CreateCommunityGalleryGovernancePanel**](CreateCommunityGalleryGovernancePanel.md) |  | [optional] 
+**ElectionProfile** | [**CreateCommunityGalleryElectionProfile**](CreateCommunityGalleryElectionProfile.md) |  | [optional] 
+**ExternalSharingSettingProfile** | [**CreateCommunityGalleryExternalSharingSettingProfile**](CreateCommunityGalleryExternalSharingSettingProfile.md) |  | [optional] 
+**QuotaSettingProfile** | [**CreateCommunityGalleryQuotaSettingProfile**](CreateCommunityGalleryQuotaSettingProfile.md) |  | [optional] 
+**RenewalProfile** | [**CreateCommunityGalleryRenewalProfile**](CreateCommunityGalleryRenewalProfile.md) |  | [optional] 
+**Locale** | [**CreateCommunityGalleryLocale**](CreateCommunityGalleryLocale.md) |  | [optional] 
+**TimeZone** | [**CreateCommunityGalleryTimeZone**](CreateCommunityGalleryTimeZone.md) |  | [optional] 
+**ShowLinksInRequestDetailsPage** | [**CreateCommunityGalleryShowLinksInRequestDetailsPage**](CreateCommunityGalleryShowLinksInRequestDetailsPage.md) |  | [optional] 
+**SiteDesign** | [**CreateCommunityGallerySiteDesign**](CreateCommunityGallerySiteDesign.md) |  | [optional] 
+**WelcomeEmail** | [**CreateCommunityGalleryWelcomeEmail**](CreateCommunityGalleryWelcomeEmail.md) |  | [optional] 
+**DynamicMembershipRules** | [**CreateCommunityGalleryDynamicMembershipRules**](CreateCommunityGalleryDynamicMembershipRules.md) |  | [optional] 
+**Tenant** | [**CreateCommunityGalleryTenant**](CreateCommunityGalleryTenant.md) |  | [optional] 
 **TeamEmail** | **String** |  | [optional] [readonly] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -55,6 +58,7 @@ $CreateTeamGallery = New-Cloud.Governance.ClientCreateTeamGallery  -ObjectId nul
  -MemberPermissionSetting null `
  -GuestPermissionSetting null `
  -FunSetting null `
+ -TeamPicture null `
  -MentionSetting null `
  -TeamMessagingSettings null `
  -TeamHubSite null `
@@ -81,7 +85,9 @@ $CreateTeamGallery = New-Cloud.Governance.ClientCreateTeamGallery  -ObjectId nul
  -TeamEmail null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **GenerateUrlType** | [**AutoGenerateUrlType**](AutoGenerateUrlType.md) |  | [optional] 
-**SequentialNumberingSettings** | [**UrlSequentialNumberingSettings**](UrlSequentialNumberingSettings.md) |  | [optional] 
-**RandomStringSettings** | [**UrlRandomStringSettings**](UrlRandomStringSettings.md) |  | [optional] 
+**SequentialNumberingSettings** | [**AutoGenerateUrlSettingSequentialNumberingSettings**](AutoGenerateUrlSettingSequentialNumberingSettings.md) |  | [optional] 
+**RandomStringSettings** | [**AutoGenerateUrlSettingRandomStringSettings**](AutoGenerateUrlSettingRandomStringSettings.md) |  | [optional] 
 
 ## Examples
 

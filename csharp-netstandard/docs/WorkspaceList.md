@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Guid** |  | [optional] 
+**ObjectId** | **Guid** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Type** | **WorkspaceType** |  | [optional] 
 **SiteUrl** | **string** |  | [optional] 
@@ -46,6 +47,10 @@ Name | Type | Description | Notes
 **EnableDynamicMembership** | **bool?** |  | [optional] [default to false]
 **WebLink** | **string** |  | [optional] 
 **CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
+**LastActivityTime** | **DateTime?** |  | [optional] 
+**SharePointSiteId** | **Guid?** |  | [optional] 
+**PrimaryContactStatusOfEnpower** | **EnpowerContactStatus** |  | [optional] 
+**SecondaryContactStatusOfEnpower** | **EnpowerContactStatus** |  | [optional] 
 **EnableDynamicMembershipDescription** | **string** |  | [optional] 
 **Metadata** | [**List&lt;EndUserReportMetadata&gt;**](EndUserReportMetadata.md) |  | [optional] 
 

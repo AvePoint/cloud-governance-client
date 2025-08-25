@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Office365Tenant** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**Office365Tenant** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 **UseBuiltInProperty** | **Boolean** |  | [optional] [default to $false]
-**Value** | [**LookupValue**](LookupValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
+**Value** | [**AzureAdMetadataSettingsValue**](AzureAdMetadataSettingsValue.md) |  | [optional] 
 **Property** | **String** |  | [optional] 
 **ExtensionAttribute** | **String** |  | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]

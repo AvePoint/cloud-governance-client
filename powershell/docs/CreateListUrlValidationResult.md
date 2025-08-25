@@ -3,7 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ParentObject** | [**CreateListSPObject**](CreateListSPObject.md) |  | [optional] 
+**ParentObject** | [**CreateListRequestParentObject**](CreateListRequestParentObject.md) |  | [optional] 
+**Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $CreateListUrlValidationResult = New-Cloud.Governance.ClientCreateListUrlValidationResult  -ParentObject null `
+ -Metadatas null `
  -IsValid null `
  -ErrorMessage null `
  -MessageCode null

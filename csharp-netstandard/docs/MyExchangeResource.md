@@ -21,15 +21,18 @@ Name | Type | Description | Notes
 **RenewalProfileId** | **Guid?** |  | [optional] 
 **RenewalProfileName** | **string** |  | [optional] 
 **RenewalProfileDescription** | **string** |  | [optional] 
+**NextRenewalDate** | **DateTime?** |  | [optional] 
 **PolicyId** | **Guid** |  | [optional] 
 **PolicyName** | **string** |  | [optional] 
 **PolicyDescription** | **string** |  | [optional] 
 **ElectionProfileId** | **Guid?** |  | [optional] 
 **ElectionProfileName** | **string** |  | [optional] 
 **ElectionProfileDescription** | **string** |  | [optional] 
+**ElectionProfileIsTriggerTaskWhenSecondaryEmpty** | **bool** |  | [optional] [default to false]
 **ExternalSharingProfileId** | **Guid?** |  | [optional] 
 **ExternalSharingProfileName** | **string** |  | [optional] 
 **ExternalSharingProfileDescription** | **string** |  | [optional] 
+**ExternalSharingProfileSharingCapabilities** | **SharingCapabilities** |  | [optional] 
 **QuotaProfileId** | **Guid?** |  | [optional] 
 **QuotaProfileName** | **string** |  | [optional] 
 **QuotaProfileDescription** | **string** |  | [optional] 
@@ -43,6 +46,7 @@ Name | Type | Description | Notes
 **CreatedSource** | **WorkspaceCreatedSourceType** |  | [optional] 
 **HasSubmitted** | **bool** |  | [optional] [default to false]
 **HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
+**RenewalTaskSummary** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

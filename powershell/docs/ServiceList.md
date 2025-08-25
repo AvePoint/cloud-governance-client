@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Category** | **String** |  | [optional] 
 **Contact** | **String** |  | [optional] 
 **LanguageId** | **Int32** |  | [optional] [default to 0]
+**LanguageSettingIds** | **Int32[]** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
 **TypeDescription** | **String** |  | [optional] 
 **IsQuestionnaire** | **Boolean** |  | [optional] [default to $false]
@@ -25,6 +26,7 @@ $ServiceList = New-Cloud.Governance.ClientServiceList  -Id null `
  -Category null `
  -Contact null `
  -LanguageId null `
+ -LanguageSettingIds null `
  -Type null `
  -TypeDescription null `
  -IsQuestionnaire null `

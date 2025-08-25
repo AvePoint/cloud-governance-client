@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NewValue** | [**StringModel**](StringModel.md) |  | [optional] 
-**OriginalValue** | [**StringModel**](StringModel.md) |  | [optional] 
+**NewValue** | [**ChangeGroupSettingCheckResultSensitivity**](ChangeGroupSettingCheckResultSensitivity.md) |  | [optional] 
+**OriginalValue** | [**ChangeGroupSettingCheckResultSensitivity**](ChangeGroupSettingCheckResultSensitivity.md) |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

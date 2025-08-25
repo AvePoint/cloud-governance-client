@@ -5,26 +5,26 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SiteTitle** | **String** | Site collection title | [optional] 
 **SiteDescription** | **String** | Site collection description | [optional] 
-**SiteUrl** | [**SiteUrl**](SiteUrl.md) | Site collection url information | [optional] 
+**SiteUrl** | [**CreateSiteRequestSiteUrl**](CreateSiteRequestSiteUrl.md) |  | [optional] 
 **PolicyId** | **String** | Site collection policy id, you can use GetCreateSiteService api to get all the available policy ids and names. | [optional] 
 **TimeZone** | **Int32** | Site collection time zone id, you can use GetCreateSiteService api to get all the available time zone ids and names. | [optional] [default to 0]
 **Language** | **Int32** | Site collection language id, you can use GetCreateSiteService api to get all the available language ids and names. | [optional] [default to 0]
 **Template** | **String** | Site collection template id, you can use GetCreateSiteService api to get all the available template ids and names. | [optional] 
 **DeploymentManagerPlanName** | **String** | Deployment manager plan name, you can use GetCreateSiteService api to get all the available deployment manager plan names. | [optional] 
-**PrimaryAdmin** | [**ApiUser**](ApiUser.md) | Primary site collection administrator | [optional] 
+**PrimaryAdmin** | [**CreateSiteRequestPrimaryAdmin**](CreateSiteRequestPrimaryAdmin.md) |  | [optional] 
 **AdditionalAdmins** | [**ApiUser[]**](ApiUser.md) | Additional site collection administrator | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) | Primary site collection contact | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) | Secondary site collection contact | [optional] 
-**SiteDesign** | [**StringModel**](StringModel.md) | Communication site design | [optional] 
+**PrimaryContact** | [**CreateSiteRequestPrimaryContact**](CreateSiteRequestPrimaryContact.md) |  | [optional] 
+**SecondaryContact** | [**CreateSiteRequestSecondaryContact**](CreateSiteRequestSecondaryContact.md) |  | [optional] 
+**SiteDesign** | [**CreateSiteRequestSiteDesign**](CreateSiteRequestSiteDesign.md) |  | [optional] 
 **TeamSiteDesign** | **String** | Team site design | [optional] 
 **Classification** | **String** | Communication site Classification | [optional] 
 **Sensitivity** | **String** | Sensitive lable | [optional] 
-**HubSiteSettings** | [**HubSiteSettings**](HubSiteSettings.md) | Hub site setting | [optional] 
+**HubSiteSettings** | [**CreateSiteRequestHubSiteSettings**](CreateSiteRequestHubSiteSettings.md) |  | [optional] 
 **UserPermissions** | [**RequestUserWithPermissions[]**](RequestUserWithPermissions.md) | Granted user/group permission setting | [optional] 
 **GroupPermissions** | [**RequestGroupWithPermissions[]**](RequestGroupWithPermissions.md) | Site collection SharePoint group setting | [optional] 
-**YammerGroupSettings** | [**YammerGroupRequestSettings**](YammerGroupRequestSettings.md) | Yammer group setting | [optional] 
-**LeasePeriodSettings** | [**SiteLeasePeriodRequestSettings**](SiteLeasePeriodRequestSettings.md) | Lease period setting | [optional] 
-**MultiGeoLocation** | [**GeoLocationBase**](GeoLocationBase.md) | Multi-geo location | [optional] 
+**YammerGroupSettings** | [**CreateSiteRequestYammerGroupSettings**](CreateSiteRequestYammerGroupSettings.md) |  | [optional] 
+**LeasePeriodSettings** | [**CreateSiteRequestLeasePeriodSettings**](CreateSiteRequestLeasePeriodSettings.md) |  | [optional] 
+**MultiGeoLocation** | [**CreateSiteRequestMultiGeoLocation**](CreateSiteRequestMultiGeoLocation.md) |  | [optional] 
 **InputTitle** | **String** | Site collection title without prefix and sufix when service enables constructing title | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
@@ -46,6 +46,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -54,6 +55,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -102,6 +105,7 @@ $CreateSiteRequest = New-Cloud.Governance.ClientCreateSiteRequest  -SiteTitle nu
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -109,7 +113,9 @@ $CreateSiteRequest = New-Cloud.Governance.ClientCreateSiteRequest  -SiteTitle nu
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

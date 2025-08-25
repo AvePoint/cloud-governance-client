@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | [**ImportObjectType**](ImportObjectType.md) |  | [optional] 
+**Workspaces** | [**ImportSharedMailboxModel[]**](ImportSharedMailboxModel.md) |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **FileName** | **String** |  | [optional] 
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 - Prepare the resource
 ```powershell
 $ManualImportSharedMailboxJobModel = New-Cloud.Governance.ClientManualImportSharedMailboxJobModel  -ObjectType null `
+ -Workspaces null `
  -Name null `
  -Description null `
  -FileName null

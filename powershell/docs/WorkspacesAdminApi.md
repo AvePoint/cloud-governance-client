@@ -4,6 +4,7 @@ All URIs are relative to {*Cloud_Governance_Modern_API_Endpoint*}
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**Invoke-ApplyCommunitiesProfiles**](WorkspacesAdminApi.md#Invoke-ApplyCommunitiesProfiles) | **POST** /admin/directory/workspace/communities/profiles | apply groups policy
 [**Invoke-ApplyGroupProfiles**](WorkspacesAdminApi.md#Invoke-ApplyGroupProfiles) | **POST** /admin/directory/workspace/group/applyprofiles | apply group profiles
 [**Invoke-ApplyGroupsPolicy**](WorkspacesAdminApi.md#Invoke-ApplyGroupsPolicy) | **POST** /admin/directory/workspace/groups/policy | apply groups policy
 [**Invoke-ApplySiteProfiles**](WorkspacesAdminApi.md#Invoke-ApplySiteProfiles) | **POST** /admin/directory/workspace/sites/profiles | apply site profiles
@@ -15,12 +16,76 @@ Method | HTTP request | Description
 [**Get-OngoingTasks**](WorkspacesAdminApi.md#Get-OngoingTasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
 [**Get-WorkspaceFilters**](WorkspacesAdminApi.md#Get-WorkspaceFilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 [**Get-Workspaces**](WorkspacesAdminApi.md#Get-Workspaces) | **GET** /admin/directory/workspace | get managed workspaces
+[**Get-WorkspacesPost**](WorkspacesAdminApi.md#Get-WorkspacesPost) | **POST** /admin/directory/workspace | get managed workspaces
 [**Lock-Workspaces**](WorkspacesAdminApi.md#Lock-Workspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 [**Invoke-SpecifyContacts**](WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 [**Invoke-TriggerWorkspaceRenewal**](WorkspacesAdminApi.md#Invoke-TriggerWorkspaceRenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
 [**Invoke-TriggerWorkspacesElection**](WorkspacesAdminApi.md#Invoke-TriggerWorkspacesElection) | **POST** /admin/directory/workspace/election/trigger | trigger workspace election
 [**Unlock-Workspace**](WorkspacesAdminApi.md#Unlock-Workspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
+[**Update-Metadatas**](WorkspacesAdminApi.md#Update-Metadatas) | **POST** /admin/directory/workspace/metadata | update metadatas for workspaces
 
+
+<a name="Invoke-ApplyCommunitiesProfiles"></a>
+# **Invoke-ApplyCommunitiesProfiles**
+> void Invoke-ApplyCommunitiesProfiles<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ApplyCommunityProfilesModel] <PSCustomObject><br>
+
+apply groups policy
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$ApplyCommunityProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApiProfileObjectType = New-ApiProfileObjectType 
+$HandleOngoingType = New-HandleOngoingType 
+$HandleTaskType = New-HandleTaskType 
+$ApplyCommunityProfilesModel = New-ApplyCommunityProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyCommunityProfilesModel | apply policy setting (optional)
+
+# apply groups policy
+try {
+     $Result = Invoke-ApplyCommunitiesProfiles -ApplyCommunityProfilesModel $ApplyCommunityProfilesModel
+} catch {
+    Write-Host ("Exception occured when calling Invoke-ApplyCommunitiesProfiles: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ApplyCommunityProfilesModel** | [**ApplyCommunityProfilesModel**](ApplyCommunityProfilesModel.md)| apply policy setting | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Invoke-ApplyGroupProfiles"></a>
 # **Invoke-ApplyGroupProfiles**
@@ -48,11 +113,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyTeamProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApplyTeamProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
 $ApiProfileObjectType = New-ApiProfileObjectType 
 $HandleOngoingType = New-HandleOngoingType 
 $HandleTaskType = New-HandleTaskType 
-$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" # ApplyTeamProfilesModel | apply profiles (optional)
+$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyTeamProfilesModel | apply profiles (optional)
 
 # apply group profiles
 try {
@@ -115,9 +180,9 @@ $ApplyGroupPolicyModel = $GroupPolicySubType = New-GroupPolicySubType
 $LeaseDateType = New-LeaseDateType 
 $LeaseStartDateType = New-LeaseStartDateType 
 $HandleOngoingType = New-HandleOngoingType 
-$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
+$ApplyGroupPolicyModelLifecycleRenewalSetting = New-ApplyGroupPolicyModelLifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
 
-$ApplyGroupPolicyModel = New-ApplyGroupPolicyModel -SubType $GroupPolicySubType -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false # ApplyGroupPolicyModel | apply policy setting (optional)
+$ApplyGroupPolicyModel = New-ApplyGroupPolicyModel -SubType $GroupPolicySubType -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $ApplyGroupPolicyModelLifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false -IsConfirmed $false # ApplyGroupPolicyModel | apply policy setting (optional)
 
 # apply groups policy
 try {
@@ -175,11 +240,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApplyProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
 $ApiProfileObjectType = New-ApiProfileObjectType 
 $HandleOngoingType = New-HandleOngoingType 
 $HandleTaskType = New-HandleTaskType 
-$ApplyProfilesModel = New-ApplyProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" # ApplyProfilesModel | apply profiles (optional)
+$ApplyProfilesModel = New-ApplyProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyProfilesModel | apply profiles (optional)
 
 # apply site profiles
 try {
@@ -240,9 +305,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $ApplySitePolicyModel = $LeaseDateType = New-LeaseDateType 
 $LeaseStartDateType = New-LeaseStartDateType 
 $HandleOngoingType = New-HandleOngoingType 
-$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
+$ApplyGroupPolicyModelLifecycleRenewalSetting = New-ApplyGroupPolicyModelLifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
 
-$ApplySitePolicyModel = New-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false # ApplySitePolicyModel | apply policy setting (optional)
+$ApplySitePolicyModel = New-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $ApplyGroupPolicyModelLifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false -IsConfirmed $false # ApplySitePolicyModel | apply policy setting (optional)
 
 # apply site policy
 try {
@@ -300,11 +365,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyTeamProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApplyTeamProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
 $ApiProfileObjectType = New-ApiProfileObjectType 
 $HandleOngoingType = New-HandleOngoingType 
 $HandleTaskType = New-HandleTaskType 
-$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" # ApplyTeamProfilesModel | apply profiles (optional)
+$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyTeamProfilesModel | apply profiles (optional)
 
 # apply team profiles
 try {
@@ -369,7 +434,7 @@ $ArchiveWorkspaceParameter = $WorkspaceArchivedType = New-WorkspaceArchivedType
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$ArchiveWorkspaceParameter = New-ArchiveWorkspaceParameter -ArchiveProfile "MyArchiveProfile" -WorkspaceType $WorkspaceArchivedType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # ArchiveWorkspaceParameter |  (optional)
+$ArchiveWorkspaceParameter = New-ArchiveWorkspaceParameter -ArchiveProfile "MyArchiveProfile" -WorkspaceType $WorkspaceArchivedType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # ArchiveWorkspaceParameter |  (optional)
 
 # archive workspace
 try {
@@ -433,7 +498,7 @@ $Filter = "MyFilter" # String |  (optional)
 $AutoCompleteRenewalTaskParameter = $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$AutoCompleteRenewalTaskParameter = New-AutoCompleteRenewalTaskParameter -IsMarkAsCanceled $false -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # AutoCompleteRenewalTaskParameter |  (optional)
+$AutoCompleteRenewalTaskParameter = New-AutoCompleteRenewalTaskParameter -IsMarkAsCanceled $false -Processor "MyProcessor" -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # AutoCompleteRenewalTaskParameter |  (optional)
 
 # completed renewal task
 try {
@@ -495,7 +560,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $DeleteWorkspaceParameter = $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$DeleteWorkspaceParameter = New-DeleteWorkspaceParameter -EnableRemoveObject $false -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # DeleteWorkspaceParameter |  (optional)
+$DeleteWorkspaceParameter = New-DeleteWorkspaceParameter -EnableRemoveObject $false -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # DeleteWorkspaceParameter |  (optional)
 
 # delete workspaces
 try {
@@ -677,8 +742,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
-$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
 $Search = "MySearch" # String | Search for name (optional)
 $Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
 $Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
@@ -697,8 +762,81 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, secondaryContact, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **Search** | **String**| Search for name | [optional] 
+ **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
+ **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 
+ **Nexttoken** | **String**|  Use the next token to get the next paging result | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**WorkspaceGridModelPageResult**](WorkspaceGridModelPageResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-WorkspacesPost"></a>
+# **Get-WorkspacesPost**
+> WorkspaceGridModelPageResult Get-WorkspacesPost<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Nexttoken] <String><br>
+
+get managed workspaces
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
+$Search = "MySearch" # String | Search for name (optional)
+$Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
+$Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
+$Nexttoken = "MyNexttoken" # String |  Use the next token to get the next paging result (optional)
+
+# get managed workspaces
+try {
+     $Result = Get-WorkspacesPost -Filter $Filter -Orderby $Orderby -Search $Search -Top $Top -Skip $Skip -Nexttoken $Nexttoken
+} catch {
+    Write-Host ("Exception occured when calling Get-WorkspacesPost: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
  **Search** | **String**| Search for name | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -752,7 +890,7 @@ $LockSiteParameter = $LockSiteCollectionType = New-LockSiteCollectionType
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$LockSiteParameter = New-LockSiteParameter -LockType $LockSiteCollectionType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # LockSiteParameter |  (optional)
+$LockSiteParameter = New-LockSiteParameter -LockType $LockSiteCollectionType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # LockSiteParameter |  (optional)
 
 # lock sites or Office365 group sites
 try {
@@ -815,12 +953,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $Filter = "MyFilter" # String |  (optional)
 $SpecifyContactParameter = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$SpecifyContactParameter = New-SpecifyContactParameter -PrimaryContact $ApiUser -SecondaryContact $ApiUser -PrimaryContactNotifiedEmail "MyPrimaryContactNotifiedEmail" -SecondaryContactNotifiedEmail "MySecondaryContactNotifiedEmail" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # SpecifyContactParameter |  (optional)
+$SpecifyContactParameter = New-SpecifyContactParameter -PrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -PrimaryContactNotifiedEmail "MyPrimaryContactNotifiedEmail" -SecondaryContactNotifiedEmail "MySecondaryContactNotifiedEmail" -IsRemoveSecondaryContact $false -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # SpecifyContactParameter |  (optional)
 
 # specify contacts
 try {
@@ -884,7 +1022,7 @@ $Filter = "MyFilter" # String |  (optional)
 $WorkspaceSendCancelEmailParameter = $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$WorkspaceSendCancelEmailParameter = New-WorkspaceSendCancelEmailParameter -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # WorkspaceSendCancelEmailParameter |  (optional)
+$WorkspaceSendCancelEmailParameter = New-WorkspaceSendCancelEmailParameter -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # WorkspaceSendCancelEmailParameter |  (optional)
 
 # trigger workspace renewal
 try {
@@ -948,7 +1086,7 @@ $Filter = "MyFilter" # String |  (optional)
 $WorkspaceActionParameter = $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$WorkspaceActionParameter = New-WorkspaceActionParameter -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # WorkspaceActionParameter |  (optional)
+$WorkspaceActionParameter = New-WorkspaceActionParameter -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # WorkspaceActionParameter |  (optional)
 
 # trigger workspace election
 try {
@@ -1012,7 +1150,7 @@ $Filter = "MyFilter" # String |  (optional)
 $WorkspaceActionParameter = $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$WorkspaceActionParameter = New-WorkspaceActionParameter -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType # WorkspaceActionParameter |  (optional)
+$WorkspaceActionParameter = New-WorkspaceActionParameter -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # WorkspaceActionParameter |  (optional)
 
 # unlock sites and Office365 group site
 try {
@@ -1029,6 +1167,87 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Filter** | **String**|  | [optional] 
  **WorkspaceActionParameter** | [**WorkspaceActionParameter**](WorkspaceActionParameter.md)|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Update-Metadatas"></a>
+# **Update-Metadatas**
+> void Update-Metadatas<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-UpdateMetadataParameter] <PSCustomObject><br>
+
+update metadatas for workspaces
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$UpdateMetadataParameter = $ExternalUserType = New-ExternalUserType 
+$ApiUserType = New-ApiUserType 
+$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+
+$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+
+$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
+$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$MetadataFieldType = New-MetadataFieldType 
+$MetadataActionType = New-MetadataActionType 
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+
+$WorkspaceType = New-WorkspaceType 
+$WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
+
+$UpdateMetadataParameter = New-UpdateMetadataParameter -Metadatas $RequestMetadata -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # UpdateMetadataParameter |  (optional)
+
+# update metadatas for workspaces
+try {
+     $Result = Update-Metadatas -UpdateMetadataParameter $UpdateMetadataParameter
+} catch {
+    Write-Host ("Exception occured when calling Update-Metadatas: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **UpdateMetadataParameter** | [**UpdateMetadataParameter**](UpdateMetadataParameter.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

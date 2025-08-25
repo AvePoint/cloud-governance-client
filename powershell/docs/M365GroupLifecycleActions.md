@@ -13,9 +13,12 @@ Name | Type | Description | Notes
 **ActivityId** | **String** |  | [optional] 
 **ActivityType** | **String** |  | [optional] 
 **Type** | **String** |  | [optional] 
+**GalleryType** | **String** |  | [optional] 
+**GalleryTitle** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **RunAfter** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
 
 ## Examples
 
@@ -31,9 +34,12 @@ $M365GroupLifecycleActions = New-Cloud.Governance.ClientM365GroupLifecycleAction
  -ActivityId null `
  -ActivityType null `
  -Type null `
+ -GalleryType null `
+ -GalleryTitle null `
  -Title null `
  -Description null `
- -RunAfter null
+ -RunAfter null `
+ -DisplayName null
 ```
 
 - Convert the resource to JSON

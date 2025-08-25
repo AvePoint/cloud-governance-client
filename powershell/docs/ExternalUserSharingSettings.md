@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | **Boolean** |  | [optional] [default to $false]
 **SharingType** | [**ExternalUserSharingType**](ExternalUserSharingType.md) |  | [optional] 
-**AnonymousLinkSettings** | [**AnonymousLinkSettings**](AnonymousLinkSettings.md) |  | [optional] 
+**AnonymousLinkSettings** | [**ExternalUserSharingSettingsAnonymousLinkSettings**](ExternalUserSharingSettingsAnonymousLinkSettings.md) |  | [optional] 
 
 ## Examples
 

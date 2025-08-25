@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
 **DisplayName** | **String** |  | [optional] 
+**UserPrincipalName** | **String** |  | [optional] 
 **Mail** | **String** |  | [optional] 
 **PrimaryContact** | **String** |  | [optional] 
 **PrimaryContactEmail** | **String** |  | [optional] 
@@ -41,6 +42,12 @@ Name | Type | Description | Notes
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **ClaimStatus** | [**ClaimStatus**](ClaimStatus.md) |  | [optional] 
 **OngoingTaskCount** | **Int32** |  | [optional] [default to 0]
+**Manager** | **String** |  | [optional] 
+**JobTitle** | **String** |  | [optional] 
+**Department** | **String** |  | [optional] 
+**CompanyName** | **String** |  | [optional] 
+**ManagerDisplayName** | **String** |  | [optional] 
+**ManagerEmail** | **String** |  | [optional] 
 **Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 
 ## Examples
@@ -49,6 +56,7 @@ Name | Type | Description | Notes
 ```powershell
 $GuestUserGridModel = New-Cloud.Governance.ClientGuestUserGridModel  -Id null `
  -DisplayName null `
+ -UserPrincipalName null `
  -Mail null `
  -PrimaryContact null `
  -PrimaryContactEmail null `
@@ -85,6 +93,12 @@ $GuestUserGridModel = New-Cloud.Governance.ClientGuestUserGridModel  -Id null `
  -Phase null `
  -ClaimStatus null `
  -OngoingTaskCount null `
+ -Manager null `
+ -JobTitle null `
+ -Department null `
+ -CompanyName null `
+ -ManagerDisplayName null `
+ -ManagerEmail null `
  -Metadata null
 ```
 

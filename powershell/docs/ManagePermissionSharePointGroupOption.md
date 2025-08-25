@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **IsEnableDeleteSPGroup** | **Boolean** |  | [optional] [default to $false]
 **IsEnableManageGroupSettings** | **Boolean** |  | [optional] [default to $false]
 **IsEnableManageGroupMembers** | **Boolean** |  | [optional] [default to $false]
-**GroupOwner** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**GroupOwner** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **GroupOwnerAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] 
 **SpGroupEditType** | [**SPGroupEditOption**](SPGroupEditOption.md) |  | [optional] 

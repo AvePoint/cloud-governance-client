@@ -26,10 +26,12 @@ Name | Type | Description | Notes
 **AdditionalAdministratorObjectIds** | **String** |  | [optional] 
 **AdditionalAdministratorDisplayNames** | **String** |  | [optional] 
 **PrimaryContact** | **String** |  | [optional] 
+**PrimaryContactStatusOfEnpower** | [**EnpowerContactStatus**](EnpowerContactStatus.md) |  | [optional] 
 **PrimaryContactEmail** | **String** |  | [optional] 
 **PrimaryContactObjectId** | **String** |  | [optional] 
 **PrimaryContactDisplayName** | **String** |  | [optional] 
 **SecondaryContact** | **String** |  | [optional] 
+**SecondaryContactStatusOfEnpower** | [**EnpowerContactStatus**](EnpowerContactStatus.md) |  | [optional] 
 **SecondaryContactEmail** | **String** |  | [optional] 
 **SecondaryContactObjectId** | **String** |  | [optional] 
 **SecondaryContactDisplayName** | **String** |  | [optional] 
@@ -69,12 +71,14 @@ Name | Type | Description | Notes
 **InsightsStatus** | [**InsightsStatus**](InsightsStatus.md) |  | [optional] 
 **SiteStatus** | [**TeamSiteStatus**](TeamSiteStatus.md) |  | [optional] 
 **SiteStatusDescription** | **String** |  | [optional] 
+**LegalHold** | **Boolean** |  | [optional] [default to $false]
 **LockedBy** | [**LockedBy**](LockedBy.md) |  | [optional] 
 **LastSyncTime** | **System.DateTime** |  | [optional] 
 **LockedByDescription** | **String** |  | [optional] 
 **CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
 **SiteTemplate** | **String** |  | [optional] 
 **SiteTemplateTitle** | **String** |  | [optional] 
+**TenantId** | **String** |  | [optional] 
 **QuotaProfileName** | **String** |  | [optional] 
 **QuotaProfileId** | **String** |  | [optional] 
 **ExternalSharingProfileName** | **String** |  | [optional] 
@@ -120,10 +124,12 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -AdditionalAdministratorObjectIds null `
  -AdditionalAdministratorDisplayNames null `
  -PrimaryContact null `
+ -PrimaryContactStatusOfEnpower null `
  -PrimaryContactEmail null `
  -PrimaryContactObjectId null `
  -PrimaryContactDisplayName null `
  -SecondaryContact null `
+ -SecondaryContactStatusOfEnpower null `
  -SecondaryContactEmail null `
  -SecondaryContactObjectId null `
  -SecondaryContactDisplayName null `
@@ -163,12 +169,14 @@ $WorkspaceGridModel = New-Cloud.Governance.ClientWorkspaceGridModel  -Id null `
  -InsightsStatus null `
  -SiteStatus null `
  -SiteStatusDescription null `
+ -LegalHold null `
  -LockedBy null `
  -LastSyncTime null `
  -LockedByDescription null `
  -CreatedSource null `
  -SiteTemplate null `
  -SiteTemplateTitle null `
+ -TenantId null `
  -QuotaProfileName null `
  -QuotaProfileId null `
  -ExternalSharingProfileName null `

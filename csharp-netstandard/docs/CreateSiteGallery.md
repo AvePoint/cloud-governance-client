@@ -4,7 +4,6 @@ This is create site gallery model class inside DynamicRequest.ActivityGalleries
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ContentTypes** | [**ContentTypes**](ContentTypes.md) |  | [optional] 
 **SiteTitleAndDescription** | [**SiteTitleDescription**](SiteTitleDescription.md) |  | [optional] 
 **SiteUrlSetting** | [**DRSiteUrlSetting**](DRSiteUrlSetting.md) |  | [optional] 
 **SiteTimeZone** | [**SiteTimeZone**](SiteTimeZone.md) |  | [optional] 
@@ -26,10 +25,20 @@ Name | Type | Description | Notes
 **MultiGeoLocationSetting** | [**MultiGeoLocationSetting**](MultiGeoLocationSetting.md) |  | [optional] 
 **RenewalProfile** | [**RenewalProfile**](RenewalProfile.md) |  | [optional] 
 **ElectionProfile** | [**SiteElectionProfile**](SiteElectionProfile.md) |  | [optional] 
+**ContentTypes** | [**ContentTypes**](ContentTypes.md) |  | [optional] 
+**ActivateFeatures** | [**SiteFeature**](SiteFeature.md) |  | [optional] 
+**AddSiteColumns** | [**SiteColumns**](SiteColumns.md) |  | [optional] 
+**PublishColumns** | [**SiteColumns**](SiteColumns.md) |  | [optional] 
+**AlternateCssUrl** | [**SiteAlternateCssUrl**](SiteAlternateCssUrl.md) |  | [optional] 
 **FullUrl** | **string** |  | [optional] 
+**SitePicture** | [**SitePicture**](SitePicture.md) |  | [optional] 
+**ScAvePointPortalManagerTemplate** | [**ApmTemplateSetting**](ApmTemplateSetting.md) |  | [optional] 
+**CreateSiteCollectionNotifyOpusForNewFiles** | [**NotifyOpusForNewFilesRequestModel**](NotifyOpusForNewFilesRequestModel.md) |  | [optional] 
 **GalleryType** | **string** |  | [optional] 
 **GalleryInternalName** | **string** |  | [optional] 
 **GalleryMetadata** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **bool?** |  | [optional] [default to false]
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

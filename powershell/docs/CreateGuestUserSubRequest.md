@@ -4,12 +4,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] [readonly] 
-**UserProperties** | [**GuestUserPropertyModel**](GuestUserPropertyModel.md) |  | [optional] 
+**UserProperties** | [**CreateGuestUserRequestUserProperties**](CreateGuestUserRequestUserProperties.md) |  | [optional] 
 **WelcomeEmailMessage** | **String** |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**PrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**SecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **InviteGroups** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**OneTimeSettings** | [**GuestUserRequestOneTimeRenewalSettingModel**](GuestUserRequestOneTimeRenewalSettingModel.md) |  | [optional] 
+**OneTimeSettings** | [**CreateGuestUserRequestOneTimeSettings**](CreateGuestUserRequestOneTimeSettings.md) |  | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **ProcessStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [readonly] 
 **AssignTo** | [**ApiUser[]**](ApiUser.md) |  | [optional] 

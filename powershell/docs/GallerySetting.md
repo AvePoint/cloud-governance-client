@@ -5,13 +5,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
 **DisplayName** | **String** |  | [optional] 
+**GalleryType** | **String** |  | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
 $GallerySetting = New-Cloud.Governance.ClientGallerySetting  -Id null `
- -DisplayName null
+ -DisplayName null `
+ -GalleryType null
 ```
 
 - Convert the resource to JSON

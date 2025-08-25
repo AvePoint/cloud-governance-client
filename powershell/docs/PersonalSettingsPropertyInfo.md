@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **ThemeCode** | **String** |  | [optional] 
 **ThemeType** | [**ThemeSettingType**](ThemeSettingType.md) |  | [optional] [readonly] 
 **IsEnabledInTeamsApp** | **Boolean** |  | [optional] [default to $false]
+**IsEnableVNext** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -17,7 +18,8 @@ $PersonalSettingsPropertyInfo = New-Cloud.Governance.ClientPersonalSettingsPrope
  -IsUsingBrowserLanguage null `
  -ThemeCode null `
  -ThemeType null `
- -IsEnabledInTeamsApp null
+ -IsEnabledInTeamsApp null `
+ -IsEnableVNext null
 ```
 
 - Convert the resource to JSON

@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **UserMetadataSettings** | [**UserMetadataSettings**](UserMetadataSettings.md) |  | [optional] 
 **UserProfileMetadataSettings** | [**UserProfileMetadataSettings**](UserProfileMetadataSettings.md) |  | [optional] 
 **AzureAdMetadataSettings** | [**AzureAdMetadataSettings**](AzureAdMetadataSettings.md) |  | [optional] 
+**NonAzureAdMetadataSettings** | [**NonAzureAdMetadataSettings**](NonAzureAdMetadataSettings.md) |  | [optional] 
 **ChoiceMetadataSettings** | [**ChoiceMetadataSettings**](ChoiceMetadataSettings.md) |  | [optional] 
 **LinkMetadataSettings** | [**LinkMetadataSettings**](LinkMetadataSettings.md) |  | [optional] 
 **SingleLineOrMultipleLineMetadataSettings** | [**SingleLineOrMultipleLineMetadataSettings**](SingleLineOrMultipleLineMetadataSettings.md) |  | [optional] 

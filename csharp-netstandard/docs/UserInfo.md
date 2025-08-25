@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **Inviter** | **string** |  | [optional] 
 **CreatedTime** | **DateTime?** |  | [optional] 
 **LastModifiedTime** | **DateTime?** |  | [optional] 
+**SharePointLogonName** | **string** |  | [optional] 
 **Id** | **int** |  | [optional] [default to 0]
 **DisplayName** | **string** |  | [optional] 
 **Title** | **string** |  | [optional] 

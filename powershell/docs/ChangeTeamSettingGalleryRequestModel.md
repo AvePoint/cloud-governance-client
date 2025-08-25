@@ -3,20 +3,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TeamSettingInfo** | [**ChangeTeamSettingModel**](ChangeTeamSettingModel.md) |  | [optional] 
-**ChangeTeamDisplayName** | [**ChangeTeamDisplayName**](ChangeTeamDisplayName.md) |  | [optional] 
-**ChangeTeamDescription** | [**ChangeTeamRequestDescription**](ChangeTeamRequestDescription.md) |  | [optional] 
-**ChangeTeamPrivacySetting** | [**ChangeTeamPrivacySetting**](ChangeTeamPrivacySetting.md) |  | [optional] 
-**ChangeTeamClassificationAndSensitivityLabel** | [**ChangeTeamClassificationAndSensitivityLabel**](ChangeTeamClassificationAndSensitivityLabel.md) |  | [optional] 
-**ChangeTeamOutlookExperience** | [**OutlookExperience**](OutlookExperience.md) |  | [optional] 
-**ChangeGlobalAddressList** | [**GlobalAddressList**](GlobalAddressList.md) |  | [optional] 
-**FunStuffSettings** | [**ChangeTeamFunStuff**](ChangeTeamFunStuff.md) |  | [optional] 
-**Mentions** | [**ChangeTeamMentions**](ChangeTeamMentions.md) |  | [optional] 
-**ChangeTeamMemberPermission** | [**ChangeTeamMemberPermission**](ChangeTeamMemberPermission.md) |  | [optional] 
-**GuestPermissions** | [**GuestPermissions**](GuestPermissions.md) |  | [optional] 
+**TeamSettingInfo** | [**ChangeTeamSettingGalleryRequestModelTeamSettingInfo**](ChangeTeamSettingGalleryRequestModelTeamSettingInfo.md) |  | [optional] 
+**ChangeTeamDisplayName** | [**ChangeTeamSettingGalleryRequestModelChangeTeamDisplayName**](ChangeTeamSettingGalleryRequestModelChangeTeamDisplayName.md) |  | [optional] 
+**ChangeTeamDescription** | [**ChangeTeamSettingGalleryRequestModelChangeTeamDescription**](ChangeTeamSettingGalleryRequestModelChangeTeamDescription.md) |  | [optional] 
+**ChangeTeamPrivacySetting** | [**ChangeTeamSettingGalleryRequestModelChangeTeamPrivacySetting**](ChangeTeamSettingGalleryRequestModelChangeTeamPrivacySetting.md) |  | [optional] 
+**ChangeTeamClassificationAndSensitivityLabel** | [**ChangeTeamSettingGalleryRequestModelChangeTeamClassificationAndSensitivityLabel**](ChangeTeamSettingGalleryRequestModelChangeTeamClassificationAndSensitivityLabel.md) |  | [optional] 
+**ChangeTeamOutlookExperience** | [**ChangeTeamSettingGalleryRequestModelChangeTeamOutlookExperience**](ChangeTeamSettingGalleryRequestModelChangeTeamOutlookExperience.md) |  | [optional] 
+**ChangeGlobalAddressList** | [**ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList**](ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList.md) |  | [optional] 
+**FunStuffSettings** | [**ChangeTeamSettingGalleryRequestModelFunStuffSettings**](ChangeTeamSettingGalleryRequestModelFunStuffSettings.md) |  | [optional] 
+**Mentions** | [**ChangeTeamSettingGalleryRequestModelMentions**](ChangeTeamSettingGalleryRequestModelMentions.md) |  | [optional] 
+**ChangeTeamMemberPermission** | [**ChangeTeamSettingGalleryRequestModelChangeTeamMemberPermission**](ChangeTeamSettingGalleryRequestModelChangeTeamMemberPermission.md) |  | [optional] 
+**GuestPermissions** | [**ChangeTeamSettingGalleryRequestModelGuestPermissions**](ChangeTeamSettingGalleryRequestModelGuestPermissions.md) |  | [optional] 
+**ChangeTeamPicture** | [**ChangeTeamSettingGalleryRequestModelChangeTeamPicture**](ChangeTeamSettingGalleryRequestModelChangeTeamPicture.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -33,9 +36,12 @@ $ChangeTeamSettingGalleryRequestModel = New-Cloud.Governance.ClientChangeTeamSet
  -Mentions null `
  -ChangeTeamMemberPermission null `
  -GuestPermissions null `
+ -ChangeTeamPicture null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

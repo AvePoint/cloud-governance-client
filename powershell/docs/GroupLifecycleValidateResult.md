@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApprovalProcessHasManagerRole** | **Boolean** |  | [optional] [default to $false]
-**ExtendSetting** | [**ExtendGroupResult**](ExtendGroupResult.md) |  | [optional] 
-**ChangePolicySetting** | [**ChangeGroupPolicyResult**](ChangeGroupPolicyResult.md) |  | [optional] 
-**ChangeQuotaSetting** | [**ChangeGroupQuotaResult**](ChangeGroupQuotaResult.md) |  | [optional] 
+**ExtendSetting** | [**GroupLifecycleValidateResultExtendSetting**](GroupLifecycleValidateResultExtendSetting.md) |  | [optional] 
+**ChangePolicySetting** | [**GroupLifecycleValidateResultChangePolicySetting**](GroupLifecycleValidateResultChangePolicySetting.md) |  | [optional] 
+**ChangeQuotaSetting** | [**GroupLifecycleValidateResultChangeQuotaSetting**](GroupLifecycleValidateResultChangeQuotaSetting.md) |  | [optional] 
 **EnableTeamCollaboration** | **Boolean** |  | [optional] [default to $false]
 **GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]

@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | [**DelegatedAccessToken**](DelegatedAccessToken.md) |  | [optional] 
+**Value** | [**DelegatedAccessTokenApiResultValue**](DelegatedAccessTokenApiResultValue.md) |  | [optional] 
 **IsSuccess** | **Boolean** |  | [optional] [default to $false]
 **ErrorMsg** | **String** |  | [optional] 
 

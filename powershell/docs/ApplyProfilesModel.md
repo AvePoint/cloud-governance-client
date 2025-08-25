@@ -6,19 +6,21 @@ Name | Type | Description | Notes
 **VarFilter** | **String** |  | [optional] 
 **Search** | **String** |  | [optional] 
 **EnableModernRenewalProfile** | **Boolean** |  | [optional] [default to $false]
-**ModernRenewalProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**ModernRenewalProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 **EnableElectionProfile** | **Boolean** |  | [optional] [default to $false]
-**ElectionProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**ElectionProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 **EnableQuotaProfile** | **Boolean** |  | [optional] [default to $false]
-**QuotaProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**QuotaProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**IsKeepQuota** | **Boolean** |  | [optional] [default to $false]
 **EnableExternalSharingProfile** | **Boolean** |  | [optional] [default to $false]
-**ExternalSharingProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**ExternalSharingProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 **ProfileObjectType** | [**ApiProfileObjectType**](ApiProfileObjectType.md) |  | [optional] 
 **SelectedObjects** | **String[]** |  | [optional] 
 **HandleOngoingType** | [**HandleOngoingType**](HandleOngoingType.md) |  | [optional] 
 **HandleTaskType** | [**HandleTaskType**](HandleTaskType.md) |  | [optional] 
 **IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
 **CancelEmailTemplateId** | **String** |  | [optional] 
+**IsConfirmed** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -32,6 +34,7 @@ $ApplyProfilesModel = New-Cloud.Governance.ClientApplyProfilesModel  -VarFilter 
  -ElectionProfile null `
  -EnableQuotaProfile null `
  -QuotaProfile null `
+ -IsKeepQuota null `
  -EnableExternalSharingProfile null `
  -ExternalSharingProfile null `
  -ProfileObjectType null `
@@ -39,7 +42,8 @@ $ApplyProfilesModel = New-Cloud.Governance.ClientApplyProfilesModel  -VarFilter 
  -HandleOngoingType null `
  -HandleTaskType null `
  -IsSendCancelEmail null `
- -CancelEmailTemplateId null
+ -CancelEmailTemplateId null `
+ -IsConfirmed null
 ```
 
 - Convert the resource to JSON

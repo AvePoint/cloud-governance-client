@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Urls** | **String[]** |  | [optional] 
-**SourceUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**TargetUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SourceUser** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**TargetUser** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **CloneOption** | [**ClonePermissionOption**](ClonePermissionOption.md) |  | [optional] 
 **AdditionalCloneOption** | [**ClonePermissionAdditionalOption**](ClonePermissionAdditionalOption.md) |  | [optional] 
 **EnabledRemoveExplicitPermission** | **Boolean** |  | [optional] [default to $false]
@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -39,6 +40,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -72,6 +75,7 @@ $ClonePermissionRequest = New-Cloud.Governance.ClientClonePermissionRequest  -Ur
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -79,7 +83,9 @@ $ClonePermissionRequest = New-Cloud.Governance.ClientClonePermissionRequest  -Ur
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

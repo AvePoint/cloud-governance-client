@@ -4,7 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Value** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**PeoplePickerProfile** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**PeoplePickerProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**AllowBusinessUserToInputSingleValue** | **Boolean** |  | [optional] [default to $false]
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 ```powershell
 $UserMetadataSettings = New-Cloud.Governance.ClientUserMetadataSettings  -Value null `
  -PeoplePickerProfile null `
+ -AllowBusinessUserToInputSingleValue null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```
 

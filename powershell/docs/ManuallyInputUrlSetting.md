@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **EnableConstructUrl** | **Boolean** |  | [optional] [default to $false]
 **EnableUrlValidation** | **Boolean** |  | [optional] [default to $false]
 **ConstructUrlAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
-**ValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
+**ValidationRule** | [**CreateListUrlSettingsTextValidationRule**](CreateListUrlSettingsTextValidationRule.md) |  | [optional] 
 **Rules** | **String[]** |  | [optional] 
 **Suffix** | **String** |  | [optional] 
 **Connection** | **String** |  | [optional] 

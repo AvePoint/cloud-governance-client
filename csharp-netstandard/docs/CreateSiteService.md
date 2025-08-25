@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **LeasePeriodSettings** | [**SiteLeasePeriodServiceSettings**](SiteLeasePeriodServiceSettings.md) |  | [optional] 
 **TimeZones** | [**List&lt;IntModel&gt;**](IntModel.md) |  | [optional] 
 **SiteDesigns** | [**List&lt;StringModel&gt;**](StringModel.md) |  | [optional] 
-**SiteDesign** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**SiteDesign** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
 **DefaultTeamSiteDesignId** | **string** |  | [optional] 
 **SiteDesignAssignBy** | **AssignBy** |  | [optional] 
 **YammerGroupSettings** | [**YammerGroupServiceSettings**](YammerGroupServiceSettings.md) |  | [optional] 

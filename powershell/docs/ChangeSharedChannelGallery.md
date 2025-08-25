@@ -3,15 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SharedChannelInfo** | [**ChangeSharedChannelModel**](ChangeSharedChannelModel.md) |  | [optional] 
-**SharedChannelName** | [**SharedChannelName**](SharedChannelName.md) |  | [optional] 
-**SharedChannelDescription** | [**SharedChannelDescription**](SharedChannelDescription.md) |  | [optional] 
-**Owners** | [**SharedChannelChangedMembership**](SharedChannelChangedMembership.md) |  | [optional] 
-**Members** | [**SharedChannelChangedMembership**](SharedChannelChangedMembership.md) |  | [optional] 
-**SiteStorage** | [**ChangeSiteStorageSettingModel**](ChangeSiteStorageSettingModel.md) |  | [optional] 
+**SharedChannelInfo** | [**ChangeSharedChannelGallerySharedChannelInfo**](ChangeSharedChannelGallerySharedChannelInfo.md) |  | [optional] 
+**SharedChannelName** | [**ChangeSharedChannelGallerySharedChannelName**](ChangeSharedChannelGallerySharedChannelName.md) |  | [optional] 
+**SharedChannelDescription** | [**ChangeSharedChannelGallerySharedChannelDescription**](ChangeSharedChannelGallerySharedChannelDescription.md) |  | [optional] 
+**Owners** | [**ChangeSharedChannelGalleryOwners**](ChangeSharedChannelGalleryOwners.md) |  | [optional] 
+**Members** | [**ChangeSharedChannelGalleryOwners**](ChangeSharedChannelGalleryOwners.md) |  | [optional] 
+**SiteStorage** | [**ChangeSharedChannelGallerySiteStorage**](ChangeSharedChannelGallerySiteStorage.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -25,7 +27,9 @@ $ChangeSharedChannelGallery = New-Cloud.Governance.ClientChangeSharedChannelGall
  -SiteStorage null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

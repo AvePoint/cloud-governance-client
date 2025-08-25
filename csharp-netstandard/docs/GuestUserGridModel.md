@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Guid** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
+**UserPrincipalName** | **string** |  | [optional] 
 **Mail** | **string** |  | [optional] 
 **PrimaryContact** | **string** |  | [optional] 
 **PrimaryContactEmail** | **string** |  | [optional] 
@@ -41,6 +42,12 @@ Name | Type | Description | Notes
 **Phase** | **AutoImportPhase** |  | [optional] 
 **ClaimStatus** | **ClaimStatus** |  | [optional] 
 **OngoingTaskCount** | **int** |  | [optional] [default to 0]
+**Manager** | **string** |  | [optional] 
+**JobTitle** | **string** |  | [optional] 
+**Department** | **string** |  | [optional] 
+**CompanyName** | **string** |  | [optional] 
+**ManagerDisplayName** | **string** |  | [optional] 
+**ManagerEmail** | **string** |  | [optional] 
 **Metadata** | [**List&lt;ReportMetadata&gt;**](ReportMetadata.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

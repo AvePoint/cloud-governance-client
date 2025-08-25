@@ -8,18 +8,19 @@ Name | Type | Description | Notes
 **DisplayName** | **String** |  | [optional] 
 **BooleanValue** | **Boolean** | Value of Yes/No metadata. | [optional] [default to $false]
 **SingleLineOrMultipleLineValue** | **String** | Value of Single/Multiple line of text metadata. | [optional] 
-**UpsOrAzureAdValue** | [**LookupValue**](LookupValue.md) | Value of User Profile or Azure AD metadata. | [optional] 
-**TermsValue** | [**TermsValue**](TermsValue.md) | Value of Managed metadata metadata. | [optional] 
+**UpsOrAzureAdValue** | [**RequestMetadataUpsOrAzureAdValue**](RequestMetadataUpsOrAzureAdValue.md) |  | [optional] 
+**TermsValue** | [**RequestMetadataTermsValue**](RequestMetadataTermsValue.md) |  | [optional] 
 **UserValue** | [**ApiUser[]**](ApiUser.md) | Value of Person or Group metadata. | [optional] 
-**LinkValue** | [**LinkValue**](LinkValue.md) | Value of Hyperlink metadata. | [optional] 
+**LinkValue** | [**RequestMetadataLinkValue**](RequestMetadataLinkValue.md) |  | [optional] 
 **ChoiceValue** | **String[]** | Value of Choice metadata. | [optional] 
-**LookupListValue** | [**LookupListValue**](LookupListValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
+**LookupListValue** | [**RequestMetadataLookupListValue**](RequestMetadataLookupListValue.md) |  | [optional] 
 **Type** | [**MetadataFieldType**](MetadataFieldType.md) | Type of metadata. | [optional] [readonly] 
 **ValueString** | **String** | Display value of metadata. | [optional] [readonly] 
-**ValueDisplayString** | **String** | Display value of metadata for show in the page.             The customer maybe depend the valueString to do something, so we need a new property for show in the page             GAO-43948 | [optional] 
-**Value** | **String** | Value of metadata, you can set this value for all metadata types when calling API             Examples:             Yes/No metadata: &quot;&quot;True&quot;&quot;             User Profile or Azure AD metadata: &quot;&quot;user1@example.com&quot;&quot;             Managed metadata metadata: &quot;&quot;term1;term2&quot;&quot;             Person or Group metadata: &quot;&quot;user1@example.com;user2@example.com&quot;&quot;             Hyperlink metadata: &quot;&quot;linktitle;linkaddress&quot;&quot;             Lookup to SharePoint library/list metadata: &quot;&quot;value&quot;&quot;             Choice metadata: &quot;&quot;choice1;choice2&quot;&quot; | [optional] 
+**ValueDisplayString** | **String** | Display value of metadata for show in the page.              The customer maybe depend the valueString to do something, so we need a new property for show in the page              GAO-43948 | [optional] 
+**Value** | **String** | Value of metadata, you can set this value for all metadata types when calling API              Examples:              Yes/No metadata: &quot;&quot;True&quot;&quot;              User Profile or Azure AD metadata: &quot;&quot;user1@example.com&quot;&quot;              Managed metadata metadata: &quot;&quot;term1;term2&quot;&quot;              Person or Group metadata: &quot;&quot;user1@example.com;user2@example.com&quot;&quot;              Hyperlink metadata: &quot;&quot;linktitle;linkaddress&quot;&quot;              Lookup to SharePoint library/list metadata: &quot;&quot;value&quot;&quot;              Choice metadata: &quot;&quot;choice1;choice2&quot;&quot; | [optional] 
 **Action** | [**MetadataActionType**](MetadataActionType.md) | Action of metadata, used in change workspace metadata service. | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** | Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process. | [optional] [default to $false]
+**AllowBusinessUserToInputSingleValue** | **Boolean** | Whether the metadata is allowed to input single value | [optional] [default to $false]
 **ActivityId** | **String** |  | [optional] 
 
 ## Examples
@@ -43,6 +44,7 @@ $RequestMetadata = New-Cloud.Governance.ClientRequestMetadata  -Id null `
  -Value null `
  -Action null `
  -AllowReferenceAsRoleInApprovalProcess null `
+ -AllowBusinessUserToInputSingleValue null `
  -ActivityId null
 ```
 

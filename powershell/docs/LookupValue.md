@@ -6,9 +6,10 @@ Name | Type | Description | Notes
 **Tenant** | **String** | Id of Office365 tenant. | [optional] [readonly] 
 **Property** | **String** | Name of user property. | [optional] [readonly] 
 **ExtensionAttribute** | **String** | Extension attribute of user property. | [optional] [readonly] 
-**TargetUser** | [**ApiUser**](ApiUser.md) | Lookup user | [optional] 
+**TargetUser** | [**LookupValueTargetUser**](LookupValueTargetUser.md) |  | [optional] 
 **UserPropertyValue** | **String** | Property value of lookup user | [optional] 
 **UserPropertyDisplayValue** | **String** | Property display value of lookup user | [optional] 
+**RoleValue** | **String** | Role value | [optional] 
 
 ## Examples
 
@@ -19,7 +20,8 @@ $LookupValue = New-Cloud.Governance.ClientLookupValue  -Tenant null `
  -ExtensionAttribute null `
  -TargetUser null `
  -UserPropertyValue null `
- -UserPropertyDisplayValue null
+ -UserPropertyDisplayValue null `
+ -RoleValue null
 ```
 
 - Convert the resource to JSON

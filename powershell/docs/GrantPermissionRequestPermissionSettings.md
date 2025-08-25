@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IsBreakInheritance** | **Boolean** |  | [optional] [default to $false]
 **IsGrantPermissionDirectly** | **Boolean** |  | [optional] [default to $false]
-**SelectedSPGroup** | [**GrantPermissionGroup**](GrantPermissionGroup.md) |  | [optional] 
+**SelectedSPGroup** | [**GrantPermissionRequestPermissionSettingsSelectedSPGroup**](GrantPermissionRequestPermissionSettingsSelectedSPGroup.md) |  | [optional] 
 **SelectedPermissionLevels** | [**IntModel[]**](IntModel.md) |  | [optional] 
 
 ## Examples

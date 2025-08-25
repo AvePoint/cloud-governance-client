@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CurrentUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**NewUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**AlternativeUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**CurrentUser** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**NewUser** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**AlternativeUser** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 
 ## Examples
 

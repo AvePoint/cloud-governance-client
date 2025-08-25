@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ScopeType** | [**ScopeType**](ScopeType.md) |  | [optional] 
 **UseTitleInUrl** | **Boolean** |  | [optional] [default to $false]
 **EnableUrlValidation** | **Boolean** |  | [optional] [default to $false]
-**TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
+**TextValidationRule** | [**CreateListUrlSettingsTextValidationRule**](CreateListUrlSettingsTextValidationRule.md) |  | [optional] 
 **SelectedNodes** | [**SPNode[]**](SPNode.md) |  | [optional] 
 **AutoPopulateUrlWithSPContext** | **Boolean** |  | [optional] [default to $false]
 **AutoPopulateUrlWithSPContextAssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 

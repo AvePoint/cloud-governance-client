@@ -39,8 +39,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)
-$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, content, showInReportType, lastModifiedTime, createdSource (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, content, showInReportType, lastModifiedTime, createdSource (optional)
 $Search = "MySearch" # String | Search for name (optional)
 $Top = 56 # Int32 |  Define the number of records you want to return, max value is 2000, default value is 200 (optional)
 $Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
@@ -59,8 +59,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, showInReportType, lastModifiedTime | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, content, showInReportType, lastModifiedTime, createdSource | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; createdBy, createdByDisplayName, id, name, description, fieldType, metadataValue, content, showInReportType, lastModifiedTime, createdSource | [optional] 
  **Search** | **String**| Search for name | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 2000, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 <a name="Get-SingleMetadataById"></a>
 # **Get-SingleMetadataById**
 > CustomMetadata Get-SingleMetadataById<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 Get metadata by id
 
@@ -107,7 +107,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 
 # Get metadata by id
 try {
@@ -122,7 +122,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

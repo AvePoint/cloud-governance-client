@@ -14,6 +14,10 @@ Name | Type | Description | Notes
 **GroupOwner** | [**ApiUser**](ApiUser.md) | Group owner information | [optional] 
 **GroupOwnerType** | **GroupOwnerType** | Group owner type | [optional] 
 **BuildInGroupType** | **SharePointBuildInGroupType** | Built-in group type | [optional] 
+**SpGroupViewType** | **SPGroupViewOptionType** |  | [optional] 
+**SpGroupEditType** | **SPGroupEditOptionType** |  | [optional] 
+**SpGroupEditOptionAssignBy** | **AssignBy** |  | [optional] 
+**SpGroupViewOptionAssignBy** | **AssignBy** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

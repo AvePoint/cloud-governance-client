@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NewValue** | [**SharingAdvanceSettingModel**](SharingAdvanceSettingModel.md) |  | [optional] 
-**OriginalValue** | [**SharingAdvanceSettingModel**](SharingAdvanceSettingModel.md) |  | [optional] 
+**NewValue** | [**SharingAdvanceSettingModelChangedValueRequestModelNewValue**](SharingAdvanceSettingModelChangedValueRequestModelNewValue.md) |  | [optional] 
+**OriginalValue** | [**SharingAdvanceSettingModelChangedValueRequestModelNewValue**](SharingAdvanceSettingModelChangedValueRequestModelNewValue.md) |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

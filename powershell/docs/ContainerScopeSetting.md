@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Container** | [**ContainerInfo**](ContainerInfo.md) |  | [optional] 
+**Container** | [**ContainerScopeSettingContainer**](ContainerScopeSettingContainer.md) |  | [optional] 
 **Type** | [**ContainerScopeType**](ContainerScopeType.md) |  | [optional] 
 **Nodes** | [**RemoteNodeInfo[]**](RemoteNodeInfo.md) |  | [optional] 
 

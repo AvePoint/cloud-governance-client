@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **GroupName** | **String** |  | [optional] 
 **Email** | **String** |  | [optional] 
 **SharedPointSiteUrl** | **String** |  | [optional] 
+**ServiceId** | **String** |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples
@@ -19,6 +20,7 @@ $ChangeTeamSettingModel = New-Cloud.Governance.ClientChangeTeamSettingModel  -Gr
  -GroupName null `
  -Email null `
  -SharedPointSiteUrl null `
+ -ServiceId null `
  -ActivityId null
 ```
 

@@ -3,41 +3,44 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdministrativeUnit** | [**AdministrativeUnit**](AdministrativeUnit.md) |  | [optional] 
+**AdministrativeUnit** | [**CreateGroupGalleryAdministrativeUnit**](CreateGroupGalleryAdministrativeUnit.md) |  | [optional] 
 **ObjectId** | **String** |  | [optional] 
-**ContentTypes** | [**ContentTypes**](ContentTypes.md) |  | [optional] 
-**NameAndDescription** | [**TeamNameDescription**](TeamNameDescription.md) |  | [optional] 
-**Contact** | [**Contact**](Contact.md) | Activity model for primary contact,secondary contact | [optional] 
-**GroupId** | [**ConstructGroupId**](ConstructGroupId.md) |  | [optional] 
-**HubSite** | [**HubSiteSetting**](HubSiteSetting.md) |  | [optional] 
-**MultiGeoLocationSetting** | [**MultiGeoLocationSetting**](MultiGeoLocationSetting.md) |  | [optional] 
-**SubscribeMembers** | [**SubscribeMembers**](SubscribeMembers.md) |  | [optional] 
-**OutsideSenders** | [**OutsideSenders**](OutsideSenders.md) |  | [optional] 
-**GroupSendAs** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**GroupSendOnBehalf** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
+**ContentTypes** | [**CreateCommunityGalleryContentTypes**](CreateCommunityGalleryContentTypes.md) |  | [optional] 
+**NameAndDescription** | [**CreateCommunityGalleryNameAndDescription**](CreateCommunityGalleryNameAndDescription.md) |  | [optional] 
+**Contact** | [**CreateCommunityGalleryContact**](CreateCommunityGalleryContact.md) |  | [optional] 
+**GroupId** | [**CreateGroupGalleryGroupId**](CreateGroupGalleryGroupId.md) |  | [optional] 
+**HubSite** | [**CreateCommunityGalleryHubSite**](CreateCommunityGalleryHubSite.md) |  | [optional] 
+**MultiGeoLocationSetting** | [**CreateEquipmentMailboxGalleryMultiGeoLocationSetting**](CreateEquipmentMailboxGalleryMultiGeoLocationSetting.md) |  | [optional] 
+**SubscribeMembers** | [**CreateGroupGallerySubscribeMembers**](CreateGroupGallerySubscribeMembers.md) |  | [optional] 
+**OutsideSenders** | [**CreateGroupGalleryOutsideSenders**](CreateGroupGalleryOutsideSenders.md) |  | [optional] 
+**GroupSendAs** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**GroupSendOnBehalf** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**GroupPicture** | [**CreateGroupGalleryGroupPicture**](CreateGroupGalleryGroupPicture.md) |  | [optional] 
 **OfficeTenantId** | **String** |  | [optional] 
-**Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
-**Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
-**Privacy** | [**Privacy**](Privacy.md) |  | [optional] 
-**OutlookExperience** | [**OutlookExperience**](OutlookExperience.md) |  | [optional] 
-**GlobalAddressList** | [**GlobalAddressList**](GlobalAddressList.md) |  | [optional] 
-**ClassificationAndSensitivityLabel** | [**TeamClassificationAndSensitivityLabel**](TeamClassificationAndSensitivityLabel.md) |  | [optional] 
-**GovernancePanel** | [**GovernancePanel**](GovernancePanel.md) |  | [optional] 
-**ElectionProfile** | [**TeamElectionProfile**](TeamElectionProfile.md) |  | [optional] 
-**ExternalSharingSettingProfile** | [**ExternalSharingProfile**](ExternalSharingProfile.md) |  | [optional] 
-**QuotaSettingProfile** | [**QuotaProfile**](QuotaProfile.md) |  | [optional] 
-**RenewalProfile** | [**RenewalProfile**](RenewalProfile.md) |  | [optional] 
-**Locale** | [**TeamLocale**](TeamLocale.md) |  | [optional] 
-**TimeZone** | [**TeamTimeZone**](TeamTimeZone.md) |  | [optional] 
-**ShowLinksInRequestDetailsPage** | [**ShowLinksInRequestDetailsPage**](ShowLinksInRequestDetailsPage.md) |  | [optional] 
-**SiteDesign** | [**SiteDesign**](SiteDesign.md) |  | [optional] 
-**WelcomeEmail** | [**WelcomeEmail**](WelcomeEmail.md) |  | [optional] 
-**DynamicMembershipRules** | [**DynamicMembership**](DynamicMembership.md) |  | [optional] 
-**Tenant** | [**OfficeTenant**](OfficeTenant.md) |  | [optional] 
+**Owners** | [**CreateCommunityGalleryOwners**](CreateCommunityGalleryOwners.md) |  | [optional] 
+**Members** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**Privacy** | [**CreateCommunityGalleryPrivacy**](CreateCommunityGalleryPrivacy.md) |  | [optional] 
+**OutlookExperience** | [**ChangeTeamSettingGalleryRequestModelChangeTeamOutlookExperience**](ChangeTeamSettingGalleryRequestModelChangeTeamOutlookExperience.md) |  | [optional] 
+**GlobalAddressList** | [**ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList**](ChangeTeamSettingGalleryRequestModelChangeGlobalAddressList.md) |  | [optional] 
+**ClassificationAndSensitivityLabel** | [**CreateCommunityGalleryClassificationAndSensitivityLabel**](CreateCommunityGalleryClassificationAndSensitivityLabel.md) |  | [optional] 
+**GovernancePanel** | [**CreateCommunityGalleryGovernancePanel**](CreateCommunityGalleryGovernancePanel.md) |  | [optional] 
+**ElectionProfile** | [**CreateCommunityGalleryElectionProfile**](CreateCommunityGalleryElectionProfile.md) |  | [optional] 
+**ExternalSharingSettingProfile** | [**CreateCommunityGalleryExternalSharingSettingProfile**](CreateCommunityGalleryExternalSharingSettingProfile.md) |  | [optional] 
+**QuotaSettingProfile** | [**CreateCommunityGalleryQuotaSettingProfile**](CreateCommunityGalleryQuotaSettingProfile.md) |  | [optional] 
+**RenewalProfile** | [**CreateCommunityGalleryRenewalProfile**](CreateCommunityGalleryRenewalProfile.md) |  | [optional] 
+**Locale** | [**CreateCommunityGalleryLocale**](CreateCommunityGalleryLocale.md) |  | [optional] 
+**TimeZone** | [**CreateCommunityGalleryTimeZone**](CreateCommunityGalleryTimeZone.md) |  | [optional] 
+**ShowLinksInRequestDetailsPage** | [**CreateCommunityGalleryShowLinksInRequestDetailsPage**](CreateCommunityGalleryShowLinksInRequestDetailsPage.md) |  | [optional] 
+**SiteDesign** | [**CreateCommunityGallerySiteDesign**](CreateCommunityGallerySiteDesign.md) |  | [optional] 
+**WelcomeEmail** | [**CreateCommunityGalleryWelcomeEmail**](CreateCommunityGalleryWelcomeEmail.md) |  | [optional] 
+**DynamicMembershipRules** | [**CreateCommunityGalleryDynamicMembershipRules**](CreateCommunityGalleryDynamicMembershipRules.md) |  | [optional] 
+**Tenant** | [**CreateCommunityGalleryTenant**](CreateCommunityGalleryTenant.md) |  | [optional] 
 **TeamEmail** | **String** |  | [optional] [readonly] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -55,6 +58,7 @@ $CreateGroupGallery = New-Cloud.Governance.ClientCreateGroupGallery  -Administra
  -OutsideSenders null `
  -GroupSendAs null `
  -GroupSendOnBehalf null `
+ -GroupPicture null `
  -OfficeTenantId null `
  -Owners null `
  -Members null `
@@ -77,7 +81,9 @@ $CreateGroupGallery = New-Cloud.Governance.ClientCreateGroupGallery  -Administra
  -TeamEmail null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

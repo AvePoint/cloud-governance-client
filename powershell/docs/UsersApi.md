@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SharingOptions] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrlOrTenantId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupEmail] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsGetTenantBySiteUrl] <System.Nullable[Boolean]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IncludeBlockedUser] <System.Nullable[Boolean]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsNeedEveryone] <System.Nullable[Boolean]><br>
@@ -301,7 +301,7 @@ $UserSource = "0" # UserSource |
 $SharingOptions = "0" # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "MySiteUrlOrTenantId" # String |  (optional) (default to "")
 $GroupEmail = "MyGroupEmail" # String |  (optional) (default to "")
-$PeopleFilterProfileId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$PeopleFilterProfileId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsGetTenantBySiteUrl = $true # Boolean |  (optional) (default to $true)
 $IncludeBlockedUser = $true # Boolean |  (optional) (default to $false)
 $IsNeedEveryone = $true # Boolean |  (optional) (default to $false)
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
  **SharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
  **SiteUrlOrTenantId** | **String**|  | [optional] [default to &quot;&quot;]
  **GroupEmail** | **String**|  | [optional] [default to &quot;&quot;]
- **PeopleFilterProfileId** | [**String**](String.md)|  | [optional] 
+ **PeopleFilterProfileId** | **String**|  | [optional] 
  **IsGetTenantBySiteUrl** | **Boolean**|  | [optional] [default to $true]
  **IncludeBlockedUser** | **Boolean**|  | [optional] [default to $false]
  **IsNeedEveryone** | **Boolean**|  | [optional] [default to $false]
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SharingOptions] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-SiteUrlOrTenantId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GroupEmail] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PeopleFilterProfileId] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsGetTenantBySiteUrl] <System.Nullable[Boolean]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IncludeBlockedUser] <System.Nullable[Boolean]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsNeedEveryone] <System.Nullable[Boolean]><br>
@@ -389,7 +389,7 @@ $UserSource = "0" # UserSource |
 $SharingOptions = "0" # ExternalSharingOptions | 
 $SiteUrlOrTenantId = "MySiteUrlOrTenantId" # String |  (optional) (default to "")
 $GroupEmail = "MyGroupEmail" # String |  (optional) (default to "")
-$PeopleFilterProfileId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
+$PeopleFilterProfileId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
 $IsGetTenantBySiteUrl = $true # Boolean |  (optional) (default to $true)
 $IncludeBlockedUser = $true # Boolean |  (optional) (default to $false)
 $IsNeedEveryone = $true # Boolean |  (optional) (default to $false)
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
  **SharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md)|  | 
  **SiteUrlOrTenantId** | **String**|  | [optional] [default to &quot;&quot;]
  **GroupEmail** | **String**|  | [optional] [default to &quot;&quot;]
- **PeopleFilterProfileId** | [**String**](String.md)|  | [optional] 
+ **PeopleFilterProfileId** | **String**|  | [optional] 
  **IsGetTenantBySiteUrl** | **Boolean**|  | [optional] [default to $true]
  **IncludeBlockedUser** | **Boolean**|  | [optional] [default to $false]
  **IsNeedEveryone** | **Boolean**|  | [optional] [default to $false]

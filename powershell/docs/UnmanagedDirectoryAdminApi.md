@@ -406,7 +406,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $ManualImportSharedMailboxJobModel = $ImportObjectType = New-ImportObjectType 
-$ManualImportSharedMailboxJobModel = New-ManualImportSharedMailboxJobModel -ObjectType $ImportObjectType -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportSharedMailboxJobModel |  (optional)
+
+$ImportMetadataModel = New-ImportMetadataModel -Name "MyName" -Value "MyValue"
+$ImportSharedMailboxModel = New-ImportSharedMailboxModel -ObjectType $ImportObjectType -SharedMailboxName "MySharedMailboxName" -EmailAddress "MyEmailAddress" -ContactElectionProfile "MyContactElectionProfile" -RenewalProfile "MyRenewalProfile" -PrimaryContact "MyPrimaryContact" -SecondaryContact "MySecondaryContact" -Metadatas $ImportMetadataModel
+
+$ManualImportSharedMailboxJobModel = New-ManualImportSharedMailboxJobModel -ObjectType $ImportObjectType -Workspaces $ImportSharedMailboxModel -Name "MyName" -Description "MyDescription" -FileName "MyFileName" # ManualImportSharedMailboxJobModel |  (optional)
 
 # manually import existing shared mailbox
 try {

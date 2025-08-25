@@ -14,9 +14,12 @@ Name | Type | Description | Notes
 **Mentions** | [**ChangeTeamMentions**](ChangeTeamMentions.md) |  | [optional] 
 **ChangeTeamMemberPermission** | [**ChangeTeamMemberPermission**](ChangeTeamMemberPermission.md) |  | [optional] 
 **GuestPermissions** | [**GuestPermissions**](GuestPermissions.md) |  | [optional] 
+**ChangeTeamPicture** | [**ChangeGroupTeamPicture**](ChangeGroupTeamPicture.md) |  | [optional] 
 **GalleryType** | **string** |  | [optional] 
 **GalleryInternalName** | **string** |  | [optional] 
 **GalleryMetadata** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **bool?** |  | [optional] [default to false]
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

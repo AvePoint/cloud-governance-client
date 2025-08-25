@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** |  | [optional] 
-**AssignTo** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**AssignTo** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **ModifiedBy** | **String** |  | [optional] 
 **ModifiedByDisplayName** | **String** |  | [optional] 
 **ModifiedDate** | **System.DateTime** |  | [optional] 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Status** | **Int32** |  | [optional] [readonly] [default to 0]
 **StatusDescription** | **String** |  | [optional] 
 **ProgressStatus** | [**ApiRequestProgressStatus**](ApiRequestProgressStatus.md) |  | [optional] [readonly] 
-**ContactChangeSettings** | [**ChangeWebContactByUrlSetting**](ChangeWebContactByUrlSetting.md) |  | [optional] 
+**ContactChangeSettings** | [**ChangeWebContactSubRequestContactChangeSettings**](ChangeWebContactSubRequestContactChangeSettings.md) |  | [optional] 
 
 ## Examples
 

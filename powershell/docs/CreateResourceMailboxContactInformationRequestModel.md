@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Street** | **String** |  | [optional] 
 **City** | **String** |  | [optional] 
 **Zip** | **String** |  | [optional] 
-**Country** | [**StringModel**](StringModel.md) |  | [optional] 
+**Country** | [**ChangeGroupSettingCheckResultSensitivity**](ChangeGroupSettingCheckResultSensitivity.md) |  | [optional] 
 **Notes** | **String** |  | [optional] 
 **State** | **String** |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 

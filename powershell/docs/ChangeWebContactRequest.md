@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChangedMethod** | [**ChangeContactMethod**](ChangeContactMethod.md) |  | [optional] 
-**ChangedByUserSetting** | [**ChangeContactByUserSetting**](ChangeContactByUserSetting.md) |  | [optional] 
+**ChangedByUserSetting** | [**ChangeSiteContactRequestChangeByUserSetting**](ChangeSiteContactRequestChangeByUserSetting.md) |  | [optional] 
 **ChangedByUrlItems** | [**ChangeWebContactByUrlSetting[]**](ChangeWebContactByUrlSetting.md) |  | [optional] 
 **SubRequests** | [**ChangeWebContactSubRequest[]**](ChangeWebContactSubRequest.md) |  | [optional] [readonly] 
 **Id** | **String** | Id of request. | [optional] 
@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -35,6 +36,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -64,6 +67,7 @@ $ChangeWebContactRequest = New-Cloud.Governance.ClientChangeWebContactRequest  -
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -71,7 +75,9 @@ $ChangeWebContactRequest = New-Cloud.Governance.ClientChangeWebContactRequest  -
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

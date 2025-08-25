@@ -6,15 +6,18 @@ Name | Type | Description | Notes
 **IsLimitGroup** | **Boolean** |  | [optional] [default to $false]
 **PeoplePickerFilterProfileId** | **String** |  | [optional] 
 **ScopeType** | [**GroupScopeType**](GroupScopeType.md) |  | [optional] 
-**Office365Tenant** | [**Office365Tenant**](Office365Tenant.md) | This class is used to deserialize the activity tree node in service ActivityGalleryFlow | [optional] 
+**Office365Tenant** | [**LifecycleScopeSettingOffice365Tenant**](LifecycleScopeSettingOffice365Tenant.md) |  | [optional] 
 **TenantId** | **String** |  | [optional] 
 **Containers** | [**ContainerScopeSetting[]**](ContainerScopeSetting.md) |  | [optional] 
-**Gallery** | [**GallerySetting**](GallerySetting.md) |  | [optional] 
+**Gallery** | [**LifecycleScopeSettingGallery**](LifecycleScopeSettingGallery.md) |  | [optional] 
 **ActivityType** | **String** |  | [optional] 
 **Type** | **String** |  | [optional] 
+**GalleryType** | **String** |  | [optional] 
+**GalleryTitle** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **RunAfter** | **String** |  | [optional] 
+**DisplayName** | **String** |  | [optional] 
 
 ## Examples
 
@@ -29,9 +32,12 @@ $LifecycleScopeSetting = New-Cloud.Governance.ClientLifecycleScopeSetting  -IsLi
  -Gallery null `
  -ActivityType null `
  -Type null `
+ -GalleryType null `
+ -GalleryTitle null `
  -Title null `
  -Description null `
- -RunAfter null
+ -RunAfter null `
+ -DisplayName null
 ```
 
 - Convert the resource to JSON

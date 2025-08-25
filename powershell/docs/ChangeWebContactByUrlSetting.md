@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **WebId** | **String** |  | [optional] 
 **WebUrl** | **String** |  | [optional] 
 **WebTitle** | **String** | Web title | [optional] 
-**PrimaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
-**SecondaryContact** | [**ApiUserChangedProperty**](ApiUserChangedProperty.md) |  | [optional] 
+**PrimaryContact** | [**ChangeWebContactByUrlSettingPrimaryContact**](ChangeWebContactByUrlSettingPrimaryContact.md) |  | [optional] 
+**SecondaryContact** | [**ChangeWebContactByUrlSettingPrimaryContact**](ChangeWebContactByUrlSettingPrimaryContact.md) |  | [optional] 
 
 ## Examples
 

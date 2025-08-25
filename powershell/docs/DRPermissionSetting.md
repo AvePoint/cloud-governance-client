@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UserPermissions** | [**RequestUserWithPermissions[]**](RequestUserWithPermissions.md) |  | [optional] 
 **GroupPermissions** | [**RequestGroupWithPermissions[]**](RequestGroupWithPermissions.md) |  | [optional] 
+**EnableSendWelcomeEmail** | **Boolean** |  | [optional] [default to $false]
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 ```powershell
 $DRPermissionSetting = New-Cloud.Governance.ClientDRPermissionSetting  -UserPermissions null `
  -GroupPermissions null `
+ -EnableSendWelcomeEmail null `
  -ActivityId null
 ```
 

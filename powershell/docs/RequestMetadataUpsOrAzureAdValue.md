@@ -1,0 +1,33 @@
+# RequestMetadataUpsOrAzureAdValue
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Tenant** | **String** | Id of Office365 tenant. | [optional] [readonly] 
+**Property** | **String** | Name of user property. | [optional] [readonly] 
+**ExtensionAttribute** | **String** | Extension attribute of user property. | [optional] [readonly] 
+**TargetUser** | [**LookupValueTargetUser**](LookupValueTargetUser.md) |  | [optional] 
+**UserPropertyValue** | **String** | Property value of lookup user | [optional] 
+**UserPropertyDisplayValue** | **String** | Property display value of lookup user | [optional] 
+**RoleValue** | **String** | Role value | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$RequestMetadataUpsOrAzureAdValue = New-Cloud.Governance.ClientRequestMetadataUpsOrAzureAdValue  -Tenant null `
+ -Property null `
+ -ExtensionAttribute null `
+ -TargetUser null `
+ -UserPropertyValue null `
+ -UserPropertyDisplayValue null `
+ -RoleValue null
+```
+
+- Convert the resource to JSON
+```powershell
+$RequestMetadataUpsOrAzureAdValue | ConvertTo-JSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

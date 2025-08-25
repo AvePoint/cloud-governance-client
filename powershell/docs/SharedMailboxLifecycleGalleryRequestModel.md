@@ -3,11 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SharedMailboxInfo** | [**ChangeSharedMailboxModel**](ChangeSharedMailboxModel.md) |  | [optional] 
-**LifecycleActions** | [**LifecycleActions**](LifecycleActions.md) |  | [optional] 
+**SharedMailboxInfo** | [**ChangeSharedMailboxPermissionGalleryChangedSharedMailboxInfo**](ChangeSharedMailboxPermissionGalleryChangedSharedMailboxInfo.md) |  | [optional] 
+**LifecycleActions** | [**ExchangeResourceLifecycleGalleryLifecycleActions**](ExchangeResourceLifecycleGalleryLifecycleActions.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -17,7 +19,9 @@ $SharedMailboxLifecycleGalleryRequestModel = New-Cloud.Governance.ClientSharedMa
  -LifecycleActions null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

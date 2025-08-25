@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **FarmID** | **String** |  | [optional] 
 **ParentID** | **String** |  | [optional] 
 **Extension** | [**TreeNodeExtension**](TreeNodeExtension.md) |  | [optional] 
-**Parent** | [**TreeNode**](TreeNode.md) |  | [optional] 
+**Parent** | [**TreeNodeParent**](TreeNodeParent.md) |  | [optional] 
 **Type** | [**TreeNodeType**](TreeNodeType.md) |  | [optional] 
 **SpObjectID** | **String** |  | [optional] 
 **NetworkId** | **String** |  | [optional] 

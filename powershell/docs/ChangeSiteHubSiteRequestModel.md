@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Method** | [**ChangeHubSiteMethod**](ChangeHubSiteMethod.md) |  | [optional] 
-**ChangeHubSite** | [**ChangeHubSiteContentModelChangedValueRequestModel**](ChangeHubSiteContentModelChangedValueRequestModel.md) |  | [optional] 
+**ChangeHubSite** | [**ChangeSiteHubSiteRequestModelChangeHubSite**](ChangeSiteHubSiteRequestModelChangeHubSite.md) |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

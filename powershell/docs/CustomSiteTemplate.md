@@ -5,13 +5,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TemplateStoreUrl** | **String** |  | [optional] 
 **TemplateName** | **String** |  | [optional] 
+**ClearSolutionGallery** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
 - Prepare the resource
 ```powershell
 $CustomSiteTemplate = New-Cloud.Governance.ClientCustomSiteTemplate  -TemplateStoreUrl null `
- -TemplateName null
+ -TemplateName null `
+ -ClearSolutionGallery null
 ```
 
 - Convert the resource to JSON

@@ -3,13 +3,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**PrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**SecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **PrimaryContactNotifiedEmail** | **String** |  | [optional] 
 **SecondaryContactNotifiedEmail** | **String** |  | [optional] 
+**IsRemoveSecondaryContact** | **Boolean** |  | [optional] [default to $false]
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
 **IsSelectAllWorkspace** | **Boolean** |  | [optional] [default to $false]
 **Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
+**IsConfirmed** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -19,9 +21,11 @@ $SpecifyContactParameter = New-Cloud.Governance.ClientSpecifyContactParameter  -
  -SecondaryContact null `
  -PrimaryContactNotifiedEmail null `
  -SecondaryContactNotifiedEmail null `
+ -IsRemoveSecondaryContact null `
  -Workspace null `
  -IsSelectAllWorkspace null `
- -Type null
+ -Type null `
+ -IsConfirmed null
 ```
 
 - Convert the resource to JSON

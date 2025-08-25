@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **UsageLocationDisplayName** | **String** |  | [optional] 
 **JobTitle** | **String** |  | [optional] 
 **JobDepartment** | **String** |  | [optional] 
-**Manager** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**Manager** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **CompanyName** | **String** |  | [optional] 
 
 ## Examples

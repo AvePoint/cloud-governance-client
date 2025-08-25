@@ -42,6 +42,7 @@ Method | HTTP request | Description
 [**GetDynamicRequestChangeSiteProfileGallery**](RequestsApi.md#getdynamicrequestchangesiteprofilegallery) | **GET** /requests/dynamic/{id}/gallery/changesiteprofile | 
 [**GetDynamicRequestChangeSiteSettingGallery**](RequestsApi.md#getdynamicrequestchangesitesettinggallery) | **GET** /requests/dynamic/{id}/gallery/changesitesetting | 
 [**GetDynamicRequestChangeTeamSettingGallery**](RequestsApi.md#getdynamicrequestchangeteamsettinggallery) | **GET** /requests/dynamic/{id}/gallery/changeteamsetting | 
+[**GetDynamicRequestCreateCommunityGallery**](RequestsApi.md#getdynamicrequestcreatecommunitygallery) | **GET** /requests/dynamic/{id}/gallery/createCommunity | 
 [**GetDynamicRequestCreateDistributionListGallery**](RequestsApi.md#getdynamicrequestcreatedistributionlistgallery) | **GET** /requests/dynamic/{id}/gallery/createdistributionlist | 
 [**GetDynamicRequestCreateEquipmentMailboxGallery**](RequestsApi.md#getdynamicrequestcreateequipmentmailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createequipmentmailbox | 
 [**GetDynamicRequestCreateGroupGallery**](RequestsApi.md#getdynamicrequestcreategroupgallery) | **GET** /requests/dynamic/{id}/gallery/creategroups | 
@@ -72,40 +73,65 @@ Method | HTTP request | Description
 [**GetUnlockSiteRequest**](RequestsApi.md#getunlocksiterequest) | **GET** /requests/unlocksite/{id} | get unlock site request
 [**IsUrlExistsInPendingRequests**](RequestsApi.md#isurlexistsinpendingrequests) | **GET** /requests/isUrlExistInPendingRequests | check url exists in pending requests.
 [**SubmitArchiveGroupRequest**](RequestsApi.md#submitarchivegrouprequest) | **POST** /requests/archivegroup | submit archive group group request
+[**SubmitArchiveGroupRequestV2**](RequestsApi.md#submitarchivegrouprequestv2) | **POST** /requests/archivegroup/v2 | submit archive group request, and return request info.
 [**SubmitArchiveSiteRequest**](RequestsApi.md#submitarchivesiterequest) | **POST** /requests/archivesite | submit archive site request
+[**SubmitArchiveSiteRequestV2**](RequestsApi.md#submitarchivesiterequestv2) | **POST** /requests/archivesite/v2 | submit archive site request, and return request info.
 [**SubmitArchiveWebRequest**](RequestsApi.md#submitarchivewebrequest) | **POST** /requests/archiveweb | submit archive web request
 [**SubmitChangeGroupPolicyRequest**](RequestsApi.md#submitchangegrouppolicyrequest) | **POST** /requests/changegrouppolicy | submit change group policy request
+[**SubmitChangeGroupPolicyRequestV2**](RequestsApi.md#submitchangegrouppolicyrequestv2) | **POST** /requests/changegrouppolicy/v2 | submit change group policy request, and return request info.
 [**SubmitChangeGroupQuotaRequest**](RequestsApi.md#submitchangegroupquotarequest) | **POST** /requests/changegroupquota | submit change group quota request
+[**SubmitChangeGroupQuotaRequestV2**](RequestsApi.md#submitchangegroupquotarequestv2) | **POST** /requests/changegroupquota/v2 | submit change group quota request, and return request info.
 [**SubmitChangeGroupSettingRequest**](RequestsApi.md#submitchangegroupsettingrequest) | **POST** /requests/changegroup | submit change group settings request
+[**SubmitChangeGroupSettingRequestV2**](RequestsApi.md#submitchangegroupsettingrequestv2) | **POST** /requests/changegroup/v2 | submit change group settings request, and return request info.
 [**SubmitChangeListSettingRequest**](RequestsApi.md#submitchangelistsettingrequest) | **POST** /requests/changelistsetting | submit change list settings request
 [**SubmitChangePermissionRequest**](RequestsApi.md#submitchangepermissionrequest) | **POST** /requests/changepermission | submit change permission request
+[**SubmitChangePermissionRequestV2**](RequestsApi.md#submitchangepermissionrequestv2) | **POST** /requests/changepermission/v2 | submit change permission request, and return request info.
 [**SubmitChangePrivateChannelRequest**](RequestsApi.md#submitchangeprivatechannelrequest) | **POST** /requests/changeprivatechannel | submit change private channel request
 [**SubmitChangeSiteContactRequest**](RequestsApi.md#submitchangesitecontactrequest) | **POST** /requests/changesite/adminorcontact | submit change site administrator or contact request
+[**SubmitChangeSiteContactRequestV2**](RequestsApi.md#submitchangesitecontactrequestv2) | **POST** /requests/changesite/v2/adminorcontact | submit change site administrator or contact request, and return request info.
 [**SubmitChangeSitePolicyRequest**](RequestsApi.md#submitchangesitepolicyrequest) | **POST** /requests/changesitepolicy | submit change site policy request
+[**SubmitChangeSitePolicyRequestV2**](RequestsApi.md#submitchangesitepolicyrequestv2) | **POST** /requests/changesitepolicy/v2 | submit change site policy request, and return request info.
 [**SubmitChangeSiteQuotaRequest**](RequestsApi.md#submitchangesitequotarequest) | **POST** /requests/changesitequota | submit change site quota request
+[**SubmitChangeSiteQuotaRequestV2**](RequestsApi.md#submitchangesitequotarequestv2) | **POST** /requests/changesitequota/v2 | submit change site quota request, and return request info.
 [**SubmitChangeSiteSettingRequest**](RequestsApi.md#submitchangesitesettingrequest) | **POST** /requests/changesite/setting | submit change site settings request
+[**SubmitChangeSiteSettingRequestV2**](RequestsApi.md#submitchangesitesettingrequestv2) | **POST** /requests/changesite/v2/setting | submit change site setting request, and return request info.
 [**SubmitChangeWebContactRequest**](RequestsApi.md#submitchangewebcontactrequest) | **POST** /requests/changewebcontact | submit change web contact request
 [**SubmitChangeWebSettingRequest**](RequestsApi.md#submitchangewebsettingrequest) | **POST** /requests/changewebsettings | submit change web settings request
 [**SubmitClonePermissionRequest**](RequestsApi.md#submitclonepermissionrequest) | **POST** /requests/clonepermission | get clone permission request
 [**SubmitContentMoveRequest**](RequestsApi.md#submitcontentmoverequest) | **POST** /requests/contentmove | submit create content move request
+[**SubmitContentMoveRequestV2**](RequestsApi.md#submitcontentmoverequestv2) | **POST** /requests/contentmove/v2 | submit create content move request, and return request info.
 [**SubmitCreateGroupRequest**](RequestsApi.md#submitcreategrouprequest) | **POST** /requests/creategroup | submit create group request
+[**SubmitCreateGroupRequestV2**](RequestsApi.md#submitcreategrouprequestv2) | **POST** /requests/creategroup/v2 | submit create group request, and return request info.
 [**SubmitCreateGuestUserRequest**](RequestsApi.md#submitcreateguestuserrequest) | **POST** /requests/createguestuser | submit create guest user request
 [**SubmitCreateListRequest**](RequestsApi.md#submitcreatelistrequest) | **POST** /requests/createlist | submit create list request
 [**SubmitCreatePrivateChannelRequest**](RequestsApi.md#submitcreateprivatechannelrequest) | **POST** /requests/createprivatechannel | submit private channel request
 [**SubmitCreateSiteRequest**](RequestsApi.md#submitcreatesiterequest) | **POST** /requests/createsite | submit create site collection request
+[**SubmitCreateSiteRequestV2**](RequestsApi.md#submitcreatesiterequestv2) | **POST** /requests/createsite/v2 | submit create site collection request, and return request info.
 [**SubmitCreateWebRequest**](RequestsApi.md#submitcreatewebrequest) | **POST** /requests/createweb | submit create web request
+[**SubmitCreateWebRequestV2**](RequestsApi.md#submitcreatewebrequestv2) | **POST** /requests/createweb/v2 | submit create web request, and return request info.
 [**SubmitCustomRequest**](RequestsApi.md#submitcustomrequest) | **POST** /requests/custom | submit custom service request
+[**SubmitCustomRequestV2**](RequestsApi.md#submitcustomrequestv2) | **POST** /requests/custom/v2 | submit custom service request, and return request info.
 [**SubmitDeleteGroupRequest**](RequestsApi.md#submitdeletegrouprequest) | **POST** /requests/deletegroup | submit delete group request
+[**SubmitDeleteGroupRequestV2**](RequestsApi.md#submitdeletegrouprequestv2) | **POST** /requests/deletegroup/v2 | submit delete group request, and return request info.
 [**SubmitDeleteSiteRequest**](RequestsApi.md#submitdeletesiterequest) | **POST** /requests/deletesite | submit delete site request
+[**SubmitDeleteSiteRequestV2**](RequestsApi.md#submitdeletesiterequestv2) | **POST** /requests/deletesite/v2 | submit delete site request, and return request info.
 [**SubmitDeleteWebRequest**](RequestsApi.md#submitdeletewebrequest) | **POST** /requests/deleteweb | submit delete web request
 [**SubmitDynamicRequest**](RequestsApi.md#submitdynamicrequest) | **POST** /requests/dynamic | submit dynamic request
+[**SubmitDynamicRequestByTemplate**](RequestsApi.md#submitdynamicrequestbytemplate) | **POST** /requests/dynamic/template | 
 [**SubmitExtendGroupRequest**](RequestsApi.md#submitextendgrouprequest) | **POST** /requests/extendgroup | submit extend group request
+[**SubmitExtendGroupRequestV2**](RequestsApi.md#submitextendgrouprequestv2) | **POST** /requests/extendgroup/v2 | submit extend group request, and return request info.
 [**SubmitExtendSiteRequest**](RequestsApi.md#submitextendsiterequest) | **POST** /requests/extendsite | submit extend site request
+[**SubmitExtendSiteRequestV2**](RequestsApi.md#submitextendsiterequestv2) | **POST** /requests/extendsite/v2 | submit extend site request, and return request info.
 [**SubmitGrantPermissionRequest**](RequestsApi.md#submitgrantpermissionrequest) | **POST** /requests/grantpermission | get submit grant permission request
+[**SubmitGrantPermissionRequestV2**](RequestsApi.md#submitgrantpermissionrequestv2) | **POST** /requests/grantpermission/v2 | submit grant permission request, and return request info.
 [**SubmitLockSiteRequest**](RequestsApi.md#submitlocksiterequest) | **POST** /requests/locksite | submit lock site request
+[**SubmitLockSiteRequestV2**](RequestsApi.md#submitlocksiterequestv2) | **POST** /requests/locksite/v2 | submit lock site request, and return request info.
 [**SubmitManagePermissionRequest**](RequestsApi.md#submitmanagepermissionrequest) | **POST** /requests/managepermission | submit manage permission request
+[**SubmitManagePermissionRequestV2**](RequestsApi.md#submitmanagepermissionrequestv2) | **POST** /requests/managepermission/v2 | submit manage permission request, and return request info.
 [**SubmitRestoreGroupRequest**](RequestsApi.md#submitrestoregrouprequest) | **POST** /requests/restoregroup | submit restore group request
+[**SubmitRestoreGroupRequestV2**](RequestsApi.md#submitrestoregrouprequestv2) | **POST** /requests/restoregroup/v2 | submit restore group request, and return request info.
 [**SubmitUnlockSiteRequest**](RequestsApi.md#submitunlocksiterequest) | **POST** /requests/unlocksite | submit unlock site request
+[**SubmitUnlockSiteRequestV2**](RequestsApi.md#submitunlocksiterequestv2) | **POST** /requests/unlocksite/v2 | submit unlock site request, and return request info.
 
 
 <a name="cancelrequest"></a>
@@ -3270,6 +3296,90 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getdynamicrequestcreatecommunitygallery"></a>
+# **GetDynamicRequestCreateCommunityGallery**
+> CreateCommunityGallery GetDynamicRequestCreateCommunityGallery (Guid id, string galleryName)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetDynamicRequestCreateCommunityGalleryExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var id = new Guid(); // Guid | 
+            var galleryName = galleryName_example;  // string | 
+
+            try
+            {
+                CreateCommunityGallery result = apiInstance.GetDynamicRequestCreateCommunityGallery(id, galleryName);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.GetDynamicRequestCreateCommunityGallery: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+ **galleryName** | **string**|  | 
+
+### Return type
+
+[**CreateCommunityGallery**](CreateCommunityGallery.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getdynamicrequestcreatedistributionlistgallery"></a>
 # **GetDynamicRequestCreateDistributionListGallery**
 > CreateDistributionListGallery GetDynamicRequestCreateDistributionListGallery (Guid id, string galleryName)
@@ -5148,8 +5258,8 @@ namespace Example
 
             var apiInstance = new RequestsApi(config);
 
-            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedByDisplayName, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy (optional) 
-            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedByDisplayName, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy (optional) 
+            var filter = filter_example;  // string | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy (optional) 
+            var orderby = orderby_example;  // string | Order by one field, supported fields:<br/> id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy (optional) 
             var search = search_example;  // string | Search for ticketNumber (optional) 
             var top = 56;  // int? |  Define the number of records you want to return, max value is 200, default value is 200 (optional) 
             var skip = skip_example;  // string |  Define the number of records you want to skip, default value is 0 (optional) 
@@ -5176,8 +5286,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedByDisplayName, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy | [optional] 
- **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedByDisplayName, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy | [optional] 
+ **filter** | **string**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy | [optional] 
+ **orderby** | **string**| Order by one field, supported fields:&lt;br/&gt; id, serviceId, serviceName, serviceType, category, categoryName, approvalStageName, participants, objectUrl, objectID, hasSubRequest, modifiedBy, modifiedDate, ticketNumber, summary, status, processStatus, modified, submitStatus, assigned, assignedLoginName, serviceAdmin, enabledCopy | [optional] 
  **search** | **string**| Search for ticketNumber | [optional] 
  **top** | **int?**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **skip** | **string**|  Define the number of records you want to skip, default value is 0 | [optional] 
@@ -5791,6 +5901,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitarchivegrouprequestv2"></a>
+# **SubmitArchiveGroupRequestV2**
+> GroupLifecycleRequest SubmitArchiveGroupRequestV2 (ArchiveGroupRequest archiveGroupRequest = null)
+
+submit archive group request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitArchiveGroupRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var archiveGroupRequest = new ArchiveGroupRequest(); // ArchiveGroupRequest |  (optional) 
+
+            try
+            {
+                // submit archive group request, and return request info.
+                GroupLifecycleRequest result = apiInstance.SubmitArchiveGroupRequestV2(archiveGroupRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitArchiveGroupRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **archiveGroupRequest** | [**ArchiveGroupRequest**](ArchiveGroupRequest.md)|  | [optional] 
+
+### Return type
+
+[**GroupLifecycleRequest**](GroupLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitarchivesiterequest"></a>
 # **SubmitArchiveSiteRequest**
 > Guid SubmitArchiveSiteRequest (ArchiveSiteRequest archiveSiteRequest = null)
@@ -5854,6 +6047,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitarchivesiterequestv2"></a>
+# **SubmitArchiveSiteRequestV2**
+> SiteLifecycleRequest SubmitArchiveSiteRequestV2 (ArchiveSiteRequest archiveSiteRequest = null)
+
+submit archive site request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitArchiveSiteRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var archiveSiteRequest = new ArchiveSiteRequest(); // ArchiveSiteRequest |  (optional) 
+
+            try
+            {
+                // submit archive site request, and return request info.
+                SiteLifecycleRequest result = apiInstance.SubmitArchiveSiteRequestV2(archiveSiteRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitArchiveSiteRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **archiveSiteRequest** | [**ArchiveSiteRequest**](ArchiveSiteRequest.md)|  | [optional] 
+
+### Return type
+
+[**SiteLifecycleRequest**](SiteLifecycleRequest.md)
 
 ### Authorization
 
@@ -6040,6 +6316,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitchangegrouppolicyrequestv2"></a>
+# **SubmitChangeGroupPolicyRequestV2**
+> GroupLifecycleRequest SubmitChangeGroupPolicyRequestV2 (ChangeGroupPolicyRequest changeGroupPolicyRequest = null)
+
+submit change group policy request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangeGroupPolicyRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changeGroupPolicyRequest = new ChangeGroupPolicyRequest(); // ChangeGroupPolicyRequest |  (optional) 
+
+            try
+            {
+                // submit change group policy request, and return request info.
+                GroupLifecycleRequest result = apiInstance.SubmitChangeGroupPolicyRequestV2(changeGroupPolicyRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangeGroupPolicyRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeGroupPolicyRequest** | [**ChangeGroupPolicyRequest**](ChangeGroupPolicyRequest.md)|  | [optional] 
+
+### Return type
+
+[**GroupLifecycleRequest**](GroupLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitchangegroupquotarequest"></a>
 # **SubmitChangeGroupQuotaRequest**
 > Guid SubmitChangeGroupQuotaRequest (ChangeGroupQuotaRequest changeGroupQuotaRequest = null)
@@ -6123,6 +6482,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitchangegroupquotarequestv2"></a>
+# **SubmitChangeGroupQuotaRequestV2**
+> GroupLifecycleRequest SubmitChangeGroupQuotaRequestV2 (ChangeGroupQuotaRequest changeGroupQuotaRequest = null)
+
+submit change group quota request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangeGroupQuotaRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changeGroupQuotaRequest = new ChangeGroupQuotaRequest(); // ChangeGroupQuotaRequest |  (optional) 
+
+            try
+            {
+                // submit change group quota request, and return request info.
+                GroupLifecycleRequest result = apiInstance.SubmitChangeGroupQuotaRequestV2(changeGroupQuotaRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangeGroupQuotaRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeGroupQuotaRequest** | [**ChangeGroupQuotaRequest**](ChangeGroupQuotaRequest.md)|  | [optional] 
+
+### Return type
+
+[**GroupLifecycleRequest**](GroupLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitchangegroupsettingrequest"></a>
 # **SubmitChangeGroupSettingRequest**
 > Guid SubmitChangeGroupSettingRequest (ChangeGroupSettingRequest changeGroupSettingRequest = null)
@@ -6186,6 +6628,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitchangegroupsettingrequestv2"></a>
+# **SubmitChangeGroupSettingRequestV2**
+> ChangeGroupSettingRequest SubmitChangeGroupSettingRequestV2 (ChangeGroupSettingRequest changeGroupSettingRequest = null)
+
+submit change group settings request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangeGroupSettingRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changeGroupSettingRequest = new ChangeGroupSettingRequest(); // ChangeGroupSettingRequest |  (optional) 
+
+            try
+            {
+                // submit change group settings request, and return request info.
+                ChangeGroupSettingRequest result = apiInstance.SubmitChangeGroupSettingRequestV2(changeGroupSettingRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangeGroupSettingRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeGroupSettingRequest** | [**ChangeGroupSettingRequest**](ChangeGroupSettingRequest.md)|  | [optional] 
+
+### Return type
+
+[**ChangeGroupSettingRequest**](ChangeGroupSettingRequest.md)
 
 ### Authorization
 
@@ -6372,6 +6897,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitchangepermissionrequestv2"></a>
+# **SubmitChangePermissionRequestV2**
+> ChangePermissionRequest SubmitChangePermissionRequestV2 (ChangePermissionRequest changePermissionRequest = null)
+
+submit change permission request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangePermissionRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changePermissionRequest = new ChangePermissionRequest(); // ChangePermissionRequest |  (optional) 
+
+            try
+            {
+                // submit change permission request, and return request info.
+                ChangePermissionRequest result = apiInstance.SubmitChangePermissionRequestV2(changePermissionRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangePermissionRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changePermissionRequest** | [**ChangePermissionRequest**](ChangePermissionRequest.md)|  | [optional] 
+
+### Return type
+
+[**ChangePermissionRequest**](ChangePermissionRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitchangeprivatechannelrequest"></a>
 # **SubmitChangePrivateChannelRequest**
 > Guid SubmitChangePrivateChannelRequest (ChangePrivateChannelRequest changePrivateChannelRequest = null)
@@ -6538,6 +7146,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitchangesitecontactrequestv2"></a>
+# **SubmitChangeSiteContactRequestV2**
+> ChangeSiteContactRequest SubmitChangeSiteContactRequestV2 (ChangeSiteContactRequest changeSiteContactRequest = null)
+
+submit change site administrator or contact request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangeSiteContactRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changeSiteContactRequest = new ChangeSiteContactRequest(); // ChangeSiteContactRequest |  (optional) 
+
+            try
+            {
+                // submit change site administrator or contact request, and return request info.
+                ChangeSiteContactRequest result = apiInstance.SubmitChangeSiteContactRequestV2(changeSiteContactRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangeSiteContactRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeSiteContactRequest** | [**ChangeSiteContactRequest**](ChangeSiteContactRequest.md)|  | [optional] 
+
+### Return type
+
+[**ChangeSiteContactRequest**](ChangeSiteContactRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitchangesitepolicyrequest"></a>
 # **SubmitChangeSitePolicyRequest**
 > Guid SubmitChangeSitePolicyRequest (ChangeSitePolicyRequest changeSitePolicyRequest = null)
@@ -6601,6 +7292,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitchangesitepolicyrequestv2"></a>
+# **SubmitChangeSitePolicyRequestV2**
+> SiteLifecycleRequest SubmitChangeSitePolicyRequestV2 (ChangeSitePolicyRequest changeSitePolicyRequest = null)
+
+submit change site policy request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangeSitePolicyRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changeSitePolicyRequest = new ChangeSitePolicyRequest(); // ChangeSitePolicyRequest |  (optional) 
+
+            try
+            {
+                // submit change site policy request, and return request info.
+                SiteLifecycleRequest result = apiInstance.SubmitChangeSitePolicyRequestV2(changeSitePolicyRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangeSitePolicyRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeSitePolicyRequest** | [**ChangeSitePolicyRequest**](ChangeSitePolicyRequest.md)|  | [optional] 
+
+### Return type
+
+[**SiteLifecycleRequest**](SiteLifecycleRequest.md)
 
 ### Authorization
 
@@ -6704,6 +7478,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitchangesitequotarequestv2"></a>
+# **SubmitChangeSiteQuotaRequestV2**
+> SiteLifecycleRequest SubmitChangeSiteQuotaRequestV2 (ChangeSiteQuotaRequest changeSiteQuotaRequest = null)
+
+submit change site quota request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangeSiteQuotaRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changeSiteQuotaRequest = new ChangeSiteQuotaRequest(); // ChangeSiteQuotaRequest |  (optional) 
+
+            try
+            {
+                // submit change site quota request, and return request info.
+                SiteLifecycleRequest result = apiInstance.SubmitChangeSiteQuotaRequestV2(changeSiteQuotaRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangeSiteQuotaRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeSiteQuotaRequest** | [**ChangeSiteQuotaRequest**](ChangeSiteQuotaRequest.md)|  | [optional] 
+
+### Return type
+
+[**SiteLifecycleRequest**](SiteLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitchangesitesettingrequest"></a>
 # **SubmitChangeSiteSettingRequest**
 > Guid SubmitChangeSiteSettingRequest (ChangeSiteSettingRequest changeSiteSettingRequest = null)
@@ -6767,6 +7624,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitchangesitesettingrequestv2"></a>
+# **SubmitChangeSiteSettingRequestV2**
+> ChangeSiteSettingRequest SubmitChangeSiteSettingRequestV2 (ChangeSiteSettingRequest changeSiteSettingRequest = null)
+
+submit change site setting request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitChangeSiteSettingRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var changeSiteSettingRequest = new ChangeSiteSettingRequest(); // ChangeSiteSettingRequest |  (optional) 
+
+            try
+            {
+                // submit change site setting request, and return request info.
+                ChangeSiteSettingRequest result = apiInstance.SubmitChangeSiteSettingRequestV2(changeSiteSettingRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitChangeSiteSettingRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeSiteSettingRequest** | [**ChangeSiteSettingRequest**](ChangeSiteSettingRequest.md)|  | [optional] 
+
+### Return type
+
+[**ChangeSiteSettingRequest**](ChangeSiteSettingRequest.md)
 
 ### Authorization
 
@@ -7119,6 +8059,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitcontentmoverequestv2"></a>
+# **SubmitContentMoveRequestV2**
+> ContentMoveRequest SubmitContentMoveRequestV2 (ContentMoveRequest contentMoveRequest = null)
+
+submit create content move request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitContentMoveRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var contentMoveRequest = new ContentMoveRequest(); // ContentMoveRequest |  (optional) 
+
+            try
+            {
+                // submit create content move request, and return request info.
+                ContentMoveRequest result = apiInstance.SubmitContentMoveRequestV2(contentMoveRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitContentMoveRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contentMoveRequest** | [**ContentMoveRequest**](ContentMoveRequest.md)|  | [optional] 
+
+### Return type
+
+[**ContentMoveRequest**](ContentMoveRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitcreategrouprequest"></a>
 # **SubmitCreateGroupRequest**
 > Guid SubmitCreateGroupRequest (CreateGroupRequest createGroupRequest = null)
@@ -7182,6 +8205,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitcreategrouprequestv2"></a>
+# **SubmitCreateGroupRequestV2**
+> CreateGroupRequest SubmitCreateGroupRequestV2 (CreateGroupRequest createGroupRequest = null)
+
+submit create group request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitCreateGroupRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var createGroupRequest = new CreateGroupRequest(); // CreateGroupRequest |  (optional) 
+
+            try
+            {
+                // submit create group request, and return request info.
+                CreateGroupRequest result = apiInstance.SubmitCreateGroupRequestV2(createGroupRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitCreateGroupRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createGroupRequest** | [**CreateGroupRequest**](CreateGroupRequest.md)|  | [optional] 
+
+### Return type
+
+[**CreateGroupRequest**](CreateGroupRequest.md)
 
 ### Authorization
 
@@ -7534,6 +8640,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitcreatesiterequestv2"></a>
+# **SubmitCreateSiteRequestV2**
+> CreateSiteRequest SubmitCreateSiteRequestV2 (CreateSiteRequest createSiteRequest)
+
+submit create site collection request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitCreateSiteRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var createSiteRequest = new CreateSiteRequest(); // CreateSiteRequest | 
+
+            try
+            {
+                // submit create site collection request, and return request info.
+                CreateSiteRequest result = apiInstance.SubmitCreateSiteRequestV2(createSiteRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitCreateSiteRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createSiteRequest** | [**CreateSiteRequest**](CreateSiteRequest.md)|  | 
+
+### Return type
+
+[**CreateSiteRequest**](CreateSiteRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitcreatewebrequest"></a>
 # **SubmitCreateWebRequest**
 > Guid SubmitCreateWebRequest (CreateWebRequest createWebRequest = null)
@@ -7597,6 +8786,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitcreatewebrequestv2"></a>
+# **SubmitCreateWebRequestV2**
+> CreateWebRequest SubmitCreateWebRequestV2 (CreateWebRequest createWebRequest = null)
+
+submit create web request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitCreateWebRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var createWebRequest = new CreateWebRequest(); // CreateWebRequest |  (optional) 
+
+            try
+            {
+                // submit create web request, and return request info.
+                CreateWebRequest result = apiInstance.SubmitCreateWebRequestV2(createWebRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitCreateWebRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createWebRequest** | [**CreateWebRequest**](CreateWebRequest.md)|  | [optional] 
+
+### Return type
+
+[**CreateWebRequest**](CreateWebRequest.md)
 
 ### Authorization
 
@@ -7700,6 +8972,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitcustomrequestv2"></a>
+# **SubmitCustomRequestV2**
+> ApiRequest SubmitCustomRequestV2 (ApiRequest apiRequest = null)
+
+submit custom service request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitCustomRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var apiRequest = new ApiRequest(); // ApiRequest |  (optional) 
+
+            try
+            {
+                // submit custom service request, and return request info.
+                ApiRequest result = apiInstance.SubmitCustomRequestV2(apiRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitCustomRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **apiRequest** | [**ApiRequest**](ApiRequest.md)|  | [optional] 
+
+### Return type
+
+[**ApiRequest**](ApiRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitdeletegrouprequest"></a>
 # **SubmitDeleteGroupRequest**
 > Guid SubmitDeleteGroupRequest (DeleteGroupRequest deleteGroupRequest = null)
@@ -7783,6 +9138,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitdeletegrouprequestv2"></a>
+# **SubmitDeleteGroupRequestV2**
+> GroupLifecycleRequest SubmitDeleteGroupRequestV2 (DeleteGroupRequest deleteGroupRequest = null)
+
+submit delete group request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitDeleteGroupRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var deleteGroupRequest = new DeleteGroupRequest(); // DeleteGroupRequest |  (optional) 
+
+            try
+            {
+                // submit delete group request, and return request info.
+                GroupLifecycleRequest result = apiInstance.SubmitDeleteGroupRequestV2(deleteGroupRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitDeleteGroupRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteGroupRequest** | [**DeleteGroupRequest**](DeleteGroupRequest.md)|  | [optional] 
+
+### Return type
+
+[**GroupLifecycleRequest**](GroupLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitdeletesiterequest"></a>
 # **SubmitDeleteSiteRequest**
 > Guid SubmitDeleteSiteRequest (DeleteSiteRequest deleteSiteRequest = null)
@@ -7846,6 +9284,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitdeletesiterequestv2"></a>
+# **SubmitDeleteSiteRequestV2**
+> SiteLifecycleRequest SubmitDeleteSiteRequestV2 (DeleteSiteRequest deleteSiteRequest = null)
+
+submit delete site request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitDeleteSiteRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var deleteSiteRequest = new DeleteSiteRequest(); // DeleteSiteRequest |  (optional) 
+
+            try
+            {
+                // submit delete site request, and return request info.
+                SiteLifecycleRequest result = apiInstance.SubmitDeleteSiteRequestV2(deleteSiteRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitDeleteSiteRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteSiteRequest** | [**DeleteSiteRequest**](DeleteSiteRequest.md)|  | [optional] 
+
+### Return type
+
+[**SiteLifecycleRequest**](SiteLifecycleRequest.md)
 
 ### Authorization
 
@@ -8032,6 +9553,88 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitdynamicrequestbytemplate"></a>
+# **SubmitDynamicRequestByTemplate**
+> Guid SubmitDynamicRequestByTemplate (DynamicRequestTemplateModel dynamicRequestTemplateModel = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitDynamicRequestByTemplateExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var dynamicRequestTemplateModel = new DynamicRequestTemplateModel(); // DynamicRequestTemplateModel |  (optional) 
+
+            try
+            {
+                Guid result = apiInstance.SubmitDynamicRequestByTemplate(dynamicRequestTemplateModel);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitDynamicRequestByTemplate: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **dynamicRequestTemplateModel** | [**DynamicRequestTemplateModel**](DynamicRequestTemplateModel.md)|  | [optional] 
+
+### Return type
+
+**Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitextendgrouprequest"></a>
 # **SubmitExtendGroupRequest**
 > Guid SubmitExtendGroupRequest (ExtendGroupRequest extendGroupRequest = null)
@@ -8095,6 +9698,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitextendgrouprequestv2"></a>
+# **SubmitExtendGroupRequestV2**
+> GroupLifecycleRequest SubmitExtendGroupRequestV2 (ExtendGroupRequest extendGroupRequest = null)
+
+submit extend group request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitExtendGroupRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var extendGroupRequest = new ExtendGroupRequest(); // ExtendGroupRequest |  (optional) 
+
+            try
+            {
+                // submit extend group request, and return request info.
+                GroupLifecycleRequest result = apiInstance.SubmitExtendGroupRequestV2(extendGroupRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitExtendGroupRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **extendGroupRequest** | [**ExtendGroupRequest**](ExtendGroupRequest.md)|  | [optional] 
+
+### Return type
+
+[**GroupLifecycleRequest**](GroupLifecycleRequest.md)
 
 ### Authorization
 
@@ -8198,6 +9884,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitextendsiterequestv2"></a>
+# **SubmitExtendSiteRequestV2**
+> SiteLifecycleRequest SubmitExtendSiteRequestV2 (ExtendSiteRequest extendSiteRequest = null)
+
+submit extend site request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitExtendSiteRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var extendSiteRequest = new ExtendSiteRequest(); // ExtendSiteRequest |  (optional) 
+
+            try
+            {
+                // submit extend site request, and return request info.
+                SiteLifecycleRequest result = apiInstance.SubmitExtendSiteRequestV2(extendSiteRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitExtendSiteRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **extendSiteRequest** | [**ExtendSiteRequest**](ExtendSiteRequest.md)|  | [optional] 
+
+### Return type
+
+[**SiteLifecycleRequest**](SiteLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitgrantpermissionrequest"></a>
 # **SubmitGrantPermissionRequest**
 > Guid SubmitGrantPermissionRequest (GrantPermissionRequest grantPermissionRequest = null)
@@ -8261,6 +10030,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitgrantpermissionrequestv2"></a>
+# **SubmitGrantPermissionRequestV2**
+> GrantPermissionRequest SubmitGrantPermissionRequestV2 (GrantPermissionRequest grantPermissionRequest = null)
+
+submit grant permission request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitGrantPermissionRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var grantPermissionRequest = new GrantPermissionRequest(); // GrantPermissionRequest |  (optional) 
+
+            try
+            {
+                // submit grant permission request, and return request info.
+                GrantPermissionRequest result = apiInstance.SubmitGrantPermissionRequestV2(grantPermissionRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitGrantPermissionRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **grantPermissionRequest** | [**GrantPermissionRequest**](GrantPermissionRequest.md)|  | [optional] 
+
+### Return type
+
+[**GrantPermissionRequest**](GrantPermissionRequest.md)
 
 ### Authorization
 
@@ -8364,6 +10216,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitlocksiterequestv2"></a>
+# **SubmitLockSiteRequestV2**
+> SiteLifecycleRequest SubmitLockSiteRequestV2 (LockSiteRequest lockSiteRequest = null)
+
+submit lock site request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitLockSiteRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var lockSiteRequest = new LockSiteRequest(); // LockSiteRequest |  (optional) 
+
+            try
+            {
+                // submit lock site request, and return request info.
+                SiteLifecycleRequest result = apiInstance.SubmitLockSiteRequestV2(lockSiteRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitLockSiteRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **lockSiteRequest** | [**LockSiteRequest**](LockSiteRequest.md)|  | [optional] 
+
+### Return type
+
+[**SiteLifecycleRequest**](SiteLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitmanagepermissionrequest"></a>
 # **SubmitManagePermissionRequest**
 > Guid SubmitManagePermissionRequest (ManagePermissionRequest managePermissionRequest = null)
@@ -8427,6 +10362,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitmanagepermissionrequestv2"></a>
+# **SubmitManagePermissionRequestV2**
+> ManagePermissionRequest SubmitManagePermissionRequestV2 (ManagePermissionRequest managePermissionRequest = null)
+
+submit manage permission request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitManagePermissionRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var managePermissionRequest = new ManagePermissionRequest(); // ManagePermissionRequest |  (optional) 
+
+            try
+            {
+                // submit manage permission request, and return request info.
+                ManagePermissionRequest result = apiInstance.SubmitManagePermissionRequestV2(managePermissionRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitManagePermissionRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **managePermissionRequest** | [**ManagePermissionRequest**](ManagePermissionRequest.md)|  | [optional] 
+
+### Return type
+
+[**ManagePermissionRequest**](ManagePermissionRequest.md)
 
 ### Authorization
 
@@ -8530,6 +10548,89 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="submitrestoregrouprequestv2"></a>
+# **SubmitRestoreGroupRequestV2**
+> GroupLifecycleRequest SubmitRestoreGroupRequestV2 (RestoreGroupRequest restoreGroupRequest = null)
+
+submit restore group request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitRestoreGroupRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var restoreGroupRequest = new RestoreGroupRequest(); // RestoreGroupRequest |  (optional) 
+
+            try
+            {
+                // submit restore group request, and return request info.
+                GroupLifecycleRequest result = apiInstance.SubmitRestoreGroupRequestV2(restoreGroupRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitRestoreGroupRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **restoreGroupRequest** | [**RestoreGroupRequest**](RestoreGroupRequest.md)|  | [optional] 
+
+### Return type
+
+[**GroupLifecycleRequest**](GroupLifecycleRequest.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="submitunlocksiterequest"></a>
 # **SubmitUnlockSiteRequest**
 > Guid SubmitUnlockSiteRequest (UnlockSiteRequest unlockSiteRequest = null)
@@ -8593,6 +10694,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 **Guid**
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="submitunlocksiterequestv2"></a>
+# **SubmitUnlockSiteRequestV2**
+> SiteLifecycleRequest SubmitUnlockSiteRequestV2 (UnlockSiteRequest unlockSiteRequest = null)
+
+submit unlock site request, and return request info.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class SubmitUnlockSiteRequestV2Example
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new RequestsApi(config);
+
+            var unlockSiteRequest = new UnlockSiteRequest(); // UnlockSiteRequest |  (optional) 
+
+            try
+            {
+                // submit unlock site request, and return request info.
+                SiteLifecycleRequest result = apiInstance.SubmitUnlockSiteRequestV2(unlockSiteRequest);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling RequestsApi.SubmitUnlockSiteRequestV2: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unlockSiteRequest** | [**UnlockSiteRequest**](UnlockSiteRequest.md)|  | [optional] 
+
+### Return type
+
+[**SiteLifecycleRequest**](SiteLifecycleRequest.md)
 
 ### Authorization
 

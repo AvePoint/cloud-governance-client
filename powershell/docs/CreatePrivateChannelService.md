@@ -12,16 +12,16 @@ Name | Type | Description | Notes
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **Type** | [**ServiceType**](ServiceType.md) |  | [optional] 
-**ServiceContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**ServiceAdminContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **ApproversContainManagerRole** | **Boolean** |  | [optional] [default to $false]
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
-**CustomActions** | [**CustomActionSettings**](CustomActionSettings.md) |  | [optional] 
+**CustomActions** | [**ChangeGroupSettingServiceCustomActions**](ChangeGroupSettingServiceCustomActions.md) |  | [optional] 
 **ApprovalProcessId** | **String** |  | [optional] 
 **LanguageId** | **Int32** |  | [optional] [default to 0]
 **CategoryId** | **String** |  | [optional] 
-**RequestTemplate** | [**ApiRequest**](ApiRequest.md) | Base model of request. | [optional] 
+**RequestTemplate** | [**ChangePrivateChannelServiceRequestTemplate**](ChangePrivateChannelServiceRequestTemplate.md) |  | [optional] 
 
 ## Examples
 

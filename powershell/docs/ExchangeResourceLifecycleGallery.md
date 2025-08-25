@@ -4,12 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Office365TenantId** | **String** |  | [optional] 
-**GroupInfo** | [**DynamicExchangeResource**](DynamicExchangeResource.md) | Activity model for Azure Object Info | [optional] 
-**LifecycleScopeSetting** | [**LifecycleScopeSetting**](LifecycleScopeSetting.md) |  | [optional] 
-**LifecycleActions** | [**LifecycleActions**](LifecycleActions.md) |  | [optional] 
+**GroupInfo** | [**ExchangeResourceLifecycleGalleryGroupInfo**](ExchangeResourceLifecycleGalleryGroupInfo.md) |  | [optional] 
+**LifecycleScopeSetting** | [**ExchangeResourceLifecycleGalleryLifecycleScopeSetting**](ExchangeResourceLifecycleGalleryLifecycleScopeSetting.md) |  | [optional] 
+**LifecycleActions** | [**ExchangeResourceLifecycleGalleryLifecycleActions**](ExchangeResourceLifecycleGalleryLifecycleActions.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -21,7 +23,9 @@ $ExchangeResourceLifecycleGallery = New-Cloud.Governance.ClientExchangeResourceL
  -LifecycleActions null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

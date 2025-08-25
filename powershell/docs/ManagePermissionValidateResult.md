@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) |  | [optional] 
 **ExternalSharingOptions** | [**ExternalSharingOptions**](ExternalSharingOptions.md) |  | [optional] 
 **EnableShareAnonymousLink** | **Boolean** |  | [optional] [default to $false]
-**Object** | [**ManagePermissionSPObject**](ManagePermissionSPObject.md) |  | [optional] 
+**Object** | [**ManagePermissionValidateResultObject**](ManagePermissionValidateResultObject.md) |  | [optional] 
 **UserMetadata** | [**System.Collections.Hashtable**](UserInfo.md) |  | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 

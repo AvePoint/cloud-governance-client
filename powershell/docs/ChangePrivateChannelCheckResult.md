@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Team** | [**ApiUser**](ApiUser.md) | Team | [optional] 
+**Team** | [**ChangePrivateChannelCheckResultTeam**](ChangePrivateChannelCheckResultTeam.md) |  | [optional] 
 **Channels** | [**ApiUser[]**](ApiUser.md) | Channels | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 

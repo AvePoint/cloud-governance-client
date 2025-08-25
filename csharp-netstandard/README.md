@@ -47,17 +47,16 @@ namespace Example
 
             var apiInstance = new WorkspacesAdminApi(config);
             
-            var filter = filter_example;  // string |  (optional) 
-            var workspaceActionParameter = new WorkspaceActionParameter(); // WorkspaceActionParameter |  (optional) 
+            var updateMetadataParameter = new UpdateMetadataParameter(); // UpdateMetadataParameter |  (optional) 
 
             try
             {
-                // unlock sites and Office365 group site
-                apiInstance.UnlockWorkspace(filterworkspaceActionParameter);
+                // update metadatas for workspaces
+                apiInstance.UpdateMetadatas(updateMetadataParameter);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling WorkspacesAdminApi.UnlockWorkspace: " + e.Message );
+                Debug.Print("Exception when calling WorkspacesAdminApi.UpdateMetadatas: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -78,6 +77,8 @@ Class | Method | HTTP request | Description
 *AuthApi* | [**RefreshUserAccessToken**](docs/AuthApi.md#refreshuseraccesstoken) | **POST** /auth/token/refresh | refresh user access token
 *AuthAdminApi* | [**DeleteTokenCache**](docs/AuthAdminApi.md#deletetokencache) | **DELETE** /admin/auth/token/cache | delete token cache
 *GuestUsersAdminApi* | [**GetManagedGuestUsers**](docs/GuestUsersAdminApi.md#getmanagedguestusers) | **GET** /admin/directory/guestusers | get all managed guest users
+*JobmonitorAdminApi* | [**GetAllJobMonitorReports**](docs/JobmonitorAdminApi.md#getalljobmonitorreports) | **GET** /admin/jobmonitor | get all jobs
+*JobmonitorAdminApi* | [**GetWorkspacejobBasicInfo**](docs/JobmonitorAdminApi.md#getworkspacejobbasicinfo) | **GET** /admin/jobmonitor/{id}/basic | get workspace job basic information              support action:unlock/specify contact/restore workspace/refresh guest invite status
 *JobsAdminApi* | [**GetJobs**](docs/JobsAdminApi.md#getjobs) | **GET** /admin/jobs | Get worker jobs
 *JobsAdminApi* | [**GetRelatedJobs**](docs/JobsAdminApi.md#getrelatedjobs) | **GET** /admin/jobs/relations | Get related worker job
 *MetadataAdminApi* | [**GetAllMetadata**](docs/MetadataAdminApi.md#getallmetadata) | **GET** /admin/metadata | get all metadata
@@ -106,6 +107,7 @@ Class | Method | HTTP request | Description
 *Office365AdminApi* | [**DeleteWebUserCustomAction**](docs/Office365AdminApi.md#deletewebusercustomaction) | **DELETE** /admin/office365/web/usercustomactions | delete user custom actions by action name
 *Office365AdminApi* | [**GetAzureADExtensionPropertyNamesWithDataType**](docs/Office365AdminApi.md#getazureadextensionpropertynameswithdatatype) | **GET** /admin/office365/azuread/{tenantId}/property/custom | get azure ad custom property with data type
 *Office365AdminApi* | [**GetAzureAdCustomPropertyNames**](docs/Office365AdminApi.md#getazureadcustompropertynames) | **GET** /admin/office365/azuread/{tenantId}/property/names/custom | get azure ad custom property names
+*Office365AdminApi* | [**GetDownloadFileUrL**](docs/Office365AdminApi.md#getdownloadfileurl) | **GET** /admin/office365/downloadurl/{type} | get download file url
 *Office365AdminApi* | [**GetTenantIdByUrl**](docs/Office365AdminApi.md#gettenantidbyurl) | **GET** /admin/office365/tenantid | get tenant ids by url
 *Office365AdminApi* | [**GetTenantIds**](docs/Office365AdminApi.md#gettenantids) | **GET** /admin/office365/tenantids | get tenant ids by filter expression
 *Office365AdminApi* | [**GetUploadFileUrL**](docs/Office365AdminApi.md#getuploadfileurl) | **GET** /admin/office365/uploadurl/{type} | get upload file url
@@ -151,6 +153,7 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetDynamicRequestChangeSiteProfileGallery**](docs/RequestsApi.md#getdynamicrequestchangesiteprofilegallery) | **GET** /requests/dynamic/{id}/gallery/changesiteprofile | 
 *RequestsApi* | [**GetDynamicRequestChangeSiteSettingGallery**](docs/RequestsApi.md#getdynamicrequestchangesitesettinggallery) | **GET** /requests/dynamic/{id}/gallery/changesitesetting | 
 *RequestsApi* | [**GetDynamicRequestChangeTeamSettingGallery**](docs/RequestsApi.md#getdynamicrequestchangeteamsettinggallery) | **GET** /requests/dynamic/{id}/gallery/changeteamsetting | 
+*RequestsApi* | [**GetDynamicRequestCreateCommunityGallery**](docs/RequestsApi.md#getdynamicrequestcreatecommunitygallery) | **GET** /requests/dynamic/{id}/gallery/createCommunity | 
 *RequestsApi* | [**GetDynamicRequestCreateDistributionListGallery**](docs/RequestsApi.md#getdynamicrequestcreatedistributionlistgallery) | **GET** /requests/dynamic/{id}/gallery/createdistributionlist | 
 *RequestsApi* | [**GetDynamicRequestCreateEquipmentMailboxGallery**](docs/RequestsApi.md#getdynamicrequestcreateequipmentmailboxgallery) | **GET** /requests/dynamic/{id}/gallery/createequipmentmailbox | 
 *RequestsApi* | [**GetDynamicRequestCreateGroupGallery**](docs/RequestsApi.md#getdynamicrequestcreategroupgallery) | **GET** /requests/dynamic/{id}/gallery/creategroups | 
@@ -181,40 +184,65 @@ Class | Method | HTTP request | Description
 *RequestsApi* | [**GetUnlockSiteRequest**](docs/RequestsApi.md#getunlocksiterequest) | **GET** /requests/unlocksite/{id} | get unlock site request
 *RequestsApi* | [**IsUrlExistsInPendingRequests**](docs/RequestsApi.md#isurlexistsinpendingrequests) | **GET** /requests/isUrlExistInPendingRequests | check url exists in pending requests.
 *RequestsApi* | [**SubmitArchiveGroupRequest**](docs/RequestsApi.md#submitarchivegrouprequest) | **POST** /requests/archivegroup | submit archive group group request
+*RequestsApi* | [**SubmitArchiveGroupRequestV2**](docs/RequestsApi.md#submitarchivegrouprequestv2) | **POST** /requests/archivegroup/v2 | submit archive group request, and return request info.
 *RequestsApi* | [**SubmitArchiveSiteRequest**](docs/RequestsApi.md#submitarchivesiterequest) | **POST** /requests/archivesite | submit archive site request
+*RequestsApi* | [**SubmitArchiveSiteRequestV2**](docs/RequestsApi.md#submitarchivesiterequestv2) | **POST** /requests/archivesite/v2 | submit archive site request, and return request info.
 *RequestsApi* | [**SubmitArchiveWebRequest**](docs/RequestsApi.md#submitarchivewebrequest) | **POST** /requests/archiveweb | submit archive web request
 *RequestsApi* | [**SubmitChangeGroupPolicyRequest**](docs/RequestsApi.md#submitchangegrouppolicyrequest) | **POST** /requests/changegrouppolicy | submit change group policy request
+*RequestsApi* | [**SubmitChangeGroupPolicyRequestV2**](docs/RequestsApi.md#submitchangegrouppolicyrequestv2) | **POST** /requests/changegrouppolicy/v2 | submit change group policy request, and return request info.
 *RequestsApi* | [**SubmitChangeGroupQuotaRequest**](docs/RequestsApi.md#submitchangegroupquotarequest) | **POST** /requests/changegroupquota | submit change group quota request
+*RequestsApi* | [**SubmitChangeGroupQuotaRequestV2**](docs/RequestsApi.md#submitchangegroupquotarequestv2) | **POST** /requests/changegroupquota/v2 | submit change group quota request, and return request info.
 *RequestsApi* | [**SubmitChangeGroupSettingRequest**](docs/RequestsApi.md#submitchangegroupsettingrequest) | **POST** /requests/changegroup | submit change group settings request
+*RequestsApi* | [**SubmitChangeGroupSettingRequestV2**](docs/RequestsApi.md#submitchangegroupsettingrequestv2) | **POST** /requests/changegroup/v2 | submit change group settings request, and return request info.
 *RequestsApi* | [**SubmitChangeListSettingRequest**](docs/RequestsApi.md#submitchangelistsettingrequest) | **POST** /requests/changelistsetting | submit change list settings request
 *RequestsApi* | [**SubmitChangePermissionRequest**](docs/RequestsApi.md#submitchangepermissionrequest) | **POST** /requests/changepermission | submit change permission request
+*RequestsApi* | [**SubmitChangePermissionRequestV2**](docs/RequestsApi.md#submitchangepermissionrequestv2) | **POST** /requests/changepermission/v2 | submit change permission request, and return request info.
 *RequestsApi* | [**SubmitChangePrivateChannelRequest**](docs/RequestsApi.md#submitchangeprivatechannelrequest) | **POST** /requests/changeprivatechannel | submit change private channel request
 *RequestsApi* | [**SubmitChangeSiteContactRequest**](docs/RequestsApi.md#submitchangesitecontactrequest) | **POST** /requests/changesite/adminorcontact | submit change site administrator or contact request
+*RequestsApi* | [**SubmitChangeSiteContactRequestV2**](docs/RequestsApi.md#submitchangesitecontactrequestv2) | **POST** /requests/changesite/v2/adminorcontact | submit change site administrator or contact request, and return request info.
 *RequestsApi* | [**SubmitChangeSitePolicyRequest**](docs/RequestsApi.md#submitchangesitepolicyrequest) | **POST** /requests/changesitepolicy | submit change site policy request
+*RequestsApi* | [**SubmitChangeSitePolicyRequestV2**](docs/RequestsApi.md#submitchangesitepolicyrequestv2) | **POST** /requests/changesitepolicy/v2 | submit change site policy request, and return request info.
 *RequestsApi* | [**SubmitChangeSiteQuotaRequest**](docs/RequestsApi.md#submitchangesitequotarequest) | **POST** /requests/changesitequota | submit change site quota request
+*RequestsApi* | [**SubmitChangeSiteQuotaRequestV2**](docs/RequestsApi.md#submitchangesitequotarequestv2) | **POST** /requests/changesitequota/v2 | submit change site quota request, and return request info.
 *RequestsApi* | [**SubmitChangeSiteSettingRequest**](docs/RequestsApi.md#submitchangesitesettingrequest) | **POST** /requests/changesite/setting | submit change site settings request
+*RequestsApi* | [**SubmitChangeSiteSettingRequestV2**](docs/RequestsApi.md#submitchangesitesettingrequestv2) | **POST** /requests/changesite/v2/setting | submit change site setting request, and return request info.
 *RequestsApi* | [**SubmitChangeWebContactRequest**](docs/RequestsApi.md#submitchangewebcontactrequest) | **POST** /requests/changewebcontact | submit change web contact request
 *RequestsApi* | [**SubmitChangeWebSettingRequest**](docs/RequestsApi.md#submitchangewebsettingrequest) | **POST** /requests/changewebsettings | submit change web settings request
 *RequestsApi* | [**SubmitClonePermissionRequest**](docs/RequestsApi.md#submitclonepermissionrequest) | **POST** /requests/clonepermission | get clone permission request
 *RequestsApi* | [**SubmitContentMoveRequest**](docs/RequestsApi.md#submitcontentmoverequest) | **POST** /requests/contentmove | submit create content move request
+*RequestsApi* | [**SubmitContentMoveRequestV2**](docs/RequestsApi.md#submitcontentmoverequestv2) | **POST** /requests/contentmove/v2 | submit create content move request, and return request info.
 *RequestsApi* | [**SubmitCreateGroupRequest**](docs/RequestsApi.md#submitcreategrouprequest) | **POST** /requests/creategroup | submit create group request
+*RequestsApi* | [**SubmitCreateGroupRequestV2**](docs/RequestsApi.md#submitcreategrouprequestv2) | **POST** /requests/creategroup/v2 | submit create group request, and return request info.
 *RequestsApi* | [**SubmitCreateGuestUserRequest**](docs/RequestsApi.md#submitcreateguestuserrequest) | **POST** /requests/createguestuser | submit create guest user request
 *RequestsApi* | [**SubmitCreateListRequest**](docs/RequestsApi.md#submitcreatelistrequest) | **POST** /requests/createlist | submit create list request
 *RequestsApi* | [**SubmitCreatePrivateChannelRequest**](docs/RequestsApi.md#submitcreateprivatechannelrequest) | **POST** /requests/createprivatechannel | submit private channel request
 *RequestsApi* | [**SubmitCreateSiteRequest**](docs/RequestsApi.md#submitcreatesiterequest) | **POST** /requests/createsite | submit create site collection request
+*RequestsApi* | [**SubmitCreateSiteRequestV2**](docs/RequestsApi.md#submitcreatesiterequestv2) | **POST** /requests/createsite/v2 | submit create site collection request, and return request info.
 *RequestsApi* | [**SubmitCreateWebRequest**](docs/RequestsApi.md#submitcreatewebrequest) | **POST** /requests/createweb | submit create web request
+*RequestsApi* | [**SubmitCreateWebRequestV2**](docs/RequestsApi.md#submitcreatewebrequestv2) | **POST** /requests/createweb/v2 | submit create web request, and return request info.
 *RequestsApi* | [**SubmitCustomRequest**](docs/RequestsApi.md#submitcustomrequest) | **POST** /requests/custom | submit custom service request
+*RequestsApi* | [**SubmitCustomRequestV2**](docs/RequestsApi.md#submitcustomrequestv2) | **POST** /requests/custom/v2 | submit custom service request, and return request info.
 *RequestsApi* | [**SubmitDeleteGroupRequest**](docs/RequestsApi.md#submitdeletegrouprequest) | **POST** /requests/deletegroup | submit delete group request
+*RequestsApi* | [**SubmitDeleteGroupRequestV2**](docs/RequestsApi.md#submitdeletegrouprequestv2) | **POST** /requests/deletegroup/v2 | submit delete group request, and return request info.
 *RequestsApi* | [**SubmitDeleteSiteRequest**](docs/RequestsApi.md#submitdeletesiterequest) | **POST** /requests/deletesite | submit delete site request
+*RequestsApi* | [**SubmitDeleteSiteRequestV2**](docs/RequestsApi.md#submitdeletesiterequestv2) | **POST** /requests/deletesite/v2 | submit delete site request, and return request info.
 *RequestsApi* | [**SubmitDeleteWebRequest**](docs/RequestsApi.md#submitdeletewebrequest) | **POST** /requests/deleteweb | submit delete web request
 *RequestsApi* | [**SubmitDynamicRequest**](docs/RequestsApi.md#submitdynamicrequest) | **POST** /requests/dynamic | submit dynamic request
+*RequestsApi* | [**SubmitDynamicRequestByTemplate**](docs/RequestsApi.md#submitdynamicrequestbytemplate) | **POST** /requests/dynamic/template | 
 *RequestsApi* | [**SubmitExtendGroupRequest**](docs/RequestsApi.md#submitextendgrouprequest) | **POST** /requests/extendgroup | submit extend group request
+*RequestsApi* | [**SubmitExtendGroupRequestV2**](docs/RequestsApi.md#submitextendgrouprequestv2) | **POST** /requests/extendgroup/v2 | submit extend group request, and return request info.
 *RequestsApi* | [**SubmitExtendSiteRequest**](docs/RequestsApi.md#submitextendsiterequest) | **POST** /requests/extendsite | submit extend site request
+*RequestsApi* | [**SubmitExtendSiteRequestV2**](docs/RequestsApi.md#submitextendsiterequestv2) | **POST** /requests/extendsite/v2 | submit extend site request, and return request info.
 *RequestsApi* | [**SubmitGrantPermissionRequest**](docs/RequestsApi.md#submitgrantpermissionrequest) | **POST** /requests/grantpermission | get submit grant permission request
+*RequestsApi* | [**SubmitGrantPermissionRequestV2**](docs/RequestsApi.md#submitgrantpermissionrequestv2) | **POST** /requests/grantpermission/v2 | submit grant permission request, and return request info.
 *RequestsApi* | [**SubmitLockSiteRequest**](docs/RequestsApi.md#submitlocksiterequest) | **POST** /requests/locksite | submit lock site request
+*RequestsApi* | [**SubmitLockSiteRequestV2**](docs/RequestsApi.md#submitlocksiterequestv2) | **POST** /requests/locksite/v2 | submit lock site request, and return request info.
 *RequestsApi* | [**SubmitManagePermissionRequest**](docs/RequestsApi.md#submitmanagepermissionrequest) | **POST** /requests/managepermission | submit manage permission request
+*RequestsApi* | [**SubmitManagePermissionRequestV2**](docs/RequestsApi.md#submitmanagepermissionrequestv2) | **POST** /requests/managepermission/v2 | submit manage permission request, and return request info.
 *RequestsApi* | [**SubmitRestoreGroupRequest**](docs/RequestsApi.md#submitrestoregrouprequest) | **POST** /requests/restoregroup | submit restore group request
+*RequestsApi* | [**SubmitRestoreGroupRequestV2**](docs/RequestsApi.md#submitrestoregrouprequestv2) | **POST** /requests/restoregroup/v2 | submit restore group request, and return request info.
 *RequestsApi* | [**SubmitUnlockSiteRequest**](docs/RequestsApi.md#submitunlocksiterequest) | **POST** /requests/unlocksite | submit unlock site request
+*RequestsApi* | [**SubmitUnlockSiteRequestV2**](docs/RequestsApi.md#submitunlocksiterequestv2) | **POST** /requests/unlocksite/v2 | submit unlock site request, and return request info.
 *RequestsAdminApi* | [**GetAllRequests**](docs/RequestsAdminApi.md#getallrequests) | **GET** /admin/directory/requests | get all requests
 *ServicesApi* | [**GetChangeGroupSettingService**](docs/ServicesApi.md#getchangegroupsettingservice) | **GET** /services/changegroupsetting/{id} | get change group setting service
 *ServicesApi* | [**GetChangeListSettingService**](docs/ServicesApi.md#getchangelistsettingservice) | **GET** /services/changelistsetting/{id} | get change list setting service
@@ -235,6 +263,7 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**GetCreateWebService**](docs/ServicesApi.md#getcreatewebservice) | **GET** /services/createweb/{id} | get create web service
 *ServicesApi* | [**GetCustomService**](docs/ServicesApi.md#getcustomservice) | **GET** /services/custom/{id} | get custom service
 *ServicesApi* | [**GetDynamicService**](docs/ServicesApi.md#getdynamicservice) | **GET** /services/dynamic/{id} | get dynamic service
+*ServicesApi* | [**GetDynamicServiceRequestTemplate**](docs/ServicesApi.md#getdynamicservicerequesttemplate) | **GET** /services/dynamic/{id}/template | 
 *ServicesApi* | [**GetGrantPermissionService**](docs/ServicesApi.md#getgrantpermissionservice) | **GET** /services/grantpermission/{id} | get grant permission service
 *ServicesApi* | [**GetGroupLifecycleService**](docs/ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 *ServicesApi* | [**GetManagePermissionService**](docs/ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
@@ -267,6 +296,9 @@ Class | Method | HTTP request | Description
 *SettingsApi* | [**GetDynamicMembershipRuleItems**](docs/SettingsApi.md#getdynamicmembershipruleitems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
 *SettingsApi* | [**GetMyPersonalSettings**](docs/SettingsApi.md#getmypersonalsettings) | **GET** /settings/my | get my personal settings
 *SettingsApi* | [**GetPermissionLevels**](docs/SettingsApi.md#getpermissionlevels) | **GET** /settings/office365/permissionlevels | get permission levels
+*SharedMailboxesAdminApi* | [**GetSharedMailboxes**](docs/SharedMailboxesAdminApi.md#getsharedmailboxes) | **GET** /admin/directory/sharedmailbox | get managed shared mailboxes
+*SharedMailboxesAdminApi* | [**GetSharedMailboxesFilters**](docs/SharedMailboxesAdminApi.md#getsharedmailboxesfilters) | **GET** /admin/directory/sharedmailbox/filters | get filters for shared mailbox report
+*SharedMailboxesAdminApi* | [**SpecifySharedMailboxContacts**](docs/SharedMailboxesAdminApi.md#specifysharedmailboxcontacts) | **POST** /admin/directory/sharedmailbox/contacts | specify contacts
 *SystemSettingsAdminApi* | [**GetHookMessageSamples**](docs/SystemSettingsAdminApi.md#gethookmessagesamples) | **GET** /admin/settings/system/hooks/messages/sample | 
 *TasksApi* | [**ApproveTask**](docs/TasksApi.md#approvetask) | **POST** /tasks/{id}/approve | approve task
 *TasksApi* | [**EditArchiveGroupRequest**](docs/TasksApi.md#editarchivegrouprequest) | **PUT** /tasks/{id}/archivegroup | edit archive group request in task
@@ -338,6 +370,7 @@ Class | Method | HTTP request | Description
 *WorkspaceApi* | [**GetMySiteInformation**](docs/WorkspaceApi.md#getmysiteinformation) | **GET** /workspace/sites/{id} | get site information
 *WorkspaceApi* | [**GetSiteMetadata**](docs/WorkspaceApi.md#getsitemetadata) | **GET** /workspace/sites/metadata | get site metadata
 *WorkspaceApi* | [**GetWorkspaceItems**](docs/WorkspaceApi.md#getworkspaceitems) | **GET** /workspace/my | get my workspace items
+*WorkspacesAdminApi* | [**ApplyCommunitiesProfiles**](docs/WorkspacesAdminApi.md#applycommunitiesprofiles) | **POST** /admin/directory/workspace/communities/profiles | apply groups policy
 *WorkspacesAdminApi* | [**ApplyGroupProfiles**](docs/WorkspacesAdminApi.md#applygroupprofiles) | **POST** /admin/directory/workspace/group/applyprofiles | apply group profiles
 *WorkspacesAdminApi* | [**ApplyGroupsPolicy**](docs/WorkspacesAdminApi.md#applygroupspolicy) | **POST** /admin/directory/workspace/groups/policy | apply groups policy
 *WorkspacesAdminApi* | [**ApplySiteProfiles**](docs/WorkspacesAdminApi.md#applysiteprofiles) | **POST** /admin/directory/workspace/sites/profiles | apply site profiles
@@ -349,11 +382,13 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**GetOngoingTasks**](docs/WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
 *WorkspacesAdminApi* | [**GetWorkspaceFilters**](docs/WorkspacesAdminApi.md#getworkspacefilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 *WorkspacesAdminApi* | [**GetWorkspaces**](docs/WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
+*WorkspacesAdminApi* | [**GetWorkspacesPost**](docs/WorkspacesAdminApi.md#getworkspacespost) | **POST** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**LockWorkspaces**](docs/WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 *WorkspacesAdminApi* | [**SpecifyContacts**](docs/WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 *WorkspacesAdminApi* | [**TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#triggerworkspacerenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
 *WorkspacesAdminApi* | [**TriggerWorkspacesElection**](docs/WorkspacesAdminApi.md#triggerworkspaceselection) | **POST** /admin/directory/workspace/election/trigger | trigger workspace election
 *WorkspacesAdminApi* | [**UnlockWorkspace**](docs/WorkspacesAdminApi.md#unlockworkspace) | **POST** /admin/directory/workspace/unlock | unlock sites and Office365 group site
+*WorkspacesAdminApi* | [**UpdateMetadatas**](docs/WorkspacesAdminApi.md#updatemetadatas) | **POST** /admin/directory/workspace/metadata | update metadatas for workspaces
 
 
 <a name="documentation-for-models"></a>
@@ -361,6 +396,7 @@ Class | Method | HTTP request | Description
 
  - [Model.ActivityModelbase](docs/ActivityModelbase.md)
  - [Model.AddGroupMemberType](docs/AddGroupMemberType.md)
+ - [Model.AddSiteColumnToList](docs/AddSiteColumnToList.md)
  - [Model.AdministrativeUnit](docs/AdministrativeUnit.md)
  - [Model.AllRequestDetails](docs/AllRequestDetails.md)
  - [Model.AllRequestDetailsPageResult](docs/AllRequestDetailsPageResult.md)
@@ -387,9 +423,11 @@ Class | Method | HTTP request | Description
  - [Model.ApiUserIListChangedProperty](docs/ApiUserIListChangedProperty.md)
  - [Model.ApiUserPageResult](docs/ApiUserPageResult.md)
  - [Model.ApiUserType](docs/ApiUserType.md)
+ - [Model.ApmTemplateSetting](docs/ApmTemplateSetting.md)
  - [Model.AppInfo](docs/AppInfo.md)
  - [Model.AppSettingType](docs/AppSettingType.md)
  - [Model.AppSettings](docs/AppSettings.md)
+ - [Model.ApplyCommunityProfilesModel](docs/ApplyCommunityProfilesModel.md)
  - [Model.ApplyGroupPolicyModel](docs/ApplyGroupPolicyModel.md)
  - [Model.ApplyPolicyStatus](docs/ApplyPolicyStatus.md)
  - [Model.ApplyProfilesModel](docs/ApplyProfilesModel.md)
@@ -434,6 +472,7 @@ Class | Method | HTTP request | Description
  - [Model.ChangeGroupSettingService](docs/ChangeGroupSettingService.md)
  - [Model.ChangeGroupSettingValidationParameter](docs/ChangeGroupSettingValidationParameter.md)
  - [Model.ChangeGroupSettingsModel](docs/ChangeGroupSettingsModel.md)
+ - [Model.ChangeGroupTeamPicture](docs/ChangeGroupTeamPicture.md)
  - [Model.ChangeHubSiteContentModel](docs/ChangeHubSiteContentModel.md)
  - [Model.ChangeHubSiteContentModelChangedValueRequestModel](docs/ChangeHubSiteContentModelChangedValueRequestModel.md)
  - [Model.ChangeHubSiteMethod](docs/ChangeHubSiteMethod.md)
@@ -449,6 +488,8 @@ Class | Method | HTTP request | Description
  - [Model.ChangePermissionRequest](docs/ChangePermissionRequest.md)
  - [Model.ChangePermissionService](docs/ChangePermissionService.md)
  - [Model.ChangePermissionValidateResult](docs/ChangePermissionValidateResult.md)
+ - [Model.ChangePictureOptionType](docs/ChangePictureOptionType.md)
+ - [Model.ChangePictureOptionTypeForSite](docs/ChangePictureOptionTypeForSite.md)
  - [Model.ChangePolicyActionSetting](docs/ChangePolicyActionSetting.md)
  - [Model.ChangePrivateChannelCheckResult](docs/ChangePrivateChannelCheckResult.md)
  - [Model.ChangePrivateChannelFieldModel](docs/ChangePrivateChannelFieldModel.md)
@@ -471,6 +512,7 @@ Class | Method | HTTP request | Description
  - [Model.ChangeSiteExternalSharingProfileModel](docs/ChangeSiteExternalSharingProfileModel.md)
  - [Model.ChangeSiteHubSiteRequestModel](docs/ChangeSiteHubSiteRequestModel.md)
  - [Model.ChangeSiteObjectModel](docs/ChangeSiteObjectModel.md)
+ - [Model.ChangeSitePicture](docs/ChangeSitePicture.md)
  - [Model.ChangeSitePolicyRequest](docs/ChangeSitePolicyRequest.md)
  - [Model.ChangeSitePolicySetting](docs/ChangeSitePolicySetting.md)
  - [Model.ChangeSiteProfileOngoingActionModel](docs/ChangeSiteProfileOngoingActionModel.md)
@@ -551,6 +593,7 @@ Class | Method | HTTP request | Description
  - [Model.ConvertHubSiteActionType](docs/ConvertHubSiteActionType.md)
  - [Model.CopyMoveSetting](docs/CopyMoveSetting.md)
  - [Model.CopyMoveSettingAssignBy](docs/CopyMoveSettingAssignBy.md)
+ - [Model.CreateCommunityGallery](docs/CreateCommunityGallery.md)
  - [Model.CreateDistributionListGallery](docs/CreateDistributionListGallery.md)
  - [Model.CreateEquipmentMailboxGallery](docs/CreateEquipmentMailboxGallery.md)
  - [Model.CreateGroupGallery](docs/CreateGroupGallery.md)
@@ -618,6 +661,7 @@ Class | Method | HTTP request | Description
  - [Model.DeliveryStatusNotificationsRequestModel](docs/DeliveryStatusNotificationsRequestModel.md)
  - [Model.DeploymentManagerPlanSettings](docs/DeploymentManagerPlanSettings.md)
  - [Model.DepthLimitSetting](docs/DepthLimitSetting.md)
+ - [Model.DirectorySyncState](docs/DirectorySyncState.md)
  - [Model.DisplayInReportType](docs/DisplayInReportType.md)
  - [Model.DistinctResult](docs/DistinctResult.md)
  - [Model.DpmPlanSetting](docs/DpmPlanSetting.md)
@@ -632,6 +676,7 @@ Class | Method | HTTP request | Description
  - [Model.DynamicGroupRuleModel](docs/DynamicGroupRuleModel.md)
  - [Model.DynamicMembership](docs/DynamicMembership.md)
  - [Model.DynamicRequest](docs/DynamicRequest.md)
+ - [Model.DynamicRequestTemplateModel](docs/DynamicRequestTemplateModel.md)
  - [Model.DynamicRuleCondition](docs/DynamicRuleCondition.md)
  - [Model.DynamicRuleConditionType](docs/DynamicRuleConditionType.md)
  - [Model.DynamicRuleElement](docs/DynamicRuleElement.md)
@@ -641,6 +686,7 @@ Class | Method | HTTP request | Description
  - [Model.EmailAddress](docs/EmailAddress.md)
  - [Model.EmailForward](docs/EmailForward.md)
  - [Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
+ - [Model.EnpowerContactStatus](docs/EnpowerContactStatus.md)
  - [Model.EntraGroupLifecycleActionType](docs/EntraGroupLifecycleActionType.md)
  - [Model.ExchangeResourceLifecycleGallery](docs/ExchangeResourceLifecycleGallery.md)
  - [Model.ExchangeResourceStatus](docs/ExchangeResourceStatus.md)
@@ -701,6 +747,7 @@ Class | Method | HTTP request | Description
  - [Model.GroupScopeType](docs/GroupScopeType.md)
  - [Model.GroupSettingModel](docs/GroupSettingModel.md)
  - [Model.GroupStatus](docs/GroupStatus.md)
+ - [Model.GroupTeamPicture](docs/GroupTeamPicture.md)
  - [Model.GroupUser](docs/GroupUser.md)
  - [Model.GroupValidationParameter](docs/GroupValidationParameter.md)
  - [Model.GuestPermissions](docs/GuestPermissions.md)
@@ -724,6 +771,7 @@ Class | Method | HTTP request | Description
  - [Model.ImportGroupModel](docs/ImportGroupModel.md)
  - [Model.ImportMetadataModel](docs/ImportMetadataModel.md)
  - [Model.ImportObjectType](docs/ImportObjectType.md)
+ - [Model.ImportSharedMailboxModel](docs/ImportSharedMailboxModel.md)
  - [Model.ImportSiteModel](docs/ImportSiteModel.md)
  - [Model.ImportTeamModel](docs/ImportTeamModel.md)
  - [Model.InformationIconSetting](docs/InformationIconSetting.md)
@@ -746,11 +794,18 @@ Class | Method | HTTP request | Description
  - [Model.InviteMultipleGuestRequestModel](docs/InviteMultipleGuestRequestModel.md)
  - [Model.InviteType](docs/InviteType.md)
  - [Model.ItemConflictResolutionType](docs/ItemConflictResolutionType.md)
+ - [Model.JobMode](docs/JobMode.md)
+ - [Model.JobMonitorGridModel](docs/JobMonitorGridModel.md)
+ - [Model.JobMonitorGridModelPageResult](docs/JobMonitorGridModelPageResult.md)
+ - [Model.JobMonitorModel](docs/JobMonitorModel.md)
+ - [Model.JobStatus](docs/JobStatus.md)
+ - [Model.JobType](docs/JobType.md)
  - [Model.JoinGroupApproval](docs/JoinGroupApproval.md)
  - [Model.LanguageWithTemplates](docs/LanguageWithTemplates.md)
  - [Model.LeaseDateType](docs/LeaseDateType.md)
  - [Model.LeaseStartDateType](docs/LeaseStartDateType.md)
  - [Model.LibraryDesign](docs/LibraryDesign.md)
+ - [Model.LibraryRecordDeclaration](docs/LibraryRecordDeclaration.md)
  - [Model.LibraryScope](docs/LibraryScope.md)
  - [Model.LibraryVersionSetting](docs/LibraryVersionSetting.md)
  - [Model.LicenseInfo](docs/LicenseInfo.md)
@@ -767,6 +822,7 @@ Class | Method | HTTP request | Description
  - [Model.LinkPermissionType](docs/LinkPermissionType.md)
  - [Model.LinkPermissionTypeChangedValueRequestModel](docs/LinkPermissionTypeChangedValueRequestModel.md)
  - [Model.LinkValue](docs/LinkValue.md)
+ - [Model.ListColumnDefaultValue](docs/ListColumnDefaultValue.md)
  - [Model.ListPermissionSetting](docs/ListPermissionSetting.md)
  - [Model.ListPermissionSettings](docs/ListPermissionSettings.md)
  - [Model.ListTemplate](docs/ListTemplate.md)
@@ -834,6 +890,8 @@ Class | Method | HTTP request | Description
  - [Model.NameDescription](docs/NameDescription.md)
  - [Model.NavigationSetting](docs/NavigationSetting.md)
  - [Model.NodeType](docs/NodeType.md)
+ - [Model.NonAzureAdMetadataSettings](docs/NonAzureAdMetadataSettings.md)
+ - [Model.NotifyOpusForNewFilesRequestModel](docs/NotifyOpusForNewFilesRequestModel.md)
  - [Model.ObjectPermissionManagementModel](docs/ObjectPermissionManagementModel.md)
  - [Model.ObjectValidateResult](docs/ObjectValidateResult.md)
  - [Model.Office365SiteSettingModel](docs/Office365SiteSettingModel.md)
@@ -853,8 +911,10 @@ Class | Method | HTTP request | Description
  - [Model.PersonalSettingsPropertyInfo](docs/PersonalSettingsPropertyInfo.md)
  - [Model.PnpTemplate](docs/PnpTemplate.md)
  - [Model.PolicyWithTemplates](docs/PolicyWithTemplates.md)
+ - [Model.PredefinedOwnerOrMembers](docs/PredefinedOwnerOrMembers.md)
  - [Model.PrincipalType](docs/PrincipalType.md)
  - [Model.Privacy](docs/Privacy.md)
+ - [Model.QueryTemplateResultModel](docs/QueryTemplateResultModel.md)
  - [Model.QuestionAnswerResponse](docs/QuestionAnswerResponse.md)
  - [Model.QuotaProfile](docs/QuotaProfile.md)
  - [Model.RegisterAsHubSite](docs/RegisterAsHubSite.md)
@@ -870,6 +930,8 @@ Class | Method | HTTP request | Description
  - [Model.RequestMetadata](docs/RequestMetadata.md)
  - [Model.RequestMetadataListChangedProperty](docs/RequestMetadataListChangedProperty.md)
  - [Model.RequestProgressStatus](docs/RequestProgressStatus.md)
+ - [Model.RequestResourceType](docs/RequestResourceType.md)
+ - [Model.RequestSensitivityLabel](docs/RequestSensitivityLabel.md)
  - [Model.RequestStatus](docs/RequestStatus.md)
  - [Model.RequestTeamsSettings](docs/RequestTeamsSettings.md)
  - [Model.RequestUserWithPermissions](docs/RequestUserWithPermissions.md)
@@ -883,8 +945,10 @@ Class | Method | HTTP request | Description
  - [Model.SPBaseType](docs/SPBaseType.md)
  - [Model.SPGroup](docs/SPGroup.md)
  - [Model.SPGroupEditOption](docs/SPGroupEditOption.md)
+ - [Model.SPGroupEditOptionType](docs/SPGroupEditOptionType.md)
  - [Model.SPGroupManagementModel](docs/SPGroupManagementModel.md)
  - [Model.SPGroupViewOption](docs/SPGroupViewOption.md)
+ - [Model.SPGroupViewOptionType](docs/SPGroupViewOptionType.md)
  - [Model.SPList](docs/SPList.md)
  - [Model.SPListTemplateType](docs/SPListTemplateType.md)
  - [Model.SPNode](docs/SPNode.md)
@@ -900,6 +964,7 @@ Class | Method | HTTP request | Description
  - [Model.ServiceGridModel](docs/ServiceGridModel.md)
  - [Model.ServiceGridModelPageResult](docs/ServiceGridModelPageResult.md)
  - [Model.ServiceGroupWithPermissions](docs/ServiceGroupWithPermissions.md)
+ - [Model.ServiceLanguageSetting](docs/ServiceLanguageSetting.md)
  - [Model.ServiceList](docs/ServiceList.md)
  - [Model.ServiceListPageResult](docs/ServiceListPageResult.md)
  - [Model.ServicePlanModel](docs/ServicePlanModel.md)
@@ -912,6 +977,8 @@ Class | Method | HTTP request | Description
  - [Model.SharedChannelChangedMembership](docs/SharedChannelChangedMembership.md)
  - [Model.SharedChannelDescription](docs/SharedChannelDescription.md)
  - [Model.SharedChannelName](docs/SharedChannelName.md)
+ - [Model.SharedMailboxBasicGridModel](docs/SharedMailboxBasicGridModel.md)
+ - [Model.SharedMailboxBasicGridModelPageResult](docs/SharedMailboxBasicGridModelPageResult.md)
  - [Model.SharedMailboxLifecycleGalleryRequestModel](docs/SharedMailboxLifecycleGalleryRequestModel.md)
  - [Model.SharingAdvanceSettingModel](docs/SharingAdvanceSettingModel.md)
  - [Model.SharingAdvanceSettingModelChangedValueRequestModel](docs/SharingAdvanceSettingModelChangedValueRequestModel.md)
@@ -926,14 +993,17 @@ Class | Method | HTTP request | Description
  - [Model.ShowLinksInRequestDetailsPage](docs/ShowLinksInRequestDetailsPage.md)
  - [Model.SingleLineOrMultipleLineMetadataSettings](docs/SingleLineOrMultipleLineMetadataSettings.md)
  - [Model.SiteAdmins](docs/SiteAdmins.md)
+ - [Model.SiteAlternateCssUrl](docs/SiteAlternateCssUrl.md)
  - [Model.SiteClassification](docs/SiteClassification.md)
  - [Model.SiteClassificationAndSensitivityLabel](docs/SiteClassificationAndSensitivityLabel.md)
  - [Model.SiteCloudGovernancePanel](docs/SiteCloudGovernancePanel.md)
+ - [Model.SiteColumns](docs/SiteColumns.md)
  - [Model.SiteConstructTitleType](docs/SiteConstructTitleType.md)
  - [Model.SiteConstructUrlType](docs/SiteConstructUrlType.md)
  - [Model.SiteDesign](docs/SiteDesign.md)
  - [Model.SiteDesignModel](docs/SiteDesignModel.md)
  - [Model.SiteElectionProfile](docs/SiteElectionProfile.md)
+ - [Model.SiteFeature](docs/SiteFeature.md)
  - [Model.SiteLanguage](docs/SiteLanguage.md)
  - [Model.SiteLeasePeriodRequestSettings](docs/SiteLeasePeriodRequestSettings.md)
  - [Model.SiteLeasePeriodServiceSettings](docs/SiteLeasePeriodServiceSettings.md)
@@ -942,6 +1012,7 @@ Class | Method | HTTP request | Description
  - [Model.SiteLifecycleService](docs/SiteLifecycleService.md)
  - [Model.SiteLifecycleValidateResult](docs/SiteLifecycleValidateResult.md)
  - [Model.SiteLockType](docs/SiteLockType.md)
+ - [Model.SitePicture](docs/SitePicture.md)
  - [Model.SitePolicyRef](docs/SitePolicyRef.md)
  - [Model.SiteSensitivityLabel](docs/SiteSensitivityLabel.md)
  - [Model.SiteSharingStatus](docs/SiteSharingStatus.md)
@@ -963,6 +1034,7 @@ Class | Method | HTTP request | Description
  - [Model.StringChangedValueRequestModel](docs/StringChangedValueRequestModel.md)
  - [Model.StringModel](docs/StringModel.md)
  - [Model.StringModelChangedValueRequestModel](docs/StringModelChangedValueRequestModel.md)
+ - [Model.SubRequestType](docs/SubRequestType.md)
  - [Model.SubscribeMembers](docs/SubscribeMembers.md)
  - [Model.TaskApprovalStatus](docs/TaskApprovalStatus.md)
  - [Model.TaskComment](docs/TaskComment.md)
@@ -1000,6 +1072,7 @@ Class | Method | HTTP request | Description
  - [Model.TeamTimeZone](docs/TeamTimeZone.md)
  - [Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)
  - [Model.TeamsTemplateSettings](docs/TeamsTemplateSettings.md)
+ - [Model.TemplateAssignBy](docs/TemplateAssignBy.md)
  - [Model.TemplateGiphyRatingType](docs/TemplateGiphyRatingType.md)
  - [Model.TemplateWithPermissions](docs/TemplateWithPermissions.md)
  - [Model.TemporaryPermissionRequestSetting](docs/TemporaryPermissionRequestSetting.md)
@@ -1016,6 +1089,7 @@ Class | Method | HTTP request | Description
  - [Model.TriggerType](docs/TriggerType.md)
  - [Model.UnlockSiteRequest](docs/UnlockSiteRequest.md)
  - [Model.UnlockSiteSetting](docs/UnlockSiteSetting.md)
+ - [Model.UpdateMetadataParameter](docs/UpdateMetadataParameter.md)
  - [Model.UrlRandomStringSettings](docs/UrlRandomStringSettings.md)
  - [Model.UrlSequentialNumberingSettings](docs/UrlSequentialNumberingSettings.md)
  - [Model.UserCustomAction](docs/UserCustomAction.md)
@@ -1055,6 +1129,7 @@ Class | Method | HTTP request | Description
  - [Model.WorkspaceSendCancelEmailParameter](docs/WorkspaceSendCancelEmailParameter.md)
  - [Model.WorkspaceStatus](docs/WorkspaceStatus.md)
  - [Model.WorkspaceType](docs/WorkspaceType.md)
+ - [Model.YammerCommunityInfoModel](docs/YammerCommunityInfoModel.md)
  - [Model.YammerGroupJoinType](docs/YammerGroupJoinType.md)
  - [Model.YammerGroupRequestSettings](docs/YammerGroupRequestSettings.md)
  - [Model.YammerGroupServiceSettings](docs/YammerGroupServiceSettings.md)

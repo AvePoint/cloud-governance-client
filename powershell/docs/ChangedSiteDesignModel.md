@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
 **IsOutOfBoxTemplate** | **Boolean** |  | [optional] [default to $false]
-**Tenant** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**Tenant** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 **SupportedWebTemplates** | [**SiteTemplateTypeSetting[]**](SiteTemplateTypeSetting.md) |  | [optional] 
 
 ## Examples

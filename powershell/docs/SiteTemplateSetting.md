@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CustomSiteTemplate** | [**CustomSiteTemplate**](CustomSiteTemplate.md) |  | [optional] 
-**SiteTemplate** | [**DRSiteTemplate**](DRSiteTemplate.md) |  | [optional] 
+**CustomSiteTemplate** | [**SiteTemplateSettingCustomSiteTemplate**](SiteTemplateSettingCustomSiteTemplate.md) |  | [optional] 
+**SiteTemplate** | [**SiteTemplateSettingSiteTemplate**](SiteTemplateSettingSiteTemplate.md) |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

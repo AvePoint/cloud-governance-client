@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **Inviter** | **String** |  | [optional] 
 **CreatedTime** | **System.DateTime** |  | [optional] 
 **LastModifiedTime** | **System.DateTime** |  | [optional] 
+**SharePointLogonName** | **String** |  | [optional] 
 **Id** | **Int32** |  | [optional] [default to 0]
 **DisplayName** | **String** |  | [optional] 
 **Title** | **String** |  | [optional] 
@@ -82,6 +83,7 @@ $UserInfo = New-Cloud.Governance.ClientUserInfo  -IdentityName null `
  -Inviter null `
  -CreatedTime null `
  -LastModifiedTime null `
+ -SharePointLogonName null `
  -Id null `
  -DisplayName null `
  -Title null `

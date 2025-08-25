@@ -7,11 +7,12 @@ Name | Type | Description | Notes
 **HideRequestSummary** | **Boolean** |  | [optional] [default to $false]
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
-**ServiceAdminContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**ServiceAdminContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **Status** | [**CommonStatus**](CommonStatus.md) |  | [optional] 
 **ShowServiceInCatalog** | **Boolean** |  | [optional] [default to $false]
-**LanguageId** | [**IntModel**](IntModel.md) |  | [optional] 
-**Category** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**LanguageId** | [**CreateWebRequestWebLanguage**](CreateWebRequestWebLanguage.md) |  | [optional] 
+**LanguageSettings** | [**ServiceLanguageSetting[]**](ServiceLanguageSetting.md) |  | [optional] 
+**Category** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 **ActivityGalleryFlow** | **String** |  | [optional] 
 **ApproveProcessFlow** | **String** |  | [optional] 
 
@@ -27,6 +28,7 @@ $DynamicServiceForRequest = New-Cloud.Governance.ClientDynamicServiceForRequest 
  -Status null `
  -ShowServiceInCatalog null `
  -LanguageId null `
+ -LanguageSettings null `
  -Category null `
  -ActivityGalleryFlow null `
  -ApproveProcessFlow null

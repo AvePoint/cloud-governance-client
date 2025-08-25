@@ -11,9 +11,11 @@ Name | Type | Description | Notes
 **FieldType** | [**MetadataFieldType**](MetadataFieldType.md) |  | [optional] 
 **FieldTypeDescription** | **String** |  | [optional] 
 **MetadataValue** | **String** |  | [optional] 
+**Content** | **String** |  | [optional] 
 **ShowInReportType** | [**MetadataDisplayType**](MetadataDisplayType.md) |  | [optional] 
 **ShowInReportTypeDescription** | **String** |  | [optional] 
 **LastModifiedTime** | **System.DateTime** |  | [optional] 
+**CreatedSource** | **Int32** |  | [optional] [default to 0]
 
 ## Examples
 
@@ -27,9 +29,11 @@ $OldMetadataGridModel = New-Cloud.Governance.ClientOldMetadataGridModel  -Create
  -FieldType null `
  -FieldTypeDescription null `
  -MetadataValue null `
+ -Content null `
  -ShowInReportType null `
  -ShowInReportTypeDescription null `
- -LastModifiedTime null
+ -LastModifiedTime null `
+ -CreatedSource null
 ```
 
 - Convert the resource to JSON

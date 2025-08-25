@@ -35,6 +35,9 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** |  | [optional] 
 **HasSubRequest** | **Boolean** |  | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) |  | [optional] 
+**RequestResourceTypeDescription** | **String** |  | [optional] 
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] 
 **Metadata** | [**ReportMetadata[]**](ReportMetadata.md) |  | [optional] 
 
 ## Examples
@@ -73,6 +76,9 @@ $AllRequestList = New-Cloud.Governance.ClientAllRequestList  -Id null `
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
+ -RequestResourceTypeDescription null `
+ -SubRequestType null `
  -Metadata null
 ```
 

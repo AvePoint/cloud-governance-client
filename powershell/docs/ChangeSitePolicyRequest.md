@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**GuidModel**](GuidModel.md) | The new site collection policy information settings | [optional] 
-**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original site collection policy information settings | [optional] [readonly] 
+**Policy** | [**ChangeSitePolicyRequestPolicy**](ChangeSitePolicyRequestPolicy.md) |  | [optional] 
+**OriginalPolicy** | [**ChangeSitePolicyRequestOriginalPolicy**](ChangeSitePolicyRequestOriginalPolicy.md) |  | [optional] 
 **IsLeaseEnabled** | **Boolean** | Whether to enable the site collection lease extension. | [optional] [default to $false]
 **ChangePolicyConfig** | [**AssignBy**](AssignBy.md) | Set how to assign the site collection policy. | [optional] 
 **StartDateType** | [**StartDateType**](StartDateType.md) | Site collection lease start date configuration after a policy change | [optional] 
@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -44,6 +45,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -82,6 +85,7 @@ $ChangeSitePolicyRequest = New-Cloud.Governance.ClientChangeSitePolicyRequest  -
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -89,7 +93,9 @@ $ChangeSitePolicyRequest = New-Cloud.Governance.ClientChangeSitePolicyRequest  -
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

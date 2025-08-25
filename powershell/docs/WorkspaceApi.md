@@ -17,7 +17,7 @@ Method | HTTP request | Description
 <a name="Get-GroupMetadata"></a>
 # **Get-GroupMetadata**
 > RequestMetadata[] Get-GroupMetadata<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 get group/teams metadata
 
@@ -40,7 +40,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 
 # get group/teams metadata
 try {
@@ -55,7 +55,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 <a name="Get-MyExchangeResourceInformation"></a>
 # **Get-MyExchangeResourceInformation**
 > MyExchangeResource Get-MyExchangeResourceInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 
 
@@ -98,7 +98,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 
 try {
      $Result = Get-MyExchangeResourceInformation -Id $Id
@@ -112,7 +112,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 <a name="Get-MyGroupInformation"></a>
 # **Get-MyGroupInformation**
 > ApiMyGroup Get-MyGroupInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 get O365 group/teams information
 
@@ -155,7 +155,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 
 # get O365 group/teams information
 try {
@@ -170,7 +170,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 <a name="Get-MyResourceMailboxInformation"></a>
 # **Get-MyResourceMailboxInformation**
 > MyResourceMailbox Get-MyResourceMailboxInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 
 
@@ -213,7 +213,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 
 try {
      $Result = Get-MyResourceMailboxInformation -Id $Id
@@ -227,7 +227,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 <a name="Get-MySharedMailboxInformation"></a>
 # **Get-MySharedMailboxInformation**
 > MySharedMailbox Get-MySharedMailboxInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 
 
@@ -270,7 +270,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 
 try {
      $Result = Get-MySharedMailboxInformation -Id $Id
@@ -284,7 +284,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 <a name="Get-MySiteInformation"></a>
 # **Get-MySiteInformation**
 > MySite Get-MySiteInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
 get site information
 
@@ -327,7 +327,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
 
 # get site information
 try {
@@ -342,7 +342,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | [**String**](String.md)|  | 
+ **Id** | **String**|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -448,8 +448,8 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource (optional)
-$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource (optional)
+$Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, objectId, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource, lastActivityTime, sharePointSiteId, primaryContactStatusOfEnpower, secondaryContactStatusOfEnpower (optional)
+$Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, objectId, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource, lastActivityTime, sharePointSiteId, primaryContactStatusOfEnpower, secondaryContactStatusOfEnpower (optional)
 $Search = "MySearch" # String | Search for name (optional)
 $Top = 56 # Int32 |  Define the number of records you want to return, max value is 200, default value is 200 (optional)
 $Skip = "MySkip" # String |  Define the number of records you want to skip, default value is 0 (optional)
@@ -468,8 +468,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource | [optional] 
- **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource | [optional] 
+ **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, objectId, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource, lastActivityTime, sharePointSiteId, primaryContactStatusOfEnpower, secondaryContactStatusOfEnpower | [optional] 
+ **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, objectId, name, type, siteUrl, groupEmail, primaryContact, phase, isCurrentRenewer, createdTime, status, autoImportProfileId, pendingAction, secondaryContact, policy, policyId, renewalProfile, renewalProfileId, electionProfile, electionProfileId, quotaProfile, quotaProfileId, externalSharingProfile, externalSharingProfileId, description, primaryAdmin, additionalAdmin, geoLocation, storageLimit, storageUsage, classification, privacy, sensitivity, enableDynamicMembership, webLink, createdSource, lastActivityTime, sharePointSiteId, primaryContactStatusOfEnpower, secondaryContactStatusOfEnpower | [optional] 
  **Search** | **String**| Search for name | [optional] 
  **Top** | **Int32**|  Define the number of records you want to return, max value is 200, default value is 200 | [optional] 
  **Skip** | **String**|  Define the number of records you want to skip, default value is 0 | [optional] 

@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 **SiteId** | **String** |  | [optional] 
 **SiteUrl** | **String** |  | [optional] 
 **SiteTitle** | **String** | Site title | [optional] 
-**SiteTitleSetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
-**SiteDescriptionSetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**SiteTitleSetting** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
+**SiteDescriptionSetting** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
 **EnableChangedMetadata** | **Boolean** |  | [optional] [readonly] [default to $false]
 **ChangedMetadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **OriginalSiteMetadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] [readonly] 
 **DeploymentPlanName** | **String** |  | [optional] 
-**HubSiteSettings** | [**HubSiteChangedSettings**](HubSiteChangedSettings.md) |  | [optional] 
-**SiteSensitivitySetting** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**HubSiteSettings** | [**ChangeSiteSettingRequestHubSiteSettings**](ChangeSiteSettingRequestHubSiteSettings.md) |  | [optional] 
+**SiteSensitivitySetting** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -42,6 +43,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -78,6 +81,7 @@ $ChangeSiteSettingRequest = New-Cloud.Governance.ClientChangeSiteSettingRequest 
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -85,7 +89,9 @@ $ChangeSiteSettingRequest = New-Cloud.Governance.ClientChangeSiteSettingRequest 
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

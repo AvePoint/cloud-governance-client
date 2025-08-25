@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RenewalTaskCompleted** | [**RenewalTaskHookMessage**](RenewalTaskHookMessage.md) | When a Renewal Task is Completed | [optional] 
-**TaskCreated** | [**TaskHookMessage**](TaskHookMessage.md) |  | [optional] 
-**AutoImportCompleted** | [**AutoImportProcessHookMessage**](AutoImportProcessHookMessage.md) | When an import process with pre-defined governance details or end user completes a confirm governance details task is completed | [optional] 
-**RequestsRelated** | [**RequestHookMessage**](RequestHookMessage.md) |  | [optional] 
-**LifecycleHookMessage** | [**LifecycleHookMessage**](LifecycleHookMessage.md) |  | [optional] 
-**ElectionHookMessage** | [**ElectionHookMessage**](ElectionHookMessage.md) |  | [optional] 
+**RenewalTaskCompleted** | [**HookMessageListRenewalTaskCompleted**](HookMessageListRenewalTaskCompleted.md) |  | [optional] 
+**TaskCreated** | [**HookMessageListTaskCreated**](HookMessageListTaskCreated.md) |  | [optional] 
+**AutoImportCompleted** | [**HookMessageListAutoImportCompleted**](HookMessageListAutoImportCompleted.md) |  | [optional] 
+**RequestsRelated** | [**HookMessageListRequestsRelated**](HookMessageListRequestsRelated.md) |  | [optional] 
+**LifecycleHookMessage** | [**HookMessageListLifecycleHookMessage**](HookMessageListLifecycleHookMessage.md) |  | [optional] 
+**ElectionHookMessage** | [**HookMessageListElectionHookMessage**](HookMessageListElectionHookMessage.md) |  | [optional] 
 
 ## Examples
 

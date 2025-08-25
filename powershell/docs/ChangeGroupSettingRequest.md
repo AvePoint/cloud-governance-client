@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **GroupDescription** | **String** |  | [optional] 
 **OriginalGroupDescription** | **String** |  | [optional] 
 **OriginalYammerGroupInfo** | **String** |  | [optional] 
-**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**OriginalPrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
-**OriginalSecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**PrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**OriginalPrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**SecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**OriginalSecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
 **GroupOwners** | [**GroupMembershipItem[]**](GroupMembershipItem.md) |  | [optional] 
 **GroupMembers** | [**GroupMembershipItem[]**](GroupMembershipItem.md) |  | [optional] 
 **IsDynamicMembership** | **Boolean** |  | [optional] [default to $false]
@@ -39,10 +39,10 @@ Name | Type | Description | Notes
 **NetworkId** | **String** |  | [optional] 
 **GroupObjectId** | **String** |  | [optional] 
 **EnableTeamCollaboration** | **Boolean** |  | [optional] [default to $false]
-**TimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | TimeZoneSettings | [optional] 
-**OriginalTimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | OriginalTimeZoneSettings | [optional] 
-**LocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | LocaleSettings | [optional] 
-**OriginalLocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | OriginalLocaleSettings | [optional] 
+**TimeZoneSettings** | [**ChangeGroupSettingRequestTimeZoneSettings**](ChangeGroupSettingRequestTimeZoneSettings.md) |  | [optional] 
+**OriginalTimeZoneSettings** | [**ChangeGroupSettingRequestOriginalTimeZoneSettings**](ChangeGroupSettingRequestOriginalTimeZoneSettings.md) |  | [optional] 
+**LocaleSettings** | [**ChangeGroupSettingRequestLocaleSettings**](ChangeGroupSettingRequestLocaleSettings.md) |  | [optional] 
+**OriginalLocaleSettings** | [**ChangeGroupSettingRequestOriginalLocaleSettings**](ChangeGroupSettingRequestOriginalLocaleSettings.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -63,6 +63,7 @@ Name | Type | Description | Notes
 **CreatedTime** | **System.DateTime** | Created time of request. | [optional] [readonly] 
 **HasSubRequest** | **Boolean** | HasSubRequest | [optional] [default to $false]
 **IsEnabledPassback** | **Boolean** |  | [optional] [default to $false]
+**RequestResourceType** | [**RequestResourceType**](RequestResourceType.md) | RequestResourceType | [optional] 
 **ModifiedBy** | **String** | ModifiedBy | [optional] 
 **ModifiedByDisplayName** | **String** | ModifiedByDisplayName | [optional] 
 **ModifiedDate** | **System.DateTime** | ModifiedDate | [optional] 
@@ -71,6 +72,8 @@ Name | Type | Description | Notes
 **ApprovalStageName** | **String** | Approval stage name of request. | [optional] [readonly] 
 **Participants** | **String** | Participants of request. | [optional] [readonly] 
 **ObjectID** | **String** | Object full path/email/private channel of request. | [optional] [readonly] 
+**CreatedSource** | **Int32** |  | [optional] [readonly] [default to 0]
+**SubRequestType** | [**SubRequestType**](SubRequestType.md) |  | [optional] [readonly] 
 
 ## Examples
 
@@ -136,6 +139,7 @@ $ChangeGroupSettingRequest = New-Cloud.Governance.ClientChangeGroupSettingReques
  -CreatedTime null `
  -HasSubRequest null `
  -IsEnabledPassback null `
+ -RequestResourceType null `
  -ModifiedBy null `
  -ModifiedByDisplayName null `
  -ModifiedDate null `
@@ -143,7 +147,9 @@ $ChangeGroupSettingRequest = New-Cloud.Governance.ClientChangeGroupSettingReques
  -FullPath null `
  -ApprovalStageName null `
  -Participants null `
- -ObjectID null
+ -ObjectID null `
+ -CreatedSource null `
+ -SubRequestType null
 ```
 
 - Convert the resource to JSON

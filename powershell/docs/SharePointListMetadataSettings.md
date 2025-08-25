@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **AdditionalColumn** | **String** |  | [optional] 
 **AdditionalColumnType** | **String** |  | [optional] 
 **AdditionalColumnName** | **String** |  | [optional] 
-**Value** | [**LookupListValue**](LookupListValue.md) | Value of Lookup User Profile or Azure Ad metadata. | [optional] 
+**Value** | [**SharePointListMetadataSettingsValue**](SharePointListMetadataSettingsValue.md) |  | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples

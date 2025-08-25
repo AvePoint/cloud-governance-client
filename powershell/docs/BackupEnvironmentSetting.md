@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **IsBackupSource** | **Boolean** |  | [optional] [default to $false]
 **IsBackupDestination** | **Boolean** |  | [optional] [default to $false]
-**StoragePolicy** | [**GuidModel**](GuidModel.md) |  | [optional] 
+**StoragePolicy** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
 
 ## Examples
 

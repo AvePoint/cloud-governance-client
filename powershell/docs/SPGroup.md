@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **Int32** |  | [optional] [default to 0]
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
-**Owner** | [**SPPrincipal**](SPPrincipal.md) |  | [optional] 
+**Owner** | [**SPGroupOwner**](SPGroupOwner.md) |  | [optional] 
 **Members** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **PermissionLevels** | **String[]** |  | [optional] 
 **SpGroupViewType** | [**SPGroupViewOption**](SPGroupViewOption.md) |  | [optional] 

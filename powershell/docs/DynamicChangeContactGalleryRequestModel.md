@@ -3,11 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectInfo** | [**ChangeContactObjectModel**](ChangeContactObjectModel.md) |  | [optional] 
-**ChangeContactInfo** | [**DynamicChangeContactModel**](DynamicChangeContactModel.md) |  | [optional] 
+**ObjectInfo** | [**DynamicChangeContactGalleryRequestModelObjectInfo**](DynamicChangeContactGalleryRequestModelObjectInfo.md) |  | [optional] 
+**ChangeContactInfo** | [**DynamicChangeContactGalleryRequestModelChangeContactInfo**](DynamicChangeContactGalleryRequestModelChangeContactInfo.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -17,7 +19,9 @@ $DynamicChangeContactGalleryRequestModel = New-Cloud.Governance.ClientDynamicCha
  -ChangeContactInfo null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON

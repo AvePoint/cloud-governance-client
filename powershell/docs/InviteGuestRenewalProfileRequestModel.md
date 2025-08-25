@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OneTimeRenewalSetting** | [**InviteGuestOneTimeRenewalSettingModel**](InviteGuestOneTimeRenewalSettingModel.md) |  | [optional] 
+**OneTimeRenewalSetting** | [**InviteGuestRenewalProfileRequestModelOneTimeRenewalSetting**](InviteGuestRenewalProfileRequestModelOneTimeRenewalSetting.md) |  | [optional] 
 **Value** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **ValueDisplayName** | **String** |  | [optional] 

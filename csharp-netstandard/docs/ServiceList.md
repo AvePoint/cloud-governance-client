@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Category** | **string** |  | [optional] 
 **Contact** | **string** |  | [optional] 
 **LanguageId** | **int** |  | [optional] [default to 0]
+**LanguageSettingIds** | **List&lt;int&gt;** |  | [optional] 
 **Type** | **ServiceType** |  | [optional] 
 **TypeDescription** | **string** |  | [optional] 
 **IsQuestionnaire** | **bool** |  | [optional] [default to false]

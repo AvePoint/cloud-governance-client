@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **PrincipalType** | [**SPPrincipalType**](SPPrincipalType.md) |  | [optional] 
 **PrincipalTypeDescription** | **String** |  | [optional] 
 **PermissionLevels** | **String[]** |  | [optional] 
-**TemporaryPermissionSetting** | [**TemporaryPermissionRequestSetting**](TemporaryPermissionRequestSetting.md) |  | [optional] 
+**TemporaryPermissionSetting** | [**GrantPermissionModelPermissionDurationSettings**](GrantPermissionModelPermissionDurationSettings.md) |  | [optional] 
 **ObjectId** | **String** |  | [optional] 
 
 ## Examples

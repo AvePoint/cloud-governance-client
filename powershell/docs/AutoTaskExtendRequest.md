@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ExtendDurationType** | [**ApiDurationType**](ApiDurationType.md) |  | [optional] 
 **TaskId** | **String** |  | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
-**Comments** | [**CommentsParam**](CommentsParam.md) |  | [optional] 
+**Comments** | [**AutoTaskExtendRequestComments**](AutoTaskExtendRequestComments.md) |  | [optional] 
 
 ## Examples
 

@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExternalSharing** | [**SharingCapabilitiesChangedValueRequestModel**](SharingCapabilitiesChangedValueRequestModel.md) |  | [optional] 
-**GuestAccessExpireSetting** | [**SharingExpireSettingModelChangedValueRequestModel**](SharingExpireSettingModelChangedValueRequestModel.md) |  | [optional] 
-**SharingAdvanceSetting** | [**SharingAdvanceSettingModelChangedValueRequestModel**](SharingAdvanceSettingModelChangedValueRequestModel.md) |  | [optional] 
-**SharingLinkType** | [**SharingLinkTypeChangedValueRequestModel**](SharingLinkTypeChangedValueRequestModel.md) |  | [optional] 
-**AnyoneLinksExpireSetting** | [**SharingExpireSettingModelChangedValueRequestModel**](SharingExpireSettingModelChangedValueRequestModel.md) |  | [optional] 
-**LinkPermissionType** | [**LinkPermissionTypeChangedValueRequestModel**](LinkPermissionTypeChangedValueRequestModel.md) |  | [optional] 
-**TenantLevelSetting** | [**SPTenantSharingSettingModel**](SPTenantSharingSettingModel.md) |  | [optional] 
+**ExternalSharing** | [**ChangeSiteSharingRequestModelExternalSharing**](ChangeSiteSharingRequestModelExternalSharing.md) |  | [optional] 
+**GuestAccessExpireSetting** | [**ChangeSiteSharingRequestModelGuestAccessExpireSetting**](ChangeSiteSharingRequestModelGuestAccessExpireSetting.md) |  | [optional] 
+**SharingAdvanceSetting** | [**ChangeSiteSharingRequestModelSharingAdvanceSetting**](ChangeSiteSharingRequestModelSharingAdvanceSetting.md) |  | [optional] 
+**SharingLinkType** | [**ChangeSiteSharingRequestModelSharingLinkType**](ChangeSiteSharingRequestModelSharingLinkType.md) |  | [optional] 
+**AnyoneLinksExpireSetting** | [**ChangeSiteSharingRequestModelGuestAccessExpireSetting**](ChangeSiteSharingRequestModelGuestAccessExpireSetting.md) |  | [optional] 
+**LinkPermissionType** | [**ChangeSiteSharingRequestModelLinkPermissionType**](ChangeSiteSharingRequestModelLinkPermissionType.md) |  | [optional] 
+**TenantLevelSetting** | [**ChangeSiteSharingRequestModelTenantLevelSetting**](ChangeSiteSharingRequestModelTenantLevelSetting.md) |  | [optional] 
 **IsEnableSensitivityLabel** | **Boolean** |  | [optional] [default to $false]
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 

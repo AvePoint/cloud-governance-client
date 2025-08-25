@@ -11,12 +11,13 @@ Name | Type | Description | Notes
 **IsApplyQuotaThreshold** | **Boolean** |  | [optional] [default to $false]
 **IsApplyDeactivatedElection** | **Boolean** |  | [optional] [default to $false]
 **IsApplyLifecycle** | **Boolean** |  | [optional] [default to $false]
-**LifecycleRenewalSetting** | [**LifecycleRenewalSetting**](LifecycleRenewalSetting.md) |  | [optional] 
+**LifecycleRenewalSetting** | [**ApplyGroupPolicyModelLifecycleRenewalSetting**](ApplyGroupPolicyModelLifecycleRenewalSetting.md) |  | [optional] 
 **VarFilter** | **String** |  | [optional] 
 **Search** | **String** |  | [optional] 
 **SelectedObjects** | **String[]** |  | [optional] 
 **HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **IsApplyUniqueAccess** | **Boolean** |  | [optional] [default to $false]
+**IsConfirmed** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -35,7 +36,8 @@ $ApplyGroupPolicyModel = New-Cloud.Governance.ClientApplyGroupPolicyModel  -SubT
  -Search null `
  -SelectedObjects null `
  -HasOngoingTasks null `
- -IsApplyUniqueAccess null
+ -IsApplyUniqueAccess null `
+ -IsConfirmed null
 ```
 
 - Convert the resource to JSON

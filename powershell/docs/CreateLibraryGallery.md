@@ -3,20 +3,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NameDescription** | [**NameDescription**](NameDescription.md) |  | [optional] 
-**VersionSetting** | [**LibraryVersionSetting**](LibraryVersionSetting.md) |  | [optional] 
-**NavigationSetting** | [**NavigationSetting**](NavigationSetting.md) |  | [optional] 
-**LibraryUrl** | [**LibraryScope**](LibraryScope.md) |  | [optional] 
-**ConstructedUrl** | [**ConstructedUrl**](ConstructedUrl.md) |  | [optional] 
-**PermissionSettings** | [**ListPermissionSetting**](ListPermissionSetting.md) |  | [optional] 
-**LibraryDesign** | [**LibraryDesign**](LibraryDesign.md) |  | [optional] 
-**ContentTypes** | [**ContentTypes**](ContentTypes.md) |  | [optional] 
-**PnpTemplate** | [**PnpTemplate**](PnpTemplate.md) |  | [optional] 
+**NameDescription** | [**CreateLibraryGalleryNameDescription**](CreateLibraryGalleryNameDescription.md) |  | [optional] 
+**VersionSetting** | [**CreateLibraryGalleryVersionSetting**](CreateLibraryGalleryVersionSetting.md) |  | [optional] 
+**NavigationSetting** | [**CreateLibraryGalleryNavigationSetting**](CreateLibraryGalleryNavigationSetting.md) |  | [optional] 
+**LibraryUrl** | [**CreateLibraryGalleryLibraryUrl**](CreateLibraryGalleryLibraryUrl.md) |  | [optional] 
+**ConstructedUrl** | [**CreateLibraryGalleryConstructedUrl**](CreateLibraryGalleryConstructedUrl.md) |  | [optional] 
+**PermissionSettings** | [**CreateLibraryGalleryPermissionSettings**](CreateLibraryGalleryPermissionSettings.md) |  | [optional] 
+**LibraryDesign** | [**CreateLibraryGalleryLibraryDesign**](CreateLibraryGalleryLibraryDesign.md) |  | [optional] 
+**ContentTypes** | [**CreateCommunityGalleryContentTypes**](CreateCommunityGalleryContentTypes.md) |  | [optional] 
+**PnpTemplate** | [**CreateLibraryGalleryPnpTemplate**](CreateLibraryGalleryPnpTemplate.md) |  | [optional] 
 **FolderDefaultValues** | [**FolderDefaultValueSetting[]**](FolderDefaultValueSetting.md) |  | [optional] 
+**AddSiteColumns** | [**CreateLibraryGalleryAddSiteColumns**](CreateLibraryGalleryAddSiteColumns.md) |  | [optional] 
+**LibraryRecordDeclaration** | [**CreateLibraryGalleryLibraryRecordDeclaration**](CreateLibraryGalleryLibraryRecordDeclaration.md) |  | [optional] 
+**SetColumnDefaultValue** | [**CreateLibraryGallerySetColumnDefaultValue**](CreateLibraryGallerySetColumnDefaultValue.md) |  | [optional] 
 **ListFullUrl** | **String** |  | [optional] [readonly] 
+**CreateLibraryNotifyOpusForNewFiles** | [**CreateLibraryGalleryCreateLibraryNotifyOpusForNewFiles**](CreateLibraryGalleryCreateLibraryNotifyOpusForNewFiles.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
+**IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
+**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
 
 ## Examples
 
@@ -32,10 +38,16 @@ $CreateLibraryGallery = New-Cloud.Governance.ClientCreateLibraryGallery  -NameDe
  -ContentTypes null `
  -PnpTemplate null `
  -FolderDefaultValues null `
+ -AddSiteColumns null `
+ -LibraryRecordDeclaration null `
+ -SetColumnDefaultValue null `
  -ListFullUrl null `
+ -CreateLibraryNotifyOpusForNewFiles null `
  -GalleryType null `
  -GalleryInternalName null `
- -GalleryMetadata null
+ -GalleryMetadata null `
+ -IsTenantAllowGuest null `
+ -RequestSensitivityLabel null
 ```
 
 - Convert the resource to JSON
