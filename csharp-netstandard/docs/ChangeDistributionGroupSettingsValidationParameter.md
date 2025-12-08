@@ -1,0 +1,17 @@
+# Cloud.Governance.Client.Model.ChangeDistributionGroupSettingsValidationParameter
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**TenantId** | **Guid** |  | [optional] 
+**ObjectId** | **Guid** |  | [optional] 
+**Email** | **string** |  | [optional] 
+**DisplayName** | **string** |  | [optional] 
+**IsAllowChangeDomain** | **bool** |  | [optional] [default to false]
+**ActionActivityTitle** | **string** |  | [optional] 
+**SendAsActivityId** | **string** |  | [optional] 
+**SendOnBehalfActivityId** | **string** |  | [optional] 
+**DeliveryManagementActivityId** | **string** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

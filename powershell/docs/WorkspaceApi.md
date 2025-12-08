@@ -17,7 +17,7 @@ Method | HTTP request | Description
 <a name="Get-GroupMetadata"></a>
 # **Get-GroupMetadata**
 > RequestMetadata[] Get-GroupMetadata<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get group/teams metadata
 
@@ -40,7 +40,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get group/teams metadata
 try {
@@ -55,7 +55,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 <a name="Get-MyExchangeResourceInformation"></a>
 # **Get-MyExchangeResourceInformation**
 > MyExchangeResource Get-MyExchangeResourceInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 
 
@@ -98,7 +98,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 try {
      $Result = Get-MyExchangeResourceInformation -Id $Id
@@ -112,7 +112,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 <a name="Get-MyGroupInformation"></a>
 # **Get-MyGroupInformation**
 > ApiMyGroup Get-MyGroupInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get O365 group/teams information
 
@@ -155,7 +155,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get O365 group/teams information
 try {
@@ -170,7 +170,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 <a name="Get-MyResourceMailboxInformation"></a>
 # **Get-MyResourceMailboxInformation**
 > MyResourceMailbox Get-MyResourceMailboxInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 
 
@@ -213,7 +213,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 try {
      $Result = Get-MyResourceMailboxInformation -Id $Id
@@ -227,7 +227,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 <a name="Get-MySharedMailboxInformation"></a>
 # **Get-MySharedMailboxInformation**
 > MySharedMailbox Get-MySharedMailboxInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 
 
@@ -270,7 +270,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 try {
      $Result = Get-MySharedMailboxInformation -Id $Id
@@ -284,7 +284,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 <a name="Get-MySiteInformation"></a>
 # **Get-MySiteInformation**
 > MySite Get-MySiteInformation<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get site information
 
@@ -327,7 +327,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get site information
 try {
@@ -342,7 +342,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

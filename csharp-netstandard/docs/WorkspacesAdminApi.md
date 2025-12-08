@@ -13,10 +13,21 @@ Method | HTTP request | Description
 [**ArchiveWorkspace**](WorkspacesAdminApi.md#archiveworkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 [**CompleteWorkspaceRenewalTask**](WorkspacesAdminApi.md#completeworkspacerenewaltask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 [**DeleteWorkspaces**](WorkspacesAdminApi.md#deleteworkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
+[**GetGroupConfirmMetrics**](WorkspacesAdminApi.md#getgroupconfirmmetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/confirm | 
+[**GetGroupDetail**](WorkspacesAdminApi.md#getgroupdetail) | **GET** /admin/directory/workspace/groups/{id} | get group detail
+[**GetGroupElectionMetrics**](WorkspacesAdminApi.md#getgroupelectionmetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/election | 
+[**GetGroupRenewalMetrics**](WorkspacesAdminApi.md#getgrouprenewalmetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/renewal | 
+[**GetGroupsConfirmMetrics**](WorkspacesAdminApi.md#getgroupsconfirmmetrics) | **GET** /admin/directory/workspace/{type}/metrics/confirm | 
+[**GetGroupsElectionMetrics**](WorkspacesAdminApi.md#getgroupselectionmetrics) | **GET** /admin/directory/workspace/{type}/metrics/election | 
+[**GetGroupsRenewalMetrics**](WorkspacesAdminApi.md#getgroupsrenewalmetrics) | **GET** /admin/directory/workspace/{type}/metrics/renewal | 
+[**GetGroupsSyncJobMetrics**](WorkspacesAdminApi.md#getgroupssyncjobmetrics) | **GET** /admin/directory/workspace/{type}/metrics/sync | 
 [**GetOngoingTasks**](WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
+[**GetSiteDetail**](WorkspacesAdminApi.md#getsitedetail) | **GET** /admin/directory/workspace/sites/{id} | get site detail
+[**GetTeamsDetail**](WorkspacesAdminApi.md#getteamsdetail) | **GET** /admin/directory/workspace/teams/{id} | get teams detail
 [**GetWorkspaceFilters**](WorkspacesAdminApi.md#getworkspacefilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 [**GetWorkspaces**](WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
 [**GetWorkspacesPost**](WorkspacesAdminApi.md#getworkspacespost) | **POST** /admin/directory/workspace | get managed workspaces
+[**GetYammerDetail**](WorkspacesAdminApi.md#getyammerdetail) | **GET** /admin/directory/workspace/yammers/{id} | get yammer detail
 [**LockWorkspaces**](WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 [**SpecifyContacts**](WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 [**TriggerWorkspaceRenewal**](WorkspacesAdminApi.md#triggerworkspacerenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
@@ -767,6 +778,697 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getgroupconfirmmetrics"></a>
+# **GetGroupConfirmMetrics**
+> List&lt;AutoImportConfirmMetricsInfo&gt; GetGroupConfirmMetrics (MetricWorkspaceType type, Guid id, DateTime? startTime = null, DateTime? endTime = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupConfirmMetricsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var type = ;  // MetricWorkspaceType | 
+            var id = new Guid(); // Guid | 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+
+            try
+            {
+                List<AutoImportConfirmMetricsInfo> result = apiInstance.GetGroupConfirmMetrics(type, id, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupConfirmMetrics: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **MetricWorkspaceType**|  | 
+ **id** | [**Guid**](Guid.md)|  | 
+ **startTime** | **DateTime?**|  | [optional] 
+ **endTime** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;AutoImportConfirmMetricsInfo&gt;**](AutoImportConfirmMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgroupdetail"></a>
+# **GetGroupDetail**
+> GroupDetailModel GetGroupDetail (Guid id)
+
+get group detail
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupDetailExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var id = new Guid(); // Guid | 
+
+            try
+            {
+                // get group detail
+                GroupDetailModel result = apiInstance.GetGroupDetail(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupDetail: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+
+### Return type
+
+[**GroupDetailModel**](GroupDetailModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgroupelectionmetrics"></a>
+# **GetGroupElectionMetrics**
+> List&lt;ContactElectionMetricsInfo&gt; GetGroupElectionMetrics (MetricWorkspaceType type, Guid id, DateTime? startTime = null, DateTime? endTime = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupElectionMetricsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var type = ;  // MetricWorkspaceType | 
+            var id = new Guid(); // Guid | 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+
+            try
+            {
+                List<ContactElectionMetricsInfo> result = apiInstance.GetGroupElectionMetrics(type, id, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupElectionMetrics: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **MetricWorkspaceType**|  | 
+ **id** | [**Guid**](Guid.md)|  | 
+ **startTime** | **DateTime?**|  | [optional] 
+ **endTime** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;ContactElectionMetricsInfo&gt;**](ContactElectionMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgrouprenewalmetrics"></a>
+# **GetGroupRenewalMetrics**
+> List&lt;RenewalMetricsInfo&gt; GetGroupRenewalMetrics (MetricWorkspaceType type, Guid id, DateTime? startTime = null, DateTime? endTime = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupRenewalMetricsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var type = ;  // MetricWorkspaceType | 
+            var id = new Guid(); // Guid | 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+
+            try
+            {
+                List<RenewalMetricsInfo> result = apiInstance.GetGroupRenewalMetrics(type, id, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupRenewalMetrics: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **MetricWorkspaceType**|  | 
+ **id** | [**Guid**](Guid.md)|  | 
+ **startTime** | **DateTime?**|  | [optional] 
+ **endTime** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;RenewalMetricsInfo&gt;**](RenewalMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgroupsconfirmmetrics"></a>
+# **GetGroupsConfirmMetrics**
+> List&lt;AutoImportConfirmMetricsInfo&gt; GetGroupsConfirmMetrics (MetricWorkspaceType type, DateTime? startTime = null, DateTime? endTime = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupsConfirmMetricsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var type = ;  // MetricWorkspaceType | 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+
+            try
+            {
+                List<AutoImportConfirmMetricsInfo> result = apiInstance.GetGroupsConfirmMetrics(type, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupsConfirmMetrics: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **MetricWorkspaceType**|  | 
+ **startTime** | **DateTime?**|  | [optional] 
+ **endTime** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;AutoImportConfirmMetricsInfo&gt;**](AutoImportConfirmMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgroupselectionmetrics"></a>
+# **GetGroupsElectionMetrics**
+> List&lt;ContactElectionMetricsInfo&gt; GetGroupsElectionMetrics (MetricWorkspaceType type, DateTime? startTime = null, DateTime? endTime = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupsElectionMetricsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var type = ;  // MetricWorkspaceType | 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+
+            try
+            {
+                List<ContactElectionMetricsInfo> result = apiInstance.GetGroupsElectionMetrics(type, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupsElectionMetrics: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **MetricWorkspaceType**|  | 
+ **startTime** | **DateTime?**|  | [optional] 
+ **endTime** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;ContactElectionMetricsInfo&gt;**](ContactElectionMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgroupsrenewalmetrics"></a>
+# **GetGroupsRenewalMetrics**
+> List&lt;RenewalMetricsInfo&gt; GetGroupsRenewalMetrics (MetricWorkspaceType type, DateTime? startTime = null, DateTime? endTime = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupsRenewalMetricsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var type = ;  // MetricWorkspaceType | 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+
+            try
+            {
+                List<RenewalMetricsInfo> result = apiInstance.GetGroupsRenewalMetrics(type, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupsRenewalMetrics: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **MetricWorkspaceType**|  | 
+ **startTime** | **DateTime?**|  | [optional] 
+ **endTime** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;RenewalMetricsInfo&gt;**](RenewalMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgroupssyncjobmetrics"></a>
+# **GetGroupsSyncJobMetrics**
+> List&lt;SyncJobMetricsInfo&gt; GetGroupsSyncJobMetrics (MetricWorkspaceType type, DateTime? startTime = null, DateTime? endTime = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetGroupsSyncJobMetricsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var type = ;  // MetricWorkspaceType | 
+            var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+            var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? |  (optional) 
+
+            try
+            {
+                List<SyncJobMetricsInfo> result = apiInstance.GetGroupsSyncJobMetrics(type, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetGroupsSyncJobMetrics: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **MetricWorkspaceType**|  | 
+ **startTime** | **DateTime?**|  | [optional] 
+ **endTime** | **DateTime?**|  | [optional] 
+
+### Return type
+
+[**List&lt;SyncJobMetricsInfo&gt;**](SyncJobMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getongoingtasks"></a>
 # **GetOngoingTasks**
 > List&lt;WorksapceOngoingTasksModel&gt; GetOngoingTasks (WorkspaceType type, string groupNameOrUrl)
@@ -832,6 +1534,172 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;WorksapceOngoingTasksModel&gt;**](WorksapceOngoingTasksModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsitedetail"></a>
+# **GetSiteDetail**
+> SiteDetailModel GetSiteDetail (Guid id)
+
+get site detail
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetSiteDetailExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var id = new Guid(); // Guid | 
+
+            try
+            {
+                // get site detail
+                SiteDetailModel result = apiInstance.GetSiteDetail(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetSiteDetail: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+
+### Return type
+
+[**SiteDetailModel**](SiteDetailModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getteamsdetail"></a>
+# **GetTeamsDetail**
+> TeamsDetailModel GetTeamsDetail (Guid id)
+
+get teams detail
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetTeamsDetailExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var id = new Guid(); // Guid | 
+
+            try
+            {
+                // get teams detail
+                TeamsDetailModel result = apiInstance.GetTeamsDetail(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetTeamsDetail: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+
+### Return type
+
+[**TeamsDetailModel**](TeamsDetailModel.md)
 
 ### Authorization
 
@@ -1101,6 +1969,89 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WorkspaceGridModelPageResult**](WorkspaceGridModelPageResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getyammerdetail"></a>
+# **GetYammerDetail**
+> YammerDetailModel GetYammerDetail (Guid id)
+
+get yammer detail
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetYammerDetailExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new WorkspacesAdminApi(config);
+
+            var id = new Guid(); // Guid | 
+
+            try
+            {
+                // get yammer detail
+                YammerDetailModel result = apiInstance.GetYammerDetail(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling WorkspacesAdminApi.GetYammerDetail: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**Guid**](Guid.md)|  | 
+
+### Return type
+
+[**YammerDetailModel**](YammerDetailModel.md)
 
 ### Authorization
 

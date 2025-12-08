@@ -92,6 +92,7 @@ Name | Type | Description | Notes
 **CommunityLink** | [**AnyType**](.md) |  | [optional] 
 **IsSubInviteGuestRequest** | [**AnyType**](.md) |  | [optional] 
 **SecondaryContactPeoplePickerProfileId** | [**AnyType**](.md) |  | [optional] 
+**OldVersion** | [**AnyType**](.md) |  | [optional] 
 
 ## Examples
 
@@ -185,7 +186,8 @@ $ApiTaskDynamicProperties = New-Cloud.Governance.ClientApiTaskDynamicProperties 
  -Type null `
  -CommunityLink null `
  -IsSubInviteGuestRequest null `
- -SecondaryContactPeoplePickerProfileId null
+ -SecondaryContactPeoplePickerProfileId null `
+ -OldVersion null
 ```
 
 - Convert the resource to JSON

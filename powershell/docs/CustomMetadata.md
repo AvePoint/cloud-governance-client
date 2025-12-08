@@ -7,21 +7,22 @@ Name | Type | Description | Notes
 **Name** | **String** |  | [optional] 
 **DisplayName** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
+**AdminDescription** | **String** |  | [optional] 
 **Type** | [**MetadataFieldType**](MetadataFieldType.md) |  | [optional] 
 **DisplayType** | [**DisplayInReportType**](DisplayInReportType.md) |  | [optional] 
 **AssignBy** | [**AssignBy**](AssignBy.md) |  | [optional] 
 **EnableTextValidation** | **Boolean** |  | [optional] [default to $false]
-**TextValidationRule** | [**CreateListUrlSettingsTextValidationRule**](CreateListUrlSettingsTextValidationRule.md) |  | [optional] 
-**BooleanMetadataSettings** | [**CustomMetadataBooleanMetadataSettings**](CustomMetadataBooleanMetadataSettings.md) |  | [optional] 
-**TermsMetadataSettings** | [**CustomMetadataTermsMetadataSettings**](CustomMetadataTermsMetadataSettings.md) |  | [optional] 
-**UserMetadataSettings** | [**CustomMetadataUserMetadataSettings**](CustomMetadataUserMetadataSettings.md) |  | [optional] 
-**UserProfileMetadataSettings** | [**CustomMetadataUserProfileMetadataSettings**](CustomMetadataUserProfileMetadataSettings.md) |  | [optional] 
-**AzureAdMetadataSettings** | [**CustomMetadataAzureAdMetadataSettings**](CustomMetadataAzureAdMetadataSettings.md) |  | [optional] 
-**NonAzureAdMetadataSettings** | [**CustomMetadataNonAzureAdMetadataSettings**](CustomMetadataNonAzureAdMetadataSettings.md) |  | [optional] 
-**ChoiceMetadataSettings** | [**CustomMetadataChoiceMetadataSettings**](CustomMetadataChoiceMetadataSettings.md) |  | [optional] 
-**LinkMetadataSettings** | [**CustomMetadataLinkMetadataSettings**](CustomMetadataLinkMetadataSettings.md) |  | [optional] 
-**SingleLineOrMultipleLineMetadataSettings** | [**CustomMetadataSingleLineOrMultipleLineMetadataSettings**](CustomMetadataSingleLineOrMultipleLineMetadataSettings.md) |  | [optional] 
-**SharePointListMetadataSettings** | [**CustomMetadataSharePointListMetadataSettings**](CustomMetadataSharePointListMetadataSettings.md) |  | [optional] 
+**TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
+**BooleanMetadataSettings** | [**BooleanMetadataSettings**](BooleanMetadataSettings.md) |  | [optional] 
+**TermsMetadataSettings** | [**TermsMetadataSettings**](TermsMetadataSettings.md) |  | [optional] 
+**UserMetadataSettings** | [**UserMetadataSettings**](UserMetadataSettings.md) |  | [optional] 
+**UserProfileMetadataSettings** | [**UserProfileMetadataSettings**](UserProfileMetadataSettings.md) |  | [optional] 
+**AzureAdMetadataSettings** | [**AzureAdMetadataSettings**](AzureAdMetadataSettings.md) |  | [optional] 
+**NonAzureAdMetadataSettings** | [**NonAzureAdMetadataSettings**](NonAzureAdMetadataSettings.md) |  | [optional] 
+**ChoiceMetadataSettings** | [**ChoiceMetadataSettings**](ChoiceMetadataSettings.md) |  | [optional] 
+**LinkMetadataSettings** | [**LinkMetadataSettings**](LinkMetadataSettings.md) |  | [optional] 
+**SingleLineOrMultipleLineMetadataSettings** | [**SingleLineOrMultipleLineMetadataSettings**](SingleLineOrMultipleLineMetadataSettings.md) |  | [optional] 
+**SharePointListMetadataSettings** | [**SharePointListMetadataSettings**](SharePointListMetadataSettings.md) |  | [optional] 
 
 ## Examples
 
@@ -31,6 +32,7 @@ $CustomMetadata = New-Cloud.Governance.ClientCustomMetadata  -Id null `
  -Name null `
  -DisplayName null `
  -Description null `
+ -AdminDescription null `
  -Type null `
  -DisplayType null `
  -AssignBy null `

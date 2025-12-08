@@ -3,11 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
-**SecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **PrimaryContactNotifiedEmail** | **String** |  | [optional] 
 **SecondaryContactNotifiedEmail** | **String** |  | [optional] 
 **IsRemoveSecondaryContact** | **Boolean** |  | [optional] [default to $false]
+**Processor** | **String** |  | [optional] 
 **Workspace** | [**WorkspaceIdTypeModel[]**](WorkspaceIdTypeModel.md) |  | [optional] 
 **IsSelectAllWorkspace** | **Boolean** |  | [optional] [default to $false]
 **Type** | [**WorkspaceType**](WorkspaceType.md) |  | [optional] 
@@ -22,6 +23,7 @@ $SpecifyContactParameter = New-Cloud.Governance.ClientSpecifyContactParameter  -
  -PrimaryContactNotifiedEmail null `
  -SecondaryContactNotifiedEmail null `
  -IsRemoveSecondaryContact null `
+ -Processor null `
  -Workspace null `
  -IsSelectAllWorkspace null `
  -Type null `

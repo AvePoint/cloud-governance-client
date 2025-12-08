@@ -13,10 +13,21 @@ Method | HTTP request | Description
 [**Invoke-ArchiveWorkspace**](WorkspacesAdminApi.md#Invoke-ArchiveWorkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 [**Complete-WorkspaceRenewalTask**](WorkspacesAdminApi.md#Complete-WorkspaceRenewalTask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 [**Invoke-DeleteWorkspaces**](WorkspacesAdminApi.md#Invoke-DeleteWorkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
+[**Get-GroupConfirmMetrics**](WorkspacesAdminApi.md#Get-GroupConfirmMetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/confirm | 
+[**Get-GroupDetail**](WorkspacesAdminApi.md#Get-GroupDetail) | **GET** /admin/directory/workspace/groups/{id} | get group detail
+[**Get-GroupElectionMetrics**](WorkspacesAdminApi.md#Get-GroupElectionMetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/election | 
+[**Get-GroupRenewalMetrics**](WorkspacesAdminApi.md#Get-GroupRenewalMetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/renewal | 
+[**Get-GroupsConfirmMetrics**](WorkspacesAdminApi.md#Get-GroupsConfirmMetrics) | **GET** /admin/directory/workspace/{type}/metrics/confirm | 
+[**Get-GroupsElectionMetrics**](WorkspacesAdminApi.md#Get-GroupsElectionMetrics) | **GET** /admin/directory/workspace/{type}/metrics/election | 
+[**Get-GroupsRenewalMetrics**](WorkspacesAdminApi.md#Get-GroupsRenewalMetrics) | **GET** /admin/directory/workspace/{type}/metrics/renewal | 
+[**Get-GroupsSyncJobMetrics**](WorkspacesAdminApi.md#Get-GroupsSyncJobMetrics) | **GET** /admin/directory/workspace/{type}/metrics/sync | 
 [**Get-OngoingTasks**](WorkspacesAdminApi.md#Get-OngoingTasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
+[**Get-SiteDetail**](WorkspacesAdminApi.md#Get-SiteDetail) | **GET** /admin/directory/workspace/sites/{id} | get site detail
+[**Get-TeamsDetail**](WorkspacesAdminApi.md#Get-TeamsDetail) | **GET** /admin/directory/workspace/teams/{id} | get teams detail
 [**Get-WorkspaceFilters**](WorkspacesAdminApi.md#Get-WorkspaceFilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 [**Get-Workspaces**](WorkspacesAdminApi.md#Get-Workspaces) | **GET** /admin/directory/workspace | get managed workspaces
 [**Get-WorkspacesPost**](WorkspacesAdminApi.md#Get-WorkspacesPost) | **POST** /admin/directory/workspace | get managed workspaces
+[**Get-YammerDetail**](WorkspacesAdminApi.md#Get-YammerDetail) | **GET** /admin/directory/workspace/yammers/{id} | get yammer detail
 [**Lock-Workspaces**](WorkspacesAdminApi.md#Lock-Workspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 [**Invoke-SpecifyContacts**](WorkspacesAdminApi.md#Invoke-SpecifyContacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 [**Invoke-TriggerWorkspaceRenewal**](WorkspacesAdminApi.md#Invoke-TriggerWorkspaceRenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
@@ -51,11 +62,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyCommunityProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApplyCommunityProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $ApiProfileObjectType = New-ApiProfileObjectType 
 $HandleOngoingType = New-HandleOngoingType 
 $HandleTaskType = New-HandleTaskType 
-$ApplyCommunityProfilesModel = New-ApplyCommunityProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyCommunityProfilesModel | apply policy setting (optional)
+$ApplyCommunityProfilesModel = New-ApplyCommunityProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyCommunityProfilesModel | apply policy setting (optional)
 
 # apply groups policy
 try {
@@ -113,11 +124,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyTeamProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApplyTeamProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $ApiProfileObjectType = New-ApiProfileObjectType 
 $HandleOngoingType = New-HandleOngoingType 
 $HandleTaskType = New-HandleTaskType 
-$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyTeamProfilesModel | apply profiles (optional)
+$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyTeamProfilesModel | apply profiles (optional)
 
 # apply group profiles
 try {
@@ -180,9 +191,9 @@ $ApplyGroupPolicyModel = $GroupPolicySubType = New-GroupPolicySubType
 $LeaseDateType = New-LeaseDateType 
 $LeaseStartDateType = New-LeaseStartDateType 
 $HandleOngoingType = New-HandleOngoingType 
-$ApplyGroupPolicyModelLifecycleRenewalSetting = New-ApplyGroupPolicyModelLifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
+$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
 
-$ApplyGroupPolicyModel = New-ApplyGroupPolicyModel -SubType $GroupPolicySubType -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $ApplyGroupPolicyModelLifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false -IsConfirmed $false # ApplyGroupPolicyModel | apply policy setting (optional)
+$ApplyGroupPolicyModel = New-ApplyGroupPolicyModel -SubType $GroupPolicySubType -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false -IsConfirmed $false # ApplyGroupPolicyModel | apply policy setting (optional)
 
 # apply groups policy
 try {
@@ -240,11 +251,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApplyProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $ApiProfileObjectType = New-ApiProfileObjectType 
 $HandleOngoingType = New-HandleOngoingType 
 $HandleTaskType = New-HandleTaskType 
-$ApplyProfilesModel = New-ApplyProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyProfilesModel | apply profiles (optional)
+$ApplyProfilesModel = New-ApplyProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyProfilesModel | apply profiles (optional)
 
 # apply site profiles
 try {
@@ -305,9 +316,9 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $ApplySitePolicyModel = $LeaseDateType = New-LeaseDateType 
 $LeaseStartDateType = New-LeaseStartDateType 
 $HandleOngoingType = New-HandleOngoingType 
-$ApplyGroupPolicyModelLifecycleRenewalSetting = New-ApplyGroupPolicyModelLifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
+$LifecycleRenewalSetting = New-LifecycleRenewalSetting -LeaseDateType $LeaseDateType -StartDateType $LeaseStartDateType -SpecifyStartDate (Get-Date) -HandleOngoingType $HandleOngoingType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -CancelEmailTemplateName "MyCancelEmailTemplateName"
 
-$ApplySitePolicyModel = New-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $ApplyGroupPolicyModelLifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false -IsConfirmed $false # ApplySitePolicyModel | apply policy setting (optional)
+$ApplySitePolicyModel = New-ApplySitePolicyModel -IsApplyDesigner $false -IsApplySiteMaxDepth $false -IsApplyPolicyIcon $false -IsApplyAosPlans $false -PolicyId "MyPolicyId" -IsApplyAllSetting $false -IsApplyQuota $false -IsApplySharing $false -IsApplyQuotaThreshold $false -IsApplyDeactivatedElection $false -IsApplyLifecycle $false -LifecycleRenewalSetting $LifecycleRenewalSetting -VarFilter "MyVarFilter" -Search "MySearch" -SelectedObjects "MySelectedObjects" -HasOngoingTasks $false -IsApplyUniqueAccess $false -IsConfirmed $false # ApplySitePolicyModel | apply policy setting (optional)
 
 # apply site policy
 try {
@@ -365,11 +376,11 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ApplyTeamProfilesModel = $AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ApplyTeamProfilesModel = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $ApiProfileObjectType = New-ApiProfileObjectType 
 $HandleOngoingType = New-HandleOngoingType 
 $HandleTaskType = New-HandleTaskType 
-$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $AzureAdMetadataSettingsOffice365Tenant -EnableElectionProfile $false -ElectionProfile $AzureAdMetadataSettingsOffice365Tenant -EnableQuotaProfile $false -QuotaProfile $AzureAdMetadataSettingsOffice365Tenant -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $AzureAdMetadataSettingsOffice365Tenant -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyTeamProfilesModel | apply profiles (optional)
+$ApplyTeamProfilesModel = New-ApplyTeamProfilesModel -VarFilter "MyVarFilter" -Search "MySearch" -EnableModernRenewalProfile $false -ModernRenewalProfile $GuidModel -EnableElectionProfile $false -ElectionProfile $GuidModel -EnableQuotaProfile $false -QuotaProfile $GuidModel -IsKeepQuota $false -EnableExternalSharingProfile $false -ExternalSharingProfile $GuidModel -ProfileObjectType $ApiProfileObjectType -SelectedObjects "MySelectedObjects" -HandleOngoingType $HandleOngoingType -HandleTaskType $HandleTaskType -IsSendCancelEmail $false -CancelEmailTemplateId "MyCancelEmailTemplateId" -IsConfirmed $false # ApplyTeamProfilesModel | apply profiles (optional)
 
 # apply team profiles
 try {
@@ -592,6 +603,514 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-GroupConfirmMetrics"></a>
+# **Get-GroupConfirmMetrics**
+> AutoImportConfirmMetricsInfo[] Get-GroupConfirmMetrics<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartTime] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndTime] <System.Nullable[System.DateTime]><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Type = "0" # MetricWorkspaceType | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$StartTime = (Get-Date) # System.DateTime |  (optional)
+$EndTime = (Get-Date) # System.DateTime |  (optional)
+
+try {
+     $Result = Get-GroupConfirmMetrics -Type $Type -Id $Id -StartTime $StartTime -EndTime $EndTime
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupConfirmMetrics: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Type** | [**MetricWorkspaceType**](MetricWorkspaceType.md)|  | 
+ **Id** | [**String**](String.md)|  | 
+ **StartTime** | **System.DateTime**|  | [optional] 
+ **EndTime** | **System.DateTime**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**AutoImportConfirmMetricsInfo[]**](AutoImportConfirmMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupDetail"></a>
+# **Get-GroupDetail**
+> GroupDetailModel Get-GroupDetail<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+get group detail
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+
+# get group detail
+try {
+     $Result = Get-GroupDetail -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupDetail: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**GroupDetailModel**](GroupDetailModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupElectionMetrics"></a>
+# **Get-GroupElectionMetrics**
+> ContactElectionMetricsInfo[] Get-GroupElectionMetrics<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartTime] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndTime] <System.Nullable[System.DateTime]><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Type = "0" # MetricWorkspaceType | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$StartTime = (Get-Date) # System.DateTime |  (optional)
+$EndTime = (Get-Date) # System.DateTime |  (optional)
+
+try {
+     $Result = Get-GroupElectionMetrics -Type $Type -Id $Id -StartTime $StartTime -EndTime $EndTime
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupElectionMetrics: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Type** | [**MetricWorkspaceType**](MetricWorkspaceType.md)|  | 
+ **Id** | [**String**](String.md)|  | 
+ **StartTime** | **System.DateTime**|  | [optional] 
+ **EndTime** | **System.DateTime**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ContactElectionMetricsInfo[]**](ContactElectionMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupRenewalMetrics"></a>
+# **Get-GroupRenewalMetrics**
+> RenewalMetricsInfo[] Get-GroupRenewalMetrics<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartTime] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndTime] <System.Nullable[System.DateTime]><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Type = "0" # MetricWorkspaceType | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+$StartTime = (Get-Date) # System.DateTime |  (optional)
+$EndTime = (Get-Date) # System.DateTime |  (optional)
+
+try {
+     $Result = Get-GroupRenewalMetrics -Type $Type -Id $Id -StartTime $StartTime -EndTime $EndTime
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupRenewalMetrics: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Type** | [**MetricWorkspaceType**](MetricWorkspaceType.md)|  | 
+ **Id** | [**String**](String.md)|  | 
+ **StartTime** | **System.DateTime**|  | [optional] 
+ **EndTime** | **System.DateTime**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**RenewalMetricsInfo[]**](RenewalMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupsConfirmMetrics"></a>
+# **Get-GroupsConfirmMetrics**
+> AutoImportConfirmMetricsInfo[] Get-GroupsConfirmMetrics<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartTime] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndTime] <System.Nullable[System.DateTime]><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Type = "0" # MetricWorkspaceType | 
+$StartTime = (Get-Date) # System.DateTime |  (optional)
+$EndTime = (Get-Date) # System.DateTime |  (optional)
+
+try {
+     $Result = Get-GroupsConfirmMetrics -Type $Type -StartTime $StartTime -EndTime $EndTime
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupsConfirmMetrics: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Type** | [**MetricWorkspaceType**](MetricWorkspaceType.md)|  | 
+ **StartTime** | **System.DateTime**|  | [optional] 
+ **EndTime** | **System.DateTime**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**AutoImportConfirmMetricsInfo[]**](AutoImportConfirmMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupsElectionMetrics"></a>
+# **Get-GroupsElectionMetrics**
+> ContactElectionMetricsInfo[] Get-GroupsElectionMetrics<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartTime] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndTime] <System.Nullable[System.DateTime]><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Type = "0" # MetricWorkspaceType | 
+$StartTime = (Get-Date) # System.DateTime |  (optional)
+$EndTime = (Get-Date) # System.DateTime |  (optional)
+
+try {
+     $Result = Get-GroupsElectionMetrics -Type $Type -StartTime $StartTime -EndTime $EndTime
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupsElectionMetrics: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Type** | [**MetricWorkspaceType**](MetricWorkspaceType.md)|  | 
+ **StartTime** | **System.DateTime**|  | [optional] 
+ **EndTime** | **System.DateTime**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**ContactElectionMetricsInfo[]**](ContactElectionMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupsRenewalMetrics"></a>
+# **Get-GroupsRenewalMetrics**
+> RenewalMetricsInfo[] Get-GroupsRenewalMetrics<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartTime] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndTime] <System.Nullable[System.DateTime]><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Type = "0" # MetricWorkspaceType | 
+$StartTime = (Get-Date) # System.DateTime |  (optional)
+$EndTime = (Get-Date) # System.DateTime |  (optional)
+
+try {
+     $Result = Get-GroupsRenewalMetrics -Type $Type -StartTime $StartTime -EndTime $EndTime
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupsRenewalMetrics: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Type** | [**MetricWorkspaceType**](MetricWorkspaceType.md)|  | 
+ **StartTime** | **System.DateTime**|  | [optional] 
+ **EndTime** | **System.DateTime**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**RenewalMetricsInfo[]**](RenewalMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-GroupsSyncJobMetrics"></a>
+# **Get-GroupsSyncJobMetrics**
+> SyncJobMetricsInfo[] Get-GroupsSyncJobMetrics<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Type] <PSCustomObject><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartTime] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndTime] <System.Nullable[System.DateTime]><br>
+
+
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Type = "0" # MetricWorkspaceType | 
+$StartTime = (Get-Date) # System.DateTime |  (optional)
+$EndTime = (Get-Date) # System.DateTime |  (optional)
+
+try {
+     $Result = Get-GroupsSyncJobMetrics -Type $Type -StartTime $StartTime -EndTime $EndTime
+} catch {
+    Write-Host ("Exception occured when calling Get-GroupsSyncJobMetrics: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Type** | [**MetricWorkspaceType**](MetricWorkspaceType.md)|  | 
+ **StartTime** | **System.DateTime**|  | [optional] 
+ **EndTime** | **System.DateTime**|  | [optional] 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**SyncJobMetricsInfo[]**](SyncJobMetricsInfo.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Get-OngoingTasks"></a>
 # **Get-OngoingTasks**
 > WorksapceOngoingTasksModel[] Get-OngoingTasks<br>
@@ -641,6 +1160,122 @@ Name | Type | Description  | Notes
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
 [**WorksapceOngoingTasksModel[]**](WorksapceOngoingTasksModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-SiteDetail"></a>
+# **Get-SiteDetail**
+> SiteDetailModel Get-SiteDetail<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+get site detail
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+
+# get site detail
+try {
+     $Result = Get-SiteDetail -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-SiteDetail: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**SiteDetailModel**](SiteDetailModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Get-TeamsDetail"></a>
+# **Get-TeamsDetail**
+> TeamsDetailModel Get-TeamsDetail<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+get teams detail
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+
+# get teams detail
+try {
+     $Result = Get-TeamsDetail -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-TeamsDetail: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**TeamsDetailModel**](TeamsDetailModel.md)
 
 ### Authorization
 
@@ -857,6 +1492,64 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Get-YammerDetail"></a>
+# **Get-YammerDetail**
+> YammerDetailModel Get-YammerDetail<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
+
+get yammer detail
+
+### Example
+```powershell
+Import-Module -Name Cloud.Governance.Client
+
+$Configuration = Get-Configuration
+
+# You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+$Configuration["BaseUrl"] = "{Cloud_Governance_Modern_API_Endpoint}"
+
+# Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+$Configuration["ApiKey"]["clientSecret"] = "eyJ..."
+
+# Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+# Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+# If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+$Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
+
+
+
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
+
+# get yammer detail
+try {
+     $Result = Get-YammerDetail -Id $Id
+} catch {
+    Write-Host ("Exception occured when calling Get-YammerDetail: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Id** | [**String**](String.md)|  | 
+
+### Return type
+# cmdlet returns PSCustomObject, the return object contains the properties of below type
+[**YammerDetailModel**](YammerDetailModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Lock-Workspaces"></a>
 # **Lock-Workspaces**
 > void Lock-Workspaces<br>
@@ -953,12 +1646,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $Filter = "MyFilter" # String |  (optional)
 $SpecifyContactParameter = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$SpecifyContactParameter = New-SpecifyContactParameter -PrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -PrimaryContactNotifiedEmail "MyPrimaryContactNotifiedEmail" -SecondaryContactNotifiedEmail "MySecondaryContactNotifiedEmail" -IsRemoveSecondaryContact $false -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # SpecifyContactParameter |  (optional)
+$SpecifyContactParameter = New-SpecifyContactParameter -PrimaryContact $ApiUser -SecondaryContact $ApiUser -PrimaryContactNotifiedEmail "MyPrimaryContactNotifiedEmail" -SecondaryContactNotifiedEmail "MySecondaryContactNotifiedEmail" -IsRemoveSecondaryContact $false -Processor "MyProcessor" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # SpecifyContactParameter |  (optional)
 
 # specify contacts
 try {
@@ -1211,23 +1904,18 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $UpdateMetadataParameter = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType

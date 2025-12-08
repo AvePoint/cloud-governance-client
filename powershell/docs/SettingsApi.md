@@ -11,8 +11,8 @@ Method | HTTP request | Description
 
 <a name="Get-DynamicMembershipRuleItems"></a>
 # **Get-DynamicMembershipRuleItems**
-> GetDynamicMembershipRuleItems200Response Get-DynamicMembershipRuleItems<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tenantid] <String><br>
+> InlineResponse200 Get-DynamicMembershipRuleItems<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Tenantid] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsDynamic] <System.Nullable[Boolean]><br>
 
 get group/teams dynamic membership rules
@@ -36,7 +36,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Tenantid = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Tenantid = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $IsDynamic = $true # Boolean |  (optional) (default to $false)
 
 # get group/teams dynamic membership rules
@@ -52,12 +52,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Tenantid** | **String**|  | 
+ **Tenantid** | [**String**](String.md)|  | 
  **IsDynamic** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
-[**GetDynamicMembershipRuleItems200Response**](GetDynamicMembershipRuleItems200Response.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 

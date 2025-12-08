@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **SiteUrl** | **String** | Site collection URL | [optional] 
 **WebUrl** | **String** | Site URL | [optional] 
 **SpGroupManagement** | [**SPGroupManagementModel[]**](SPGroupManagementModel.md) | SharePoint group management settings | [optional] 
-**PermissionManagement** | [**ManagePermissionRequestPermissionManagement**](ManagePermissionRequestPermissionManagement.md) |  | [optional] 
+**PermissionManagement** | [**PermissionManagementModel**](PermissionManagementModel.md) | Permission management settings | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 

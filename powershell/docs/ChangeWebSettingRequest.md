@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | [**ChangeWebSettingRequestUrl**](ChangeWebSettingRequestUrl.md) |  | [optional] 
-**ChangedTitle** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
-**ChangedDescription** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
-**ChangedMetadata** | [**ChangeWebSettingRequestChangedMetadata**](ChangeWebSettingRequestChangedMetadata.md) |  | [optional] 
+**Url** | [**ChangeWebSPObject**](ChangeWebSPObject.md) |  | [optional] 
+**ChangedTitle** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**ChangedDescription** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**ChangedMetadata** | [**RequestMetadataListChangedProperty**](RequestMetadataListChangedProperty.md) |  | [optional] 
 **DeploymentPlanName** | **String** |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 

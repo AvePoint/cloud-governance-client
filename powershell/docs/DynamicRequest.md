@@ -4,12 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ActivityGalleries** | [**Gallerybase[]**](Gallerybase.md) | list of all galleries in the request | [optional] 
-**ApproveProcess** | [**DynamicRequestApproveProcess**](DynamicRequestApproveProcess.md) |  | [optional] 
+**ApproveProcess** | [**ApproveProcessModel**](ApproveProcessModel.md) |  | [optional] 
 **OrderInfo** | **String** |  | [optional] 
 **ParentId** | **String** |  | [optional] 
 **ParentTicketNumber** | **Int32** |  | [optional] [default to 0]
 **StartRequestTime** | **System.DateTime** |  | [optional] 
 **WarningMessage** | **String** |  | [optional] 
+**ApproveComments** | [**CommentsParam**](CommentsParam.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 
@@ -53,6 +54,7 @@ $DynamicRequest = New-Cloud.Governance.ClientDynamicRequest  -ActivityGalleries 
  -ParentTicketNumber null `
  -StartRequestTime null `
  -WarningMessage null `
+ -ApproveComments null `
  -Id null `
  -ServiceId null `
  -Summary null `

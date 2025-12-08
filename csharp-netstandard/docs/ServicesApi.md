@@ -28,12 +28,30 @@ Method | HTTP request | Description
 [**GetGroupLifecycleService**](ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 [**GetManagePermissionService**](ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
 [**GetMyServices**](ServicesApi.md#getmyservices) | **GET** /services/my | get services that can be used to start a request
+[**GetPermissionsForManagePermission**](ServicesApi.md#getpermissionsformanagepermission) | **POST** /services/dynamic/{serviceId}/managepermission/url/permission | 
 [**GetServiceId**](ServicesApi.md#getserviceid) | **GET** /services/id | get service id by service name
+[**GetSiteAdminsForManagePermission**](ServicesApi.md#getsiteadminsformanagepermission) | **POST** /services/dynamic/{serviceId}/managepermission/url/siteadmins | 
 [**GetSiteLifecycleService**](ServicesApi.md#getsitelifecycleservice) | **GET** /services/sitelifecycle/{id} | get site lifecycle service
 [**GetWebLifecycleService**](ServicesApi.md#getweblifecycleservice) | **GET** /services/weblifecycle/{id} | get web lifecycle service
+[**ValidateChangeDistributionGroupSettings**](ServicesApi.md#validatechangedistributiongroupsettings) | **POST** /services/dynamic/{serviceId}/galleries/changedistributiongroupsettings/{activityId}/distributiongroup/validation | 
+[**ValidateChangeGroupProfilesSetting**](ServicesApi.md#validatechangegroupprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changegroupprofiles/{activityId}/group/validation | 
+[**ValidateChangePowerBIWorkspaceAccess**](ServicesApi.md#validatechangepowerbiworkspaceaccess) | **POST** /services/dynamic/{serviceId}/galleries/changepowerbiworkspaceaccess/{activityId}/powerbi/validation | 
+[**ValidateChangePrivateChannelSetting**](ServicesApi.md#validatechangeprivatechannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/changeprivatechannel/{activityId}/team/validation | 
+[**ValidateChangeResourceMailboxPermission**](ServicesApi.md#validatechangeresourcemailboxpermission) | **POST** /services/dynamic/{serviceId}/galleries/changeresourcemailboxpermission/{activityId}/resourcemailbox/validation | 
+[**ValidateChangeSecurityGroupSettings**](ServicesApi.md#validatechangesecuritygroupsettings) | **POST** /services/dynamic/{serviceId}/galleries/changesecuritygroupsettings/{activityId}/group/validation | 
+[**ValidateChangeSharedChannelSetting**](ServicesApi.md#validatechangesharedchannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/changesharedchannel/{activityId}/team/validation | 
+[**ValidateChangeSiteProfilesSetting**](ServicesApi.md#validatechangesiteprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changesiteprofiles/{activityId}/site/validation | 
+[**ValidateChangeTeamProfilesSetting**](ServicesApi.md#validatechangeteamprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changeteamprofiles/{activityId}/team/validation | 
+[**ValidateChangeYammerProfilesSetting**](ServicesApi.md#validatechangeyammerprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changeyammerprofiles/{activityId}/yammer/validation | 
+[**ValidateChangeYammerSettings**](ServicesApi.md#validatechangeyammersettings) | **POST** /services/dynamic/{serviceId}/galleries/changeyammersettings/{activityId}/yammer/validation | 
+[**ValidateCreatePrivateChannelSetting**](ServicesApi.md#validatecreateprivatechannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/createprivatechannel/{activityId}/team/validation | 
+[**ValidateCreateSharedChannelSetting**](ServicesApi.md#validatecreatesharedchannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/createsharedchannel/{activityId}/team/validation | 
 [**ValidateEmailForCreateGuestUserService**](ServicesApi.md#validateemailforcreateguestuserservice) | **GET** /services/createguestuser/{id}/email/validate | validate guest user email
 [**ValidateEmailsForCreateGuestUserService**](ServicesApi.md#validateemailsforcreateguestuserservice) | **POST** /services/createguestuser/{id}/email/validate | validate guest user emails
+[**ValidateEnableTeamSetting**](ServicesApi.md#validateenableteamsetting) | **POST** /services/dynamic/{serviceId}/galleries/enableteam/{activityId}/group/validation | 
+[**ValidateExchangeResource**](ServicesApi.md#validateexchangeresource) | **POST** /services/dynamic/{serviceId}/galleries/changegroupmembership/{activityId}/exchangeresource/validation | 
 [**ValidateForChangeGroupSettingService**](ServicesApi.md#validateforchangegroupsettingservice) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
+[**ValidateForChangeLibrarySettingService**](ServicesApi.md#validateforchangelibrarysettingservice) | **POST** /services/dynamic/{serviceId}/changeLibrarysetting/validation | validate permissions, scope for change list setting service
 [**ValidateForChangeListSettingService**](ServicesApi.md#validateforchangelistsettingservice) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
 [**ValidateForChangePermissionService**](ServicesApi.md#validateforchangepermissionservice) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
 [**ValidateForChangeSiteContactService**](ServicesApi.md#validateforchangesitecontactservice) | **POST** /services/changesitecontact/{id}/url/validation | validate permissions, scope for change site contact service
@@ -50,8 +68,20 @@ Method | HTTP request | Description
 [**ValidateForManagePermissionService**](ServicesApi.md#validateformanagepermissionservice) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 [**ValidateForSiteLifecycleService**](ServicesApi.md#validateforsitelifecycleservice) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 [**ValidateForWebLifecycleService**](ServicesApi.md#validateforweblifecycleservice) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+[**ValidateGuest**](ServicesApi.md#validateguest) | **POST** /services/dynamic/{serviceId}/galleries/guestlifecycle/{activityId}/guest/validation | 
+[**ValidateInviteEmail**](ServicesApi.md#validateinviteemail) | **POST** /services/dynamic/inviteguest/validateemail | 
+[**ValidateM365User**](ServicesApi.md#validatem365user) | **POST** /services/dynamic/{serviceId}/galleries/userlifecycle/{activityId}/user/validation | 
+[**ValidateObjectForChangeContact**](ServicesApi.md#validateobjectforchangecontact) | **POST** /services/dynamic/{serviceId}/changecontact/validation | 
+[**ValidateObjectForChangeM365GroupSettings**](ServicesApi.md#validateobjectforchangem365groupsettings) | **POST** /services/dynamic/{serviceId}/changem365groupsettings/validation | 
+[**ValidateObjectForChangeMailEnabledSecurityGroupSettings**](ServicesApi.md#validateobjectforchangemailenabledsecuritygroupsettings) | **POST** /services/dynamic/{serviceId}/changemailenabledsecuritygroupsettings/validation | 
+[**ValidateObjectForChangeMetadata**](ServicesApi.md#validateobjectforchangemetadata) | **POST** /services/dynamic/{serviceId}/changemetadata/validation | 
+[**ValidateSharedMailboxForChangePermission**](ServicesApi.md#validatesharedmailboxforchangepermission) | **POST** /services/dynamic/{serviceId}/changesharedmailboxpermission/validation | 
+[**ValidateSharedMailboxForLifecycle**](ServicesApi.md#validatesharedmailboxforlifecycle) | **POST** /services/dynamic/{serviceId}/sharedmailboxlifecycle/validation | 
+[**ValidateSiteForChangeSetting**](ServicesApi.md#validatesiteforchangesetting) | **POST** /services/dynamic/{serviceId}/changesitesetting/validation | 
 [**ValidateTeamForChangePrivateChannelService**](ServicesApi.md#validateteamforchangeprivatechannelservice) | **POST** /services/changeprivatechannel/{serviceId}/team/validation | validate teams for change private channel service
 [**ValidateTeamForCreatePrivateChannelService**](ServicesApi.md#validateteamforcreateprivatechannelservice) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
+[**ValidateTeamSetting**](ServicesApi.md#validateteamsetting) | **POST** /services/dynamic/{serviceId}/galleries/changeteamsetting/{activityId}/team/validation | 
+[**ValidateUrlForManagePermission**](ServicesApi.md#validateurlformanagepermission) | **POST** /services/dynamic/{serviceId}/managepermission/url/validation | 
 
 
 <a name="getchangegroupsettingservice"></a>
@@ -2123,6 +2153,90 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getpermissionsformanagepermission"></a>
+# **GetPermissionsForManagePermission**
+> SPPermission GetPermissionsForManagePermission (Guid serviceId, GetManagePermissionModelParameter getManagePermissionModelParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetPermissionsForManagePermissionExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var getManagePermissionModelParameter = new GetManagePermissionModelParameter(); // GetManagePermissionModelParameter |  (optional) 
+
+            try
+            {
+                SPPermission result = apiInstance.GetPermissionsForManagePermission(serviceId, getManagePermissionModelParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.GetPermissionsForManagePermission: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **getManagePermissionModelParameter** | [**GetManagePermissionModelParameter**](GetManagePermissionModelParameter.md)|  | [optional] 
+
+### Return type
+
+[**SPPermission**](SPPermission.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getserviceid"></a>
 # **GetServiceId**
 > Guid GetServiceId (string name)
@@ -2194,6 +2308,90 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getsiteadminsformanagepermission"></a>
+# **GetSiteAdminsForManagePermission**
+> List&lt;ManagePermissionSiteAdminModel&gt; GetSiteAdminsForManagePermission (Guid serviceId, GetManageSiteAdminModelParameter getManageSiteAdminModelParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class GetSiteAdminsForManagePermissionExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var getManageSiteAdminModelParameter = new GetManageSiteAdminModelParameter(); // GetManageSiteAdminModelParameter |  (optional) 
+
+            try
+            {
+                List<ManagePermissionSiteAdminModel> result = apiInstance.GetSiteAdminsForManagePermission(serviceId, getManageSiteAdminModelParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.GetSiteAdminsForManagePermission: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **getManageSiteAdminModelParameter** | [**GetManageSiteAdminModelParameter**](GetManageSiteAdminModelParameter.md)|  | [optional] 
+
+### Return type
+
+[**List&lt;ManagePermissionSiteAdminModel&gt;**](ManagePermissionSiteAdminModel.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: text/plain, application/json
 
 ### HTTP response details
@@ -2380,6 +2578,1124 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="validatechangedistributiongroupsettings"></a>
+# **ValidateChangeDistributionGroupSettings**
+> ChangeDistributionGroupSettingsCheckResult ValidateChangeDistributionGroupSettings (Guid serviceId, string activityId, ChangeDistributionGroupSettingsValidationParameter changeDistributionGroupSettingsValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeDistributionGroupSettingsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeDistributionGroupSettingsValidationParameter = new ChangeDistributionGroupSettingsValidationParameter(); // ChangeDistributionGroupSettingsValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeDistributionGroupSettingsCheckResult result = apiInstance.ValidateChangeDistributionGroupSettings(serviceId, activityId, changeDistributionGroupSettingsValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeDistributionGroupSettings: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeDistributionGroupSettingsValidationParameter** | [**ChangeDistributionGroupSettingsValidationParameter**](ChangeDistributionGroupSettingsValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeDistributionGroupSettingsCheckResult**](ChangeDistributionGroupSettingsCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangegroupprofilessetting"></a>
+# **ValidateChangeGroupProfilesSetting**
+> ChangeGroupProfilesCheckResult ValidateChangeGroupProfilesSetting (Guid serviceId, string activityId, ChangeGroupSettingsValidationParameter changeGroupSettingsValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeGroupProfilesSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeGroupSettingsValidationParameter = new ChangeGroupSettingsValidationParameter(); // ChangeGroupSettingsValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeGroupProfilesCheckResult result = apiInstance.ValidateChangeGroupProfilesSetting(serviceId, activityId, changeGroupSettingsValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeGroupProfilesSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeGroupSettingsValidationParameter** | [**ChangeGroupSettingsValidationParameter**](ChangeGroupSettingsValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeGroupProfilesCheckResult**](ChangeGroupProfilesCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangepowerbiworkspaceaccess"></a>
+# **ValidateChangePowerBIWorkspaceAccess**
+> ChangePowerBIWorkspaceAccessCheckResult ValidateChangePowerBIWorkspaceAccess (Guid serviceId, string activityId, ChangePowerBIWorkspaceAccessValidationParameter changePowerBIWorkspaceAccessValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangePowerBIWorkspaceAccessExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changePowerBIWorkspaceAccessValidationParameter = new ChangePowerBIWorkspaceAccessValidationParameter(); // ChangePowerBIWorkspaceAccessValidationParameter |  (optional) 
+
+            try
+            {
+                ChangePowerBIWorkspaceAccessCheckResult result = apiInstance.ValidateChangePowerBIWorkspaceAccess(serviceId, activityId, changePowerBIWorkspaceAccessValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangePowerBIWorkspaceAccess: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changePowerBIWorkspaceAccessValidationParameter** | [**ChangePowerBIWorkspaceAccessValidationParameter**](ChangePowerBIWorkspaceAccessValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangePowerBIWorkspaceAccessCheckResult**](ChangePowerBIWorkspaceAccessCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangeprivatechannelsetting"></a>
+# **ValidateChangePrivateChannelSetting**
+> ChangePrivateChannelDynamicServiceCheckResult ValidateChangePrivateChannelSetting (Guid serviceId, string activityId, ChangeTeamSettingValidationParameter changeTeamSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangePrivateChannelSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeTeamSettingValidationParameter = new ChangeTeamSettingValidationParameter(); // ChangeTeamSettingValidationParameter |  (optional) 
+
+            try
+            {
+                ChangePrivateChannelDynamicServiceCheckResult result = apiInstance.ValidateChangePrivateChannelSetting(serviceId, activityId, changeTeamSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangePrivateChannelSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeTeamSettingValidationParameter** | [**ChangeTeamSettingValidationParameter**](ChangeTeamSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangePrivateChannelDynamicServiceCheckResult**](ChangePrivateChannelDynamicServiceCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangeresourcemailboxpermission"></a>
+# **ValidateChangeResourceMailboxPermission**
+> ChangeResourceMailboxPermissionCheckResult ValidateChangeResourceMailboxPermission (Guid serviceId, string activityId, ChangeResourceMailboxPermissionValidationParameter changeResourceMailboxPermissionValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeResourceMailboxPermissionExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeResourceMailboxPermissionValidationParameter = new ChangeResourceMailboxPermissionValidationParameter(); // ChangeResourceMailboxPermissionValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeResourceMailboxPermissionCheckResult result = apiInstance.ValidateChangeResourceMailboxPermission(serviceId, activityId, changeResourceMailboxPermissionValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeResourceMailboxPermission: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeResourceMailboxPermissionValidationParameter** | [**ChangeResourceMailboxPermissionValidationParameter**](ChangeResourceMailboxPermissionValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeResourceMailboxPermissionCheckResult**](ChangeResourceMailboxPermissionCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangesecuritygroupsettings"></a>
+# **ValidateChangeSecurityGroupSettings**
+> ChangeExchangeResourceGroupSettingsCheckResult ValidateChangeSecurityGroupSettings (Guid serviceId, string activityId, ChangeExchangeResourceGroupSettingsValidationParameter changeExchangeResourceGroupSettingsValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeSecurityGroupSettingsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeExchangeResourceGroupSettingsValidationParameter = new ChangeExchangeResourceGroupSettingsValidationParameter(); // ChangeExchangeResourceGroupSettingsValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeExchangeResourceGroupSettingsCheckResult result = apiInstance.ValidateChangeSecurityGroupSettings(serviceId, activityId, changeExchangeResourceGroupSettingsValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeSecurityGroupSettings: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeExchangeResourceGroupSettingsValidationParameter** | [**ChangeExchangeResourceGroupSettingsValidationParameter**](ChangeExchangeResourceGroupSettingsValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeExchangeResourceGroupSettingsCheckResult**](ChangeExchangeResourceGroupSettingsCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangesharedchannelsetting"></a>
+# **ValidateChangeSharedChannelSetting**
+> ChangeSharedChannelCheckResult ValidateChangeSharedChannelSetting (Guid serviceId, string activityId, ChangeTeamSettingValidationParameter changeTeamSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeSharedChannelSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeTeamSettingValidationParameter = new ChangeTeamSettingValidationParameter(); // ChangeTeamSettingValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeSharedChannelCheckResult result = apiInstance.ValidateChangeSharedChannelSetting(serviceId, activityId, changeTeamSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeSharedChannelSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeTeamSettingValidationParameter** | [**ChangeTeamSettingValidationParameter**](ChangeTeamSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeSharedChannelCheckResult**](ChangeSharedChannelCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangesiteprofilessetting"></a>
+# **ValidateChangeSiteProfilesSetting**
+> ChangeSiteProfilesCheckResult ValidateChangeSiteProfilesSetting (Guid serviceId, string activityId, ChangeSiteValidationParameter changeSiteValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeSiteProfilesSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeSiteValidationParameter = new ChangeSiteValidationParameter(); // ChangeSiteValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeSiteProfilesCheckResult result = apiInstance.ValidateChangeSiteProfilesSetting(serviceId, activityId, changeSiteValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeSiteProfilesSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeSiteValidationParameter** | [**ChangeSiteValidationParameter**](ChangeSiteValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeSiteProfilesCheckResult**](ChangeSiteProfilesCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangeteamprofilessetting"></a>
+# **ValidateChangeTeamProfilesSetting**
+> ChangeTeamProfilesCheckResult ValidateChangeTeamProfilesSetting (Guid serviceId, string activityId, ChangeTeamSettingValidationParameter changeTeamSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeTeamProfilesSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeTeamSettingValidationParameter = new ChangeTeamSettingValidationParameter(); // ChangeTeamSettingValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeTeamProfilesCheckResult result = apiInstance.ValidateChangeTeamProfilesSetting(serviceId, activityId, changeTeamSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeTeamProfilesSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeTeamSettingValidationParameter** | [**ChangeTeamSettingValidationParameter**](ChangeTeamSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeTeamProfilesCheckResult**](ChangeTeamProfilesCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangeyammerprofilessetting"></a>
+# **ValidateChangeYammerProfilesSetting**
+> ChangeYammerProfilesCheckResult ValidateChangeYammerProfilesSetting (Guid serviceId, string activityId, ChangeYammerSettingValidationParameter changeYammerSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeYammerProfilesSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeYammerSettingValidationParameter = new ChangeYammerSettingValidationParameter(); // ChangeYammerSettingValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeYammerProfilesCheckResult result = apiInstance.ValidateChangeYammerProfilesSetting(serviceId, activityId, changeYammerSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeYammerProfilesSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeYammerSettingValidationParameter** | [**ChangeYammerSettingValidationParameter**](ChangeYammerSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeYammerProfilesCheckResult**](ChangeYammerProfilesCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatechangeyammersettings"></a>
+# **ValidateChangeYammerSettings**
+> ChangeYammerSettingsCheckResult ValidateChangeYammerSettings (Guid serviceId, string activityId, ChangeYammerSettingValidationParameter changeYammerSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateChangeYammerSettingsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeYammerSettingValidationParameter = new ChangeYammerSettingValidationParameter(); // ChangeYammerSettingValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeYammerSettingsCheckResult result = apiInstance.ValidateChangeYammerSettings(serviceId, activityId, changeYammerSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateChangeYammerSettings: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeYammerSettingValidationParameter** | [**ChangeYammerSettingValidationParameter**](ChangeYammerSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeYammerSettingsCheckResult**](ChangeYammerSettingsCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatecreateprivatechannelsetting"></a>
+# **ValidateCreatePrivateChannelSetting**
+> CreatePrivateChannelDynamicServiceCheckResult ValidateCreatePrivateChannelSetting (Guid serviceId, string activityId, ChangeTeamSettingValidationParameter changeTeamSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateCreatePrivateChannelSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeTeamSettingValidationParameter = new ChangeTeamSettingValidationParameter(); // ChangeTeamSettingValidationParameter |  (optional) 
+
+            try
+            {
+                CreatePrivateChannelDynamicServiceCheckResult result = apiInstance.ValidateCreatePrivateChannelSetting(serviceId, activityId, changeTeamSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateCreatePrivateChannelSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeTeamSettingValidationParameter** | [**ChangeTeamSettingValidationParameter**](ChangeTeamSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**CreatePrivateChannelDynamicServiceCheckResult**](CreatePrivateChannelDynamicServiceCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatecreatesharedchannelsetting"></a>
+# **ValidateCreateSharedChannelSetting**
+> CreateSharedChannelCheckResult ValidateCreateSharedChannelSetting (Guid serviceId, string activityId, ChangeTeamSettingValidationParameter changeTeamSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateCreateSharedChannelSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeTeamSettingValidationParameter = new ChangeTeamSettingValidationParameter(); // ChangeTeamSettingValidationParameter |  (optional) 
+
+            try
+            {
+                CreateSharedChannelCheckResult result = apiInstance.ValidateCreateSharedChannelSetting(serviceId, activityId, changeTeamSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateCreateSharedChannelSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeTeamSettingValidationParameter** | [**ChangeTeamSettingValidationParameter**](ChangeTeamSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**CreateSharedChannelCheckResult**](CreateSharedChannelCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="validateemailforcreateguestuserservice"></a>
 # **ValidateEmailForCreateGuestUserService**
 > ObjectValidateResult ValidateEmailForCreateGuestUserService (Guid id, string email, Guid? requestId = null)
@@ -2552,6 +3868,178 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="validateenableteamsetting"></a>
+# **ValidateEnableTeamSetting**
+> EnableTeamCheckResult ValidateEnableTeamSetting (Guid serviceId, string activityId, ChangeTeamSettingValidationParameter changeTeamSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateEnableTeamSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeTeamSettingValidationParameter = new ChangeTeamSettingValidationParameter(); // ChangeTeamSettingValidationParameter |  (optional) 
+
+            try
+            {
+                EnableTeamCheckResult result = apiInstance.ValidateEnableTeamSetting(serviceId, activityId, changeTeamSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateEnableTeamSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeTeamSettingValidationParameter** | [**ChangeTeamSettingValidationParameter**](ChangeTeamSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**EnableTeamCheckResult**](EnableTeamCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateexchangeresource"></a>
+# **ValidateExchangeResource**
+> ChangeGroupOwnerMembershipCheckResult ValidateExchangeResource (Guid serviceId, string activityId, ChangeGroupOwnerMembershipValidationParameter changeGroupOwnerMembershipValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateExchangeResourceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeGroupOwnerMembershipValidationParameter = new ChangeGroupOwnerMembershipValidationParameter(); // ChangeGroupOwnerMembershipValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeGroupOwnerMembershipCheckResult result = apiInstance.ValidateExchangeResource(serviceId, activityId, changeGroupOwnerMembershipValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateExchangeResource: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeGroupOwnerMembershipValidationParameter** | [**ChangeGroupOwnerMembershipValidationParameter**](ChangeGroupOwnerMembershipValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeGroupOwnerMembershipCheckResult**](ChangeGroupOwnerMembershipCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="validateforchangegroupsettingservice"></a>
 # **ValidateForChangeGroupSettingService**
 > ChangeGroupSettingCheckResult ValidateForChangeGroupSettingService (Guid id, ChangeGroupSettingValidationParameter changeGroupSettingValidationParameter = null)
@@ -2617,6 +4105,93 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ChangeGroupSettingCheckResult**](ChangeGroupSettingCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateforchangelibrarysettingservice"></a>
+# **ValidateForChangeLibrarySettingService**
+> ChangeLibrarySettingValidateResult ValidateForChangeLibrarySettingService (string serviceId, Guid? id = null, SiteValidationParameter siteValidationParameter = null)
+
+validate permissions, scope for change list setting service
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateForChangeLibrarySettingServiceExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = serviceId_example;  // string | 
+            var id = new Guid?(); // Guid? |  (optional) 
+            var siteValidationParameter = new SiteValidationParameter(); // SiteValidationParameter |  (optional) 
+
+            try
+            {
+                // validate permissions, scope for change list setting service
+                ChangeLibrarySettingValidateResult result = apiInstance.ValidateForChangeLibrarySettingService(serviceId, id, siteValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateForChangeLibrarySettingService: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | **string**|  | 
+ **id** | [**Guid?**](Guid?.md)|  | [optional] 
+ **siteValidationParameter** | [**SiteValidationParameter**](SiteValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeLibrarySettingValidateResult**](ChangeLibrarySettingValidateResult.md)
 
 ### Authorization
 
@@ -3999,6 +5574,848 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="validateguest"></a>
+# **ValidateGuest**
+> void ValidateGuest (Guid serviceId, string activityId, GuestLifecycleValidationParameter guestLifecycleValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateGuestExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var guestLifecycleValidationParameter = new GuestLifecycleValidationParameter(); // GuestLifecycleValidationParameter |  (optional) 
+
+            try
+            {
+                apiInstance.ValidateGuest(serviceId, activityId, guestLifecycleValidationParameter);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateGuest: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **guestLifecycleValidationParameter** | [**GuestLifecycleValidationParameter**](GuestLifecycleValidationParameter.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateinviteemail"></a>
+# **ValidateInviteEmail**
+> ObjectValidateResult ValidateInviteEmail (ValidateInviteGuestEmailModel validateInviteGuestEmailModel = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateInviteEmailExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var validateInviteGuestEmailModel = new ValidateInviteGuestEmailModel(); // ValidateInviteGuestEmailModel |  (optional) 
+
+            try
+            {
+                ObjectValidateResult result = apiInstance.ValidateInviteEmail(validateInviteGuestEmailModel);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateInviteEmail: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **validateInviteGuestEmailModel** | [**ValidateInviteGuestEmailModel**](ValidateInviteGuestEmailModel.md)|  | [optional] 
+
+### Return type
+
+[**ObjectValidateResult**](ObjectValidateResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatem365user"></a>
+# **ValidateM365User**
+> void ValidateM365User (Guid serviceId, string activityId, M365UserLifecycleValidationParameter m365UserLifecycleValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateM365UserExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var m365UserLifecycleValidationParameter = new M365UserLifecycleValidationParameter(); // M365UserLifecycleValidationParameter |  (optional) 
+
+            try
+            {
+                apiInstance.ValidateM365User(serviceId, activityId, m365UserLifecycleValidationParameter);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateM365User: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **m365UserLifecycleValidationParameter** | [**M365UserLifecycleValidationParameter**](M365UserLifecycleValidationParameter.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateobjectforchangecontact"></a>
+# **ValidateObjectForChangeContact**
+> ChangeObjectValidateResult ValidateObjectForChangeContact (Guid serviceId, ChangeContactValidationParameter changeContactValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateObjectForChangeContactExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var changeContactValidationParameter = new ChangeContactValidationParameter(); // ChangeContactValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeObjectValidateResult result = apiInstance.ValidateObjectForChangeContact(serviceId, changeContactValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateObjectForChangeContact: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **changeContactValidationParameter** | [**ChangeContactValidationParameter**](ChangeContactValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeObjectValidateResult**](ChangeObjectValidateResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateobjectforchangem365groupsettings"></a>
+# **ValidateObjectForChangeM365GroupSettings**
+> ChangeM365GroupSettingsCheckResult ValidateObjectForChangeM365GroupSettings (Guid serviceId, ChangeM365GroupSettingsValidationParameter changeM365GroupSettingsValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateObjectForChangeM365GroupSettingsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var changeM365GroupSettingsValidationParameter = new ChangeM365GroupSettingsValidationParameter(); // ChangeM365GroupSettingsValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeM365GroupSettingsCheckResult result = apiInstance.ValidateObjectForChangeM365GroupSettings(serviceId, changeM365GroupSettingsValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateObjectForChangeM365GroupSettings: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **changeM365GroupSettingsValidationParameter** | [**ChangeM365GroupSettingsValidationParameter**](ChangeM365GroupSettingsValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeM365GroupSettingsCheckResult**](ChangeM365GroupSettingsCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateobjectforchangemailenabledsecuritygroupsettings"></a>
+# **ValidateObjectForChangeMailEnabledSecurityGroupSettings**
+> ChangeMailEnabledSecurityGroupSettingsCheckResult ValidateObjectForChangeMailEnabledSecurityGroupSettings (Guid serviceId, string activityId = null, ChangeExchangeResourceGroupSettingsValidationParameter changeExchangeResourceGroupSettingsValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateObjectForChangeMailEnabledSecurityGroupSettingsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string |  (optional) 
+            var changeExchangeResourceGroupSettingsValidationParameter = new ChangeExchangeResourceGroupSettingsValidationParameter(); // ChangeExchangeResourceGroupSettingsValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeMailEnabledSecurityGroupSettingsCheckResult result = apiInstance.ValidateObjectForChangeMailEnabledSecurityGroupSettings(serviceId, activityId, changeExchangeResourceGroupSettingsValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateObjectForChangeMailEnabledSecurityGroupSettings: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | [optional] 
+ **changeExchangeResourceGroupSettingsValidationParameter** | [**ChangeExchangeResourceGroupSettingsValidationParameter**](ChangeExchangeResourceGroupSettingsValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeMailEnabledSecurityGroupSettingsCheckResult**](ChangeMailEnabledSecurityGroupSettingsCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateobjectforchangemetadata"></a>
+# **ValidateObjectForChangeMetadata**
+> ChangeMetadataCheckResult ValidateObjectForChangeMetadata (Guid serviceId, ChangeMetadataValidationParameter changeMetadataValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateObjectForChangeMetadataExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var changeMetadataValidationParameter = new ChangeMetadataValidationParameter(); // ChangeMetadataValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeMetadataCheckResult result = apiInstance.ValidateObjectForChangeMetadata(serviceId, changeMetadataValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateObjectForChangeMetadata: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **changeMetadataValidationParameter** | [**ChangeMetadataValidationParameter**](ChangeMetadataValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeMetadataCheckResult**](ChangeMetadataCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatesharedmailboxforchangepermission"></a>
+# **ValidateSharedMailboxForChangePermission**
+> ChangeSharedMailboxPermissionCheckResult ValidateSharedMailboxForChangePermission (Guid serviceId, ChangeSharedMailboxPermissionValidationParameter changeSharedMailboxPermissionValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateSharedMailboxForChangePermissionExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var changeSharedMailboxPermissionValidationParameter = new ChangeSharedMailboxPermissionValidationParameter(); // ChangeSharedMailboxPermissionValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeSharedMailboxPermissionCheckResult result = apiInstance.ValidateSharedMailboxForChangePermission(serviceId, changeSharedMailboxPermissionValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateSharedMailboxForChangePermission: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **changeSharedMailboxPermissionValidationParameter** | [**ChangeSharedMailboxPermissionValidationParameter**](ChangeSharedMailboxPermissionValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeSharedMailboxPermissionCheckResult**](ChangeSharedMailboxPermissionCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatesharedmailboxforlifecycle"></a>
+# **ValidateSharedMailboxForLifecycle**
+> ChangeSharedMailboxPermissionCheckResult ValidateSharedMailboxForLifecycle (Guid serviceId, SharedMailboxLifecycleValidationParameter sharedMailboxLifecycleValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateSharedMailboxForLifecycleExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var sharedMailboxLifecycleValidationParameter = new SharedMailboxLifecycleValidationParameter(); // SharedMailboxLifecycleValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeSharedMailboxPermissionCheckResult result = apiInstance.ValidateSharedMailboxForLifecycle(serviceId, sharedMailboxLifecycleValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateSharedMailboxForLifecycle: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **sharedMailboxLifecycleValidationParameter** | [**SharedMailboxLifecycleValidationParameter**](SharedMailboxLifecycleValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeSharedMailboxPermissionCheckResult**](ChangeSharedMailboxPermissionCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validatesiteforchangesetting"></a>
+# **ValidateSiteForChangeSetting**
+> ChangeSiteSettingCheckResult ValidateSiteForChangeSetting (Guid serviceId, ChangeSiteValidationParameter changeSiteValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateSiteForChangeSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var changeSiteValidationParameter = new ChangeSiteValidationParameter(); // ChangeSiteValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeSiteSettingCheckResult result = apiInstance.ValidateSiteForChangeSetting(serviceId, changeSiteValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateSiteForChangeSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **changeSiteValidationParameter** | [**ChangeSiteValidationParameter**](ChangeSiteValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeSiteSettingCheckResult**](ChangeSiteSettingCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="validateteamforchangeprivatechannelservice"></a>
 # **ValidateTeamForChangePrivateChannelService**
 > ChangePrivateChannelCheckResult ValidateTeamForChangePrivateChannelService (Guid serviceId, ChangePrivateChannelValidationParameter changePrivateChannelValidationParameter = null)
@@ -4149,6 +6566,176 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreatePrivateChannelCheckResult**](CreatePrivateChannelCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateteamsetting"></a>
+# **ValidateTeamSetting**
+> ChangeTeamSettingCheckResult ValidateTeamSetting (Guid serviceId, string activityId, ChangeTeamSettingValidationParameter changeTeamSettingValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateTeamSettingExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var activityId = activityId_example;  // string | 
+            var changeTeamSettingValidationParameter = new ChangeTeamSettingValidationParameter(); // ChangeTeamSettingValidationParameter |  (optional) 
+
+            try
+            {
+                ChangeTeamSettingCheckResult result = apiInstance.ValidateTeamSetting(serviceId, activityId, changeTeamSettingValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateTeamSetting: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **activityId** | **string**|  | 
+ **changeTeamSettingValidationParameter** | [**ChangeTeamSettingValidationParameter**](ChangeTeamSettingValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ChangeTeamSettingCheckResult**](ChangeTeamSettingCheckResult.md)
+
+### Authorization
+
+[clientSecret](../README.md#clientSecret), [userPrincipalName](../README.md#userPrincipalName)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/plain, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad request |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="validateurlformanagepermission"></a>
+# **ValidateUrlForManagePermission**
+> ManagePermissionValidateResult ValidateUrlForManagePermission (Guid serviceId, ManagePermissionValidationParameter managePermissionValidationParameter = null)
+
+
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Cloud.Governance.Client.Api;
+using Cloud.Governance.Client.Client;
+using Cloud.Governance.Client.Model;
+
+namespace Example
+{
+    public class ValidateUrlForManagePermissionExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+
+            //You can find the Modern API Endpoint in Cloud Governance admin user guide for your environment.
+            config.BasePath = "{Cloud_Governance_Modern_API_Endpoint}";
+
+            // Configure API key clientSecret: Navigate to AvePoint Cloud Governance Settings > API Authentication Management to Obtain a client secret.
+            config.AddApiKey("clientSecret", "eyJ...");
+
+            // Configure API key userPrincipalName: The value of the userPrincipalName parameter is the login name of a delegated user that will be used to invoke the AvePoint Cloud Governance API. 
+            // Make sure the user's account has been added to AvePoint Online Services and has the license for AvePoint Cloud Governance.
+            // If you calls the Admin api, make sure the user's role is Service Administrator for AvePoint Cloud Governance.
+            config.AddApiKey("userPrincipalName", "someone@example.com");
+
+            var apiInstance = new ServicesApi(config);
+
+            var serviceId = new Guid(); // Guid | 
+            var managePermissionValidationParameter = new ManagePermissionValidationParameter(); // ManagePermissionValidationParameter |  (optional) 
+
+            try
+            {
+                ManagePermissionValidateResult result = apiInstance.ValidateUrlForManagePermission(serviceId, managePermissionValidationParameter);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ServicesApi.ValidateUrlForManagePermission: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | [**Guid**](Guid.md)|  | 
+ **managePermissionValidationParameter** | [**ManagePermissionValidationParameter**](ManagePermissionValidationParameter.md)|  | [optional] 
+
+### Return type
+
+[**ManagePermissionValidateResult**](ManagePermissionValidateResult.md)
 
 ### Authorization
 

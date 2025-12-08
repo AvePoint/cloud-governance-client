@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **Contact** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
 **License** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
 **Organization** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
+**ExtensionAttribute** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
+**CustomMicrosoftEntraProperty** | [**DynamicRuleElement[]**](DynamicRuleElement.md) |  | [optional] 
 
 ## Examples
 
@@ -13,7 +15,9 @@ Name | Type | Description | Notes
 ```powershell
 $InlineResponse200 = New-Cloud.Governance.ClientInlineResponse200  -Contact null `
  -License null `
- -Organization null
+ -Organization null `
+ -ExtensionAttribute null `
+ -CustomMicrosoftEntraProperty null
 ```
 
 - Convert the resource to JSON

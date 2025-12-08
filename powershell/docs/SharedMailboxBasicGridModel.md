@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **Status** | [**ExchangeResourceStatus**](ExchangeResourceStatus.md) |  | [optional] 
 **Members** | **String** |  | [optional] 
 **DirectorySyncState** | [**DirectorySyncState**](DirectorySyncState.md) |  | [optional] 
+**HasPendingApprovalTask** | **Boolean** |  | [optional] [default to $false]
+**HasOngoingTasks** | **Boolean** |  | [optional] [default to $false]
 **PrimaryContact** | **String** |  | [optional] 
 **PrimaryContactEmail** | **String** |  | [optional] 
 **PrimaryContactDisplayName** | **String** |  | [optional] 
@@ -66,6 +68,8 @@ $SharedMailboxBasicGridModel = New-Cloud.Governance.ClientSharedMailboxBasicGrid
  -Status null `
  -Members null `
  -DirectorySyncState null `
+ -HasPendingApprovalTask null `
+ -HasOngoingTasks null `
  -PrimaryContact null `
  -PrimaryContactEmail null `
  -PrimaryContactDisplayName null `

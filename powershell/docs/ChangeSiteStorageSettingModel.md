@@ -3,8 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangedSiteStorage** | [**ChangeSiteStorageSettingModelChangedSiteStorage**](ChangeSiteStorageSettingModelChangedSiteStorage.md) |  | [optional] 
+**ChangedSiteStorage** | [**Int64ChangedValueRequestModel**](Int64ChangedValueRequestModel.md) |  | [optional] 
 **OriginalStorageUsage** | **Double** |  | [optional] 
+**IsWantChangeStorageChecked** | **Boolean** |  | [optional] [default to $false]
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 ```powershell
 $ChangeSiteStorageSettingModel = New-Cloud.Governance.ClientChangeSiteStorageSettingModel  -ChangedSiteStorage null `
  -OriginalStorageUsage null `
+ -IsWantChangeStorageChecked null `
  -ActivityId null
 ```
 

@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Source** | [**ContentMoveSPObjectMappingSource**](ContentMoveSPObjectMappingSource.md) |  | [optional] 
-**Destination** | [**ContentMoveSPObjectMappingSource**](ContentMoveSPObjectMappingSource.md) |  | [optional] 
+**Source** | [**ContentMoveSPObject**](ContentMoveSPObject.md) |  | [optional] 
+**Destination** | [**ContentMoveSPObject**](ContentMoveSPObject.md) |  | [optional] 
 **Action** | [**ContentMoveAction**](ContentMoveAction.md) |  | [optional] 
 
 ## Examples

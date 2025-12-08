@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
-**SecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **GroupId** | **String** |  | [optional] 
 **GroupName** | **String** |  | [optional] 
 **GroupEmail** | **String** |  | [optional] 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **IsEnableSubscribeMembers** | **Boolean** |  | [optional] [default to $false]
 **IsEnableOutsideSender** | **Boolean** |  | [optional] [default to $false]
 **Classification** | **String** |  | [optional] 
-**Sensitivity** | [**ChangeGroupSettingCheckResultSensitivity**](ChangeGroupSettingCheckResultSensitivity.md) |  | [optional] 
+**Sensitivity** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
 **IsTeamsEnabled** | **Boolean** |  | [optional] [default to $false]
 **EnableManageGroupSharing** | **Boolean** |  | [optional] [default to $false]
 **EnableInviteAuthorizedGuestUser** | **Boolean** |  | [optional] [default to $false]
@@ -28,8 +28,8 @@ Name | Type | Description | Notes
 **GroupObjectType** | [**GroupObjectType**](GroupObjectType.md) |  | [optional] 
 **NetworkId** | **String** |  | [optional] 
 **GroupObjectId** | **String** |  | [optional] 
-**TimeZoneSettings** | [**ChangeGroupSettingCheckResultTimeZoneSettings**](ChangeGroupSettingCheckResultTimeZoneSettings.md) |  | [optional] 
-**LocaleSettings** | [**ChangeGroupSettingCheckResultLocaleSettings**](ChangeGroupSettingCheckResultLocaleSettings.md) |  | [optional] 
+**TimeZoneSettings** | [**TimeZoneSettings**](TimeZoneSettings.md) | timezone settings | [optional] 
+**LocaleSettings** | [**LocaleSettings**](LocaleSettings.md) | Locale settings | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 
 **MessageCode** | [**MessageCode**](MessageCode.md) |  | [optional] 

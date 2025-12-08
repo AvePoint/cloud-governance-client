@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **DisableEditRule** | **bool** |  | [optional] [default to false]
 **DisableEditRuleValue** | **bool** |  | [optional] [default to false]
 **MetadataUserList** | [**List&lt;UserInfo&gt;**](UserInfo.md) |  | [optional] 
+**TenantId** | **string** |  | [optional] 
+**TenantName** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

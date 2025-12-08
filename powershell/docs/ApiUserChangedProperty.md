@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangeValue** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
-**OriginalValue** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**ChangeValue** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**OriginalValue** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 
 ## Examples
 

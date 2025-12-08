@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **ShowInReportTypeDescription** | **string** |  | [optional] 
 **LastModifiedTime** | **DateTime** |  | [optional] 
 **CreatedSource** | **int** |  | [optional] [default to 0]
+**IsHiddenInClassic** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

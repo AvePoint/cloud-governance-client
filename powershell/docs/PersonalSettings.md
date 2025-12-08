@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **TimeZoneID** | **Int32** |  | [optional] [default to 0]
 **IsAdjustDaylight** | **Boolean** |  | [optional] [default to $false]
 **IsDelegateAdmin** | **Boolean** |  | [optional] [default to $false]
-**Properties** | [**PersonalSettingsProperties**](PersonalSettingsProperties.md) |  | [optional] 
+**Properties** | [**PersonalSettingsPropertyInfo**](PersonalSettingsPropertyInfo.md) |  | [optional] 
 
 ## Examples
 

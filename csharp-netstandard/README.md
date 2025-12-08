@@ -268,12 +268,30 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**GetGroupLifecycleService**](docs/ServicesApi.md#getgrouplifecycleservice) | **GET** /services/grouplifecycle/{id} | get group lifecycle service
 *ServicesApi* | [**GetManagePermissionService**](docs/ServicesApi.md#getmanagepermissionservice) | **GET** /services/managepermission/{id} | get manage permission service
 *ServicesApi* | [**GetMyServices**](docs/ServicesApi.md#getmyservices) | **GET** /services/my | get services that can be used to start a request
+*ServicesApi* | [**GetPermissionsForManagePermission**](docs/ServicesApi.md#getpermissionsformanagepermission) | **POST** /services/dynamic/{serviceId}/managepermission/url/permission | 
 *ServicesApi* | [**GetServiceId**](docs/ServicesApi.md#getserviceid) | **GET** /services/id | get service id by service name
+*ServicesApi* | [**GetSiteAdminsForManagePermission**](docs/ServicesApi.md#getsiteadminsformanagepermission) | **POST** /services/dynamic/{serviceId}/managepermission/url/siteadmins | 
 *ServicesApi* | [**GetSiteLifecycleService**](docs/ServicesApi.md#getsitelifecycleservice) | **GET** /services/sitelifecycle/{id} | get site lifecycle service
 *ServicesApi* | [**GetWebLifecycleService**](docs/ServicesApi.md#getweblifecycleservice) | **GET** /services/weblifecycle/{id} | get web lifecycle service
+*ServicesApi* | [**ValidateChangeDistributionGroupSettings**](docs/ServicesApi.md#validatechangedistributiongroupsettings) | **POST** /services/dynamic/{serviceId}/galleries/changedistributiongroupsettings/{activityId}/distributiongroup/validation | 
+*ServicesApi* | [**ValidateChangeGroupProfilesSetting**](docs/ServicesApi.md#validatechangegroupprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changegroupprofiles/{activityId}/group/validation | 
+*ServicesApi* | [**ValidateChangePowerBIWorkspaceAccess**](docs/ServicesApi.md#validatechangepowerbiworkspaceaccess) | **POST** /services/dynamic/{serviceId}/galleries/changepowerbiworkspaceaccess/{activityId}/powerbi/validation | 
+*ServicesApi* | [**ValidateChangePrivateChannelSetting**](docs/ServicesApi.md#validatechangeprivatechannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/changeprivatechannel/{activityId}/team/validation | 
+*ServicesApi* | [**ValidateChangeResourceMailboxPermission**](docs/ServicesApi.md#validatechangeresourcemailboxpermission) | **POST** /services/dynamic/{serviceId}/galleries/changeresourcemailboxpermission/{activityId}/resourcemailbox/validation | 
+*ServicesApi* | [**ValidateChangeSecurityGroupSettings**](docs/ServicesApi.md#validatechangesecuritygroupsettings) | **POST** /services/dynamic/{serviceId}/galleries/changesecuritygroupsettings/{activityId}/group/validation | 
+*ServicesApi* | [**ValidateChangeSharedChannelSetting**](docs/ServicesApi.md#validatechangesharedchannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/changesharedchannel/{activityId}/team/validation | 
+*ServicesApi* | [**ValidateChangeSiteProfilesSetting**](docs/ServicesApi.md#validatechangesiteprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changesiteprofiles/{activityId}/site/validation | 
+*ServicesApi* | [**ValidateChangeTeamProfilesSetting**](docs/ServicesApi.md#validatechangeteamprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changeteamprofiles/{activityId}/team/validation | 
+*ServicesApi* | [**ValidateChangeYammerProfilesSetting**](docs/ServicesApi.md#validatechangeyammerprofilessetting) | **POST** /services/dynamic/{serviceId}/galleries/changeyammerprofiles/{activityId}/yammer/validation | 
+*ServicesApi* | [**ValidateChangeYammerSettings**](docs/ServicesApi.md#validatechangeyammersettings) | **POST** /services/dynamic/{serviceId}/galleries/changeyammersettings/{activityId}/yammer/validation | 
+*ServicesApi* | [**ValidateCreatePrivateChannelSetting**](docs/ServicesApi.md#validatecreateprivatechannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/createprivatechannel/{activityId}/team/validation | 
+*ServicesApi* | [**ValidateCreateSharedChannelSetting**](docs/ServicesApi.md#validatecreatesharedchannelsetting) | **POST** /services/dynamic/{serviceId}/galleries/createsharedchannel/{activityId}/team/validation | 
 *ServicesApi* | [**ValidateEmailForCreateGuestUserService**](docs/ServicesApi.md#validateemailforcreateguestuserservice) | **GET** /services/createguestuser/{id}/email/validate | validate guest user email
 *ServicesApi* | [**ValidateEmailsForCreateGuestUserService**](docs/ServicesApi.md#validateemailsforcreateguestuserservice) | **POST** /services/createguestuser/{id}/email/validate | validate guest user emails
+*ServicesApi* | [**ValidateEnableTeamSetting**](docs/ServicesApi.md#validateenableteamsetting) | **POST** /services/dynamic/{serviceId}/galleries/enableteam/{activityId}/group/validation | 
+*ServicesApi* | [**ValidateExchangeResource**](docs/ServicesApi.md#validateexchangeresource) | **POST** /services/dynamic/{serviceId}/galleries/changegroupmembership/{activityId}/exchangeresource/validation | 
 *ServicesApi* | [**ValidateForChangeGroupSettingService**](docs/ServicesApi.md#validateforchangegroupsettingservice) | **POST** /services/changegroupsetting/{id}/group/validation | validate permissions, scope for change group setting service
+*ServicesApi* | [**ValidateForChangeLibrarySettingService**](docs/ServicesApi.md#validateforchangelibrarysettingservice) | **POST** /services/dynamic/{serviceId}/changeLibrarysetting/validation | validate permissions, scope for change list setting service
 *ServicesApi* | [**ValidateForChangeListSettingService**](docs/ServicesApi.md#validateforchangelistsettingservice) | **POST** /services/changelistsetting/{id}/url/validation | validate permissions, scope for change list setting service
 *ServicesApi* | [**ValidateForChangePermissionService**](docs/ServicesApi.md#validateforchangepermissionservice) | **POST** /services/changepermission/{id}/url/validation | validate permissions, scope for change permission service
 *ServicesApi* | [**ValidateForChangeSiteContactService**](docs/ServicesApi.md#validateforchangesitecontactservice) | **POST** /services/changesitecontact/{id}/url/validation | validate permissions, scope for change site contact service
@@ -290,8 +308,20 @@ Class | Method | HTTP request | Description
 *ServicesApi* | [**ValidateForManagePermissionService**](docs/ServicesApi.md#validateformanagepermissionservice) | **POST** /services/managepermission/{id}/url/validation | validate permissions, scope for manage permission service
 *ServicesApi* | [**ValidateForSiteLifecycleService**](docs/ServicesApi.md#validateforsitelifecycleservice) | **POST** /services/sitelifecycle/{id}/url/validation | validate permissions, scope for site lifecycle service
 *ServicesApi* | [**ValidateForWebLifecycleService**](docs/ServicesApi.md#validateforweblifecycleservice) | **POST** /services/weblifecycle/{id}/url/validation | validate permissions, scope for web lifecycle service
+*ServicesApi* | [**ValidateGuest**](docs/ServicesApi.md#validateguest) | **POST** /services/dynamic/{serviceId}/galleries/guestlifecycle/{activityId}/guest/validation | 
+*ServicesApi* | [**ValidateInviteEmail**](docs/ServicesApi.md#validateinviteemail) | **POST** /services/dynamic/inviteguest/validateemail | 
+*ServicesApi* | [**ValidateM365User**](docs/ServicesApi.md#validatem365user) | **POST** /services/dynamic/{serviceId}/galleries/userlifecycle/{activityId}/user/validation | 
+*ServicesApi* | [**ValidateObjectForChangeContact**](docs/ServicesApi.md#validateobjectforchangecontact) | **POST** /services/dynamic/{serviceId}/changecontact/validation | 
+*ServicesApi* | [**ValidateObjectForChangeM365GroupSettings**](docs/ServicesApi.md#validateobjectforchangem365groupsettings) | **POST** /services/dynamic/{serviceId}/changem365groupsettings/validation | 
+*ServicesApi* | [**ValidateObjectForChangeMailEnabledSecurityGroupSettings**](docs/ServicesApi.md#validateobjectforchangemailenabledsecuritygroupsettings) | **POST** /services/dynamic/{serviceId}/changemailenabledsecuritygroupsettings/validation | 
+*ServicesApi* | [**ValidateObjectForChangeMetadata**](docs/ServicesApi.md#validateobjectforchangemetadata) | **POST** /services/dynamic/{serviceId}/changemetadata/validation | 
+*ServicesApi* | [**ValidateSharedMailboxForChangePermission**](docs/ServicesApi.md#validatesharedmailboxforchangepermission) | **POST** /services/dynamic/{serviceId}/changesharedmailboxpermission/validation | 
+*ServicesApi* | [**ValidateSharedMailboxForLifecycle**](docs/ServicesApi.md#validatesharedmailboxforlifecycle) | **POST** /services/dynamic/{serviceId}/sharedmailboxlifecycle/validation | 
+*ServicesApi* | [**ValidateSiteForChangeSetting**](docs/ServicesApi.md#validatesiteforchangesetting) | **POST** /services/dynamic/{serviceId}/changesitesetting/validation | 
 *ServicesApi* | [**ValidateTeamForChangePrivateChannelService**](docs/ServicesApi.md#validateteamforchangeprivatechannelservice) | **POST** /services/changeprivatechannel/{serviceId}/team/validation | validate teams for change private channel service
 *ServicesApi* | [**ValidateTeamForCreatePrivateChannelService**](docs/ServicesApi.md#validateteamforcreateprivatechannelservice) | **POST** /services/createprivatechannel/{serviceId}/team/validation | validate teams for create private channel service
+*ServicesApi* | [**ValidateTeamSetting**](docs/ServicesApi.md#validateteamsetting) | **POST** /services/dynamic/{serviceId}/galleries/changeteamsetting/{activityId}/team/validation | 
+*ServicesApi* | [**ValidateUrlForManagePermission**](docs/ServicesApi.md#validateurlformanagepermission) | **POST** /services/dynamic/{serviceId}/managepermission/url/validation | 
 *ServicesAdminApi* | [**GetServices**](docs/ServicesAdminApi.md#getservices) | **GET** /admin/services | get all services
 *SettingsApi* | [**GetDynamicMembershipRuleItems**](docs/SettingsApi.md#getdynamicmembershipruleitems) | **GET** /settings/office365/groups/dynamicmembershiprule/{tenantid} | get group/teams dynamic membership rules
 *SettingsApi* | [**GetMyPersonalSettings**](docs/SettingsApi.md#getmypersonalsettings) | **GET** /settings/my | get my personal settings
@@ -301,6 +331,7 @@ Class | Method | HTTP request | Description
 *SharedMailboxesAdminApi* | [**SpecifySharedMailboxContacts**](docs/SharedMailboxesAdminApi.md#specifysharedmailboxcontacts) | **POST** /admin/directory/sharedmailbox/contacts | specify contacts
 *SystemSettingsAdminApi* | [**GetHookMessageSamples**](docs/SystemSettingsAdminApi.md#gethookmessagesamples) | **GET** /admin/settings/system/hooks/messages/sample | 
 *TasksApi* | [**ApproveTask**](docs/TasksApi.md#approvetask) | **POST** /tasks/{id}/approve | approve task
+*TasksApi* | [**EditAndApproveDynamicServiceRequest**](docs/TasksApi.md#editandapprovedynamicservicerequest) | **PUT** /tasks/{id}/editandapprovedynamic | edit dynamic service when approve task
 *TasksApi* | [**EditArchiveGroupRequest**](docs/TasksApi.md#editarchivegrouprequest) | **PUT** /tasks/{id}/archivegroup | edit archive group request in task
 *TasksApi* | [**EditArchiveSiteRequest**](docs/TasksApi.md#editarchivesiterequest) | **PUT** /tasks/{id}/archivesite | edit archive site request in task
 *TasksApi* | [**EditArchiveWebRequest**](docs/TasksApi.md#editarchivewebrequest) | **PUT** /tasks/{id}/archiveweb | edit archive web request in task
@@ -379,10 +410,21 @@ Class | Method | HTTP request | Description
 *WorkspacesAdminApi* | [**ArchiveWorkspace**](docs/WorkspacesAdminApi.md#archiveworkspace) | **POST** /admin/directory/workspace/archive | archive workspace
 *WorkspacesAdminApi* | [**CompleteWorkspaceRenewalTask**](docs/WorkspacesAdminApi.md#completeworkspacerenewaltask) | **POST** /admin/directory/workspace/renewal/complete | completed renewal task
 *WorkspacesAdminApi* | [**DeleteWorkspaces**](docs/WorkspacesAdminApi.md#deleteworkspaces) | **DELETE** /admin/directory/workspace | delete workspaces
+*WorkspacesAdminApi* | [**GetGroupConfirmMetrics**](docs/WorkspacesAdminApi.md#getgroupconfirmmetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/confirm | 
+*WorkspacesAdminApi* | [**GetGroupDetail**](docs/WorkspacesAdminApi.md#getgroupdetail) | **GET** /admin/directory/workspace/groups/{id} | get group detail
+*WorkspacesAdminApi* | [**GetGroupElectionMetrics**](docs/WorkspacesAdminApi.md#getgroupelectionmetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/election | 
+*WorkspacesAdminApi* | [**GetGroupRenewalMetrics**](docs/WorkspacesAdminApi.md#getgrouprenewalmetrics) | **GET** /admin/directory/workspace/{type}/{id}/metrics/renewal | 
+*WorkspacesAdminApi* | [**GetGroupsConfirmMetrics**](docs/WorkspacesAdminApi.md#getgroupsconfirmmetrics) | **GET** /admin/directory/workspace/{type}/metrics/confirm | 
+*WorkspacesAdminApi* | [**GetGroupsElectionMetrics**](docs/WorkspacesAdminApi.md#getgroupselectionmetrics) | **GET** /admin/directory/workspace/{type}/metrics/election | 
+*WorkspacesAdminApi* | [**GetGroupsRenewalMetrics**](docs/WorkspacesAdminApi.md#getgroupsrenewalmetrics) | **GET** /admin/directory/workspace/{type}/metrics/renewal | 
+*WorkspacesAdminApi* | [**GetGroupsSyncJobMetrics**](docs/WorkspacesAdminApi.md#getgroupssyncjobmetrics) | **GET** /admin/directory/workspace/{type}/metrics/sync | 
 *WorkspacesAdminApi* | [**GetOngoingTasks**](docs/WorkspacesAdminApi.md#getongoingtasks) | **GET** /admin/directory/workspace/{type}/ongoningtasks | get workspace ongoing tasks
+*WorkspacesAdminApi* | [**GetSiteDetail**](docs/WorkspacesAdminApi.md#getsitedetail) | **GET** /admin/directory/workspace/sites/{id} | get site detail
+*WorkspacesAdminApi* | [**GetTeamsDetail**](docs/WorkspacesAdminApi.md#getteamsdetail) | **GET** /admin/directory/workspace/teams/{id} | get teams detail
 *WorkspacesAdminApi* | [**GetWorkspaceFilters**](docs/WorkspacesAdminApi.md#getworkspacefilters) | **GET** /admin/directory/workspace/filters | get filters for workspace report
 *WorkspacesAdminApi* | [**GetWorkspaces**](docs/WorkspacesAdminApi.md#getworkspaces) | **GET** /admin/directory/workspace | get managed workspaces
 *WorkspacesAdminApi* | [**GetWorkspacesPost**](docs/WorkspacesAdminApi.md#getworkspacespost) | **POST** /admin/directory/workspace | get managed workspaces
+*WorkspacesAdminApi* | [**GetYammerDetail**](docs/WorkspacesAdminApi.md#getyammerdetail) | **GET** /admin/directory/workspace/yammers/{id} | get yammer detail
 *WorkspacesAdminApi* | [**LockWorkspaces**](docs/WorkspacesAdminApi.md#lockworkspaces) | **POST** /admin/directory/workspace/lock | lock sites or Office365 group sites
 *WorkspacesAdminApi* | [**SpecifyContacts**](docs/WorkspacesAdminApi.md#specifycontacts) | **POST** /admin/directory/workspace/contacts | specify contacts
 *WorkspacesAdminApi* | [**TriggerWorkspaceRenewal**](docs/WorkspacesAdminApi.md#triggerworkspacerenewal) | **POST** /admin/directory/workspace/renewal/trigger | trigger workspace renewal
@@ -394,6 +436,7 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [Model.ActionSource](docs/ActionSource.md)
  - [Model.ActivityModelbase](docs/ActivityModelbase.md)
  - [Model.AddGroupMemberType](docs/AddGroupMemberType.md)
  - [Model.AddSiteColumnToList](docs/AddSiteColumnToList.md)
@@ -439,11 +482,13 @@ Class | Method | HTTP request | Description
  - [Model.ArchiveWebLifecycleRequest](docs/ArchiveWebLifecycleRequest.md)
  - [Model.ArchiveWorkspaceParameter](docs/ArchiveWorkspaceParameter.md)
  - [Model.AssignBy](docs/AssignBy.md)
+ - [Model.AssignedLabel](docs/AssignedLabel.md)
  - [Model.AssociateToHubSite](docs/AssociateToHubSite.md)
  - [Model.AuthenticationType](docs/AuthenticationType.md)
  - [Model.AutoCompleteRenewalTaskParameter](docs/AutoCompleteRenewalTaskParameter.md)
  - [Model.AutoGenerateUrlSetting](docs/AutoGenerateUrlSetting.md)
  - [Model.AutoGenerateUrlType](docs/AutoGenerateUrlType.md)
+ - [Model.AutoImportConfirmMetricsInfo](docs/AutoImportConfirmMetricsInfo.md)
  - [Model.AutoImportPhase](docs/AutoImportPhase.md)
  - [Model.AutoImportProcessHookMessage](docs/AutoImportProcessHookMessage.md)
  - [Model.AutoTaskExtendRequest](docs/AutoTaskExtendRequest.md)
@@ -458,10 +503,18 @@ Class | Method | HTTP request | Description
  - [Model.ChangeContactByUserSetting](docs/ChangeContactByUserSetting.md)
  - [Model.ChangeContactMethod](docs/ChangeContactMethod.md)
  - [Model.ChangeContactObjectModel](docs/ChangeContactObjectModel.md)
+ - [Model.ChangeContactValidationParameter](docs/ChangeContactValidationParameter.md)
+ - [Model.ChangeDistributionGroupSettingsCheckResult](docs/ChangeDistributionGroupSettingsCheckResult.md)
+ - [Model.ChangeDistributionGroupSettingsValidationParameter](docs/ChangeDistributionGroupSettingsValidationParameter.md)
+ - [Model.ChangeExchangeResourceGroupSettingsCheckResult](docs/ChangeExchangeResourceGroupSettingsCheckResult.md)
+ - [Model.ChangeExchangeResourceGroupSettingsValidationParameter](docs/ChangeExchangeResourceGroupSettingsValidationParameter.md)
  - [Model.ChangeExchangeResourceMembershipGalleryRequestModel](docs/ChangeExchangeResourceMembershipGalleryRequestModel.md)
  - [Model.ChangeExchangeResourceSettingsGroupModel](docs/ChangeExchangeResourceSettingsGroupModel.md)
+ - [Model.ChangeGroupOwnerMembershipCheckResult](docs/ChangeGroupOwnerMembershipCheckResult.md)
+ - [Model.ChangeGroupOwnerMembershipValidationParameter](docs/ChangeGroupOwnerMembershipValidationParameter.md)
  - [Model.ChangeGroupPolicyRequest](docs/ChangeGroupPolicyRequest.md)
  - [Model.ChangeGroupPolicyResult](docs/ChangeGroupPolicyResult.md)
+ - [Model.ChangeGroupProfilesCheckResult](docs/ChangeGroupProfilesCheckResult.md)
  - [Model.ChangeGroupQuotaRequest](docs/ChangeGroupQuotaRequest.md)
  - [Model.ChangeGroupQuotaResult](docs/ChangeGroupQuotaResult.md)
  - [Model.ChangeGroupRequestDescription](docs/ChangeGroupRequestDescription.md)
@@ -472,11 +525,13 @@ Class | Method | HTTP request | Description
  - [Model.ChangeGroupSettingService](docs/ChangeGroupSettingService.md)
  - [Model.ChangeGroupSettingValidationParameter](docs/ChangeGroupSettingValidationParameter.md)
  - [Model.ChangeGroupSettingsModel](docs/ChangeGroupSettingsModel.md)
+ - [Model.ChangeGroupSettingsValidationParameter](docs/ChangeGroupSettingsValidationParameter.md)
  - [Model.ChangeGroupTeamPicture](docs/ChangeGroupTeamPicture.md)
  - [Model.ChangeHubSiteContentModel](docs/ChangeHubSiteContentModel.md)
  - [Model.ChangeHubSiteContentModelChangedValueRequestModel](docs/ChangeHubSiteContentModelChangedValueRequestModel.md)
  - [Model.ChangeHubSiteMethod](docs/ChangeHubSiteMethod.md)
  - [Model.ChangeHubsiteActionType](docs/ChangeHubsiteActionType.md)
+ - [Model.ChangeLibrarySettingValidateResult](docs/ChangeLibrarySettingValidateResult.md)
  - [Model.ChangeLicenseGallery](docs/ChangeLicenseGallery.md)
  - [Model.ChangeLicenseModel](docs/ChangeLicenseModel.md)
  - [Model.ChangeLicenseUserModel](docs/ChangeLicenseUserModel.md)
@@ -484,14 +539,23 @@ Class | Method | HTTP request | Description
  - [Model.ChangeListSettingRequest](docs/ChangeListSettingRequest.md)
  - [Model.ChangeListSettingService](docs/ChangeListSettingService.md)
  - [Model.ChangeListSettingValidateResult](docs/ChangeListSettingValidateResult.md)
+ - [Model.ChangeM365GroupSettingsCheckResult](docs/ChangeM365GroupSettingsCheckResult.md)
+ - [Model.ChangeM365GroupSettingsValidationParameter](docs/ChangeM365GroupSettingsValidationParameter.md)
+ - [Model.ChangeMailEnabledSecurityGroupSettingsCheckResult](docs/ChangeMailEnabledSecurityGroupSettingsCheckResult.md)
  - [Model.ChangeMetadataActionSetting](docs/ChangeMetadataActionSetting.md)
+ - [Model.ChangeMetadataCheckResult](docs/ChangeMetadataCheckResult.md)
+ - [Model.ChangeMetadataValidationParameter](docs/ChangeMetadataValidationParameter.md)
+ - [Model.ChangeObjectValidateResult](docs/ChangeObjectValidateResult.md)
  - [Model.ChangePermissionRequest](docs/ChangePermissionRequest.md)
  - [Model.ChangePermissionService](docs/ChangePermissionService.md)
  - [Model.ChangePermissionValidateResult](docs/ChangePermissionValidateResult.md)
  - [Model.ChangePictureOptionType](docs/ChangePictureOptionType.md)
  - [Model.ChangePictureOptionTypeForSite](docs/ChangePictureOptionTypeForSite.md)
  - [Model.ChangePolicyActionSetting](docs/ChangePolicyActionSetting.md)
+ - [Model.ChangePowerBIWorkspaceAccessCheckResult](docs/ChangePowerBIWorkspaceAccessCheckResult.md)
+ - [Model.ChangePowerBIWorkspaceAccessValidationParameter](docs/ChangePowerBIWorkspaceAccessValidationParameter.md)
  - [Model.ChangePrivateChannelCheckResult](docs/ChangePrivateChannelCheckResult.md)
+ - [Model.ChangePrivateChannelDynamicServiceCheckResult](docs/ChangePrivateChannelDynamicServiceCheckResult.md)
  - [Model.ChangePrivateChannelFieldModel](docs/ChangePrivateChannelFieldModel.md)
  - [Model.ChangePrivateChannelFieldName](docs/ChangePrivateChannelFieldName.md)
  - [Model.ChangePrivateChannelQuotaModel](docs/ChangePrivateChannelQuotaModel.md)
@@ -499,11 +563,16 @@ Class | Method | HTTP request | Description
  - [Model.ChangePrivateChannelRequest](docs/ChangePrivateChannelRequest.md)
  - [Model.ChangePrivateChannelService](docs/ChangePrivateChannelService.md)
  - [Model.ChangePrivateChannelValidationParameter](docs/ChangePrivateChannelValidationParameter.md)
+ - [Model.ChangeResourceMailboxPermissionCheckResult](docs/ChangeResourceMailboxPermissionCheckResult.md)
+ - [Model.ChangeResourceMailboxPermissionValidationParameter](docs/ChangeResourceMailboxPermissionValidationParameter.md)
  - [Model.ChangeSecurityGroupSettingsGalleryRequestModel](docs/ChangeSecurityGroupSettingsGalleryRequestModel.md)
+ - [Model.ChangeSharedChannelCheckResult](docs/ChangeSharedChannelCheckResult.md)
  - [Model.ChangeSharedChannelGallery](docs/ChangeSharedChannelGallery.md)
  - [Model.ChangeSharedChannelModel](docs/ChangeSharedChannelModel.md)
  - [Model.ChangeSharedMailboxModel](docs/ChangeSharedMailboxModel.md)
+ - [Model.ChangeSharedMailboxPermissionCheckResult](docs/ChangeSharedMailboxPermissionCheckResult.md)
  - [Model.ChangeSharedMailboxPermissionGallery](docs/ChangeSharedMailboxPermissionGallery.md)
+ - [Model.ChangeSharedMailboxPermissionValidationParameter](docs/ChangeSharedMailboxPermissionValidationParameter.md)
  - [Model.ChangeSiteContactElectionProfileModel](docs/ChangeSiteContactElectionProfileModel.md)
  - [Model.ChangeSiteContactRequest](docs/ChangeSiteContactRequest.md)
  - [Model.ChangeSiteContactService](docs/ChangeSiteContactService.md)
@@ -516,11 +585,13 @@ Class | Method | HTTP request | Description
  - [Model.ChangeSitePolicyRequest](docs/ChangeSitePolicyRequest.md)
  - [Model.ChangeSitePolicySetting](docs/ChangeSitePolicySetting.md)
  - [Model.ChangeSiteProfileOngoingActionModel](docs/ChangeSiteProfileOngoingActionModel.md)
+ - [Model.ChangeSiteProfilesCheckResult](docs/ChangeSiteProfilesCheckResult.md)
  - [Model.ChangeSiteProfilesGallery](docs/ChangeSiteProfilesGallery.md)
  - [Model.ChangeSiteProfilesModel](docs/ChangeSiteProfilesModel.md)
  - [Model.ChangeSiteQuotaRequest](docs/ChangeSiteQuotaRequest.md)
  - [Model.ChangeSiteQuotaSettings](docs/ChangeSiteQuotaSettings.md)
  - [Model.ChangeSiteRenewProfileModel](docs/ChangeSiteRenewProfileModel.md)
+ - [Model.ChangeSiteSettingCheckResult](docs/ChangeSiteSettingCheckResult.md)
  - [Model.ChangeSiteSettingGalleryRequestModel](docs/ChangeSiteSettingGalleryRequestModel.md)
  - [Model.ChangeSiteSettingRequest](docs/ChangeSiteSettingRequest.md)
  - [Model.ChangeSiteSettingService](docs/ChangeSiteSettingService.md)
@@ -528,15 +599,19 @@ Class | Method | HTTP request | Description
  - [Model.ChangeSiteSharingRequestModel](docs/ChangeSiteSharingRequestModel.md)
  - [Model.ChangeSiteStorageManagementProfileModel](docs/ChangeSiteStorageManagementProfileModel.md)
  - [Model.ChangeSiteStorageSettingModel](docs/ChangeSiteStorageSettingModel.md)
+ - [Model.ChangeSiteValidationParameter](docs/ChangeSiteValidationParameter.md)
  - [Model.ChangeTeamClassificationAndSensitivityLabel](docs/ChangeTeamClassificationAndSensitivityLabel.md)
  - [Model.ChangeTeamDisplayName](docs/ChangeTeamDisplayName.md)
  - [Model.ChangeTeamFunStuff](docs/ChangeTeamFunStuff.md)
  - [Model.ChangeTeamMemberPermission](docs/ChangeTeamMemberPermission.md)
  - [Model.ChangeTeamMentions](docs/ChangeTeamMentions.md)
  - [Model.ChangeTeamPrivacySetting](docs/ChangeTeamPrivacySetting.md)
+ - [Model.ChangeTeamProfilesCheckResult](docs/ChangeTeamProfilesCheckResult.md)
  - [Model.ChangeTeamRequestDescription](docs/ChangeTeamRequestDescription.md)
+ - [Model.ChangeTeamSettingCheckResult](docs/ChangeTeamSettingCheckResult.md)
  - [Model.ChangeTeamSettingGalleryRequestModel](docs/ChangeTeamSettingGalleryRequestModel.md)
  - [Model.ChangeTeamSettingModel](docs/ChangeTeamSettingModel.md)
+ - [Model.ChangeTeamSettingValidationParameter](docs/ChangeTeamSettingValidationParameter.md)
  - [Model.ChangeTemplateGiphyRatingType](docs/ChangeTemplateGiphyRatingType.md)
  - [Model.ChangeWebContactByUrlSetting](docs/ChangeWebContactByUrlSetting.md)
  - [Model.ChangeWebContactRequest](docs/ChangeWebContactRequest.md)
@@ -547,10 +622,15 @@ Class | Method | HTTP request | Description
  - [Model.ChangeWebSettingRequest](docs/ChangeWebSettingRequest.md)
  - [Model.ChangeWebSettingService](docs/ChangeWebSettingService.md)
  - [Model.ChangeWebUrlValidateResult](docs/ChangeWebUrlValidateResult.md)
+ - [Model.ChangeYammerProfilesCheckResult](docs/ChangeYammerProfilesCheckResult.md)
+ - [Model.ChangeYammerSettingValidationParameter](docs/ChangeYammerSettingValidationParameter.md)
+ - [Model.ChangeYammerSettingsCheckResult](docs/ChangeYammerSettingsCheckResult.md)
  - [Model.ChangedLicense](docs/ChangedLicense.md)
  - [Model.ChangedMembership](docs/ChangedMembership.md)
  - [Model.ChangedSiteDesignModel](docs/ChangedSiteDesignModel.md)
  - [Model.ChangedSiteDesignModelChangedValueRequestModel](docs/ChangedSiteDesignModelChangedValueRequestModel.md)
+ - [Model.CheckSiteHubSiteSettingModel](docs/CheckSiteHubSiteSettingModel.md)
+ - [Model.CheckSiteStorageSettingModel](docs/CheckSiteStorageSettingModel.md)
  - [Model.ChoiceMetadataSettings](docs/ChoiceMetadataSettings.md)
  - [Model.ChoiceType](docs/ChoiceType.md)
  - [Model.ClaimStatus](docs/ClaimStatus.md)
@@ -570,6 +650,7 @@ Class | Method | HTTP request | Description
  - [Model.ConstructedUrl](docs/ConstructedUrl.md)
  - [Model.ConstructureType](docs/ConstructureType.md)
  - [Model.Contact](docs/Contact.md)
+ - [Model.ContactElectionMetricsInfo](docs/ContactElectionMetricsInfo.md)
  - [Model.ContactInformation](docs/ContactInformation.md)
  - [Model.ContainerInfo](docs/ContainerInfo.md)
  - [Model.ContainerScopeSetting](docs/ContainerScopeSetting.md)
@@ -612,6 +693,7 @@ Class | Method | HTTP request | Description
  - [Model.CreateListUrlValidationResult](docs/CreateListUrlValidationResult.md)
  - [Model.CreateMailEnabledGroupGallery](docs/CreateMailEnabledGroupGallery.md)
  - [Model.CreatePrivateChannelCheckResult](docs/CreatePrivateChannelCheckResult.md)
+ - [Model.CreatePrivateChannelDynamicServiceCheckResult](docs/CreatePrivateChannelDynamicServiceCheckResult.md)
  - [Model.CreatePrivateChannelRequest](docs/CreatePrivateChannelRequest.md)
  - [Model.CreatePrivateChannelService](docs/CreatePrivateChannelService.md)
  - [Model.CreatePrivateChannelValidationParameter](docs/CreatePrivateChannelValidationParameter.md)
@@ -631,6 +713,7 @@ Class | Method | HTTP request | Description
  - [Model.CreateRoomMailboxRoomListRequestModel](docs/CreateRoomMailboxRoomListRequestModel.md)
  - [Model.CreateRoomMailboxRoomPlaceRequestModel](docs/CreateRoomMailboxRoomPlaceRequestModel.md)
  - [Model.CreateSecurityGroupGallery](docs/CreateSecurityGroupGallery.md)
+ - [Model.CreateSharedChannelCheckResult](docs/CreateSharedChannelCheckResult.md)
  - [Model.CreateSharedChannelGallery](docs/CreateSharedChannelGallery.md)
  - [Model.CreateSharedChannelModel](docs/CreateSharedChannelModel.md)
  - [Model.CreateSharedMailboxGallery](docs/CreateSharedMailboxGallery.md)
@@ -685,6 +768,7 @@ Class | Method | HTTP request | Description
  - [Model.ElectionHookMessage](docs/ElectionHookMessage.md)
  - [Model.EmailAddress](docs/EmailAddress.md)
  - [Model.EmailForward](docs/EmailForward.md)
+ - [Model.EnableTeamCheckResult](docs/EnableTeamCheckResult.md)
  - [Model.EndUserReportMetadata](docs/EndUserReportMetadata.md)
  - [Model.EnpowerContactStatus](docs/EnpowerContactStatus.md)
  - [Model.EntraGroupLifecycleActionType](docs/EntraGroupLifecycleActionType.md)
@@ -707,10 +791,13 @@ Class | Method | HTTP request | Description
  - [Model.ExternalUserState](docs/ExternalUserState.md)
  - [Model.ExternalUserType](docs/ExternalUserType.md)
  - [Model.FolderDefaultValueSetting](docs/FolderDefaultValueSetting.md)
+ - [Model.FunStuffSettingResult](docs/FunStuffSettingResult.md)
  - [Model.GallerySetting](docs/GallerySetting.md)
  - [Model.Gallerybase](docs/Gallerybase.md)
  - [Model.GeoLocationBase](docs/GeoLocationBase.md)
  - [Model.GeoLocationModel](docs/GeoLocationModel.md)
+ - [Model.GetManagePermissionModelParameter](docs/GetManagePermissionModelParameter.md)
+ - [Model.GetManageSiteAdminModelParameter](docs/GetManageSiteAdminModelParameter.md)
  - [Model.GiphyRatingType](docs/GiphyRatingType.md)
  - [Model.GlobalAddressList](docs/GlobalAddressList.md)
  - [Model.GovernancePanel](docs/GovernancePanel.md)
@@ -726,6 +813,7 @@ Class | Method | HTTP request | Description
  - [Model.GrantPermissionUrlValidationResult](docs/GrantPermissionUrlValidationResult.md)
  - [Model.GroupClassificationModel](docs/GroupClassificationModel.md)
  - [Model.GroupConstructureRule](docs/GroupConstructureRule.md)
+ - [Model.GroupDetailModel](docs/GroupDetailModel.md)
  - [Model.GroupEnableSharingStatus](docs/GroupEnableSharingStatus.md)
  - [Model.GroupIdConstructureSettings](docs/GroupIdConstructureSettings.md)
  - [Model.GroupIdRuleType](docs/GroupIdRuleType.md)
@@ -750,6 +838,8 @@ Class | Method | HTTP request | Description
  - [Model.GroupTeamPicture](docs/GroupTeamPicture.md)
  - [Model.GroupUser](docs/GroupUser.md)
  - [Model.GroupValidationParameter](docs/GroupValidationParameter.md)
+ - [Model.GuestLifecycleValidationParameter](docs/GuestLifecycleValidationParameter.md)
+ - [Model.GuestPermissionResult](docs/GuestPermissionResult.md)
  - [Model.GuestPermissions](docs/GuestPermissions.md)
  - [Model.GuestUserGridModel](docs/GuestUserGridModel.md)
  - [Model.GuestUserGridModelPageResult](docs/GuestUserGridModelPageResult.md)
@@ -842,11 +932,12 @@ Class | Method | HTTP request | Description
  - [Model.LogicalOperatorType](docs/LogicalOperatorType.md)
  - [Model.LookupListValue](docs/LookupListValue.md)
  - [Model.LookupValue](docs/LookupValue.md)
+ - [Model.M365GroupLifecycleActionModel](docs/M365GroupLifecycleActionModel.md)
  - [Model.M365GroupLifecycleActionType](docs/M365GroupLifecycleActionType.md)
- - [Model.M365GroupLifecycleActions](docs/M365GroupLifecycleActions.md)
  - [Model.M365GroupLifecycleGallery](docs/M365GroupLifecycleGallery.md)
  - [Model.M365GroupLifecycleModel](docs/M365GroupLifecycleModel.md)
  - [Model.M365GroupLifecycleScopeSetting](docs/M365GroupLifecycleScopeSetting.md)
+ - [Model.M365UserLifecycleValidationParameter](docs/M365UserLifecycleValidationParameter.md)
  - [Model.MailboxAutoMapping](docs/MailboxAutoMapping.md)
  - [Model.MailboxAutomaticReply](docs/MailboxAutomaticReply.md)
  - [Model.MailboxLanguageDataTime](docs/MailboxLanguageDataTime.md)
@@ -859,8 +950,10 @@ Class | Method | HTTP request | Description
  - [Model.ManagePermissionSPObject](docs/ManagePermissionSPObject.md)
  - [Model.ManagePermissionService](docs/ManagePermissionService.md)
  - [Model.ManagePermissionSharePointGroupOption](docs/ManagePermissionSharePointGroupOption.md)
+ - [Model.ManagePermissionSiteAdminModel](docs/ManagePermissionSiteAdminModel.md)
  - [Model.ManagePermissionUserSetting](docs/ManagePermissionUserSetting.md)
  - [Model.ManagePermissionValidateResult](docs/ManagePermissionValidateResult.md)
+ - [Model.ManagePermissionValidationParameter](docs/ManagePermissionValidationParameter.md)
  - [Model.ManualImportAdGroupJobModel](docs/ManualImportAdGroupJobModel.md)
  - [Model.ManualImportEnvironmentJobModel](docs/ManualImportEnvironmentJobModel.md)
  - [Model.ManualImportGroupJobModel](docs/ManualImportGroupJobModel.md)
@@ -871,6 +964,7 @@ Class | Method | HTTP request | Description
  - [Model.ManualImportSiteJobModel](docs/ManualImportSiteJobModel.md)
  - [Model.ManualImportTeamJobModel](docs/ManualImportTeamJobModel.md)
  - [Model.ManuallyInputUrlSetting](docs/ManuallyInputUrlSetting.md)
+ - [Model.MemberPermissionResult](docs/MemberPermissionResult.md)
  - [Model.MembershipApproval](docs/MembershipApproval.md)
  - [Model.MembershipUserType](docs/MembershipUserType.md)
  - [Model.MessageApproval](docs/MessageApproval.md)
@@ -878,6 +972,7 @@ Class | Method | HTTP request | Description
  - [Model.MetadataActionType](docs/MetadataActionType.md)
  - [Model.MetadataDisplayType](docs/MetadataDisplayType.md)
  - [Model.MetadataFieldType](docs/MetadataFieldType.md)
+ - [Model.MetricWorkspaceType](docs/MetricWorkspaceType.md)
  - [Model.MultiGeoControlMode](docs/MultiGeoControlMode.md)
  - [Model.MultiGeoLocationSetting](docs/MultiGeoLocationSetting.md)
  - [Model.MultiGeoSerivceSetting](docs/MultiGeoSerivceSetting.md)
@@ -920,6 +1015,7 @@ Class | Method | HTTP request | Description
  - [Model.RegisterAsHubSite](docs/RegisterAsHubSite.md)
  - [Model.RemoteNodeInfo](docs/RemoteNodeInfo.md)
  - [Model.RemoteNodeType](docs/RemoteNodeType.md)
+ - [Model.RenewalMetricsInfo](docs/RenewalMetricsInfo.md)
  - [Model.RenewalProfile](docs/RenewalProfile.md)
  - [Model.RenewalTaskHookMessage](docs/RenewalTaskHookMessage.md)
  - [Model.ReportMetadata](docs/ReportMetadata.md)
@@ -952,6 +1048,7 @@ Class | Method | HTTP request | Description
  - [Model.SPList](docs/SPList.md)
  - [Model.SPListTemplateType](docs/SPListTemplateType.md)
  - [Model.SPNode](docs/SPNode.md)
+ - [Model.SPPermission](docs/SPPermission.md)
  - [Model.SPPrincipal](docs/SPPrincipal.md)
  - [Model.SPPrincipalType](docs/SPPrincipalType.md)
  - [Model.SPRoleAssignment](docs/SPRoleAssignment.md)
@@ -980,6 +1077,7 @@ Class | Method | HTTP request | Description
  - [Model.SharedMailboxBasicGridModel](docs/SharedMailboxBasicGridModel.md)
  - [Model.SharedMailboxBasicGridModelPageResult](docs/SharedMailboxBasicGridModelPageResult.md)
  - [Model.SharedMailboxLifecycleGalleryRequestModel](docs/SharedMailboxLifecycleGalleryRequestModel.md)
+ - [Model.SharedMailboxLifecycleValidationParameter](docs/SharedMailboxLifecycleValidationParameter.md)
  - [Model.SharingAdvanceSettingModel](docs/SharingAdvanceSettingModel.md)
  - [Model.SharingAdvanceSettingModelChangedValueRequestModel](docs/SharingAdvanceSettingModelChangedValueRequestModel.md)
  - [Model.SharingCapabilities](docs/SharingCapabilities.md)
@@ -1002,6 +1100,7 @@ Class | Method | HTTP request | Description
  - [Model.SiteConstructUrlType](docs/SiteConstructUrlType.md)
  - [Model.SiteDesign](docs/SiteDesign.md)
  - [Model.SiteDesignModel](docs/SiteDesignModel.md)
+ - [Model.SiteDetailModel](docs/SiteDetailModel.md)
  - [Model.SiteElectionProfile](docs/SiteElectionProfile.md)
  - [Model.SiteFeature](docs/SiteFeature.md)
  - [Model.SiteLanguage](docs/SiteLanguage.md)
@@ -1015,6 +1114,7 @@ Class | Method | HTTP request | Description
  - [Model.SitePicture](docs/SitePicture.md)
  - [Model.SitePolicyRef](docs/SitePolicyRef.md)
  - [Model.SiteSensitivityLabel](docs/SiteSensitivityLabel.md)
+ - [Model.SiteSharingModel](docs/SiteSharingModel.md)
  - [Model.SiteSharingStatus](docs/SiteSharingStatus.md)
  - [Model.SiteStatus](docs/SiteStatus.md)
  - [Model.SiteTemplate](docs/SiteTemplate.md)
@@ -1036,6 +1136,7 @@ Class | Method | HTTP request | Description
  - [Model.StringModelChangedValueRequestModel](docs/StringModelChangedValueRequestModel.md)
  - [Model.SubRequestType](docs/SubRequestType.md)
  - [Model.SubscribeMembers](docs/SubscribeMembers.md)
+ - [Model.SyncJobMetricsInfo](docs/SyncJobMetricsInfo.md)
  - [Model.TaskApprovalStatus](docs/TaskApprovalStatus.md)
  - [Model.TaskComment](docs/TaskComment.md)
  - [Model.TaskDynamicActions](docs/TaskDynamicActions.md)
@@ -1061,6 +1162,7 @@ Class | Method | HTTP request | Description
  - [Model.TeamMemberPermissionSetting](docs/TeamMemberPermissionSetting.md)
  - [Model.TeamMembers](docs/TeamMembers.md)
  - [Model.TeamMentionSetting](docs/TeamMentionSetting.md)
+ - [Model.TeamMentionsResult](docs/TeamMentionsResult.md)
  - [Model.TeamMessagingSettings](docs/TeamMessagingSettings.md)
  - [Model.TeamNameDescription](docs/TeamNameDescription.md)
  - [Model.TeamOwners](docs/TeamOwners.md)
@@ -1070,6 +1172,7 @@ Class | Method | HTTP request | Description
  - [Model.TeamSiteUrl](docs/TeamSiteUrl.md)
  - [Model.TeamTemplate](docs/TeamTemplate.md)
  - [Model.TeamTimeZone](docs/TeamTimeZone.md)
+ - [Model.TeamsDetailModel](docs/TeamsDetailModel.md)
  - [Model.TeamsTemplateServiceSettings](docs/TeamsTemplateServiceSettings.md)
  - [Model.TeamsTemplateSettings](docs/TeamsTemplateSettings.md)
  - [Model.TemplateAssignBy](docs/TemplateAssignBy.md)
@@ -1104,6 +1207,7 @@ Class | Method | HTTP request | Description
  - [Model.UserMetadataSettings](docs/UserMetadataSettings.md)
  - [Model.UserProfileMetadataSettings](docs/UserProfileMetadataSettings.md)
  - [Model.UserSource](docs/UserSource.md)
+ - [Model.ValidateInviteGuestEmailModel](docs/ValidateInviteGuestEmailModel.md)
  - [Model.WebLifecycleActionType](docs/WebLifecycleActionType.md)
  - [Model.WebLifecycleRequest](docs/WebLifecycleRequest.md)
  - [Model.WebLifecycleService](docs/WebLifecycleService.md)
@@ -1130,6 +1234,7 @@ Class | Method | HTTP request | Description
  - [Model.WorkspaceStatus](docs/WorkspaceStatus.md)
  - [Model.WorkspaceType](docs/WorkspaceType.md)
  - [Model.YammerCommunityInfoModel](docs/YammerCommunityInfoModel.md)
+ - [Model.YammerDetailModel](docs/YammerDetailModel.md)
  - [Model.YammerGroupJoinType](docs/YammerGroupJoinType.md)
  - [Model.YammerGroupRequestSettings](docs/YammerGroupRequestSettings.md)
  - [Model.YammerGroupServiceSettings](docs/YammerGroupServiceSettings.md)

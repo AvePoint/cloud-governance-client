@@ -3,11 +3,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectInfo** | [**ChangeListSettingRequestObjectInfo**](ChangeListSettingRequestObjectInfo.md) |  | [optional] 
-**ListTitle** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
-**ListDescription** | [**ChangeListSettingRequestListTitle**](ChangeListSettingRequestListTitle.md) |  | [optional] 
-**NavigationSetting** | [**ChangeListSettingRequestNavigationSetting**](ChangeListSettingRequestNavigationSetting.md) |  | [optional] 
-**VersionSetting** | [**ChangeListSettingRequestVersionSetting**](ChangeListSettingRequestVersionSetting.md) |  | [optional] 
+**ObjectInfo** | [**ChangeListSettingObjectInfo**](ChangeListSettingObjectInfo.md) |  | [optional] 
+**ListTitle** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**ListDescription** | [**StringChangedProperty**](StringChangedProperty.md) |  | [optional] 
+**NavigationSetting** | [**BooleanChangedProperty**](BooleanChangedProperty.md) |  | [optional] 
+**VersionSetting** | [**ListVersionSettingsChangedProperty**](ListVersionSettingsChangedProperty.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 

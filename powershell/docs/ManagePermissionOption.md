@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GrantPermissionSetting** | [**ManagePermissionOptionGrantPermissionSetting**](ManagePermissionOptionGrantPermissionSetting.md) |  | [optional] 
+**GrantPermissionSetting** | [**ManagePermissionGrantSetting**](ManagePermissionGrantSetting.md) |  | [optional] 
 **IsEnableEditPermission** | **Boolean** |  | [optional] [default to $false]
 **IsEnableRemovePermission** | **Boolean** |  | [optional] [default to $false]
 **IsEnableStopInheritPermission** | **Boolean** |  | [optional] [default to $false]

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ValueType** | **String** |  | [optional] 
 **EnableValueSync** | **Boolean** |  | [optional] [default to $false]
 **EnableRoleValueSync** | **Boolean** |  | [optional] [default to $false]
-**Value** | [**AzureAdMetadataSettingsValue**](AzureAdMetadataSettingsValue.md) |  | [optional] 
+**Value** | [**LookupValue**](LookupValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
 **Property** | **String** |  | [optional] 
 **ExtensionAttribute** | **String** |  | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]

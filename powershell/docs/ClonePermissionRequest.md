@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Urls** | **String[]** |  | [optional] 
-**SourceUser** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
-**TargetUser** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**SourceUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**TargetUser** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **CloneOption** | [**ClonePermissionOption**](ClonePermissionOption.md) |  | [optional] 
 **AdditionalCloneOption** | [**ClonePermissionAdditionalOption**](ClonePermissionAdditionalOption.md) |  | [optional] 
 **EnabledRemoveExplicitPermission** | **Boolean** |  | [optional] [default to $false]

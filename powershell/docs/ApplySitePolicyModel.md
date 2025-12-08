@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **IsApplyQuotaThreshold** | **Boolean** |  | [optional] [default to $false]
 **IsApplyDeactivatedElection** | **Boolean** |  | [optional] [default to $false]
 **IsApplyLifecycle** | **Boolean** |  | [optional] [default to $false]
-**LifecycleRenewalSetting** | [**ApplyGroupPolicyModelLifecycleRenewalSetting**](ApplyGroupPolicyModelLifecycleRenewalSetting.md) |  | [optional] 
+**LifecycleRenewalSetting** | [**LifecycleRenewalSetting**](LifecycleRenewalSetting.md) |  | [optional] 
 **VarFilter** | **String** |  | [optional] 
 **Search** | **String** |  | [optional] 
 **SelectedObjects** | **String[]** |  | [optional] 

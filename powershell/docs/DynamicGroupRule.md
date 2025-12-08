@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **Condition** | [**DynamicRuleConditionType**](DynamicRuleConditionType.md) |  | [optional] 
 **MetadataValueAzureUserType** | **String** |  | [optional] 
 **MetadataUserList** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
+**OfficeTenantId** | **String** |  | [optional] 
+**OfficeTenantName** | **String** |  | [optional] 
+**MetadataUsers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 
 ## Examples
 
@@ -33,7 +36,10 @@ $DynamicGroupRule = New-Cloud.Governance.ClientDynamicGroupRule  -Id null `
  -MetadataDisplayValue null `
  -Condition null `
  -MetadataValueAzureUserType null `
- -MetadataUserList null
+ -MetadataUserList null `
+ -OfficeTenantId null `
+ -OfficeTenantName null `
+ -MetadataUsers null
 ```
 
 - Convert the resource to JSON

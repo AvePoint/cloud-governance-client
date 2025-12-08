@@ -3,13 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TeamInfo** | [**TeamLifecycleGalleryTeamInfo**](TeamLifecycleGalleryTeamInfo.md) |  | [optional] 
-**TeamLifecycleActionDetails** | [**TeamLifecycleGalleryTeamLifecycleActionDetails**](TeamLifecycleGalleryTeamLifecycleActionDetails.md) |  | [optional] 
+**TeamInfo** | [**LifecycleTeamModel**](LifecycleTeamModel.md) |  | [optional] 
+**TeamLifecycleActionDetails** | [**TeamLifecycleActionModel**](TeamLifecycleActionModel.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -21,7 +22,8 @@ $TeamLifecycleGallery = New-Cloud.Governance.ClientTeamLifecycleGallery  -TeamIn
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

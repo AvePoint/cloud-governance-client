@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Value** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**PeoplePickerProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**PeoplePickerProfile** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
 **AllowBusinessUserToInputSingleValue** | **Boolean** |  | [optional] [default to $false]
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 

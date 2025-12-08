@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Description** | **String** | Group description | [optional] 
 **Users** | [**GroupUser[]**](GroupUser.md) | The list of the group users | [optional] 
 **PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) | The list of the group permission levels | [optional] 
-**GroupOwner** | [**RequestGroupWithPermissionsGroupOwner**](RequestGroupWithPermissionsGroupOwner.md) |  | [optional] 
+**GroupOwner** | [**ApiUser**](ApiUser.md) | Group owner information | [optional] 
 **GroupOwnerType** | [**GroupOwnerType**](GroupOwnerType.md) | Group owner type | [optional] 
 **BuildInGroupType** | [**SharePointBuildInGroupType**](SharePointBuildInGroupType.md) | Built-in group type | [optional] 
 **SpGroupViewType** | [**SPGroupViewOptionType**](SPGroupViewOptionType.md) |  | [optional] 

@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **Sharing** | **SiteSharingStatus** |  | [optional] 
 **SharingDescription** | **string** |  | [optional] 
 **ConversationsLink** | **string** |  | [optional] 
+**ActionSource** | **ActionSource** |  | [optional] 
 **Id** | **Guid** |  | [optional] 
 **Phase** | **AutoImportPhase** |  | [optional] 
 **PhaseStartTime** | **DateTime?** |  | [optional] 

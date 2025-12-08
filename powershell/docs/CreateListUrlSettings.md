@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EnableContructUrl** | **Boolean** |  | [optional] [default to $false]
-**ContructUrlSetting** | [**CreateListUrlSettingsContructUrlSetting**](CreateListUrlSettingsContructUrlSetting.md) |  | [optional] 
+**ContructUrlSetting** | [**ContructUrlSetting**](ContructUrlSetting.md) |  | [optional] 
 **EnableUrlValidation** | **Boolean** |  | [optional] [default to $false]
-**TextValidationRule** | [**CreateListUrlSettingsTextValidationRule**](CreateListUrlSettingsTextValidationRule.md) |  | [optional] 
+**TextValidationRule** | [**TextValidationRuleRef**](TextValidationRuleRef.md) |  | [optional] 
 
 ## Examples
 

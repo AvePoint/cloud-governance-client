@@ -14,7 +14,13 @@ Name | Type | Description | Notes
 **AdditionalColumn** | **String** |  | [optional] 
 **AdditionalColumnType** | **String** |  | [optional] 
 **AdditionalColumnName** | **String** |  | [optional] 
-**Value** | [**SharePointListMetadataSettingsValue**](SharePointListMetadataSettingsValue.md) |  | [optional] 
+**IsAdditionalColumn2Enabled** | **Boolean** |  | [optional] [default to $false]
+**MatchedMetadata2Id** | **String** |  | [optional] 
+**MatchedMetadata2Name** | **String** |  | [optional] 
+**AdditionalColumn2** | **String** |  | [optional] 
+**AdditionalColumn2Type** | **String** |  | [optional] 
+**AdditionalColumn2Name** | **String** |  | [optional] 
+**Value** | [**LookupListValue**](LookupListValue.md) | Value of Lookup User Profile or Azure Ad metadata. | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
@@ -32,6 +38,12 @@ $SharePointListMetadataSettings = New-Cloud.Governance.ClientSharePointListMetad
  -AdditionalColumn null `
  -AdditionalColumnType null `
  -AdditionalColumnName null `
+ -IsAdditionalColumn2Enabled null `
+ -MatchedMetadata2Id null `
+ -MatchedMetadata2Name null `
+ -AdditionalColumn2 null `
+ -AdditionalColumn2Type null `
+ -AdditionalColumn2Name null `
  -Value null `
  -AllowReferenceAsRoleInApprovalProcess null
 ```

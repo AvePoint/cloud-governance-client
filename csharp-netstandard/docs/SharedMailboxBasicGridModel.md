@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **Status** | **ExchangeResourceStatus** |  | [optional] 
 **Members** | **string** |  | [optional] 
 **DirectorySyncState** | **DirectorySyncState** |  | [optional] 
+**HasPendingApprovalTask** | **bool** |  | [optional] [default to false]
+**HasOngoingTasks** | **bool** |  | [optional] [default to false]
 **PrimaryContact** | **string** |  | [optional] 
 **PrimaryContactEmail** | **string** |  | [optional] 
 **PrimaryContactDisplayName** | **string** |  | [optional] 

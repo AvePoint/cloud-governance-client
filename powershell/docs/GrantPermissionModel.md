@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PermissionDurationSettings** | [**GrantPermissionModelPermissionDurationSettings**](GrantPermissionModelPermissionDurationSettings.md) |  | [optional] 
-**WelcomeEmailSettings** | [**GrantPermissionModelWelcomeEmailSettings**](GrantPermissionModelWelcomeEmailSettings.md) |  | [optional] 
+**PermissionDurationSettings** | [**TemporaryPermissionRequestSetting**](TemporaryPermissionRequestSetting.md) |  | [optional] 
+**WelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] 
 
 ## Examples
 
