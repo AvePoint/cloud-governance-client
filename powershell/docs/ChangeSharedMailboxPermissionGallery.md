@@ -3,15 +3,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangedSharedMailboxInfo** | [**ChangeSharedMailboxPermissionGalleryChangedSharedMailboxInfo**](ChangeSharedMailboxPermissionGalleryChangedSharedMailboxInfo.md) |  | [optional] 
-**ChangedMembers** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership.md) |  | [optional] 
-**ChangedSendAs** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership.md) |  | [optional] 
-**ChangedSendOnBehalf** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership.md) |  | [optional] 
+**ChangedSharedMailboxInfo** | [**ChangeSharedMailboxModel**](ChangeSharedMailboxModel.md) |  | [optional] 
+**ChangedMembers** | [**ChangedMembership**](ChangedMembership.md) |  | [optional] 
+**ChangedSendAs** | [**ChangedMembership**](ChangedMembership.md) |  | [optional] 
+**ChangedSendOnBehalf** | [**ChangedMembership**](ChangedMembership.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -25,7 +26,8 @@ $ChangeSharedMailboxPermissionGallery = New-Cloud.Governance.ClientChangeSharedM
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

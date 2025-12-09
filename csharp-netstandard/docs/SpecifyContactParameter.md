@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **PrimaryContactNotifiedEmail** | **Guid** |  | [optional] 
 **SecondaryContactNotifiedEmail** | **Guid** |  | [optional] 
 **IsRemoveSecondaryContact** | **bool** |  | [optional] [default to false]
+**Processor** | **string** |  | [optional] 
 **Workspace** | [**List&lt;WorkspaceIdTypeModel&gt;**](WorkspaceIdTypeModel.md) |  | [optional] 
 **IsSelectAllWorkspace** | **bool** |  | [optional] [default to false]
 **Type** | **WorkspaceType** |  | [optional] 

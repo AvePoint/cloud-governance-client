@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OriginalProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
-**DestinationProfile** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**OriginalProfile** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**DestinationProfile** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

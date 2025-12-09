@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ChannelDescription** | **String** | Channnel description | [optional] 
 **Owners** | [**ApiUser[]**](ApiUser.md) | Channnel owners | [optional] 
 **Members** | [**ApiUser[]**](ApiUser.md) | Channnel members | [optional] 
-**Team** | [**ChangePrivateChannelRequestTeam**](ChangePrivateChannelRequestTeam.md) |  | [optional] 
+**Team** | [**ApiUser**](ApiUser.md) | Channel parent team | [optional] 
 **ChannelWebUrl** | **String** | Channnel web url | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 

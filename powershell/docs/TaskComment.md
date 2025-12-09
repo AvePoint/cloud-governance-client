@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **AssigneeDisplayName** | **String** |  | [optional] 
 **CommentTime** | **System.DateTime** |  | [optional] 
 **Content** | **String** |  | [optional] 
+**TaskResult** | [**TaskResult**](TaskResult.md) |  | [optional] 
+**OldVersion** | **Int32** |  | [optional] [default to 0]
 
 ## Examples
 
@@ -13,7 +15,9 @@ Name | Type | Description | Notes
 ```powershell
 $TaskComment = New-Cloud.Governance.ClientTaskComment  -AssigneeDisplayName null `
  -CommentTime null `
- -Content null
+ -Content null `
+ -TaskResult null `
+ -OldVersion null
 ```
 
 - Convert the resource to JSON

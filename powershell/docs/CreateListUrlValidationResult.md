@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ParentObject** | [**CreateListRequestParentObject**](CreateListRequestParentObject.md) |  | [optional] 
+**ParentObject** | [**CreateListSPObject**](CreateListSPObject.md) |  | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsValid** | **Boolean** |  | [optional] [default to $false]
 **ErrorMessage** | **String** |  | [optional] 

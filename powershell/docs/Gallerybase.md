@@ -7,7 +7,8 @@ Name | Type | Description | Notes
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -17,7 +18,8 @@ $Gallerybase = New-Cloud.Governance.ClientGallerybase  -GalleryType null `
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

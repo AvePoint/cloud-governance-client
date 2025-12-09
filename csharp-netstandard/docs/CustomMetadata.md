@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Name** | **string** |  | [optional] 
 **DisplayName** | **string** |  | [optional] 
 **Description** | **string** |  | [optional] 
+**AdminDescription** | **string** |  | [optional] 
 **Type** | **MetadataFieldType** |  | [optional] 
 **DisplayType** | **DisplayInReportType** |  | [optional] 
 **AssignBy** | **AssignBy** |  | [optional] 

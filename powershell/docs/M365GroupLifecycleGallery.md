@@ -4,14 +4,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Office365TenantId** | **String** |  | [optional] 
-**M365GroupInfo** | [**M365GroupLifecycleGalleryM365GroupInfo**](M365GroupLifecycleGalleryM365GroupInfo.md) |  | [optional] 
-**M365GroupLifecycleScopeSetting** | [**M365GroupLifecycleGalleryM365GroupLifecycleScopeSetting**](M365GroupLifecycleGalleryM365GroupLifecycleScopeSetting.md) |  | [optional] 
-**M365GroupLifecycleActions** | [**M365GroupLifecycleGalleryM365GroupLifecycleActions**](M365GroupLifecycleGalleryM365GroupLifecycleActions.md) |  | [optional] 
+**M365GroupInfo** | [**M365GroupLifecycleModel**](M365GroupLifecycleModel.md) |  | [optional] 
+**M365GroupLifecycleScopeSetting** | [**M365GroupLifecycleScopeSetting**](M365GroupLifecycleScopeSetting.md) |  | [optional] 
+**M365GroupLifecycleActions** | [**M365GroupLifecycleActionModel**](M365GroupLifecycleActionModel.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -25,7 +26,8 @@ $M365GroupLifecycleGallery = New-Cloud.Governance.ClientM365GroupLifecycleGaller
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

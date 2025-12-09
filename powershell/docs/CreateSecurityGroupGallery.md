@@ -4,18 +4,19 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OfficeTenantId** | **String** |  | [optional] 
-**GroupNameAndDescription** | [**CreateCommunityGalleryNameAndDescription**](CreateCommunityGalleryNameAndDescription.md) |  | [optional] 
-**GroupContact** | [**CreateCommunityGalleryContact**](CreateCommunityGalleryContact.md) |  | [optional] 
-**Owners** | [**CreateCommunityGalleryOwners**](CreateCommunityGalleryOwners.md) |  | [optional] 
-**Members** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
-**Tenant** | [**CreateCommunityGalleryTenant**](CreateCommunityGalleryTenant.md) |  | [optional] 
-**ElectionProfile** | [**CreateCommunityGalleryElectionProfile**](CreateCommunityGalleryElectionProfile.md) |  | [optional] 
-**RenewalProfile** | [**CreateCommunityGalleryRenewalProfile**](CreateCommunityGalleryRenewalProfile.md) |  | [optional] 
+**GroupNameAndDescription** | [**TeamNameDescription**](TeamNameDescription.md) |  | [optional] 
+**GroupContact** | [**Contact**](Contact.md) | Activity model for primary contact,secondary contact | [optional] 
+**Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
+**Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
+**Tenant** | [**OfficeTenant**](OfficeTenant.md) |  | [optional] 
+**ElectionProfile** | [**TeamElectionProfile**](TeamElectionProfile.md) |  | [optional] 
+**RenewalProfile** | [**RenewalProfile**](RenewalProfile.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -33,7 +34,8 @@ $CreateSecurityGroupGallery = New-Cloud.Governance.ClientCreateSecurityGroupGall
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

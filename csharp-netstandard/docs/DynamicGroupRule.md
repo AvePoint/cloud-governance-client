@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **Condition** | **DynamicRuleConditionType** |  | [optional] 
 **MetadataValueAzureUserType** | **string** |  | [optional] 
 **MetadataUserList** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**OfficeTenantId** | **string** |  | [optional] 
+**OfficeTenantName** | **string** |  | [optional] 
+**MetadataUsers** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

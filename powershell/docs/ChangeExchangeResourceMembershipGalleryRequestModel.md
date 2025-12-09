@@ -3,15 +3,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangedGroupInfo** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupInfo**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupInfo.md) |  | [optional] 
-**ChangedGroupOwnership** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership.md) |  | [optional] 
-**ChangedGroupMembership** | [**ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership**](ChangeExchangeResourceMembershipGalleryRequestModelChangedGroupOwnership.md) |  | [optional] 
-**PredefinedOwnerOrMembers** | [**ChangeExchangeResourceMembershipGalleryRequestModelPredefinedOwnerOrMembers**](ChangeExchangeResourceMembershipGalleryRequestModelPredefinedOwnerOrMembers.md) |  | [optional] 
+**ChangedGroupInfo** | [**ChangeExchangeResourceSettingsGroupModel**](ChangeExchangeResourceSettingsGroupModel.md) |  | [optional] 
+**ChangedGroupOwnership** | [**ChangedMembership**](ChangedMembership.md) |  | [optional] 
+**ChangedGroupMembership** | [**ChangedMembership**](ChangedMembership.md) |  | [optional] 
+**PredefinedOwnerOrMembers** | [**PredefinedOwnerOrMembers**](PredefinedOwnerOrMembers.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -25,7 +26,8 @@ $ChangeExchangeResourceMembershipGalleryRequestModel = New-Cloud.Governance.Clie
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

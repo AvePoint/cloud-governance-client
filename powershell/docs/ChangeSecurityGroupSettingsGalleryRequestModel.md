@@ -3,15 +3,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangeGroupVisibility** | [**ChangeSecurityGroupSettingsGalleryRequestModelChangeGroupVisibility**](ChangeSecurityGroupSettingsGalleryRequestModelChangeGroupVisibility.md) |  | [optional] 
-**GroupSettingInfo** | [**ChangeSecurityGroupSettingsGalleryRequestModelGroupSettingInfo**](ChangeSecurityGroupSettingsGalleryRequestModelGroupSettingInfo.md) |  | [optional] 
-**ChangeGroupName** | [**ChangeSecurityGroupSettingsGalleryRequestModelChangeGroupName**](ChangeSecurityGroupSettingsGalleryRequestModelChangeGroupName.md) |  | [optional] 
-**ChangeGroupDescription** | [**ChangeSecurityGroupSettingsGalleryRequestModelChangeGroupDescription**](ChangeSecurityGroupSettingsGalleryRequestModelChangeGroupDescription.md) |  | [optional] 
+**ChangeGroupVisibility** | [**ChangeGroupRequestVisibility**](ChangeGroupRequestVisibility.md) |  | [optional] 
+**GroupSettingInfo** | [**ChangeGroupSettingsModel**](ChangeGroupSettingsModel.md) |  | [optional] 
+**ChangeGroupName** | [**ChangeGroupRequestName**](ChangeGroupRequestName.md) |  | [optional] 
+**ChangeGroupDescription** | [**ChangeGroupRequestDescription**](ChangeGroupRequestDescription.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -25,7 +26,8 @@ $ChangeSecurityGroupSettingsGalleryRequestModel = New-Cloud.Governance.ClientCha
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

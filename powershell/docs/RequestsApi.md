@@ -137,7 +137,7 @@ Method | HTTP request | Description
 <a name="Stop-Request"></a>
 # **Stop-Request**
 > void Stop-Request<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 cancel request
 
@@ -160,7 +160,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # cancel request
 try {
@@ -175,7 +175,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -195,7 +195,7 @@ void (empty response body)
 <a name="Get-ArchiveGroupRequest"></a>
 # **Get-ArchiveGroupRequest**
 > ArchiveGroupRequest Get-ArchiveGroupRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get archive group request
 
@@ -218,7 +218,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get archive group request
 try {
@@ -233,7 +233,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 <a name="Get-ArchiveSiteRequest"></a>
 # **Get-ArchiveSiteRequest**
 > ArchiveSiteRequest Get-ArchiveSiteRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get archive site request
 
@@ -276,7 +276,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get archive site request
 try {
@@ -291,7 +291,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 <a name="Get-ArchiveWebRequest"></a>
 # **Get-ArchiveWebRequest**
 > ArchiveWebLifecycleRequest Get-ArchiveWebRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get archive web request
 
@@ -334,7 +334,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get archive web request
 try {
@@ -349,7 +349,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChagneGroupPolicyRequest"></a>
 # **Get-ChagneGroupPolicyRequest**
 > ChangeGroupPolicyRequest Get-ChagneGroupPolicyRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change group policy request
 
@@ -392,7 +392,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change group policy request
 try {
@@ -407,7 +407,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeGroupQuotaRequest"></a>
 # **Get-ChangeGroupQuotaRequest**
 > ChangeGroupQuotaRequest Get-ChangeGroupQuotaRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change group quota request
 
@@ -450,7 +450,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change group quota request
 try {
@@ -465,7 +465,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeGroupSettingRequest"></a>
 # **Get-ChangeGroupSettingRequest**
 > ChangeGroupSettingRequest Get-ChangeGroupSettingRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change group settings request
 
@@ -508,7 +508,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change group settings request
 try {
@@ -523,7 +523,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeListSettingRequest"></a>
 # **Get-ChangeListSettingRequest**
 > ChangeListSettingRequest Get-ChangeListSettingRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change list settings request
 
@@ -566,7 +566,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change list settings request
 try {
@@ -581,7 +581,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangePermissionRequest"></a>
 # **Get-ChangePermissionRequest**
 > ChangePermissionRequest Get-ChangePermissionRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change permission request
 
@@ -624,7 +624,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change permission request
 try {
@@ -639,7 +639,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -659,7 +659,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangePrivateChannelRequest"></a>
 # **Get-ChangePrivateChannelRequest**
 > ChangePrivateChannelRequest Get-ChangePrivateChannelRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change private channel request
 
@@ -682,7 +682,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change private channel request
 try {
@@ -697,7 +697,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeSiteContactRequest"></a>
 # **Get-ChangeSiteContactRequest**
 > ChangeSiteContactRequest Get-ChangeSiteContactRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change site administrator or contact request
 
@@ -740,7 +740,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change site administrator or contact request
 try {
@@ -755,7 +755,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -775,7 +775,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeSitePolicyRequest"></a>
 # **Get-ChangeSitePolicyRequest**
 > ChangeSitePolicyRequest Get-ChangeSitePolicyRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change site policy request
 
@@ -798,7 +798,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change site policy request
 try {
@@ -813,7 +813,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -833,7 +833,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeSiteQuotaRequest"></a>
 # **Get-ChangeSiteQuotaRequest**
 > ChangeSiteQuotaRequest Get-ChangeSiteQuotaRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change site quota request
 
@@ -856,7 +856,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change site quota request
 try {
@@ -871,7 +871,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -891,7 +891,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeSiteSettingRequest"></a>
 # **Get-ChangeSiteSettingRequest**
 > ChangeSiteSettingRequest Get-ChangeSiteSettingRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change site settings request
 
@@ -914,7 +914,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change site settings request
 try {
@@ -929,7 +929,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -949,7 +949,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeWebContactRequest"></a>
 # **Get-ChangeWebContactRequest**
 > ChangeWebContactRequest Get-ChangeWebContactRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change web contact request
 
@@ -972,7 +972,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change web contact request
 try {
@@ -987,7 +987,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1007,7 +1007,7 @@ Name | Type | Description  | Notes
 <a name="Get-ChangeWebSettingRequest"></a>
 # **Get-ChangeWebSettingRequest**
 > ChangeWebSettingRequest Get-ChangeWebSettingRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get change web settings request
 
@@ -1030,7 +1030,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get change web settings request
 try {
@@ -1045,7 +1045,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1065,7 +1065,7 @@ Name | Type | Description  | Notes
 <a name="Get-ClonePermissionRequest"></a>
 # **Get-ClonePermissionRequest**
 > ClonePermissionRequest Get-ClonePermissionRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get clone permission request
 
@@ -1088,7 +1088,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get clone permission request
 try {
@@ -1103,7 +1103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1123,7 +1123,7 @@ Name | Type | Description  | Notes
 <a name="Get-ContentMoveRequest"></a>
 # **Get-ContentMoveRequest**
 > ContentMoveRequest Get-ContentMoveRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get content move request
 
@@ -1146,7 +1146,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get content move request
 try {
@@ -1161,7 +1161,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 <a name="Get-CreateGroupRequest"></a>
 # **Get-CreateGroupRequest**
 > CreateGroupRequest Get-CreateGroupRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get create group request
 
@@ -1204,7 +1204,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get create group request
 try {
@@ -1219,7 +1219,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1239,7 +1239,7 @@ Name | Type | Description  | Notes
 <a name="Get-CreateGuestUserRequest"></a>
 # **Get-CreateGuestUserRequest**
 > CreateGuestUserRequest Get-CreateGuestUserRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get create guest user request
 
@@ -1262,7 +1262,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get create guest user request
 try {
@@ -1277,7 +1277,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1297,7 +1297,7 @@ Name | Type | Description  | Notes
 <a name="Get-CreateListRequest"></a>
 # **Get-CreateListRequest**
 > CreateListRequest Get-CreateListRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get create list request
 
@@ -1320,7 +1320,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get create list request
 try {
@@ -1335,7 +1335,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1355,7 +1355,7 @@ Name | Type | Description  | Notes
 <a name="Get-CreatePrivateChannelRequest"></a>
 # **Get-CreatePrivateChannelRequest**
 > CreatePrivateChannelRequest Get-CreatePrivateChannelRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get private channel request
 
@@ -1378,7 +1378,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get private channel request
 try {
@@ -1393,7 +1393,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1413,7 +1413,7 @@ Name | Type | Description  | Notes
 <a name="Get-CreateSiteRequest"></a>
 # **Get-CreateSiteRequest**
 > CreateSiteRequest Get-CreateSiteRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get create site request
 
@@ -1436,7 +1436,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | The id of create site collection request.
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | The id of create site collection request.
 
 # get create site request
 try {
@@ -1451,7 +1451,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**| The id of create site collection request. | 
+ **Id** | [**String**](String.md)| The id of create site collection request. | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1471,7 +1471,7 @@ Name | Type | Description  | Notes
 <a name="Get-CreateWebRequest"></a>
 # **Get-CreateWebRequest**
 > CreateWebRequest Get-CreateWebRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get create web request
 
@@ -1494,7 +1494,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get create web request
 try {
@@ -1509,7 +1509,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1529,7 +1529,7 @@ Name | Type | Description  | Notes
 <a name="Get-CustomRequest"></a>
 # **Get-CustomRequest**
 > ApiRequest Get-CustomRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get custom service request
 
@@ -1552,7 +1552,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get custom service request
 try {
@@ -1567,7 +1567,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1587,7 +1587,7 @@ Name | Type | Description  | Notes
 <a name="Get-DeleteGroupRequest"></a>
 # **Get-DeleteGroupRequest**
 > DeleteGroupRequest Get-DeleteGroupRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get delete group request
 
@@ -1610,7 +1610,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get delete group request
 try {
@@ -1625,7 +1625,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1645,7 +1645,7 @@ Name | Type | Description  | Notes
 <a name="Get-DeleteSiteRequest"></a>
 # **Get-DeleteSiteRequest**
 > DeleteSiteRequest Get-DeleteSiteRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get delete site request
 
@@ -1668,7 +1668,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get delete site request
 try {
@@ -1683,7 +1683,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1703,7 +1703,7 @@ Name | Type | Description  | Notes
 <a name="Get-DeleteWebRequest"></a>
 # **Get-DeleteWebRequest**
 > DeleteWebLifecycleRequest Get-DeleteWebRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get delete web request
 
@@ -1726,7 +1726,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get delete web request
 try {
@@ -1741,7 +1741,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1761,7 +1761,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequest"></a>
 # **Get-DynamicRequest**
 > DynamicRequest Get-DynamicRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get dynamic request
 
@@ -1784,7 +1784,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get dynamic request
 try {
@@ -1799,7 +1799,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1819,7 +1819,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeContactGallery"></a>
 # **Get-DynamicRequestChangeContactGallery**
 > DynamicChangeContactGalleryRequestModel Get-DynamicRequestChangeContactGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -1843,7 +1843,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -1858,7 +1858,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -1879,7 +1879,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeExchangeResourceMembershipGallery"></a>
 # **Get-DynamicRequestChangeExchangeResourceMembershipGallery**
 > ChangeExchangeResourceMembershipGalleryRequestModel Get-DynamicRequestChangeExchangeResourceMembershipGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -1903,7 +1903,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -1918,7 +1918,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -1939,7 +1939,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeLicenseGallery"></a>
 # **Get-DynamicRequestChangeLicenseGallery**
 > ChangeLicenseGallery Get-DynamicRequestChangeLicenseGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -1963,7 +1963,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -1978,7 +1978,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -1999,7 +1999,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeSecurityGroupSettingsGallery"></a>
 # **Get-DynamicRequestChangeSecurityGroupSettingsGallery**
 > ChangeSecurityGroupSettingsGalleryRequestModel Get-DynamicRequestChangeSecurityGroupSettingsGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2023,7 +2023,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2038,7 +2038,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2059,7 +2059,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeSharedChannelGallery"></a>
 # **Get-DynamicRequestChangeSharedChannelGallery**
 > ChangeSharedChannelGallery Get-DynamicRequestChangeSharedChannelGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2083,7 +2083,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2098,7 +2098,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2119,7 +2119,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeSharedMailboxPermissionGallery"></a>
 # **Get-DynamicRequestChangeSharedMailboxPermissionGallery**
 > ChangeSharedMailboxPermissionGallery Get-DynamicRequestChangeSharedMailboxPermissionGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2143,7 +2143,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2158,7 +2158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2179,7 +2179,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeSiteProfileGallery"></a>
 # **Get-DynamicRequestChangeSiteProfileGallery**
 > ChangeSiteProfilesGallery Get-DynamicRequestChangeSiteProfileGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2203,7 +2203,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2218,7 +2218,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2239,7 +2239,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeSiteSettingGallery"></a>
 # **Get-DynamicRequestChangeSiteSettingGallery**
 > ChangeSiteSettingGalleryRequestModel Get-DynamicRequestChangeSiteSettingGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2263,7 +2263,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2278,7 +2278,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2299,7 +2299,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestChangeTeamSettingGallery"></a>
 # **Get-DynamicRequestChangeTeamSettingGallery**
 > ChangeTeamSettingGalleryRequestModel Get-DynamicRequestChangeTeamSettingGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2323,7 +2323,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2338,7 +2338,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2359,7 +2359,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateCommunityGallery"></a>
 # **Get-DynamicRequestCreateCommunityGallery**
 > CreateCommunityGallery Get-DynamicRequestCreateCommunityGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2383,7 +2383,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2398,7 +2398,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2419,7 +2419,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateDistributionListGallery"></a>
 # **Get-DynamicRequestCreateDistributionListGallery**
 > CreateDistributionListGallery Get-DynamicRequestCreateDistributionListGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2443,7 +2443,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2458,7 +2458,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2479,7 +2479,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateEquipmentMailboxGallery"></a>
 # **Get-DynamicRequestCreateEquipmentMailboxGallery**
 > CreateEquipmentMailboxGallery Get-DynamicRequestCreateEquipmentMailboxGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2503,7 +2503,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2518,7 +2518,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2539,7 +2539,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateGroupGallery"></a>
 # **Get-DynamicRequestCreateGroupGallery**
 > CreateGroupGallery Get-DynamicRequestCreateGroupGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2563,7 +2563,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2578,7 +2578,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2599,7 +2599,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateLibraryGallery"></a>
 # **Get-DynamicRequestCreateLibraryGallery**
 > CreateLibraryGallery Get-DynamicRequestCreateLibraryGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2623,7 +2623,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2638,7 +2638,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2659,7 +2659,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateMailEnabledGroupGallery"></a>
 # **Get-DynamicRequestCreateMailEnabledGroupGallery**
 > CreateMailEnabledGroupGallery Get-DynamicRequestCreateMailEnabledGroupGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2683,7 +2683,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2698,7 +2698,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2719,7 +2719,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateRoomMailboxGallery"></a>
 # **Get-DynamicRequestCreateRoomMailboxGallery**
 > CreateRoomMailboxGallery Get-DynamicRequestCreateRoomMailboxGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2743,7 +2743,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2758,7 +2758,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2779,7 +2779,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateSecurityGroupGallery"></a>
 # **Get-DynamicRequestCreateSecurityGroupGallery**
 > CreateSecurityGroupGallery Get-DynamicRequestCreateSecurityGroupGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2803,7 +2803,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2818,7 +2818,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2839,7 +2839,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateSharedChannelGallery"></a>
 # **Get-DynamicRequestCreateSharedChannelGallery**
 > CreateSharedChannelGallery Get-DynamicRequestCreateSharedChannelGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2863,7 +2863,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2878,7 +2878,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2899,7 +2899,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateSharedMailboxGallery"></a>
 # **Get-DynamicRequestCreateSharedMailboxGallery**
 > CreateSharedMailboxGallery Get-DynamicRequestCreateSharedMailboxGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2923,7 +2923,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2938,7 +2938,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -2959,7 +2959,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateSiteGallery"></a>
 # **Get-DynamicRequestCreateSiteGallery**
 > CreateSiteGallery Get-DynamicRequestCreateSiteGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -2983,7 +2983,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -2998,7 +2998,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3019,7 +3019,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestCreateTeamsGallery"></a>
 # **Get-DynamicRequestCreateTeamsGallery**
 > CreateTeamGallery Get-DynamicRequestCreateTeamsGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -3043,7 +3043,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -3058,7 +3058,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3079,7 +3079,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestExchangeResourceLifecycleGallery"></a>
 # **Get-DynamicRequestExchangeResourceLifecycleGallery**
 > ExchangeResourceLifecycleGallery Get-DynamicRequestExchangeResourceLifecycleGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -3103,7 +3103,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -3118,7 +3118,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3139,7 +3139,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestInviteGuestGallery"></a>
 # **Get-DynamicRequestInviteGuestGallery**
 > InviteGuestGallery Get-DynamicRequestInviteGuestGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -3163,7 +3163,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -3178,7 +3178,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3199,7 +3199,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestM365GroupLifecycleGallery"></a>
 # **Get-DynamicRequestM365GroupLifecycleGallery**
 > M365GroupLifecycleGallery Get-DynamicRequestM365GroupLifecycleGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -3223,7 +3223,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -3238,7 +3238,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3259,7 +3259,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestSCLifecycleGallery"></a>
 # **Get-DynamicRequestSCLifecycleGallery**
 > SCLifecycleGallery Get-DynamicRequestSCLifecycleGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -3283,7 +3283,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -3298,7 +3298,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3319,7 +3319,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestSharedMailboxLifecycleGallery"></a>
 # **Get-DynamicRequestSharedMailboxLifecycleGallery**
 > SharedMailboxLifecycleGalleryRequestModel Get-DynamicRequestSharedMailboxLifecycleGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -3343,7 +3343,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -3358,7 +3358,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3379,7 +3379,7 @@ Name | Type | Description  | Notes
 <a name="Get-DynamicRequestTeamLifecycleGallery"></a>
 # **Get-DynamicRequestTeamLifecycleGallery**
 > TeamLifecycleGallery Get-DynamicRequestTeamLifecycleGallery<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-GalleryName] <String><br>
 
 
@@ -3403,7 +3403,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $GalleryName = "MyGalleryName" # String | 
 
 try {
@@ -3418,7 +3418,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
  **GalleryName** | **String**|  | 
 
 ### Return type
@@ -3439,7 +3439,7 @@ Name | Type | Description  | Notes
 <a name="Get-ExtendGroupRequest"></a>
 # **Get-ExtendGroupRequest**
 > ExtendGroupRequest Get-ExtendGroupRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get extend group request
 
@@ -3462,7 +3462,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get extend group request
 try {
@@ -3477,7 +3477,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3497,7 +3497,7 @@ Name | Type | Description  | Notes
 <a name="Get-ExtendSiteRequest"></a>
 # **Get-ExtendSiteRequest**
 > ExtendSiteRequest Get-ExtendSiteRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get extend site request
 
@@ -3520,7 +3520,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get extend site request
 try {
@@ -3535,7 +3535,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3555,7 +3555,7 @@ Name | Type | Description  | Notes
 <a name="Get-GrantPermissionRequest"></a>
 # **Get-GrantPermissionRequest**
 > GrantPermissionRequest Get-GrantPermissionRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get grant permission request
 
@@ -3578,7 +3578,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get grant permission request
 try {
@@ -3593,7 +3593,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3613,7 +3613,7 @@ Name | Type | Description  | Notes
 <a name="Get-LockSiteReuqest"></a>
 # **Get-LockSiteReuqest**
 > LockSiteRequest Get-LockSiteReuqest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get lock site request
 
@@ -3636,7 +3636,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get lock site request
 try {
@@ -3651,7 +3651,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3671,7 +3671,7 @@ Name | Type | Description  | Notes
 <a name="Get-ManagePermissionRequest"></a>
 # **Get-ManagePermissionRequest**
 > ManagePermissionRequest Get-ManagePermissionRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get manage permission request
 
@@ -3694,7 +3694,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get manage permission request
 try {
@@ -3709,7 +3709,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3802,7 +3802,7 @@ Name | Type | Description  | Notes
 <a name="Get-RequestById"></a>
 # **Get-RequestById**
 > ApiRequest Get-RequestById<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get request by id
 
@@ -3825,7 +3825,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get request by id
 try {
@@ -3840,7 +3840,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3860,7 +3860,7 @@ Name | Type | Description  | Notes
 <a name="Get-RestoreGroupRequest"></a>
 # **Get-RestoreGroupRequest**
 > RestoreGroupRequest Get-RestoreGroupRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get restore group request
 
@@ -3883,7 +3883,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get restore group request
 try {
@@ -3898,7 +3898,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3918,7 +3918,7 @@ Name | Type | Description  | Notes
 <a name="Get-SiteCollectionLifecycleRequest"></a>
 # **Get-SiteCollectionLifecycleRequest**
 > SiteLifecycleRequest Get-SiteCollectionLifecycleRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get site lifecycel request
 
@@ -3941,7 +3941,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get site lifecycel request
 try {
@@ -3956,7 +3956,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -3976,7 +3976,7 @@ Name | Type | Description  | Notes
 <a name="Get-Tasks"></a>
 # **Get-Tasks**
 > ApiTask[] Get-Tasks<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Requestid] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Requestid] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IncludeCompleted] <System.Nullable[Boolean]><br>
 
 get task by request id
@@ -4000,7 +4000,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Requestid = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Requestid = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $IncludeCompleted = $true # Boolean |  (optional) (default to $false)
 
 # get task by request id
@@ -4016,7 +4016,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Requestid** | **String**|  | 
+ **Requestid** | [**String**](String.md)|  | 
  **IncludeCompleted** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -4037,7 +4037,7 @@ Name | Type | Description  | Notes
 <a name="Get-UnlockSiteRequest"></a>
 # **Get-UnlockSiteRequest**
 > UnlockSiteRequest Get-UnlockSiteRequest<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get unlock site request
 
@@ -4060,7 +4060,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get unlock site request
 try {
@@ -4075,7 +4075,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -4096,7 +4096,7 @@ Name | Type | Description  | Notes
 # **Invoke-IsUrlExistsInPendingRequests**
 > Boolean Invoke-IsUrlExistsInPendingRequests<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Url] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-RequestId] <PSCustomObject><br>
 
 check url exists in pending requests.
 
@@ -4120,7 +4120,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $Url = "MyUrl" # String | Site collection full url.
-$RequestId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | Only needed if you're editing a request. (optional)
+$RequestId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | Only needed if you're editing a request. (optional)
 
 # check url exists in pending requests.
 try {
@@ -4136,7 +4136,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **Url** | **String**| Site collection full url. | 
- **RequestId** | **String**| Only needed if you&#39;re editing a request. | [optional] 
+ **RequestId** | [**String**](String.md)| Only needed if you&#39;re editing a request. | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -4186,23 +4186,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -4272,23 +4267,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -4356,23 +4346,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -4441,23 +4426,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -4526,23 +4506,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -4606,8 +4581,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeGroupPolicyRequest = $ChangeGroupPolicyRequestPolicy = New-ChangeGroupPolicyRequestPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
-$ChangeGroupPolicyRequestOriginalPolicy = New-ChangeGroupPolicyRequestOriginalPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ChangeGroupPolicyRequest = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $AssignBy = New-AssignBy 
 $StartDateType = New-StartDateType 
 $GroupObjectType = New-GroupObjectType 
@@ -4616,28 +4590,22 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeGroupPolicyRequest = New-ChangeGroupPolicyRequest -Policy $ChangeGroupPolicyRequestPolicy -OriginalPolicy $ChangeGroupPolicyRequestOriginalPolicy -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -GroupId "MyGroupId" -GroupName "MyGroupName" -GroupEmail "MyGroupEmail" -GroupObjectType $GroupObjectType -LifecycleType $ServiceType -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupPolicyRequest |  (optional)
+$ChangeGroupPolicyRequest = New-ChangeGroupPolicyRequest -Policy $GuidModel -OriginalPolicy $GuidModel -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -GroupId "MyGroupId" -GroupName "MyGroupName" -GroupEmail "MyGroupEmail" -GroupObjectType $GroupObjectType -LifecycleType $ServiceType -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupPolicyRequest |  (optional)
 
 # submit change group policy request
 try {
@@ -4695,8 +4663,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeGroupPolicyRequest = $ChangeGroupPolicyRequestPolicy = New-ChangeGroupPolicyRequestPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
-$ChangeGroupPolicyRequestOriginalPolicy = New-ChangeGroupPolicyRequestOriginalPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ChangeGroupPolicyRequest = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $AssignBy = New-AssignBy 
 $StartDateType = New-StartDateType 
 $GroupObjectType = New-GroupObjectType 
@@ -4705,28 +4672,22 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeGroupPolicyRequest = New-ChangeGroupPolicyRequest -Policy $ChangeGroupPolicyRequestPolicy -OriginalPolicy $ChangeGroupPolicyRequestOriginalPolicy -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -GroupId "MyGroupId" -GroupName "MyGroupName" -GroupEmail "MyGroupEmail" -GroupObjectType $GroupObjectType -LifecycleType $ServiceType -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupPolicyRequest |  (optional)
+$ChangeGroupPolicyRequest = New-ChangeGroupPolicyRequest -Policy $GuidModel -OriginalPolicy $GuidModel -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -GroupId "MyGroupId" -GroupName "MyGroupName" -GroupEmail "MyGroupEmail" -GroupObjectType $GroupObjectType -LifecycleType $ServiceType -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupPolicyRequest |  (optional)
 
 # submit change group policy request, and return request info.
 try {
@@ -4790,23 +4751,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -4875,23 +4831,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -4956,7 +4907,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ChangeGroupSettingRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupMembershipAction = New-GroupMembershipAction 
 $GroupMembershipItem = New-GroupMembershipItem -LoginName "MyLoginName" -DisplayName "MyDisplayName" -AzureUserType "MyAzureUserType" -IsGroup $false -Action $GroupMembershipAction
@@ -4970,40 +4921,31 @@ $InviteType = New-InviteType
 $PrincipalType = New-PrincipalType 
 $UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -IsAccountEnabled $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -SharePointLogonName "MySharePointLogonName" -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
 
-$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo
+$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo -TenantId "MyTenantId" -TenantName "MyTenantName"
 
 $ChangeHubsiteActionType = New-ChangeHubsiteActionType 
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $AddGroupMemberType = New-AddGroupMemberType 
 $GroupObjectType = New-GroupObjectType 
-$ChangeGroupSettingRequestTimeZoneSettings = New-ChangeGroupSettingRequestTimeZoneSettings -Enabled $false -TimeZone 0
-$ChangeGroupSettingRequestOriginalTimeZoneSettings = New-ChangeGroupSettingRequestOriginalTimeZoneSettings -Enabled $false -TimeZone 0
-$ChangeGroupSettingRequestLocaleSettings = New-ChangeGroupSettingRequestLocaleSettings -Enabled $false -Locale 0
-$ChangeGroupSettingRequestOriginalLocaleSettings = New-ChangeGroupSettingRequestOriginalLocaleSettings -Enabled $false -Locale 0
+$TimeZoneSettings = New-TimeZoneSettings -Enabled $false -TimeZone 0
+$LocaleSettings = New-LocaleSettings -Enabled $false -Locale 0
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeGroupSettingRequest = New-ChangeGroupSettingRequest -GroupId "MyGroupId" -GroupEmail "MyGroupEmail" -GroupName "MyGroupName" -OriginalGroupName "MyOriginalGroupName" -GroupDescription "MyGroupDescription" -OriginalGroupDescription "MyOriginalGroupDescription" -OriginalYammerGroupInfo "MyOriginalYammerGroupInfo" -PrimaryContact $ApiMyGroupPrimaryContact -OriginalPrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -OriginalSecondaryContact $ApiMyGroupPrimaryContact -GroupOwners $GroupMembershipItem -GroupMembers $GroupMembershipItem -IsDynamicMembership $false -DynamicMembershipRules $DynamicGroupRuleInfo -EnabledSubscribe $false -OriginalEnabledSubscribe $false -EnabledOutsideSender $false -OriginalEnabledOutsideSender $false -HubSiteActionType $ChangeHubsiteActionType -AssociateHubSiteId "MyAssociateHubSiteId" -AssociateHubSiteTitle "MyAssociateHubSiteTitle" -Classification "MyClassification" -OriginalClassification "MyOriginalClassification" -Sensitivity "MySensitivity" -OriginalSensitivity "MyOriginalSensitivity" -EnableTeams $false -OriginalEnableTeams $false -GroupMetadatas $RequestMetadata -OriginalGroupMetadata $RequestMetadata -ChangedDynamicGroupType $AddGroupMemberType -YammerGroupInfo "MyYammerGroupInfo" -GroupObjectType $GroupObjectType -NetworkId "MyNetworkId" -GroupObjectId "MyGroupObjectId" -EnableTeamCollaboration $false -TimeZoneSettings $ChangeGroupSettingRequestTimeZoneSettings -OriginalTimeZoneSettings $ChangeGroupSettingRequestOriginalTimeZoneSettings -LocaleSettings $ChangeGroupSettingRequestLocaleSettings -OriginalLocaleSettings $ChangeGroupSettingRequestOriginalLocaleSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupSettingRequest |  (optional)
+$ChangeGroupSettingRequest = New-ChangeGroupSettingRequest -GroupId "MyGroupId" -GroupEmail "MyGroupEmail" -GroupName "MyGroupName" -OriginalGroupName "MyOriginalGroupName" -GroupDescription "MyGroupDescription" -OriginalGroupDescription "MyOriginalGroupDescription" -OriginalYammerGroupInfo "MyOriginalYammerGroupInfo" -PrimaryContact $ApiUser -OriginalPrimaryContact $ApiUser -SecondaryContact $ApiUser -OriginalSecondaryContact $ApiUser -GroupOwners $GroupMembershipItem -GroupMembers $GroupMembershipItem -IsDynamicMembership $false -DynamicMembershipRules $DynamicGroupRuleInfo -EnabledSubscribe $false -OriginalEnabledSubscribe $false -EnabledOutsideSender $false -OriginalEnabledOutsideSender $false -HubSiteActionType $ChangeHubsiteActionType -AssociateHubSiteId "MyAssociateHubSiteId" -AssociateHubSiteTitle "MyAssociateHubSiteTitle" -Classification "MyClassification" -OriginalClassification "MyOriginalClassification" -Sensitivity "MySensitivity" -OriginalSensitivity "MyOriginalSensitivity" -EnableTeams $false -OriginalEnableTeams $false -GroupMetadatas $RequestMetadata -OriginalGroupMetadata $RequestMetadata -ChangedDynamicGroupType $AddGroupMemberType -YammerGroupInfo "MyYammerGroupInfo" -GroupObjectType $GroupObjectType -NetworkId "MyNetworkId" -GroupObjectId "MyGroupObjectId" -EnableTeamCollaboration $false -TimeZoneSettings $TimeZoneSettings -OriginalTimeZoneSettings $TimeZoneSettings -LocaleSettings $LocaleSettings -OriginalLocaleSettings $LocaleSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupSettingRequest |  (optional)
 
 # submit change group settings request
 try {
@@ -5063,7 +5005,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ChangeGroupSettingRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupMembershipAction = New-GroupMembershipAction 
 $GroupMembershipItem = New-GroupMembershipItem -LoginName "MyLoginName" -DisplayName "MyDisplayName" -AzureUserType "MyAzureUserType" -IsGroup $false -Action $GroupMembershipAction
@@ -5077,40 +5019,31 @@ $InviteType = New-InviteType
 $PrincipalType = New-PrincipalType 
 $UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -IsAccountEnabled $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -SharePointLogonName "MySharePointLogonName" -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
 
-$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo
+$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo -TenantId "MyTenantId" -TenantName "MyTenantName"
 
 $ChangeHubsiteActionType = New-ChangeHubsiteActionType 
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $AddGroupMemberType = New-AddGroupMemberType 
 $GroupObjectType = New-GroupObjectType 
-$ChangeGroupSettingRequestTimeZoneSettings = New-ChangeGroupSettingRequestTimeZoneSettings -Enabled $false -TimeZone 0
-$ChangeGroupSettingRequestOriginalTimeZoneSettings = New-ChangeGroupSettingRequestOriginalTimeZoneSettings -Enabled $false -TimeZone 0
-$ChangeGroupSettingRequestLocaleSettings = New-ChangeGroupSettingRequestLocaleSettings -Enabled $false -Locale 0
-$ChangeGroupSettingRequestOriginalLocaleSettings = New-ChangeGroupSettingRequestOriginalLocaleSettings -Enabled $false -Locale 0
+$TimeZoneSettings = New-TimeZoneSettings -Enabled $false -TimeZone 0
+$LocaleSettings = New-LocaleSettings -Enabled $false -Locale 0
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeGroupSettingRequest = New-ChangeGroupSettingRequest -GroupId "MyGroupId" -GroupEmail "MyGroupEmail" -GroupName "MyGroupName" -OriginalGroupName "MyOriginalGroupName" -GroupDescription "MyGroupDescription" -OriginalGroupDescription "MyOriginalGroupDescription" -OriginalYammerGroupInfo "MyOriginalYammerGroupInfo" -PrimaryContact $ApiMyGroupPrimaryContact -OriginalPrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -OriginalSecondaryContact $ApiMyGroupPrimaryContact -GroupOwners $GroupMembershipItem -GroupMembers $GroupMembershipItem -IsDynamicMembership $false -DynamicMembershipRules $DynamicGroupRuleInfo -EnabledSubscribe $false -OriginalEnabledSubscribe $false -EnabledOutsideSender $false -OriginalEnabledOutsideSender $false -HubSiteActionType $ChangeHubsiteActionType -AssociateHubSiteId "MyAssociateHubSiteId" -AssociateHubSiteTitle "MyAssociateHubSiteTitle" -Classification "MyClassification" -OriginalClassification "MyOriginalClassification" -Sensitivity "MySensitivity" -OriginalSensitivity "MyOriginalSensitivity" -EnableTeams $false -OriginalEnableTeams $false -GroupMetadatas $RequestMetadata -OriginalGroupMetadata $RequestMetadata -ChangedDynamicGroupType $AddGroupMemberType -YammerGroupInfo "MyYammerGroupInfo" -GroupObjectType $GroupObjectType -NetworkId "MyNetworkId" -GroupObjectId "MyGroupObjectId" -EnableTeamCollaboration $false -TimeZoneSettings $ChangeGroupSettingRequestTimeZoneSettings -OriginalTimeZoneSettings $ChangeGroupSettingRequestOriginalTimeZoneSettings -LocaleSettings $ChangeGroupSettingRequestLocaleSettings -OriginalLocaleSettings $ChangeGroupSettingRequestOriginalLocaleSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupSettingRequest |  (optional)
+$ChangeGroupSettingRequest = New-ChangeGroupSettingRequest -GroupId "MyGroupId" -GroupEmail "MyGroupEmail" -GroupName "MyGroupName" -OriginalGroupName "MyOriginalGroupName" -GroupDescription "MyGroupDescription" -OriginalGroupDescription "MyOriginalGroupDescription" -OriginalYammerGroupInfo "MyOriginalYammerGroupInfo" -PrimaryContact $ApiUser -OriginalPrimaryContact $ApiUser -SecondaryContact $ApiUser -OriginalSecondaryContact $ApiUser -GroupOwners $GroupMembershipItem -GroupMembers $GroupMembershipItem -IsDynamicMembership $false -DynamicMembershipRules $DynamicGroupRuleInfo -EnabledSubscribe $false -OriginalEnabledSubscribe $false -EnabledOutsideSender $false -OriginalEnabledOutsideSender $false -HubSiteActionType $ChangeHubsiteActionType -AssociateHubSiteId "MyAssociateHubSiteId" -AssociateHubSiteTitle "MyAssociateHubSiteTitle" -Classification "MyClassification" -OriginalClassification "MyOriginalClassification" -Sensitivity "MySensitivity" -OriginalSensitivity "MyOriginalSensitivity" -EnableTeams $false -OriginalEnableTeams $false -GroupMetadatas $RequestMetadata -OriginalGroupMetadata $RequestMetadata -ChangedDynamicGroupType $AddGroupMemberType -YammerGroupInfo "MyYammerGroupInfo" -GroupObjectType $GroupObjectType -NetworkId "MyNetworkId" -GroupObjectId "MyGroupObjectId" -EnableTeamCollaboration $false -TimeZoneSettings $TimeZoneSettings -OriginalTimeZoneSettings $TimeZoneSettings -LocaleSettings $LocaleSettings -OriginalLocaleSettings $LocaleSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeGroupSettingRequest |  (optional)
 
 # submit change group settings request, and return request info.
 try {
@@ -5168,42 +5101,37 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeListSettingRequest = $ChangeListSettingRequestObjectInfo = New-ChangeListSettingRequestObjectInfo -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebUrl "MyWebUrl" -SiteId "MySiteId" -ObjectUrl "MyObjectUrl" -ObjectTitle "MyObjectTitle"
-$ChangeListSettingRequestListTitle = New-ChangeListSettingRequestListTitle -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
-$ChangeListSettingRequestNavigationSetting = New-ChangeListSettingRequestNavigationSetting -ChangeValue $false -OriginalValue $false
+$ChangeListSettingRequest = $ChangeListSettingObjectInfo = New-ChangeListSettingObjectInfo -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebUrl "MyWebUrl" -SiteId "MySiteId" -ObjectUrl "MyObjectUrl" -ObjectTitle "MyObjectTitle"
+$StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
+$BooleanChangedProperty = New-BooleanChangedProperty -ChangeValue $false -OriginalValue $false
 
 $ListType = New-ListType 
-$CreateListRequestVersionSettings = New-CreateListRequestVersionSettings -ListType $ListType -EnableMajorVersions $false -EnableMajorAndMinorVersions $false -EnableMajorVersionLimit $false -MajorVersionLimit 0 -EnableMinorVersionLimit $false -MinorVersionsLimit 0 -RequireContentApproval $false
+$ListVersionSettings = New-ListVersionSettings -ListType $ListType -EnableMajorVersions $false -EnableMajorAndMinorVersions $false -EnableMajorVersionLimit $false -MajorVersionLimit 0 -EnableMinorVersionLimit $false -MinorVersionsLimit 0 -RequireContentApproval $false
 
-$ChangeListSettingRequestVersionSetting = New-ChangeListSettingRequestVersionSetting -ChangeValue $CreateListRequestVersionSettings -OriginalValue $CreateListRequestVersionSettings
+$ListVersionSettingsChangedProperty = New-ListVersionSettingsChangedProperty -ChangeValue $ListVersionSettings -OriginalValue $ListVersionSettings
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeListSettingRequest = New-ChangeListSettingRequest -ObjectInfo $ChangeListSettingRequestObjectInfo -ListTitle $ChangeListSettingRequestListTitle -ListDescription $ChangeListSettingRequestListTitle -NavigationSetting $ChangeListSettingRequestNavigationSetting -VersionSetting $ChangeListSettingRequestVersionSetting -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeListSettingRequest |  (optional)
+$ChangeListSettingRequest = New-ChangeListSettingRequest -ObjectInfo $ChangeListSettingObjectInfo -ListTitle $StringChangedProperty -ListDescription $StringChangedProperty -NavigationSetting $BooleanChangedProperty -VersionSetting $ListVersionSettingsChangedProperty -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeListSettingRequest |  (optional)
 
 # submit change list settings request
 try {
@@ -5262,7 +5190,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $ChangePermissionRequest = $TreeNodeType = New-TreeNodeType 
-$ChangePermissionRequestObjectProperty = New-ChangePermissionRequestObjectProperty -SiteId "MySiteId" -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -ObjectUrl "MyObjectUrl" -IsInherit $false -InheritNodeType $TreeNodeType -TopInheritUrl "MyTopInheritUrl" -CheckType $TreeNodeType
+$PermissionObjectProperty = New-PermissionObjectProperty -SiteId "MySiteId" -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -ObjectUrl "MyObjectUrl" -IsInherit $false -InheritNodeType $TreeNodeType -TopInheritUrl "MyTopInheritUrl" -CheckType $TreeNodeType
 
 $PermissionChangedType = New-PermissionChangedType 
 
@@ -5272,27 +5200,22 @@ $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $Exte
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangePermissionRequest = New-ChangePermissionRequest -ObjectProperty $ChangePermissionRequestObjectProperty -PermissionChangedType $PermissionChangedType -IsManagedAllUsers $false -SelectedUsers $ApiUser -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangePermissionRequest |  (optional)
+$ChangePermissionRequest = New-ChangePermissionRequest -ObjectProperty $PermissionObjectProperty -PermissionChangedType $PermissionChangedType -IsManagedAllUsers $false -SelectedUsers $ApiUser -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangePermissionRequest |  (optional)
 
 # submit change permission request
 try {
@@ -5351,7 +5274,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $ChangePermissionRequest = $TreeNodeType = New-TreeNodeType 
-$ChangePermissionRequestObjectProperty = New-ChangePermissionRequestObjectProperty -SiteId "MySiteId" -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -ObjectUrl "MyObjectUrl" -IsInherit $false -InheritNodeType $TreeNodeType -TopInheritUrl "MyTopInheritUrl" -CheckType $TreeNodeType
+$PermissionObjectProperty = New-PermissionObjectProperty -SiteId "MySiteId" -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -ObjectUrl "MyObjectUrl" -IsInherit $false -InheritNodeType $TreeNodeType -TopInheritUrl "MyTopInheritUrl" -CheckType $TreeNodeType
 
 $PermissionChangedType = New-PermissionChangedType 
 
@@ -5361,27 +5284,22 @@ $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $Exte
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangePermissionRequest = New-ChangePermissionRequest -ObjectProperty $ChangePermissionRequestObjectProperty -PermissionChangedType $PermissionChangedType -IsManagedAllUsers $false -SelectedUsers $ApiUser -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangePermissionRequest |  (optional)
+$ChangePermissionRequest = New-ChangePermissionRequest -ObjectProperty $PermissionObjectProperty -PermissionChangedType $PermissionChangedType -IsManagedAllUsers $false -SelectedUsers $ApiUser -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangePermissionRequest |  (optional)
 
 # submit change permission request, and return request info.
 try {
@@ -5441,43 +5359,31 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ChangePrivateChannelRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ChangePrivateChannelRequestTeam = New-ChangePrivateChannelRequestTeam -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$ChangePrivateChannelRequestChannel = New-ChangePrivateChannelRequestChannel -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$ChangePrivateChannelRequestName = New-ChangePrivateChannelRequestName -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
-$ChangePrivateChannelRequestChannelDescription = New-ChangePrivateChannelRequestChannelDescription -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$ChangePrivateChannelRequestOwners = New-ChangePrivateChannelRequestOwners -ChangeValue $ApiUser -OriginalValue $ApiUser
+$StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
 
-$ChangePrivateChannelRequestMembers = New-ChangePrivateChannelRequestMembers -ChangeValue $ApiUser -OriginalValue $ApiUser
+$ApiUserIListChangedProperty = New-ApiUserIListChangedProperty -ChangeValue $ApiUser -OriginalValue $ApiUser
 
-$ChangePrivateChannelRequestQuotaStorage = New-ChangePrivateChannelRequestQuotaStorage -ChangeValue 0 -OriginalValue 0
+$Int64ChangedProperty = New-Int64ChangedProperty -ChangeValue 0 -OriginalValue 0
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangePrivateChannelRequest = New-ChangePrivateChannelRequest -Team $ChangePrivateChannelRequestTeam -Channel $ChangePrivateChannelRequestChannel -Name $ChangePrivateChannelRequestName -ChannelDescription $ChangePrivateChannelRequestChannelDescription -Owners $ChangePrivateChannelRequestOwners -Members $ChangePrivateChannelRequestMembers -EnableChangePrivateChannelQuota $false -QuotaStorage $ChangePrivateChannelRequestQuotaStorage -QuotaStorageUsed 0 -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangePrivateChannelRequest |  (optional)
+$ChangePrivateChannelRequest = New-ChangePrivateChannelRequest -Team $ApiUser -Channel $ApiUser -Name $StringChangedProperty -ChannelDescription $StringChangedProperty -Owners $ApiUserIListChangedProperty -Members $ApiUserIListChangedProperty -EnableChangePrivateChannelQuota $false -QuotaStorage $Int64ChangedProperty -QuotaStorageUsed 0 -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangePrivateChannelRequest |  (optional)
 
 # submit change private channel request
 try {
@@ -5539,42 +5445,33 @@ $ChangeSiteContactRequest = $ChangeContactMethod = New-ChangeContactMethod
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$ChangeContactByUrlSetting = New-ChangeContactByUrlSetting -SiteId "MySiteId" -SiteUrl "MySiteUrl" -OriginalPrimaryContact $ApiMyGroupPrimaryContact -NewPrimaryContact $ApiMyGroupPrimaryContact -OriginalSecondaryContact $ApiMyGroupPrimaryContact -NewSecondaryContact $ApiMyGroupPrimaryContact -OriginalPrimaryAdministrator $ApiMyGroupPrimaryContact -NewPrimaryAdministrator $ApiMyGroupPrimaryContact -OriginalAdditionalAdministrators $ApiUser -NewAdditionalAdministrators $ApiUser -SiteTitle "MySiteTitle"
+$ChangeContactByUrlSetting = New-ChangeContactByUrlSetting -SiteId "MySiteId" -SiteUrl "MySiteUrl" -OriginalPrimaryContact $ApiUser -NewPrimaryContact $ApiUser -OriginalSecondaryContact $ApiUser -NewSecondaryContact $ApiUser -OriginalPrimaryAdministrator $ApiUser -NewPrimaryAdministrator $ApiUser -OriginalAdditionalAdministrators $ApiUser -NewAdditionalAdministrators $ApiUser -SiteTitle "MySiteTitle"
 
-$ChangeSiteContactRequestChangeByUserSetting = New-ChangeSiteContactRequestChangeByUserSetting -CurrentUser $ApiMyGroupPrimaryContact -NewUser $ApiMyGroupPrimaryContact -AlternativeUser $ApiMyGroupPrimaryContact
-
-$ChangeSiteContactSubRequestAdminContactSettings = New-ChangeSiteContactSubRequestAdminContactSettings -SiteId "MySiteId" -SiteUrl "MySiteUrl" -OriginalPrimaryContact $ApiMyGroupPrimaryContact -NewPrimaryContact $ApiMyGroupPrimaryContact -OriginalSecondaryContact $ApiMyGroupPrimaryContact -NewSecondaryContact $ApiMyGroupPrimaryContact -OriginalPrimaryAdministrator $ApiMyGroupPrimaryContact -NewPrimaryAdministrator $ApiMyGroupPrimaryContact -OriginalAdditionalAdministrators $ApiUser -NewAdditionalAdministrators $ApiUser -SiteTitle "MySiteTitle"
+$ChangeContactByUserSetting = New-ChangeContactByUserSetting -CurrentUser $ApiUser -NewUser $ApiUser -AlternativeUser $ApiUser
 
 $ApiRequestProgressStatus = New-ApiRequestProgressStatus 
-$ChangeSiteContactSubRequest = New-ChangeSiteContactSubRequest -Id "MyId" -AssignTo $ApiUser -Reason "MyReason" -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -Status 0 -StatusDescription "MyStatusDescription" -AdminContactSettings $ChangeSiteContactSubRequestAdminContactSettings -ProgressStatus $ApiRequestProgressStatus
+$ChangeSiteContactSubRequest = New-ChangeSiteContactSubRequest -Id "MyId" -AssignTo $ApiUser -Reason "MyReason" -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -Status 0 -StatusDescription "MyStatusDescription" -AdminContactSettings $ChangeContactByUrlSetting -ProgressStatus $ApiRequestProgressStatus
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeSiteContactRequest = New-ChangeSiteContactRequest -ChangeContactMethod $ChangeContactMethod -ChangeByUrlSetting $ChangeContactByUrlSetting -ChangeByUserSetting $ChangeSiteContactRequestChangeByUserSetting -SubRequests $ChangeSiteContactSubRequest -IsServiceEnableChangeContact $false -IsServiceEnableChangeAdmin $false -ParentRequestId "MyParentRequestId" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteContactRequest |  (optional)
+$ChangeSiteContactRequest = New-ChangeSiteContactRequest -ChangeContactMethod $ChangeContactMethod -ChangeByUrlSetting $ChangeContactByUrlSetting -ChangeByUserSetting $ChangeContactByUserSetting -SubRequests $ChangeSiteContactSubRequest -IsServiceEnableChangeContact $false -IsServiceEnableChangeAdmin $false -ParentRequestId "MyParentRequestId" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteContactRequest |  (optional)
 
 # submit change site administrator or contact request
 try {
@@ -5636,42 +5533,33 @@ $ChangeSiteContactRequest = $ChangeContactMethod = New-ChangeContactMethod
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$ChangeContactByUrlSetting = New-ChangeContactByUrlSetting -SiteId "MySiteId" -SiteUrl "MySiteUrl" -OriginalPrimaryContact $ApiMyGroupPrimaryContact -NewPrimaryContact $ApiMyGroupPrimaryContact -OriginalSecondaryContact $ApiMyGroupPrimaryContact -NewSecondaryContact $ApiMyGroupPrimaryContact -OriginalPrimaryAdministrator $ApiMyGroupPrimaryContact -NewPrimaryAdministrator $ApiMyGroupPrimaryContact -OriginalAdditionalAdministrators $ApiUser -NewAdditionalAdministrators $ApiUser -SiteTitle "MySiteTitle"
+$ChangeContactByUrlSetting = New-ChangeContactByUrlSetting -SiteId "MySiteId" -SiteUrl "MySiteUrl" -OriginalPrimaryContact $ApiUser -NewPrimaryContact $ApiUser -OriginalSecondaryContact $ApiUser -NewSecondaryContact $ApiUser -OriginalPrimaryAdministrator $ApiUser -NewPrimaryAdministrator $ApiUser -OriginalAdditionalAdministrators $ApiUser -NewAdditionalAdministrators $ApiUser -SiteTitle "MySiteTitle"
 
-$ChangeSiteContactRequestChangeByUserSetting = New-ChangeSiteContactRequestChangeByUserSetting -CurrentUser $ApiMyGroupPrimaryContact -NewUser $ApiMyGroupPrimaryContact -AlternativeUser $ApiMyGroupPrimaryContact
-
-$ChangeSiteContactSubRequestAdminContactSettings = New-ChangeSiteContactSubRequestAdminContactSettings -SiteId "MySiteId" -SiteUrl "MySiteUrl" -OriginalPrimaryContact $ApiMyGroupPrimaryContact -NewPrimaryContact $ApiMyGroupPrimaryContact -OriginalSecondaryContact $ApiMyGroupPrimaryContact -NewSecondaryContact $ApiMyGroupPrimaryContact -OriginalPrimaryAdministrator $ApiMyGroupPrimaryContact -NewPrimaryAdministrator $ApiMyGroupPrimaryContact -OriginalAdditionalAdministrators $ApiUser -NewAdditionalAdministrators $ApiUser -SiteTitle "MySiteTitle"
+$ChangeContactByUserSetting = New-ChangeContactByUserSetting -CurrentUser $ApiUser -NewUser $ApiUser -AlternativeUser $ApiUser
 
 $ApiRequestProgressStatus = New-ApiRequestProgressStatus 
-$ChangeSiteContactSubRequest = New-ChangeSiteContactSubRequest -Id "MyId" -AssignTo $ApiUser -Reason "MyReason" -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -Status 0 -StatusDescription "MyStatusDescription" -AdminContactSettings $ChangeSiteContactSubRequestAdminContactSettings -ProgressStatus $ApiRequestProgressStatus
+$ChangeSiteContactSubRequest = New-ChangeSiteContactSubRequest -Id "MyId" -AssignTo $ApiUser -Reason "MyReason" -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -Status 0 -StatusDescription "MyStatusDescription" -AdminContactSettings $ChangeContactByUrlSetting -ProgressStatus $ApiRequestProgressStatus
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeSiteContactRequest = New-ChangeSiteContactRequest -ChangeContactMethod $ChangeContactMethod -ChangeByUrlSetting $ChangeContactByUrlSetting -ChangeByUserSetting $ChangeSiteContactRequestChangeByUserSetting -SubRequests $ChangeSiteContactSubRequest -IsServiceEnableChangeContact $false -IsServiceEnableChangeAdmin $false -ParentRequestId "MyParentRequestId" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteContactRequest |  (optional)
+$ChangeSiteContactRequest = New-ChangeSiteContactRequest -ChangeContactMethod $ChangeContactMethod -ChangeByUrlSetting $ChangeContactByUrlSetting -ChangeByUserSetting $ChangeContactByUserSetting -SubRequests $ChangeSiteContactSubRequest -IsServiceEnableChangeContact $false -IsServiceEnableChangeAdmin $false -ParentRequestId "MyParentRequestId" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteContactRequest |  (optional)
 
 # submit change site administrator or contact request, and return request info.
 try {
@@ -5729,8 +5617,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeSitePolicyRequest = $ChangeSitePolicyRequestPolicy = New-ChangeSitePolicyRequestPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
-$ChangeSitePolicyRequestOriginalPolicy = New-ChangeSitePolicyRequestOriginalPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ChangeSitePolicyRequest = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $AssignBy = New-AssignBy 
 $StartDateType = New-StartDateType 
 $SiteLifecycleActionType = New-SiteLifecycleActionType 
@@ -5738,29 +5625,23 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeSitePolicyRequest = New-ChangeSitePolicyRequest -Policy $ChangeSitePolicyRequestPolicy -OriginalPolicy $ChangeSitePolicyRequestOriginalPolicy -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -Action $SiteLifecycleActionType -ActionDescription "MyActionDescription" -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSitePolicyRequest |  (optional)
+$ChangeSitePolicyRequest = New-ChangeSitePolicyRequest -Policy $GuidModel -OriginalPolicy $GuidModel -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -Action $SiteLifecycleActionType -ActionDescription "MyActionDescription" -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSitePolicyRequest |  (optional)
 
 # submit change site policy request
 try {
@@ -5818,8 +5699,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeSitePolicyRequest = $ChangeSitePolicyRequestPolicy = New-ChangeSitePolicyRequestPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
-$ChangeSitePolicyRequestOriginalPolicy = New-ChangeSitePolicyRequestOriginalPolicy -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ChangeSitePolicyRequest = $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
 $AssignBy = New-AssignBy 
 $StartDateType = New-StartDateType 
 $SiteLifecycleActionType = New-SiteLifecycleActionType 
@@ -5827,29 +5707,23 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeSitePolicyRequest = New-ChangeSitePolicyRequest -Policy $ChangeSitePolicyRequestPolicy -OriginalPolicy $ChangeSitePolicyRequestOriginalPolicy -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -Action $SiteLifecycleActionType -ActionDescription "MyActionDescription" -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSitePolicyRequest |  (optional)
+$ChangeSitePolicyRequest = New-ChangeSitePolicyRequest -Policy $GuidModel -OriginalPolicy $GuidModel -IsLeaseEnabled $false -ChangePolicyConfig $AssignBy -StartDateType $StartDateType -SpecifyStartDate (Get-Date) -Action $SiteLifecycleActionType -ActionDescription "MyActionDescription" -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -GenerateFromRenewal $false -GenerateFromElection $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSitePolicyRequest |  (optional)
 
 # submit change site policy request, and return request info.
 try {
@@ -5912,23 +5786,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -5997,23 +5866,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -6077,37 +5941,32 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeSiteSettingRequest = $ChangeListSettingRequestListTitle = New-ChangeListSettingRequestListTitle -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
+$ChangeSiteSettingRequest = $StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ChangeHubsiteActionType = New-ChangeHubsiteActionType 
-$ChangeSiteSettingRequestHubSiteSettings = New-ChangeSiteSettingRequestHubSiteSettings -Enabled $false -IsModernSite $false -Action $ChangeHubsiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
+$HubSiteChangedSettings = New-HubSiteChangedSettings -Enabled $false -IsModernSite $false -Action $ChangeHubsiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeSiteSettingRequest = New-ChangeSiteSettingRequest -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -SiteTitleSetting $ChangeListSettingRequestListTitle -SiteDescriptionSetting $ChangeListSettingRequestListTitle -EnableChangedMetadata $false -ChangedMetadatas $RequestMetadata -OriginalSiteMetadatas $RequestMetadata -DeploymentPlanName "MyDeploymentPlanName" -HubSiteSettings $ChangeSiteSettingRequestHubSiteSettings -SiteSensitivitySetting $ChangeListSettingRequestListTitle -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteSettingRequest |  (optional)
+$ChangeSiteSettingRequest = New-ChangeSiteSettingRequest -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -SiteTitleSetting $StringChangedProperty -SiteDescriptionSetting $StringChangedProperty -EnableChangedMetadata $false -ChangedMetadatas $RequestMetadata -OriginalSiteMetadatas $RequestMetadata -DeploymentPlanName "MyDeploymentPlanName" -HubSiteSettings $HubSiteChangedSettings -SiteSensitivitySetting $StringChangedProperty -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteSettingRequest |  (optional)
 
 # submit change site settings request
 try {
@@ -6165,37 +6024,32 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeSiteSettingRequest = $ChangeListSettingRequestListTitle = New-ChangeListSettingRequestListTitle -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
+$ChangeSiteSettingRequest = $StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ChangeHubsiteActionType = New-ChangeHubsiteActionType 
-$ChangeSiteSettingRequestHubSiteSettings = New-ChangeSiteSettingRequestHubSiteSettings -Enabled $false -IsModernSite $false -Action $ChangeHubsiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
+$HubSiteChangedSettings = New-HubSiteChangedSettings -Enabled $false -IsModernSite $false -Action $ChangeHubsiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeSiteSettingRequest = New-ChangeSiteSettingRequest -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -SiteTitleSetting $ChangeListSettingRequestListTitle -SiteDescriptionSetting $ChangeListSettingRequestListTitle -EnableChangedMetadata $false -ChangedMetadatas $RequestMetadata -OriginalSiteMetadatas $RequestMetadata -DeploymentPlanName "MyDeploymentPlanName" -HubSiteSettings $ChangeSiteSettingRequestHubSiteSettings -SiteSensitivitySetting $ChangeListSettingRequestListTitle -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteSettingRequest |  (optional)
+$ChangeSiteSettingRequest = New-ChangeSiteSettingRequest -SiteId "MySiteId" -SiteUrl "MySiteUrl" -SiteTitle "MySiteTitle" -SiteTitleSetting $StringChangedProperty -SiteDescriptionSetting $StringChangedProperty -EnableChangedMetadata $false -ChangedMetadatas $RequestMetadata -OriginalSiteMetadatas $RequestMetadata -DeploymentPlanName "MyDeploymentPlanName" -HubSiteSettings $HubSiteChangedSettings -SiteSensitivitySetting $StringChangedProperty -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeSiteSettingRequest |  (optional)
 
 # submit change site setting request, and return request info.
 try {
@@ -6257,45 +6111,35 @@ $ChangeWebContactRequest = $ChangeContactMethod = New-ChangeContactMethod
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$ChangeSiteContactRequestChangeByUserSetting = New-ChangeSiteContactRequestChangeByUserSetting -CurrentUser $ApiMyGroupPrimaryContact -NewUser $ApiMyGroupPrimaryContact -AlternativeUser $ApiMyGroupPrimaryContact
+$ChangeContactByUserSetting = New-ChangeContactByUserSetting -CurrentUser $ApiUser -NewUser $ApiUser -AlternativeUser $ApiUser
 
-$ChangeWebContactByUrlSettingPrimaryContact = New-ChangeWebContactByUrlSettingPrimaryContact -ChangeValue $ApiMyGroupPrimaryContact -OriginalValue $ApiMyGroupPrimaryContact
+$ApiUserChangedProperty = New-ApiUserChangedProperty -ChangeValue $ApiUser -OriginalValue $ApiUser
 
-$ChangeWebContactByUrlSetting = New-ChangeWebContactByUrlSetting -SiteId "MySiteId" -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebUrl "MyWebUrl" -WebTitle "MyWebTitle" -PrimaryContact $ChangeWebContactByUrlSettingPrimaryContact -SecondaryContact $ChangeWebContactByUrlSettingPrimaryContact
+$ChangeWebContactByUrlSetting = New-ChangeWebContactByUrlSetting -SiteId "MySiteId" -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebUrl "MyWebUrl" -WebTitle "MyWebTitle" -PrimaryContact $ApiUserChangedProperty -SecondaryContact $ApiUserChangedProperty
 
 $ApiRequestProgressStatus = New-ApiRequestProgressStatus 
-
-$ChangeWebContactSubRequestContactChangeSettings = New-ChangeWebContactSubRequestContactChangeSettings -SiteId "MySiteId" -SiteUrl "MySiteUrl" -WebId "MyWebId" -WebUrl "MyWebUrl" -WebTitle "MyWebTitle" -PrimaryContact $ChangeWebContactByUrlSettingPrimaryContact -SecondaryContact $ChangeWebContactByUrlSettingPrimaryContact
-
-$ChangeWebContactSubRequest = New-ChangeWebContactSubRequest -Id "MyId" -AssignTo $ApiMyGroupPrimaryContact -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -Reason "MyReason" -Status 0 -StatusDescription "MyStatusDescription" -ProgressStatus $ApiRequestProgressStatus -ContactChangeSettings $ChangeWebContactSubRequestContactChangeSettings
+$ChangeWebContactSubRequest = New-ChangeWebContactSubRequest -Id "MyId" -AssignTo $ApiUser -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -Reason "MyReason" -Status 0 -StatusDescription "MyStatusDescription" -ProgressStatus $ApiRequestProgressStatus -ContactChangeSettings $ChangeWebContactByUrlSetting
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeWebContactRequest = New-ChangeWebContactRequest -ChangedMethod $ChangeContactMethod -ChangedByUserSetting $ChangeSiteContactRequestChangeByUserSetting -ChangedByUrlItems $ChangeWebContactByUrlSetting -SubRequests $ChangeWebContactSubRequest -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeWebContactRequest |  (optional)
+$ChangeWebContactRequest = New-ChangeWebContactRequest -ChangedMethod $ChangeContactMethod -ChangedByUserSetting $ChangeContactByUserSetting -ChangedByUrlItems $ChangeWebContactByUrlSetting -SubRequests $ChangeWebContactSubRequest -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeWebContactRequest |  (optional)
 
 # submit change web contact request
 try {
@@ -6353,37 +6197,32 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ChangeWebSettingRequest = $ChangeWebSettingRequestUrl = New-ChangeWebSettingRequestUrl -SiteUrl "MySiteUrl" -WebUrl "MyWebUrl" -SiteId "MySiteId" -WebId "MyWebId" -WebTitle "MyWebTitle"
-$ChangeListSettingRequestListTitle = New-ChangeListSettingRequestListTitle -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
+$ChangeWebSettingRequest = $ChangeWebSPObject = New-ChangeWebSPObject -SiteUrl "MySiteUrl" -WebUrl "MyWebUrl" -SiteId "MySiteId" -WebId "MyWebId" -WebTitle "MyWebTitle"
+$StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
-$ChangeWebSettingRequestChangedMetadata = New-ChangeWebSettingRequestChangedMetadata -ChangeValue $RequestMetadata -OriginalValue $RequestMetadata
+$RequestMetadataListChangedProperty = New-RequestMetadataListChangedProperty -ChangeValue $RequestMetadata -OriginalValue $RequestMetadata
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ChangeWebSettingRequest = New-ChangeWebSettingRequest -Url $ChangeWebSettingRequestUrl -ChangedTitle $ChangeListSettingRequestListTitle -ChangedDescription $ChangeListSettingRequestListTitle -ChangedMetadata $ChangeWebSettingRequestChangedMetadata -DeploymentPlanName "MyDeploymentPlanName" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeWebSettingRequest |  (optional)
+$ChangeWebSettingRequest = New-ChangeWebSettingRequest -Url $ChangeWebSPObject -ChangedTitle $StringChangedProperty -ChangedDescription $StringChangedProperty -ChangedMetadata $RequestMetadataListChangedProperty -DeploymentPlanName "MyDeploymentPlanName" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ChangeWebSettingRequest |  (optional)
 
 # submit change web settings request
 try {
@@ -6443,35 +6282,28 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ClonePermissionRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $ClonePermissionOption = New-ClonePermissionOption 
 $ClonePermissionAdditionalOption = New-ClonePermissionAdditionalOption 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ClonePermissionRequest = New-ClonePermissionRequest -Urls "MyUrls" -SourceUser $ApiMyGroupPrimaryContact -TargetUser $ApiMyGroupPrimaryContact -CloneOption $ClonePermissionOption -AdditionalCloneOption $ClonePermissionAdditionalOption -EnabledRemoveExplicitPermission $false -EnabledRemoveUserFromSPGroup $false -EnabledDeleteUserPermission $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ClonePermissionRequest |  (optional)
+$ClonePermissionRequest = New-ClonePermissionRequest -Urls "MyUrls" -SourceUser $ApiUser -TargetUser $ApiUser -CloneOption $ClonePermissionOption -AdditionalCloneOption $ClonePermissionAdditionalOption -EnabledRemoveExplicitPermission $false -EnabledRemoveUserFromSPGroup $false -EnabledDeleteUserPermission $false -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ClonePermissionRequest |  (optional)
 
 # get clone permission request
 try {
@@ -6532,52 +6364,46 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $ContentMoveRequest = $ContentMoveMethod = New-ContentMoveMethod 
 
 $ItemConflictResolutionType = New-ItemConflictResolutionType 
-$ContentMoveRequestCopySettings = New-ContentMoveRequestCopySettings -IsMigrateConfiguration $false -IsKeepLookAndFeel $false -ColumnsAndContentConflictResolution $ItemConflictResolutionType -IsMigrateSecurity $false -IsMigrateColumnsAndContentTypes $false -IsMigrateContent $false -IsMigrateContentIncludeListAttachment $false
+$CopyMoveSetting = New-CopyMoveSetting -IsMigrateConfiguration $false -IsKeepLookAndFeel $false -ColumnsAndContentConflictResolution $ItemConflictResolutionType -IsMigrateSecurity $false -IsMigrateColumnsAndContentTypes $false -IsMigrateContent $false -IsMigrateContentIncludeListAttachment $false
 
-$AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
-$ContentMoveCommonSettingProfileMappings = New-ContentMoveCommonSettingProfileMappings -ColumnMapping $AzureAdMetadataSettingsOffice365Tenant -ContentTypeMapping $AzureAdMetadataSettingsOffice365Tenant -UserMapping $AzureAdMetadataSettingsOffice365Tenant -LanguageMapping $AzureAdMetadataSettingsOffice365Tenant
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ContentMoveProfileMappings = New-ContentMoveProfileMappings -ColumnMapping $GuidModel -ContentTypeMapping $GuidModel -UserMapping $GuidModel -LanguageMapping $GuidModel
 
-$ContentMoveCommonSettingBackupSettings = New-ContentMoveCommonSettingBackupSettings -IsBackupSource $false -IsBackupDestination $false -StoragePolicy $AzureAdMetadataSettingsOffice365Tenant
+$BackupEnvironmentSetting = New-BackupEnvironmentSetting -IsBackupSource $false -IsBackupDestination $false -StoragePolicy $GuidModel
 
 $ConflictSolutionType = New-ConflictSolutionType 
-$ContentMoveCommonSettingConflictResolutionSettings = New-ContentMoveCommonSettingConflictResolutionSettings -ContainerConflictSolution $ConflictSolutionType -IsCheckLowerObject $false -IsEnableContentConflictResolution $false -ContentConflictSolution $ConflictSolutionType -AppConflictSolution $ConflictSolutionType
+$ConflictResolutionSetting = New-ConflictResolutionSetting -ContainerConflictSolution $ConflictSolutionType -IsCheckLowerObject $false -IsEnableContentConflictResolution $false -ContentConflictSolution $ConflictSolutionType -AppConflictSolution $ConflictSolutionType
 
 $DeleteType = New-DeleteType 
-$ContentMoveRequestCommonSettings = New-ContentMoveRequestCommonSettings -IsIncludeVersions $false -IsIncludeWorkflowDefinition $false -IsDisableInformationRightsManagement $false -IsPreserveNullColumnValues $false -IsKeepModifiedByAndModifiedTime $false -ProfileMappings $ContentMoveCommonSettingProfileMappings -BackupSettings $ContentMoveCommonSettingBackupSettings -ConflictResolutionSettings $ContentMoveCommonSettingConflictResolutionSettings -FilterPolicy $AzureAdMetadataSettingsOffice365Tenant -DeleteType $DeleteType -IsDeleteCheckedFiles $false
+$ContentMoveCommonSetting = New-ContentMoveCommonSetting -IsIncludeVersions $false -IsIncludeWorkflowDefinition $false -IsDisableInformationRightsManagement $false -IsPreserveNullColumnValues $false -IsKeepModifiedByAndModifiedTime $false -ProfileMappings $ContentMoveProfileMappings -BackupSettings $BackupEnvironmentSetting -ConflictResolutionSettings $ConflictResolutionSetting -FilterPolicy $GuidModel -DeleteType $DeleteType -IsDeleteCheckedFiles $false
 
 $NodeType = New-NodeType 
-$ContentMoveSPObjectMappingSource = New-ContentMoveSPObjectMappingSource -SiteId "MySiteId" -SiteUrl "MySiteUrl" -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
+$ContentMoveSPObject = New-ContentMoveSPObject -SiteId "MySiteId" -SiteUrl "MySiteUrl" -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
 
 $ContentMoveAction = New-ContentMoveAction 
-$ContentMoveSPObjectMapping = New-ContentMoveSPObjectMapping -Source $ContentMoveSPObjectMappingSource -Destination $ContentMoveSPObjectMappingSource -Action $ContentMoveAction
+$ContentMoveSPObjectMapping = New-ContentMoveSPObjectMapping -Source $ContentMoveSPObject -Destination $ContentMoveSPObject -Action $ContentMoveAction
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ContentMoveRequest = New-ContentMoveRequest -Method $ContentMoveMethod -CopySettings $ContentMoveRequestCopySettings -MoveSettings $ContentMoveRequestCopySettings -CommonSettings $ContentMoveRequestCommonSettings -ObjectMappings $ContentMoveSPObjectMapping -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ContentMoveRequest |  (optional)
+$ContentMoveRequest = New-ContentMoveRequest -Method $ContentMoveMethod -CopySettings $CopyMoveSetting -MoveSettings $CopyMoveSetting -CommonSettings $ContentMoveCommonSetting -ObjectMappings $ContentMoveSPObjectMapping -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ContentMoveRequest |  (optional)
 
 # submit create content move request
 try {
@@ -6638,52 +6464,46 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $ContentMoveRequest = $ContentMoveMethod = New-ContentMoveMethod 
 
 $ItemConflictResolutionType = New-ItemConflictResolutionType 
-$ContentMoveRequestCopySettings = New-ContentMoveRequestCopySettings -IsMigrateConfiguration $false -IsKeepLookAndFeel $false -ColumnsAndContentConflictResolution $ItemConflictResolutionType -IsMigrateSecurity $false -IsMigrateColumnsAndContentTypes $false -IsMigrateContent $false -IsMigrateContentIncludeListAttachment $false
+$CopyMoveSetting = New-CopyMoveSetting -IsMigrateConfiguration $false -IsKeepLookAndFeel $false -ColumnsAndContentConflictResolution $ItemConflictResolutionType -IsMigrateSecurity $false -IsMigrateColumnsAndContentTypes $false -IsMigrateContent $false -IsMigrateContentIncludeListAttachment $false
 
-$AzureAdMetadataSettingsOffice365Tenant = New-AzureAdMetadataSettingsOffice365Tenant -Id "MyId" -Name "MyName" -Description "MyDescription"
-$ContentMoveCommonSettingProfileMappings = New-ContentMoveCommonSettingProfileMappings -ColumnMapping $AzureAdMetadataSettingsOffice365Tenant -ContentTypeMapping $AzureAdMetadataSettingsOffice365Tenant -UserMapping $AzureAdMetadataSettingsOffice365Tenant -LanguageMapping $AzureAdMetadataSettingsOffice365Tenant
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$ContentMoveProfileMappings = New-ContentMoveProfileMappings -ColumnMapping $GuidModel -ContentTypeMapping $GuidModel -UserMapping $GuidModel -LanguageMapping $GuidModel
 
-$ContentMoveCommonSettingBackupSettings = New-ContentMoveCommonSettingBackupSettings -IsBackupSource $false -IsBackupDestination $false -StoragePolicy $AzureAdMetadataSettingsOffice365Tenant
+$BackupEnvironmentSetting = New-BackupEnvironmentSetting -IsBackupSource $false -IsBackupDestination $false -StoragePolicy $GuidModel
 
 $ConflictSolutionType = New-ConflictSolutionType 
-$ContentMoveCommonSettingConflictResolutionSettings = New-ContentMoveCommonSettingConflictResolutionSettings -ContainerConflictSolution $ConflictSolutionType -IsCheckLowerObject $false -IsEnableContentConflictResolution $false -ContentConflictSolution $ConflictSolutionType -AppConflictSolution $ConflictSolutionType
+$ConflictResolutionSetting = New-ConflictResolutionSetting -ContainerConflictSolution $ConflictSolutionType -IsCheckLowerObject $false -IsEnableContentConflictResolution $false -ContentConflictSolution $ConflictSolutionType -AppConflictSolution $ConflictSolutionType
 
 $DeleteType = New-DeleteType 
-$ContentMoveRequestCommonSettings = New-ContentMoveRequestCommonSettings -IsIncludeVersions $false -IsIncludeWorkflowDefinition $false -IsDisableInformationRightsManagement $false -IsPreserveNullColumnValues $false -IsKeepModifiedByAndModifiedTime $false -ProfileMappings $ContentMoveCommonSettingProfileMappings -BackupSettings $ContentMoveCommonSettingBackupSettings -ConflictResolutionSettings $ContentMoveCommonSettingConflictResolutionSettings -FilterPolicy $AzureAdMetadataSettingsOffice365Tenant -DeleteType $DeleteType -IsDeleteCheckedFiles $false
+$ContentMoveCommonSetting = New-ContentMoveCommonSetting -IsIncludeVersions $false -IsIncludeWorkflowDefinition $false -IsDisableInformationRightsManagement $false -IsPreserveNullColumnValues $false -IsKeepModifiedByAndModifiedTime $false -ProfileMappings $ContentMoveProfileMappings -BackupSettings $BackupEnvironmentSetting -ConflictResolutionSettings $ConflictResolutionSetting -FilterPolicy $GuidModel -DeleteType $DeleteType -IsDeleteCheckedFiles $false
 
 $NodeType = New-NodeType 
-$ContentMoveSPObjectMappingSource = New-ContentMoveSPObjectMappingSource -SiteId "MySiteId" -SiteUrl "MySiteUrl" -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
+$ContentMoveSPObject = New-ContentMoveSPObject -SiteId "MySiteId" -SiteUrl "MySiteUrl" -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
 
 $ContentMoveAction = New-ContentMoveAction 
-$ContentMoveSPObjectMapping = New-ContentMoveSPObjectMapping -Source $ContentMoveSPObjectMappingSource -Destination $ContentMoveSPObjectMappingSource -Action $ContentMoveAction
+$ContentMoveSPObjectMapping = New-ContentMoveSPObjectMapping -Source $ContentMoveSPObject -Destination $ContentMoveSPObject -Action $ContentMoveAction
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ContentMoveRequest = New-ContentMoveRequest -Method $ContentMoveMethod -CopySettings $ContentMoveRequestCopySettings -MoveSettings $ContentMoveRequestCopySettings -CommonSettings $ContentMoveRequestCommonSettings -ObjectMappings $ContentMoveSPObjectMapping -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ContentMoveRequest |  (optional)
+$ContentMoveRequest = New-ContentMoveRequest -Method $ContentMoveMethod -CopySettings $CopyMoveSetting -MoveSettings $CopyMoveSetting -CommonSettings $ContentMoveCommonSetting -ObjectMappings $ContentMoveSPObjectMapping -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ContentMoveRequest |  (optional)
 
 # submit create content move request, and return request info.
 try {
@@ -6747,23 +6567,19 @@ $ExternalUserType = New-ExternalUserType
 $ApiUserType = New-ApiUserType 
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$CreateGroupRequestLinks = New-CreateGroupRequestLinks -GroupSiteLink "MyGroupSiteLink" -GroupPlannerLink "MyGroupPlannerLink" -GroupFilesLink "MyGroupFilesLink" -GroupConversationsLink "MyGroupConversationsLink" -GroupNotebookLink "MyGroupNotebookLink" -YammerGroupLink "MyYammerGroupLink" -TeamLink "MyTeamLink"
+$GroupLinks = New-GroupLinks -GroupSiteLink "MyGroupSiteLink" -GroupPlannerLink "MyGroupPlannerLink" -GroupFilesLink "MyGroupFilesLink" -GroupConversationsLink "MyGroupConversationsLink" -GroupNotebookLink "MyGroupNotebookLink" -YammerGroupLink "MyYammerGroupLink" -TeamLink "MyTeamLink"
 
 $GroupLeasePeriodType = New-GroupLeasePeriodType 
 $ApiDurationType = New-ApiDurationType 
-$CreateGroupRequestLeasePeriodSettings = New-CreateGroupRequestLeasePeriodSettings -IsEnabled $false -LeaseType $GroupLeasePeriodType -DurationType $ApiDurationType -DurationInterval 0 -LeaseExpirationDate (Get-Date)
+$GroupLeasePeriodSettings = New-GroupLeasePeriodSettings -IsEnabled $false -LeaseType $GroupLeasePeriodType -DurationType $ApiDurationType -DurationInterval 0 -LeaseExpirationDate (Get-Date)
 
 $GiphyRatingType = New-GiphyRatingType 
-$CreateGroupRequestTeamsSettings = New-CreateGroupRequestTeamsSettings -AllowMembersCreateUpdateChannels $false -AllowMembersCreatePrivateChannels $false -AllowMemberDeleteRestoreChannels $false -AllowMembersAddRemoveApps $false -AllowMembersCreateUpdateRemoveTabs $false -AllowMembersCreateUpdateRemoveConnections $false -AllowMembersDeleteMessages $false -AllowMembersEditMessages $false -AllowGuestsCreateUpdateChannels $false -AllowGuestsDeleteChannels $false -AllowMentionsTeam $false -AllowMentionsChannel $false -EnableGiphy $false -EnableStickersAndMemes $false -EnableCustomMemes $false -GiphyRatingType $GiphyRatingType
+$RequestTeamsSettings = New-RequestTeamsSettings -AllowMembersCreateUpdateChannels $false -AllowMembersCreatePrivateChannels $false -AllowMemberDeleteRestoreChannels $false -AllowMembersAddRemoveApps $false -AllowMembersCreateUpdateRemoveTabs $false -AllowMembersCreateUpdateRemoveConnections $false -AllowMembersDeleteMessages $false -AllowMembersEditMessages $false -AllowGuestsCreateUpdateChannels $false -AllowGuestsDeleteChannels $false -AllowMentionsTeam $false -AllowMentionsChannel $false -EnableGiphy $false -EnableStickersAndMemes $false -EnableCustomMemes $false -GiphyRatingType $GiphyRatingType
 
-$CreateGroupRequestPrimaryContact = New-CreateGroupRequestPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$CreateGroupRequestSecondaryContact = New-CreateGroupRequestSecondaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$TeamsTemplateSettingsSelectedTemplate = New-TeamsTemplateSettingsSelectedTemplate -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TeamsTemplateSettingsSelectedMSTemplate = New-TeamsTemplateSettingsSelectedMSTemplate -Id "MyId" -Name "MyName"
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$StringModel = New-StringModel -Id "MyId" -Name "MyName"
 $TextModel = New-TextModel -Description "MyDescription" -Id "MyId" -Name "MyName"
-$CreateGroupRequestTemplateSettings = New-CreateGroupRequestTemplateSettings -EnableCreateTeamFromScratch $false -EnableCreateTeamFromExistTeam $false -EnableCreateTeamFromTeamTemplate $false -SelectedTemplate $TeamsTemplateSettingsSelectedTemplate -SelectedMSTemplate $TeamsTemplateSettingsSelectedMSTemplate -TeamTemplates $TextModel -EnableCloneChannels $false -EnableCloneApps $false -EnableCloneTabs $false -EnableCloneMembers $false -EnableCloneTeamSetting $false -EnableCloneTeamPrivacy $false -EnableCloneTeamClassification $false
+$TeamsTemplateSettings = New-TeamsTemplateSettings -EnableCreateTeamFromScratch $false -EnableCreateTeamFromExistTeam $false -EnableCreateTeamFromTeamTemplate $false -SelectedTemplate $GuidModel -SelectedMSTemplate $StringModel -TeamTemplates $TextModel -EnableCloneChannels $false -EnableCloneApps $false -EnableCloneTabs $false -EnableCloneMembers $false -EnableCloneTeamSetting $false -EnableCloneTeamPrivacy $false -EnableCloneTeamClassification $false
 
 $LogicalOperator = New-LogicalOperator 
 $CategoryType = New-CategoryType 
@@ -6774,38 +6590,32 @@ $InviteType = New-InviteType
 $PrincipalType = New-PrincipalType 
 $UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -IsAccountEnabled $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -SharePointLogonName "MySharePointLogonName" -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
 
-$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo
+$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo -TenantId "MyTenantId" -TenantName "MyTenantName"
 
-$CreateGroupRequestMultiGeoLocation = New-CreateGroupRequestMultiGeoLocation -Name "MyName" -DisplayName "MyDisplayName"
+$GeoLocationBase = New-GeoLocationBase -Name "MyName" -DisplayName "MyDisplayName"
 
 $ConvertHubSiteActionType = New-ConvertHubSiteActionType 
-$CreateGroupRequestHubSiteSettings = New-CreateGroupRequestHubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
+$HubSiteSettings = New-HubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
 
-$CreateGroupRequestTimeZoneSettings = New-CreateGroupRequestTimeZoneSettings -Enabled $false -TimeZone 0
-$CreateGroupRequestLocaleSettings = New-CreateGroupRequestLocaleSettings -Enabled $false -Locale 0
+$TimeZoneSettings = New-TimeZoneSettings -Enabled $false -TimeZone 0
+$LocaleSettings = New-LocaleSettings -Enabled $false -Locale 0
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateGroupRequest = New-CreateGroupRequest -GroupType $CreateGroupType -GroupId "MyGroupId" -GroupIdWithoutPrefixSuffix "MyGroupIdWithoutPrefixSuffix" -GroupName "MyGroupName" -GroupNameWithoutPrefixSuffix "MyGroupNameWithoutPrefixSuffix" -GroupEmail "MyGroupEmail" -Policy "MyPolicy" -GroupDescription "MyGroupDescription" -Owners $ApiUser -Members $ApiUser -Privacy $false -Subscribe $false -OutsideSender $false -EnableTeamCollaboration $false -Language "MyLanguage" -Classification "MyClassification" -Sensitivity "MySensitivity" -SensitivityName "MySensitivityName" -Links $CreateGroupRequestLinks -LeasePeriodSettings $CreateGroupRequestLeasePeriodSettings -TeamsSettings $CreateGroupRequestTeamsSettings -AppliedSiteDesignId "MyAppliedSiteDesignId" -PrimaryContact $CreateGroupRequestPrimaryContact -SecondaryContact $CreateGroupRequestSecondaryContact -EnableGroupMembershipHidden $false -EnableAssignedMembership $false -EnableDynamicMembership $false -TemplateSettings $CreateGroupRequestTemplateSettings -DynamicMembershipRules $DynamicGroupRuleInfo -MultiGeoLocation $CreateGroupRequestMultiGeoLocation -HubSiteSettings $CreateGroupRequestHubSiteSettings -TimeZoneSettings $CreateGroupRequestTimeZoneSettings -LocaleSettings $CreateGroupRequestLocaleSettings -YammerGroupInfo "MyYammerGroupInfo" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateGroupRequest |  (optional)
+$CreateGroupRequest = New-CreateGroupRequest -GroupType $CreateGroupType -GroupId "MyGroupId" -GroupIdWithoutPrefixSuffix "MyGroupIdWithoutPrefixSuffix" -GroupName "MyGroupName" -GroupNameWithoutPrefixSuffix "MyGroupNameWithoutPrefixSuffix" -GroupEmail "MyGroupEmail" -Policy "MyPolicy" -GroupDescription "MyGroupDescription" -Owners $ApiUser -Members $ApiUser -Privacy $false -Subscribe $false -OutsideSender $false -EnableTeamCollaboration $false -Language "MyLanguage" -Classification "MyClassification" -Sensitivity "MySensitivity" -SensitivityName "MySensitivityName" -Links $GroupLinks -LeasePeriodSettings $GroupLeasePeriodSettings -TeamsSettings $RequestTeamsSettings -AppliedSiteDesignId "MyAppliedSiteDesignId" -PrimaryContact $ApiUser -SecondaryContact $ApiUser -EnableGroupMembershipHidden $false -EnableAssignedMembership $false -EnableDynamicMembership $false -TemplateSettings $TeamsTemplateSettings -DynamicMembershipRules $DynamicGroupRuleInfo -MultiGeoLocation $GeoLocationBase -HubSiteSettings $HubSiteSettings -TimeZoneSettings $TimeZoneSettings -LocaleSettings $LocaleSettings -YammerGroupInfo "MyYammerGroupInfo" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateGroupRequest |  (optional)
 
 # submit create group request
 try {
@@ -6869,23 +6679,19 @@ $ExternalUserType = New-ExternalUserType
 $ApiUserType = New-ApiUserType 
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$CreateGroupRequestLinks = New-CreateGroupRequestLinks -GroupSiteLink "MyGroupSiteLink" -GroupPlannerLink "MyGroupPlannerLink" -GroupFilesLink "MyGroupFilesLink" -GroupConversationsLink "MyGroupConversationsLink" -GroupNotebookLink "MyGroupNotebookLink" -YammerGroupLink "MyYammerGroupLink" -TeamLink "MyTeamLink"
+$GroupLinks = New-GroupLinks -GroupSiteLink "MyGroupSiteLink" -GroupPlannerLink "MyGroupPlannerLink" -GroupFilesLink "MyGroupFilesLink" -GroupConversationsLink "MyGroupConversationsLink" -GroupNotebookLink "MyGroupNotebookLink" -YammerGroupLink "MyYammerGroupLink" -TeamLink "MyTeamLink"
 
 $GroupLeasePeriodType = New-GroupLeasePeriodType 
 $ApiDurationType = New-ApiDurationType 
-$CreateGroupRequestLeasePeriodSettings = New-CreateGroupRequestLeasePeriodSettings -IsEnabled $false -LeaseType $GroupLeasePeriodType -DurationType $ApiDurationType -DurationInterval 0 -LeaseExpirationDate (Get-Date)
+$GroupLeasePeriodSettings = New-GroupLeasePeriodSettings -IsEnabled $false -LeaseType $GroupLeasePeriodType -DurationType $ApiDurationType -DurationInterval 0 -LeaseExpirationDate (Get-Date)
 
 $GiphyRatingType = New-GiphyRatingType 
-$CreateGroupRequestTeamsSettings = New-CreateGroupRequestTeamsSettings -AllowMembersCreateUpdateChannels $false -AllowMembersCreatePrivateChannels $false -AllowMemberDeleteRestoreChannels $false -AllowMembersAddRemoveApps $false -AllowMembersCreateUpdateRemoveTabs $false -AllowMembersCreateUpdateRemoveConnections $false -AllowMembersDeleteMessages $false -AllowMembersEditMessages $false -AllowGuestsCreateUpdateChannels $false -AllowGuestsDeleteChannels $false -AllowMentionsTeam $false -AllowMentionsChannel $false -EnableGiphy $false -EnableStickersAndMemes $false -EnableCustomMemes $false -GiphyRatingType $GiphyRatingType
+$RequestTeamsSettings = New-RequestTeamsSettings -AllowMembersCreateUpdateChannels $false -AllowMembersCreatePrivateChannels $false -AllowMemberDeleteRestoreChannels $false -AllowMembersAddRemoveApps $false -AllowMembersCreateUpdateRemoveTabs $false -AllowMembersCreateUpdateRemoveConnections $false -AllowMembersDeleteMessages $false -AllowMembersEditMessages $false -AllowGuestsCreateUpdateChannels $false -AllowGuestsDeleteChannels $false -AllowMentionsTeam $false -AllowMentionsChannel $false -EnableGiphy $false -EnableStickersAndMemes $false -EnableCustomMemes $false -GiphyRatingType $GiphyRatingType
 
-$CreateGroupRequestPrimaryContact = New-CreateGroupRequestPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$CreateGroupRequestSecondaryContact = New-CreateGroupRequestSecondaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$TeamsTemplateSettingsSelectedTemplate = New-TeamsTemplateSettingsSelectedTemplate -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TeamsTemplateSettingsSelectedMSTemplate = New-TeamsTemplateSettingsSelectedMSTemplate -Id "MyId" -Name "MyName"
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$StringModel = New-StringModel -Id "MyId" -Name "MyName"
 $TextModel = New-TextModel -Description "MyDescription" -Id "MyId" -Name "MyName"
-$CreateGroupRequestTemplateSettings = New-CreateGroupRequestTemplateSettings -EnableCreateTeamFromScratch $false -EnableCreateTeamFromExistTeam $false -EnableCreateTeamFromTeamTemplate $false -SelectedTemplate $TeamsTemplateSettingsSelectedTemplate -SelectedMSTemplate $TeamsTemplateSettingsSelectedMSTemplate -TeamTemplates $TextModel -EnableCloneChannels $false -EnableCloneApps $false -EnableCloneTabs $false -EnableCloneMembers $false -EnableCloneTeamSetting $false -EnableCloneTeamPrivacy $false -EnableCloneTeamClassification $false
+$TeamsTemplateSettings = New-TeamsTemplateSettings -EnableCreateTeamFromScratch $false -EnableCreateTeamFromExistTeam $false -EnableCreateTeamFromTeamTemplate $false -SelectedTemplate $GuidModel -SelectedMSTemplate $StringModel -TeamTemplates $TextModel -EnableCloneChannels $false -EnableCloneApps $false -EnableCloneTabs $false -EnableCloneMembers $false -EnableCloneTeamSetting $false -EnableCloneTeamPrivacy $false -EnableCloneTeamClassification $false
 
 $LogicalOperator = New-LogicalOperator 
 $CategoryType = New-CategoryType 
@@ -6896,38 +6702,32 @@ $InviteType = New-InviteType
 $PrincipalType = New-PrincipalType 
 $UserInfo = New-UserInfo -IdentityName "MyIdentityName" -UserDisplayName "MyUserDisplayName" -DomainGroup $false -Department "MyDepartment" -MobilePhone "MyMobilePhone" -Manager "MyManager" -Permission "MyPermission" -IsDeleted $false -SecurityToken "MySecurityToken" -UserType 0 -AzureUserType "MyAzureUserType" -LegalPerson $false -AuthenticationType $AuthenticationType -AdminCenterUrl "MyAdminCenterUrl" -InviteType $InviteType -Type "MyType" -IsRegisteredAosGroup $false -IsExternalUser $ExternalUserType -IsAPIExceptional $false -TenantId "MyTenantId" -ObjectId "MyObjectId" -Version 0 -JobTitle "MyJobTitle" -UsageLocation "MyUsageLocation" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsOtherTenantUser $false -IsAccountEnabled $false -NetworkId "MyNetworkId" -IsValidateByProfile $false -ProxyAddresses "MyProxyAddresses" -PrincipalType $PrincipalType -Inviter "MyInviter" -CreatedTime (Get-Date) -LastModifiedTime (Get-Date) -SharePointLogonName "MySharePointLogonName" -Id 0 -DisplayName "MyDisplayName" -Title "MyTitle" -Email "MyEmail" -IsValid $false -ExistInAOS $false
 
-$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo
+$DynamicGroupRuleInfo = New-DynamicGroupRuleInfo -Id "MyId" -Order 0 -Relation $LogicalOperator -Category $CategoryType -MetadataId "MyMetadataId" -MetadataName "MyMetadataName" -MetadataValue "MyMetadataValue" -MetadataDisplayValue "MyMetadataDisplayValue" -MetadataValueAzureUserType "MyMetadataValueAzureUserType" -Condition $DynamicRuleCondition -DisableEditRule $false -DisableEditRuleValue $false -MetadataUserList $UserInfo -TenantId "MyTenantId" -TenantName "MyTenantName"
 
-$CreateGroupRequestMultiGeoLocation = New-CreateGroupRequestMultiGeoLocation -Name "MyName" -DisplayName "MyDisplayName"
+$GeoLocationBase = New-GeoLocationBase -Name "MyName" -DisplayName "MyDisplayName"
 
 $ConvertHubSiteActionType = New-ConvertHubSiteActionType 
-$CreateGroupRequestHubSiteSettings = New-CreateGroupRequestHubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
+$HubSiteSettings = New-HubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
 
-$CreateGroupRequestTimeZoneSettings = New-CreateGroupRequestTimeZoneSettings -Enabled $false -TimeZone 0
-$CreateGroupRequestLocaleSettings = New-CreateGroupRequestLocaleSettings -Enabled $false -Locale 0
+$TimeZoneSettings = New-TimeZoneSettings -Enabled $false -TimeZone 0
+$LocaleSettings = New-LocaleSettings -Enabled $false -Locale 0
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateGroupRequest = New-CreateGroupRequest -GroupType $CreateGroupType -GroupId "MyGroupId" -GroupIdWithoutPrefixSuffix "MyGroupIdWithoutPrefixSuffix" -GroupName "MyGroupName" -GroupNameWithoutPrefixSuffix "MyGroupNameWithoutPrefixSuffix" -GroupEmail "MyGroupEmail" -Policy "MyPolicy" -GroupDescription "MyGroupDescription" -Owners $ApiUser -Members $ApiUser -Privacy $false -Subscribe $false -OutsideSender $false -EnableTeamCollaboration $false -Language "MyLanguage" -Classification "MyClassification" -Sensitivity "MySensitivity" -SensitivityName "MySensitivityName" -Links $CreateGroupRequestLinks -LeasePeriodSettings $CreateGroupRequestLeasePeriodSettings -TeamsSettings $CreateGroupRequestTeamsSettings -AppliedSiteDesignId "MyAppliedSiteDesignId" -PrimaryContact $CreateGroupRequestPrimaryContact -SecondaryContact $CreateGroupRequestSecondaryContact -EnableGroupMembershipHidden $false -EnableAssignedMembership $false -EnableDynamicMembership $false -TemplateSettings $CreateGroupRequestTemplateSettings -DynamicMembershipRules $DynamicGroupRuleInfo -MultiGeoLocation $CreateGroupRequestMultiGeoLocation -HubSiteSettings $CreateGroupRequestHubSiteSettings -TimeZoneSettings $CreateGroupRequestTimeZoneSettings -LocaleSettings $CreateGroupRequestLocaleSettings -YammerGroupInfo "MyYammerGroupInfo" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateGroupRequest |  (optional)
+$CreateGroupRequest = New-CreateGroupRequest -GroupType $CreateGroupType -GroupId "MyGroupId" -GroupIdWithoutPrefixSuffix "MyGroupIdWithoutPrefixSuffix" -GroupName "MyGroupName" -GroupNameWithoutPrefixSuffix "MyGroupNameWithoutPrefixSuffix" -GroupEmail "MyGroupEmail" -Policy "MyPolicy" -GroupDescription "MyGroupDescription" -Owners $ApiUser -Members $ApiUser -Privacy $false -Subscribe $false -OutsideSender $false -EnableTeamCollaboration $false -Language "MyLanguage" -Classification "MyClassification" -Sensitivity "MySensitivity" -SensitivityName "MySensitivityName" -Links $GroupLinks -LeasePeriodSettings $GroupLeasePeriodSettings -TeamsSettings $RequestTeamsSettings -AppliedSiteDesignId "MyAppliedSiteDesignId" -PrimaryContact $ApiUser -SecondaryContact $ApiUser -EnableGroupMembershipHidden $false -EnableAssignedMembership $false -EnableDynamicMembership $false -TemplateSettings $TeamsTemplateSettings -DynamicMembershipRules $DynamicGroupRuleInfo -MultiGeoLocation $GeoLocationBase -HubSiteSettings $HubSiteSettings -TimeZoneSettings $TimeZoneSettings -LocaleSettings $LocaleSettings -YammerGroupInfo "MyYammerGroupInfo" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateGroupRequest |  (optional)
 
 # submit create group request, and return request info.
 try {
@@ -6987,41 +6787,34 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $CreateGuestUserRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$CreateGuestUserRequestUserProperties = New-CreateGuestUserRequestUserProperties -DisplayName "MyDisplayName" -FirstName "MyFirstName" -LastName "MyLastName" -UserName "MyUserName" -UsageLocation "MyUsageLocation" -UsageLocationDisplayName "MyUsageLocationDisplayName" -JobTitle "MyJobTitle" -JobDepartment "MyJobDepartment" -Manager $ApiMyGroupPrimaryContact -CompanyName "MyCompanyName"
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+
+$GuestUserPropertyModel = New-GuestUserPropertyModel -DisplayName "MyDisplayName" -FirstName "MyFirstName" -LastName "MyLastName" -UserName "MyUserName" -UsageLocation "MyUsageLocation" -UsageLocationDisplayName "MyUsageLocationDisplayName" -JobTitle "MyJobTitle" -JobDepartment "MyJobDepartment" -Manager $ApiUser -CompanyName "MyCompanyName"
 
 $OneTimeRenewalOption = New-OneTimeRenewalOption 
 $ApiDurationType = New-ApiDurationType 
-$CreateGuestUserRequestOneTimeSettings = New-CreateGuestUserRequestOneTimeSettings -Option $OneTimeRenewalOption -Duration 0 -DurationType $ApiDurationType -StartTime (Get-Date)
+$GuestUserRequestOneTimeRenewalSettingModel = New-GuestUserRequestOneTimeRenewalSettingModel -Option $OneTimeRenewalOption -Duration 0 -DurationType $ApiDurationType -StartTime (Get-Date)
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ApiRequestProgressStatus = New-ApiRequestProgressStatus 
-$CreateGuestUserSubRequest = New-CreateGuestUserSubRequest -Id "MyId" -UserProperties $CreateGuestUserRequestUserProperties -WelcomeEmailMessage "MyWelcomeEmailMessage" -PrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -InviteGroups $ApiUser -OneTimeSettings $CreateGuestUserRequestOneTimeSettings -Metadatas $RequestMetadata -ProcessStatus $ApiRequestProgressStatus -AssignTo $ApiUser -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date)
+$CreateGuestUserSubRequest = New-CreateGuestUserSubRequest -Id "MyId" -UserProperties $GuestUserPropertyModel -WelcomeEmailMessage "MyWelcomeEmailMessage" -PrimaryContact $ApiUser -SecondaryContact $ApiUser -InviteGroups $ApiUser -OneTimeSettings $GuestUserRequestOneTimeRenewalSettingModel -Metadatas $RequestMetadata -ProcessStatus $ApiRequestProgressStatus -AssignTo $ApiUser -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date)
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateGuestUserRequest = New-CreateGuestUserRequest -UserProperties $CreateGuestUserRequestUserProperties -WelcomeEmailMessage "MyWelcomeEmailMessage" -PrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -InviteGroups $ApiUser -OneTimeSettings $CreateGuestUserRequestOneTimeSettings -SubRequestInfos $CreateGuestUserSubRequest -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateGuestUserRequest |  (optional)
+$CreateGuestUserRequest = New-CreateGuestUserRequest -UserProperties $GuestUserPropertyModel -WelcomeEmailMessage "MyWelcomeEmailMessage" -PrimaryContact $ApiUser -SecondaryContact $ApiUser -InviteGroups $ApiUser -OneTimeSettings $GuestUserRequestOneTimeRenewalSettingModel -SubRequestInfos $CreateGuestUserSubRequest -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateGuestUserRequest |  (optional)
 
 # submit create guest user request
 try {
@@ -7079,56 +6872,47 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$CreateListRequest = $CreateListRequestParentObject = New-CreateListRequestParentObject -ParentUrl "MyParentUrl" -SiteUrl "MySiteUrl" -SiteId "MySiteId"
+$CreateListRequest = $CreateListSPObject = New-CreateListSPObject -ParentUrl "MyParentUrl" -SiteUrl "MySiteUrl" -SiteId "MySiteId"
 $ListType = New-ListType 
 
-$CreateListRequestVersionSettings = New-CreateListRequestVersionSettings -ListType $ListType -EnableMajorVersions $false -EnableMajorAndMinorVersions $false -EnableMajorVersionLimit $false -MajorVersionLimit 0 -EnableMinorVersionLimit $false -MinorVersionsLimit 0 -RequireContentApproval $false
+$ListVersionSettings = New-ListVersionSettings -ListType $ListType -EnableMajorVersions $false -EnableMajorAndMinorVersions $false -EnableMajorVersionLimit $false -MajorVersionLimit 0 -EnableMinorVersionLimit $false -MinorVersionsLimit 0 -RequireContentApproval $false
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$RequestUserWithPermissionsUser = New-RequestUserWithPermissionsUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
-$RequestUserWithPermissions = New-RequestUserWithPermissions -User $RequestUserWithPermissionsUser -PermissionLevels $PermissionLevel
+$RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
 $GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestGroupWithPermissionsGroupOwner = New-RequestGroupWithPermissionsGroupOwner -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
 $SPGroupViewOptionType = New-SPGroupViewOptionType 
 $SPGroupEditOptionType = New-SPGroupEditOptionType 
 $AssignBy = New-AssignBy 
-$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $RequestGroupWithPermissionsGroupOwner -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
+$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $ApiUser -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
 
-$CreateListRequestPermissionSettings = New-CreateListRequestPermissionSettings -StopInheritingPermissions $false -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions
+$ListPermissionSettings = New-ListPermissionSettings -StopInheritingPermissions $false -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateListRequest = New-CreateListRequest -ListTitle "MyListTitle" -ListName "MyListName" -ListDescription "MyListDescription" -ParentObject $CreateListRequestParentObject -ListTemplate "MyListTemplate" -EnableNavigation $false -ListType $ListType -VersionSettings $CreateListRequestVersionSettings -PermissionSettings $CreateListRequestPermissionSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateListRequest |  (optional)
+$CreateListRequest = New-CreateListRequest -ListTitle "MyListTitle" -ListName "MyListName" -ListDescription "MyListDescription" -ParentObject $CreateListSPObject -ListTemplate "MyListTemplate" -EnableNavigation $false -ListType $ListType -VersionSettings $ListVersionSettings -PermissionSettings $ListPermissionSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateListRequest |  (optional)
 
 # submit create list request
 try {
@@ -7190,31 +6974,24 @@ $CreatePrivateChannelRequest = $ExternalUserType = New-ExternalUserType
 $ApiUserType = New-ApiUserType 
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$ChangePrivateChannelRequestTeam = New-ChangePrivateChannelRequestTeam -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreatePrivateChannelRequest = New-CreatePrivateChannelRequest -Name "MyName" -ChannelDescription "MyChannelDescription" -Owners $ApiUser -Members $ApiUser -Team $ChangePrivateChannelRequestTeam -ChannelWebUrl "MyChannelWebUrl" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreatePrivateChannelRequest |  (optional)
+$CreatePrivateChannelRequest = New-CreatePrivateChannelRequest -Name "MyName" -ChannelDescription "MyChannelDescription" -Owners $ApiUser -Members $ApiUser -Team $ApiUser -ChannelWebUrl "MyChannelWebUrl" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreatePrivateChannelRequest |  (optional)
 
 # submit private channel request
 try {
@@ -7272,70 +7049,55 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$CreateSiteRequest = $CreateSiteRequestSiteUrl = New-CreateSiteRequestSiteUrl -Root "MyRoot" -ManagedPath "MyManagedPath" -Name "MyName"
+$CreateSiteRequest = $SiteUrl = New-SiteUrl -Root "MyRoot" -ManagedPath "MyManagedPath" -Name "MyName"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$CreateSiteRequestPrimaryAdmin = New-CreateSiteRequestPrimaryAdmin -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$CreateSiteRequestPrimaryContact = New-CreateSiteRequestPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$CreateSiteRequestSecondaryContact = New-CreateSiteRequestSecondaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$CreateSiteRequestSiteDesign = New-CreateSiteRequestSiteDesign -Id "MyId" -Name "MyName"
+$StringModel = New-StringModel -Id "MyId" -Name "MyName"
 
 $ConvertHubSiteActionType = New-ConvertHubSiteActionType 
-$CreateSiteRequestHubSiteSettings = New-CreateSiteRequestHubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
-
-$RequestUserWithPermissionsUser = New-RequestUserWithPermissionsUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$HubSiteSettings = New-HubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
 
 $PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
-$RequestUserWithPermissions = New-RequestUserWithPermissions -User $RequestUserWithPermissionsUser -PermissionLevels $PermissionLevel
+$RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
 $GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestGroupWithPermissionsGroupOwner = New-RequestGroupWithPermissionsGroupOwner -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
 $SPGroupViewOptionType = New-SPGroupViewOptionType 
 $SPGroupEditOptionType = New-SPGroupEditOptionType 
 $AssignBy = New-AssignBy 
-$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $RequestGroupWithPermissionsGroupOwner -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
+$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $ApiUser -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
 
 $YammerGroupType = New-YammerGroupType 
 $YammerGroupJoinType = New-YammerGroupJoinType 
-$CreateSiteRequestYammerGroupSettings = New-CreateSiteRequestYammerGroupSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
+$YammerGroupRequestSettings = New-YammerGroupRequestSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
 
 $ApiDurationType = New-ApiDurationType 
-$CreateSiteRequestLeasePeriodSettings = New-CreateSiteRequestLeasePeriodSettings -LeaseInterval 0 -LeaseDurationType $ApiDurationType -LeaseWarningInterval 0 -LeaseWarningDurationType $ApiDurationType
+$SiteLeasePeriodRequestSettings = New-SiteLeasePeriodRequestSettings -LeaseInterval 0 -LeaseDurationType $ApiDurationType -LeaseWarningInterval 0 -LeaseWarningDurationType $ApiDurationType
 
-$CreateSiteRequestMultiGeoLocation = New-CreateSiteRequestMultiGeoLocation -Name "MyName" -DisplayName "MyDisplayName"
+$GeoLocationBase = New-GeoLocationBase -Name "MyName" -DisplayName "MyDisplayName"
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateSiteRequest = New-CreateSiteRequest -SiteTitle "MySiteTitle" -SiteDescription "MySiteDescription" -SiteUrl $CreateSiteRequestSiteUrl -PolicyId "MyPolicyId" -TimeZone 0 -Language 0 -Template "MyTemplate" -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -PrimaryAdmin $CreateSiteRequestPrimaryAdmin -AdditionalAdmins $ApiUser -PrimaryContact $CreateSiteRequestPrimaryContact -SecondaryContact $CreateSiteRequestSecondaryContact -SiteDesign $CreateSiteRequestSiteDesign -TeamSiteDesign "MyTeamSiteDesign" -Classification "MyClassification" -Sensitivity "MySensitivity" -HubSiteSettings $CreateSiteRequestHubSiteSettings -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $CreateSiteRequestYammerGroupSettings -LeasePeriodSettings $CreateSiteRequestLeasePeriodSettings -MultiGeoLocation $CreateSiteRequestMultiGeoLocation -InputTitle "MyInputTitle" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateSiteRequest | CreateSiteRequest
+$CreateSiteRequest = New-CreateSiteRequest -SiteTitle "MySiteTitle" -SiteDescription "MySiteDescription" -SiteUrl $SiteUrl -PolicyId "MyPolicyId" -TimeZone 0 -Language 0 -Template "MyTemplate" -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -PrimaryAdmin $ApiUser -AdditionalAdmins $ApiUser -PrimaryContact $ApiUser -SecondaryContact $ApiUser -SiteDesign $StringModel -TeamSiteDesign "MyTeamSiteDesign" -Classification "MyClassification" -Sensitivity "MySensitivity" -HubSiteSettings $HubSiteSettings -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $YammerGroupRequestSettings -LeasePeriodSettings $SiteLeasePeriodRequestSettings -MultiGeoLocation $GeoLocationBase -InputTitle "MyInputTitle" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateSiteRequest | CreateSiteRequest
 
 # submit create site collection request
 try {
@@ -7393,70 +7155,55 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$CreateSiteRequest = $CreateSiteRequestSiteUrl = New-CreateSiteRequestSiteUrl -Root "MyRoot" -ManagedPath "MyManagedPath" -Name "MyName"
+$CreateSiteRequest = $SiteUrl = New-SiteUrl -Root "MyRoot" -ManagedPath "MyManagedPath" -Name "MyName"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$CreateSiteRequestPrimaryAdmin = New-CreateSiteRequestPrimaryAdmin -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$CreateSiteRequestPrimaryContact = New-CreateSiteRequestPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$CreateSiteRequestSecondaryContact = New-CreateSiteRequestSecondaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$CreateSiteRequestSiteDesign = New-CreateSiteRequestSiteDesign -Id "MyId" -Name "MyName"
+$StringModel = New-StringModel -Id "MyId" -Name "MyName"
 
 $ConvertHubSiteActionType = New-ConvertHubSiteActionType 
-$CreateSiteRequestHubSiteSettings = New-CreateSiteRequestHubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
-
-$RequestUserWithPermissionsUser = New-RequestUserWithPermissionsUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$HubSiteSettings = New-HubSiteSettings -Enabled $false -Action $ConvertHubSiteActionType -AssociatedHubSiteId "MyAssociatedHubSiteId" -AssociatedHubSiteTitle "MyAssociatedHubSiteTitle"
 
 $PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
-$RequestUserWithPermissions = New-RequestUserWithPermissions -User $RequestUserWithPermissionsUser -PermissionLevels $PermissionLevel
+$RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
 $GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestGroupWithPermissionsGroupOwner = New-RequestGroupWithPermissionsGroupOwner -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
 $SPGroupViewOptionType = New-SPGroupViewOptionType 
 $SPGroupEditOptionType = New-SPGroupEditOptionType 
 $AssignBy = New-AssignBy 
-$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $RequestGroupWithPermissionsGroupOwner -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
+$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $ApiUser -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
 
 $YammerGroupType = New-YammerGroupType 
 $YammerGroupJoinType = New-YammerGroupJoinType 
-$CreateSiteRequestYammerGroupSettings = New-CreateSiteRequestYammerGroupSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
+$YammerGroupRequestSettings = New-YammerGroupRequestSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
 
 $ApiDurationType = New-ApiDurationType 
-$CreateSiteRequestLeasePeriodSettings = New-CreateSiteRequestLeasePeriodSettings -LeaseInterval 0 -LeaseDurationType $ApiDurationType -LeaseWarningInterval 0 -LeaseWarningDurationType $ApiDurationType
+$SiteLeasePeriodRequestSettings = New-SiteLeasePeriodRequestSettings -LeaseInterval 0 -LeaseDurationType $ApiDurationType -LeaseWarningInterval 0 -LeaseWarningDurationType $ApiDurationType
 
-$CreateSiteRequestMultiGeoLocation = New-CreateSiteRequestMultiGeoLocation -Name "MyName" -DisplayName "MyDisplayName"
+$GeoLocationBase = New-GeoLocationBase -Name "MyName" -DisplayName "MyDisplayName"
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateSiteRequest = New-CreateSiteRequest -SiteTitle "MySiteTitle" -SiteDescription "MySiteDescription" -SiteUrl $CreateSiteRequestSiteUrl -PolicyId "MyPolicyId" -TimeZone 0 -Language 0 -Template "MyTemplate" -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -PrimaryAdmin $CreateSiteRequestPrimaryAdmin -AdditionalAdmins $ApiUser -PrimaryContact $CreateSiteRequestPrimaryContact -SecondaryContact $CreateSiteRequestSecondaryContact -SiteDesign $CreateSiteRequestSiteDesign -TeamSiteDesign "MyTeamSiteDesign" -Classification "MyClassification" -Sensitivity "MySensitivity" -HubSiteSettings $CreateSiteRequestHubSiteSettings -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $CreateSiteRequestYammerGroupSettings -LeasePeriodSettings $CreateSiteRequestLeasePeriodSettings -MultiGeoLocation $CreateSiteRequestMultiGeoLocation -InputTitle "MyInputTitle" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateSiteRequest | 
+$CreateSiteRequest = New-CreateSiteRequest -SiteTitle "MySiteTitle" -SiteDescription "MySiteDescription" -SiteUrl $SiteUrl -PolicyId "MyPolicyId" -TimeZone 0 -Language 0 -Template "MyTemplate" -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -PrimaryAdmin $ApiUser -AdditionalAdmins $ApiUser -PrimaryContact $ApiUser -SecondaryContact $ApiUser -SiteDesign $StringModel -TeamSiteDesign "MyTeamSiteDesign" -Classification "MyClassification" -Sensitivity "MySensitivity" -HubSiteSettings $HubSiteSettings -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $YammerGroupRequestSettings -LeasePeriodSettings $SiteLeasePeriodRequestSettings -MultiGeoLocation $GeoLocationBase -InputTitle "MyInputTitle" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateSiteRequest | 
 
 # submit create site collection request, and return request info.
 try {
@@ -7514,57 +7261,46 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$CreateWebRequest = $CreateWebRequestWebLanguage = New-CreateWebRequestWebLanguage -Id 0 -Name "MyName" -Description "MyDescription"
+$CreateWebRequest = $IntModel = New-IntModel -Id 0 -Name "MyName" -Description "MyDescription"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestUserWithPermissionsUser = New-RequestUserWithPermissionsUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
-$RequestUserWithPermissions = New-RequestUserWithPermissions -User $RequestUserWithPermissionsUser -PermissionLevels $PermissionLevel
+$RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
 $GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestGroupWithPermissionsGroupOwner = New-RequestGroupWithPermissionsGroupOwner -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
 $SPGroupViewOptionType = New-SPGroupViewOptionType 
 $SPGroupEditOptionType = New-SPGroupEditOptionType 
 $AssignBy = New-AssignBy 
-$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $RequestGroupWithPermissionsGroupOwner -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
+$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $ApiUser -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
 
 $YammerGroupType = New-YammerGroupType 
 $YammerGroupJoinType = New-YammerGroupJoinType 
-$CreateWebRequestYammerGroupSettings = New-CreateWebRequestYammerGroupSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
+$YammerGroupRequestSettings = New-YammerGroupRequestSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateWebRequest = New-CreateWebRequest -WebName "MyWebName" -WebTitle "MyWebTitle" -WebDescription "MyWebDescription" -WebLanguage $CreateWebRequestWebLanguage -WebTemplate "MyWebTemplate" -ParentSiteUrl "MyParentSiteUrl" -ParentWebUrl "MyParentWebUrl" -PrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $CreateWebRequestYammerGroupSettings -IsOnQuickLaunch $false -IsOnTopLinkBar $false -IsInheritance $false -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateWebRequest |  (optional)
+$CreateWebRequest = New-CreateWebRequest -WebName "MyWebName" -WebTitle "MyWebTitle" -WebDescription "MyWebDescription" -WebLanguage $IntModel -WebTemplate "MyWebTemplate" -ParentSiteUrl "MyParentSiteUrl" -ParentWebUrl "MyParentWebUrl" -PrimaryContact $ApiUser -SecondaryContact $ApiUser -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $YammerGroupRequestSettings -IsOnQuickLaunch $false -IsOnTopLinkBar $false -IsInheritance $false -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateWebRequest |  (optional)
 
 # submit create web request
 try {
@@ -7622,57 +7358,46 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$CreateWebRequest = $CreateWebRequestWebLanguage = New-CreateWebRequestWebLanguage -Id 0 -Name "MyName" -Description "MyDescription"
+$CreateWebRequest = $IntModel = New-IntModel -Id 0 -Name "MyName" -Description "MyDescription"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestUserWithPermissionsUser = New-RequestUserWithPermissionsUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $PermissionLevel = New-PermissionLevel -Id "MyId" -IdInSharePoint 0 -Name "MyName" -Description "MyDescription" -IsExcluded $false -Type 0 -IsCloudGovernanceCustomized $false
-$RequestUserWithPermissions = New-RequestUserWithPermissions -User $RequestUserWithPermissionsUser -PermissionLevels $PermissionLevel
+$RequestUserWithPermissions = New-RequestUserWithPermissions -User $ApiUser -PermissionLevels $PermissionLevel
 
 $GroupUser = New-GroupUser -IsEnforce $false -IsHide $false -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestGroupWithPermissionsGroupOwner = New-RequestGroupWithPermissionsGroupOwner -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $GroupOwnerType = New-GroupOwnerType 
 $SharePointBuildInGroupType = New-SharePointBuildInGroupType 
 $SPGroupViewOptionType = New-SPGroupViewOptionType 
 $SPGroupEditOptionType = New-SPGroupEditOptionType 
 $AssignBy = New-AssignBy 
-$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $RequestGroupWithPermissionsGroupOwner -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
+$RequestGroupWithPermissions = New-RequestGroupWithPermissions -Name "MyName" -Description "MyDescription" -Users $GroupUser -PermissionLevels $PermissionLevel -GroupOwner $ApiUser -GroupOwnerType $GroupOwnerType -BuildInGroupType $SharePointBuildInGroupType -SpGroupViewType $SPGroupViewOptionType -SpGroupEditType $SPGroupEditOptionType -SpGroupEditOptionAssignBy $AssignBy -SpGroupViewOptionAssignBy $AssignBy
 
 $YammerGroupType = New-YammerGroupType 
 $YammerGroupJoinType = New-YammerGroupJoinType 
-$CreateWebRequestYammerGroupSettings = New-CreateWebRequestYammerGroupSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
+$YammerGroupRequestSettings = New-YammerGroupRequestSettings -NameOrId "MyNameOrId" -Description "MyDescription" -Type $YammerGroupType -JoinType $YammerGroupJoinType -IsListInDirectory $false -IsGroupAlreadyExisted $false
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$CreateWebRequest = New-CreateWebRequest -WebName "MyWebName" -WebTitle "MyWebTitle" -WebDescription "MyWebDescription" -WebLanguage $CreateWebRequestWebLanguage -WebTemplate "MyWebTemplate" -ParentSiteUrl "MyParentSiteUrl" -ParentWebUrl "MyParentWebUrl" -PrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $CreateWebRequestYammerGroupSettings -IsOnQuickLaunch $false -IsOnTopLinkBar $false -IsInheritance $false -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateWebRequest |  (optional)
+$CreateWebRequest = New-CreateWebRequest -WebName "MyWebName" -WebTitle "MyWebTitle" -WebDescription "MyWebDescription" -WebLanguage $IntModel -WebTemplate "MyWebTemplate" -ParentSiteUrl "MyParentSiteUrl" -ParentWebUrl "MyParentWebUrl" -PrimaryContact $ApiUser -SecondaryContact $ApiUser -UserPermissions $RequestUserWithPermissions -GroupPermissions $RequestGroupWithPermissions -YammerGroupSettings $YammerGroupRequestSettings -IsOnQuickLaunch $false -IsOnTopLinkBar $false -IsInheritance $false -DeploymentManagerPlanName "MyDeploymentManagerPlanName" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # CreateWebRequest |  (optional)
 
 # submit create web request, and return request info.
 try {
@@ -7734,23 +7459,18 @@ $ApiRequest = $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "My
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -7818,23 +7538,18 @@ $ApiRequest = $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "My
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -7904,23 +7619,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -7989,23 +7699,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -8073,23 +7778,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -8158,23 +7858,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -8243,23 +7938,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -8325,34 +8015,30 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $DynamicRequest = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
-$ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel = New-ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel -Id "MyId" -Name "MyName" -AllowGuestSharing $false -SiteSharing 0 -Privacy $false
-$Gallerybase = New-Gallerybase -GalleryType "MyGalleryType" -GalleryInternalName "MyGalleryInternalName" -GalleryMetadata $RequestMetadata -IsTenantAllowGuest $false -RequestSensitivityLabel $ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel
+$RequestSensitivityLabel = New-RequestSensitivityLabel -Id "MyId" -Name "MyName" -AllowGuestSharing $false -SiteSharing 0 -Privacy $false
+$Gallerybase = New-Gallerybase -GalleryType "MyGalleryType" -GalleryInternalName "MyGalleryInternalName" -GalleryMetadata $RequestMetadata -IsTenantAllowGuest $false -RequestSensitivityLabel $RequestSensitivityLabel -Requester "MyRequester"
 
-$DynamicRequestApproveProcess = New-DynamicRequestApproveProcess -ApproveProcessId "MyApproveProcessId" -ActivityId "MyActivityId"
+$ApproveProcessModel = New-ApproveProcessModel -ApproveProcessId "MyApproveProcessId" -ActivityId "MyActivityId"
+$CommentsParam = New-CommentsParam -Comments "MyComments"
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$DynamicRequest = New-DynamicRequest -ActivityGalleries $Gallerybase -ApproveProcess $DynamicRequestApproveProcess -OrderInfo "MyOrderInfo" -ParentId "MyParentId" -ParentTicketNumber 0 -StartRequestTime (Get-Date) -WarningMessage "MyWarningMessage" -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # DynamicRequest |  (optional)
+$DynamicRequest = New-DynamicRequest -ActivityGalleries $Gallerybase -ApproveProcess $ApproveProcessModel -OrderInfo "MyOrderInfo" -ParentId "MyParentId" -ParentTicketNumber 0 -StartRequestTime (Get-Date) -WarningMessage "MyWarningMessage" -ApproveComments $CommentsParam -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # DynamicRequest |  (optional)
 
 # submit dynamic request
 try {
@@ -8412,26 +8098,21 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $DynamicRequestTemplateModel = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
-$ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel = New-ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel -Id "MyId" -Name "MyName" -AllowGuestSharing $false -SiteSharing 0 -Privacy $false
-$Gallerybase = New-Gallerybase -GalleryType "MyGalleryType" -GalleryInternalName "MyGalleryInternalName" -GalleryMetadata $RequestMetadata -IsTenantAllowGuest $false -RequestSensitivityLabel $ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel
+$RequestSensitivityLabel = New-RequestSensitivityLabel -Id "MyId" -Name "MyName" -AllowGuestSharing $false -SiteSharing 0 -Privacy $false
+$Gallerybase = New-Gallerybase -GalleryType "MyGalleryType" -GalleryInternalName "MyGalleryInternalName" -GalleryMetadata $RequestMetadata -IsTenantAllowGuest $false -RequestSensitivityLabel $RequestSensitivityLabel -Requester "MyRequester"
 
 $DynamicRequestTemplateModel = New-DynamicRequestTemplateModel -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -ActivityGalleries $Gallerybase # DynamicRequestTemplateModel |  (optional)
 
@@ -8497,23 +8178,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -8583,23 +8259,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -8668,23 +8339,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -8754,23 +8420,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -8835,15 +8496,15 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $GrantPermissionRequest = $NodeType = New-NodeType 
-$GrantPermissionRequestUrl = New-GrantPermissionRequestUrl -WebId "MyWebId" -SiteId "MySiteId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -TopInheritUrl "MyTopInheritUrl" -InheritNodeType $NodeType -IsInheritedPermission $false -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
+$GrantPermissionSPObject = New-GrantPermissionSPObject -WebId "MyWebId" -SiteId "MySiteId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -TopInheritUrl "MyTopInheritUrl" -InheritNodeType $NodeType -IsInheritedPermission $false -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
 
-$GrantPermissionRequestPermissionSettingsSelectedSPGroup = New-GrantPermissionRequestPermissionSettingsSelectedSPGroup -Id 0 -Name "MyName" -DisplayName "MyDisplayName" -PermissionIds "MyPermissionIds" -Description "MyDescription"
+$GrantPermissionGroup = New-GrantPermissionGroup -Id 0 -Name "MyName" -DisplayName "MyDisplayName" -PermissionIds "MyPermissionIds" -Description "MyDescription"
 $IntModel = New-IntModel -Id 0 -Name "MyName" -Description "MyDescription"
-$GrantPermissionRequestPermissionSettings = New-GrantPermissionRequestPermissionSettings -IsBreakInheritance $false -IsGrantPermissionDirectly $false -SelectedSPGroup $GrantPermissionRequestPermissionSettingsSelectedSPGroup -SelectedPermissionLevels $IntModel
+$GrantPermissionRequestPermissionSettings = New-GrantPermissionRequestPermissionSettings -IsBreakInheritance $false -IsGrantPermissionDirectly $false -SelectedSPGroup $GrantPermissionGroup -SelectedPermissionLevels $IntModel
 
 $ExpirationType = New-ExpirationType 
 $DurationDateType = New-DurationDateType 
-$GrantPermissionRequestPermissionDurationSettings = New-GrantPermissionRequestPermissionDurationSettings -IsGrantTemporaryPermission $false -IsGrantPermissionLevel $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $DurationDateType -StartTime (Get-Date) -EndTime (Get-Date)
+$GrantPermissionRequestDurationSettings = New-GrantPermissionRequestDurationSettings -IsGrantTemporaryPermission $false -IsGrantPermissionLevel $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $DurationDateType -StartTime (Get-Date) -EndTime (Get-Date)
 
 $ApiUserType = New-ApiUserType 
 $ExternalUserType = New-ExternalUserType 
@@ -8852,36 +8513,31 @@ $SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestU
 $ExternalUserSharingType = New-ExternalUserSharingType 
 
 $AnnoymouslinkPermissions = New-AnnoymouslinkPermissions 
-$ExternalUserSharingSettingsAnonymousLinkSettings = New-ExternalUserSharingSettingsAnonymousLinkSettings -Permisssion $AnnoymouslinkPermissions -ExpirationDate (Get-Date)
+$AnonymousLinkSettings = New-AnonymousLinkSettings -Permisssion $AnnoymouslinkPermissions -ExpirationDate (Get-Date)
 
-$GrantPermissionRequestExternalUserSharingSettings = New-GrantPermissionRequestExternalUserSharingSettings -Enabled $false -SharingType $ExternalUserSharingType -AnonymousLinkSettings $ExternalUserSharingSettingsAnonymousLinkSettings
+$ExternalUserSharingSettings = New-ExternalUserSharingSettings -Enabled $false -SharingType $ExternalUserSharingType -AnonymousLinkSettings $AnonymousLinkSettings
 
-$GrantPermissionModelWelcomeEmailSettings = New-GrantPermissionModelWelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
+$WelcomeEmailSettings = New-WelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
-
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
 
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$GrantPermissionRequest = New-GrantPermissionRequest -Url $GrantPermissionRequestUrl -PermissionSettings $GrantPermissionRequestPermissionSettings -PermissionDurationSettings $GrantPermissionRequestPermissionDurationSettings -SelectedUsers $SharingEnabledUser -ExternalUserSharingSettings $GrantPermissionRequestExternalUserSharingSettings -WelcomeEmailSettings $GrantPermissionModelWelcomeEmailSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # GrantPermissionRequest |  (optional)
+$GrantPermissionRequest = New-GrantPermissionRequest -Url $GrantPermissionSPObject -PermissionSettings $GrantPermissionRequestPermissionSettings -PermissionDurationSettings $GrantPermissionRequestDurationSettings -SelectedUsers $SharingEnabledUser -ExternalUserSharingSettings $ExternalUserSharingSettings -WelcomeEmailSettings $WelcomeEmailSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # GrantPermissionRequest |  (optional)
 
 # get submit grant permission request
 try {
@@ -8940,15 +8596,15 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 $GrantPermissionRequest = $NodeType = New-NodeType 
-$GrantPermissionRequestUrl = New-GrantPermissionRequestUrl -WebId "MyWebId" -SiteId "MySiteId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -TopInheritUrl "MyTopInheritUrl" -InheritNodeType $NodeType -IsInheritedPermission $false -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
+$GrantPermissionSPObject = New-GrantPermissionSPObject -WebId "MyWebId" -SiteId "MySiteId" -WebServerRelativeUrl "MyWebServerRelativeUrl" -ListTitle "MyListTitle" -TopInheritUrl "MyTopInheritUrl" -InheritNodeType $NodeType -IsInheritedPermission $false -Id "MyId" -Title "MyTitle" -FullUrl "MyFullUrl" -Type $NodeType
 
-$GrantPermissionRequestPermissionSettingsSelectedSPGroup = New-GrantPermissionRequestPermissionSettingsSelectedSPGroup -Id 0 -Name "MyName" -DisplayName "MyDisplayName" -PermissionIds "MyPermissionIds" -Description "MyDescription"
+$GrantPermissionGroup = New-GrantPermissionGroup -Id 0 -Name "MyName" -DisplayName "MyDisplayName" -PermissionIds "MyPermissionIds" -Description "MyDescription"
 $IntModel = New-IntModel -Id 0 -Name "MyName" -Description "MyDescription"
-$GrantPermissionRequestPermissionSettings = New-GrantPermissionRequestPermissionSettings -IsBreakInheritance $false -IsGrantPermissionDirectly $false -SelectedSPGroup $GrantPermissionRequestPermissionSettingsSelectedSPGroup -SelectedPermissionLevels $IntModel
+$GrantPermissionRequestPermissionSettings = New-GrantPermissionRequestPermissionSettings -IsBreakInheritance $false -IsGrantPermissionDirectly $false -SelectedSPGroup $GrantPermissionGroup -SelectedPermissionLevels $IntModel
 
 $ExpirationType = New-ExpirationType 
 $DurationDateType = New-DurationDateType 
-$GrantPermissionRequestPermissionDurationSettings = New-GrantPermissionRequestPermissionDurationSettings -IsGrantTemporaryPermission $false -IsGrantPermissionLevel $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $DurationDateType -StartTime (Get-Date) -EndTime (Get-Date)
+$GrantPermissionRequestDurationSettings = New-GrantPermissionRequestDurationSettings -IsGrantTemporaryPermission $false -IsGrantPermissionLevel $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $DurationDateType -StartTime (Get-Date) -EndTime (Get-Date)
 
 $ApiUserType = New-ApiUserType 
 $ExternalUserType = New-ExternalUserType 
@@ -8957,36 +8613,31 @@ $SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestU
 $ExternalUserSharingType = New-ExternalUserSharingType 
 
 $AnnoymouslinkPermissions = New-AnnoymouslinkPermissions 
-$ExternalUserSharingSettingsAnonymousLinkSettings = New-ExternalUserSharingSettingsAnonymousLinkSettings -Permisssion $AnnoymouslinkPermissions -ExpirationDate (Get-Date)
+$AnonymousLinkSettings = New-AnonymousLinkSettings -Permisssion $AnnoymouslinkPermissions -ExpirationDate (Get-Date)
 
-$GrantPermissionRequestExternalUserSharingSettings = New-GrantPermissionRequestExternalUserSharingSettings -Enabled $false -SharingType $ExternalUserSharingType -AnonymousLinkSettings $ExternalUserSharingSettingsAnonymousLinkSettings
+$ExternalUserSharingSettings = New-ExternalUserSharingSettings -Enabled $false -SharingType $ExternalUserSharingType -AnonymousLinkSettings $AnonymousLinkSettings
 
-$GrantPermissionModelWelcomeEmailSettings = New-GrantPermissionModelWelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
+$WelcomeEmailSettings = New-WelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
-
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
 
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$GrantPermissionRequest = New-GrantPermissionRequest -Url $GrantPermissionRequestUrl -PermissionSettings $GrantPermissionRequestPermissionSettings -PermissionDurationSettings $GrantPermissionRequestPermissionDurationSettings -SelectedUsers $SharingEnabledUser -ExternalUserSharingSettings $GrantPermissionRequestExternalUserSharingSettings -WelcomeEmailSettings $GrantPermissionModelWelcomeEmailSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # GrantPermissionRequest |  (optional)
+$GrantPermissionRequest = New-GrantPermissionRequest -Url $GrantPermissionSPObject -PermissionSettings $GrantPermissionRequestPermissionSettings -PermissionDurationSettings $GrantPermissionRequestDurationSettings -SelectedUsers $SharingEnabledUser -ExternalUserSharingSettings $ExternalUserSharingSettings -WelcomeEmailSettings $WelcomeEmailSettings -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # GrantPermissionRequest |  (optional)
 
 # submit grant permission request, and return request info.
 try {
@@ -9050,23 +8701,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -9136,23 +8782,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -9218,18 +8859,18 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ManagePermissionRequest = $NodeType = New-NodeType 
 
-$ChangeListSettingRequestListTitle = New-ChangeListSettingRequestListTitle -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
+$StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $ManagePermissionAction = New-ManagePermissionAction 
 $SPUserManagementModel = New-SPUserManagementModel -IdentityName "MyIdentityName" -DisplayName "MyDisplayName" -IsGroup $false -AzureUserType "MyAzureUserType" -Action $ManagePermissionAction -ExternalUserType $ExternalUserType -Email "MyEmail"
 
 $SPGroupViewOption = New-SPGroupViewOption 
 $SPGroupEditOption = New-SPGroupEditOption 
-$SPGroupManagementModel = New-SPGroupManagementModel -Id 0 -Name $ChangeListSettingRequestListTitle -Description "MyDescription" -Owner $ApiMyGroupPrimaryContact -Members $SPUserManagementModel -SpGroupViewType $SPGroupViewOption -SpGroupEditType $SPGroupEditOption -Permissions "MyPermissions" -Action $ManagePermissionAction -IsAllowJoinOrLeaveRequest $false -IsAutoAcceptRequest $false -SendMembershipRequestEmailAddress "MySendMembershipRequestEmailAddress" -IsTemporaryGroup $false -RoleID "MyRoleID" -IsEnabelSPMemberWelcomeEmail $false -SpMemberWelcomeEmailTemplateId "MySpMemberWelcomeEmailTemplateId"
+$SPGroupManagementModel = New-SPGroupManagementModel -Id 0 -Name $StringChangedProperty -Description "MyDescription" -Owner $ApiUser -Members $SPUserManagementModel -SpGroupViewType $SPGroupViewOption -SpGroupEditType $SPGroupEditOption -Permissions "MyPermissions" -Action $ManagePermissionAction -IsAllowJoinOrLeaveRequest $false -IsAutoAcceptRequest $false -SendMembershipRequestEmailAddress "MySendMembershipRequestEmailAddress" -IsTemporaryGroup $false -RoleID "MyRoleID" -IsEnabelSPMemberWelcomeEmail $false -SpMemberWelcomeEmailTemplateId "MySpMemberWelcomeEmailTemplateId"
 
 $SPPrincipalType = New-SPPrincipalType 
 
@@ -9237,40 +8878,33 @@ $SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestU
 
 $ExpirationType = New-ExpirationType 
 $ApiDurationType = New-ApiDurationType 
-$GrantPermissionModelPermissionDurationSettings = New-GrantPermissionModelPermissionDurationSettings -IsGrantTemporaryPermission $false -IsGrantAdminGroup $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $ApiDurationType -StartTime (Get-Date) -EndTime (Get-Date) -TempPermissionGroupIdentity "MyTempPermissionGroupIdentity"
+$TemporaryPermissionRequestSetting = New-TemporaryPermissionRequestSetting -IsGrantTemporaryPermission $false -IsGrantAdminGroup $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $ApiDurationType -StartTime (Get-Date) -EndTime (Get-Date) -TempPermissionGroupIdentity "MyTempPermissionGroupIdentity"
 
-$GrantPermissionModelWelcomeEmailSettings = New-GrantPermissionModelWelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
-$ObjectPermissionManagementModelGrantPermissionSetting = New-ObjectPermissionManagementModelGrantPermissionSetting -PermissionDurationSettings $GrantPermissionModelPermissionDurationSettings -WelcomeEmailSettings $GrantPermissionModelWelcomeEmailSettings
+$WelcomeEmailSettings = New-WelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
+$GrantPermissionModel = New-GrantPermissionModel -PermissionDurationSettings $TemporaryPermissionRequestSetting -WelcomeEmailSettings $WelcomeEmailSettings
 
-$ObjectPermissionManagementModel = New-ObjectPermissionManagementModel -ObjectType $SPPrincipalType -ObjectInfo $ApiMyGroupPrimaryContact -Action $ManagePermissionAction -Permissions "MyPermissions" -OriginalPermissions "MyOriginalPermissions" -ExternalUserType $ExternalUserType -Members $SharingEnabledUser -GrantPermissionSetting $ObjectPermissionManagementModelGrantPermissionSetting -OriginalName "MyOriginalName"
+$ObjectPermissionManagementModel = New-ObjectPermissionManagementModel -ObjectType $SPPrincipalType -ObjectInfo $ApiUser -Action $ManagePermissionAction -Permissions "MyPermissions" -OriginalPermissions "MyOriginalPermissions" -ExternalUserType $ExternalUserType -Members $SharingEnabledUser -GrantPermissionSetting $GrantPermissionModel -OriginalName "MyOriginalName"
 
-$ManagePermissionRequestPermissionManagement = New-ManagePermissionRequestPermissionManagement -IsUniquePermission $false -IsPermissionInheritanceChanged $false -IsCopyPermissionsFromParent $false -InheritedSiteUrl "MyInheritedSiteUrl" -PermissionItems $ObjectPermissionManagementModel
+$PermissionManagementModel = New-PermissionManagementModel -IsUniquePermission $false -IsPermissionInheritanceChanged $false -IsCopyPermissionsFromParent $false -InheritedSiteUrl "MyInheritedSiteUrl" -PermissionItems $ObjectPermissionManagementModel
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ManagePermissionRequest = New-ManagePermissionRequest -ObjectUrl "MyObjectUrl" -ObjectType $NodeType -ObjectTitle "MyObjectTitle" -SiteUrl "MySiteUrl" -WebUrl "MyWebUrl" -SpGroupManagement $SPGroupManagementModel -PermissionManagement $ManagePermissionRequestPermissionManagement -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ManagePermissionRequest |  (optional)
+$ManagePermissionRequest = New-ManagePermissionRequest -ObjectUrl "MyObjectUrl" -ObjectType $NodeType -ObjectTitle "MyObjectTitle" -SiteUrl "MySiteUrl" -WebUrl "MyWebUrl" -SpGroupManagement $SPGroupManagementModel -PermissionManagement $PermissionManagementModel -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ManagePermissionRequest |  (optional)
 
 # submit manage permission request
 try {
@@ -9330,18 +8964,18 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 $ManagePermissionRequest = $NodeType = New-NodeType 
 
-$ChangeListSettingRequestListTitle = New-ChangeListSettingRequestListTitle -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
+$StringChangedProperty = New-StringChangedProperty -ChangeValue "MyChangeValue" -OriginalValue "MyOriginalValue"
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $ManagePermissionAction = New-ManagePermissionAction 
 $SPUserManagementModel = New-SPUserManagementModel -IdentityName "MyIdentityName" -DisplayName "MyDisplayName" -IsGroup $false -AzureUserType "MyAzureUserType" -Action $ManagePermissionAction -ExternalUserType $ExternalUserType -Email "MyEmail"
 
 $SPGroupViewOption = New-SPGroupViewOption 
 $SPGroupEditOption = New-SPGroupEditOption 
-$SPGroupManagementModel = New-SPGroupManagementModel -Id 0 -Name $ChangeListSettingRequestListTitle -Description "MyDescription" -Owner $ApiMyGroupPrimaryContact -Members $SPUserManagementModel -SpGroupViewType $SPGroupViewOption -SpGroupEditType $SPGroupEditOption -Permissions "MyPermissions" -Action $ManagePermissionAction -IsAllowJoinOrLeaveRequest $false -IsAutoAcceptRequest $false -SendMembershipRequestEmailAddress "MySendMembershipRequestEmailAddress" -IsTemporaryGroup $false -RoleID "MyRoleID" -IsEnabelSPMemberWelcomeEmail $false -SpMemberWelcomeEmailTemplateId "MySpMemberWelcomeEmailTemplateId"
+$SPGroupManagementModel = New-SPGroupManagementModel -Id 0 -Name $StringChangedProperty -Description "MyDescription" -Owner $ApiUser -Members $SPUserManagementModel -SpGroupViewType $SPGroupViewOption -SpGroupEditType $SPGroupEditOption -Permissions "MyPermissions" -Action $ManagePermissionAction -IsAllowJoinOrLeaveRequest $false -IsAutoAcceptRequest $false -SendMembershipRequestEmailAddress "MySendMembershipRequestEmailAddress" -IsTemporaryGroup $false -RoleID "MyRoleID" -IsEnabelSPMemberWelcomeEmail $false -SpMemberWelcomeEmailTemplateId "MySpMemberWelcomeEmailTemplateId"
 
 $SPPrincipalType = New-SPPrincipalType 
 
@@ -9349,40 +8983,33 @@ $SharingEnabledUser = New-SharingEnabledUser -IsSharePointGroup $false -IsGuestU
 
 $ExpirationType = New-ExpirationType 
 $ApiDurationType = New-ApiDurationType 
-$GrantPermissionModelPermissionDurationSettings = New-GrantPermissionModelPermissionDurationSettings -IsGrantTemporaryPermission $false -IsGrantAdminGroup $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $ApiDurationType -StartTime (Get-Date) -EndTime (Get-Date) -TempPermissionGroupIdentity "MyTempPermissionGroupIdentity"
+$TemporaryPermissionRequestSetting = New-TemporaryPermissionRequestSetting -IsGrantTemporaryPermission $false -IsGrantAdminGroup $false -ExpirationType $ExpirationType -DurationInterval 0 -DurationDateType $ApiDurationType -StartTime (Get-Date) -EndTime (Get-Date) -TempPermissionGroupIdentity "MyTempPermissionGroupIdentity"
 
-$GrantPermissionModelWelcomeEmailSettings = New-GrantPermissionModelWelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
-$ObjectPermissionManagementModelGrantPermissionSetting = New-ObjectPermissionManagementModelGrantPermissionSetting -PermissionDurationSettings $GrantPermissionModelPermissionDurationSettings -WelcomeEmailSettings $GrantPermissionModelWelcomeEmailSettings
+$WelcomeEmailSettings = New-WelcomeEmailSettings -Enabled $false -Subject "MySubject" -PersonalMessage "MyPersonalMessage" -EnabledSendEmailInService $false -WelcomeEmailTemplateId "MyWelcomeEmailTemplateId" -IsWelcomeEmailTemplate $false
+$GrantPermissionModel = New-GrantPermissionModel -PermissionDurationSettings $TemporaryPermissionRequestSetting -WelcomeEmailSettings $WelcomeEmailSettings
 
-$ObjectPermissionManagementModel = New-ObjectPermissionManagementModel -ObjectType $SPPrincipalType -ObjectInfo $ApiMyGroupPrimaryContact -Action $ManagePermissionAction -Permissions "MyPermissions" -OriginalPermissions "MyOriginalPermissions" -ExternalUserType $ExternalUserType -Members $SharingEnabledUser -GrantPermissionSetting $ObjectPermissionManagementModelGrantPermissionSetting -OriginalName "MyOriginalName"
+$ObjectPermissionManagementModel = New-ObjectPermissionManagementModel -ObjectType $SPPrincipalType -ObjectInfo $ApiUser -Action $ManagePermissionAction -Permissions "MyPermissions" -OriginalPermissions "MyOriginalPermissions" -ExternalUserType $ExternalUserType -Members $SharingEnabledUser -GrantPermissionSetting $GrantPermissionModel -OriginalName "MyOriginalName"
 
-$ManagePermissionRequestPermissionManagement = New-ManagePermissionRequestPermissionManagement -IsUniquePermission $false -IsPermissionInheritanceChanged $false -IsCopyPermissionsFromParent $false -InheritedSiteUrl "MyInheritedSiteUrl" -PermissionItems $ObjectPermissionManagementModel
+$PermissionManagementModel = New-PermissionManagementModel -IsUniquePermission $false -IsPermissionInheritanceChanged $false -IsCopyPermissionsFromParent $false -InheritedSiteUrl "MyInheritedSiteUrl" -PermissionItems $ObjectPermissionManagementModel
 
 $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Value "MyValue"
 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
 
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
 $GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
 
-$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
 $SubRequestType = New-SubRequestType 
-$ManagePermissionRequest = New-ManagePermissionRequest -ObjectUrl "MyObjectUrl" -ObjectType $NodeType -ObjectTitle "MyObjectTitle" -SiteUrl "MySiteUrl" -WebUrl "MyWebUrl" -SpGroupManagement $SPGroupManagementModel -PermissionManagement $ManagePermissionRequestPermissionManagement -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ManagePermissionRequest |  (optional)
+$ManagePermissionRequest = New-ManagePermissionRequest -ObjectUrl "MyObjectUrl" -ObjectType $NodeType -ObjectTitle "MyObjectTitle" -SiteUrl "MySiteUrl" -WebUrl "MyWebUrl" -SpGroupManagement $SPGroupManagementModel -PermissionManagement $PermissionManagementModel -Id "MyId" -ServiceId "MyServiceId" -Summary "MySummary" -NotesToApprovers "MyNotesToApprovers" -QuestionnaireId "MyQuestionnaireId" -QuestionnaireResponse $QuestionAnswerResponse -Metadatas $RequestMetadata -TicketNumber 0 -Type $ServiceType -TypeDescription "MyTypeDescription" -Requester "MyRequester" -RequesterLoginName "MyRequesterLoginName" -Status $RequestStatus -ProgressStatus 0 -ProgressStatusDescription "MyProgressStatusDescription" -SubmittedTime (Get-Date) -LastUpdated (Get-Date) -CreatedTime (Get-Date) -HasSubRequest $false -IsEnabledPassback $false -RequestResourceType $RequestResourceType -ModifiedBy "MyModifiedBy" -ModifiedByDisplayName "MyModifiedByDisplayName" -ModifiedDate (Get-Date) -AssignTo "MyAssignTo" -FullPath "MyFullPath" -ApprovalStageName "MyApprovalStageName" -Participants "MyParticipants" -ObjectID "MyObjectID" -CreatedSource 0 -SubRequestType $SubRequestType # ManagePermissionRequest |  (optional)
 
 # submit manage permission request, and return request info.
 try {
@@ -9446,23 +9073,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -9531,23 +9153,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $RequestStatus = New-RequestStatus 
 $RequestResourceType = New-RequestResourceType 
@@ -9616,23 +9233,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 
@@ -9702,23 +9314,18 @@ $QuestionAnswerResponse = New-QuestionAnswerResponse -Question "MyQuestion" -Val
 
 $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$LookupValueTargetUser = New-LookupValueTargetUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
-
-$RequestMetadataUpsOrAzureAdValue = New-RequestMetadataUpsOrAzureAdValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $LookupValueTargetUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
-
-$TermsValueTermStore = New-TermsValueTermStore -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermGroup = New-TermsValueTermGroup -Id "MyId" -Name "MyName" -Description "MyDescription"
-$TermsValueTermSet = New-TermsValueTermSet -Id "MyId" -Name "MyName" -Description "MyDescription"
-$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
-$RequestMetadataTermsValue = New-RequestMetadataTermsValue -TermStore $TermsValueTermStore -TermGroup $TermsValueTermGroup -TermSet $TermsValueTermSet -Value $GuidModel
-
 $ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
-$RequestMetadataLinkValue = New-RequestMetadataLinkValue -Title "MyTitle" -Address "MyAddress"
-$RequestMetadataLookupListValue = New-RequestMetadataLookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
+$LookupValue = New-LookupValue -Tenant "MyTenant" -Property "MyProperty" -ExtensionAttribute "MyExtensionAttribute" -TargetUser $ApiUser -UserPropertyValue "MyUserPropertyValue" -UserPropertyDisplayValue "MyUserPropertyDisplayValue" -RoleValue "MyRoleValue"
+
+$GuidModel = New-GuidModel -Id "MyId" -Name "MyName" -Description "MyDescription"
+$TermsValue = New-TermsValue -TermStore $GuidModel -TermGroup $GuidModel -TermSet $GuidModel -Value $GuidModel
+
+$LinkValue = New-LinkValue -Title "MyTitle" -Address "MyAddress"
+$LookupListValue = New-LookupListValue -ColumnType "MyColumnType" -ColumnName "MyColumnName" -Value "MyValue" -DisplayValue "MyDisplayValue"
 $MetadataFieldType = New-MetadataFieldType 
 $MetadataActionType = New-MetadataActionType 
-$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $RequestMetadataUpsOrAzureAdValue -TermsValue $RequestMetadataTermsValue -UserValue $ApiUser -LinkValue $RequestMetadataLinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $RequestMetadataLookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -ActivityId "MyActivityId"
+$RequestMetadata = New-RequestMetadata -Id "MyId" -Name "MyName" -AssignBy 0 -DisplayName "MyDisplayName" -BooleanValue $false -SingleLineOrMultipleLineValue "MySingleLineOrMultipleLineValue" -UpsOrAzureAdValue $LookupValue -TermsValue $TermsValue -UserValue $ApiUser -LinkValue $LinkValue -ChoiceValue "MyChoiceValue" -LookupListValue $LookupListValue -Type $MetadataFieldType -ValueString "MyValueString" -ValueDisplayString "MyValueDisplayString" -Value "MyValue" -Action $MetadataActionType -AllowReferenceAsRoleInApprovalProcess $false -AllowBusinessUserToInputSingleValue $false -IsNotApplyToObjects $false -ActivityId "MyActivityId"
 
 $ServiceType = New-ServiceType 
 $RequestStatus = New-RequestStatus 

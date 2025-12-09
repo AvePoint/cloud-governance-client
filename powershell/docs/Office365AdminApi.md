@@ -136,7 +136,7 @@ void (empty response body)
 <a name="Get-AzureADExtensionPropertyNamesWithDataType"></a>
 # **Get-AzureADExtensionPropertyNamesWithDataType**
 > CustomExtensionPropertyModel[] Get-AzureADExtensionPropertyNamesWithDataType<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <PSCustomObject><br>
 
 get azure ad custom property with data type
 
@@ -159,7 +159,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$TenantId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$TenantId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get azure ad custom property with data type
 try {
@@ -174,7 +174,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **TenantId** | **String**|  | 
+ **TenantId** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 <a name="Get-AzureAdCustomPropertyNames"></a>
 # **Get-AzureAdCustomPropertyNames**
 > String[] Get-AzureAdCustomPropertyNames<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-IsSearchUserProperty] <System.Nullable[Boolean]><br>
 
 get azure ad custom property names
@@ -218,7 +218,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$TenantId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$TenantId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 $IsSearchUserProperty = $true # Boolean |  (optional) (default to $false)
 
 # get azure ad custom property names
@@ -234,7 +234,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **TenantId** | **String**|  | 
+ **TenantId** | [**String**](String.md)|  | 
  **IsSearchUserProperty** | **Boolean**|  | [optional] [default to $false]
 
 ### Return type
@@ -374,7 +374,7 @@ void (empty response body)
 <a name="Get-TenantIds"></a>
 # **Get-TenantIds**
 > void Get-TenantIds<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ViewId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-ViewId] <PSCustomObject><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Filter] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Orderby] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
@@ -403,7 +403,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$ViewId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$ViewId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
 $Filter = "MyFilter" # String | Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq 'value1' and field2 ne 'value2'), supported fields :<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
 $Orderby = "MyOrderby" # String | Order by one field, supported fields:<br/> id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase (optional)
 $Search = "MySearch" # String | Search for name (optional)
@@ -424,7 +424,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ViewId** | **String**|  | [optional] 
+ **ViewId** | [**String**](String.md)|  | [optional] 
  **Filter** | **String**| Use **eq**(equal) or **ne**(not equal) to filter the results (e.g. field1 eq &#39;value1&#39; and field2 ne &#39;value2&#39;), supported fields :&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
  **Orderby** | **String**| Order by one field, supported fields:&lt;br/&gt; id, name, description, status, type, url, email, privacy, policyName, policyId, enableDynamicMembership, primaryAdministrators, additionalAdministrators, primaryContact, primaryContactStatusOfEnpower, secondaryContact, secondaryContactStatusOfEnpower, hubType, associateHubTitle, geoLocation, storageLimit, storageUsed, siteSharing, groupSharing, classification, claimStatus, createdTime, leaseExpirationTime, inactivityThresholdTime, lastRenewalTime, lastAccessedTime, applyPolicyStatus, hasOngoingTasks, lastRenewalBy, sensitivity, insightsStatus, siteStatus, legalHold, lockedBy, lastSyncTime, createdSource, siteTemplate, siteTemplateTitle, tenantId, quotaProfileName, quotaProfileId, externalSharingProfileName, externalSharingProfileId, electionProfileName, electionProfileId, phaseAssignees, phaseProfileName, phaseProfileId, phaseStartTime, renewalDueDate, nextRenewalDate, phase | [optional] 
  **Search** | **String**| Search for name | [optional] 

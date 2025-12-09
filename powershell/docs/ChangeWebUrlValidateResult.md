@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | [**ChangeWebSettingRequestUrl**](ChangeWebSettingRequestUrl.md) |  | [optional] 
+**Url** | [**ChangeWebSPObject**](ChangeWebSPObject.md) |  | [optional] 
 **WebTitle** | **String** |  | [optional] 
 **WebDescription** | **String** |  | [optional] 
 **Metadatas** | [**CustomMetadata[]**](CustomMetadata.md) |  | [optional] 

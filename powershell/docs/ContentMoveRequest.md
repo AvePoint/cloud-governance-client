@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Method** | [**ContentMoveMethod**](ContentMoveMethod.md) |  | [optional] 
-**CopySettings** | [**ContentMoveRequestCopySettings**](ContentMoveRequestCopySettings.md) |  | [optional] 
-**MoveSettings** | [**ContentMoveRequestCopySettings**](ContentMoveRequestCopySettings.md) |  | [optional] 
-**CommonSettings** | [**ContentMoveRequestCommonSettings**](ContentMoveRequestCommonSettings.md) |  | [optional] 
+**CopySettings** | [**CopyMoveSetting**](CopyMoveSetting.md) |  | [optional] 
+**MoveSettings** | [**CopyMoveSetting**](CopyMoveSetting.md) |  | [optional] 
+**CommonSettings** | [**ContentMoveCommonSetting**](ContentMoveCommonSetting.md) |  | [optional] 
 **ObjectMappings** | [**ContentMoveSPObjectMapping[]**](ContentMoveSPObjectMapping.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 

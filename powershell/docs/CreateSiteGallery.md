@@ -3,41 +3,42 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteTitleAndDescription** | [**CreateSiteGallerySiteTitleAndDescription**](CreateSiteGallerySiteTitleAndDescription.md) |  | [optional] 
-**SiteUrlSetting** | [**CreateSiteGallerySiteUrlSetting**](CreateSiteGallerySiteUrlSetting.md) |  | [optional] 
-**SiteTimeZone** | [**CreateSharedMailboxGalleryTimeZone**](CreateSharedMailboxGalleryTimeZone.md) |  | [optional] 
-**SiteTemplate** | [**CreateSiteGallerySiteTemplate**](CreateSiteGallerySiteTemplate.md) |  | [optional] 
-**SiteOfficeTenant** | [**CreateCommunityGalleryTenant**](CreateCommunityGalleryTenant.md) |  | [optional] 
-**SiteLanguage** | [**CreateSiteGallerySiteLanguage**](CreateSiteGallerySiteLanguage.md) |  | [optional] 
-**SiteContacts** | [**CreateCommunityGalleryContact**](CreateCommunityGalleryContact.md) |  | [optional] 
-**ExternalSharingProfile** | [**CreateCommunityGalleryExternalSharingSettingProfile**](CreateCommunityGalleryExternalSharingSettingProfile.md) |  | [optional] 
-**QuotaProfile** | [**CreateCommunityGalleryQuotaSettingProfile**](CreateCommunityGalleryQuotaSettingProfile.md) |  | [optional] 
-**SiteDesign** | [**CreateCommunityGallerySiteDesign**](CreateCommunityGallerySiteDesign.md) |  | [optional] 
-**SiteAdmins** | [**CreateSiteGallerySiteAdmins**](CreateSiteGallerySiteAdmins.md) |  | [optional] 
-**SiteInformationIcon** | [**CreateSiteGallerySiteInformationIcon**](CreateSiteGallerySiteInformationIcon.md) |  | [optional] 
-**SiteDepthLimit** | [**CreateSiteGallerySiteDepthLimit**](CreateSiteGallerySiteDepthLimit.md) |  | [optional] 
-**DpmPlanSetting** | [**CreateSiteGalleryDpmPlanSetting**](CreateSiteGalleryDpmPlanSetting.md) |  | [optional] 
-**PermissionSetting** | [**CreateSiteGalleryPermissionSetting**](CreateSiteGalleryPermissionSetting.md) |  | [optional] 
-**SiteCloudGovernancePanel** | [**CreateSiteGallerySiteCloudGovernancePanel**](CreateSiteGallerySiteCloudGovernancePanel.md) |  | [optional] 
-**SiteClassificationAndSensitivityLabel** | [**CreateSiteGallerySiteClassificationAndSensitivityLabel**](CreateSiteGallerySiteClassificationAndSensitivityLabel.md) |  | [optional] 
-**SiteHubSite** | [**CreateCommunityGalleryHubSite**](CreateCommunityGalleryHubSite.md) |  | [optional] 
-**MultiGeoLocationSetting** | [**CreateEquipmentMailboxGalleryMultiGeoLocationSetting**](CreateEquipmentMailboxGalleryMultiGeoLocationSetting.md) |  | [optional] 
-**RenewalProfile** | [**CreateCommunityGalleryRenewalProfile**](CreateCommunityGalleryRenewalProfile.md) |  | [optional] 
-**ElectionProfile** | [**CreateSiteGalleryElectionProfile**](CreateSiteGalleryElectionProfile.md) |  | [optional] 
-**ContentTypes** | [**CreateCommunityGalleryContentTypes**](CreateCommunityGalleryContentTypes.md) |  | [optional] 
-**ActivateFeatures** | [**CreateSiteGalleryActivateFeatures**](CreateSiteGalleryActivateFeatures.md) |  | [optional] 
-**AddSiteColumns** | [**CreateSiteGalleryAddSiteColumns**](CreateSiteGalleryAddSiteColumns.md) |  | [optional] 
-**PublishColumns** | [**CreateSiteGalleryAddSiteColumns**](CreateSiteGalleryAddSiteColumns.md) |  | [optional] 
-**AlternateCssUrl** | [**CreateSiteGalleryAlternateCssUrl**](CreateSiteGalleryAlternateCssUrl.md) |  | [optional] 
+**SiteTitleAndDescription** | [**SiteTitleDescription**](SiteTitleDescription.md) |  | [optional] 
+**SiteUrlSetting** | [**DRSiteUrlSetting**](DRSiteUrlSetting.md) |  | [optional] 
+**SiteTimeZone** | [**SiteTimeZone**](SiteTimeZone.md) |  | [optional] 
+**SiteTemplate** | [**SiteTemplateSetting**](SiteTemplateSetting.md) |  | [optional] 
+**SiteOfficeTenant** | [**OfficeTenant**](OfficeTenant.md) |  | [optional] 
+**SiteLanguage** | [**SiteLanguage**](SiteLanguage.md) |  | [optional] 
+**SiteContacts** | [**Contact**](Contact.md) | Activity model for primary contact,secondary contact | [optional] 
+**ExternalSharingProfile** | [**ExternalSharingProfile**](ExternalSharingProfile.md) |  | [optional] 
+**QuotaProfile** | [**QuotaProfile**](QuotaProfile.md) |  | [optional] 
+**SiteDesign** | [**SiteDesign**](SiteDesign.md) |  | [optional] 
+**SiteAdmins** | [**SiteAdmins**](SiteAdmins.md) |  | [optional] 
+**SiteInformationIcon** | [**InformationIconSetting**](InformationIconSetting.md) |  | [optional] 
+**SiteDepthLimit** | [**DepthLimitSetting**](DepthLimitSetting.md) |  | [optional] 
+**DpmPlanSetting** | [**DpmPlanSetting**](DpmPlanSetting.md) |  | [optional] 
+**PermissionSetting** | [**DRPermissionSetting**](DRPermissionSetting.md) |  | [optional] 
+**SiteCloudGovernancePanel** | [**SiteCloudGovernancePanel**](SiteCloudGovernancePanel.md) |  | [optional] 
+**SiteClassificationAndSensitivityLabel** | [**SiteClassificationAndSensitivityLabel**](SiteClassificationAndSensitivityLabel.md) |  | [optional] 
+**SiteHubSite** | [**HubSiteSetting**](HubSiteSetting.md) |  | [optional] 
+**MultiGeoLocationSetting** | [**MultiGeoLocationSetting**](MultiGeoLocationSetting.md) |  | [optional] 
+**RenewalProfile** | [**RenewalProfile**](RenewalProfile.md) |  | [optional] 
+**ElectionProfile** | [**SiteElectionProfile**](SiteElectionProfile.md) |  | [optional] 
+**ContentTypes** | [**ContentTypes**](ContentTypes.md) |  | [optional] 
+**ActivateFeatures** | [**SiteFeature**](SiteFeature.md) |  | [optional] 
+**AddSiteColumns** | [**SiteColumns**](SiteColumns.md) |  | [optional] 
+**PublishColumns** | [**SiteColumns**](SiteColumns.md) |  | [optional] 
+**AlternateCssUrl** | [**SiteAlternateCssUrl**](SiteAlternateCssUrl.md) |  | [optional] 
 **FullUrl** | **String** |  | [optional] 
-**SitePicture** | [**CreateSiteGallerySitePicture**](CreateSiteGallerySitePicture.md) |  | [optional] 
-**ScAvePointPortalManagerTemplate** | [**CreateSiteGalleryScAvePointPortalManagerTemplate**](CreateSiteGalleryScAvePointPortalManagerTemplate.md) |  | [optional] 
-**CreateSiteCollectionNotifyOpusForNewFiles** | [**CreateLibraryGalleryCreateLibraryNotifyOpusForNewFiles**](CreateLibraryGalleryCreateLibraryNotifyOpusForNewFiles.md) |  | [optional] 
+**SitePicture** | [**SitePicture**](SitePicture.md) |  | [optional] 
+**ScAvePointPortalManagerTemplate** | [**ApmTemplateSetting**](ApmTemplateSetting.md) |  | [optional] 
+**CreateSiteCollectionNotifyOpusForNewFiles** | [**NotifyOpusForNewFilesRequestModel**](NotifyOpusForNewFilesRequestModel.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -77,7 +78,8 @@ $CreateSiteGallery = New-Cloud.Governance.ClientCreateSiteGallery  -SiteTitleAnd
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

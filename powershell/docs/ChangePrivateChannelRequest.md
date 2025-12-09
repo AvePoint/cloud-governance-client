@@ -3,14 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Team** | [**ChangePrivateChannelRequestTeam**](ChangePrivateChannelRequestTeam.md) |  | [optional] 
-**Channel** | [**ChangePrivateChannelRequestChannel**](ChangePrivateChannelRequestChannel.md) |  | [optional] 
-**Name** | [**ChangePrivateChannelRequestName**](ChangePrivateChannelRequestName.md) |  | [optional] 
-**ChannelDescription** | [**ChangePrivateChannelRequestChannelDescription**](ChangePrivateChannelRequestChannelDescription.md) |  | [optional] 
-**Owners** | [**ChangePrivateChannelRequestOwners**](ChangePrivateChannelRequestOwners.md) |  | [optional] 
-**Members** | [**ChangePrivateChannelRequestMembers**](ChangePrivateChannelRequestMembers.md) |  | [optional] 
+**Team** | [**ApiUser**](ApiUser.md) | Channel parent team | [optional] 
+**Channel** | [**ApiUser**](ApiUser.md) | Channel | [optional] 
+**Name** | [**StringChangedProperty**](StringChangedProperty.md) | Channnel name | [optional] 
+**ChannelDescription** | [**StringChangedProperty**](StringChangedProperty.md) | Channnel description | [optional] 
+**Owners** | [**ApiUserIListChangedProperty**](ApiUserIListChangedProperty.md) | Channnel owners | [optional] 
+**Members** | [**ApiUserIListChangedProperty**](ApiUserIListChangedProperty.md) | Channnel members | [optional] 
 **EnableChangePrivateChannelQuota** | **Boolean** |  | [optional] [default to $false]
-**QuotaStorage** | [**ChangePrivateChannelRequestQuotaStorage**](ChangePrivateChannelRequestQuotaStorage.md) |  | [optional] 
+**QuotaStorage** | [**Int64ChangedProperty**](Int64ChangedProperty.md) |  | [optional] 
 **QuotaStorageUsed** | **Double** |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 

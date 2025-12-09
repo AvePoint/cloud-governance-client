@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChangedMethod** | [**ChangeContactMethod**](ChangeContactMethod.md) |  | [optional] 
-**ChangedByUserSetting** | [**ChangeSiteContactRequestChangeByUserSetting**](ChangeSiteContactRequestChangeByUserSetting.md) |  | [optional] 
+**ChangedByUserSetting** | [**ChangeContactByUserSetting**](ChangeContactByUserSetting.md) |  | [optional] 
 **ChangedByUrlItems** | [**ChangeWebContactByUrlSetting[]**](ChangeWebContactByUrlSetting.md) |  | [optional] 
 **SubRequests** | [**ChangeWebContactSubRequest[]**](ChangeWebContactSubRequest.md) |  | [optional] [readonly] 
 **Id** | **String** | Id of request. | [optional] 

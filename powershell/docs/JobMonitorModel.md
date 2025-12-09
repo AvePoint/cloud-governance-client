@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **StatusDescription** | **String** |  | [optional] 
 **FileName** | **String** |  | [optional] 
 **ModifiedTime** | **System.DateTime** |  | [optional] 
-**Operator** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**Operator** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 
 ## Examples
 

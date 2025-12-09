@@ -9,6 +9,9 @@ Name | Type | Description | Notes
 **ThemeType** | [**ThemeSettingType**](ThemeSettingType.md) |  | [optional] [readonly] 
 **IsEnabledInTeamsApp** | **Boolean** |  | [optional] [default to $false]
 **IsEnableVNext** | **Boolean** |  | [optional] [default to $false]
+**FollowOSDateTimePattern** | **Boolean** |  | [optional] [default to $false]
+**DatePattern** | **String** |  | [optional] 
+**TimePattern** | **String** |  | [optional] 
 
 ## Examples
 
@@ -19,7 +22,10 @@ $PersonalSettingsPropertyInfo = New-Cloud.Governance.ClientPersonalSettingsPrope
  -ThemeCode null `
  -ThemeType null `
  -IsEnabledInTeamsApp null `
- -IsEnableVNext null
+ -IsEnableVNext null `
+ -FollowOSDateTimePattern null `
+ -DatePattern null `
+ -TimePattern null
 ```
 
 - Convert the resource to JSON

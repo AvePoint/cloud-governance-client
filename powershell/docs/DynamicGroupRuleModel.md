@@ -10,9 +10,13 @@ Name | Type | Description | Notes
 **Category** | [**CategoryType**](CategoryType.md) |  | [optional] 
 **CategoryDescription** | **String** |  | [optional] 
 **MetadataName** | **String** |  | [optional] 
+**MetadataValue** | **String** |  | [optional] 
+**MetadataId** | **String** |  | [optional] 
+**DisableEditRuleValue** | **Boolean** |  | [optional] [default to $false]
 **MetadataDisplayValue** | **String** |  | [optional] 
 **Condition** | [**DynamicRuleCondition**](DynamicRuleCondition.md) |  | [optional] 
 **ConditionDescription** | **String** |  | [optional] 
+**MetadataUsers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 
 ## Examples
 
@@ -25,9 +29,13 @@ $DynamicGroupRuleModel = New-Cloud.Governance.ClientDynamicGroupRuleModel  -Id n
  -Category null `
  -CategoryDescription null `
  -MetadataName null `
+ -MetadataValue null `
+ -MetadataId null `
+ -DisableEditRuleValue null `
  -MetadataDisplayValue null `
  -Condition null `
- -ConditionDescription null
+ -ConditionDescription null `
+ -MetadataUsers null
 ```
 
 - Convert the resource to JSON

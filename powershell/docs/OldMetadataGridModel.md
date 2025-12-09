@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **ShowInReportTypeDescription** | **String** |  | [optional] 
 **LastModifiedTime** | **System.DateTime** |  | [optional] 
 **CreatedSource** | **Int32** |  | [optional] [default to 0]
+**IsHiddenInClassic** | **Boolean** |  | [optional] [default to $false]
 
 ## Examples
 
@@ -33,7 +34,8 @@ $OldMetadataGridModel = New-Cloud.Governance.ClientOldMetadataGridModel  -Create
  -ShowInReportType null `
  -ShowInReportTypeDescription null `
  -LastModifiedTime null `
- -CreatedSource null
+ -CreatedSource null `
+ -IsHiddenInClassic null
 ```
 
 - Convert the resource to JSON

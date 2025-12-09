@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **HandleOngoingType** | [**HandleOngoingType**](HandleOngoingType.md) |  | [optional] 
 **IsSendCancelEmail** | **Boolean** |  | [optional] [default to $false]
-**CancelEmailTemplateId** | [**AzureAdMetadataSettingsOffice365Tenant**](AzureAdMetadataSettingsOffice365Tenant.md) |  | [optional] 
+**CancelEmailTemplateId** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
 
 ## Examples
 

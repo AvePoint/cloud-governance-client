@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 <a name="Get-WorkspacejobBasicInfo"></a>
 # **Get-WorkspacejobBasicInfo**
 > JobMonitorModel Get-WorkspacejobBasicInfo<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <PSCustomObject><br>
 
 get workspace job basic information              support action:unlock/specify contact/restore workspace/refresh guest invite status
 
@@ -107,7 +107,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$Id = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String | 
+$Id = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String | 
 
 # get workspace job basic information              support action:unlock/specify contact/restore workspace/refresh guest invite status
 try {
@@ -122,7 +122,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Id** | **String**|  | 
+ **Id** | [**String**](String.md)|  | 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

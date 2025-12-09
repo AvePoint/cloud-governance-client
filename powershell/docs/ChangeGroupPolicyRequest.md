@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**ChangeGroupPolicyRequestPolicy**](ChangeGroupPolicyRequestPolicy.md) |  | [optional] 
-**OriginalPolicy** | [**ChangeGroupPolicyRequestOriginalPolicy**](ChangeGroupPolicyRequestOriginalPolicy.md) |  | [optional] 
+**Policy** | [**GuidModel**](GuidModel.md) | The new policy information settings | [optional] 
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | The original policy information settings | [optional] [readonly] 
 **IsLeaseEnabled** | **Boolean** | Whether to enable the group/team lease extension. | [optional] [default to $false]
 **ChangePolicyConfig** | [**AssignBy**](AssignBy.md) | Set how to assign the group policy. | [optional] 
 **StartDateType** | [**StartDateType**](StartDateType.md) | Group lease start date configuration after a policy change | [optional] 

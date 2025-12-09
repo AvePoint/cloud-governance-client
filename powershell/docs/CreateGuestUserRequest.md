@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UserProperties** | [**CreateGuestUserRequestUserProperties**](CreateGuestUserRequestUserProperties.md) |  | [optional] 
+**UserProperties** | [**GuestUserPropertyModel**](GuestUserPropertyModel.md) |  | [optional] 
 **WelcomeEmailMessage** | **String** |  | [optional] 
-**PrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
-**SecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **InviteGroups** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
-**OneTimeSettings** | [**CreateGuestUserRequestOneTimeSettings**](CreateGuestUserRequestOneTimeSettings.md) |  | [optional] 
+**OneTimeSettings** | [**GuestUserRequestOneTimeRenewalSettingModel**](GuestUserRequestOneTimeRenewalSettingModel.md) |  | [optional] 
 **SubRequestInfos** | [**CreateGuestUserSubRequest[]**](CreateGuestUserSubRequest.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 

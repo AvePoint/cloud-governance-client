@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Top] <System.Nullable[Int32]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Skip] <System.Nullable[Int32]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Search] <String><br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-FilterId] <PSCustomObject><br>
 
 get group owners by group email
 
@@ -313,7 +313,7 @@ $Email = "MyEmail" # String |
 $Top = 56 # Int32 |  (optional) (default to 0)
 $Skip = 56 # Int32 |  (optional) (default to 0)
 $Search = "MySearch" # String |  (optional)
-$FilterId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$FilterId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
 
 # get group owners by group email
 try {
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
  **Top** | **Int32**|  | [optional] [default to 0]
  **Skip** | **Int32**|  | [optional] [default to 0]
  **Search** | **String**|  | [optional] 
- **FilterId** | **String**|  | [optional] 
+ **FilterId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type
@@ -1052,7 +1052,7 @@ Name | Type | Description  | Notes
 <a name="get-acgteamsitedesigns"></a>
 # **Get-ACGTeamSiteDesigns**
 > StringModel[] Get-ACGTeamSiteDesigns<br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <String><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-TenantId] <PSCustomObject><br>
 
 
 
@@ -1075,7 +1075,7 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 
 
 
-$TenantId = "38400000-8cf0-11bd-b23e-10b96e4ef00d" # String |  (optional)
+$TenantId = 38400000-8cf0-11bd-b23e-10b96e4ef00d # String |  (optional)
 
 try {
      $Result = Get-ACGTeamSiteDesigns -TenantId $TenantId
@@ -1089,7 +1089,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **TenantId** | **String**|  | [optional] 
+ **TenantId** | [**String**](String.md)|  | [optional] 
 
 ### Return type
 # cmdlet returns PSCustomObject, the return object contains the properties of below type

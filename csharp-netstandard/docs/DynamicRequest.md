@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **ParentTicketNumber** | **int?** |  | [optional] [default to 0]
 **StartRequestTime** | **DateTime?** |  | [optional] 
 **WarningMessage** | **string** |  | [optional] 
+**ApproveComments** | [**CommentsParam**](CommentsParam.md) |  | [optional] 
 **Id** | **Guid?** | Id of request. | [optional] 
 **ServiceId** | **Guid** | Id of service. | [optional] 
 **Summary** | **string** | Summary of request. | [optional] 

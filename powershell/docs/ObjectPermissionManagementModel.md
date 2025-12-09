@@ -4,13 +4,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ObjectType** | [**SPPrincipalType**](SPPrincipalType.md) |  | [optional] 
-**ObjectInfo** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**ObjectInfo** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **Action** | [**ManagePermissionAction**](ManagePermissionAction.md) |  | [optional] 
 **Permissions** | **String[]** |  | [optional] 
 **OriginalPermissions** | **String[]** |  | [optional] 
 **ExternalUserType** | [**ExternalUserType**](ExternalUserType.md) |  | [optional] 
 **Members** | [**SharingEnabledUser[]**](SharingEnabledUser.md) |  | [optional] 
-**GrantPermissionSetting** | [**ObjectPermissionManagementModelGrantPermissionSetting**](ObjectPermissionManagementModelGrantPermissionSetting.md) |  | [optional] 
+**GrantPermissionSetting** | [**GrantPermissionModel**](GrantPermissionModel.md) |  | [optional] 
 **OriginalName** | **String** |  | [optional] 
 
 ## Examples

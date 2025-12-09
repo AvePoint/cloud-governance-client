@@ -3,16 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SharedChannelInfo** | [**CreateSharedChannelGallerySharedChannelInfo**](CreateSharedChannelGallerySharedChannelInfo.md) |  | [optional] 
-**SharedChannelNameAndDescription** | [**CreateCommunityGalleryNameAndDescription**](CreateCommunityGalleryNameAndDescription.md) |  | [optional] 
-**Owners** | [**CreateCommunityGalleryOwners**](CreateCommunityGalleryOwners.md) |  | [optional] 
+**SharedChannelInfo** | [**CreateSharedChannelModel**](CreateSharedChannelModel.md) |  | [optional] 
+**SharedChannelNameAndDescription** | [**TeamNameDescription**](TeamNameDescription.md) |  | [optional] 
+**Owners** | [**TeamOwners**](TeamOwners.md) |  | [optional] 
 **Creator** | **String** |  | [optional] 
-**Members** | [**CreateCommunityGalleryMembers**](CreateCommunityGalleryMembers.md) |  | [optional] 
+**Members** | [**TeamMembers**](TeamMembers.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -27,7 +28,8 @@ $CreateSharedChannelGallery = New-Cloud.Governance.ClientCreateSharedChannelGall
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

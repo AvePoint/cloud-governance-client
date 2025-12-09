@@ -3,17 +3,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SharedChannelInfo** | [**ChangeSharedChannelGallerySharedChannelInfo**](ChangeSharedChannelGallerySharedChannelInfo.md) |  | [optional] 
-**SharedChannelName** | [**ChangeSharedChannelGallerySharedChannelName**](ChangeSharedChannelGallerySharedChannelName.md) |  | [optional] 
-**SharedChannelDescription** | [**ChangeSharedChannelGallerySharedChannelDescription**](ChangeSharedChannelGallerySharedChannelDescription.md) |  | [optional] 
-**Owners** | [**ChangeSharedChannelGalleryOwners**](ChangeSharedChannelGalleryOwners.md) |  | [optional] 
-**Members** | [**ChangeSharedChannelGalleryOwners**](ChangeSharedChannelGalleryOwners.md) |  | [optional] 
-**SiteStorage** | [**ChangeSharedChannelGallerySiteStorage**](ChangeSharedChannelGallerySiteStorage.md) |  | [optional] 
+**SharedChannelInfo** | [**ChangeSharedChannelModel**](ChangeSharedChannelModel.md) |  | [optional] 
+**SharedChannelName** | [**SharedChannelName**](SharedChannelName.md) |  | [optional] 
+**SharedChannelDescription** | [**SharedChannelDescription**](SharedChannelDescription.md) |  | [optional] 
+**Owners** | [**SharedChannelChangedMembership**](SharedChannelChangedMembership.md) |  | [optional] 
+**Members** | [**SharedChannelChangedMembership**](SharedChannelChangedMembership.md) |  | [optional] 
+**SiteStorage** | [**ChangeSiteStorageSettingModel**](ChangeSiteStorageSettingModel.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -29,7 +30,8 @@ $ChangeSharedChannelGallery = New-Cloud.Governance.ClientChangeSharedChannelGall
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

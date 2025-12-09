@@ -3,24 +3,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteInfo** | [**ChangeSiteSettingGalleryRequestModelSiteInfo**](ChangeSiteSettingGalleryRequestModelSiteInfo.md) |  | [optional] 
-**ChangedSiteTitle** | [**ChangeSiteSettingGalleryRequestModelChangedSiteTitle**](ChangeSiteSettingGalleryRequestModelChangedSiteTitle.md) |  | [optional] 
-**ChangedSiteAddress** | [**ChangeSiteSettingGalleryRequestModelChangedSiteTitle**](ChangeSiteSettingGalleryRequestModelChangedSiteTitle.md) |  | [optional] 
-**ChangedSiteDescription** | [**ChangeSiteSettingGalleryRequestModelChangedSiteTitle**](ChangeSiteSettingGalleryRequestModelChangedSiteTitle.md) |  | [optional] 
-**ChangedSiteSensitivityLabel** | [**ChangeSiteSettingGalleryRequestModelChangedSiteSensitivityLabel**](ChangeSiteSettingGalleryRequestModelChangedSiteSensitivityLabel.md) |  | [optional] 
-**ChangedSiteClassification** | [**ChangeSiteSettingGalleryRequestModelChangedSiteClassification**](ChangeSiteSettingGalleryRequestModelChangedSiteClassification.md) |  | [optional] 
-**ChangedSiteStorage** | [**ChangeSharedChannelGallerySiteStorage**](ChangeSharedChannelGallerySiteStorage.md) |  | [optional] 
-**ChangedSiteTimeZone** | [**ChangeSiteSettingGalleryRequestModelChangedSiteTimeZone**](ChangeSiteSettingGalleryRequestModelChangedSiteTimeZone.md) |  | [optional] 
-**ChangedSiteLocale** | [**ChangeSiteSettingGalleryRequestModelChangedSiteTimeZone**](ChangeSiteSettingGalleryRequestModelChangedSiteTimeZone.md) |  | [optional] 
-**ChangedSiteDesign** | [**ChangeSiteSettingGalleryRequestModelChangedSiteDesign**](ChangeSiteSettingGalleryRequestModelChangedSiteDesign.md) |  | [optional] 
-**ChangedSiteHubSite** | [**ChangeSiteSettingGalleryRequestModelChangedSiteHubSite**](ChangeSiteSettingGalleryRequestModelChangedSiteHubSite.md) |  | [optional] 
-**ChangedSiteSharing** | [**ChangeSiteSettingGalleryRequestModelChangedSiteSharing**](ChangeSiteSettingGalleryRequestModelChangedSiteSharing.md) |  | [optional] 
-**ChangeSitePicture** | [**ChangeSiteSettingGalleryRequestModelChangeSitePicture**](ChangeSiteSettingGalleryRequestModelChangeSitePicture.md) |  | [optional] 
+**SiteInfo** | [**ChangeSiteObjectModel**](ChangeSiteObjectModel.md) |  | [optional] 
+**ChangedSiteTitle** | [**StringChangedValueRequestModel**](StringChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteAddress** | [**StringChangedValueRequestModel**](StringChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteDescription** | [**StringChangedValueRequestModel**](StringChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteSensitivityLabel** | [**TeamSensitivityLabelChangedValueRequestModel**](TeamSensitivityLabelChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteClassification** | [**StringModelChangedValueRequestModel**](StringModelChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteStorage** | [**ChangeSiteStorageSettingModel**](ChangeSiteStorageSettingModel.md) |  | [optional] 
+**ChangedSiteTimeZone** | [**Int32ChangedValueRequestModel**](Int32ChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteLocale** | [**Int32ChangedValueRequestModel**](Int32ChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteDesign** | [**ChangedSiteDesignModelChangedValueRequestModel**](ChangedSiteDesignModelChangedValueRequestModel.md) |  | [optional] 
+**ChangedSiteHubSite** | [**ChangeSiteHubSiteRequestModel**](ChangeSiteHubSiteRequestModel.md) |  | [optional] 
+**ChangedSiteSharing** | [**ChangeSiteSharingRequestModel**](ChangeSiteSharingRequestModel.md) |  | [optional] 
+**ChangeSitePicture** | [**ChangeSitePicture**](ChangeSitePicture.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -43,7 +44,8 @@ $ChangeSiteSettingGalleryRequestModel = New-Cloud.Governance.ClientChangeSiteSet
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

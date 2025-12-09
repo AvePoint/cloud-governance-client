@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ChangeContactMethod** | [**ChangeContactMethod**](ChangeContactMethod.md) |  | [optional] 
 **ChangeByUrlSetting** | [**ChangeContactByUrlSetting[]**](ChangeContactByUrlSetting.md) |  | [optional] 
-**ChangeByUserSetting** | [**ChangeSiteContactRequestChangeByUserSetting**](ChangeSiteContactRequestChangeByUserSetting.md) |  | [optional] 
+**ChangeByUserSetting** | [**ChangeContactByUserSetting**](ChangeContactByUserSetting.md) |  | [optional] 
 **SubRequests** | [**ChangeSiteContactSubRequest[]**](ChangeSiteContactSubRequest.md) |  | [optional] [readonly] 
 **IsServiceEnableChangeContact** | **Boolean** |  | [optional] [readonly] [default to $false]
 **IsServiceEnableChangeAdmin** | **Boolean** |  | [optional] [readonly] [default to $false]

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Guid** | Id of metadata. | [optional] 
 **Name** | **string** | Name of metadata. | [optional] 
+**AssignBy** | **int** |  | [optional] [default to 0]
 **DisplayName** | **string** |  | [optional] 
 **BooleanValue** | **bool?** | Value of Yes/No metadata. | [optional] [default to false]
 **SingleLineOrMultipleLineValue** | **string** | Value of Single/Multiple line of text metadata. | [optional] 
@@ -22,6 +23,7 @@ Name | Type | Description | Notes
 **Action** | **MetadataActionType** | Action of metadata, used in change workspace metadata service. | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **bool** | Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process. | [optional] [default to false]
 **AllowBusinessUserToInputSingleValue** | **bool** | Whether the metadata is allowed to input single value | [optional] [default to false]
+**IsNotApplyToObjects** | **bool** | Whether the metadata is not allowed to object | [optional] [default to false]
 **ActivityId** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -3,13 +3,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UsersInfo** | [**ChangeLicenseGalleryUsersInfo**](ChangeLicenseGalleryUsersInfo.md) |  | [optional] 
-**LicenseDetails** | [**ChangeLicenseGalleryLicenseDetails**](ChangeLicenseGalleryLicenseDetails.md) |  | [optional] 
+**UsersInfo** | [**ChangeLicenseUserModel**](ChangeLicenseUserModel.md) |  | [optional] 
+**LicenseDetails** | [**ChangeLicenseModel**](ChangeLicenseModel.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -21,7 +22,8 @@ $ChangeLicenseGallery = New-Cloud.Governance.ClientChangeLicenseGallery  -UsersI
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

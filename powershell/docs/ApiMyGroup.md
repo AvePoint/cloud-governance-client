@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **Sharing** | [**SiteSharingStatus**](SiteSharingStatus.md) |  | [optional] 
 **SharingDescription** | **String** |  | [optional] 
 **ConversationsLink** | **String** |  | [optional] 
+**ActionSource** | [**ActionSource**](ActionSource.md) |  | [optional] 
 **Id** | **String** |  | [optional] 
 **Phase** | [**AutoImportPhase**](AutoImportPhase.md) |  | [optional] 
 **PhaseStartTime** | **System.DateTime** |  | [optional] 
@@ -64,8 +65,8 @@ Name | Type | Description | Notes
 **PhaseAssignees** | [**ApiUser[]**](ApiUser.md) |  | [optional] 
 **PhaseDueDate** | **System.DateTime** |  | [optional] 
 **Metadatas** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
-**PrimaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
-**SecondaryContact** | [**ApiMyGroupPrimaryContact**](ApiMyGroupPrimaryContact.md) |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
 **ErrorMessage** | **String** |  | [optional] 
 **CreatedSource** | [**WorkspaceCreatedSourceType**](WorkspaceCreatedSourceType.md) |  | [optional] 
 **HasSubmitted** | **Boolean** |  | [optional] [default to $false]
@@ -109,6 +110,7 @@ $ApiMyGroup = New-Cloud.Governance.ClientApiMyGroup  -ObjectId null `
  -Sharing null `
  -SharingDescription null `
  -ConversationsLink null `
+ -ActionSource null `
  -Id null `
  -Phase null `
  -PhaseStartTime null `

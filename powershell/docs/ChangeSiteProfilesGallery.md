@@ -3,16 +3,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteProfileInfo** | [**ChangeSiteProfilesGallerySiteProfileInfo**](ChangeSiteProfilesGallerySiteProfileInfo.md) |  | [optional] 
-**SiteExternalSharingProfile** | [**ChangeSiteProfilesGallerySiteExternalSharingProfile**](ChangeSiteProfilesGallerySiteExternalSharingProfile.md) |  | [optional] 
-**SiteStorageManagementProfile** | [**ChangeSiteProfilesGallerySiteStorageManagementProfile**](ChangeSiteProfilesGallerySiteStorageManagementProfile.md) |  | [optional] 
-**SiteContactElectionProfile** | [**ChangeSiteProfilesGallerySiteContactElectionProfile**](ChangeSiteProfilesGallerySiteContactElectionProfile.md) |  | [optional] 
-**SiteRenewalProfile** | [**ChangeSiteProfilesGallerySiteRenewalProfile**](ChangeSiteProfilesGallerySiteRenewalProfile.md) |  | [optional] 
+**SiteProfileInfo** | [**ChangeSiteProfilesModel**](ChangeSiteProfilesModel.md) |  | [optional] 
+**SiteExternalSharingProfile** | [**ChangeSiteExternalSharingProfileModel**](ChangeSiteExternalSharingProfileModel.md) |  | [optional] 
+**SiteStorageManagementProfile** | [**ChangeSiteStorageManagementProfileModel**](ChangeSiteStorageManagementProfileModel.md) |  | [optional] 
+**SiteContactElectionProfile** | [**ChangeSiteContactElectionProfileModel**](ChangeSiteContactElectionProfileModel.md) |  | [optional] 
+**SiteRenewalProfile** | [**ChangeSiteRenewProfileModel**](ChangeSiteRenewProfileModel.md) |  | [optional] 
 **GalleryType** | **String** |  | [optional] 
 **GalleryInternalName** | **String** |  | [optional] 
 **GalleryMetadata** | [**RequestMetadata[]**](RequestMetadata.md) |  | [optional] 
 **IsTenantAllowGuest** | **Boolean** |  | [optional] [default to $false]
-**RequestSensitivityLabel** | [**ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel**](ChangeExchangeResourceMembershipGalleryRequestModelRequestSensitivityLabel.md) |  | [optional] 
+**RequestSensitivityLabel** | [**RequestSensitivityLabel**](RequestSensitivityLabel.md) |  | [optional] 
+**Requester** | **String** |  | [optional] 
 
 ## Examples
 
@@ -27,7 +28,8 @@ $ChangeSiteProfilesGallery = New-Cloud.Governance.ClientChangeSiteProfilesGaller
  -GalleryInternalName null `
  -GalleryMetadata null `
  -IsTenantAllowGuest null `
- -RequestSensitivityLabel null
+ -RequestSensitivityLabel null `
+ -Requester null
 ```
 
 - Convert the resource to JSON

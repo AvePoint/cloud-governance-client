@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ObjectProperty** | [**ChangePermissionRequestObjectProperty**](ChangePermissionRequestObjectProperty.md) |  | [optional] 
+**ObjectProperty** | [**PermissionObjectProperty**](PermissionObjectProperty.md) |  | [optional] 
 **PermissionChangedType** | [**PermissionChangedType**](PermissionChangedType.md) |  | [optional] 
 **IsManagedAllUsers** | **Boolean** |  | [optional] [default to $false]
 **SelectedUsers** | [**ApiUser[]**](ApiUser.md) |  | [optional] 

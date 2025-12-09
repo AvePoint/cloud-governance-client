@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**User** | [**RequestUserWithPermissionsUser**](RequestUserWithPermissionsUser.md) |  | [optional] 
+**User** | [**ApiUser**](ApiUser.md) | User information | [optional] 
 **PermissionLevels** | [**PermissionLevel[]**](PermissionLevel.md) | User permission levels&#39; information | [optional] 
 
 ## Examples

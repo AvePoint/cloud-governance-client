@@ -3,12 +3,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | [**GrantPermissionRequestUrl**](GrantPermissionRequestUrl.md) |  | [optional] 
+**Url** | [**GrantPermissionSPObject**](GrantPermissionSPObject.md) |  | [optional] 
 **PermissionSettings** | [**GrantPermissionRequestPermissionSettings**](GrantPermissionRequestPermissionSettings.md) |  | [optional] 
-**PermissionDurationSettings** | [**GrantPermissionRequestPermissionDurationSettings**](GrantPermissionRequestPermissionDurationSettings.md) |  | [optional] 
+**PermissionDurationSettings** | [**GrantPermissionRequestDurationSettings**](GrantPermissionRequestDurationSettings.md) |  | [optional] 
 **SelectedUsers** | [**SharingEnabledUser[]**](SharingEnabledUser.md) |  | [optional] 
-**ExternalUserSharingSettings** | [**GrantPermissionRequestExternalUserSharingSettings**](GrantPermissionRequestExternalUserSharingSettings.md) |  | [optional] 
-**WelcomeEmailSettings** | [**GrantPermissionModelWelcomeEmailSettings**](GrantPermissionModelWelcomeEmailSettings.md) |  | [optional] 
+**ExternalUserSharingSettings** | [**ExternalUserSharingSettings**](ExternalUserSharingSettings.md) |  | [optional] 
+**WelcomeEmailSettings** | [**WelcomeEmailSettings**](WelcomeEmailSettings.md) |  | [optional] 
 **Id** | **String** | Id of request. | [optional] 
 **ServiceId** | **String** | Id of service. | [optional] 
 **Summary** | **String** | Summary of request. | [optional] 

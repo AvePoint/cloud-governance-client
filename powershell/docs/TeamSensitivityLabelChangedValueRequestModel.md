@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NewValue** | [**ChangeTeamClassificationAndSensitivityLabelSensitivityLabel**](ChangeTeamClassificationAndSensitivityLabelSensitivityLabel.md) |  | [optional] 
-**OriginalValue** | [**ChangeTeamClassificationAndSensitivityLabelSensitivityLabel**](ChangeTeamClassificationAndSensitivityLabelSensitivityLabel.md) |  | [optional] 
+**NewValue** | [**TeamSensitivityLabel**](TeamSensitivityLabel.md) |  | [optional] 
+**OriginalValue** | [**TeamSensitivityLabel**](TeamSensitivityLabel.md) |  | [optional] 
 **ActivityId** | **String** | An unique identifier for the activity which can be used to find configuration in the dynamic service if it is assign by IT | [optional] 
 
 ## Examples

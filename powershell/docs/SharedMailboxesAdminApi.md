@@ -170,12 +170,12 @@ $Configuration["ApiKey"]["userPrincipalName"] = "someone@example.com"
 $Filter = "MyFilter" # String |  (optional)
 $SpecifyContactParameter = $ExternalUserType = New-ExternalUserType 
 $ApiUserType = New-ApiUserType 
-$ApiMyGroupPrimaryContact = New-ApiMyGroupPrimaryContact -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
+$ApiUser = New-ApiUser -Id "MyId" -LoginName "MyLoginName" -IsExternalUser $ExternalUserType -AzureUserType "MyAzureUserType" -DisplayName "MyDisplayName" -IsGroup $false -IsLocalUser $false -Email "MyEmail" -JobTitle "MyJobTitle" -PhysicalDeliveryOfficeName "MyPhysicalDeliveryOfficeName" -IsValid $false -IsAccountEnabled $false -TenantId "MyTenantId" -AdditionalData @{ key_example =  } -ApiUserType $ApiUserType
 
 $WorkspaceType = New-WorkspaceType 
 $WorkspaceIdTypeModel = New-WorkspaceIdTypeModel -ObjectId "MyObjectId" -WorkspaceType $WorkspaceType
 
-$SpecifyContactParameter = New-SpecifyContactParameter -PrimaryContact $ApiMyGroupPrimaryContact -SecondaryContact $ApiMyGroupPrimaryContact -PrimaryContactNotifiedEmail "MyPrimaryContactNotifiedEmail" -SecondaryContactNotifiedEmail "MySecondaryContactNotifiedEmail" -IsRemoveSecondaryContact $false -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # SpecifyContactParameter |  (optional)
+$SpecifyContactParameter = New-SpecifyContactParameter -PrimaryContact $ApiUser -SecondaryContact $ApiUser -PrimaryContactNotifiedEmail "MyPrimaryContactNotifiedEmail" -SecondaryContactNotifiedEmail "MySecondaryContactNotifiedEmail" -IsRemoveSecondaryContact $false -Processor "MyProcessor" -Workspace $WorkspaceIdTypeModel -IsSelectAllWorkspace $false -Type $WorkspaceType -IsConfirmed $false # SpecifyContactParameter |  (optional)
 
 # specify contacts
 try {

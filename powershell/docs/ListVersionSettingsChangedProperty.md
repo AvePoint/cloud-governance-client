@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ChangeValue** | [**CreateListRequestVersionSettings**](CreateListRequestVersionSettings.md) |  | [optional] 
-**OriginalValue** | [**CreateListRequestVersionSettings**](CreateListRequestVersionSettings.md) |  | [optional] 
+**ChangeValue** | [**ListVersionSettings**](ListVersionSettings.md) |  | [optional] 
+**OriginalValue** | [**ListVersionSettings**](ListVersionSettings.md) |  | [optional] 
 
 ## Examples
 

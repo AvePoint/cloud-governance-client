@@ -5,15 +5,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **String** | Id of metadata. | [optional] 
 **Name** | **String** | Name of metadata. | [optional] 
+**AssignBy** | **Int32** |  | [optional] [default to 0]
 **DisplayName** | **String** |  | [optional] 
 **BooleanValue** | **Boolean** | Value of Yes/No metadata. | [optional] [default to $false]
 **SingleLineOrMultipleLineValue** | **String** | Value of Single/Multiple line of text metadata. | [optional] 
-**UpsOrAzureAdValue** | [**RequestMetadataUpsOrAzureAdValue**](RequestMetadataUpsOrAzureAdValue.md) |  | [optional] 
-**TermsValue** | [**RequestMetadataTermsValue**](RequestMetadataTermsValue.md) |  | [optional] 
+**UpsOrAzureAdValue** | [**LookupValue**](LookupValue.md) | Value of User Profile or Azure AD metadata. | [optional] 
+**TermsValue** | [**TermsValue**](TermsValue.md) | Value of Managed metadata metadata. | [optional] 
 **UserValue** | [**ApiUser[]**](ApiUser.md) | Value of Person or Group metadata. | [optional] 
-**LinkValue** | [**RequestMetadataLinkValue**](RequestMetadataLinkValue.md) |  | [optional] 
+**LinkValue** | [**LinkValue**](LinkValue.md) | Value of Hyperlink metadata. | [optional] 
 **ChoiceValue** | **String[]** | Value of Choice metadata. | [optional] 
-**LookupListValue** | [**RequestMetadataLookupListValue**](RequestMetadataLookupListValue.md) |  | [optional] 
+**LookupListValue** | [**LookupListValue**](LookupListValue.md) | Value of Lookup to SharePoint library/list metadata. | [optional] 
 **Type** | [**MetadataFieldType**](MetadataFieldType.md) | Type of metadata. | [optional] [readonly] 
 **ValueString** | **String** | Display value of metadata. | [optional] [readonly] 
 **ValueDisplayString** | **String** | Display value of metadata for show in the page.              The customer maybe depend the valueString to do something, so we need a new property for show in the page              GAO-43948 | [optional] 
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 **Action** | [**MetadataActionType**](MetadataActionType.md) | Action of metadata, used in change workspace metadata service. | [optional] 
 **AllowReferenceAsRoleInApprovalProcess** | **Boolean** | Whether the metadata is allowed to be referenced as a variable role that can be selected in an approval process. | [optional] [default to $false]
 **AllowBusinessUserToInputSingleValue** | **Boolean** | Whether the metadata is allowed to input single value | [optional] [default to $false]
+**IsNotApplyToObjects** | **Boolean** | Whether the metadata is not allowed to object | [optional] [default to $false]
 **ActivityId** | **String** |  | [optional] 
 
 ## Examples
@@ -29,6 +31,7 @@ Name | Type | Description | Notes
 ```powershell
 $RequestMetadata = New-Cloud.Governance.ClientRequestMetadata  -Id null `
  -Name null `
+ -AssignBy null `
  -DisplayName null `
  -BooleanValue null `
  -SingleLineOrMultipleLineValue null `
@@ -45,6 +48,7 @@ $RequestMetadata = New-Cloud.Governance.ClientRequestMetadata  -Id null `
  -Action null `
  -AllowReferenceAsRoleInApprovalProcess null `
  -AllowBusinessUserToInputSingleValue null `
+ -IsNotApplyToObjects null `
  -ActivityId null
 ```
 

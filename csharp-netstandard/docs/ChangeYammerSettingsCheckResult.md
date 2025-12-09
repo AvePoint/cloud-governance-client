@@ -1,0 +1,45 @@
+# Cloud.Governance.Client.Model.ChangeYammerSettingsCheckResult
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**IsAppliedPolicy** | **bool** |  | [optional] [default to false]
+**OriginalPolicy** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**HasOngoingRenewTask** | **bool** |  | [optional] [default to false]
+**HasOngoingElectionTask** | **bool** |  | [optional] [default to false]
+**OriginalExternalSharingProfile** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**OriginalStorageManagementProfile** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**OriginalContactElectionProfile** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**OriginalRenewalProfile** | [**GuidModel**](GuidModel.md) | GuidModel model | [optional] 
+**YammerSiteUrl** | **string** |  | [optional] 
+**IsSiteLocked** | **bool** |  | [optional] [default to false]
+**YammerPrivacy** | **bool** |  | [optional] [default to false]
+**Metadatas** | [**List&lt;RequestMetadata&gt;**](RequestMetadata.md) |  | [optional] 
+**IsHiddenFromAddressListsEnabled** | **bool** |  | [optional] [default to false]
+**IsHideFromOutlookClientsEnabled** | **bool** |  | [optional] [default to false]
+**IsHaveExchangePermission** | **bool** |  | [optional] [default to false]
+**IsAssignableToRole** | **bool** |  | [optional] [default to false]
+**YammerName** | **string** |  | [optional] 
+**YammerDescription** | **string** |  | [optional] 
+**PrimaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**SecondaryContact** | [**ApiUser**](ApiUser.md) | ApiUser model | [optional] 
+**Owners** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**Members** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**CoOwners** | [**List&lt;ApiUser&gt;**](ApiUser.md) |  | [optional] 
+**SiteTitle** | **string** |  | [optional] 
+**SiteId** | **string** |  | [optional] 
+**Classification** | **string** |  | [optional] 
+**IsEnableSensitivityLabel** | **bool** |  | [optional] [default to false]
+**SiteUrl** | **string** |  | [optional] 
+**TenantId** | **string** |  | [optional] 
+**Sensitivity** | [**StringModel**](StringModel.md) | StringModel model | [optional] 
+**Privacy** | **bool** |  | [optional] [default to false]
+**EnvironmentName** | **string** |  | [optional] 
+**WorkspaceTypeWithValidated** | **WorkspaceType** |  | [optional] 
+**IsHybrid** | **bool** |  | [optional] [default to false]
+**IsValid** | **bool** |  | [optional] [default to false]
+**ErrorMessage** | **string** |  | [optional] 
+**MessageCode** | **MessageCode** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
