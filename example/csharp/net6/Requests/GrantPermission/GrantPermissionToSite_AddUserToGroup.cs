@@ -17,7 +17,11 @@
                 var service = this.ServicesApi.GetGrantPermissionService(serviceId);
                 var request = service.RequestTemplate;
 
-                var grantPermissionUrlValidationResult = this.ServicesApi.ValidateForGrantPermissionService(serviceId, new SiteValidationParameter(data.ObjectUrl));
+                var grantPermissionUrlValidationResult = this.ServicesApi.ValidateForGrantPermissionService(serviceId,
+                    new SiteValidationParameter
+                    {
+                        Uri = data.ObjectUrl,
+                    });
                 var grantPermissionSPObject = grantPermissionUrlValidationResult.Object;
 
                 var selectedSharePointGroup = grantPermissionUrlValidationResult.SpGroups?.Find(spGroup => data.SelectedSharePointGroup.Equals(spGroup.Name, StringComparison.CurrentCultureIgnoreCase));

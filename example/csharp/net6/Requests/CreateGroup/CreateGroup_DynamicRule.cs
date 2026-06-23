@@ -37,7 +37,7 @@ namespace NetFramework
                         new DynamicGroupRuleInfo
                         {
                             Category = CategoryType.Organization,
-                            Condition = DynamicRuleCondition.In,
+                            Condition = DomainGroupDynamicRuleCondition.In,
                             Id = ruleId,
                             MetadataId = ruleId,
                             MetadataValue = group.Id,
