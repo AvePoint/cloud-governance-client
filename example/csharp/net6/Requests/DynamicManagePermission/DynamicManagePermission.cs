@@ -28,46 +28,46 @@
                     {
                         if (activity is ManagePermissionGalleryRequestModel managePermissionActivity)
                         {
-                            managePermissionActivity.ManagePermissionObjectModel.SiteUrl = "https://bigapp.sharepoint.com/sites/demotesturl";
-                            managePermissionActivity.ManagePermissionObjectModel.ObjectUrl = "https://bigapp.sharepoint.com/sites/demotesturl";
+                            managePermissionActivity.ManagePermissionObjectModel.SiteUrl = "<site URL>";
+                            managePermissionActivity.ManagePermissionObjectModel.ObjectUrl = "<object URL>";
                             managePermissionActivity.ManagePermissionObjectModel.ObjectType = ApiModelNodeType.Site;
                             managePermissionActivity.GrantPermissionSettingModel.SpGroupManagement = new List<ApiModelRequestDynamicServiceManagePermissionActivitySPGroupManagementModel>
-                {
-                    new ApiModelRequestDynamicServiceManagePermissionActivitySPGroupManagementModel
-                    {
-                        Action = ManagePermissionAction.Changed,
-                        Name = new StringChangedProperty
-                        {
-                            OriginalValue = "DemoSiteTitle 访问者",
-                            ChangeValue = "DemoSiteTitle 访问者",
-                        },
-                        SendMembershipRequestEmailAddress = new StringChangedProperty
-                        {
-                            OriginalValue = "",
-                            ChangeValue = ""
-                        },
-                        Description = new StringChangedProperty
-                        {
-                            OriginalValue = "",
-                            ChangeValue = ""
-                        },
-                        Id = 4,//SP Group ID
-                        Owner = new GroupOwnerModelChangedProperty
-                        {
-                            OriginalValue = new GroupOwnerModel(),
-                            ChangeValue = new GroupOwnerModel()
-                        },
-                        Members = new List<ApiModelRequestDynamicServiceManagePermissionActivitySPUserManagementModel>
-                        {
-                            new ApiModelRequestDynamicServiceManagePermissionActivitySPUserManagementModel
                             {
-                                IdentityName = "william3@baron.space",
-                                DisplayName = "William3",
-                                Action = ManagePermissionAction.Added
-                            }
-                        }
-                    }
-                };
+                                new ApiModelRequestDynamicServiceManagePermissionActivitySPGroupManagementModel
+                                {
+                                    Action = ManagePermissionAction.Changed,
+                                    Name = new StringChangedProperty
+                                    {
+                                        OriginalValue = "<original value>",
+                                        ChangeValue = "<change value>",
+                                    },
+                                    SendMembershipRequestEmailAddress = new StringChangedProperty
+                                    {
+                                        OriginalValue = "<original value>",
+                                        ChangeValue = "<change value>"
+                                    },
+                                    Description = new StringChangedProperty
+                                    {
+                                        OriginalValue = "<original value>",
+                                        ChangeValue = "<change value>"
+                                    },
+                                    Id = 4,//SP Group ID
+                                    Owner = new GroupOwnerModelChangedProperty
+                                    {
+                                        OriginalValue = new GroupOwnerModel(),
+                                        ChangeValue = new GroupOwnerModel()
+                                    },
+                                    Members = new List<ApiModelRequestDynamicServiceManagePermissionActivitySPUserManagementModel>
+                                    {
+                                        new ApiModelRequestDynamicServiceManagePermissionActivitySPUserManagementModel
+                                        {
+                                            IdentityName = "<user email>",
+                                            DisplayName = "<user display name>",
+                                            Action = ManagePermissionAction.Added
+                                        }
+                                    }
+                                }
+                            };
                             managePermissionActivity.GrantPermissionSettingModel.PermissionManagement = new ApiModelRequestDynamicServiceManagePermissionActivityPermissionManagementModel
                             {
                                 PermissionItems = new List<ApiModelRequestDynamicServiceManagePermissionActivityObjectPermissionManagementModel>
@@ -78,10 +78,10 @@
                                         ObjectType = DomainPermissionManagmentSPPrincipalType.User,
                                         ObjectInfo = new ApiUser
                                         {
-                                            LoginName = "william@baron.space",
-                                            DisplayName = "William sun"
+                                            LoginName = "<user email>",
+                                            DisplayName = "<user display name>"
                                         },
-                                        Permissions = new List<String> { "完全控制" }
+                                        Permissions = new List<String> { "<permission>" }
                                     }
                                 }
                             };
