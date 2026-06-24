@@ -28,7 +28,7 @@
                 var sharePointGroupMembers = data.SharePointGroupMemberLoginNames
                     .Split(new String[] { ";" }, StringSplitOptions.RemoveEmptyEntries)
                     .Select(p => this.ResolveUser(p))
-                    .Select(user => new GroupUser
+                    .Select(user => new ApiModelGroupUser
                     {
                         Id = user.Id,
                         LoginName = user.LoginName,

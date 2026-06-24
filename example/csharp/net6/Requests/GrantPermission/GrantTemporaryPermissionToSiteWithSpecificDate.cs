@@ -19,7 +19,11 @@
                 var request = service.RequestTemplate;
 
                 #region Validate Url
-                var grantPermissionUrlValidationResult = this.ServicesApi.ValidateForGrantPermissionService(serviceId, new SiteValidationParameter(data.ObjectUrl));
+                var grantPermissionUrlValidationResult = this.ServicesApi.ValidateForGrantPermissionService(serviceId,
+                    new SiteValidationParameter
+                    {
+                        Uri = data.ObjectUrl,
+                    });
                 var grantPermissionSPObject = grantPermissionUrlValidationResult.Object;
                 #endregion
 

@@ -1,0 +1,11 @@
+global using DurationDateType = Cloud.Governance.Client.Model.DomainDurationDateType;
+global using GrantPermissionModel = Cloud.Governance.Client.Model.ApiModelGrantPermissionModel;
+global using GroupObjectType = Cloud.Governance.Client.Model.ApiModelGroupObjectType;
+global using NodeType = Cloud.Governance.Client.Model.ApiModelNodeType;
+global using ObjectPermissionManagementModel = Cloud.Governance.Client.Model.ApiModelObjectPermissionManagementModel;
+global using PermissionManagementModel = Cloud.Governance.Client.Model.ApiModelPermissionManagementModel;
+global using SPGroupManagementModel = Cloud.Governance.Client.Model.ApiModelSPGroupManagementModel;
+global using SPPrincipalType = Cloud.Governance.Client.Model.DomainPermissionManagmentSPPrincipalType;
+global using SPUserManagementModel = Cloud.Governance.Client.Model.ApiModelSPUserManagementModel;
+global using TemporaryPermissionRequestSetting = Cloud.Governance.Client.Model.ApiModelTemporaryPermissionRequestSetting;
+global using WelcomeEmailSettings = Cloud.Governance.Client.Model.ApiModelWelcomeEmailSettings;
